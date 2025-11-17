@@ -6,6 +6,60 @@ Original guide: [Beginner Learning Path](https://trics.me/beginner.html)
 
 ---
 
+# **Table of Contents** {#table-of-contents} 
+
+[M. Models](#m.-models)
+
+[M0. Statistical thinking and intuition](#m0.-statistical-thinking-and-intuition)
+
+[M1. Statistical inference](#m1.-statistical-inference)
+
+[M2. Econometrics](#m2.-econometrics)
+
+[M3. Bayesian modeling and causal inference.](#m3.-bayesian-modeling-and-causal-inference.)
+
+[M4. Classic machine learning.](#m4.-classic-machine-learning.)
+
+[M5. Neural nets (NN) and deep learning.](#m5.-neural-nets-\(nn\)-and-deep-learning.)
+
+[M6. NLP, CV and RL subfields.](#m6.-nlp,-cv-and-rl-subfields.)
+
+[M7. Other modelling techniques.](#m7.-other-modelling-techniques.)
+
+[M8. Additional topics (harder or less exciting)](#m8.-additional-topics-\(harder-or-less-exciting\))
+
+[D. Data](#d.-data)
+
+[D1. Data sources.](#d1.-data-sources.)
+
+[D2. Data analysis.](#d2.-data-analysis.)
+
+[D3. Data engineering.](#d3.-data-engineering.)
+
+[D4. Pipelines and orchestration.](#d4.-pipelines-and-orchestration.)
+
+[D5. Data management](#d5.-data-management)
+
+[T. Tools – Code and Infrastructure](#t.-tools-–-code-and-infrastructure)
+
+[T0. Writing code](#t0.-writing-code)
+
+[T1. Software tools.](#t1.-software-tools.)
+
+[T2. Cloud and computing infrastructure.](#t2.-cloud-and-computing-infrastructure.)
+
+[P. Productisation](#p.-productisation)
+
+[P1. Productisation and business value.](#p1.-productisation-and-business-value.)
+
+[P2. Applications, domains and cases.](#p2.-applications,-domains-and-cases.)
+
+[P3. Society impacts and regulation.](#p3.-society-impacts-and-regulation.)
+
+[E. Extra topics](#e.-extra-topics)
+
+[E1. Companies](#e1.-companies)  
+
 ## Introduction
 
 This guide provides a comprehensive roadmap for learning machine learning, from foundational mathematics to production-ready AI systems. It combines:
@@ -1082,57 +1136,3 @@ Already covered in Video Series section:
 ✅ Completed | 🎯 Current Focus | 🔥 Priority Next | ⏭️ Coming Soon | 🚀 Advanced | 🌟 Essential
 
 ---
-
-# **Table of Contents** {#table-of-contents} 
-
-[M. Models](#m.-models)
-
-[M0. Statistical thinking and intuition](#m0.-statistical-thinking-and-intuition)
-
-[M1. Statistical inference](#m1.-statistical-inference)
-
-[M2. Econometrics](#m2.-econometrics)
-
-[M3. Bayesian modeling and causal inference.](#m3.-bayesian-modeling-and-causal-inference.)
-
-[M4. Classic machine learning.](#m4.-classic-machine-learning.)
-
-[M5. Neural nets (NN) and deep learning.](#m5.-neural-nets-\(nn\)-and-deep-learning.)
-
-[M6. NLP, CV and RL subfields.](#m6.-nlp,-cv-and-rl-subfields.)
-
-[M7. Other modelling techniques.](#m7.-other-modelling-techniques.)
-
-[M8. Additional topics (harder or less exciting)](#m8.-additional-topics-\(harder-or-less-exciting\))
-
-[D. Data](#d.-data)
-
-[D1. Data sources.](#d1.-data-sources.)
-
-[D2. Data analysis.](#d2.-data-analysis.)
-
-[D3. Data engineering.](#d3.-data-engineering.)
-
-[D4. Pipelines and orchestration.](#d4.-pipelines-and-orchestration.)
-
-[D5. Data management](#d5.-data-management)
-
-[T. Tools – Code and Infrastructure](#t.-tools-–-code-and-infrastructure)
-
-[T0. Writing code](#t0.-writing-code)
-
-[T1. Software tools.](#t1.-software-tools.)
-
-[T2. Cloud and computing infrastructure.](#t2.-cloud-and-computing-infrastructure.)
-
-[P. Productisation](#p.-productisation)
-
-[P1. Productisation and business value.](#p1.-productisation-and-business-value.)
-
-[P2. Applications, domains and cases.](#p2.-applications,-domains-and-cases.)
-
-[P3. Society impacts and regulation.](#p3.-society-impacts-and-regulation.)
-
-[E. Extra topics](#e.-extra-topics)
-
-[E1. Companies](#e1.-companies)  
