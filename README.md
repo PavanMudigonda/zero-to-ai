@@ -1,4 +1,4 @@
-# Machine Learning My Way (MLMW)
+# Machine Learning Guide
 
 **Machine Learning (ML) Topic Guide: Statistical Models, Data, Tools and Productisation (MDTP)**  
 
@@ -83,8 +83,6 @@ This guide provides a comprehensive roadmap for learning machine learning, from 
 * **D (data)**: data engineering, data management and data governance.  
 * **T (tools)**: software tools, databases and computing infrastructure.  
 * **P (productisation)**: ok, now you have the data, a model and a server running, but what's the benefit?
-
-The MLMW approach emphasizes both theoretical understanding and practical implementation, guiding you from mathematical foundations through to real-world applications and societal impact.
 
 ---
 
@@ -281,7 +279,6 @@ For coverage of these topics, refer to the complete MDTP sections below.
 
 ## Extended Modelling Process
 
-This guide is accompanied by [MLMW (Machine Learning My Way)](https://docs.google.com/document/d/e/2PACX-1vT9ZkQJDDimZuPgBb7_hUJ40lm8LhqzL45HwIcYRYHw0AQkwA7pcqg0AIE7Gwf3QpAnZ34-BrFrWovO/pub) draft. In future releases, MLMW will be a dense guide exclusively for ML concepts and modeling techniques, while MDTP covers data, code, and productization.
 
 The table below summarizes steps in the extended modeling process, from initial idea to business/societal benefits:  
 
@@ -1127,27 +1124,3 @@ Already covered in Video Series section:
 * Emphasis on volume, velocity, variety (3 Vs)
 * Now implicit in "data engineering" and "cloud computing"
 
-### Additional Context from MLMW
-
-**Reddit Quotes Worth Remembering:**
-
-> "Eventually, after years of trying to get in through various 'shortcuts' I realized that I actually have to learn maths and statistics like all the other guys." - Anonymous Redditor
-
-> "I never feel like I've learned a topic just from reading about it, so having good problems to go along with the reading was very important to me." - On importance of exercises
-
-> "AI good, getting gooder. Tech > academics. AI costs $$$, gonna cost $$$$$. US numba 1. Benchmarks are meh. GenAI is trending. AI regulations increase. People & science can and do benefit from AI." - Summary of State of AI Report 2024
-
-**Reader Feedback on MLMW:**
-
-> "This is pretty neat. Congratulations on putting together such a great list!"
-
-> "This list is gold, thanks :)"
-
-> "This list is pretty comprehensive. I would have a bit on MLOps side because most advanced practitioners of ML should have some amount of understanding of how models are productionized."
-
----
-
-**Legend:**  
-✅ Completed | 🎯 Current Focus | 🔥 Priority Next | ⏭️ Coming Soon | 🚀 Advanced | 🌟 Essential
-
----
