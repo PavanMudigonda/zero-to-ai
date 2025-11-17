@@ -57,8 +57,8 @@ Original guide: [Beginner Learning Path](https://trics.me/beginner.html)
 
 ### Personalized Learning Path
 - [Your Current Position](#-your-current-position)
-- [Phase 1: Foundation](#phase-1-foundation-)
-- [Phase 2: Embeddings & Vectors](#phase-2-embeddings--vectors--current-focus)
+- [Phase 1: Foundation](#phase-1-foundation)
+- [Phase 2: Embeddings & Vectors](#phase-2-embeddings--vectors-current-focus)
 - [Phase 3: Neural Networks & Architecture](#phase-3-neural-networks--architecture)
 - [Phase 4: LLMs & Modern AI](#phase-4-llms--modern-ai-)
 - [Phase 5: Specialized Domains](#phase-5-specialized-domains)
@@ -69,6 +69,9 @@ Original guide: [Beginner Learning Path](https://trics.me/beginner.html)
 - [Microsoft Learn - AI & ML](#microsoft-learn---ai--ml-learning-paths)
 - [Google Cloud Skills Boost](#google-cloud-skills-boost---ml--ai)
 - [AWS Machine Learning & AI](#aws-machine-learning--ai-learning-paths)
+
+### Microsoft AI/Agent Framework Ecosystem
+- [Microsoft Agent Frameworks & Courses](#-microsoft-agent-frameworks--courses)
 
 ### Career & Community
 - [Interviews & Career Insights](#-interviews--career-insights)
@@ -105,22 +108,22 @@ If you need to strengthen these areas, refer to the resources in the sections be
 Three foundational resources form the entry track for beginners:
 
 ### 1. Mathematics for Machine Learning (MML)
-**Authors:** Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong (2020)  
-**Link:** Free textbook  
-**Coverage:** Linear algebra, calculus, probability for ML context  
-**Use for:** Part 1 for math review, Chapter 8 for ML introduction
+- [ ] **Authors:** Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong (2020)  
+- [ ] **Link:** Free textbook  
+- [ ] **Coverage:** Linear algebra, calculus, probability for ML context  
+- [ ] **Use for:** Part 1 for math review, Chapter 8 for ML introduction
 
 ### 2. Introduction to Statistical Learning with Python (ISLP)
-**Authors:** Gareth James, Daniela Witten, Trevor Hastie, Rob Tibshirani (2023)  
-**Link:** Free textbook  
-**Coverage:** Classic ML algorithms, statistical learning theory  
-**Use for:** Main textbook for supervised/unsupervised learning methods
+- [ ] **Authors:** Gareth James, Daniela Witten, Trevor Hastie, Rob Tibshirani (2023)  
+- [ ] **Link:** Free textbook  
+- [ ] **Coverage:** Classic ML algorithms, statistical learning theory  
+- [ ] **Use for:** Main textbook for supervised/unsupervised learning methods
 
 ### 3. Deep Learning Specialization
-**Instructor:** Andrew Ng  
-**Platform:** deeplearning.ai / Coursera  
-**Coverage:** Neural networks, CNNs, RNNs, sequence models  
-**Use for:** Practical deep learning implementation
+- [ ] **Instructor:** Andrew Ng  
+- [ ] **Platform:** deeplearning.ai / Coursera  
+- [ ] **Coverage:** Neural networks, CNNs, RNNs, sequence models  
+- [ ] **Use for:** Practical deep learning implementation
 
 ---
 
@@ -173,76 +176,76 @@ MML   -> ISLP -> deeplearning.ai  -> Text and speech (NLP)
 These denser textbooks serve as references alongside the core beginner track:
 
 ### Classic Machine Learning
-* **Bishop (2006)** - Pattern Recognition and Machine Learning
-* **Murphy (2022)** - Probabilistic Machine Learning
+- [ ] **Bishop (2006)** - Pattern Recognition and Machine Learning
+- [ ] **Murphy (2022)** - Probabilistic Machine Learning
 
 ### Deep Learning
-* **Goodfellow, Bengio, Courville (2016)** - Deep Learning Book (DLB)
-  * The reference text with continuous citations
-* **Zhang, Lipton, Li, Smola (2021)** - [Dive into Deep Learning (d2l)](https://d2l.ai/)
-  * Jupyter notebooks integrating exposition, math, and runnable code
-  * Freely available with interactive examples
-* **Prince (2023)** - [Understanding Deep Learning (UDL)](https://udlbook.github.io/udlbook/)
-  * Recent textbook with updated content
+- [ ] **Goodfellow, Bengio, Courville (2016)** - Deep Learning Book (DLB)
+  - The reference text with continuous citations
+- [ ] **Zhang, Lipton, Li, Smola (2021)** - [Dive into Deep Learning (d2l)](https://d2l.ai/)
+  - Jupyter notebooks integrating exposition, math, and runnable code
+  - Freely available with interactive examples
+- [ ] **Prince (2023)** - [Understanding Deep Learning (UDL)](https://udlbook.github.io/udlbook/)
+  - Recent textbook with updated content
 
 ### Specialized Domains
-* **Jurafsky and Martin** - Speech and Language Processing (NLP)
-* **Sutton and Barto** - Reinforcement Learning: An Introduction (RL)
+- [ ] **Jurafsky and Martin** - Speech and Language Processing (NLP)
+- [ ] **Sutton and Barto** - Reinforcement Learning: An Introduction (RL)
 
 ---
 
 ## 🎥 Video Series (Essential)
 
 ### StatQuest by Josh Starmer
-* **Focus:** Statistics and ML concepts explained intuitively
-* **Style:** Visual, step-by-step breakdowns
-* **Best for:** Understanding core concepts (PCA, regression, neural nets, etc.)
-* **Link:** YouTube channel
+- [ ] **Focus:** Statistics and ML concepts explained intuitively
+- [ ] **Style:** Visual, step-by-step breakdowns
+- [ ] **Best for:** Understanding core concepts (PCA, regression, neural nets, etc.)
+- [ ] **Link:** YouTube channel
 
 ### 3Blue1Brown by Grant Sanderson
-* **Focus:** Mathematical visualization
-* **Notable:** Neural Networks series, Calculus series, Linear Algebra series
-* **Style:** Beautiful animations explaining mathematical intuition
-* **Best for:** Deep understanding of math behind ML
-* **Link:** YouTube channel
+- [ ] **Focus:** Mathematical visualization
+- [ ] **Notable:** Neural Networks series, Calculus series, Linear Algebra series
+- [ ] **Style:** Beautiful animations explaining mathematical intuition
+- [ ] **Best for:** Deep understanding of math behind ML
+- [ ] **Link:** YouTube channel
 
 ### Andrej Karpathy
-* **Focus:** Neural networks, transformers, GPT architecture
-* **Notable:** [NanoGPT](https://github.com/karpathy/nanoGPT) - minimal GPT implementation
-* **Style:** Code walkthroughs, architectural deep dives
-* **Best for:** Understanding modern transformer architectures
-* **Link:** YouTube and GitHub
+- [ ] **Focus:** Neural networks, transformers, GPT architecture
+- [ ] **Notable:** [NanoGPT](https://github.com/karpathy/nanoGPT) - minimal GPT implementation
+- [ ] **Style:** Code walkthroughs, architectural deep dives
+- [ ] **Best for:** Understanding modern transformer architectures
+- [ ] **Link:** YouTube and GitHub
 
 ---
 
 ## 🛠️ What Else? Supplementary Resources
 
 ### Probability and Statistics
-* **Probability for Data Science (P4D)** - Introductory course
-* **Seeing Theory** - Visual introduction to probability and statistics
+- [ ] **Probability for Data Science (P4D)** - Introductory course
+- [ ] **Seeing Theory** - Visual introduction to probability and statistics
 
 ### Practical Python for ML
-* **scipy lectures** - Underappreciated resource by scikit-learn package authors
-* **Python Data Science Handbook** - Jake VanderPlas (includes ML chapter)
-* **Practical books** (combine concepts + code):
-  * Müller & Guido - Introduction to Machine Learning with Python (paid)
-  * Géron - Hands-On Machine Learning (paid)
-  * Burkov - The Hundred-Page Machine Learning Book (free preview)
+- [ ] **scipy lectures** - Underappreciated resource by scikit-learn package authors
+- [ ] **Python Data Science Handbook** - Jake VanderPlas (includes ML chapter)
+- [ ] **Practical books** (combine concepts + code):
+  - [ ] Müller & Guido - Introduction to Machine Learning with Python (paid)
+  - [ ] Géron - Hands-On Machine Learning (paid)
+  - [ ] Burkov - The Hundred-Page Machine Learning Book (free preview)
 
 ### Code Collections and Practice
-* **ML-From-Scratch** - Implementing algorithms from scratch
-* **Kaggle competitions** - Real datasets and competitions
-  * Note: Kaggle is Google-owned, emphasizes TensorFlow over PyTorch
+- [ ] **ML-From-Scratch** - Implementing algorithms from scratch
+- [ ] **Kaggle competitions** - Real datasets and competitions
+  - Note: Kaggle is Google-owned, emphasizes TensorFlow over PyTorch
 
 ### Domain-Specific Modeling
-* **Econometrics** - [Econ 1630](https://www.brown.edu/Departments/Economics/Faculty/Glenn_Loury/louryhomepage/teaching/Ec_1630/) chapters 1, 2, 4, 5
-* **Data analysis vocabulary** - Industry perspectives from:
-  * Google, Mathworks, H2O.ai, NVIDIA documentation
+- [ ] **Econometrics** - [Econ 1630](https://www.brown.edu/Departments/Economics/Faculty/Glenn_Loury/louryhomepage/teaching/Ec_1630/) chapters 1, 2, 4, 5
+- [ ] **Data analysis vocabulary** - Industry perspectives from:
+  - Google, Mathworks, H2O.ai, NVIDIA documentation
 
 ### Research Papers and Advanced Topics
-* Statistical Learning Theory (loss, risk, PAC-Bayes)
-* Breiman's "Two Cultures" (2001) - Inference vs. prediction debate
-* Current ML/AI research on arXiv
+- [ ] Statistical Learning Theory (loss, risk, PAC-Bayes)
+- [ ] Breiman's "Two Cultures" (2001) - Inference vs. prediction debate
+- [ ] Current ML/AI research on arXiv
 
 ---
 
@@ -774,61 +777,61 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 ---
 
-## Phase 1: Foundation ✅
+## Phase 1: Foundation
 
 **Core Concepts**
 
-- ✅ Artificial Intelligence (AI)
-- ✅ Machine Learning (ML)
-- ✅ Supervised / Unsupervised / Semi‑Supervised Learning
-- Reinforcement Learning (RL)
-- Offline vs Online Machine Learning
-- Overfitting, Underfitting, Bias, Variance
+- [ ] Artificial Intelligence (AI)
+- [ ] Machine Learning (ML)
+- [ ] Supervised / Unsupervised / Semi‑Supervised Learning
+- [ ] Reinforcement Learning (RL)
+- [ ] Offline vs Online Machine Learning
+- [ ] Overfitting, Underfitting, Bias, Variance
 
 **Math & Statistics Basics**
 
-- Loss Functions (Cross‑Entropy, Mean Squared Error)
-- Optimization (gradients, backpropagation basics)
-- L1 Norm, L2 Norm, Regularisation
-- Probability (Naïve Bayes, distributions)
+- [ ] Loss Functions (Cross‑Entropy, Mean Squared Error)
+- [ ] Optimization (gradients, backpropagation basics)
+- [ ] L1 Norm, L2 Norm, Regularisation
+- [ ] Probability (Naïve Bayes, distributions)
 
 **Data Fundamentals**
 
-- Features, Labels, Annotation
-- Training/Validation/Testing Sets
-- Feature Engineering & Feature Extraction
-- Normalisation
+- [ ] Features, Labels, Annotation
+- [ ] Training/Validation/Testing Sets
+- [ ] Feature Engineering & Feature Extraction
+- [ ] Normalisation
 
 ---
 
-## Phase 2: Embeddings & Vectors 🎯 (Current Focus)
+## Phase 2: Embeddings & Vectors (Current Focus)
 
-**Tokenization** ✅
+**Tokenization**
 
-- ✅ Tokens - Text broken into processable units
-- ✅ Tokenization algorithms (BPE, WordPiece)
-- ✅ Subword tokenization concepts
+- [ ] Tokens - Text broken into processable units
+- [ ] Tokenization algorithms (BPE, WordPiece)
+- [ ] Subword tokenization concepts
 
 **Embeddings** 🔥 (Learn next)
 
-- Embeddings - Dense vector representations
-- Word2Vec, fastText, Doc2Vec
-- Semantic meaning in vector space
-- Cosine Similarity - Measuring semantic similarity
-- Vector operations (addition, subtraction, distance)
+- [ ] Embeddings - Dense vector representations
+- [ ] Word2Vec, fastText, Doc2Vec
+- [ ] Semantic meaning in vector space
+- [ ] Cosine Similarity - Measuring semantic similarity
+- [ ] Vector operations (addition, subtraction, distance)
 
 **Vector Storage & Retrieval**
 
-- Vector Database (Pinecone, Weaviate, ChromaDB)
-- Semantic search vs keyword search
-- Nearest neighbor search
-- Dimensionality (384, 768, 1536 dimensions)
+- [ ] Vector Database (Pinecone, Weaviate, ChromaDB)
+- [ ] Semantic search vs keyword search
+- [ ] Nearest neighbor search
+- [ ] Dimensionality (384, 768, 1536 dimensions)
 
 **Text Representations (Classical)**
 
-- Bag of Words, N‑grams (Bigrams, Trigrams)
-- TF (Term Frequency), IDF (Inverse Document Frequency)
-- TF‑IDF weighting
+- [ ] Bag of Words, N‑grams (Bigrams, Trigrams)
+- [ ] TF (Term Frequency), IDF (Inverse Document Frequency)
+- [ ] TF‑IDF weighting
 
 ---
 
@@ -836,29 +839,29 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 **Neural Network Basics**
 
-- Neural Networks, Hidden Layers
-- Activation Functions (ReLU, sigmoid, tanh)
-- Backpropagation (in depth)
-- Gradient descent & optimization
-- Epoch, Batch Size, Learning rate
-- Dropout, Regularization techniques
+- [ ] Neural Networks, Hidden Layers
+- [ ] Activation Functions (ReLU, sigmoid, tanh)
+- [ ] Backpropagation (in depth)
+- [ ] Gradient descent & optimization
+- [ ] Epoch, Batch Size, Learning rate
+- [ ] Dropout, Regularization techniques
 
 **Deep Learning Architectures**
 
-- Deep Learning fundamentals
-- CNNs (Convolutional Neural Networks) - for images
-- RNNs (Recurrent Neural Networks) - for sequences
-- LSTMs (Long Short-Term Memory) - for long sequences
-- Autoencoders - dimensionality reduction
+- [ ] Deep Learning fundamentals
+- [ ] CNNs (Convolutional Neural Networks) - for images
+- [ ] RNNs (Recurrent Neural Networks) - for sequences
+- [ ] LSTMs (Long Short-Term Memory) - for long sequences
+- [ ] Autoencoders - dimensionality reduction
 
 **Attention & Transformers** 🌟
 
-- Attention Mechanism - focusing on relevant parts
-- Self-Attention - all tokens attend to each other
-- Multi-Head Attention - multiple attention in parallel
-- Transformer Architecture - the foundation of modern NLP
-- Encoder-Decoder Architecture
-- Positional Encoding
+- [ ] Attention Mechanism - focusing on relevant parts
+- [ ] Self-Attention - all tokens attend to each other
+- [ ] Multi-Head Attention - multiple attention in parallel
+- [ ] Transformer Architecture - the foundation of modern NLP
+- [ ] Encoder-Decoder Architecture
+- [ ] Positional Encoding
 
 ---
 
@@ -866,38 +869,38 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 **Large Language Models**
 
-- LLMs (Large Language Models) - GPT, Claude, LLaMA
-- GPT (Generative Pre-trained Transformer)
-- BERT (Bidirectional Encoder Representations)
-- Foundation Models - pre-trained models
-- Context Window - token limits
-- Perplexity - model evaluation
+- [ ] LLMs (Large Language Models) - GPT, Claude, LLaMA
+- [ ] GPT (Generative Pre-trained Transformer)
+- [ ] BERT (Bidirectional Encoder Representations)
+- [ ] Foundation Models - pre-trained models
+- [ ] Context Window - token limits
+- [ ] Perplexity - model evaluation
 
 **Working with LLMs**
 
-- Prompt Engineering - crafting effective prompts
-- Temperature - controlling randomness
-- Few-Shot / One-Shot / Zero-Shot Learning
-- In-Context Learning
-- Chain-of-Thought (CoT) prompting
-- Instruction Tuning
+- [ ] Prompt Engineering - crafting effective prompts
+- [ ] Temperature - controlling randomness
+- [ ] Few-Shot / One-Shot / Zero-Shot Learning
+- [ ] In-Context Learning
+- [ ] Chain-of-Thought (CoT) prompting
+- [ ] Instruction Tuning
 
 **Fine-tuning & Optimization**
 
-- Transfer Learning
-- Fine-tuning pre-trained models
-- LoRA (Low-Rank Adaptation) - efficient fine-tuning
-- Quantization - 4-bit, 8-bit model compression
-- Distillation - creating smaller models
-- RLHF (Reinforcement Learning from Human Feedback)
+- [ ] Transfer Learning
+- [ ] Fine-tuning pre-trained models
+- [ ] LoRA (Low-Rank Adaptation) - efficient fine-tuning
+- [ ] Quantization - 4-bit, 8-bit model compression
+- [ ] Distillation - creating smaller models
+- [ ] RLHF (Reinforcement Learning from Human Feedback)
 
 **RAG & Knowledge Systems**
 
-- RAG (Retrieval Augmented Generation) 🔥
-- Information Retrieval (IR)
-- Semantic search with embeddings
-- Combining retrieval + generation
-- Knowledge Graphs
+- [ ] RAG (Retrieval Augmented Generation) 🔥
+- [ ] Information Retrieval (IR)
+- [ ] Semantic search with embeddings
+- [ ] Combining retrieval + generation
+- [ ] Knowledge Graphs
 
 ---
 
@@ -905,33 +908,33 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 **Natural Language Processing (NLP)**
 
-- NLP fundamentals
-- Named Entity Recognition (NER)
-- Sentiment Classification
-- Machine Translation (MT)
-- Sequence‑to‑Sequence (Seq2Seq)
-- Abstractive vs Extractive Summarisation
-- Natural Language Generation (NLG)
-- Chatbots & conversational AI
+- [ ] NLP fundamentals
+- [ ] Named Entity Recognition (NER)
+- [ ] Sentiment Classification
+- [ ] Machine Translation (MT)
+- [ ] Sequence‑to‑Sequence (Seq2Seq)
+- [ ] Abstractive vs Extractive Summarisation
+- [ ] Natural Language Generation (NLG)
+- [ ] Chatbots & conversational AI
 
 **Computer Vision (CV)**
 
-- Computer Vision concepts
-- CNN applications (classification, detection)
-- Image embeddings (CLIP)
-- Stable Diffusion - text-to-image
-- Diffusion Models
-- GANs (Generative Adversarial Networks)
-- Multimodal AI - text + vision
+- [ ] Computer Vision concepts
+- [ ] CNN applications (classification, detection)
+- [ ] Image embeddings (CLIP)
+- [ ] Stable Diffusion - text-to-image
+- [ ] Diffusion Models
+- [ ] GANs (Generative Adversarial Networks)
+- [ ] Multimodal AI - text + vision
 
 **Advanced Topics**
 
-- AI Agents - autonomous decision-making
-- Mixture of Experts (MoE)
-- Active Learning
-- Recommender Systems
-- Anomaly Detection
-- Human in the Loop (HITL) systems
+- [ ] AI Agents - autonomous decision-making
+- [ ] Mixture of Experts (MoE)
+- [ ] Active Learning
+- [ ] Recommender Systems
+- [ ] Anomaly Detection
+- [ ] Human in the Loop (HITL) systems
 
 ---
 
@@ -939,35 +942,35 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 **Model Evaluation**
 
-- Accuracy, Precision, Recall, F1 Score
-- Cross‑Validation
-- Confusion Matrix
-- BLEU, ROUGE (for generation tasks)
+- [ ] Accuracy, Precision, Recall, F1 Score
+- [ ] Cross‑Validation
+- [ ] Confusion Matrix
+- [ ] BLEU, ROUGE (for generation tasks)
 
 **Data Engineering**
 
-- Data pipelines
-- ETL (Extract, Transform, Load)
-- Data versioning
-- Batch vs streaming processing
+- [ ] Data pipelines
+- [ ] ETL (Extract, Transform, Load)
+- [ ] Data versioning
+- [ ] Batch vs streaming processing
 
 **ML Tools & Libraries**
 
-- NumPy - numerical computing
-- Pandas - data manipulation
-- Scikit‑Learn - classical ML
-- PyTorch / TensorFlow / Keras - deep learning
-- Hugging Face Transformers
-- LangChain - LLM applications
+- [ ] NumPy - numerical computing
+- [ ] Pandas - data manipulation
+- [ ] Scikit‑Learn - classical ML
+- [ ] PyTorch / TensorFlow / Keras - deep learning
+- [ ] Hugging Face Transformers
+- [ ] LangChain - LLM applications
 
 **MLOps & Deployment**
 
-- ML Pipelines (Kedro, Airflow)
-- Model versioning & monitoring
-- Cloud platforms (AWS SageMaker, Azure ML, GCP)
-- API deployment (FastAPI, Flask)
-- Model serving & inference optimization
-- A/B testing
+- [ ] ML Pipelines (Kedro, Airflow)
+- [ ] Model versioning & monitoring
+- [ ] Cloud platforms (AWS SageMaker, Azure ML, GCP)
+- [ ] API deployment (FastAPI, Flask)
+- [ ] Model serving & inference optimization
+- [ ] A/B testing
 
 ---
 
@@ -975,19 +978,19 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 **AI Safety & Alignment**
 
-- Hallucination - factual accuracy issues
-- Alignment - matching human values
-- Constitutional AI
-- Prompt Injection - security concerns
-- Bias & fairness in AI
-- Explainability & interpretability
+- [ ] Hallucination - factual accuracy issues
+- [ ] Alignment - matching human values
+- [ ] Constitutional AI
+- [ ] Prompt Injection - security concerns
+- [ ] Bias & fairness in AI
+- [ ] Explainability & interpretability
 
 **Model Types Comparison**
 
-- Generative vs Discriminative models
-- Supervised vs Unsupervised vs RL
-- Rules‑Based vs ML-based systems
-- Classical ML vs Deep Learning tradeoffs
+- [ ] Generative vs Discriminative models
+- [ ] Supervised vs Unsupervised vs RL
+- [ ] Rules‑Based vs ML-based systems
+- [ ] Classical ML vs Deep Learning tradeoffs
 
 ---
 
@@ -995,33 +998,157 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 **Phase 1-2 (Foundation + Embeddings):**
 
-- Start with your current examples: `tiktoken_example.py`, `embeddings_intro.py`
-- Practice: Create embeddings for different texts, compare similarities
-- Build: Simple semantic search with your own documents
+- [ ] Start with your current examples: `tiktoken_example.py`, `embeddings_intro.py`
+- [ ] Practice: Create embeddings for different texts, compare similarities
+- [ ] Build: Simple semantic search with your own documents
 
 **Phase 3 (Neural Networks):**
 
-- Implement: Simple neural network from scratch
-- Study: 3Blue1Brown neural network series
-- Practice: MNIST digit classification with PyTorch
+- [ ] Implement: Simple neural network from scratch
+- [ ] Study: 3Blue1Brown neural network series
+- [ ] Practice: MNIST digit classification with PyTorch
 
 **Phase 4 (LLMs):**
 
-- Use: OpenAI API, Anthropic Claude, or local LLMs
-- Build: RAG system with your own knowledge base
-- Practice: Prompt engineering for different tasks
+- [ ] Use: OpenAI API, Anthropic Claude, or local LLMs
+- [ ] Build: RAG system with your own knowledge base
+- [ ] Practice: Prompt engineering for different tasks
 
 **Phase 5+ (Specialization):**
 
-- Choose your focus: NLP, CV, or multimodal
-- Build end-to-end projects
-- Contribute to open source (Hugging Face, LangChain)
+- [ ] Choose your focus: NLP, CV, or multimodal
+- [ ] Build end-to-end projects
+- [ ] Contribute to open source (Hugging Face, LangChain)
 
 
----
 
-**Legend:**  
-✅ Completed | 🎯 Current Focus | 🔥 Priority Next | ⏭️ Coming Soon | 🚀 Advanced | 🌟 Essential
+## 🤖 Microsoft Agent Frameworks & Courses
+
+Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational courses, and development tools. This section provides a structured learning path through Microsoft's offerings.
+
+### 🎓 Educational Courses & Tutorials
+
+#### AI Agent Development
+
+- [ ] **[AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)** ⭐ 45k stars
+  - 15-lesson curriculum covering agent fundamentals to production
+  - Topics: Introduction to agents → Agent patterns → Production deployment
+  - Hands-on examples with Python and practical implementations
+  - 15.2k forks, 422 watchers - highly active community
+
+#### Model Context Protocol (MCP)
+
+- [ ] **[MCP for Beginners](https://github.com/microsoft/mcp-for-beginners)** ⭐ 13.3k stars
+  - 11 modules on Model Context Protocol
+  - Emerging standard for AI-tool communication
+  - Multi-language support: C#, Java, JavaScript, Python, Rust, TypeScript
+  - 4.3k forks - growing adoption
+
+#### IoT Development
+
+- [ ] **[IoT for Beginners](https://github.com/microsoft/IoT-For-Beginners)** ⭐ 16.6k stars
+  - 24 lessons covering complete IoT development lifecycle
+  - Topics: Sensors → Cloud integration → Production systems
+  - Practical projects: Farm → Transport → Manufacturing → Retail → Consumer
+  - 2.7k forks
+
+#### Python Fundamentals
+
+- [ ] **[Python for Beginners](https://github.com/microsoft/c9-python-getting-started)** ⭐ 7.9k stars
+  - Channel 9 series with 3-course progression
+  - Beginner-friendly introduction to Python programming
+  - Foundation for ML/AI development
+
+#### GitHub Copilot & AI-Assisted Development
+
+- [ ] **[GitHub Copilot Tutorial](https://github.com/features/copilot)** - Comprehensive guide
+  - **Mission Control**: Multi-step workflows in VS Code
+  - **Agent Mode**: Autonomous coding with feedback loops
+  - **Copilot CLI**: Terminal integration (`copilot explain`, `copilot fix tests`)
+  - **Code Review**: Automated PR review with risk detection
+  - **Coding Agent**: Async task handling with issue assignments
+  - **Best Practices**: Review everything, prompt with context, small increments
+  - **Prompt Patterns**: Specific examples for caching, CSV import, test generation
+
+### 🔧 Agent Frameworks & Tools
+
+#### Core Agent Frameworks
+
+- [ ] **[Microsoft Agent Framework](https://github.com/microsoft/agent-framework)** ⭐ 5.1k stars
+  - Core offering for building AI agents
+  - Python and .NET support
+  - Layered API design: Core API → AgentChat API → Extensions
+  - Production-ready architecture
+
+- [ ] **[Agent Lightning](https://github.com/microsoft/agent-lightning)** ⭐ 8.5k stars
+  - RL training framework for any agent
+  - Works with minimal code changes
+  - Enables reinforcement learning without framework lock-in
+
+- [ ] **[AutoGen](https://github.com/microsoft/autogen)** ⭐ 51.7k stars (Legacy/Maintained)
+  - Multi-agent framework (original Microsoft offering)
+  - Now directing users to Microsoft Agent Framework
+  - Still maintained but considered legacy
+  - Large community and extensive examples
+
+#### Prompt Engineering & Orchestration
+
+- [ ] **[POML (Prompt Orchestration Markup Language)](https://github.com/microsoft/poml)** ⭐ 4.7k stars
+  - Markup language for prompt engineering
+  - HTML-like syntax for structured prompts
+  - VS Code extension available
+  - Declarative approach to prompt design
+
+- [ ] **[GenAIScript](https://github.com/microsoft/genaiscript)** ⭐ 2.8k stars
+  - JavaScript/TypeScript framework for programmatic prompt assembly
+  - Compose prompts with code logic
+  - Integrate with existing workflows
+  - Type-safe prompt construction
+
+#### AI Development & Testing Tools
+
+- [ ] **[PromptBench](https://github.com/microsoft/promptbench)** ⭐ 2.7k stars
+  - Python library for LLM evaluation and benchmarking
+  - Adversarial testing capabilities
+  - Dynamic evaluation frameworks
+  - Performance metrics and analysis
+
+- [ ] **[Intelligence Toolkit](https://github.com/microsoft/intelligence-toolkit)** ⭐ 94 stars
+  - Interactive workflows for AI intelligence reports
+  - Case/entity/text intelligence analysis
+  - Data-driven insights generation
+  - Production intelligence workflows
+
+#### Development Environment & Tools
+
+- [ ] **[VS Code Tools for AI](https://github.com/microsoft/vscode-tools-for-ai)** ⭐ 340 stars
+  - Azure ML VS Code extension
+  - Build, train, and deploy ML models
+  - Integrated development experience
+  - Azure Machine Learning integration
+
+### 📚 Learning Path Recommendations
+
+#### Beginner Path (Start Here)
+
+1. ✅ **Python for Beginners** - Get comfortable with Python
+2. ✅ **AI Agents for Beginners** - Learn agent fundamentals (Lessons 1-5)
+3. ✅ **GitHub Copilot Tutorial** - Familiarize with AI-assisted coding
+4. ✅ **MCP for Beginners** - Understand the protocol standard (Modules 1-3)
+
+#### Intermediate Path
+
+1. ✅ **AI Agents for Beginners** - Complete remaining lessons (6-15)
+2. ✅ **Microsoft Agent Framework** - Build your first agent
+3. ✅ **GenAIScript** or **POML** - Choose your prompt engineering approach
+4. ✅ **PromptBench** - Test and evaluate your models
+
+#### Advanced Path
+
+1. ✅ **Agent Lightning** - Add RL capabilities to agents
+2. ✅ **AutoGen** (optional) - Explore multi-agent patterns
+3. ✅ **Intelligence Toolkit** - Production intelligence workflows
+4. ✅ **MCP for Beginners** - Complete advanced modules (8-11)
 
 ---
 

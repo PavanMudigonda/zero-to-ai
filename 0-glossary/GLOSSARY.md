@@ -2,6 +2,9 @@ A
 Abstractive Summarisation
 Abstractive summarisation is a summarisation technique that generates language using word tokens and phrases not necessarily found in the source document. In contrast, extractive summarisation draws phrases and sentences directly from the source text based on a measure of salience. The degree to which a summary is abstractive versus extractive can often be controlled by a continuous model hyperparameter that explicitly handles this trade‑off.
 
+ACID (Atomicity, Consistency, Isolation, Durability)
+ACID is a set of properties that guarantee reliable database transactions: Atomicity (all-or-nothing execution), Consistency (valid state transitions), Isolation (concurrent transactions don't interfere), and Durability (committed changes persist even after system failures).
+
 Accuracy
 Accuracy is a measurement in classification problems used to quantify a model's performance. It is the number of correct predictions as a percentage of the total number of predictions made. Correct predictions include both True Positives (TP) and True Negatives (TN).
 
@@ -39,8 +42,14 @@ Backpropagation is an algorithm used to compute gradients of a loss function wit
 Bag of Words (BoW)
 Bag of Words is a simplified representation for text, where a document is represented as an unordered collection of its words (often with term frequencies), disregarding grammar and word order.
 
+BASE (Basically Available, Soft state, Eventually consistent)
+BASE is a database consistency model alternative to ACID, commonly used in NoSQL databases, prioritizing availability and partition tolerance over immediate consistency, accepting that data will become consistent eventually.
+
 Batch Size
 Batch size is the number of training examples used in one iteration of model parameter updates during training.
+
+BigQuery
+BigQuery is Google Cloud's fully managed, serverless data warehouse that enables fast SQL queries on large datasets using Google's infrastructure, designed for analytics and business intelligence workloads.
 
 BERT (Bidirectional Encoder Representations from Transformers)
 BERT is a deep learning model based on the Transformer architecture that learns contextual representations of words by looking both left and right in a sentence. It achieves state‑of‑the‑art performance on many NLP tasks.
@@ -58,6 +67,12 @@ BLEU (Bilingual Evaluation Understudy)
 BLEU is an automatic metric for evaluating the quality of machine‑translated text by comparing it to one or more human reference translations.
 
 C
+CAP Theorem (Consistency, Availability, Partition Tolerance)
+The CAP theorem states that a distributed database system can only guarantee two of three properties simultaneously: Consistency (all nodes see the same data), Availability (every request receives a response), and Partition Tolerance (system continues despite network failures).
+
+Cassandra
+Cassandra is an open-source, distributed NoSQL database designed for handling large amounts of data across many servers with high availability and no single point of failure, using a column-family data model.
+
 Chatbot
 A chatbot is an AI application that interacts with users via natural language, typically in text or speech, to simulate conversation and answer questions or guide users through workflows.
 
@@ -67,8 +82,14 @@ Classification is a supervised learning task where the goal is to predict a disc
 Cloud (Cloud Computing)
 Cloud refers to remote servers accessed over the internet that provide on‑demand computing resources such as storage, processing, and machine learning services.
 
+CDN (Content Delivery Network)
+A CDN is a distributed network of servers that deliver web content and media to users based on their geographic location, reducing latency and improving performance.
+
 Clustering
 Clustering is an unsupervised learning technique that groups data points so that those in the same group (cluster) are more similar to each other than to those in other groups.
+
+Containerization
+Containerization packages applications and their dependencies into isolated containers that can run consistently across different computing environments, enabling portability and scalability.
 
 Computer Vision
 Computer vision is a field of AI focused on enabling machines to interpret and process visual information from images and videos.
@@ -83,11 +104,20 @@ Cross‑Validation
 Cross‑validation is a resampling technique used to evaluate model performance by splitting data into multiple train/validation subsets and averaging the results.
 
 D
+Data Warehouse
+A data warehouse is a centralized repository that stores integrated data from multiple sources, optimized for analytical queries and business intelligence, typically using a star or snowflake schema design.
+
+DBMS (Database Management System)
+A DBMS is software that manages databases, providing an interface for creating, reading, updating, and deleting data while ensuring data integrity, security, and concurrent access control.
+
 Decision Tree
 A decision tree is a model that makes predictions by recursively splitting data according to feature‑based rules, forming a tree of decisions.
 
 Deep Learning (DL)
 Deep learning is a subset of machine learning that uses neural networks with many layers (deep architectures) to learn complex patterns from large datasets.
+
+Docker
+Docker is a platform for developing, shipping, and running applications in containers, providing a standardized way to package software with all dependencies included.
 
 Doc2Vec
 Doc2Vec is an unsupervised algorithm for learning fixed‑length vector representations of variable‑length documents.
@@ -96,6 +126,9 @@ Dropout
 Dropout is a regularization technique where a random subset of neurons or connections is temporarily removed during training to reduce overfitting.
 
 E
+EC2 (Elastic Compute Cloud)
+EC2 is Amazon Web Services' cloud computing service that provides resizable virtual servers (instances) for running applications in the cloud.
+
 Embeddings
 Embeddings are dense, low‑dimensional vector representations of high‑dimensional or categorical objects (such as words or items), capturing semantic relationships.
 
@@ -135,13 +168,25 @@ Graph
 A graph is a data structure consisting of nodes (vertices) and edges that represent relationships between entities.
 
 H
+Hadoop
+Hadoop is an open-source framework for distributed storage and processing of large datasets across clusters of computers, consisting of HDFS (storage) and MapReduce/YARN (processing).
+
+HDFS (Hadoop Distributed File System)
+HDFS is a distributed file system designed to store very large files across multiple machines with high fault tolerance through data replication, serving as the storage layer of the Hadoop ecosystem.
+
 Hidden Layer
 A hidden layer is an intermediate layer in a neural network between the input and output layers, where learned feature transformations occur.
 
 Human in the Loop (HITL)
 Human in the loop describes systems in which humans interact with and guide AI models, for example by providing feedback, labels, or overrides.
 
+Hypervisor
+A hypervisor is software that creates and manages virtual machines by abstracting physical hardware resources, enabling multiple operating systems to run on a single physical machine.
+
 I
+IaaS (Infrastructure as a Service)
+IaaS is a cloud computing model that provides virtualized computing resources (servers, storage, networking) over the internet on a pay-as-you-go basis.
+
 Inference (Model Inference)
 Inference is the process of using a trained machine learning model to make predictions on new, unseen data.
 
@@ -164,9 +209,15 @@ Keras is a high‑level deep learning API written in Python, running on top of b
 Knowledge Graph
 A knowledge graph is a knowledge base structured as a graph of entities (nodes) and relationships (edges), often used for reasoning, search, and recommendation.
 
+Kubernetes
+Kubernetes is an open-source container orchestration platform that automates deployment, scaling, and management of containerized applications across clusters of machines.
+
 L
 Label
 A label is the target output associated with an input in supervised learning, such as class IDs or numeric values.
+
+Lambda (AWS Lambda)
+Lambda is a serverless computing service that runs code in response to events without requiring server management, executing functions on-demand and scaling automatically.
 
 L1 Norm
 The L1 norm (Manhattan distance) is the sum of absolute differences between vector components, often used in L1 regularization (Lasso) to promote sparsity.
@@ -196,8 +247,17 @@ Machine reading refers to systems that can read, understand, and reason over uns
 Machine Translation (MT)
 Machine translation is the automatic translation of text from one natural language to another using computational models.
 
+MapReduce
+MapReduce is a programming model for processing large datasets in parallel across distributed clusters by breaking computation into Map (filtering/sorting) and Reduce (aggregating) phases.
+
 Mean Squared Error (MSE)
 Mean squared error is a common loss function for regression, defined as the average of squared differences between predicted and true values.
+
+MongoDB
+MongoDB is a popular open-source NoSQL database that stores data in flexible, JSON-like documents (BSON format), enabling schema flexibility and horizontal scaling.
+
+MySQL
+MySQL is an open-source relational database management system using SQL, widely used for web applications and known for speed, reliability, and ease of use.
 
 N
 Naïve Bayes
@@ -212,8 +272,14 @@ Natural language generation is the process of producing human‑readable text fr
 Natural Language Processing (NLP)
 Natural language processing is a field at the intersection of AI, linguistics, and computer science that focuses on enabling computers to understand, interpret, and generate human language.
 
+Neo4j
+Neo4j is a graph database management system that uses nodes, relationships, and properties to represent and store data, optimized for querying complex connected data and relationships.
+
 Network (Neural / Computing Network)
 In AI, a network often refers to a neural network—a computing system of interconnected nodes analogous to neurons, or to the broader computing network of interconnected machines.
+
+NoSQL
+NoSQL databases are non-relational database systems designed for flexible schemas, horizontal scalability, and handling large volumes of unstructured or semi-structured data, including document, key-value, column-family, and graph databases.
 
 N‑grams
 N‑grams are contiguous sequences of n items (often words or characters) from a document or corpus, used in language modeling and feature extraction.
@@ -225,6 +291,12 @@ NumPy
 NumPy is a core Python library for numerical computing, providing n‑dimensional arrays and efficient mathematical operations.
 
 O
+OLAP (Online Analytical Processing)
+OLAP systems are optimized for complex analytical queries on large historical datasets, supporting multidimensional analysis, aggregations, and business intelligence reporting with slower write speeds but fast read performance.
+
+OLTP (Online Transaction Processing)
+OLTP systems are optimized for handling high volumes of short, fast transactions (inserts, updates, deletes) with ACID guarantees, prioritizing data integrity and consistency for operational applications.
+
 Offline Machine Learning
 Offline machine learning trains models on a fixed dataset, without updating the model parameters continuously as new data arrives.
 
@@ -241,11 +313,17 @@ P
 Pandas
 Pandas is a Python library offering data structures and tools for data manipulation and analysis, especially for tabular data.
 
+PaaS (Platform as a Service)
+PaaS is a cloud computing model that provides a platform with development tools, databases, and runtime environments, allowing developers to build and deploy applications without managing underlying infrastructure.
+
 Pipeline (ML Pipeline)
 A machine learning pipeline is a structured workflow that chains data processing, feature extraction, model training, and evaluation steps into a reproducible process.
 
 Polly
 Polly is a text‑to‑speech service (e.g., in cloud platforms) that converts text into natural‑sounding speech.
+
+PostgreSQL
+PostgreSQL is an advanced open-source relational database system known for robustness, extensibility, and standards compliance, supporting complex queries, JSON data, full-text search, and custom data types.
 
 Precision
 Precision is the ratio of true positive predictions to all positive predictions, measuring how many predicted positives are correct.
@@ -254,6 +332,9 @@ PyTorch
 PyTorch is an open‑source deep learning framework that provides tensor operations and automatic differentiation, widely used for research and production.
 
 R
+Redis
+Redis is an open-source, in-memory key-value data store known for extremely fast performance, used for caching, session management, real-time analytics, and message queuing.
+
 Random Forest
 Random forest is an ensemble learning method that combines predictions from many decision trees to improve robustness and accuracy.
 
@@ -291,6 +372,12 @@ Rules‑Based (Rule‑Based Systems)
 Rule‑based systems rely on hand‑crafted rules and logic to make decisions, instead of learned parameters from data.
 
 S
+S3 (Simple Storage Service)
+S3 is Amazon Web Services' object storage service that provides scalable, durable, and secure storage for files and data, commonly used for data lakes, backups, and static content hosting.
+
+SaaS (Software as a Service)
+SaaS is a cloud computing model where software applications are hosted by a provider and accessed by users over the internet, typically through a web browser on a subscription basis.
+
 SageMaker
 SageMaker is a fully managed cloud service for building, training, and deploying machine learning models at scale.
 
@@ -300,6 +387,15 @@ Scikit‑learn is a popular Python library providing tools for supervised and un
 SciPy
 SciPy is a Python ecosystem and library for scientific and technical computing, built on top of NumPy.
 
+Snowflake
+Snowflake is a cloud-based data warehousing platform that separates storage and compute, enabling elastic scaling, multi-cloud support, and SQL-based analytics on structured and semi-structured data.
+
+Spark (Apache Spark)
+Spark is an open-source distributed computing framework for big data processing that performs in-memory computation, making it much faster than MapReduce for iterative algorithms and interactive analytics.
+
+SQL (Structured Query Language)
+SQL is a standardized programming language for managing and querying relational databases, using commands like SELECT, INSERT, UPDATE, and DELETE to manipulate structured data in tables.
+
 Semi‑Supervised Machine Learning
 Semi‑supervised learning uses both labeled and unlabeled data during training, typically a small labeled set with a much larger unlabeled set.
 
@@ -308,6 +404,9 @@ Sentiment classification is the task of determining the sentiment (e.g., positiv
 
 Sequence‑to‑Sequence (Seq2Seq)
 Seq2Seq models map input sequences (e.g., sentences) to output sequences (e.g., translations), often using encoder‑decoder architectures.
+
+Serverless
+Serverless computing is a cloud execution model where the cloud provider dynamically manages server allocation, allowing developers to run code without provisioning or managing servers, paying only for actual compute time used.
 
 Supervised Machine Learning
 Supervised learning involves training models on labeled data, where each input has a corresponding known output.
@@ -362,6 +461,12 @@ A validation set is a subset of data used during training to tune hyperparameter
 
 Variance (Model Variance)
 Variance is the sensitivity of a model's predictions to small changes in the training data. High variance models tend to overfit.
+
+Virtualization
+Virtualization is the technology that creates virtual versions of computing resources (servers, storage, networks) by abstracting physical hardware, enabling multiple virtual machines to run on a single physical machine and improving resource utilization.
+
+VM (Virtual Machine)
+A VM is an emulated computer system that runs on physical hardware, providing an isolated environment with its own operating system and applications, managed by a hypervisor.
 
 W
 Word2Vec
@@ -490,5 +595,150 @@ Prompt injection is a security vulnerability where adversarial inputs manipulate
 Alignment ensures AI systems behave according to human values and intentions, addressing safety concerns and unintended behaviors.
 
 **Constitutional AI**
+Constitutional AI
 Constitutional AI trains models using a set of principles (a "constitution") to self-critique and revise responses, improving safety without extensive human labeling.
+
+**dbt (data build tool)**
+dbt is a transformation tool that enables data analysts and engineers to transform data in warehouses by writing SELECT statements, providing version control, testing, and documentation for data transformations.
+
+**DVC (Data Version Control)**
+DVC is an open-source version control system for machine learning projects, tracking datasets, models, and experiments with Git-like commands, enabling reproducibility and collaboration.
+
+**ETL (Extract, Transform, Load)**
+ETL is a data integration process that extracts data from sources, transforms it into the desired format/structure, and loads it into a destination system like a data warehouse—traditional approach where transformation happens before loading.
+
+**ELT (Extract, Load, Transform)**
+ELT is a modern data integration approach that extracts data, loads it into a destination first (typically cloud data warehouse), then transforms it—leveraging the processing power of modern data warehouses.
+
+**Airflow (Apache Airflow)**
+Airflow is an open-source workflow orchestration platform for authoring, scheduling, and monitoring data pipelines as Directed Acyclic Graphs (DAGs), widely used for ETL/ELT and ML workflows.
+
+**Kafka (Apache Kafka)**
+Kafka is a distributed streaming platform for building real-time data pipelines and streaming applications, providing high-throughput, fault-tolerant publish-subscribe messaging.
+
+**Flink (Apache Flink)**
+Flink is a stream processing framework for stateful computations over data streams, enabling real-time analytics, event-driven applications, and batch processing with low latency.
+
+**Prefect**
+Prefect is a modern workflow orchestration platform that provides dataflow automation with dynamic task generation, improved error handling, and cloud-native design.
+
+**Fivetran**
+Fivetran is a cloud-based data integration platform that automates data pipelines from various sources to data warehouses with pre-built connectors and automated schema management.
+
+**MLflow**
+MLflow is an open-source platform for managing the ML lifecycle, including experiment tracking, model packaging, versioning, and deployment, with support for various frameworks.
+
+**Feature Store**
+A feature store is a centralized repository for storing, managing, and serving ML features, ensuring consistency between training and serving, reducing feature engineering duplication, and enabling feature discovery and reuse.
+
+**Vision Transformer (ViT)**
+Vision Transformer applies the transformer architecture to image classification by treating image patches as tokens, demonstrating that attention-based models can match or exceed CNNs on computer vision tasks.
+
+**State Space Models (SSM)**
+State space models are efficient sequence modeling architectures that use linear state-space representations, offering alternatives to transformers with better computational efficiency for long sequences.
+
+**Mamba**
+Mamba is a state-space model architecture designed for efficient sequence modeling, achieving transformer-like performance with linear time complexity, particularly effective for long-context tasks.
+
+**Sparse Transformers**
+Sparse transformers reduce computational complexity by using sparse attention patterns instead of full attention, enabling efficient processing of longer sequences with reduced memory requirements.
+
+**Longformer**
+Longformer is a transformer variant that uses a combination of local windowed attention and task-motivated global attention, efficiently handling documents with thousands of tokens.
+
+**T5 (Text-to-Text Transfer Transformer)**
+T5 is an encoder-decoder transformer model that frames all NLP tasks as text-to-text problems, where both input and output are text strings, enabling unified training across diverse tasks.
+
+**Encoder-only Architecture**
+Encoder-only models (like BERT) use only the transformer encoder stack, learning bidirectional representations ideal for understanding tasks like classification, NER, and question answering.
+
+**Decoder-only Architecture**
+Decoder-only models (like GPT) use only the transformer decoder stack with causal attention, designed for autoregressive generation tasks and serving as the foundation for most large language models.
+
+**Weights & Biases (W&B)**
+Weights & Biases is an MLOps platform for experiment tracking, model versioning, dataset management, and model monitoring, providing visualization tools and collaboration features for ML teams.
+
+**Neptune**
+Neptune is an ML metadata store and experiment tracking platform that logs, organizes, and visualizes ML experiments, models, and datasets with version control and collaboration capabilities.
+
+**Kubeflow**
+Kubeflow is an open-source machine learning platform built on Kubernetes for deploying, scaling, and managing ML workflows, providing components for training, serving, and pipeline orchestration.
+
+**Feast**
+Feast is an open-source feature store that manages the lifecycle of ML features, ensuring consistency between training and serving environments with real-time and batch feature serving.
+
+**Tecton**
+Tecton is an enterprise feature platform (feature store) built for production ML, providing feature engineering, storage, and serving with real-time updates and monitoring capabilities.
+
+**A/B Testing**
+A/B testing is an experimental methodology that compares two or more versions (A, B, etc.) to determine which performs better, commonly used to evaluate ML model performance, UI changes, or product features in production.
+
+**Model Registry**
+A model registry is a centralized repository for storing, versioning, and managing ML models throughout their lifecycle, tracking metadata like training parameters, metrics, lineage, and deployment status.
+
+**Model Monitoring**
+Model monitoring involves tracking ML model performance in production, detecting issues like data drift, concept drift, performance degradation, and ensuring models continue to meet business requirements.
+
+**Drift Detection**
+Drift detection identifies changes in data distributions (data drift) or relationships between features and targets (concept drift) that can degrade model performance over time, triggering retraining or alerts.
+
+**ONNX (Open Neural Network Exchange)**
+ONNX is an open format for representing ML models, enabling interoperability between different frameworks (PyTorch, TensorFlow) and optimized deployment across various hardware platforms.
+
+**TensorFlow Lite**
+TensorFlow Lite is a lightweight framework for deploying TensorFlow models on mobile, embedded, and IoT devices with optimizations for low latency and small binary size.
+
+**FastAPI**
+FastAPI is a modern, high-performance Python web framework for building APIs with automatic interactive documentation, type hints, and async support, popular for ML model serving.
+
+**Red Teaming**
+Red teaming is a security testing practice where experts attempt to break AI systems by finding vulnerabilities, adversarial inputs, or ways to elicit unsafe outputs, helping improve model robustness and safety.
+
+**Adversarial Testing**
+Adversarial testing involves systematically probing AI systems with challenging or malicious inputs designed to expose weaknesses, biases, or failure modes before deployment.
+
+**AI Watermarking**
+AI watermarking embeds imperceptible signals in AI-generated content (text, images, audio) to enable detection and attribution of synthetic media, helping combat misinformation and deepfakes.
+
+**Bias (AI Bias)**
+AI bias refers to systematic errors or unfair outcomes in ML models, often reflecting biases in training data, that can lead to discriminatory treatment of certain groups based on protected characteristics like race, gender, or age.
+
+**Fairness (AI Fairness)**
+Fairness in AI ensures that models make equitable decisions without discriminating against individuals or groups, measured through various metrics like demographic parity, equal opportunity, or equalized odds.
+
+**Explainability (Model Explainability)**
+Explainability refers to the ability to understand and interpret how an AI model makes decisions, often using techniques like SHAP, LIME, or attention visualization to provide human-understandable explanations.
+
+**Interpretability**
+Interpretability is the degree to which humans can understand the reasoning behind a model's predictions, with simpler models (linear regression, decision trees) being more interpretable than complex deep neural networks.
+
+**DPO (Direct Preference Optimization)**
+DPO is an alignment technique that directly optimizes language models based on human preferences without requiring a separate reward model, simplifying the RLHF pipeline while achieving comparable results.
+
+**QLoRA (Quantized Low-Rank Adaptation)**
+QLoRA combines quantization and LoRA to enable efficient fine-tuning of large language models on consumer GPUs by using 4-bit quantization while maintaining performance close to full precision.
+
+**Model Compression**
+Model compression reduces model size and computational requirements through techniques like quantization, pruning, knowledge distillation, and low-rank factorization, enabling deployment on resource-constrained devices.
+
+**vLLM**
+vLLM is a high-throughput, memory-efficient inference engine for large language models, using PagedAttention to manage attention key-value memory and achieve significantly faster serving speeds.
+
+**TGI (Text Generation Inference)**
+TGI (by Hugging Face) is a production-ready inference server for large language models, providing optimizations like continuous batching, tensor parallelism, and quantization support for efficient deployment.
+
+**Ollama**
+Ollama is a tool for running large language models locally on personal computers, providing a simple interface to download, run, and interact with models like LLaMA, Mistral, and others without cloud dependencies.
+
+**Edge Deployment**
+Edge deployment runs ML models on end-user devices (phones, IoT devices, embedded systems) rather than cloud servers, enabling lower latency, improved privacy, and offline functionality.
+
+**FAISS (Facebook AI Similarity Search)**
+FAISS is a library for efficient similarity search and clustering of dense vectors, optimized for billion-scale vector databases with GPU acceleration, commonly used for embedding retrieval in RAG systems.
+
+**HNSW (Hierarchical Navigable Small World)**
+HNSW is an approximate nearest neighbor search algorithm that builds a multi-layer graph structure, providing fast and accurate similarity search for high-dimensional vectors with excellent recall-speed tradeoffs.
+
+**Annoy (Approximate Nearest Neighbors Oh Yeah)**
+Annoy is a C++ library with Python bindings for approximate nearest neighbor search, using random projection forests to create memory-mapped indexes suitable for large-scale similarity search.
 
