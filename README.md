@@ -21,41 +21,41 @@
 
 **M. Models**
 
-- [M0. Statistical thinking and intuition](#m0.-statistical-thinking-and-intuition)
-- [M1. Statistical inference](#m1.-statistical-inference)
-- [M2. Econometrics](#m2.-econometrics)
-- [M3. Bayesian modeling and causal inference](#m3.-bayesian-modeling-and-causal-inference.)
-- [M4. Classic machine learning](#m4.-classic-machine-learning.)
-- [M5. Neural nets (NN) and deep learning](#m5.-neural-nets-(nn)-and-deep-learning.)
-- [M6. NLP, CV and RL subfields](#m6.-nlp,-cv-and-rl-subfields.)
-- [M7. Other modelling techniques](#m7.-other-modelling-techniques.)
-- [M8. Additional topics (harder or less exciting)](#m8.-additional-topics-(harder-or-less-exciting))
-- [M9. Modern AI Architectures (2020-2025)](#m9.-modern-ai-architectures)
+- [M0. Statistical thinking and intuition](#m0-statistical-thinking-and-intuition)
+- [M1. Statistical inference](#m1-statistical-inference)
+- [M2. Econometrics](#m2-econometrics)
+- [M3. Bayesian modeling and causal inference](#m3-bayesian-modeling-and-causal-inference)
+- [M4. Classic machine learning](#m4-classic-machine-learning)
+- [M5. Neural nets (NN) and deep learning](#m5-neural-nets-nn-and-deep-learning)
+- [M6. NLP, CV and RL subfields](#m6-nlp-cv-and-rl-subfields)
+- [M7. Other modelling techniques](#m7-other-modelling-techniques)
+- [M8. Additional topics (harder or less exciting)](#m8-additional-topics-harder-or-less-exciting)
+- [M9. Modern AI Architectures (2020-2025)](#m9-modern-ai-architectures-2020-2025)
 
 **D. Data**
 
-- [D1. Data sources](#d1.-data-sources.)
-- [D2. Data analysis](#d2.-data-analysis.)
-- [D3. Data engineering](#d3.-data-engineering.)
-- [D4. Pipelines and orchestration](#d4.-pipelines-and-orchestration.)
-- [D5. Data management](#d5.-data-management)
+- [D1. Data sources](#d1-data-sources)
+- [D2. Data analysis](#d2-data-analysis)
+- [D3. Data engineering](#d3-data-engineering)
+- [D4. Pipelines and orchestration](#d4-pipelines-and-orchestration)
+- [D5. Data management](#d5-data-management)
 
 **T. Tools – Code and Infrastructure**
 
-- [T0. Writing code](#t0.-writing-code)
-- [T1. Software tools](#t1.-software-tools.)
-- [T2. Cloud and computing infrastructure](#t2.-cloud-and-computing-infrastructure.)
-- [T3. Development Tools and Environment](#t3.-development-tools)
+- [T0. Writing code](#t0-writing-code)
+- [T1. Software tools](#t1-software-tools)
+- [T2. Cloud and computing infrastructure](#t2-cloud-and-computing-infrastructure)
+- [T3. Development Tools and Environment](#t3-development-tools-and-environment)
 
 **P. Productisation**
 
-- [P1. Productisation and business value](#p1.-productisation-and-business-value.)
-- [P2. Applications, domains and cases](#p2.-applications-domains-and-cases)
-- [P3. Society impacts and regulation](#p3.-society-impacts-and-regulation.)
+- [P1. Productisation and business value](#p1-productisation-and-business-value)
+- [P2. Applications, domains and cases](#p2-applications-domains-and-cases)
+- [P3. Society impacts and regulation](#p3-society-impacts-and-regulation)
 
 **E. Extra**
 
-- [E1. Companies](#e1.-companies)
+- [E1. Companies](#e1-companies)
 
 ### Personalized Learning Path
 
@@ -307,11 +307,11 @@ The table below summarizes steps in the extended modeling process, from initial 
 
 #
 
-# **M. Models** {#m.-models}
+# **M. Models**
 
 ~~Non-essential topics are strike-through~~
 
-## **M0. Statistical thinking and intuition**  {#m0.-statistical-thinking-and-intuition}
+## **M0. Statistical thinking and intuition**
 
 - [ ] Probability, random variables, distributions.  
 - [ ] Model vs. reality. Digital twins.
@@ -321,7 +321,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] Treatment and treatment effects.
 - [ ] Measurement errors and missing data.
 
-## **M1. Statistical inference** {#m1.-statistical-inference}
+## **M1. Statistical inference**
 
 - [ ] Data generating process, sample vs population.  
 - [ ] Sampling techniques and inference. Statistical model.
@@ -330,7 +330,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] Measuring model quality and performance.  
 - [ ] Model lifecyle, data and model drift.
 
-## **M2. Econometrics** {#m2.-econometrics}
+## **M2. Econometrics**
 
 - [ ] Cross-section, time series, panel and spatial data.
 - [ ] Linear regression and ordinary least squares (OLS).  
@@ -340,19 +340,19 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] ~~Systems of equations.~~  
 - [ ] Estimation techniques: OLS and varieties, GMM, maximum likelihood, Bayesian estimates.
 
-## **M3. Bayesian modeling and causal inference.** {#m3.-bayesian-modeling-and-causal-inference.}
+## **M3. Bayesian modeling and causal inference.**
 
 - [ ] ~~Bayesian modeling and probabilistic programming.~~  
 - [ ] ~~Causal inference and do-notation.~~
 
-## **M4. Classic machine learning.** {#m4.-classic-machine-learning.}
+## **M4. Classic machine learning.**
 
 - [ ] Tasks: classification, regression, clustering, dimensionality reduction, decision trees, support vector machines and discriminant analysis.  
 - [ ] Criteria for model selection and performance evaluation.
 - [ ] ~~Statistical learning theory (loss, theoretical and empirical risk, PAC-Bayes)~~  
 - [ ] ~~Forecast combination, choosing forecasts and AutoML.~~
 
-## **M5. Neural nets (NN) and deep learning.** {#m5.-neural-nets-(nn)-and-deep-learning.}
+## **M5. Neural nets (NN) and deep learning.**
 
 - [ ] Simple perceptron and NN construction (gradient descent, backpropagation, regularization).  
 - [ ] Traditional NN architectures (feed-forward, convolutional, recurrent, generative аdversarial, transformers).  
@@ -362,7 +362,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] **Mixture of Experts (MoE)** architecture for efficient scaling.  
 - [ ] Artificial general intelligence (AGI) and tests for intelligence.
 
-## **M6. NLP, CV and RL subfields.** {#m6.-nlp,-cv-and-rl-subfields.}
+## **M6. NLP, CV and RL subfields.**
 
 - [ ] Text and speech – classic NLP. [*Jurafsky and Martin*](https://web.stanford.edu/~jurafsky/slp3/)*.*
 - [ ] **Large Language Models (LLMs)** - GPT-4, Claude, LLaMA, Gemini architecture and capabilities.  
@@ -377,7 +377,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] ~~Reinforcement learning (RL). [*Sutton and Barto*](http://www.incompleteideas.net/book/the-book-2nd.html)*.*~~  
 - [ ] ~~Robotics. [*Underactuated Robotics*](https://underactuated.csail.mit.edu/) *course notes by [Russ Tedrake](http://people.csail.mit.edu/russt/).*~~
 
-## **M7. Other modelling techniques.** {#m7.-other-modelling-techniques.}
+## **M7. Other modelling techniques.**
 
 - [ ] ~~Graphs and networks. [*NetworkX bibliography.*](https://networkx.org/documentation/stable/#bibliography)~~  
 - [ ] ~~Agent-based modeling (ABM).~~
@@ -387,7 +387,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] ~~System dynamics (SD). [*Jay Forrester.*](https://systemdynamics.org/news/memorial/jay-w-forrester/)~~  
 - [ ] ~~Control theory. [*r/ControlTheory wiki*](https://www.reddit.com/r/ControlTheory/wiki/index/) *and [Feedback Systems by Aström and Murray](https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-complete_28Sep12.pdf)*.~~
 
-## **M9. Modern AI Architectures (2020-2025).** {#m9.-modern-ai-architectures}
+## **M9. Modern AI Architectures (2020-2025).**
 
 - [ ] **Transformer variants** (encoder-only: BERT; decoder-only: GPT; encoder-decoder: T5).  
 - [ ] **Vision Transformers (ViT)** for image understanding.  
@@ -395,7 +395,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] **Retrieval-augmented architectures** (RAG systems combining retrieval and generation).  
 - [ ] **Sparse models and efficient transformers** (Sparse Transformers, Longformer, sliding window attention).
 
-## **M8. Additional topics (harder or less exciting)** {#m8.-additional-topics-(harder-or-less-exciting)}
+## **M8. Additional topics (harder or less exciting)**
 
 - [ ] ~~Combinatorics… *[is hard.](https://www.reddit.com/r/mathematics/comments/17e0h2h/combinatorics_destroying_my_ego_the_strangest_of/)*~~  
 - [ ] ~~Mathematical statistics (point estimation, confidence bands, hypothesis testing).~~  
@@ -405,9 +405,9 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] ~~Differential equations and random processes.~~  
 - [ ] ~~Probability as part of measure theory.~~
 
-# **D. Data** {#d.-data}
+# **D. Data**
 
-## **D1. Data sources.** {#d1.-data-sources.}
+## **D1. Data sources.**
 
 - [ ] Data collection, observation vs experiment, registration protocols.
 - [ ] Physical sensors.  
@@ -415,14 +415,14 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] Data distribution and providers. Data markets.  
 - [ ] Data protection and privacy.
 
-## **D2. Data analysis.** {#d2.-data-analysis.}
+## **D2. Data analysis.**
 
 - [ ] EDA and descriptive statistics.  
 - [ ] Graphs, visualizations, dashboards.  
 - [ ] Analysis as a DAG.
 - [ ] Reproducible research.
 
-## **D3. Data engineering.** {#d3.-data-engineering.}
+## **D3. Data engineering.**
 
 - [ ] Structured data. Serialization formats (CSV, JSON, XML). Binary data formats.  
 - [ ] SQL for tabular data. Dataframes (pandas, polars) and dataframe backends.  
@@ -434,7 +434,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] **Real-time data streaming** (Kafka, Flink, event-driven architectures).  
 - [ ] **Data versioning** (DVC, LakeFS for reproducibility).
 
-## **D4. Pipelines and orchestration.** {#d4.-pipelines-and-orchestration.}
+## **D4. Pipelines and orchestration.**
 
 - [ ] Modelling pipelines (Airflow and similar).  
 - [ ] Model delivery (eg FastAPI).  
@@ -443,20 +443,20 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] **A/B testing and experimentation frameworks** for production ML.  
 - [ ] **Model versioning and registry** (tracking model lineage and artifacts).  
 
-## **D5. Data management**  {#d5.-data-management}
+## **D5. Data management**
 
 - [ ] Data quality  
 - [ ] Corporate data governance (DMBOK).
 
-# **T. Tools – Code and Infrastructure** {#t.-tools-–-code-and-infrastructure}
+# **T. Tools – Code and Infrastructure**
 
-## **T0. Writing code** {#t0.-writing-code}
+## **T0. Writing code**
 
 - [ ] Linux and command line on a local and remote machine.  
 - [ ] Software development practices for data modelling (version control, unit testing, APIs, DevOps, product thinking and metrics, architecture).  
 - [ ] Python, R, Julia ecosystems for machine learning.
 
-## **T1. Software tools.**  {#t1.-software-tools.}
+## **T1. Software tools.**
 
 - [ ] Proprietary statistical packages and their documentation.  
 - [ ] Open software for statistics (R), machine learning (scikit-learn) and neural networks (pytorch, tensorflow and keras).  
@@ -466,7 +466,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] **Vector database libraries** (FAISS, Annoy, hnswlib for similarity search).  
 - [ ] **Modern ML frameworks** (JAX, XGBoost, LightGBM, CatBoost for gradient boosting).
 
-## **T2. Cloud and computing infrastructure.** {#t2.-cloud-and-computing-infrastructure.}
+## **T2. Cloud and computing infrastructure.**
 
 - [ ] Cloud services and infrastructure provisioning.  
 - [ ] **GPU computing** (CUDA, distributed training, multi-GPU setups).  
@@ -645,7 +645,7 @@ Data Sources → Ingestion → Storage → Transform → BI/Analytics
 
 ---
 
-## **T3. Development Tools and Environment.** {#t3.-development-tools}
+## **T3. Development Tools and Environment.**
 
 - [ ] **Jupyter ecosystem** (JupyterLab, Jupyter notebooks, extensions, interactive computing).  
 - [ ] **IDEs and AI coding assistants** (VS Code, Cursor, GitHub Copilot, Windsurf).  
@@ -654,13 +654,13 @@ Data Sources → Ingestion → Storage → Transform → BI/Analytics
 
 #
 
-# **P. Productisation** {#p.-productisation}
+# **P. Productisation**
 
 Delivering value for users, business stakeholders and society from data and models.
 
 Note: “model producisation” usually means two things – taking a model out of a single author usage to a workable system – thus making a pipeline, or designing a task ina  way that is likely to serve a business purpose
 
-## **P1. Productisation and business value.** {#p1.-productisation-and-business-value.}
+## **P1. Productisation and business value.**
 
 - [ ] Risk, learning and experimentation in business context.  
 - [ ] Modelling hypothesis and expected outcomes.  
@@ -770,7 +770,7 @@ How long will results persist?
 
 ---
 
-## **P2. Applications, domains and cases** {#p2.-applications-domains-and-cases}
+## **P2. Applications, domains and cases**
 
 - [ ] Recommender systems (RecSys).  
 - [ ] Clinical trials.  
@@ -781,7 +781,7 @@ How long will results persist?
 - [ ] **Document intelligence** (Q&A over documents, summarization, extraction).  
 - [ ] **Search and information retrieval** (semantic search, hybrid search systems).
 
-## **P3. Society impacts and regulation.** {#p3.-society-impacts-and-regulation.}
+## **P3. Society impacts and regulation.**
 
 - [ ] Fairness, biases, equity, human loop and ethics.  
 - [ ] Grounds for AI regulation and policy.
@@ -792,9 +792,9 @@ How long will results persist?
 - [ ] **AI watermarking and detection** (synthetic content identification).  
 - [ ] **Copyright and intellectual property** issues with generative AI.
 
-# **E. Extra topics** {#e.-extra-topics}
+# **E. Extra topics**
 
-## **E1. Companies** {#e1.-companies}
+## **E1. Companies**
 
 - [ ] ~~Academic vs corporate research.~~  
 - [ ] ~~Company valuations.~~  
@@ -802,7 +802,7 @@ How long will results persist?
 
 ---
 
-# **Personalized Learning Roadmap** {#personalized-learning-roadmap}
+# **Personalized Learning Roadmap**
 
 This section provides a structured, phase-based approach to learning AI/ML, tailored for progressive skill building from foundations to advanced applications.
 
