@@ -1,22 +1,38 @@
-# AI/ML Glossary - Table of Contents
+# AI/ML Glossary
+
+
+##  Table of Contents
 
 ## Quick Navigation by Letter
-[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [Modern AI/ML Terms (2023-2025)](#modern-aiml-terms-2023-2025)
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) | [Z](#z)
 
 ---
 
 ## A
 **Terms in this section:**
+- 3Blue1Brown
+- A/B Testing
 - Abstractive Summarisation
 - ACID (Atomicity, Consistency, Isolation, Durability)
 - Accuracy
 - Activation Function
 - Active Learning
+- Adversarial Testing
+- Agent (AI Agent)
 - AI Skill
+- AI Watermarking
+- Airflow (Apache Airflow)
 - Algorithm
+- Alignment
+- AlphaFold
+- AlphaGo
+- Andrej Karpathy
+- Andrew Ng
 - Annotation
+- Annoy (Approximate Nearest Neighbors Oh Yeah)
 - Anomaly Detection
 - Artificial Intelligence (AI)
+- Attention Mechanism
 - Autoencoder
 - AutoML (Automated Machine Learning)
 
@@ -26,89 +42,156 @@
 - Bag of Words (BoW)
 - BASE (Basically Available, Soft state, Eventually consistent)
 - Batch Size
-- BigQuery
 - BERT (Bidirectional Encoder Representations from Transformers)
+- Bias (AI Bias)
 - Bias (Model Bias)
 - Big Data
+- BigQuery
 - Bigrams
 - BLEU (Bilingual Evaluation Understudy)
+- BPE (Byte Pair Encoding)
 
 ## C
 **Terms in this section:**
 - CAP Theorem (Consistency, Availability, Partition Tolerance)
 - Cassandra
+- CatBoost
+- CDN (Content Delivery Network)
+- Chain-of-Thought (CoT)
 - Chatbot
 - Classification
+- Claude
+- CLIP (Contrastive Language-Image Pre-training)
 - Cloud (Cloud Computing)
-- CDN (Content Delivery Network)
 - Clustering
+- Constitutional AI
 - Containerization
+- Context Window
 - Computer Vision
 - Convolutional Neural Network (CNN)
+- Cosine Similarity
+- Coursera
 - Cross‑Entropy Loss
 - Cross‑Validation
 
 ## D
 **Terms in this section:**
+- DALL-E
 - Data Warehouse
 - DBMS (Database Management System)
+- dbt (data build tool)
 - Decision Tree
+- Decoder-only Architecture
 - Deep Learning (DL)
+- deeplearning.ai
+- Diffusion Models
+- Digital Twin
+- Distillation (Knowledge Distillation)
 - Docker
 - Doc2Vec
+- DPO (Direct Preference Optimization)
+- Drift Detection
 - Dropout
+- DVC (Data Version Control)
 
 ## E
 **Terms in this section:**
 - EC2 (Elastic Compute Cloud)
+- Econometrics
+- Edge Deployment
+- ELT (Extract, Load, Transform)
 - Embeddings
+- Encoder-Decoder Architecture
+- Encoder-only Architecture
 - Entity
 - Epoch
+- ETL (Extract, Transform, Load)
+- Experiment Tracking
+- Explainability (Model Explainability)
 - Extractive Summarisation
 
 ## F
 **Terms in this section:**
 - F1 Score
+- FAISS (Facebook AI Similarity Search)
+- Fairness (AI Fairness)
+- FastAPI
+- fastText
+- Feast
 - Feature Engineering
 - Feature Extraction
+- Feature Store
 - Features
-- Few‑Shot Learning
+- Few-Shot Learning
+- Fine-tuning
+- Fivetran
+- Flink (Apache Flink)
+- Foundation Model
+- freeCodeCamp
 
 ## G
 **Terms in this section:**
+- GAN (Generative Adversarial Network)
+- Gemini
 - Generative (Model)
+- Gilbert Strang
+- GPT (Generative Pre-trained Transformer)
+- Grant Sanderson
 - Graph
 
 ## H
 **Terms in this section:**
 - Hadoop
+- Hallucination
+- Haystack
 - HDFS (Hadoop Distributed File System)
 - Hidden Layer
+- HNSW (Hierarchical Navigable Small World)
+- Hugging Face
 - Human in the Loop (HITL)
 - Hypervisor
 
 ## I
 **Terms in this section:**
 - IaaS (Infrastructure as a Service)
+- In-Context Learning
 - Inference (Model Inference)
 - Information Extraction (IE)
 - Information Retrieval (IR)
+- Instruction Tuning
+- Interpretability
 - Inverse Document Frequency (IDF)
+
+## J
+**Terms in this section:**
+- JAX
+- Jon Krohn
 
 ## K
 **Terms in this section:**
+- Kafka (Apache Kafka)
+- Kaggle
 - Kedro
 - Keras
+- Knowledge Distillation
 - Knowledge Graph
+- Kubeflow
 - Kubernetes
 
 ## L
 **Terms in this section:**
-- Label
-- Lambda (AWS Lambda)
 - L1 Norm
 - L2 Norm
+- Label
+- Lambda (AWS Lambda)
+- LangChain
+- Large Language Models (LLMs)
+- LightGBM
+- LLaMA (Large Language Model Meta AI)
+- LlamaIndex (GPT Index)
 - Logistic Regression
+- Longformer
+- LoRA (Low-Rank Adaptation)
 - Loss Function
 - Low‑Shot Learning
 - LSTM (Long Short‑Term Memory)
@@ -118,48 +201,79 @@
 - Machine Learning (ML)
 - Machine Reading
 - Machine Translation (MT)
+- Mamba
 - MapReduce
+- MDTP Framework
 - Mean Squared Error (MSE)
+- Midjourney
+- Mistral
+- MIT OpenCourseWare
+- Mixture of Experts (MoE)
+- MLflow
+- Model Compression
+- Model Deployment
+- Model Monitoring
+- Model Registry
 - MongoDB
+- Multi-Head Attention
+- Multimodal AI
 - MySQL
 
 ## N
 **Terms in this section:**
 - Naïve Bayes
 - Named Entity Recognition (NER)
+- NanoGPT
 - Natural Language Generation (NLG)
 - Natural Language Processing (NLP)
 - Neo4j
+- Neptune
 - Network (Neural / Computing Network)
 - NoSQL
+- N‑grams
 - Normalisation (Normalization)
 - NumPy
 
 ## O
 **Terms in this section:**
+- Offline Machine Learning
 - OLAP (Online Analytical Processing)
 - OLTP (Online Transaction Processing)
-- Offline Machine Learning
+- Ollama
+- One-Shot Learning
 - Online Machine Learning
+- ONNX (Open Neural Network Exchange)
 - Optimisation (Optimization)
 - Overfitting
 
 ## P
 **Terms in this section:**
-- Pandas
 - PaaS (Platform as a Service)
+- Pandas
+- Perplexity
 - Pipeline (ML Pipeline)
 - Polly
 - PostgreSQL
 - Precision
+- Prefect
+- Productisation
+- Prompt Engineering
+- Prompt Injection
 - PyTorch
+
+## Q
+**Terms in this section:**
+- QLoRA (Quantized Low-Rank Adaptation)
+- Quantization
 
 ## R
 **Terms in this section:**
+- RAG (Retrieval Augmented Generation)
 - Random Forest
 - Recall
 - Recommender System
 - Recurrent Neural Network (RNN)
+- Red Teaming
 - Redis
 - Regression
 - Regular Expression (Regex)
@@ -167,6 +281,7 @@
 - Reinforcement Learning (RL)
 - Rekognition
 - Representation Learning
+- RLHF (Reinforcement Learning from Human Feedback)
 - ROUGE
 - Rules‑Based (Rule‑Based Systems)
 
@@ -177,23 +292,36 @@
 - SageMaker
 - Scikit‑Learn
 - SciPy
+- Self-Attention
 - Semi‑Supervised Machine Learning
+- SentencePiece
 - Sentiment Classification
 - Sequence‑to‑Sequence (Seq2Seq)
 - Serverless
+- Shot (Few-Shot, One-Shot, Zero-Shot)
 - Snowflake
+- Sora
 - Spark (Apache Spark)
+- Sparse Transformers
 - SQL (Structured Query Language)
+- Stable Diffusion
+- State Space Models
 - Supervised Machine Learning
 - Support Vector Machine (SVM)
 
 ## T
 **Terms in this section:**
+- T5 (Text-to-Text Transfer Transformer)
+- Tecton
+- Temperature
 - Tensor
 - TensorFlow
+- TensorFlow Lite
 - Term Frequency (TF)
 - Term Frequency–Inverse Document Frequency (TF‑IDF)
 - Testing Set (Test Set)
+- TGI (Text Generation Inference)
+- Tokenization
 - Tokens
 - Training (Model Training)
 - Training Set
@@ -210,137 +338,24 @@
 **Terms in this section:**
 - Validation Set
 - Variance (Model Variance)
+- Vector Database
 - Virtualization
+- Vision Transformer (ViT)
+- vLLM
 - VM (Virtual Machine)
 
 ## W
 **Terms in this section:**
-- Word2Vec
-- Zero‑Shot Learning
-
-## Modern AI/ML Terms (2023-2025)
-**Key modern concepts:**
-- 3Blue1Brown
-- A/B Testing
-- Adversarial Testing
-- Agent (AI Agent)
-- AI Watermarking
-- Airflow (Apache Airflow)
-- Alignment
-- AlphaFold
-- AlphaGo
-- Andrew Ng
-- Andrej Karpathy
-- Annoy (Approximate Nearest Neighbors Oh Yeah)
-- Attention Mechanism
-- BPE (Byte Pair Encoding)
-- CatBoost
-- Chain-of-Thought (CoT)
-- Claude
-- CLIP (Contrastive Language-Image Pre-training)
-- Constitutional AI
-- Context Window
-- Cosine Similarity
-- Coursera
-- DALL-E
-- deeplearning.ai
-- Decoder-only Architecture
-- Diffusion Models
-- Digital Twin
-- Distillation (Knowledge Distillation)
-- DPO (Direct Preference Optimization)
-- Drift Detection
-- DVC (Data Version Control)
-- Econometrics
-- Edge Deployment
-- ELT (Extract, Load, Transform)
-- Encoder-Decoder Architecture
-- Encoder-only Architecture
-- ETL (Extract, Transform, Load)
-- Explainability (Model Explainability)
-- Experiment Tracking
-- FAISS (Facebook AI Similarity Search)
-- Fairness (AI Fairness)
-- FastAPI
-- Feast
-- Feature Store
-- Few-Shot Learning
-- Fine-tuning
-- Flink (Apache Flink)
-- Foundation Model
-- freeCodeCamp
-- Gemini
-- Gilbert Strang
-- GAN (Generative Adversarial Network)
-- GPT (Generative Pre-trained Transformer)
-- Grant Sanderson
-- Hallucination
-- Haystack
-- HNSW (Hierarchical Navigable Small World)
-- Hugging Face
-- In-Context Learning
-- Instruction Tuning
-- Interpretability
-- JAX
-- Jon Krohn
-- Kaggle
-- Kafka (Apache Kafka)
-- Knowledge Distillation
-- Kubeflow
-- LangChain
-- Large Language Models (LLMs)
-- LightGBM
-- LLaMA (Large Language Model Meta AI)
-- LlamaIndex (GPT Index)
-- Longformer
-- LoRA (Low-Rank Adaptation)
-- Mamba
-- MDTP Framework
-- Midjourney
-- Mistral
-- MIT OpenCourseWare
-- Mixture of Experts (MoE)
-- MLflow
-- Model Compression
-- Model Deployment
-- Model Monitoring
-- Model Registry
-- Multi-Head Attention
-- Multimodal AI
-- NanoGPT
-- Neptune
-- Ollama
-- One-Shot Learning
-- ONNX (Open Neural Network Exchange)
-- Perplexity
-- Prefect
-- Productisation
-- Prompt Engineering
-- Prompt Injection
-- QLoRA (Quantized Low-Rank Adaptation)
-- Quantization
-- RAG (Retrieval Augmented Generation)
-- Red Teaming
-- RLHF (Reinforcement Learning from Human Feedback)
-- Self-Attention
-- SentencePiece
-- Shot (Few-Shot, One-Shot, Zero-Shot)
-- Sora
-- Sparse Transformers
-- Stable Diffusion
-- State Space Models
-- T5 (Text-to-Text Transfer Transformer)
-- Tecton
-- Temperature
-- TensorFlow Lite
-- TGI (Text Generation Inference)
-- Tokenization
-- Vector Database
-- Vision Transformer (ViT)
-- vLLM
 - Weights & Biases (W&B)
+- Word2Vec
 - WordPiece
+
+## X
+**Terms in this section:**
 - XGBoost
+
+## Z
+**Terms in this section:**
 - Zero-Shot Learning
 
 ---
@@ -825,340 +840,28 @@ Z
 Zero‑Shot Learning
 Zero‑shot learning is a setup where a model must correctly classify samples from classes it has never seen during training, often by leveraging auxiliary information like semantic descriptions.
 
----
 
-## Modern AI/ML Terms (2023-2025) ⭐
 
-**Large Language Models (LLMs)**
-LLMs are foundation models trained on massive text datasets with billions of parameters (e.g., GPT-4, Claude, LLaMA) capable of understanding and generating human-like text.
-
-**GPT (Generative Pre-trained Transformer)**
-GPT is a family of large language models by OpenAI that use the transformer decoder architecture for text generation tasks.
-
-**Claude**
-Claude is an LLM developed by Anthropic with emphasis on safety, helpfulness, and harmlessness through constitutional AI and RLHF.
-
-**Prompt Engineering**
-Prompt engineering is the practice of crafting effective input prompts to guide LLM outputs, including techniques like few-shot prompting, chain-of-thought, and system instructions.
-
-**Context Window**
-The context window is the maximum number of tokens (input + output) that an LLM can process in a single request, ranging from 4K to 200K+ tokens in modern models.
-
-**Temperature**
-Temperature is a hyperparameter (0.0-2.0) controlling randomness in text generation: lower values produce focused/deterministic outputs, higher values increase creativity and diversity.
-
-**RAG (Retrieval Augmented Generation)**
-RAG combines information retrieval with text generation, allowing LLMs to access external knowledge bases or documents to provide grounded, factual responses.
-
-**Vector Database**
-Vector databases (Pinecone, Weaviate, ChromaDB) store and efficiently search high-dimensional embeddings, enabling semantic search and RAG applications.
-
-**Cosine Similarity**
-Cosine similarity measures the angle between two vectors (range: -1 to 1), commonly used to quantify semantic similarity between embeddings.
-
-**Fine-tuning**
-Fine-tuning adapts a pre-trained model to a specific task or domain by continuing training on a smaller, task-specific dataset.
-
-**LoRA (Low-Rank Adaptation)**
-LoRA is an efficient fine-tuning technique that updates only a small number of parameters via low-rank matrix decomposition, reducing memory and compute requirements.
-
-**RLHF (Reinforcement Learning from Human Feedback)**
-RLHF trains models using human preferences as rewards, aligning model behavior with human values and improving response quality.
-
-**Instruction Tuning**
-Instruction tuning trains models to follow natural language instructions by fine-tuning on datasets of (instruction, response) pairs.
-
-**Attention Mechanism**
-Attention allows models to dynamically focus on relevant parts of the input when processing sequences, forming the core of transformer architectures.
-
-**Self-Attention**
-Self-attention computes relationships between all positions in a sequence simultaneously, enabling each token to attend to all other tokens.
-
-**Multi-Head Attention**
-Multi-head attention runs multiple attention operations in parallel with different learned projections, capturing diverse aspects of token relationships.
-
-**Encoder-Decoder Architecture**
-The encoder-decoder pattern uses one transformer to encode input sequences and another to generate output sequences, common in translation and summarization.
-
-**Foundation Model**
-Foundation models are large-scale pre-trained models (BERT, GPT, CLIP) that serve as starting points for many downstream tasks via transfer learning or fine-tuning.
-
-**Tokenization**
-Tokenization breaks text into subword units (tokens) using algorithms like Byte-Pair Encoding (BPE) or WordPiece, enabling efficient text processing.
-
-**BPE (Byte-Pair Encoding)**
-BPE is a tokenization algorithm that iteratively merges the most frequent character or subword pairs, creating a vocabulary of subword units.
-
-**Quantization**
-Quantization reduces model precision (e.g., from 32-bit to 8-bit or 4-bit) to decrease memory usage and increase inference speed with minimal accuracy loss.
-
-**Hallucination**
-Hallucination occurs when AI models generate plausible but factually incorrect or nonsensical information, a key challenge in LLM deployment.
-
-**Perplexity**
-Perplexity measures how well a language model predicts text, with lower values indicating better performance (exponential of average cross-entropy loss).
-
-**Stable Diffusion**
-Stable Diffusion is a latent diffusion model for generating high-quality images from text descriptions by iteratively denoising random noise.
-
-**Diffusion Models**
-Diffusion models generate data by learning to reverse a gradual noising process, widely used in image generation (DALL-E, Midjourney, Stable Diffusion).
-
-**GAN (Generative Adversarial Network)**
-GANs consist of two networks (generator and discriminator) trained adversarially, where the generator creates realistic samples and the discriminator distinguishes real from fake.
-
-**Multimodal AI**
-Multimodal AI processes multiple data types (text, images, audio, video) simultaneously, exemplified by models like GPT-4V, CLIP, and Gemini.
-
-**CLIP (Contrastive Language-Image Pre-training)**
-CLIP learns joint embeddings of images and text, enabling zero-shot image classification and cross-modal retrieval.
-
-**Hugging Face**
-Hugging Face is a platform and community for sharing pre-trained models, datasets, and tools, with the Transformers library as its flagship product.
-
-**LangChain**
-LangChain is a framework for building applications powered by LLMs, providing abstractions for chains, agents, memory, and tool integration.
-
-**Agent (AI Agent)**
-AI agents are systems that autonomously perceive environments, make decisions, and take actions to achieve goals, often using LLMs for reasoning.
-
-**Chain-of-Thought (CoT)**
-Chain-of-thought prompting encourages LLMs to show step-by-step reasoning, improving performance on complex reasoning tasks.
-
-**In-Context Learning**
-In-context learning enables models to adapt to new tasks using only examples or instructions in the prompt, without parameter updates.
-
-**Shot (Few-Shot, One-Shot, Zero-Shot)**
-"Shot" refers to the number of examples provided: zero-shot (no examples), one-shot (1 example), few-shot (2-10 examples) for task demonstration.
-
-**Mixture of Experts (MoE)**
-MoE architectures use multiple specialized sub-networks (experts) and route inputs dynamically, enabling larger models with conditional computation.
-
-**Distillation (Knowledge Distillation)**
-Distillation trains a smaller "student" model to mimic a larger "teacher" model, creating compact models that retain most of the teacher's performance.
-
-**Prompt Injection**
-Prompt injection is a security vulnerability where adversarial inputs manipulate LLM behavior to bypass safety guidelines or leak information.
-
-**Alignment**
-Alignment ensures AI systems behave according to human values and intentions, addressing safety concerns and unintended behaviors.
-
-**Constitutional AI**
-Constitutional AI
-Constitutional AI trains models using a set of principles (a "constitution") to self-critique and revise responses, improving safety without extensive human labeling.
-
-**dbt (data build tool)**
-dbt is a transformation tool that enables data analysts and engineers to transform data in warehouses by writing SELECT statements, providing version control, testing, and documentation for data transformations.
-
-**DVC (Data Version Control)**
-DVC is an open-source version control system for machine learning projects, tracking datasets, models, and experiments with Git-like commands, enabling reproducibility and collaboration.
-
-**ETL (Extract, Transform, Load)**
-ETL is a data integration process that extracts data from sources, transforms it into the desired format/structure, and loads it into a destination system like a data warehouse—traditional approach where transformation happens before loading.
-
-**ELT (Extract, Load, Transform)**
-ELT is a modern data integration approach that extracts data, loads it into a destination first (typically cloud data warehouse), then transforms it—leveraging the processing power of modern data warehouses.
-
-**Airflow (Apache Airflow)**
-Airflow is an open-source workflow orchestration platform for authoring, scheduling, and monitoring data pipelines as Directed Acyclic Graphs (DAGs), widely used for ETL/ELT and ML workflows.
-
-**Kafka (Apache Kafka)**
-Kafka is a distributed streaming platform for building real-time data pipelines and streaming applications, providing high-throughput, fault-tolerant publish-subscribe messaging.
-
-**Flink (Apache Flink)**
-Flink is a stream processing framework for stateful computations over data streams, enabling real-time analytics, event-driven applications, and batch processing with low latency.
-
-**Prefect**
-Prefect is a modern workflow orchestration platform that provides dataflow automation with dynamic task generation, improved error handling, and cloud-native design.
-
-**Fivetran**
-Fivetran is a cloud-based data integration platform that automates data pipelines from various sources to data warehouses with pre-built connectors and automated schema management.
-
-**MLflow**
-MLflow is an open-source platform for managing the ML lifecycle, including experiment tracking, model packaging, versioning, and deployment, with support for various frameworks.
-
-**Feature Store**
-A feature store is a centralized repository for storing, managing, and serving ML features, ensuring consistency between training and serving, reducing feature engineering duplication, and enabling feature discovery and reuse.
-
-**Vision Transformer (ViT)**
-Vision Transformer applies the transformer architecture to image classification by treating image patches as tokens, demonstrating that attention-based models can match or exceed CNNs on computer vision tasks.
-
-**State Space Models (SSM)**
-State space models are efficient sequence modeling architectures that use linear state-space representations, offering alternatives to transformers with better computational efficiency for long sequences.
-
-**Mamba**
-Mamba is a state-space model architecture designed for efficient sequence modeling, achieving transformer-like performance with linear time complexity, particularly effective for long-context tasks.
-
-**Sparse Transformers**
-Sparse transformers reduce computational complexity by using sparse attention patterns instead of full attention, enabling efficient processing of longer sequences with reduced memory requirements.
-
-**Longformer**
-Longformer is a transformer variant that uses a combination of local windowed attention and task-motivated global attention, efficiently handling documents with thousands of tokens.
-
-**T5 (Text-to-Text Transfer Transformer)**
-T5 is an encoder-decoder transformer model that frames all NLP tasks as text-to-text problems, where both input and output are text strings, enabling unified training across diverse tasks.
-
-**Encoder-only Architecture**
-Encoder-only models (like BERT) use only the transformer encoder stack, learning bidirectional representations ideal for understanding tasks like classification, NER, and question answering.
-
-**Decoder-only Architecture**
-Decoder-only models (like GPT) use only the transformer decoder stack with causal attention, designed for autoregressive generation tasks and serving as the foundation for most large language models.
-
-**Weights & Biases (W&B)**
-Weights & Biases is an MLOps platform for experiment tracking, model versioning, dataset management, and model monitoring, providing visualization tools and collaboration features for ML teams.
-
-**Neptune**
-Neptune is an ML metadata store and experiment tracking platform that logs, organizes, and visualizes ML experiments, models, and datasets with version control and collaboration capabilities.
-
-**Kubeflow**
-Kubeflow is an open-source machine learning platform built on Kubernetes for deploying, scaling, and managing ML workflows, providing components for training, serving, and pipeline orchestration.
-
-**Feast**
-Feast is an open-source feature store that manages the lifecycle of ML features, ensuring consistency between training and serving environments with real-time and batch feature serving.
-
-**Tecton**
-Tecton is an enterprise feature platform (feature store) built for production ML, providing feature engineering, storage, and serving with real-time updates and monitoring capabilities.
+**3Blue1Brown**
+3Blue1Brown is an educational YouTube channel by Grant Sanderson providing visual, intuitive explanations of mathematics, including essential series on linear algebra, calculus, and neural networks for ML.
 
 **A/B Testing**
 A/B testing is an experimental methodology that compares two or more versions (A, B, etc.) to determine which performs better, commonly used to evaluate ML model performance, UI changes, or product features in production.
 
-**Model Registry**
-A model registry is a centralized repository for storing, versioning, and managing ML models throughout their lifecycle, tracking metadata like training parameters, metrics, lineage, and deployment status.
-
-**Model Monitoring**
-Model monitoring involves tracking ML model performance in production, detecting issues like data drift, concept drift, performance degradation, and ensuring models continue to meet business requirements.
-
-**Drift Detection**
-Drift detection identifies changes in data distributions (data drift) or relationships between features and targets (concept drift) that can degrade model performance over time, triggering retraining or alerts.
-
-**ONNX (Open Neural Network Exchange)**
-ONNX is an open format for representing ML models, enabling interoperability between different frameworks (PyTorch, TensorFlow) and optimized deployment across various hardware platforms.
-
-**TensorFlow Lite**
-TensorFlow Lite is a lightweight framework for deploying TensorFlow models on mobile, embedded, and IoT devices with optimizations for low latency and small binary size.
-
-**FastAPI**
-FastAPI is a modern, high-performance Python web framework for building APIs with automatic interactive documentation, type hints, and async support, popular for ML model serving.
-
-**Red Teaming**
-Red teaming is a security testing practice where experts attempt to break AI systems by finding vulnerabilities, adversarial inputs, or ways to elicit unsafe outputs, helping improve model robustness and safety.
-
 **Adversarial Testing**
 Adversarial testing involves systematically probing AI systems with challenging or malicious inputs designed to expose weaknesses, biases, or failure modes before deployment.
+
+**Agent (AI Agent)**
+AI agents are systems that autonomously perceive environments, make decisions, and take actions to achieve goals, often using LLMs for reasoning.
 
 **AI Watermarking**
 AI watermarking embeds imperceptible signals in AI-generated content (text, images, audio) to enable detection and attribution of synthetic media, helping combat misinformation and deepfakes.
 
-**Bias (AI Bias)**
-AI bias refers to systematic errors or unfair outcomes in ML models, often reflecting biases in training data, that can lead to discriminatory treatment of certain groups based on protected characteristics like race, gender, or age.
+**Airflow (Apache Airflow)**
+Airflow is an open-source workflow orchestration platform for authoring, scheduling, and monitoring data pipelines as Directed Acyclic Graphs (DAGs), widely used for ETL/ELT and ML workflows.
 
-**Fairness (AI Fairness)**
-Fairness in AI ensures that models make equitable decisions without discriminating against individuals or groups, measured through various metrics like demographic parity, equal opportunity, or equalized odds.
-
-**Explainability (Model Explainability)**
-Explainability refers to the ability to understand and interpret how an AI model makes decisions, often using techniques like SHAP, LIME, or attention visualization to provide human-understandable explanations.
-
-**Interpretability**
-Interpretability is the degree to which humans can understand the reasoning behind a model's predictions, with simpler models (linear regression, decision trees) being more interpretable than complex deep neural networks.
-
-**DPO (Direct Preference Optimization)**
-DPO is an alignment technique that directly optimizes language models based on human preferences without requiring a separate reward model, simplifying the RLHF pipeline while achieving comparable results.
-
-**QLoRA (Quantized Low-Rank Adaptation)**
-QLoRA combines quantization and LoRA to enable efficient fine-tuning of large language models on consumer GPUs by using 4-bit quantization while maintaining performance close to full precision.
-
-**Model Compression**
-Model compression reduces model size and computational requirements through techniques like quantization, pruning, knowledge distillation, and low-rank factorization, enabling deployment on resource-constrained devices.
-
-**vLLM**
-vLLM is a high-throughput, memory-efficient inference engine for large language models, using PagedAttention to manage attention key-value memory and achieve significantly faster serving speeds.
-
-**TGI (Text Generation Inference)**
-TGI (by Hugging Face) is a production-ready inference server for large language models, providing optimizations like continuous batching, tensor parallelism, and quantization support for efficient deployment.
-
-**Ollama**
-Ollama is a tool for running large language models locally on personal computers, providing a simple interface to download, run, and interact with models like LLaMA, Mistral, and others without cloud dependencies.
-
-**Edge Deployment**
-Edge deployment runs ML models on end-user devices (phones, IoT devices, embedded systems) rather than cloud servers, enabling lower latency, improved privacy, and offline functionality.
-
-**FAISS (Facebook AI Similarity Search)**
-FAISS is a library for efficient similarity search and clustering of dense vectors, optimized for billion-scale vector databases with GPU acceleration, commonly used for embedding retrieval in RAG systems.
-
-**HNSW (Hierarchical Navigable Small World)**
-HNSW is an approximate nearest neighbor search algorithm that builds a multi-layer graph structure, providing fast and accurate similarity search for high-dimensional vectors with excellent recall-speed tradeoffs.
-
-**Annoy (Approximate Nearest Neighbors Oh Yeah)**
-Annoy is a C++ library with Python bindings for approximate nearest neighbor search, using random projection forests to create memory-mapped indexes suitable for large-scale similarity search.
-
-**BPE (Byte Pair Encoding)**
-BPE is a tokenization algorithm that iteratively merges the most frequent pairs of characters or character sequences, creating a vocabulary of subword units. Widely used in modern LLMs like GPT, it balances vocabulary size with the ability to represent rare words through subword combinations.
-
-**WordPiece**
-WordPiece is a tokenization algorithm similar to BPE, used by BERT and other Google models, that builds a vocabulary by iteratively choosing subword units that maximize the likelihood of the training data when segmented.
-
-**SentencePiece**
-SentencePiece is a language-independent tokenization library that treats text as a sequence of Unicode characters, supporting BPE and unigram language model tokenization without requiring pre-tokenization or language-specific rules.
-
-**Mixture of Experts (MoE)**
-Mixture of Experts is a neural network architecture that uses multiple specialized "expert" networks with a gating mechanism that routes inputs to the most relevant experts, enabling efficient scaling while keeping inference costs manageable.
-
-**Mamba**
-Mamba is a state space model architecture that provides an efficient alternative to transformers for sequence modeling, using selective state spaces to achieve linear-time complexity while maintaining strong performance on long sequences.
-
-**State Space Models**
-State space models are a class of sequence models based on continuous-time state representations, offering efficient alternatives to transformers with linear-time complexity for long sequences while capturing temporal dependencies.
-
-**Vision Transformer (ViT)**
-Vision Transformer applies the transformer architecture directly to image patches, treating them as tokens, demonstrating that transformers can match or exceed CNN performance on computer vision tasks when trained on sufficient data.
-
-**CLIP (Contrastive Language-Image Pre-training)**
-CLIP is a multimodal model trained on image-text pairs that learns joint representations of vision and language, enabling zero-shot image classification, image generation guidance, and cross-modal retrieval.
-
-**Stable Diffusion**
-Stable Diffusion is a text-to-image diffusion model that generates high-quality images from text prompts by learning to reverse a gradual noising process, operating in latent space for computational efficiency.
-
-**DALL-E**
-DALL-E is OpenAI's text-to-image generation model that creates images from natural language descriptions, demonstrating remarkable creativity and understanding of abstract concepts and compositions.
-
-**Midjourney**
-Midjourney is a text-to-image AI service that generates artistic, high-quality images from text prompts, known for its distinctive aesthetic style and strong performance on creative and artistic content.
-
-**Sora**
-Sora is OpenAI's text-to-video generation model capable of creating realistic and imaginative video scenes from text instructions, demonstrating understanding of physics, motion, and temporal consistency.
-
-**Gemini**
-Gemini is Google DeepMind's multimodal AI model family designed to be natively multimodal, processing and generating text, images, audio, and video with strong reasoning and code generation capabilities.
-
-**LLaMA (Large Language Model Meta AI)**
-LLaMA is Meta's family of open-source large language models ranging from 7B to 70B parameters, designed to be more accessible for research and providing strong performance at smaller scales than proprietary models.
-
-**Mistral**
-Mistral is a family of open-source large language models developed by Mistral AI, known for efficient architecture using grouped-query attention and sliding window attention, delivering strong performance at competitive sizes.
-
-**Hallucination (AI Hallucination)**
-Hallucination occurs when AI models, particularly language models, generate plausible-sounding but factually incorrect or nonsensical information, presenting it confidently as if it were true, a key challenge in deploying generative AI.
-
-**Constitutional AI**
-Constitutional AI is an alignment technique developed by Anthropic that trains models to follow a set of principles (a "constitution") through self-critique and revision, reducing harmful outputs without extensive human feedback.
-
-**Instruction Tuning**
-Instruction tuning is a fine-tuning technique that trains language models on diverse instruction-following tasks, teaching models to understand and respond to natural language instructions across various domains.
-
-**Chain-of-Thought (CoT) Prompting**
-Chain-of-thought prompting is a technique that encourages language models to generate intermediate reasoning steps before producing final answers, significantly improving performance on complex reasoning tasks.
-
-**In-Context Learning**
-In-context learning is the ability of language models to learn new tasks from examples provided in the prompt without parameter updates, leveraging patterns in the training data to adapt to new contexts dynamically.
-
-**Zero-Shot Learning**
-Zero-shot learning refers to a model's ability to perform tasks it wasn't explicitly trained on, using only the task description or prompt without any examples, relying on knowledge transfer from pre-training.
-
-**Few-Shot Learning**
-Few-shot learning enables models to learn new tasks from a small number of examples (typically 1-10) provided in the prompt, demonstrating rapid adaptation without fine-tuning or extensive training data.
-
-**One-Shot Learning**
-One-shot learning is the ability to learn a new task or concept from just a single example, either through in-context learning in prompts or through specialized meta-learning architectures.
+**Alignment**
+Alignment ensures AI systems behave according to human values and intentions, addressing safety concerns and unintended behaviors.
 
 **AlphaFold**
 AlphaFold is DeepMind's breakthrough AI system that predicts 3D protein structures from amino acid sequences with remarkable accuracy, revolutionizing structural biology and drug discovery.
@@ -1166,81 +869,348 @@ AlphaFold is DeepMind's breakthrough AI system that predicts 3D protein structur
 **AlphaGo**
 AlphaGo is DeepMind's AI program that defeated world champions in the game of Go, combining deep neural networks with tree search and reinforcement learning, marking a milestone in AI's ability to master complex strategic games.
 
-**NanoGPT**
-NanoGPT is Andrej Karpathy's minimal implementation of GPT for educational purposes, demonstrating the core transformer architecture in clean, understandable code, widely used for learning how LLMs work.
-
-**JAX**
-JAX is a Python library from Google for high-performance numerical computing and machine learning, combining NumPy-like syntax with automatic differentiation, JIT compilation, and seamless GPU/TPU support.
-
-**XGBoost**
-XGBoost (Extreme Gradient Boosting) is an optimized gradient boosting library known for speed and performance, implementing regularization, parallel processing, and tree pruning, dominant in structured data competitions.
-
-**LightGBM**
-LightGBM is a gradient boosting framework by Microsoft that uses histogram-based algorithms and leaf-wise tree growth, offering faster training and lower memory usage than traditional GBDT methods.
-
-**CatBoost**
-CatBoost is a gradient boosting library by Yandex with native support for categorical features, symmetric tree structures, and ordered boosting, providing strong performance with minimal hyperparameter tuning.
-
-**Haystack**
-Haystack is an open-source NLP framework for building production-ready search systems, question answering, and RAG applications, providing components for document stores, retrievers, and readers.
-
-**LlamaIndex (GPT Index)**
-LlamaIndex is a data framework for connecting LLMs with external data sources, providing tools for data ingestion, indexing, querying, and building RAG applications with various storage backends.
-
-**Kaggle**
-Kaggle is a platform for data science competitions, datasets, and collaborative machine learning, owned by Google, providing free compute resources, learning materials, and a community for ML practitioners.
-
-**Coursera**
-Coursera is an online learning platform offering courses, specializations, and degrees from universities and companies, including popular machine learning courses from Andrew Ng and deeplearning.ai.
-
-**deeplearning.ai**
-deeplearning.ai is an education platform founded by Andrew Ng offering courses and specializations in machine learning, deep learning, and AI, known for accessible teaching and practical focus.
-
-**3Blue1Brown**
-3Blue1Brown is an educational YouTube channel by Grant Sanderson providing visual, intuitive explanations of mathematics, including essential series on linear algebra, calculus, and neural networks for ML.
-
-**Grant Sanderson**
-Grant Sanderson is a mathematics educator and creator of 3Blue1Brown, renowned for creating visually stunning explanations of complex mathematical concepts essential for understanding machine learning.
-
-**Gilbert Strang**
-Gilbert Strang is an MIT mathematics professor famous for his linear algebra course (18.06), one of the most popular mathematics courses worldwide, providing essential foundations for machine learning and data science.
-
 **Andrej Karpathy**
 Andrej Karpathy is a leading AI educator and researcher, former Director of AI at Tesla and founding member of OpenAI, known for educational content on neural networks, transformers, and creating NanoGPT.
 
 **Andrew Ng**
 Andrew Ng is a pioneering AI researcher and educator, co-founder of Coursera and deeplearning.ai, known for making machine learning accessible through online courses, leading the democratization of AI education.
 
-**Jon Krohn**
-Jon Krohn is a data science educator and author of "Deep Learning Illustrated," creating comprehensive mathematics courses (linear algebra, calculus, probability) specifically designed for machine learning practitioners.
+**Annoy (Approximate Nearest Neighbors Oh Yeah)**
+Annoy is a C++ library with Python bindings for approximate nearest neighbor search, using random projection forests to create memory-mapped indexes suitable for large-scale similarity search.
 
-**freeCodeCamp**
-freeCodeCamp is a nonprofit organization providing free coding education through interactive courses, certifications, and extensive YouTube content, including comprehensive machine learning and data science curricula.
+**Attention Mechanism**
+Attention allows models to dynamically focus on relevant parts of the input when processing sequences, forming the core of transformer architectures.
 
-**MIT OpenCourseWare**
-MIT OpenCourseWare is MIT's initiative providing free access to course materials from thousands of MIT courses, including legendary offerings like Gilbert Strang's Linear Algebra and modern deep learning courses.
+**Bias (AI Bias)**
+AI bias refers to systematic errors or unfair outcomes in ML models, often reflecting biases in training data, that can lead to discriminatory treatment of certain groups based on protected characteristics like race, gender, or age.
 
-**Econometrics**
-Econometrics is the application of statistical methods to economic data, emphasizing causal inference, treatment effects, and understanding relationships between variables, providing foundations for many machine learning concepts.
+**BPE (Byte Pair Encoding)**
+BPE is a tokenization algorithm that iteratively merges the most frequent pairs of characters or character sequences, creating a vocabulary of subword units. Widely used in modern LLMs like GPT, it balances vocabulary size with the ability to represent rare words through subword combinations.
+
+**CatBoost**
+CatBoost is a gradient boosting library by Yandex with native support for categorical features, symmetric tree structures, and ordered boosting, providing strong performance with minimal hyperparameter tuning.
+
+**Chain-of-Thought (CoT) Prompting**
+Chain-of-thought prompting is a technique that encourages language models to generate intermediate reasoning steps before producing final answers, significantly improving performance on complex reasoning tasks.
+
+**Claude**
+Claude is an LLM developed by Anthropic with emphasis on safety, helpfulness, and harmlessness through constitutional AI and RLHF.
+
+**CLIP (Contrastive Language-Image Pre-training)**
+CLIP is a multimodal model trained on image-text pairs that learns joint representations of vision and language, enabling zero-shot image classification, image generation guidance, and cross-modal retrieval.
+
+**Constitutional AI**
+Constitutional AI is an alignment technique developed by Anthropic that trains models to follow a set of principles (a "constitution") through self-critique and revision, reducing harmful outputs without extensive human feedback.
+
+**Context Window**
+The context window is the maximum number of tokens (input + output) that an LLM can process in a single request, ranging from 4K to 200K+ tokens in modern models.
+
+**Cosine Similarity**
+Cosine similarity measures the angle between two vectors (range: -1 to 1), commonly used to quantify semantic similarity between embeddings.
+
+**Coursera**
+Coursera is an online learning platform offering courses, specializations, and degrees from universities and companies, including popular machine learning courses from Andrew Ng and deeplearning.ai.
+
+**DALL-E**
+DALL-E is OpenAI's text-to-image generation model that creates images from natural language descriptions, demonstrating remarkable creativity and understanding of abstract concepts and compositions.
+
+**dbt (data build tool)**
+dbt is a transformation tool that enables data analysts and engineers to transform data in warehouses by writing SELECT statements, providing version control, testing, and documentation for data transformations.
+
+**Decoder-only Architecture**
+Decoder-only models (like GPT) use only the transformer decoder stack with causal attention, designed for autoregressive generation tasks and serving as the foundation for most large language models.
+
+**deeplearning.ai**
+deeplearning.ai is an education platform founded by Andrew Ng offering courses and specializations in machine learning, deep learning, and AI, known for accessible teaching and practical focus.
+
+**Diffusion Models**
+Diffusion models generate data by learning to reverse a gradual noising process, widely used in image generation (DALL-E, Midjourney, Stable Diffusion).
 
 **Digital Twin**
 A digital twin is a virtual representation of a physical object, process, or system that uses real-time data and models to simulate, predict, and optimize the real-world counterpart's behavior.
 
-**MDTP Framework**
-MDTP (Models, Data, Tools, Productisation) is a comprehensive framework for structuring machine learning projects, covering the full lifecycle from modeling techniques through data engineering, software tools, and production deployment.
+**Distillation (Knowledge Distillation)**
+Distillation trains a smaller "student" model to mimic a larger "teacher" model, creating compact models that retain most of the teacher's performance.
 
-**Productisation**
-Productisation (or Productization) in ML refers to the process of transforming models and algorithms into production-ready products, including deployment, monitoring, scaling, business value realization, and user-facing integration.
+**DPO (Direct Preference Optimization)**
+DPO is an alignment technique that directly optimizes language models based on human preferences without requiring a separate reward model, simplifying the RLHF pipeline while achieving comparable results.
 
-**Weights & Biases (W&B)**
-Weights & Biases is an MLOps platform for experiment tracking, model versioning, dataset management, and model monitoring, providing visualization tools and collaboration features for ML teams.
+**Drift Detection**
+Drift detection identifies changes in data distributions (data drift) or relationships between features and targets (concept drift) that can degrade model performance over time, triggering retraining or alerts.
 
-**Model Deployment**
-Model deployment is the process of making a trained machine learning model available in a production environment where it can receive inputs and generate predictions for real-world use cases.
+**DVC (Data Version Control)**
+DVC is an open-source version control system for machine learning projects, tracking datasets, models, and experiments with Git-like commands, enabling reproducibility and collaboration.
+
+**Econometrics**
+Econometrics is the application of statistical methods to economic data, emphasizing causal inference, treatment effects, and understanding relationships between variables, providing foundations for many machine learning concepts.
+
+**Edge Deployment**
+Edge deployment runs ML models on end-user devices (phones, IoT devices, embedded systems) rather than cloud servers, enabling lower latency, improved privacy, and offline functionality.
+
+**ELT (Extract, Load, Transform)**
+ELT is a modern data integration approach that extracts data, loads it into a destination first (typically cloud data warehouse), then transforms it—leveraging the processing power of modern data warehouses.
+
+**Encoder-Decoder Architecture**
+The encoder-decoder pattern uses one transformer to encode input sequences and another to generate output sequences, common in translation and summarization.
+
+**Encoder-only Architecture**
+Encoder-only models (like BERT) use only the transformer encoder stack, learning bidirectional representations ideal for understanding tasks like classification, NER, and question answering.
+
+**ETL (Extract, Transform, Load)**
+ETL is a data integration process that extracts data from sources, transforms it into the desired format/structure, and loads it into a destination system like a data warehouse—traditional approach where transformation happens before loading.
+
+**Experiment Tracking**
+Experiment tracking involves systematically logging and organizing ML experiments, including hyperparameters, metrics, artifacts, and code versions, enabling reproducibility and comparison of model iterations.
+
+**Explainability (Model Explainability)**
+Explainability refers to the ability to understand and interpret how an AI model makes decisions, often using techniques like SHAP, LIME, or attention visualization to provide human-understandable explanations.
+
+**FAISS (Facebook AI Similarity Search)**
+FAISS is a library for efficient similarity search and clustering of dense vectors, optimized for billion-scale vector databases with GPU acceleration, commonly used for embedding retrieval in RAG systems.
+
+**Fairness (AI Fairness)**
+Fairness in AI ensures that models make equitable decisions without discriminating against individuals or groups, measured through various metrics like demographic parity, equal opportunity, or equalized odds.
+
+**FastAPI**
+FastAPI is a modern, high-performance Python web framework for building APIs with automatic interactive documentation, type hints, and async support, popular for ML model serving.
+
+**Feast**
+Feast is an open-source feature store that manages the lifecycle of ML features, ensuring consistency between training and serving environments with real-time and batch feature serving.
 
 **Feature Store**
 A feature store is a centralized repository for storing, managing, and serving features for machine learning, ensuring consistency between training and inference while enabling feature reuse across models and teams.
 
-**Experiment Tracking**
-Experiment tracking involves systematically logging and organizing ML experiments, including hyperparameters, metrics, artifacts, and code versions, enabling reproducibility and comparison of model iterations.
+**Few-Shot Learning**
+Few-shot learning enables models to learn new tasks from a small number of examples (typically 1-10) provided in the prompt, demonstrating rapid adaptation without fine-tuning or extensive training data.
+
+**Fine-tuning**
+Fine-tuning adapts a pre-trained model to a specific task or domain by continuing training on a smaller, task-specific dataset.
+
+**Fivetran**
+Fivetran is a cloud-based data integration platform that automates data pipelines from various sources to data warehouses with pre-built connectors and automated schema management.
+
+**Flink (Apache Flink)**
+Flink is a stream processing framework for stateful computations over data streams, enabling real-time analytics, event-driven applications, and batch processing with low latency.
+
+**Foundation Model**
+Foundation models are large-scale pre-trained models (BERT, GPT, CLIP) that serve as starting points for many downstream tasks via transfer learning or fine-tuning.
+
+**freeCodeCamp**
+freeCodeCamp is a nonprofit organization providing free coding education through interactive courses, certifications, and extensive YouTube content, including comprehensive machine learning and data science curricula.
+
+**GAN (Generative Adversarial Network)**
+GANs consist of two networks (generator and discriminator) trained adversarially, where the generator creates realistic samples and the discriminator distinguishes real from fake.
+
+**Gemini**
+Gemini is Google DeepMind's multimodal AI model family designed to be natively multimodal, processing and generating text, images, audio, and video with strong reasoning and code generation capabilities.
+
+**Gilbert Strang**
+Gilbert Strang is an MIT mathematics professor famous for his linear algebra course (18.06), one of the most popular mathematics courses worldwide, providing essential foundations for machine learning and data science.
+
+**GPT (Generative Pre-trained Transformer)**
+GPT is a family of large language models by OpenAI that use the transformer decoder architecture for text generation tasks.
+
+**Grant Sanderson**
+Grant Sanderson is a mathematics educator and creator of 3Blue1Brown, renowned for creating visually stunning explanations of complex mathematical concepts essential for understanding machine learning.
+
+**Hallucination (AI Hallucination)**
+Hallucination occurs when AI models, particularly language models, generate plausible-sounding but factually incorrect or nonsensical information, presenting it confidently as if it were true, a key challenge in deploying generative AI.
+
+**Haystack**
+Haystack is an open-source NLP framework for building production-ready search systems, question answering, and RAG applications, providing components for document stores, retrievers, and readers.
+
+**HNSW (Hierarchical Navigable Small World)**
+HNSW is an approximate nearest neighbor search algorithm that builds a multi-layer graph structure, providing fast and accurate similarity search for high-dimensional vectors with excellent recall-speed tradeoffs.
+
+**Hugging Face**
+Hugging Face is a platform and community for sharing pre-trained models, datasets, and tools, with the Transformers library as its flagship product.
+
+**In-Context Learning**
+In-context learning is the ability of language models to learn new tasks from examples provided in the prompt without parameter updates, leveraging patterns in the training data to adapt to new contexts dynamically.
+
+**Instruction Tuning**
+Instruction tuning is a fine-tuning technique that trains language models on diverse instruction-following tasks, teaching models to understand and respond to natural language instructions across various domains.
+
+**Interpretability**
+Interpretability is the degree to which humans can understand the reasoning behind a model's predictions, with simpler models (linear regression, decision trees) being more interpretable than complex deep neural networks.
+
+**JAX**
+JAX is a Python library from Google for high-performance numerical computing and machine learning, combining NumPy-like syntax with automatic differentiation, JIT compilation, and seamless GPU/TPU support.
+
+**Jon Krohn**
+Jon Krohn is a data science educator and author of "Deep Learning Illustrated," creating comprehensive mathematics courses (linear algebra, calculus, probability) specifically designed for machine learning practitioners.
+
+**Kafka (Apache Kafka)**
+Kafka is a distributed streaming platform for building real-time data pipelines and streaming applications, providing high-throughput, fault-tolerant publish-subscribe messaging.
+
+**Kaggle**
+Kaggle is a platform for data science competitions, datasets, and collaborative machine learning, owned by Google, providing free compute resources, learning materials, and a community for ML practitioners.
+
+**Kubeflow**
+Kubeflow is an open-source machine learning platform built on Kubernetes for deploying, scaling, and managing ML workflows, providing components for training, serving, and pipeline orchestration.
+
+**LangChain**
+LangChain is a framework for building applications powered by LLMs, providing abstractions for chains, agents, memory, and tool integration.
+
+**Large Language Models (LLMs)**
+LLMs are foundation models trained on massive text datasets with billions of parameters (e.g., GPT-4, Claude, LLaMA) capable of understanding and generating human-like text.
+
+**LightGBM**
+LightGBM is a gradient boosting framework by Microsoft that uses histogram-based algorithms and leaf-wise tree growth, offering faster training and lower memory usage than traditional GBDT methods.
+
+**LLaMA (Large Language Model Meta AI)**
+LLaMA is Meta's family of open-source large language models ranging from 7B to 70B parameters, designed to be more accessible for research and providing strong performance at smaller scales than proprietary models.
+
+**LlamaIndex (GPT Index)**
+LlamaIndex is a data framework for connecting LLMs with external data sources, providing tools for data ingestion, indexing, querying, and building RAG applications with various storage backends.
+
+**Longformer**
+Longformer is a transformer variant that uses a combination of local windowed attention and task-motivated global attention, efficiently handling documents with thousands of tokens.
+
+**LoRA (Low-Rank Adaptation)**
+LoRA is an efficient fine-tuning technique that updates only a small number of parameters via low-rank matrix decomposition, reducing memory and compute requirements.
+
+**Mamba**
+Mamba is a state space model architecture that provides an efficient alternative to transformers for sequence modeling, using selective state spaces to achieve linear-time complexity while maintaining strong performance on long sequences.
+
+**MDTP Framework**
+MDTP (Models, Data, Tools, Productisation) is a comprehensive framework for structuring machine learning projects, covering the full lifecycle from modeling techniques through data engineering, software tools, and production deployment.
+
+**Midjourney**
+Midjourney is a text-to-image AI service that generates artistic, high-quality images from text prompts, known for its distinctive aesthetic style and strong performance on creative and artistic content.
+
+**Mistral**
+Mistral is a family of open-source large language models developed by Mistral AI, known for efficient architecture using grouped-query attention and sliding window attention, delivering strong performance at competitive sizes.
+
+**MIT OpenCourseWare**
+MIT OpenCourseWare is MIT's initiative providing free access to course materials from thousands of MIT courses, including legendary offerings like Gilbert Strang's Linear Algebra and modern deep learning courses.
+
+**Mixture of Experts (MoE)**
+Mixture of Experts is a neural network architecture that uses multiple specialized "expert" networks with a gating mechanism that routes inputs to the most relevant experts, enabling efficient scaling while keeping inference costs manageable.
+
+**MLflow**
+MLflow is an open-source platform for managing the ML lifecycle, including experiment tracking, model packaging, versioning, and deployment, with support for various frameworks.
+
+**Model Compression**
+Model compression reduces model size and computational requirements through techniques like quantization, pruning, knowledge distillation, and low-rank factorization, enabling deployment on resource-constrained devices.
+
+**Model Deployment**
+Model deployment is the process of making a trained machine learning model available in a production environment where it can receive inputs and generate predictions for real-world use cases.
+
+**Model Monitoring**
+Model monitoring involves tracking ML model performance in production, detecting issues like data drift, concept drift, performance degradation, and ensuring models continue to meet business requirements.
+
+**Model Registry**
+A model registry is a centralized repository for storing, versioning, and managing ML models throughout their lifecycle, tracking metadata like training parameters, metrics, lineage, and deployment status.
+
+**Multi-Head Attention**
+Multi-head attention runs multiple attention operations in parallel with different learned projections, capturing diverse aspects of token relationships.
+
+**Multimodal AI**
+Multimodal AI processes multiple data types (text, images, audio, video) simultaneously, exemplified by models like GPT-4V, CLIP, and Gemini.
+
+**NanoGPT**
+NanoGPT is Andrej Karpathy's minimal implementation of GPT for educational purposes, demonstrating the core transformer architecture in clean, understandable code, widely used for learning how LLMs work.
+
+**Neptune**
+Neptune is an ML metadata store and experiment tracking platform that logs, organizes, and visualizes ML experiments, models, and datasets with version control and collaboration capabilities.
+
+**Ollama**
+Ollama is a tool for running large language models locally on personal computers, providing a simple interface to download, run, and interact with models like LLaMA, Mistral, and others without cloud dependencies.
+
+**One-Shot Learning**
+One-shot learning is the ability to learn a new task or concept from just a single example, either through in-context learning in prompts or through specialized meta-learning architectures.
+
+**ONNX (Open Neural Network Exchange)**
+ONNX is an open format for representing ML models, enabling interoperability between different frameworks (PyTorch, TensorFlow) and optimized deployment across various hardware platforms.
+
+**Perplexity**
+Perplexity measures how well a language model predicts text, with lower values indicating better performance (exponential of average cross-entropy loss).
+
+**Prefect**
+Prefect is a modern workflow orchestration platform that provides dataflow automation with dynamic task generation, improved error handling, and cloud-native design.
+
+**Productisation**
+Productisation (or Productization) in ML refers to the process of transforming models and algorithms into production-ready products, including deployment, monitoring, scaling, business value realization, and user-facing integration.
+
+**Prompt Engineering**
+Prompt engineering is the practice of crafting effective input prompts to guide LLM outputs, including techniques like few-shot prompting, chain-of-thought, and system instructions.
+
+**Prompt Injection**
+Prompt injection is a security vulnerability where adversarial inputs manipulate LLM behavior to bypass safety guidelines or leak information.
+
+**QLoRA (Quantized Low-Rank Adaptation)**
+QLoRA combines quantization and LoRA to enable efficient fine-tuning of large language models on consumer GPUs by using 4-bit quantization while maintaining performance close to full precision.
+
+**Quantization**
+Quantization reduces model precision (e.g., from 32-bit to 8-bit or 4-bit) to decrease memory usage and increase inference speed with minimal accuracy loss.
+
+**RAG (Retrieval Augmented Generation)**
+RAG combines information retrieval with text generation, allowing LLMs to access external knowledge bases or documents to provide grounded, factual responses.
+
+**Red Teaming**
+Red teaming is a security testing practice where experts attempt to break AI systems by finding vulnerabilities, adversarial inputs, or ways to elicit unsafe outputs, helping improve model robustness and safety.
+
+**RLHF (Reinforcement Learning from Human Feedback)**
+RLHF trains models using human preferences as rewards, aligning model behavior with human values and improving response quality.
+
+**Self-Attention**
+Self-attention computes relationships between all positions in a sequence simultaneously, enabling each token to attend to all other tokens.
+
+**SentencePiece**
+SentencePiece is a language-independent tokenization library that treats text as a sequence of Unicode characters, supporting BPE and unigram language model tokenization without requiring pre-tokenization or language-specific rules.
+
+**Shot (Few-Shot, One-Shot, Zero-Shot)**
+"Shot" refers to the number of examples provided: zero-shot (no examples), one-shot (1 example), few-shot (2-10 examples) for task demonstration.
+
+**Sora**
+Sora is OpenAI's text-to-video generation model capable of creating realistic and imaginative video scenes from text instructions, demonstrating understanding of physics, motion, and temporal consistency.
+
+**Sparse Transformers**
+Sparse transformers reduce computational complexity by using sparse attention patterns instead of full attention, enabling efficient processing of longer sequences with reduced memory requirements.
+
+**Stable Diffusion**
+Stable Diffusion is a text-to-image diffusion model that generates high-quality images from text prompts by learning to reverse a gradual noising process, operating in latent space for computational efficiency.
+
+**State Space Models**
+State space models are a class of sequence models based on continuous-time state representations, offering efficient alternatives to transformers with linear-time complexity for long sequences while capturing temporal dependencies.
+
+**T5 (Text-to-Text Transfer Transformer)**
+T5 is an encoder-decoder transformer model that frames all NLP tasks as text-to-text problems, where both input and output are text strings, enabling unified training across diverse tasks.
+
+**Tecton**
+Tecton is an enterprise feature platform (feature store) built for production ML, providing feature engineering, storage, and serving with real-time updates and monitoring capabilities.
+
+**Temperature**
+Temperature is a hyperparameter (0.0-2.0) controlling randomness in text generation: lower values produce focused/deterministic outputs, higher values increase creativity and diversity.
+
+**TensorFlow Lite**
+TensorFlow Lite is a lightweight framework for deploying TensorFlow models on mobile, embedded, and IoT devices with optimizations for low latency and small binary size.
+
+**TGI (Text Generation Inference)**
+TGI (by Hugging Face) is a production-ready inference server for large language models, providing optimizations like continuous batching, tensor parallelism, and quantization support for efficient deployment.
+
+**Tokenization**
+Tokenization breaks text into subword units (tokens) using algorithms like Byte-Pair Encoding (BPE) or WordPiece, enabling efficient text processing.
+
+**Vector Database**
+Vector databases (Pinecone, Weaviate, ChromaDB) store and efficiently search high-dimensional embeddings, enabling semantic search and RAG applications.
+
+**Vision Transformer (ViT)**
+Vision Transformer applies the transformer architecture directly to image patches, treating them as tokens, demonstrating that transformers can match or exceed CNN performance on computer vision tasks when trained on sufficient data.
+
+**vLLM**
+vLLM is a high-throughput, memory-efficient inference engine for large language models, using PagedAttention to manage attention key-value memory and achieve significantly faster serving speeds.
+
+**Weights & Biases (W&B)**
+Weights & Biases is an MLOps platform for experiment tracking, model versioning, dataset management, and model monitoring, providing visualization tools and collaboration features for ML teams.
+
+**WordPiece**
+WordPiece is a tokenization algorithm similar to BPE, used by BERT and other Google models, that builds a vocabulary by iteratively choosing subword units that maximize the likelihood of the training data when segmented.
+
+**XGBoost**
+XGBoost (Extreme Gradient Boosting) is an optimized gradient boosting library known for speed and performance, implementing regularization, parallel processing, and tree pruning, dominant in structured data competitions.
+
+**Zero-Shot Learning**
+Zero-shot learning refers to a model's ability to perform tasks it wasn't explicitly trained on, using only the task description or prompt without any examples, relying on knowledge transfer from pre-training.
 
