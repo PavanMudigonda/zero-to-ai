@@ -1,0 +1,12 @@
+Encoded Token IDs: [15339, 1268, 527, 499, 949]
+Decoded Text: hello how are you ?
+
+Token Breakdown:
+15339 -> 'hello'
+1268 -> ' how'
+527 -> ' are'
+499 -> ' you'
+949 -> ' ?'
+
+--Total Number of Tokens--
+5
