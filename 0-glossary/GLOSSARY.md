@@ -1,4 +1,353 @@
-A
+# AI/ML Glossary - Table of Contents
+
+## Quick Navigation by Letter
+[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [Modern AI/ML Terms (2023-2025)](#modern-aiml-terms-2023-2025)
+
+---
+
+## A
+**Terms in this section:**
+- Abstractive Summarisation
+- ACID (Atomicity, Consistency, Isolation, Durability)
+- Accuracy
+- Activation Function
+- Active Learning
+- AI Skill
+- Algorithm
+- Annotation
+- Anomaly Detection
+- Artificial Intelligence (AI)
+- Autoencoder
+- AutoML (Automated Machine Learning)
+
+## B
+**Terms in this section:**
+- Backpropagation
+- Bag of Words (BoW)
+- BASE (Basically Available, Soft state, Eventually consistent)
+- Batch Size
+- BigQuery
+- BERT (Bidirectional Encoder Representations from Transformers)
+- Bias (Model Bias)
+- Big Data
+- Bigrams
+- BLEU (Bilingual Evaluation Understudy)
+
+## C
+**Terms in this section:**
+- CAP Theorem (Consistency, Availability, Partition Tolerance)
+- Cassandra
+- Chatbot
+- Classification
+- Cloud (Cloud Computing)
+- CDN (Content Delivery Network)
+- Clustering
+- Containerization
+- Computer Vision
+- Convolutional Neural Network (CNN)
+- Cross‑Entropy Loss
+- Cross‑Validation
+
+## D
+**Terms in this section:**
+- Data Warehouse
+- DBMS (Database Management System)
+- Decision Tree
+- Deep Learning (DL)
+- Docker
+- Doc2Vec
+- Dropout
+
+## E
+**Terms in this section:**
+- EC2 (Elastic Compute Cloud)
+- Embeddings
+- Entity
+- Epoch
+- Extractive Summarisation
+
+## F
+**Terms in this section:**
+- F1 Score
+- Feature Engineering
+- Feature Extraction
+- Features
+- Few‑Shot Learning
+
+## G
+**Terms in this section:**
+- Generative (Model)
+- Graph
+
+## H
+**Terms in this section:**
+- Hadoop
+- HDFS (Hadoop Distributed File System)
+- Hidden Layer
+- Human in the Loop (HITL)
+- Hypervisor
+
+## I
+**Terms in this section:**
+- IaaS (Infrastructure as a Service)
+- Inference (Model Inference)
+- Information Extraction (IE)
+- Information Retrieval (IR)
+- Inverse Document Frequency (IDF)
+
+## K
+**Terms in this section:**
+- Kedro
+- Keras
+- Knowledge Graph
+- Kubernetes
+
+## L
+**Terms in this section:**
+- Label
+- Lambda (AWS Lambda)
+- L1 Norm
+- L2 Norm
+- Logistic Regression
+- Loss Function
+- Low‑Shot Learning
+- LSTM (Long Short‑Term Memory)
+
+## M
+**Terms in this section:**
+- Machine Learning (ML)
+- Machine Reading
+- Machine Translation (MT)
+- MapReduce
+- Mean Squared Error (MSE)
+- MongoDB
+- MySQL
+
+## N
+**Terms in this section:**
+- Naïve Bayes
+- Named Entity Recognition (NER)
+- Natural Language Generation (NLG)
+- Natural Language Processing (NLP)
+- Neo4j
+- Network (Neural / Computing Network)
+- NoSQL
+- Normalisation (Normalization)
+- NumPy
+
+## O
+**Terms in this section:**
+- OLAP (Online Analytical Processing)
+- OLTP (Online Transaction Processing)
+- Offline Machine Learning
+- Online Machine Learning
+- Optimisation (Optimization)
+- Overfitting
+
+## P
+**Terms in this section:**
+- Pandas
+- PaaS (Platform as a Service)
+- Pipeline (ML Pipeline)
+- Polly
+- PostgreSQL
+- Precision
+- PyTorch
+
+## R
+**Terms in this section:**
+- Random Forest
+- Recall
+- Recommender System
+- Recurrent Neural Network (RNN)
+- Redis
+- Regression
+- Regular Expression (Regex)
+- Regularisation (Regularization)
+- Reinforcement Learning (RL)
+- Rekognition
+- Representation Learning
+- ROUGE
+- Rules‑Based (Rule‑Based Systems)
+
+## S
+**Terms in this section:**
+- S3 (Simple Storage Service)
+- SaaS (Software as a Service)
+- SageMaker
+- Scikit‑Learn
+- SciPy
+- Semi‑Supervised Machine Learning
+- Sentiment Classification
+- Sequence‑to‑Sequence (Seq2Seq)
+- Serverless
+- Snowflake
+- Spark (Apache Spark)
+- SQL (Structured Query Language)
+- Supervised Machine Learning
+- Support Vector Machine (SVM)
+
+## T
+**Terms in this section:**
+- Tensor
+- TensorFlow
+- Term Frequency (TF)
+- Term Frequency–Inverse Document Frequency (TF‑IDF)
+- Testing Set (Test Set)
+- Tokens
+- Training (Model Training)
+- Training Set
+- Transfer Learning
+- Transformer
+- Trigrams
+
+## U
+**Terms in this section:**
+- Underfitting
+- Unsupervised Machine Learning
+
+## V
+**Terms in this section:**
+- Validation Set
+- Variance (Model Variance)
+- Virtualization
+- VM (Virtual Machine)
+
+## W
+**Terms in this section:**
+- Word2Vec
+- Zero‑Shot Learning
+
+## Modern AI/ML Terms (2023-2025)
+**Key modern concepts:**
+- 3Blue1Brown
+- A/B Testing
+- Adversarial Testing
+- Agent (AI Agent)
+- AI Watermarking
+- Airflow (Apache Airflow)
+- Alignment
+- AlphaFold
+- AlphaGo
+- Andrew Ng
+- Andrej Karpathy
+- Annoy (Approximate Nearest Neighbors Oh Yeah)
+- Attention Mechanism
+- BPE (Byte Pair Encoding)
+- CatBoost
+- Chain-of-Thought (CoT)
+- Claude
+- CLIP (Contrastive Language-Image Pre-training)
+- Constitutional AI
+- Context Window
+- Cosine Similarity
+- Coursera
+- DALL-E
+- deeplearning.ai
+- Decoder-only Architecture
+- Diffusion Models
+- Digital Twin
+- Distillation (Knowledge Distillation)
+- DPO (Direct Preference Optimization)
+- Drift Detection
+- DVC (Data Version Control)
+- Econometrics
+- Edge Deployment
+- ELT (Extract, Load, Transform)
+- Encoder-Decoder Architecture
+- Encoder-only Architecture
+- ETL (Extract, Transform, Load)
+- Explainability (Model Explainability)
+- Experiment Tracking
+- FAISS (Facebook AI Similarity Search)
+- Fairness (AI Fairness)
+- FastAPI
+- Feast
+- Feature Store
+- Few-Shot Learning
+- Fine-tuning
+- Flink (Apache Flink)
+- Foundation Model
+- freeCodeCamp
+- Gemini
+- Gilbert Strang
+- GAN (Generative Adversarial Network)
+- GPT (Generative Pre-trained Transformer)
+- Grant Sanderson
+- Hallucination
+- Haystack
+- HNSW (Hierarchical Navigable Small World)
+- Hugging Face
+- In-Context Learning
+- Instruction Tuning
+- Interpretability
+- JAX
+- Jon Krohn
+- Kaggle
+- Kafka (Apache Kafka)
+- Knowledge Distillation
+- Kubeflow
+- LangChain
+- Large Language Models (LLMs)
+- LightGBM
+- LLaMA (Large Language Model Meta AI)
+- LlamaIndex (GPT Index)
+- Longformer
+- LoRA (Low-Rank Adaptation)
+- Mamba
+- MDTP Framework
+- Midjourney
+- Mistral
+- MIT OpenCourseWare
+- Mixture of Experts (MoE)
+- MLflow
+- Model Compression
+- Model Deployment
+- Model Monitoring
+- Model Registry
+- Multi-Head Attention
+- Multimodal AI
+- NanoGPT
+- Neptune
+- Ollama
+- One-Shot Learning
+- ONNX (Open Neural Network Exchange)
+- Perplexity
+- Prefect
+- Productisation
+- Prompt Engineering
+- Prompt Injection
+- QLoRA (Quantized Low-Rank Adaptation)
+- Quantization
+- RAG (Retrieval Augmented Generation)
+- Red Teaming
+- RLHF (Reinforcement Learning from Human Feedback)
+- Self-Attention
+- SentencePiece
+- Shot (Few-Shot, One-Shot, Zero-Shot)
+- Sora
+- Sparse Transformers
+- Stable Diffusion
+- State Space Models
+- T5 (Text-to-Text Transfer Transformer)
+- Tecton
+- Temperature
+- TensorFlow Lite
+- TGI (Text Generation Inference)
+- Tokenization
+- Vector Database
+- Vision Transformer (ViT)
+- vLLM
+- Weights & Biases (W&B)
+- WordPiece
+- XGBoost
+- Zero-Shot Learning
+
+---
+
+# Glossary Terms
+
+## A
 Abstractive Summarisation
 Abstractive summarisation is a summarisation technique that generates language using word tokens and phrases not necessarily found in the source document. In contrast, extractive summarisation draws phrases and sentences directly from the source text based on a measure of salience. The degree to which a summary is abstractive versus extractive can often be controlled by a continuous model hyperparameter that explicitly handles this trade‑off.
 
