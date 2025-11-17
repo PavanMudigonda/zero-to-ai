@@ -1,15 +1,16 @@
 # AI/ML Glossary
 
 
-##  Table of Contents
+## Table of Contents
 
 ## Quick Navigation by Letter
-[A](#a) | [B](#b) | [C](#c) | [D](#d) | [E](#e) | [F](#f) | [G](#g) | [H](#h) | [I](#i) | [J](#j) | [K](#k) | [L](#l) | [M](#m) | [N](#n) | [O](#o) | [P](#p) | [Q](#q) | [R](#r) | [S](#s) | [T](#t) | [U](#u) | [V](#v) | [W](#w) | [X](#x) | [Z](#z)
+[A](#a-index) | [B](#b-index) | [C](#c-index) | [D](#d-index) | [E](#e-index) | [F](#f-index) | [G](#g-index) | [H](#h-index) | [I](#i-index) | [J](#j-index) | [K](#k-index) | [L](#l-index) | [M](#m-index) | [N](#n-index) | [O](#o-index) | [P](#p-index) | [Q](#q-index) | [R](#r-index) | [S](#s-index) | [T](#t-index) | [U](#u-index) | [V](#v-index) | [W](#w-index) | [X](#x-index) | [Z](#z-index)
 
 ---
 
-## A
+### A (Index)
 **Terms in this section:**
+
 - 3Blue1Brown
 - A/B Testing
 - Abstractive Summarisation
@@ -36,8 +37,9 @@
 - Autoencoder
 - AutoML (Automated Machine Learning)
 
-## B
+### B (Index)
 **Terms in this section:**
+
 - Backpropagation
 - Bag of Words (BoW)
 - BASE (Basically Available, Soft state, Eventually consistent)
@@ -51,8 +53,9 @@
 - BLEU (Bilingual Evaluation Understudy)
 - BPE (Byte Pair Encoding)
 
-## C
+### C (Index)
 **Terms in this section:**
+
 - CAP Theorem (Consistency, Availability, Partition Tolerance)
 - Cassandra
 - CatBoost
@@ -74,8 +77,9 @@
 - Cross‑Entropy Loss
 - Cross‑Validation
 
-## D
+### D (Index)
 **Terms in this section:**
+
 - DALL-E
 - Data Warehouse
 - DBMS (Database Management System)
@@ -94,8 +98,9 @@
 - Dropout
 - DVC (Data Version Control)
 
-## E
+### E (Index)
 **Terms in this section:**
+
 - EC2 (Elastic Compute Cloud)
 - Econometrics
 - Edge Deployment
@@ -110,8 +115,9 @@
 - Explainability (Model Explainability)
 - Extractive Summarisation
 
-## F
+### F (Index)
 **Terms in this section:**
+
 - F1 Score
 - FAISS (Facebook AI Similarity Search)
 - Fairness (AI Fairness)
@@ -129,8 +135,9 @@
 - Foundation Model
 - freeCodeCamp
 
-## G
+### G (Index)
 **Terms in this section:**
+
 - GAN (Generative Adversarial Network)
 - Gemini
 - Generative (Model)
@@ -139,8 +146,9 @@
 - Grant Sanderson
 - Graph
 
-## H
+### H (Index)
 **Terms in this section:**
+
 - Hadoop
 - Hallucination
 - Haystack
@@ -151,8 +159,9 @@
 - Human in the Loop (HITL)
 - Hypervisor
 
-## I
+### I (Index)
 **Terms in this section:**
+
 - IaaS (Infrastructure as a Service)
 - In-Context Learning
 - Inference (Model Inference)
@@ -162,13 +171,15 @@
 - Interpretability
 - Inverse Document Frequency (IDF)
 
-## J
+### J (Index)
 **Terms in this section:**
+
 - JAX
 - Jon Krohn
 
-## K
+### K (Index)
 **Terms in this section:**
+
 - Kafka (Apache Kafka)
 - Kaggle
 - Kedro
@@ -178,8 +189,9 @@
 - Kubeflow
 - Kubernetes
 
-## L
+### L (Index)
 **Terms in this section:**
+
 - L1 Norm
 - L2 Norm
 - Label
@@ -196,8 +208,9 @@
 - Low‑Shot Learning
 - LSTM (Long Short‑Term Memory)
 
-## M
+### M (Index)
 **Terms in this section:**
+
 - Machine Learning (ML)
 - Machine Reading
 - Machine Translation (MT)
@@ -219,8 +232,9 @@
 - Multimodal AI
 - MySQL
 
-## N
+### N (Index)
 **Terms in this section:**
+
 - Naïve Bayes
 - Named Entity Recognition (NER)
 - NanoGPT
@@ -234,8 +248,9 @@
 - Normalisation (Normalization)
 - NumPy
 
-## O
+### O (Index)
 **Terms in this section:**
+
 - Offline Machine Learning
 - OLAP (Online Analytical Processing)
 - OLTP (Online Transaction Processing)
@@ -246,8 +261,9 @@
 - Optimisation (Optimization)
 - Overfitting
 
-## P
+### P (Index)
 **Terms in this section:**
+
 - PaaS (Platform as a Service)
 - Pandas
 - Perplexity
@@ -261,13 +277,15 @@
 - Prompt Injection
 - PyTorch
 
-## Q
+### Q (Index)
 **Terms in this section:**
+
 - QLoRA (Quantized Low-Rank Adaptation)
 - Quantization
 
-## R
+### R (Index)
 **Terms in this section:**
+
 - RAG (Retrieval Augmented Generation)
 - Random Forest
 - Recall
@@ -282,12 +300,16 @@
 - Rekognition
 - Representation Learning
 - RLHF (Reinforcement Learning from Human Feedback)
-- ROUGE
-- Rules‑Based (Rule‑Based Systems)
+ROUGE
+ROUGE is a set of metrics for evaluating automatic summarization and machine translation by comparing system output to reference summaries.
 
-## S
+Rules‑Based (Rule‑Based Systems)
+Rules‑based systems rely on hand‑crafted rules and logic to make decisions, instead of learned parameters from data.
+
+### S (Index)
+
 **Terms in this section:**
-- S3 (Simple Storage Service)
+
 - SaaS (Software as a Service)
 - SageMaker
 - Scikit‑Learn
@@ -309,8 +331,10 @@
 - Supervised Machine Learning
 - Support Vector Machine (SVM)
 
-## T
+### T (Index)
+
 **Terms in this section:**
+
 - T5 (Text-to-Text Transfer Transformer)
 - Tecton
 - Temperature
@@ -329,13 +353,17 @@
 - Transformer
 - Trigrams
 
-## U
+### U (Index)
+
 **Terms in this section:**
+
 - Underfitting
 - Unsupervised Machine Learning
 
-## V
+### V (Index)
+
 **Terms in this section:**
+
 - Validation Set
 - Variance (Model Variance)
 - Vector Database
@@ -344,26 +372,33 @@
 - vLLM
 - VM (Virtual Machine)
 
-## W
+### W (Index)
+
 **Terms in this section:**
+
 - Weights & Biases (W&B)
 - Word2Vec
 - WordPiece
 
-## X
+### X (Index)
+
 **Terms in this section:**
+
 - XGBoost
 
-## Z
+### Z (Index)
+
 **Terms in this section:**
+
 - Zero-Shot Learning
 
 ---
 
-# Glossary Terms
+## Glossary Terms
 
 ## A
-Abstractive Summarisation
+
+Machine Learning (ML)
 Abstractive summarisation is a summarisation technique that generates language using word tokens and phrases not necessarily found in the source document. In contrast, extractive summarisation draws phrases and sentences directly from the source text based on a measure of salience. The degree to which a summary is abstractive versus extractive can often be controlled by a continuous model hyperparameter that explicitly handles this trade‑off.
 
 ACID (Atomicity, Consistency, Isolation, Durability)
@@ -399,7 +434,8 @@ An autoencoder is a type of neural network used to learn efficient codings (repr
 AutoML (Automated Machine Learning)
 AutoML refers to tools and processes that automate the end‑to‑end process of applying machine learning to real‑world problems, including model selection, hyperparameter tuning, and feature preprocessing.
 
-B
+## B
+
 Backpropagation
 Backpropagation is an algorithm used to compute gradients of a loss function with respect to model parameters in neural networks, enabling efficient training via gradient‑based optimization.
 
@@ -430,7 +466,8 @@ Bigrams are sequences of two adjacent tokens (usually words) in text. They are a
 BLEU (Bilingual Evaluation Understudy)
 BLEU is an automatic metric for evaluating the quality of machine‑translated text by comparing it to one or more human reference translations.
 
-C
+## C
+
 CAP Theorem (Consistency, Availability, Partition Tolerance)
 The CAP theorem states that a distributed database system can only guarantee two of three properties simultaneously: Consistency (all nodes see the same data), Availability (every request receives a response), and Partition Tolerance (system continues despite network failures).
 
@@ -467,7 +504,8 @@ Cross‑entropy loss is a loss function commonly used for classification tasks w
 Cross‑Validation
 Cross‑validation is a resampling technique used to evaluate model performance by splitting data into multiple train/validation subsets and averaging the results.
 
-D
+## D
+
 Data Warehouse
 A data warehouse is a centralized repository that stores integrated data from multiple sources, optimized for analytical queries and business intelligence, typically using a star or snowflake schema design.
 
@@ -489,8 +527,7 @@ Doc2Vec is an unsupervised algorithm for learning fixed‑length vector represen
 Dropout
 Dropout is a regularization technique where a random subset of neurons or connections is temporarily removed during training to reduce overfitting.
 
-E
-EC2 (Elastic Compute Cloud)
+DALL-E
 EC2 is Amazon Web Services' cloud computing service that provides resizable virtual servers (instances) for running applications in the cloud.
 
 Embeddings
@@ -505,8 +542,9 @@ An epoch is one full pass of the entire training dataset through the learning al
 Extractive Summarisation
 Extractive summarisation produces a summary by selecting and concatenating key sentences or phrases directly from the original text.
 
-F
-F1 Score
+## E
+
+EC2 (Elastic Compute Cloud)
 F1 score is the harmonic mean of precision and recall, providing a balanced measure of a classifier's accuracy, especially on imbalanced datasets.
 
 fastText
@@ -524,15 +562,17 @@ Features are the measurable properties or characteristics used as inputs to a ma
 Few‑Shot Learning
 Few‑shot learning refers to training models that can generalize well from a very small number of labeled examples per class.
 
-G
-Generative (Model)
+## F
+
+F1 Score
 A generative model learns the joint distribution of inputs and outputs and can generate new data instances. This contrasts with discriminative models, which model decision boundaries between classes.
 
 Graph
 A graph is a data structure consisting of nodes (vertices) and edges that represent relationships between entities.
 
-H
-Hadoop
+## G
+
+Generative (Model)
 Hadoop is an open-source framework for distributed storage and processing of large datasets across clusters of computers, consisting of HDFS (storage) and MapReduce/YARN (processing).
 
 HDFS (Hadoop Distributed File System)
@@ -547,8 +587,9 @@ Human in the loop describes systems in which humans interact with and guide AI m
 Hypervisor
 A hypervisor is software that creates and manages virtual machines by abstracting physical hardware resources, enabling multiple operating systems to run on a single physical machine.
 
-I
-IaaS (Infrastructure as a Service)
+## H
+
+Hadoop
 IaaS is a cloud computing model that provides virtualized computing resources (servers, storage, networking) over the internet on a pay-as-you-go basis.
 
 Inference (Model Inference)
@@ -601,8 +642,9 @@ Low‑shot learning is another term for few‑shot learning, where models must g
 LSTM (Long Short‑Term Memory)
 LSTM networks are a type of recurrent neural network designed to capture long‑term dependencies in sequential data using gating mechanisms.
 
-M
-Machine Learning (ML)
+## I
+
+IaaS (Infrastructure as a Service)
 Machine learning is a subfield of AI that focuses on algorithms that learn patterns from data and improve their performance with experience.
 
 Machine Reading
@@ -623,7 +665,8 @@ MongoDB is a popular open-source NoSQL database that stores data in flexible, JS
 MySQL
 MySQL is an open-source relational database management system using SQL, widely used for web applications and known for speed, reliability, and ease of use.
 
-N
+## N
+
 Naïve Bayes
 Naïve Bayes is a family of probabilistic classifiers that assume independence between features given the class label, often used for text classification.
 
@@ -648,13 +691,14 @@ NoSQL databases are non-relational database systems designed for flexible schema
 N‑grams
 N‑grams are contiguous sequences of n items (often words or characters) from a document or corpus, used in language modeling and feature extraction.
 
-Normalisation (Normalization)
+NormaliSation (Normalization)
 Normalization is the process of scaling or transforming data to a common scale or distribution, often to stabilize and improve learning.
 
 NumPy
 NumPy is a core Python library for numerical computing, providing n‑dimensional arrays and efficient mathematical operations.
 
-O
+## O
+
 OLAP (Online Analytical Processing)
 OLAP systems are optimized for complex analytical queries on large historical datasets, supporting multidimensional analysis, aggregations, and business intelligence reporting with slower write speeds but fast read performance.
 
@@ -673,7 +717,8 @@ Optimization is the process of adjusting model parameters to minimize a loss fun
 Overfitting
 Overfitting occurs when a model memorizes noise or specific patterns in the training data and fails to generalize to new, unseen data.
 
-P
+## P
+
 Pandas
 Pandas is a Python library offering data structures and tools for data manipulation and analysis, especially for tabular data.
 
@@ -695,7 +740,8 @@ Precision is the ratio of true positive predictions to all positive predictions,
 PyTorch
 PyTorch is an open‑source deep learning framework that provides tensor operations and automatic differentiation, widely used for research and production.
 
-R
+## R
+
 Redis
 Redis is an open-source, in-memory key-value data store known for extremely fast performance, used for caching, session management, real-time analytics, and message queuing.
 
@@ -778,7 +824,8 @@ Supervised learning involves training models on labeled data, where each input h
 Support Vector Machine (SVM)
 SVM is a supervised learning algorithm that finds the hyperplane that best separates classes in a high‑dimensional feature space.
 
-T
+## T
+
 Tensor
 A tensor is a multi‑dimensional generalization of scalars, vectors, and matrices, used as the fundamental data structure in many deep learning frameworks.
 
@@ -812,15 +859,15 @@ The Transformer is a deep learning architecture that relies on self‑attention 
 Trigrams
 Trigrams are n‑grams with n = 3, representing contiguous sequences of three tokens, commonly used for language modeling and text analysis.
 
-U
-Underfitting
+T5 (Text-to-Text Transfer Transformer)
 Underfitting occurs when a model is too simple to capture underlying patterns in the data, performing poorly on both training and test sets.
 
 Unsupervised Machine Learning
 Unsupervised learning uses unlabeled data to discover hidden patterns or structures, such as clusters or latent factors.
 
-V
-Validation Set
+## U
+
+Unsupervised Machine Learning
 A validation set is a subset of data used during training to tune hyperparameters and select models, separate from both training and test sets.
 
 Variance (Model Variance)
@@ -832,12 +879,14 @@ Virtualization is the technology that creates virtual versions of computing reso
 VM (Virtual Machine)
 A VM is an emulated computer system that runs on physical hardware, providing an isolated environment with its own operating system and applications, managed by a hypervisor.
 
-W
-Word2Vec
+## V
+
+Validation Set
 Word2Vec is a family of models that learns dense vector representations of words, capturing semantic similarities based on context.
 
-Z
-Zero‑Shot Learning
+## W
+
+Word2Vec
 Zero‑shot learning is a setup where a model must correctly classify samples from classes it has never seen during training, often by leveraging auxiliary information like semantic descriptions.
 
 
@@ -1034,11 +1083,19 @@ Instruction tuning is a fine-tuning technique that trains language models on div
 **Interpretability**
 Interpretability is the degree to which humans can understand the reasoning behind a model's predictions, with simpler models (linear regression, decision trees) being more interpretable than complex deep neural networks.
 
-**JAX**
+## Z
+
+Zero‑Shot Learning
+Zero‑shot learning is a setup where a model must correctly classify samples from classes it has never seen during training, often by leveraging auxiliary information like semantic descriptions.
+
+## J
+
 JAX is a Python library from Google for high-performance numerical computing and machine learning, combining NumPy-like syntax with automatic differentiation, JIT compilation, and seamless GPU/TPU support.
 
 **Jon Krohn**
 Jon Krohn is a data science educator and author of "Deep Learning Illustrated," creating comprehensive mathematics courses (linear algebra, calculus, probability) specifically designed for machine learning practitioners.
+
+## K
 
 **Kafka (Apache Kafka)**
 Kafka is a distributed streaming platform for building real-time data pipelines and streaming applications, providing high-throughput, fault-tolerant publish-subscribe messaging.
@@ -1048,6 +1105,8 @@ Kaggle is a platform for data science competitions, datasets, and collaborative 
 
 **Kubeflow**
 Kubeflow is an open-source machine learning platform built on Kubernetes for deploying, scaling, and managing ML workflows, providing components for training, serving, and pipeline orchestration.
+
+## L
 
 **LangChain**
 LangChain is a framework for building applications powered by LLMs, providing abstractions for chains, agents, memory, and tool integration.
@@ -1069,6 +1128,8 @@ Longformer is a transformer variant that uses a combination of local windowed at
 
 **LoRA (Low-Rank Adaptation)**
 LoRA is an efficient fine-tuning technique that updates only a small number of parameters via low-rank matrix decomposition, reducing memory and compute requirements.
+
+## M
 
 **Mamba**
 Mamba is a state space model architecture that provides an efficient alternative to transformers for sequence modeling, using selective state spaces to achieve linear-time complexity while maintaining strong performance on long sequences.
