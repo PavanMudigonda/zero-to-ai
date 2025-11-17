@@ -164,21 +164,26 @@ MML   -> ISLP -> deeplearning.ai  -> Text and speech (NLP)
 ### Python Packages by Domain
 
 **Math & Computation:**
+
 - `numpy` - Numerical computing, arrays, linear algebra
 - `scipy` - Scientific computing, optimization, statistics
 
 **Machine Learning:**
+
 - `scikit-learn` - Classic ML algorithms (see [Gaël Varoquaux 2023 interview](https://www.youtube.com/watch?v=ONb2OcLRQTo))
 
 **Deep Learning:**
+
 - `torch` (PyTorch) - Most advanced, research-focused
 - `tensorflow` - Most cited, production-ready
 - `keras` - Easier interface, high-level API
 
 **Data Handling:**
+
 - `pandas` or `polars` - Tabular data manipulation
 
 **Visualization:**
+
 - `matplotlib` - Standard plotting
 - `plotly`, `bokeh` - Interactive visualizations
 
@@ -481,6 +486,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 ### ☁️ Understanding the Cloud (Business Perspective)
 
 **Client-Server Foundation:**
+
 - Your machine isn't the most powerful (would be too costly)
 - Connect to remote machines as admin (e.g., via SSH)
 - Users connect to servers for workloads (e.g., API calls)
@@ -488,6 +494,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - Software evolved from monolith to modular
 
 **Cloud Mindmap:**
+
 - **Virtualization**: Server is no longer a single physical machine (resource efficiency)
 - **Storage Solutions**: Various data storage options (S3, block, object storage)
 - **Containerization**: Applications spin off containers
@@ -497,6 +504,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - **Networking**: Zones, CDNs, load balancing
 
 **On-Premise vs. Cloud Criteria:**
+
 - Hardware costs vs. operational expenses
 - Maintenance costs and staff requirements
 - Security and compliance
@@ -505,6 +513,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - Data ownership and control
 
 **Economics of Cloud Computing:**
+
 - **Virtualization** (hypervisor, VM) achieves higher hardware utilization
 - **Decoupling**: Storage (S3) separate from compute (EC2)
 - **Load switching** and containerization (Kubernetes, OpenShift)
@@ -512,37 +521,44 @@ The table below summarizes steps in the extended modeling process, from initial 
 - Data center economies of scale
 
 **Cloud Providers:**
+
 - **Major**: AWS (50% market share), GCP, Azure
 - **Service Models**: SaaS / PaaS / IaaS
 - **Vendor Lock-in**: Switching costs can be high
 - **Competition**: EU antitrust investigations ongoing
 
 **Important Trends:**
+
 - "Managed" and "hybrid" clouds emerged
 - Providers offer myriad of services (often with terrible APIs)
 - Cannot easily switch providers
 - Some companies "grow out of cloud" and return to on-premise
 
 **Data Centers & Energy:**
+
 - Hyperscalers vs. smaller providers
 - Energy efficiency critical for sustainability
 
 **Major Deals:**
+
 - Broadcom buying VMware for $68B (2023)
 - Microsoft settles EU cloud complaint for €22M (2024)
 
 **Resources:**
+
 - Microsoft: [Economics of the Cloud](https://news.microsoft.com/download/archived/presskits/cloud/docs/The-Economics-of-the-Cloud.pdf)
 - Computer Weekly: Broadcom's VMware acquisition impact
 
 ### 🗄️ Databases and Storage
 
 **Storage Fundamentals:**
+
 - **HDD vs. SSD vs. Cloud (S3)**: Cost, speed, accessibility tradeoffs
 - **File Systems**: HDFS (Hadoop Distributed File System)
 - Disk costs and access time considerations
 
 **Database Management Systems (DBMS):**
+
 - **Relational Databases**: SQL-based (PostgreSQL, MySQL, Oracle, SQL Server)
 - **NoSQL Types**:
   - Key-Value (Redis, DynamoDB)
@@ -553,24 +569,29 @@ The table below summarizes steps in the extended modeling process, from initial 
   - Time Series (InfluxDB, TimescaleDB)
 
 **Database Popularity Rankings:**
+
 - <https://db-engines.com/en/ranking>
 - JetBrains Developer Ecosystem Survey
 - Stack Overflow Developer Survey
 
 **Large Data Processing:**
+
 - **MapReduce**: Programming model for large datasets
 - **Hadoop**: HDFS + YARN + MapReduce
 - **Spark**: Fast, in-memory distributed computing
 
 **Search Databases:**
+
 - ElasticSearch, Splunk, Solr for full-text search
 
 **Data Warehouses (DW):**
+
 - Architecture: Decoupling storage and compute
 - **Cloud Providers**: AWS (Redshift), GCP (BigQuery), Azure (Synapse)
 - **New Players**: Snowflake, Databricks (venture-funded, high valuations)
 
 **Database Theory:**
+
 - Relational algebra and ER-diagrams
 - **ACID** (Atomicity, Consistency, Isolation, Durability)
 - **CAP Theorem** (Consistency, Availability, Partition Tolerance)
@@ -581,12 +602,14 @@ The table below summarizes steps in the extended modeling process, from initial 
 - **OLAP** (Online Analytical Processing) vs. **OLTP** (Online Transaction Processing)
 
 **Industry Consolidation:**
+
 - Sun buys MySQL (2008), Oracle buys Sun (2010)
 - SAP acquires Sybase (2010)
 - Cloudera-Hortonworks merger (2019)
 - Valkey: Redis fork after license change (2024)
 
 **Learning Resources:**
+
 - DuckDB co-founder: "The Ancient Art of Data Management" (2023 video)
 - Lecture notes on database engineering (VSUUT, India)
 
@@ -601,6 +624,7 @@ Generation → Storage → Ingestion → Transformation → Serving
 See also: [Exploring the Modern Data Warehouse](https://learn.microsoft.com/training/) by Microsoft Learn
 
 **Workflow & Orchestration:**
+
 - **Apache Airflow**: Most popular workflow orchestration
 - **Prefect**, **Luigi**, **Dagster**: Modern alternatives
 - **MLFlow**: ML lifecycle management
@@ -613,6 +637,7 @@ Data Sources → Ingestion → Storage → Transform → BI/Analytics
 ```
 
 **Key Components:**
+
 - Ingestion: Fivetran, Airbyte, Stitch
 - Storage: Snowflake, Databricks, BigQuery
 - Transform: dbt (data build tool), Spark
@@ -620,6 +645,7 @@ Data Sources → Ingestion → Storage → Transform → BI/Analytics
 - Reverse ETL: Census, Hightouch
 
 **Additional Resources:**
+
 - Andriy Burukov: MLOps book
 - Data Engineering Zoomcamp
 - MAD (ML/AI/Data) landscape: firstmark.com
@@ -660,16 +686,19 @@ Note: “model producisation” usually means two things – taking a model out 
 **The Business-Driven ML Process:**
 
 **A. Identify the Business Case**
+
 - Hypothesis where you can earn more or save money
 - Clear articulation of expected improvements
 - Motivation: Why is this worth pursuing?
 
 **B. Create the Adequate Model**
+
 - Simplified representation of value chain or business process
 - **Control points**: Where you make decisions and take actions
 - **Data points**: Where you collect data to inform decisions and measure success
 
 **C. State the Proposed Change**
+
 - **Why**: Motivation and business justification
 - **What/How/Where**: Detailed proposal
 - **Success Criteria**: How to measure if it worked
@@ -677,16 +706,19 @@ Note: “model producisation” usually means two things – taking a model out 
 - **Test Plan**: Simplest way to validate the hypothesis
 
 **D. Prove with Experiments**
+
 - Run controlled tests
 - Measure actual impact vs. expected
 - Iterate based on results
 
 **E. Scale or Pivot**
+
 - If profitable: Scale the solution
 - If not: Update model, change approach, or move to next opportunity
 - Document lessons learned
 
 **F. Continuous Improvement**
+
 - Iterate faster, cheaper, with better outcomes
 - Build feedback loops into production systems
 
@@ -1169,6 +1201,7 @@ Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational c
 **Topic:** Production pipelines, engineering skills and job roles
 
 **Key Takeaways:**
+
 - Importance of understanding production systems beyond modeling
 - Skills balance: modeling + engineering + business understanding
 - Real-world constraints differ significantly from academic projects
@@ -1182,6 +1215,7 @@ Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational c
 > "One thing I would say is usually a *must* is familiarity with Linux and a cloud provider (AWS, GCP, Azure). You don't need to know all 3 cloud providers (pick AWS if you don't know any yet - it has 50% market share) but if you don't know any of them it'll be harder to onboard you and your first few weeks would be a lot more overwhelming – even knowing a different one to the one you use at a specific job will help as they all have similar functionality."
 
 **Interview Preparation Resources:**
+
 - **CIS 4190/5190: Applied Machine Learning** (Spring 2023) - Great list of resources on one page
 - **deepmleet** (deepmleet.streamlit.app) - The leetcode of machine learning
 - **Society of Actuaries (SOA)**: Statistics for Risk Modeling (SRM) Exam
@@ -1212,6 +1246,7 @@ Many professors and textbook authors are surprisingly reachable:
 ### Video Content Creators
 
 Already covered in Video Series section:
+
 - Josh Starmer (StatQuest) - "This man is a genius"
 - Grant Sanderson (3Blue1Brown) - "Very high quality content"
 - Andrej Karpathy - Transformer architecture deep dives
@@ -1232,31 +1267,37 @@ Already covered in Video Series section:
 ### Common ML Terms
 
 **Supervised vs. Unsupervised vs. Semi-Supervised Learning:**
+
 - **Supervised**: Learning with labeled data (input-output pairs)
 - **Unsupervised**: Learning patterns from unlabeled data (clustering, dimensionality reduction)
 - **Semi-Supervised**: Combination of labeled and unlabeled data
 
 **Structured vs. Unstructured Data:**
+
 - **Structured**: Organized in tables/databases (SQL, CSV, Excel)
 - **Unstructured**: No predefined format (text, images, audio, video)
 
 ### Professional Slang
 
 **Feature Engineering:**
+
 - Variable selection and transformation
 - Creating new features from existing data
 - Domain knowledge applied to improve model inputs
 
 **ETL vs. ELT:**
+
 - **ETL** (Extract, Transform, Load): Traditional data integration - transform before loading
 - **ELT** (Extract, Load, Transform): Modern approach - transform after loading into warehouse
 
 ### Fading Buzzwords
 
 **Data Mining:** (1990s-2000s)
+
 - Early term for discovering patterns in data
 - Largely replaced by "machine learning" and "analytics"
 
 **Big Data:** (2010s)
+
 - Emphasis on volume, velocity, variety (3 Vs)
 - Now implicit in "data engineering" and "cloud computing"
