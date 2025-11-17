@@ -1,29 +1,220 @@
+# Machine Learning My Way (MLMW)
+
 **Machine Learning (ML) Topic Guide: Statistical Models, Data, Tools and Productisation (MDTP)**  
-© Evgeny Pogrebnyak ([e.pogrebnyak@gmail.com](mailto:e.pogrebnyak@gmail.com)), October 2024, v1.2.0 (draft).
 
-This guide takes a broad view of methods applicable in statistical modelling followed by ways to manage the data and create data-driven computing systems that are useful in business. 
+Original guide: [Beginner Learning Path](https://trics.me/beginner.html)
 
-* In modeling space we get to hear about the AI hype cycle a lot but much less about other models (not deep learning and not targeting human cognitive ability) that are still very practical and even more reliable in solving real-world problems.   
-* It is not only the model choice that matters but also how you obtain and process the data – for example is it just an fixed dataset of observations or the data may come from a controlled experiment; are you happy with data quality and can you work witht the data respecting privacy restrictions.  
-* The computer systems, both hardware and software, that allow to process the data and run a model vary in size and complexity.   
-* Lastly, superb data, model and pipelines do not guarantee where the modelling results will be applied meaningfully – is just someone taking a look at the dashboard or there are “actuators” – the people, business processes, machinery or robots that are controlled by the model outcome.
+---
 
+## Introduction
 
-Using this topic guide you can probably touch upon what an  experienced statistic modeller, a data engineer, a software developper and a product manager or domain expert would collectively know and apply in a machine learning or a data modelling project.   
-This stack of skills can be explored in several directions. On a direction from theory to practice you can pose a question “What are the capabilities or theortic limits of predictions and forecasts that we can possibly make? Is this computation really possible or we will be lying to ourselves when attempting it?”  
-On a direction from pracitcal questions to methodology there is a question “Can we identify a business case that is well answered by the model and the data that we can obtain?” In the middle of a skill stack there sits a question “How can we make an affordable and maintainable computer system for this computation project or task?” 
+This guide provides a comprehensive roadmap for learning machine learning, from foundational mathematics to production-ready AI systems. It combines:
 
-The guide has a modular structure that should help cherry pick and proritise learning areas for three groups of readers (a) the [new learners](https://trics.me/beginner.html) at the start of a career journey; (b) reviewers – people with longer previous careers, that are related to modelling or not; and (c) carreer switchers who have expertise in one domain and would want to migrate to another, eg from econometrics to productisation or from software engineering to machine learning.  
-The topic list is organised into sections below:
+* **M (models)**: probability, statistics, econometrics, machine learning, deep learning and other modelling areas.  
+* **D (data)**: data engineering, data management and data governance.  
+* **T (tools)**: software tools, databases and computing infrastructure.  
+* **P (productisation)**: ok, now you have the data, a model and a server running, but what's the benefit?
 
-* M (models): probability, statistics, econometrics, machine learning, deep learning and other modelling areas.  
-* D (data): data engineering, data management and data governance.  
-* T (tools): software tools, databases and computing infrastructure.  
-* P (productisation): ok, now you have the data, a model and a server running, but what’s the benefit?
+The MLMW approach emphasizes both theoretical understanding and practical implementation, guiding you from mathematical foundations through to real-world applications and societal impact.
 
-The author would be grateful to comments about the structure, the contents and usefulness of this guide to the readers as well as ideas for corrections and improvements. This guide is accompanied with another list of notes called [MLMW (Machine Learning My Way](https://docs.google.com/document/d/e/2PACX-1vT9ZkQJDDimZuPgBb7_hUJ40lm8LhqzL45HwIcYRYHw0AQkwA7pcqg0AIE7Gwf3QpAnZ34-BrFrWovO/pub)) that also exists as a draft. In the future releases MLMW would be a more dense guide exclusively for machine learning concepts and modelling techniques while MDTP will cover data, code and productisation in more detail. 
+---
 
-The table below summarises steps in the extended modelling process, starting from a modelling idea to finalising the business or society benefits.  
+## 📋 Prerequisites
+
+Before diving into machine learning, ensure you have:
+
+* **Working knowledge of Python** - Basic programming concepts, data structures, control flow
+* **Mathematical foundations** - Comfort with mathematical notation and concepts from:
+  * Linear algebra (vectors, matrices, operations)
+  * Calculus (derivatives, gradients, chain rule)
+  * Basic probability and statistics
+
+If you need to strengthen these areas, refer to the resources in the sections below.
+
+---
+
+## 🚀 Beginner Track: Core Resources
+
+Three foundational resources form the entry track for beginners:
+
+### 1. Mathematics for Machine Learning (MML)
+**Authors:** Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong (2020)  
+**Link:** Free textbook  
+**Coverage:** Linear algebra, calculus, probability for ML context  
+**Use for:** Part 1 for math review, Chapter 8 for ML introduction
+
+### 2. Introduction to Statistical Learning with Python (ISLP)
+**Authors:** Gareth James, Daniela Witten, Trevor Hastie, Rob Tibshirani (2023)  
+**Link:** Free textbook  
+**Coverage:** Classic ML algorithms, statistical learning theory  
+**Use for:** Main textbook for supervised/unsupervised learning methods
+
+### 3. Deep Learning Specialization
+**Instructor:** Andrew Ng  
+**Platform:** deeplearning.ai / Coursera  
+**Coverage:** Neural networks, CNNs, RNNs, sequence models  
+**Use for:** Practical deep learning implementation
+
+---
+
+## 🗺️ Learning Roadmap
+
+```
+Math    ML       DL                   Subfields and data types
+=====   =======  =================    ============================
+
+          +-------------------------> Tabular data and time series
+          |
+MML   -> ISLP -> deeplearning.ai  -> Text and speech (NLP)
+(free)   (free)  Deep Learning        Transformers (the T in ChatGPT)
+          |      Specialization  +    Computer vision (CV)
+          |      any of 3 free   |    Reinforcement learning (RL)
+          |      textbooks       |
+          |                      |
+         Practical manuals:      |
+         - scipy lectures        |
+         - Müller, Géron, Burkov |
+                                 v
+                        Choose your specialization
+```
+
+### Python Packages by Domain
+
+**Math & Computation:**
+* `numpy` - Numerical computing, arrays, linear algebra
+* `scipy` - Scientific computing, optimization, statistics
+
+**Machine Learning:**
+* `scikit-learn` - Classic ML algorithms (see [Gaël Varoquaux 2023 interview](https://www.youtube.com/watch?v=ONb2OcLRQTo))
+
+**Deep Learning:**
+* `torch` (PyTorch) - Most advanced, research-focused
+* `tensorflow` - Most cited, production-ready
+* `keras` - Easier interface, high-level API
+
+**Data Handling:**
+* `pandas` or `polars` - Tabular data manipulation
+
+**Visualization:**
+* `matplotlib` - Standard plotting
+* `plotly`, `bokeh` - Interactive visualizations
+
+---
+
+## 📚 Reference Textbooks
+
+These denser textbooks serve as references alongside the core beginner track:
+
+### Classic Machine Learning
+* **Bishop (2006)** - Pattern Recognition and Machine Learning
+* **Murphy (2022)** - Probabilistic Machine Learning
+
+### Deep Learning
+* **Goodfellow, Bengio, Courville (2016)** - Deep Learning Book (DLB)
+  * The reference text with continuous citations
+* **Zhang, Lipton, Li, Smola (2021)** - [Dive into Deep Learning (d2l)](https://d2l.ai/)
+  * Jupyter notebooks integrating exposition, math, and runnable code
+  * Freely available with interactive examples
+* **Prince (2023)** - [Understanding Deep Learning (UDL)](https://udlbook.github.io/udlbook/)
+  * Recent textbook with updated content
+
+### Specialized Domains
+* **Jurafsky and Martin** - Speech and Language Processing (NLP)
+* **Sutton and Barto** - Reinforcement Learning: An Introduction (RL)
+
+---
+
+## 🎥 Video Series (Essential)
+
+### StatQuest by Josh Starmer
+* **Focus:** Statistics and ML concepts explained intuitively
+* **Style:** Visual, step-by-step breakdowns
+* **Best for:** Understanding core concepts (PCA, regression, neural nets, etc.)
+* **Link:** YouTube channel
+
+### 3Blue1Brown by Grant Sanderson
+* **Focus:** Mathematical visualization
+* **Notable:** Neural Networks series, Calculus series, Linear Algebra series
+* **Style:** Beautiful animations explaining mathematical intuition
+* **Best for:** Deep understanding of math behind ML
+* **Link:** YouTube channel
+
+### Andrej Karpathy
+* **Focus:** Neural networks, transformers, GPT architecture
+* **Notable:** [NanoGPT](https://github.com/karpathy/nanoGPT) - minimal GPT implementation
+* **Style:** Code walkthroughs, architectural deep dives
+* **Best for:** Understanding modern transformer architectures
+* **Link:** YouTube and GitHub
+
+---
+
+## 🛠️ What Else? Supplementary Resources
+
+### Probability and Statistics
+* **Probability for Data Science (P4D)** - Introductory course
+* **Seeing Theory** - Visual introduction to probability and statistics
+
+### Practical Python for ML
+* **scipy lectures** - Underappreciated resource by scikit-learn package authors
+* **Python Data Science Handbook** - Jake VanderPlas (includes ML chapter)
+* **Practical books** (combine concepts + code):
+  * Müller & Guido - Introduction to Machine Learning with Python (paid)
+  * Géron - Hands-On Machine Learning (paid)
+  * Burkov - The Hundred-Page Machine Learning Book (free preview)
+
+### Code Collections and Practice
+* **ML-From-Scratch** - Implementing algorithms from scratch
+* **Kaggle competitions** - Real datasets and competitions
+  * Note: Kaggle is Google-owned, emphasizes TensorFlow over PyTorch
+
+### Domain-Specific Modeling
+* **Econometrics** - [Econ 1630](https://www.brown.edu/Departments/Economics/Faculty/Glenn_Loury/louryhomepage/teaching/Ec_1630/) chapters 1, 2, 4, 5
+* **Data analysis vocabulary** - Industry perspectives from:
+  * Google, Mathworks, H2O.ai, NVIDIA documentation
+
+### Research Papers and Advanced Topics
+* Statistical Learning Theory (loss, risk, PAC-Bayes)
+* Breiman's "Two Cultures" (2001) - Inference vs. prediction debate
+* Current ML/AI research on arXiv
+
+---
+
+## ⚠️ Not in Scope (But Important)
+
+This guide focuses on ML concepts and modeling. These related skills are NOT deeply covered but are essential for professional work:
+
+* **Python programming depth** - Advanced OOP, design patterns, performance optimization
+* **Linux and cloud computing** - DevOps, containerization, orchestration
+* **Data processing pipelines** - Airflow, Spark, real-time streaming
+* **Model productization** - API design, scalability, monitoring
+* **Experiment design** - A/B testing, causal inference, statistical power
+* **Advanced statistics** - Bayesian methods, time series, survival analysis
+* **Non-ML modeling** - Optimization, simulation, control theory
+* **Domain knowledge** - Business understanding, subject matter expertise
+* **ML adoption outcomes** - Organizational change, ethics, governance
+
+For coverage of these topics, refer to the complete MDTP sections below.
+
+---
+
+## 🎯 Does This Make You an ML Engineer?
+
+**No** - not until you:
+
+* Build projects on **real tasks** with **real data** under **real constraints**
+* Work significantly different from textbook examples
+* Navigate messy data, unclear requirements, and production challenges
+* Collaborate with stakeholders and translate business problems to ML solutions
+
+**The path:** Learn foundations → Practice on projects → Iterate → Deploy → Learn from production
+
+---
+
+## Extended Modelling Process
+
+This guide is accompanied by [MLMW (Machine Learning My Way)](https://docs.google.com/document/d/e/2PACX-1vT9ZkQJDDimZuPgBb7_hUJ40lm8LhqzL45HwIcYRYHw0AQkwA7pcqg0AIE7Gwf3QpAnZ34-BrFrWovO/pub) draft. In future releases, MLMW will be a dense guide exclusively for ML concepts and modeling techniques, while MDTP covers data, code, and productization.
+
+The table below summarizes steps in the extended modeling process, from initial idea to business/societal benefits:  
 
 | Section / steps | Typical questions | An example |
 | :---- | :---- | :---- |
@@ -209,6 +400,154 @@ The table below summarises steps in the extended modelling process, starting fro
 - [ ] **Edge deployment** (TensorFlow Lite, ONNX Runtime, model optimization for edge devices).  
 - [ ] **LLM hosting** (vLLM, TGI Text Generation Inference, Ollama for local models).
 
+### ☁️ Understanding the Cloud (Business Perspective)
+
+**Client-Server Foundation:**
+* Your machine isn't the most powerful (would be too costly)
+* Connect to remote machines as admin (e.g., via SSH)
+* Users connect to servers for workloads (e.g., API calls)
+* Compute and storage happen at the server
+* Software evolved from monolith to modular
+
+**Cloud Mindmap:**
+* **Virtualization**: Server is no longer a single physical machine (resource efficiency)
+* **Storage Solutions**: Various data storage options (S3, block, object storage)
+* **Containerization**: Applications spin off containers
+* **Orchestration**: Smart container management (Kubernetes)
+* **PaaS**: Hosted application environments
+* **Serverless**: Small, event-driven functions (Lambda)
+* **Networking**: Zones, CDNs, load balancing
+
+**On-Premise vs. Cloud Criteria:**
+* Hardware costs vs. operational expenses
+* Maintenance costs and staff requirements
+* Security and compliance
+* Speed and latency
+* Flexibility and scalability
+* Data ownership and control
+
+**Economics of Cloud Computing:**
+* **Virtualization** (hypervisor, VM) achieves higher hardware utilization
+* **Decoupling**: Storage (S3) separate from compute (EC2)
+* **Load switching** and containerization (Kubernetes, OpenShift)
+* Network costs and data transfer pricing
+* Data center economies of scale
+
+**Cloud Providers:**
+* **Major**: AWS (50% market share), GCP, Azure
+* **Service Models**: SaaS / PaaS / IaaS
+* **Vendor Lock-in**: Switching costs can be high
+* **Competition**: EU antitrust investigations ongoing
+
+**Important Trends:**
+* "Managed" and "hybrid" clouds emerged
+* Providers offer myriad of services (often with terrible APIs)
+* Cannot easily switch providers
+* Some companies "grow out of cloud" and return to on-premise
+
+**Data Centers & Energy:**
+* Hyperscalers vs. smaller providers
+* Energy efficiency critical for sustainability
+
+**Major Deals:**
+* Broadcom buying VMware for $68B (2023)
+* Microsoft settles EU cloud complaint for €22M (2024)
+
+**Resources:**
+* Microsoft: [Economics of the Cloud](https://news.microsoft.com/download/archived/presskits/cloud/docs/The-Economics-of-the-Cloud.pdf)
+* Computer Weekly: Broadcom's VMware acquisition impact
+
+### 🗄️ Databases and Storage
+
+**Storage Fundamentals:**
+* **HDD vs. SSD vs. Cloud (S3)**: Cost, speed, accessibility tradeoffs
+* **File Systems**: HDFS (Hadoop Distributed File System)
+* Disk costs and access time considerations
+
+**Database Management Systems (DBMS):**
+* **Relational Databases**: SQL-based (PostgreSQL, MySQL, Oracle, SQL Server)
+* **NoSQL Types**:
+  * Key-Value (Redis, DynamoDB)
+  * Document (MongoDB, CouchDB)
+  * Column (Cassandra, HBase)
+  * Graph (Neo4j, Neptune)
+  * **Vector** (Pinecone, Weaviate, ChromaDB, pgvector)
+  * Time Series (InfluxDB, TimescaleDB)
+
+**Database Popularity Rankings:**
+* https://db-engines.com/en/ranking
+* JetBrains Developer Ecosystem Survey
+* Stack Overflow Developer Survey
+
+**Large Data Processing:**
+* **MapReduce**: Programming model for large datasets
+* **Hadoop**: HDFS + YARN + MapReduce
+* **Spark**: Fast, in-memory distributed computing
+
+**Search Databases:**
+* ElasticSearch, Splunk, Solr for full-text search
+
+**Data Warehouses (DW):**
+* Architecture: Decoupling storage and compute
+* **Cloud Providers**: AWS (Redshift), GCP (BigQuery), Azure (Synapse)
+* **New Players**: Snowflake, Databricks (venture-funded, high valuations)
+
+**Database Theory:**
+* Relational algebra and ER-diagrams
+* **ACID** (Atomicity, Consistency, Isolation, Durability)
+* **CAP Theorem** (Consistency, Availability, Partition Tolerance)
+* **BASE** (Basically Available, Soft state, Eventually consistent)
+* DDL (Data Definition Language) and DML (Data Manipulation Language)
+* Normalization and normal forms
+* Hashing and B-trees
+* **OLAP** (Online Analytical Processing) vs. **OLTP** (Online Transaction Processing)
+
+**Industry Consolidation:**
+* Sun buys MySQL (2008), Oracle buys Sun (2010)
+* SAP acquires Sybase (2010)
+* Cloudera-Hortonworks merger (2019)
+* Valkey: Redis fork after license change (2024)
+
+**Learning Resources:**
+* DuckDB co-founder: "The Ancient Art of Data Management" (2023 video)
+* Lecture notes on database engineering (VSUUT, India)
+
+### 🔧 Data Engineering Tools
+
+**Data Engineering Lifecycle** (from Fundamentals of Data Engineering, O'Reilly):
+```
+Generation → Storage → Ingestion → Transformation → Serving
+```
+
+See also: [Exploring the Modern Data Warehouse](https://learn.microsoft.com/training/) by Microsoft Learn
+
+**Workflow & Orchestration:**
+* **Apache Airflow**: Most popular workflow orchestration
+* **Prefect**, **Luigi**, **Dagster**: Modern alternatives
+* **MLFlow**: ML lifecycle management
+
+**Modern Data Stack:**
+
+```
+Data Sources → Ingestion → Storage → Transform → BI/Analytics
+               (Fivetran)   (Snowflake) (dbt)     (Looker)
+```
+
+**Key Components:**
+* Ingestion: Fivetran, Airbyte, Stitch
+* Storage: Snowflake, Databricks, BigQuery
+* Transform: dbt (data build tool), Spark
+* BI: Looker, Tableau, PowerBI
+* Reverse ETL: Census, Hightouch
+
+**Additional Resources:**
+* Andriy Burukov: MLOps book
+* Data Engineering Zoomcamp
+* MAD (ML/AI/Data) landscape: firstmark.com
+* Reddit: Comments on weekly plan for DE job interview (pipeline2insights)
+
+---
+
 ## **T3. Development Tools and Environment.** {#t3.-development-tools}
 
 - [ ] **Jupyter ecosystem** (JupyterLab, Jupyter notebooks, extensions, interactive computing).  
@@ -237,7 +576,94 @@ Note: “model producisation” usually means two things – taking a model out 
 - [ ] **Model monitoring** (drift detection, performance tracking in production).  
 - [ ] **Cost optimization** (token usage tracking, caching strategies, batch processing).
 
-## **P2. Applications, domains and cases.** {#p2.-applications,-domains-and-cases.}
+### 🔄 ML Project Lifecycle Framework
+
+**The Business-Driven ML Process:**
+
+**A. Identify the Business Case**
+* Hypothesis where you can earn more or save money
+* Clear articulation of expected improvements
+* Motivation: Why is this worth pursuing?
+
+**B. Create the Adequate Model**
+* Simplified representation of value chain or business process
+* **Control points**: Where you make decisions and take actions
+* **Data points**: Where you collect data to inform decisions and measure success
+
+**C. State the Proposed Change**
+* **Why**: Motivation and business justification
+* **What/How/Where**: Detailed proposal
+* **Success Criteria**: How to measure if it worked
+* **Estimate ROI**: Is it worth the investment?
+* **Test Plan**: Simplest way to validate the hypothesis
+
+**D. Prove with Experiments**
+* Run controlled tests
+* Measure actual impact vs. expected
+* Iterate based on results
+
+**E. Scale or Pivot**
+* If profitable: Scale the solution
+* If not: Update model, change approach, or move to next opportunity
+* Document lessons learned
+
+**F. Continuous Improvement**
+* Iterate faster, cheaper, with better outcomes
+* Build feedback loops into production systems
+
+### 👥 Data Team Roles & Responsibilities
+
+**Perfect World (the "Bam" scenario):**
+```
+Idea → Good data → Known model → Quick inference → 
+Bam to production → Bam cool effect → Bam business liked it
+```
+
+**Practically Perfect World (Reality):**
+```
+Many ideas → Business hypothesis → Expected result → 
+Where to deploy? → Which model? → Is there data? → 
+Can we train? → Does it work? → Can we deploy? → 
+Production monitoring → Can we improve? → Is business happy? → 
+How long will results persist?
+```
+
+**Role Breakdown - Who Does What?**
+
+1. **Full-Stack Data Scientist** - End-to-end ownership: data → model → deployment
+2. **Data Scientist / Modeler** - Focus on model development and experimentation
+3. **Data Engineer / Data Architect** - Data pipelines, storage, and infrastructure
+4. **Machine Learning Engineer** - Model deployment, serving, production optimization
+5. **Software Engineers** - Application development and integration
+6. **Research Scientist** - Novel algorithms and state-of-the-art research
+7. **Business Analyst** - Requirements, metrics, stakeholder communication
+8. **Business Lead / Product Manager** - Strategy, ROI, and product vision
+9. **Vendor/Consultant** - External expertise and specialized tools
+
+### 🚀 When Does a Pipeline Become a "Product"?
+
+* Any pipeline that delivered business results (however simple)
+* Complex systems beyond model+prediction (frontend, hardware, business rules)
+* Anything with data/intelligence that users want
+* Industry-specific sellable solutions
+
+### ⚠️ Production Challenges
+
+**Technical:** Data quality, model drift, infrastructure failures, integration issues
+
+**Organizational:** Silos, vested interests, unclear responsibilities, misaligned incentives
+
+**Business:** Unclear success criteria, changing requirements, insufficient ROI
+
+### 📚 ML Production Resources
+
+* **ITMO University Role Model**: https://github.com/aimclub/ai-competency-model/
+* **Awesome Production ML**: https://github.com/EthicalML/awesome-production-machine-learning
+
+**Key Insight from "Demystifying AI for the Enterprise":**
+> Feedback loops and ongoing monitoring are most critical for production success.
+
+---
 
 - [ ] Recommender systems (RecSys).  
 - [ ] Clinical trials.  
@@ -525,6 +951,130 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 - Build end-to-end projects
 - Contribute to open source (Hugging Face, LangChain)
 
+
+---
+
+**Legend:**  
+✅ Completed | 🎯 Current Focus | 🔥 Priority Next | ⏭️ Coming Soon | 🚀 Advanced | 🌟 Essential
+
+---
+
+## 🎤 Interviews & Career Insights
+
+### Featured Interview: randomlyCoding
+
+**Topic:** Production pipelines, engineering skills and job roles
+
+**Key Takeaways:**
+* Importance of understanding production systems beyond modeling
+* Skills balance: modeling + engineering + business understanding
+* Real-world constraints differ significantly from academic projects
+* Team collaboration and communication are critical skills
+
+**Full Interview:** Available on MLMW website
+
+### Essential for Job Success
+
+**Must-Have Cloud Knowledge:**
+> "One thing I would say is usually a *must* is familiarity with Linux and a cloud provider (AWS, GCP, Azure). You don't need to know all 3 cloud providers (pick AWS if you don't know any yet - it has 50% market share) but if you don't know any of them it'll be harder to onboard you and your first few weeks would be a lot more overwhelming – even knowing a different one to the one you use at a specific job will help as they all have similar functionality."
+
+**Interview Preparation Resources:**
+* **CIS 4190/5190: Applied Machine Learning** (Spring 2023) - Great list of resources on one page
+* **deepmleet** (deepmleet.streamlit.app) - The leetcode of machine learning
+* **Society of Actuaries (SOA)**: Statistics for Risk Modeling (SRM) Exam
+  * Note: Topics are solid but literature slightly dated (ISLR instead of ISLP)
+
+---
+
+## 👥 Influential Educators & Thinkers
+
+People who make complex things accessible through courses, books, and personal interaction:
+
+### Highly Recommended Educators
+
+* **Will Curt** - Clear explanations of statistical concepts
+* **Scott Cunningham** - Causal Inference: The Mixtape author
+* **Laura Mayoral** - Econometrics educator
+* **Allen Downey** (r/AllenDowney/) - Think Stats, Think Bayes author
+
+### Active Researchers on Social Media
+
+Many professors and textbook authors are surprisingly reachable:
+
+* **Jeffrey Wooldridge** (@jmwooldridge) - Econometrics
+* **Paul Goldsmith-Pinkham** (@paulgp)
+  * Repo: Yale Applied Empirical Methods PhD Course
+  * Video lectures available (PGP playlist)
+
+### Video Content Creators
+
+Already covered in Video Series section:
+* Josh Starmer (StatQuest) - "This man is a genius"
+* Grant Sanderson (3Blue1Brown) - "Very high quality content"
+* Andrej Karpathy - Transformer architecture deep dives
+
+### Additional Recommendation
+
+* **Machine Learning Street Talk**
+  * Reader note: "Sometimes a bit too dense for absolute beginners but really good. They list resources, papers, books."
+
+### Hall of Shame
+
+* **Siraj Raval** - Story of plagiarism in education (cautionary tale)
+
+---
+
+## 📖 Professional Glossary & Common Terms
+
+### Common ML Terms
+
+**Supervised vs. Unsupervised vs. Semi-Supervised Learning:**
+* **Supervised**: Learning with labeled data (input-output pairs)
+* **Unsupervised**: Learning patterns from unlabeled data (clustering, dimensionality reduction)
+* **Semi-Supervised**: Combination of labeled and unlabeled data
+
+**Structured vs. Unstructured Data:**
+* **Structured**: Organized in tables/databases (SQL, CSV, Excel)
+* **Unstructured**: No predefined format (text, images, audio, video)
+
+### Professional Slang
+
+**Feature Engineering:**
+* Variable selection and transformation
+* Creating new features from existing data
+* Domain knowledge applied to improve model inputs
+
+**ETL vs. ELT:**
+* **ETL** (Extract, Transform, Load): Traditional data integration - transform before loading
+* **ELT** (Extract, Load, Transform): Modern approach - transform after loading into warehouse
+
+### Fading Buzzwords
+
+**Data Mining:** (1990s-2000s)
+* Early term for discovering patterns in data
+* Largely replaced by "machine learning" and "analytics"
+
+**Big Data:** (2010s)
+* Emphasis on volume, velocity, variety (3 Vs)
+* Now implicit in "data engineering" and "cloud computing"
+
+### Additional Context from MLMW
+
+**Reddit Quotes Worth Remembering:**
+
+> "Eventually, after years of trying to get in through various 'shortcuts' I realized that I actually have to learn maths and statistics like all the other guys." - Anonymous Redditor
+
+> "I never feel like I've learned a topic just from reading about it, so having good problems to go along with the reading was very important to me." - On importance of exercises
+
+> "AI good, getting gooder. Tech > academics. AI costs $$$, gonna cost $$$$$. US numba 1. Benchmarks are meh. GenAI is trending. AI regulations increase. People & science can and do benefit from AI." - Summary of State of AI Report 2024
+
+**Reader Feedback on MLMW:**
+
+> "This is pretty neat. Congratulations on putting together such a great list!"
+
+> "This list is gold, thanks :)"
+
+> "This list is pretty comprehensive. I would have a bit on MLOps side because most advanced practitioners of ML should have some amount of understanding of how models are productionized."
 
 ---
 
