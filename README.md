@@ -1,8 +1,7 @@
 # Machine Learning Guide
 
-**Machine Learning (ML) Topic Guide: Statistical Models, Data, Tools and Productisation (MDTP)**  
+**Machine Learning Checklist**  
 
-Original guide: [Beginner Learning Path](https://trics.me/beginner.html)
 
 ---
 
@@ -128,6 +127,9 @@ Three foundational resources form the entry track for beginners:
 ---
 
 ## 🗺️ Learning Roadmap
+
+[ ] Original guide: [Beginner Learning Path](https://trics.me/beginner.html)
+
 
 ```
 Math    ML       DL                   Subfields and data types
@@ -267,19 +269,6 @@ For coverage of these topics, refer to the complete MDTP sections below.
 
 ---
 
-## 🎯 Does This Make You an ML Engineer?
-
-**No** - not until you:
-
-* Build projects on **real tasks** with **real data** under **real constraints**
-* Work significantly different from textbook examples
-* Navigate messy data, unclear requirements, and production challenges
-* Collaborate with stakeholders and translate business problems to ML solutions
-
-**The path:** Learn foundations → Practice on projects → Iterate → Deploy → Learn from production
-
----
-
 ## Extended Modelling Process
 
 
@@ -319,7 +308,7 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] Data generating process, sample vs population.  
 - [ ] Sampling techniques and inference. Statistical model.   
 - [ ] Frequentist and Bayesian views of a statistical model.  
-- [x] ~~Modelling tradeoffs and “no free lunch”.~~  
+- [ ] ~~Modelling tradeoffs and “no free lunch”.~~  
 - [ ] Measuring model quality and performance.  
 - [ ] Model lifecyle, data and model drift.
 
@@ -328,22 +317,22 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] Cross-section, time series, panel and spatial data.   
 - [ ] Linear regression and ordinary least squares (OLS).  
 - [ ] Violation of OLS assumptions. [*Peter Kennedy*](https://en.wikipedia.org/wiki/Peter_Kennedy_\(economist\)) textbook and the [*10 Commandments*](https://www.principlesofeconometrics.com/poe5/writing/kennedy.pdf).  
-- [x] ~~Difference-in-differences, instrumental variables, regression discontinuity.~~  
-- [x] ~~Time series. Seasonal adjustment, smoothing, filtering.~~  
-- [x] ~~Systems of equations.~~  
+- [ ] ~~Difference-in-differences, instrumental variables, regression discontinuity.~~  
+- [ ] ~~Time series. Seasonal adjustment, smoothing, filtering.~~  
+- [ ] ~~Systems of equations.~~  
 - [ ] Estimation techniques: OLS and varieties, GMM, maximum likelihood, Bayesian estimates.
 
 ## **M3. Bayesian modeling and causal inference.** {#m3.-bayesian-modeling-and-causal-inference.}
 
-- [x] ~~Bayesian modeling and probabilistic programming.~~  
-- [x] ~~Causal inference and do-notation.~~
+- [ ] ~~Bayesian modeling and probabilistic programming.~~  
+- [ ] ~~Causal inference and do-notation.~~
 
 ## **M4. Classic machine learning.** {#m4.-classic-machine-learning.}
 
 - [ ] Tasks: classification, regression, clustering, dimensionality reduction, decision trees, support vector machines and discriminant analysis.  
 - [ ] Criteria for model selection and performance evaluation.   
-- [x] ~~Statistical learning theory (loss, theoretical and empirical risk, PAC-Bayes)~~  
-- [x] ~~Forecast combination, choosing forecasts and AutoML.~~ 
+- [ ] ~~Statistical learning theory (loss, theoretical and empirical risk, PAC-Bayes)~~  
+- [ ] ~~Forecast combination, choosing forecasts and AutoML.~~ 
 
 ## **M5. Neural nets (NN) and deep learning.** {#m5.-neural-nets-(nn)-and-deep-learning.}
 
@@ -367,18 +356,18 @@ The table below summarizes steps in the extended modeling process, from initial 
 - [ ] Computer vision (CV).  
 - [ ] **Multimodal models** (CLIP, GPT-4V, vision-language integration).  
 - [ ] **Diffusion models** (Stable Diffusion, DALL-E, Midjourney for image generation).  
-- [x] ~~Reinforcement learning (RL). [*Sutton and Barto*](http://www.incompleteideas.net/book/the-book-2nd.html)*.*~~  
-- [x] ~~Robotics. [*Underactuated Robotics*](https://underactuated.csail.mit.edu/) *course notes by [Russ Tedrake](http://people.csail.mit.edu/russt/).*~~
+- [ ] ~~Reinforcement learning (RL). [*Sutton and Barto*](http://www.incompleteideas.net/book/the-book-2nd.html)*.*~~  
+- [ ] ~~Robotics. [*Underactuated Robotics*](https://underactuated.csail.mit.edu/) *course notes by [Russ Tedrake](http://people.csail.mit.edu/russt/).*~~
 
 ## **M7. Other modelling techniques.** {#m7.-other-modelling-techniques.}
 
-- [x] ~~Graphs and networks. [*NetworkX bibliography.*](https://networkx.org/documentation/stable/#bibliography)~~  
-- [x] ~~Agent-based modeling (ABM).~~   
-- [x] ~~Game theory and auction design.~~  
-- [x] ~~Optimisation and linear programming (LP). [*MOSEK and*](https://docs.mosek.com/modeling-cookbook/zbiblio.html#id181)~~   
+- [ ] ~~Graphs and networks. [*NetworkX bibliography.*](https://networkx.org/documentation/stable/#bibliography)~~  
+- [ ] ~~Agent-based modeling (ABM).~~   
+- [ ] ~~Game theory and auction design.~~  
+- [ ] ~~Optimisation and linear programming (LP). [*MOSEK and*](https://docs.mosek.com/modeling-cookbook/zbiblio.html#id181)~~   
       [*JuMP*](https://jump.dev/JuMP.jl/stable/background/bibliography/) *[bibliographies.](https://docs.mosek.com/modeling-cookbook/zbiblio.html#id181) [Stephen Boyd](https://web.stanford.edu/~boyd) books and classes.*  
-- [x] ~~System dynamics (SD). [*Jay Forrester.*](https://systemdynamics.org/news/memorial/jay-w-forrester/)~~  
-- [x] ~~Control theory. [*r/ControlTheory wiki*](https://www.reddit.com/r/ControlTheory/wiki/index/) *and [Feedback Systems by Aström and Murray](https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-complete_28Sep12.pdf)*.~~
+- [ ] ~~System dynamics (SD). [*Jay Forrester.*](https://systemdynamics.org/news/memorial/jay-w-forrester/)~~  
+- [ ] ~~Control theory. [*r/ControlTheory wiki*](https://www.reddit.com/r/ControlTheory/wiki/index/) *and [Feedback Systems by Aström and Murray](https://www.cds.caltech.edu/~murray/books/AM08/pdf/am08-complete_28Sep12.pdf)*.~~
 
 ## **M9. Modern AI Architectures (2020-2025).** {#m9.-modern-ai-architectures}
 
@@ -390,13 +379,13 @@ The table below summarizes steps in the extended modeling process, from initial 
 
 ## **M8. Additional topics (harder or less exciting)** {#m8.-additional-topics-(harder-or-less-exciting)}
 
-- [x] ~~Combinatorics… *[is hard.](https://www.reddit.com/r/mathematics/comments/17e0h2h/combinatorics_destroying_my_ego_the_strangest_of/)*~~  
-- [x] ~~Mathematical statistics (point estimation, confidence bands, hypothesis testing).~~  
-- [x] ~~Central limit theorems, asymptotics and convergence.~~  
-- [x] ~~Non-parametric statistics. [*All of Nonparametric Statistics*](https://link.springer.com/book/10.1007/0-387-30623-4)*.*~~  
-- [x] ~~Entropy, cross-entropy and information theory.~~  
-- [x] ~~Differential equations and random processes.~~  
-- [x] ~~Probability as part of measure theory.~~
+- [ ] ~~Combinatorics… *[is hard.](https://www.reddit.com/r/mathematics/comments/17e0h2h/combinatorics_destroying_my_ego_the_strangest_of/)*~~  
+- [ ] ~~Mathematical statistics (point estimation, confidence bands, hypothesis testing).~~  
+- [ ] ~~Central limit theorems, asymptotics and convergence.~~  
+- [ ] ~~Non-parametric statistics. [*All of Nonparametric Statistics*](https://link.springer.com/book/10.1007/0-387-30623-4)*.*~~  
+- [ ] ~~Entropy, cross-entropy and information theory.~~  
+- [ ] ~~Differential equations and random processes.~~  
+- [ ] ~~Probability as part of measure theory.~~
 
 # **D. Data** {#d.-data}
 
@@ -758,9 +747,9 @@ How long will results persist?
 
 ## **E1. Companies** {#e1.-companies}
 
-- [x] ~~Academic vs corporate research.~~  
-- [x] ~~Company valuations.~~  
-- [x] ~~Data ownership.~~ 
+- [ ] ~~Academic vs corporate research.~~  
+- [ ] ~~Company valuations.~~  
+- [ ] ~~Data ownership.~~ 
 
 ---
 
