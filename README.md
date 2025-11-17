@@ -93,6 +93,198 @@ This guide provides a comprehensive roadmap for learning machine learning, from 
 
 ---
 
+## 📋 Phase-by-Phase Resource Map
+
+This section maps all resources in the README to specific learning phases. Use this as your study guide.
+
+### Phase 1 Resources → Foundation
+
+**Mathematics** (MDTP: M0-M2)
+- 3Blue1Brown: Linear Algebra, Calculus series
+- Gilbert Strang: MIT 18.06 Linear Algebra
+- Khan Academy: Statistics, Probability
+- Jon Krohn: Math for ML playlists
+
+**ML Fundamentals** (MDTP: M4)
+- Andrew Ng: Machine Learning Specialization ⭐
+- ISLP Book (Chapters 1-8)
+- Stanford CS229: Machine Learning
+
+**Programming**
+- Python basics
+- NumPy, Pandas fundamentals
+- Jupyter notebooks
+
+---
+
+### Phase 2 Resources → Embeddings & Vectors
+
+**Embeddings** (MDTP: M5 partial, D3 partial)
+- Word2Vec, Sentence Transformers
+- Hugging Face NLP Course (Chapters 3-5)
+- Semantic search concepts
+
+**Vector Databases** (MDTP: D3, T1)
+- FAISS, Pinecone, ChromaDB tutorials
+- Nearest neighbor search
+- Vector operations and similarity
+
+---
+
+### Phase 3 Resources → Neural Networks
+
+**Deep Learning Courses** (MDTP: M5)
+- Andrew Ng: Deep Learning Specialization ⭐
+- Fast.ai: Practical Deep Learning
+- MIT 6.S191: Introduction to Deep Learning
+- 3Blue1Brown: Neural Networks series
+- Andrej Karpathy: Neural Networks Zero to Hero
+
+**Frameworks** (MDTP: T1)
+- PyTorch tutorials and documentation
+- TensorFlow/Keras (if choosing TF)
+- Hugging Face Transformers library
+
+**YouTube Playlists**
+- 3Blue1Brown: Neural Networks
+- freeCodeCamp: Deep Learning with PyTorch
+- DeepMind x UCL: Deep Learning courses
+
+---
+
+### Phase 4 Resources → LLMs & Modern AI
+
+**LLM Fundamentals** (MDTP: M6, M9)
+- Andrej Karpathy: Let's build GPT, Intro to LLMs
+- Stanford CS324: LLMs
+- Hugging Face NLP Course (complete)
+- DeepLearning.AI: Prompt Engineering courses
+
+**RAG & Applications** (MDTP: M6, D4, T1)
+- LangChain documentation and tutorials
+- LlamaIndex (GPT Index) guides
+- Weights & Biases: RAG++ Course
+- Weights & Biases: Building LLM-Powered Apps
+
+**Fine-tuning** (MDTP: M6)
+- Weights & Biases: Training & Fine-Tuning LLMs
+- PEFT library (LoRA/QLoRA)
+- Hugging Face PEFT documentation
+
+**AI Agents** (MDTP: M6, P1)
+- Microsoft: AI Agents for Beginners
+- LangGraph documentation
+- DeepLearning.AI: AI Agents courses
+
+**YouTube Playlists**
+- OpenAI: DevDay 2025, GPT-5, ChatGPT agent, o1 series
+- Google DeepMind: Gemini demos, research talks
+- Weights & Biases: LLM courses
+- IBM Technology: LLMs and Chatbots, AI Technical Tutorials
+
+---
+
+### Phase 5 Resources → Specializations
+
+**Choose 1-2 specializations**:
+
+**A. Natural Language Processing** (MDTP: M6)
+- Stanford CS224n: NLP with Deep Learning
+- Hugging Face advanced tutorials
+- FastText, spaCy documentation
+- IBM Technology: AI in Action playlists
+
+**B. Computer Vision** (MDTP: M6)
+- Stanford CS231n: CNNs for Visual Recognition
+- Fast.ai: Part 2 (Advanced)
+- OpenCV tutorials
+- Stable Diffusion, DALL-E documentation
+- Google DeepMind: Veo video generation
+
+**C. Reinforcement Learning** (MDTP: M6)
+- DeepMind x UCL: RL Course 2018
+- Sutton & Barto: RL textbook
+- OpenAI Gym environments
+- Weights & Biases: PPO Implementation
+
+**D. Multimodal AI** (MDTP: M6, M9)
+- CLIP, GPT-4V documentation
+- Google DeepMind: Gemini multimodal demos
+- OpenAI: Sora video generation
+- Multimodal research papers
+
+**YouTube Playlists by Specialization**:
+- NLP: Hugging Face, Stanford CS224n
+- CV: Stanford CS231n, OpenAI Sora tutorials
+- RL: DeepMind x UCL RL courses
+- Multimodal: Google Cloud multimodal AI playlists
+
+---
+
+### Phase 6 Resources → MLOps & Production
+
+**MLOps Platforms** (MDTP: D4, T1, T2, P1)
+- MLflow documentation
+- Weights & Biases: MLOps Course, Model CI/CD
+- Kubeflow tutorials
+- Neptune.ai guides
+
+**Cloud Platforms** (MDTP: T2, P1)
+- AWS: Official playlists (SageMaker, Lambda, EC2)
+- Google Cloud: AI/ML services playlists
+- Azure ML documentation
+- IBM Technology: Cloud Platform playlists
+
+**Data Engineering** (MDTP: D3, D4)
+- Airflow documentation
+- dbt tutorials
+- Kafka/Flink for streaming
+- DVC for data versioning
+
+**Deployment** (MDTP: P1, T2)
+- FastAPI for model serving
+- Docker & Kubernetes basics
+- Model monitoring and drift detection
+- A/B testing frameworks
+
+**YouTube Playlists**:
+- Weights & Biases: MLOps Course, Model Management
+- AWS: AI Services, SageMaker tutorials
+- Google Cloud: Deploying AI, Cloud Platform
+- Microsoft Build: Cloud Platform, Developer Tools
+
+---
+
+### Phase 7 Resources → Ethics & Advanced
+
+**AI Safety** (MDTP: P3)
+- Microsoft: AI Red Teaming 101
+- Constitutional AI papers (Anthropic)
+- AI safety research (DeepMind)
+- IBM Technology: AI Ethics and Governance
+
+**Advanced Architectures** (MDTP: M9)
+- State Space Models (Mamba) papers
+- Mixture of Experts research
+- Vision Transformers (ViT)
+- Sparse transformers, Longformer
+
+**Research & Papers**:
+- Google DeepMind: Research playlist
+- Meta Open Source: AI & ML playlists
+- NeurIPS, ICML, ICLR conference talks
+- arXiv.org for latest papers
+
+**YouTube Playlists**:
+- Google DeepMind: AI for Science Forum, Talks
+- Meta Open Source: AI & ML, Project Aria
+- IBM Technology: Quantum Computing, Advanced AI
+- Microsoft Build: AI innovations
+
+---
+
+
+
 ## 📋 Prerequisites
 
 Before diving into machine learning, ensure you have:
@@ -425,11 +617,6 @@ These denser textbooks serve as references alongside the core beginner track:
 - [ ] **[Kaggle Data Science for Good](https://www.youtube.com/playlist?list=PLqFaTIg4myu9jLJQFaIRy4IQRqk0tBz3a)** - Social impact projects
 - [ ] **[Grandmaster Series](https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW)** - Interviews with Kaggle GMs
 
-**Pro Tips:**
-- Complete micro-courses in order (Intro → Intermediate → Advanced)
-- Each course has hands-on exercises on Kaggle Learn
-- Courses award certificates upon completion
-- Competitions provide real-world practice after courses
 
 ### Domain-Specific Modeling
 
@@ -990,7 +1177,13 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 ---
 
-## Phase 1: Foundation
+## 📚 Phase 1: Foundation (2-3 months | 200-300 hours)
+
+> **Goal**: Build mathematical and programming foundations essential for ML
+> **Prerequisites**: Basic programming knowledge
+> **Outcome**: Ready to understand ML algorithms and implement them
+
+### Core Topics Checklist
 
 **Core Concepts**
 
@@ -1015,17 +1208,70 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 - [ ] Feature Engineering & Feature Extraction
 - [ ] Normalisation
 
+### 📖 Required Resources (Phase 1)
+
+**Mathematics (80-120 hours)**
+
+- [ ] **[3Blue1Brown - Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)** (~8 hours) ⭐ ESSENTIAL
+  - Visual intuition for vectors, matrices, transformations
+- [ ] **[3Blue1Brown - Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)** (~6 hours) ⭐ ESSENTIAL
+  - Derivatives, integrals, chain rule
+- [ ] **[Gilbert Strang - MIT Linear Algebra 18.06](https://www.youtube.com/playlist?list=PLE7DDD91010BC51F8)** (~35 hours)
+  - Deep dive into linear algebra theory
+- [ ] **[Khan Academy](https://www.khanacademy.org/)** - Statistics, Probability, Calculus (30-50 hours)
+  - Fill gaps in mathematical knowledge
+
+**Programming (40-60 hours)**
+
+- [ ] **[Python for Beginners - Microsoft](https://github.com/microsoft/c9-python-getting-started)** (10-15 hours)
+- [ ] **NumPy, Pandas basics** (20-30 hours)
+  - [NumPy Tutorial](https://numpy.org/doc/stable/user/quickstart.html)
+  - [Pandas Tutorial](https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html)
+- [ ] **Matplotlib/Seaborn for visualization** (10-15 hours)
+
+**ML Fundamentals (80-120 hours)**
+
+- [ ] **[Andrew Ng - Machine Learning Specialization](https://www.youtube.com/playlist?list=PLLssT5z_DsK-h9vYZkQkYNWcItqhlRJLN)** (60-80 hours) ⭐ ESSENTIAL
+  - Course 1: Supervised ML (Regression, Classification)
+  - Course 2: Advanced Learning Algorithms
+  - Course 3: Unsupervised Learning, Recommenders, RL
+- [ ] **[ISLP Book](https://www.statlearning.com/)** - Introduction to Statistical Learning with Python (40-60 hours)
+  - Read chapters 1-8 (linear regression through tree-based methods)
+
+### 🎯 Phase 1 Projects
+
+- [ ] **Project 1**: Linear regression on housing prices (Boston/California dataset)
+- [ ] **Project 2**: Classification with logistic regression (Iris/Titanic)
+- [ ] **Project 3**: K-means clustering on customer segmentation
+- [ ] **Project 4**: Decision tree for loan approval prediction
+
+### ✅ Phase 1 Completion Criteria
+
+Before moving to Phase 2, you should be able to:
+
+- [ ] Explain gradient descent and backpropagation conceptually
+- [ ] Implement linear/logistic regression from scratch in NumPy
+- [ ] Use scikit-learn for basic ML tasks
+- [ ] Understand train/validation/test splits and cross-validation
+- [ ] Read and understand mathematical notation in ML papers (basic level)
+
 ---
 
-## Phase 2: Embeddings & Vectors (Current Focus)
+## 📚 Phase 2: Embeddings & Vectors (3-4 weeks | 60-80 hours)
+
+> **Goal**: Understand vector representations and semantic search
+> **Prerequisites**: Phase 1 complete
+> **Outcome**: Build RAG systems and work with embeddings
+
+### Core Topics Checklist
 
 **Tokenization**
 
 - [ ] Tokens - Text broken into processable units
-- [ ] Tokenization algorithms (BPE, WordPiece)
+- [ ] Tokenization algorithms (BPE, WordPiece, SentencePiece)
 - [ ] Subword tokenization concepts
 
-**Embeddings** 🔥 (Learn next)
+**Embeddings** 🔥
 
 - [ ] Embeddings - Dense vector representations
 - [ ] Word2Vec, fastText, Doc2Vec
@@ -1037,7 +1283,7 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 
 - [ ] Vector Database (Pinecone, Weaviate, ChromaDB)
 - [ ] Semantic search vs keyword search
-- [ ] Nearest neighbor search
+- [ ] Nearest neighbor search (FAISS, HNSW)
 - [ ] Dimensionality (384, 768, 1536 dimensions)
 
 **Text Representations (Classical)**
@@ -1046,9 +1292,46 @@ This section provides a structured, phase-based approach to learning AI/ML, tail
 - [ ] TF (Term Frequency), IDF (Inverse Document Frequency)
 - [ ] TF‑IDF weighting
 
+### 📖 Required Resources (Phase 2)
+
+**Core Learning (30-40 hours)**
+
+- [ ] **[Word2Vec Paper](https://arxiv.org/abs/1301.3781)** - Original embeddings paper (3-4 hours)
+- [ ] **[Jay Alammar - Illustrated Word2Vec](https://jalammar.github.io/illustrated-word2vec/)** (1 hour)
+- [ ] **[Sentence Transformers Documentation](https://www.sbert.net/)** (5-10 hours)
+  - Learn modern embedding models
+- [ ] **Hugging Face - [Embeddings Course](https://huggingface.co/learn/nlp-course/)** (Chapter 5) (10-15 hours)
+
+**Vector Databases (15-20 hours)**
+
+- [ ] **[Pinecone Documentation](https://docs.pinecone.io/)** (5-8 hours)
+- [ ] **[ChromaDB Tutorial](https://docs.trychroma.com/)** (3-5 hours)
+- [ ] **[FAISS Tutorial](https://github.com/facebookresearch/faiss/wiki)** (5-7 hours)
+
+**Practical Implementation (15-20 hours)**
+
+- [ ] Build semantic search engine with sentence-transformers
+- [ ] Create vector database with ChromaDB or Pinecone
+- [ ] Implement similarity search and ranking
+
+### 🎯 Phase 2 Projects
+
+- [ ] **Project 1**: Semantic search engine for your documents
+- [ ] **Project 2**: Question-answering with document retrieval
+- [ ] **Project 3**: Duplicate detection using embeddings
+- [ ] **Project 4**: Text clustering and visualization with t-SNE/UMAP
+
+### ✅ Phase 2 Completion Criteria
+
+- [ ] Generate embeddings using sentence-transformers
+- [ ] Build and query a vector database
+- [ ] Implement semantic search from scratch
+- [ ] Understand cosine similarity vs. Euclidean distance
+- [ ] Explain difference between sparse (TF-IDF) and dense (embeddings) representations
+
 ---
 
-## Phase 3: Neural Networks & Architecture
+## 📚 Phase 3: Neural Networks & Architecture (2-3 months | 200-300 hours)
 
 **Neural Network Basics**
 
