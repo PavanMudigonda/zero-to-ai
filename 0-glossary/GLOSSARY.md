@@ -742,3 +742,156 @@ HNSW is an approximate nearest neighbor search algorithm that builds a multi-lay
 **Annoy (Approximate Nearest Neighbors Oh Yeah)**
 Annoy is a C++ library with Python bindings for approximate nearest neighbor search, using random projection forests to create memory-mapped indexes suitable for large-scale similarity search.
 
+**BPE (Byte Pair Encoding)**
+BPE is a tokenization algorithm that iteratively merges the most frequent pairs of characters or character sequences, creating a vocabulary of subword units. Widely used in modern LLMs like GPT, it balances vocabulary size with the ability to represent rare words through subword combinations.
+
+**WordPiece**
+WordPiece is a tokenization algorithm similar to BPE, used by BERT and other Google models, that builds a vocabulary by iteratively choosing subword units that maximize the likelihood of the training data when segmented.
+
+**SentencePiece**
+SentencePiece is a language-independent tokenization library that treats text as a sequence of Unicode characters, supporting BPE and unigram language model tokenization without requiring pre-tokenization or language-specific rules.
+
+**Mixture of Experts (MoE)**
+Mixture of Experts is a neural network architecture that uses multiple specialized "expert" networks with a gating mechanism that routes inputs to the most relevant experts, enabling efficient scaling while keeping inference costs manageable.
+
+**Mamba**
+Mamba is a state space model architecture that provides an efficient alternative to transformers for sequence modeling, using selective state spaces to achieve linear-time complexity while maintaining strong performance on long sequences.
+
+**State Space Models**
+State space models are a class of sequence models based on continuous-time state representations, offering efficient alternatives to transformers with linear-time complexity for long sequences while capturing temporal dependencies.
+
+**Vision Transformer (ViT)**
+Vision Transformer applies the transformer architecture directly to image patches, treating them as tokens, demonstrating that transformers can match or exceed CNN performance on computer vision tasks when trained on sufficient data.
+
+**CLIP (Contrastive Language-Image Pre-training)**
+CLIP is a multimodal model trained on image-text pairs that learns joint representations of vision and language, enabling zero-shot image classification, image generation guidance, and cross-modal retrieval.
+
+**Stable Diffusion**
+Stable Diffusion is a text-to-image diffusion model that generates high-quality images from text prompts by learning to reverse a gradual noising process, operating in latent space for computational efficiency.
+
+**DALL-E**
+DALL-E is OpenAI's text-to-image generation model that creates images from natural language descriptions, demonstrating remarkable creativity and understanding of abstract concepts and compositions.
+
+**Midjourney**
+Midjourney is a text-to-image AI service that generates artistic, high-quality images from text prompts, known for its distinctive aesthetic style and strong performance on creative and artistic content.
+
+**Sora**
+Sora is OpenAI's text-to-video generation model capable of creating realistic and imaginative video scenes from text instructions, demonstrating understanding of physics, motion, and temporal consistency.
+
+**Gemini**
+Gemini is Google DeepMind's multimodal AI model family designed to be natively multimodal, processing and generating text, images, audio, and video with strong reasoning and code generation capabilities.
+
+**LLaMA (Large Language Model Meta AI)**
+LLaMA is Meta's family of open-source large language models ranging from 7B to 70B parameters, designed to be more accessible for research and providing strong performance at smaller scales than proprietary models.
+
+**Mistral**
+Mistral is a family of open-source large language models developed by Mistral AI, known for efficient architecture using grouped-query attention and sliding window attention, delivering strong performance at competitive sizes.
+
+**Hallucination (AI Hallucination)**
+Hallucination occurs when AI models, particularly language models, generate plausible-sounding but factually incorrect or nonsensical information, presenting it confidently as if it were true, a key challenge in deploying generative AI.
+
+**Constitutional AI**
+Constitutional AI is an alignment technique developed by Anthropic that trains models to follow a set of principles (a "constitution") through self-critique and revision, reducing harmful outputs without extensive human feedback.
+
+**Instruction Tuning**
+Instruction tuning is a fine-tuning technique that trains language models on diverse instruction-following tasks, teaching models to understand and respond to natural language instructions across various domains.
+
+**Chain-of-Thought (CoT) Prompting**
+Chain-of-thought prompting is a technique that encourages language models to generate intermediate reasoning steps before producing final answers, significantly improving performance on complex reasoning tasks.
+
+**In-Context Learning**
+In-context learning is the ability of language models to learn new tasks from examples provided in the prompt without parameter updates, leveraging patterns in the training data to adapt to new contexts dynamically.
+
+**Zero-Shot Learning**
+Zero-shot learning refers to a model's ability to perform tasks it wasn't explicitly trained on, using only the task description or prompt without any examples, relying on knowledge transfer from pre-training.
+
+**Few-Shot Learning**
+Few-shot learning enables models to learn new tasks from a small number of examples (typically 1-10) provided in the prompt, demonstrating rapid adaptation without fine-tuning or extensive training data.
+
+**One-Shot Learning**
+One-shot learning is the ability to learn a new task or concept from just a single example, either through in-context learning in prompts or through specialized meta-learning architectures.
+
+**AlphaFold**
+AlphaFold is DeepMind's breakthrough AI system that predicts 3D protein structures from amino acid sequences with remarkable accuracy, revolutionizing structural biology and drug discovery.
+
+**AlphaGo**
+AlphaGo is DeepMind's AI program that defeated world champions in the game of Go, combining deep neural networks with tree search and reinforcement learning, marking a milestone in AI's ability to master complex strategic games.
+
+**NanoGPT**
+NanoGPT is Andrej Karpathy's minimal implementation of GPT for educational purposes, demonstrating the core transformer architecture in clean, understandable code, widely used for learning how LLMs work.
+
+**JAX**
+JAX is a Python library from Google for high-performance numerical computing and machine learning, combining NumPy-like syntax with automatic differentiation, JIT compilation, and seamless GPU/TPU support.
+
+**XGBoost**
+XGBoost (Extreme Gradient Boosting) is an optimized gradient boosting library known for speed and performance, implementing regularization, parallel processing, and tree pruning, dominant in structured data competitions.
+
+**LightGBM**
+LightGBM is a gradient boosting framework by Microsoft that uses histogram-based algorithms and leaf-wise tree growth, offering faster training and lower memory usage than traditional GBDT methods.
+
+**CatBoost**
+CatBoost is a gradient boosting library by Yandex with native support for categorical features, symmetric tree structures, and ordered boosting, providing strong performance with minimal hyperparameter tuning.
+
+**Haystack**
+Haystack is an open-source NLP framework for building production-ready search systems, question answering, and RAG applications, providing components for document stores, retrievers, and readers.
+
+**LlamaIndex (GPT Index)**
+LlamaIndex is a data framework for connecting LLMs with external data sources, providing tools for data ingestion, indexing, querying, and building RAG applications with various storage backends.
+
+**Kaggle**
+Kaggle is a platform for data science competitions, datasets, and collaborative machine learning, owned by Google, providing free compute resources, learning materials, and a community for ML practitioners.
+
+**Coursera**
+Coursera is an online learning platform offering courses, specializations, and degrees from universities and companies, including popular machine learning courses from Andrew Ng and deeplearning.ai.
+
+**deeplearning.ai**
+deeplearning.ai is an education platform founded by Andrew Ng offering courses and specializations in machine learning, deep learning, and AI, known for accessible teaching and practical focus.
+
+**3Blue1Brown**
+3Blue1Brown is an educational YouTube channel by Grant Sanderson providing visual, intuitive explanations of mathematics, including essential series on linear algebra, calculus, and neural networks for ML.
+
+**Grant Sanderson**
+Grant Sanderson is a mathematics educator and creator of 3Blue1Brown, renowned for creating visually stunning explanations of complex mathematical concepts essential for understanding machine learning.
+
+**Gilbert Strang**
+Gilbert Strang is an MIT mathematics professor famous for his linear algebra course (18.06), one of the most popular mathematics courses worldwide, providing essential foundations for machine learning and data science.
+
+**Andrej Karpathy**
+Andrej Karpathy is a leading AI educator and researcher, former Director of AI at Tesla and founding member of OpenAI, known for educational content on neural networks, transformers, and creating NanoGPT.
+
+**Andrew Ng**
+Andrew Ng is a pioneering AI researcher and educator, co-founder of Coursera and deeplearning.ai, known for making machine learning accessible through online courses, leading the democratization of AI education.
+
+**Jon Krohn**
+Jon Krohn is a data science educator and author of "Deep Learning Illustrated," creating comprehensive mathematics courses (linear algebra, calculus, probability) specifically designed for machine learning practitioners.
+
+**freeCodeCamp**
+freeCodeCamp is a nonprofit organization providing free coding education through interactive courses, certifications, and extensive YouTube content, including comprehensive machine learning and data science curricula.
+
+**MIT OpenCourseWare**
+MIT OpenCourseWare is MIT's initiative providing free access to course materials from thousands of MIT courses, including legendary offerings like Gilbert Strang's Linear Algebra and modern deep learning courses.
+
+**Econometrics**
+Econometrics is the application of statistical methods to economic data, emphasizing causal inference, treatment effects, and understanding relationships between variables, providing foundations for many machine learning concepts.
+
+**Digital Twin**
+A digital twin is a virtual representation of a physical object, process, or system that uses real-time data and models to simulate, predict, and optimize the real-world counterpart's behavior.
+
+**MDTP Framework**
+MDTP (Models, Data, Tools, Productisation) is a comprehensive framework for structuring machine learning projects, covering the full lifecycle from modeling techniques through data engineering, software tools, and production deployment.
+
+**Productisation**
+Productisation (or Productization) in ML refers to the process of transforming models and algorithms into production-ready products, including deployment, monitoring, scaling, business value realization, and user-facing integration.
+
+**Weights & Biases (W&B)**
+Weights & Biases is an MLOps platform for experiment tracking, model versioning, dataset management, and model monitoring, providing visualization tools and collaboration features for ML teams.
+
+**Model Deployment**
+Model deployment is the process of making a trained machine learning model available in a production environment where it can receive inputs and generate predictions for real-world use cases.
+
+**Feature Store**
+A feature store is a centralized repository for storing, managing, and serving features for machine learning, ensuring consistency between training and inference while enabling feature reuse across models and teams.
+
+**Experiment Tracking**
+Experiment tracking involves systematically logging and organizing ML experiments, including hyperparameters, metrics, artifacts, and code versions, enabling reproducibility and comparison of model iterations.
+
