@@ -1,0 +1,46 @@
+Loading model...
+Model loaded!
+
+Generating embeddings...
+
+Embedding shape: (4, 384)
+Number of texts: 4
+Dimensions per embedding: 384
+
+First 10 values of embedding for 'The cat sits on the mat':
+[ 0.13489066 -0.03206333 -0.02033523  0.03590099 -0.0283331   0.04150213
+  0.03315875  0.03660566  0.00861661  0.03763952]
+
+============================================================
+SIMILARITY SCORES (closer to 1 = more similar)
+============================================================
+
+'The cat sits on the mat'
+  vs
+'A dog rests on the carpet'
+  Similarity: 0.4815
+
+'The cat sits on the mat'
+  vs
+'The car is parked in the garage'
+  Similarity: 0.1213
+
+'The cat sits on the mat'
+  vs
+'I love pizza and pasta'
+  Similarity: -0.0407
+
+'A dog rests on the carpet'
+  vs
+'The car is parked in the garage'
+  Similarity: 0.1631
+
+'A dog rests on the carpet'
+  vs
+'I love pizza and pasta'
+  Similarity: -0.0374
+
+'The car is parked in the garage'
+  vs
+'I love pizza and pasta'
+  Similarity: 0.0021
