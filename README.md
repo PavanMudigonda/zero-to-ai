@@ -8,7 +8,6 @@
 
 ### Introduction & Getting Started
 
-- [Introduction](#introduction)
 - [Prerequisites](#-prerequisites)
 - [Beginner Track: Core Resources](#-beginner-track-core-resources)
 - [Learning Roadmap](#️-learning-roadmap)
@@ -16,48 +15,47 @@
 - [Video Series (Essential)](#-video-series-essential)
 - [Supplementary Resources](#️-what-else-supplementary-resources)
 - [Not in Scope](#️-not-in-scope-but-important)
-- [Does This Make You an ML Engineer?](#-does-this-make-you-an-ml-engineer)
 - [Extended Modelling Process](#extended-modelling-process)
 
 ### MDTP Framework: Models, Data, Tools, Productisation
 
 **M. Models**
 
-- [M0. Statistical thinking and intuition](#m0-statistical-thinking-and-intuition)
-- [M1. Statistical inference](#m1-statistical-inference)
-- [M2. Econometrics](#m2-econometrics)
-- [M3. Bayesian modeling and causal inference](#m3-bayesian-modeling-and-causal-inference)
-- [M4. Classic machine learning](#m4-classic-machine-learning)
-- [M5. Neural nets (NN) and deep learning](#m5-neural-nets-nn-and-deep-learning)
-- [M6. NLP, CV and RL subfields](#m6-nlp-cv-and-rl-subfields)
-- [M7. Other modelling techniques](#m7-other-modelling-techniques)
-- [M8. Additional topics (harder or less exciting)](#m8-additional-topics-harder-or-less-exciting)
-- [M9. Modern AI Architectures (2020-2025)](#m9-modern-ai-architectures-2020-2025)
+- [M0. Statistical thinking and intuition](#m0.-statistical-thinking-and-intuition)
+- [M1. Statistical inference](#m1.-statistical-inference)
+- [M2. Econometrics](#m2.-econometrics)
+- [M3. Bayesian modeling and causal inference](#m3.-bayesian-modeling-and-causal-inference.)
+- [M4. Classic machine learning](#m4.-classic-machine-learning.)
+- [M5. Neural nets (NN) and deep learning](#m5.-neural-nets-(nn)-and-deep-learning.)
+- [M6. NLP, CV and RL subfields](#m6.-nlp,-cv-and-rl-subfields.)
+- [M7. Other modelling techniques](#m7.-other-modelling-techniques.)
+- [M8. Additional topics (harder or less exciting)](#m8.-additional-topics-(harder-or-less-exciting))
+- [M9. Modern AI Architectures (2020-2025)](#m9.-modern-ai-architectures)
 
 **D. Data**
 
-- [D1. Data sources](#d1-data-sources)
-- [D2. Data analysis](#d2-data-analysis)
-- [D3. Data engineering](#d3-data-engineering)
-- [D4. Pipelines and orchestration](#d4-pipelines-and-orchestration)
-- [D5. Data management](#d5-data-management)
+- [D1. Data sources](#d1.-data-sources.)
+- [D2. Data analysis](#d2.-data-analysis.)
+- [D3. Data engineering](#d3.-data-engineering.)
+- [D4. Pipelines and orchestration](#d4.-pipelines-and-orchestration.)
+- [D5. Data management](#d5.-data-management)
 
 **T. Tools – Code and Infrastructure**
 
-- [T0. Writing code](#t0-writing-code)
-- [T1. Software tools](#t1-software-tools)
-- [T2. Cloud and computing infrastructure](#t2-cloud-and-computing-infrastructure)
-- [T3. Development Tools and Environment](#t3-development-tools-and-environment)
+- [T0. Writing code](#t0.-writing-code)
+- [T1. Software tools](#t1.-software-tools.)
+- [T2. Cloud and computing infrastructure](#t2.-cloud-and-computing-infrastructure.)
+- [T3. Development Tools and Environment](#t3.-development-tools)
 
 **P. Productisation**
 
-- [P1. Productisation and business value](#p1-productisation-and-business-value)
-- [P2. Applications, domains and cases](#p2-applications-domains-and-cases)
-- [P3. Society impacts and regulation](#p3-society-impacts-and-regulation)
+- [P1. Productisation and business value](#p1.-productisation-and-business-value.)
+- [P2. Applications, domains and cases](#p2.-applications-domains-and-cases)
+- [P3. Society impacts and regulation](#p3.-society-impacts-and-regulation.)
 
 **E. Extra**
 
-- [E1. Companies](#e1-companies)
+- [E1. Companies](#e1.-companies)
 
 ### Personalized Learning Path
 
@@ -69,12 +67,6 @@
 - [Phase 5: Specialized Domains](#phase-5-specialized-domains)
 - [Phase 6: ML Engineering & Production](#phase-6-ml-engineering--production)
 - [Phase 7: Ethics, Safety & Advanced Concepts](#phase-7-ethics-safety--advanced-concepts)
-
-### Cloud Provider Learning Paths
-
-- [Microsoft Learn - AI & ML](#microsoft-learn---ai--ml-learning-paths)
-- [Google Cloud Skills Boost](#google-cloud-skills-boost---ml--ai)
-- [AWS Machine Learning & AI](#aws-machine-learning--ai-learning-paths)
 
 ### Microsoft AI/Agent Framework Ecosystem
 
@@ -777,6 +769,8 @@ How long will results persist?
 > Feedback loops and ongoing monitoring are most critical for production success.
 
 ---
+
+## **P2. Applications, domains and cases** {#p2.-applications-domains-and-cases}
 
 - [ ] Recommender systems (RecSys).  
 - [ ] Clinical trials.  
