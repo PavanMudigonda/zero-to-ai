@@ -1,0 +1,275 @@
+"""
+Embeddings Introduction
+=======================
+Learn what embeddings are and how to generate them.
+
+Key Concepts:
+- Embeddings convert text into dense vectors (arrays of numbers)
+- Similar meanings = similar vectors
+- Vector dimensions represent features learned from data
+- Common models: sentence-transformers, OpenAI embeddings
+
+Installation:
+pip install sentence-transformers numpy
+"""
+
+from sentence_transformers import SentenceTransformer
+import numpy as np
+
+def introduction_to_embeddings():
+    """Generate your first embeddings and explore their properties."""
+    
+    print("=" * 70)
+    print("PART 1: GENERATING EMBEDDINGS")
+    print("=" * 70)
+    
+    # Load a pre-trained model (downloads ~90MB on first run)
+    # This model creates 384-dimensional vectors
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    
+    # Simple examples
+    texts = [
+        "The cat sits on the mat",
+        "A feline rests on the carpet",  # Similar meaning, different words
+        "Dogs are playing in the park",   # Different topic
+        "Python is a programming language" # Completely different
+    ]
+    
+    # Generate embeddings
+    embeddings = model.encode(texts)
+    
+    print(f"\nGenerated embeddings for {len(texts)} sentences")
+    print(f"Each embedding has {embeddings.shape[1]} dimensions")
+    print(f"Shape: {embeddings.shape}")
+    
+    # Show first embedding (truncated)
+    print(f"\nFirst 10 values of embedding for: '{texts[0]}'")
+    print(embeddings[0][:10])
+    print("... (374 more dimensions)")
+    
+    return model, texts, embeddings
+
+
+def explore_similarity(texts, embeddings):
+    """Understand how similar meanings produce similar vectors."""
+    
+    print("\n" + "=" * 70)
+    print("PART 2: MEASURING SEMANTIC SIMILARITY")
+    print("=" * 70)
+    
+    # Cosine similarity: measures angle between vectors
+    # Range: -1 (opposite) to 1 (identical)
+    # Formula: cos(θ) = (A · B) / (||A|| × ||B||)
+    
+    def cosine_similarity(vec1, vec2):
+        """Calculate cosine similarity between two vectors."""
+        dot_product = np.dot(vec1, vec2)
+        norm1 = np.linalg.norm(vec1)
+        norm2 = np.linalg.norm(vec2)
+        return dot_product / (norm1 * norm2)
+    
+    print("\nComparing all sentences:\n")
+    
+    # Compare each pair
+    for i in range(len(texts)):
+        for j in range(i + 1, len(texts)):
+            similarity = cosine_similarity(embeddings[i], embeddings[j])
+            print(f"Similarity: {similarity:.4f}")
+            print(f"  '{texts[i]}'")
+            print(f"  '{texts[j]}'")
+            print()
+    
+    print("\n🔍 OBSERVATION:")
+    print("The first two sentences (cat/feline) should have HIGH similarity (~0.7+)")
+    print("because they mean the same thing, even with different words!")
+
+
+def vector_operations(model):
+    """Demonstrate that embeddings capture semantic relationships."""
+    
+    print("\n" + "=" * 70)
+    print("PART 3: VECTOR MATH (THE MAGIC!)")
+    print("=" * 70)
+    
+    # Famous example: king - man + woman ≈ queen
+    words = ["king", "man", "woman", "queen", "prince", "princess"]
+    word_embeddings = model.encode(words)
+    
+    # Create a dictionary for easy access
+    word_vectors = {word: emb for word, emb in zip(words, word_embeddings)}
+    
+    # Vector arithmetic
+    result_vector = (word_vectors["king"] 
+                    - word_vectors["man"] 
+                    + word_vectors["woman"])
+    
+    print("\nVector equation: king - man + woman = ?")
+    print("\nComparing result to known words:")
+    
+    for word in words:
+        similarity = np.dot(result_vector, word_vectors[word]) / (
+            np.linalg.norm(result_vector) * np.linalg.norm(word_vectors[word])
+        )
+        print(f"  {word:10s}: {similarity:.4f}")
+    
+    print("\n✨ The result should be closest to 'queen'!")
+    print("This shows embeddings capture gender relationships!")
+
+
+def explain_the_math():
+    """Explain what's happening under the hood."""
+    
+    print("\n" + "=" * 70)
+    print("PART 4: THE MATH EXPLAINED")
+    print("=" * 70)
+    
+    explanation = """
+    What Are Embeddings?
+    ====================
+    
+    1. REPRESENTATION:
+       - Text: "cat" → Embedding: [0.23, -0.45, 0.67, ..., 0.12] (384 numbers)
+       - Each number represents a learned feature
+       - Dimensions might capture: animal?, size?, domestic?, etc.
+    
+    2. HOW THEY'RE CREATED:
+       - Neural networks trained on massive text data
+       - Learn to predict context (words around a target word)
+       - Similar contexts → similar vectors
+       - Example: "cat" and "dog" appear in similar contexts
+    
+    3. COSINE SIMILARITY:
+       - Measures angle between vectors (not distance!)
+       - Formula: cos(θ) = (A·B) / (||A|| × ||B||)
+       
+       Where:
+         A·B = dot product (sum of element-wise multiplication)
+         ||A|| = magnitude/length of vector A
+         ||B|| = magnitude/length of vector B
+       
+       Example:
+         A = [1, 2, 3]
+         B = [2, 4, 6]  (B is 2×A, same direction)
+         
+         A·B = (1×2) + (2×4) + (3×6) = 2 + 8 + 18 = 28
+         ||A|| = √(1² + 2² + 3²) = √14 ≈ 3.74
+         ||B|| = √(2² + 4² + 6²) = √56 ≈ 7.48
+         
+         cos(θ) = 28 / (3.74 × 7.48) ≈ 1.0 (identical direction!)
+    
+    4. WHY 384 DIMENSIONS?
+       - More dimensions = more capacity to encode meaning
+       - 384 is a sweet spot: fast, accurate, efficient
+       - Larger models use 768, 1536, or even 4096 dimensions
+    
+    5. EUCLIDEAN DISTANCE (alternative metric):
+       - Measures straight-line distance between vectors
+       - Formula: d = √(Σ(A[i] - B[i])²)
+       - Smaller distance = more similar
+       - Less commonly used for text (cosine is better)
+    
+    6. WHY THIS MATTERS:
+       - Once text is a vector, we can:
+         * Search by meaning (not keywords)
+         * Find similar documents
+         * Cluster related content
+         * Build recommendation systems
+         * Power RAG (Retrieval Augmented Generation)
+    """
+    
+    print(explanation)
+
+
+def practical_example():
+    """A practical use case: finding similar sentences."""
+    
+    print("\n" + "=" * 70)
+    print("PART 5: PRACTICAL EXAMPLE - FIND SIMILAR CONTENT")
+    print("=" * 70)
+    
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+    
+    # Your knowledge base
+    documents = [
+        "Machine learning is a subset of artificial intelligence",
+        "Deep learning uses neural networks with many layers",
+        "Python is the most popular programming language for ML",
+        "Natural language processing helps computers understand text",
+        "Computer vision enables machines to interpret images",
+        "Data preprocessing is crucial for model accuracy",
+        "Gradient descent optimizes neural network weights",
+    ]
+    
+    # User query
+    query = "How do computers learn from data?"
+    
+    print(f"\nQuery: '{query}'")
+    print("\nFinding most relevant documents...\n")
+    
+    # Encode everything
+    doc_embeddings = model.encode(documents)
+    query_embedding = model.encode([query])[0]
+    
+    # Calculate similarities
+    similarities = []
+    for i, doc_emb in enumerate(doc_embeddings):
+        similarity = np.dot(query_embedding, doc_emb) / (
+            np.linalg.norm(query_embedding) * np.linalg.norm(doc_emb)
+        )
+        similarities.append((similarity, i, documents[i]))
+    
+    # Sort by similarity (highest first)
+    similarities.sort(reverse=True)
+    
+    # Show top 3 results
+    print("Top 3 Most Relevant Documents:")
+    print("-" * 70)
+    for rank, (score, idx, doc) in enumerate(similarities[:3], 1):
+        print(f"\n{rank}. Score: {score:.4f}")
+        print(f"   {doc}")
+    
+    print("\n\n💡 INSIGHT:")
+    print("Notice how results are ranked by MEANING, not keyword matching!")
+    print("The query doesn't contain 'machine learning' but ML doc ranks high.")
+
+
+def main():
+    """Run all demonstrations."""
+    
+    print("\n")
+    print("🚀 " + "=" * 66 + " 🚀")
+    print("   EMBEDDINGS: TURNING TEXT INTO MEANINGFUL NUMBERS")
+    print("🚀 " + "=" * 66 + " 🚀")
+    
+    # Part 1: Generate embeddings
+    model, texts, embeddings = introduction_to_embeddings()
+    
+    # Part 2: Explore similarity
+    explore_similarity(texts, embeddings)
+    
+    # Part 3: Vector operations
+    vector_operations(model)
+    
+    # Part 4: Explain the math
+    explain_the_math()
+    
+    # Part 5: Practical example
+    practical_example()
+    
+    print("\n" + "=" * 70)
+    print("🎓 NEXT STEPS:")
+    print("=" * 70)
+    print("""
+    1. Run: semantic_similarity.py - Compare different texts
+    2. Run: vector_database_demo.py - Store & search embeddings at scale
+    3. Experiment: Try different models from sentence-transformers
+    4. Build: Create semantic search for YOUR documents
+    
+    Key Takeaway:
+    Embeddings are the bridge between human language and machine understanding.
+    Master this, and you'll understand how modern AI really works!
+    """)
+
+
+if __name__ == "__main__":
+    main()
