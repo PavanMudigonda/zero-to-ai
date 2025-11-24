@@ -155,6 +155,76 @@ Each tokenizer was trained on different data, optimizing for:
 - Vocabulary size (memory constraints)
 - Compression efficiency (fewer tokens = faster processing)
 
+### Important: Tiktoken is OpenAI-Specific
+
+**`tiktoken` only works with OpenAI models.** Each company's models use different tokenizers:
+
+```
+OpenAI (GPT-4, GPT-3.5)    → tiktoken (cl100k_base, p50k_base)
+Meta (LLaMA, LLaMA 2)      → SentencePiece BPE
+Google (BERT, PaLM)        → WordPiece / SentencePiece
+Anthropic (Claude)         → Custom tokenizer
+Mistral AI                 → SentencePiece
+Cohere                     → Custom tokenizer
+```
+
+**Why different tokenizers?**
+
+1. **Different Vocabularies**: Each model has its own vocabulary
+   - GPT-4: ~100,000 tokens
+   - LLaMA: 32,000 tokens
+   - BERT: 30,000 tokens
+
+2. **Different Token IDs**: Same text = different token IDs across models
+   ```python
+   # "hello" tokenizes to different IDs:
+   # GPT-4 (tiktoken):  15339
+   # LLaMA:             22172 (different!)
+   # BERT:              7592 (different!)
+   ```
+
+3. **Not Interchangeable**: Cannot use tiktoken for non-OpenAI models
+
+### Using Tokenizers for Other Models
+
+For **any model** (OpenAI, LLaMA, BERT, Mistral, etc.), use **Hugging Face Transformers**:
+
+```python
+from transformers import AutoTokenizer
+
+# Automatically loads correct tokenizer for any model
+tokenizer = AutoTokenizer.from_pretrained("model-name")
+
+# Examples:
+# LLaMA
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b")
+tokens = tokenizer.encode("Hello world")
+
+# BERT
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+tokens = tokenizer.encode("Hello world")
+
+# Mistral
+tokenizer = AutoTokenizer.from_pretrained("mistralai/Mistral-7B-v0.1")
+tokens = tokenizer.encode("Hello world")
+
+# Works the same way for ANY model on Hugging Face
+decoded = tokenizer.decode(tokens)
+```
+
+### Quick Reference: Which Tool to Use?
+
+| Tool | Works With | Use Case |
+|------|-----------|----------|
+| **tiktoken** | OpenAI only (GPT-3, GPT-4, GPT-3.5) | OpenAI API token counting |
+| **transformers.AutoTokenizer** | Any model on Hugging Face | Universal tokenization |
+| **sentencepiece** | LLaMA, T5, XLM, Mistral | Direct use of SentencePiece models |
+
+**Best Practice:** 
+- Using OpenAI API? → Use `tiktoken`
+- Using any other model? → Use `AutoTokenizer` from Hugging Face
+- Building with multiple models? → Use `AutoTokenizer` (works for all)
+
 ## Practical Implications
 
 ### 1. Cost
