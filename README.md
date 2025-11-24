@@ -91,211 +91,21 @@ This guide provides a comprehensive roadmap for learning machine learning, from 
 - **T (tools)**: software tools, databases and computing infrastructure.  
 - **P (productisation)**: ok, now you have the data, a model and a server running, but what's the benefit?
 
----
-
-## 📋 Phase-by-Phase Resource Map
-
-This section maps all resources in the README to specific learning phases. Use this as your study guide.
-
-### Phase 1 Resources → Foundation
-
-**Mathematics** (MDTP: M0-M2)
-- 3Blue1Brown: Linear Algebra, Calculus series
-- Gilbert Strang: MIT 18.06 Linear Algebra
-- Khan Academy: Statistics, Probability
-- Jon Krohn: Math for ML playlists
-
-**ML Fundamentals** (MDTP: M4)
-- Andrew Ng: Machine Learning Specialization ⭐
-- ISLP Book (Chapters 1-8)
-- Stanford CS229: Machine Learning
-
-**Programming**
-- Python basics
-- NumPy, Pandas fundamentals
-- Jupyter notebooks
-
----
-
-### Phase 2 Resources → Embeddings & Vectors
-
-**Embeddings** (MDTP: M5 partial, D3 partial)
-- Word2Vec, Sentence Transformers
-- Hugging Face NLP Course (Chapters 3-5)
-- Semantic search concepts
-
-**Vector Databases** (MDTP: D3, T1)
-- FAISS, Pinecone, ChromaDB tutorials
-- Nearest neighbor search
-- Vector operations and similarity
-
----
-
-### Phase 3 Resources → Neural Networks
-
-**Deep Learning Courses** (MDTP: M5)
-- Andrew Ng: Deep Learning Specialization ⭐
-- Fast.ai: Practical Deep Learning
-- MIT 6.S191: Introduction to Deep Learning
-- 3Blue1Brown: Neural Networks series
-- Andrej Karpathy: Neural Networks Zero to Hero
-
-**Frameworks** (MDTP: T1)
-- PyTorch tutorials and documentation
-- TensorFlow/Keras (if choosing TF)
-- Hugging Face Transformers library
-
-**YouTube Playlists**
-- 3Blue1Brown: Neural Networks
-- freeCodeCamp: Deep Learning with PyTorch
-- DeepMind x UCL: Deep Learning courses
-
----
-
-### Phase 4 Resources → LLMs & Modern AI
-
-**LLM Fundamentals** (MDTP: M6, M9)
-- Andrej Karpathy: Let's build GPT, Intro to LLMs
-- Stanford CS324: LLMs
-- Hugging Face NLP Course (complete)
-- DeepLearning.AI: Prompt Engineering courses
-
-**RAG & Applications** (MDTP: M6, D4, T1)
-- LangChain documentation and tutorials
-- LlamaIndex (GPT Index) guides
-- Weights & Biases: RAG++ Course
-- Weights & Biases: Building LLM-Powered Apps
-
-**Fine-tuning** (MDTP: M6)
-- Weights & Biases: Training & Fine-Tuning LLMs
-- PEFT library (LoRA/QLoRA)
-- Hugging Face PEFT documentation
-
-**AI Agents** (MDTP: M6, P1)
-- Microsoft: AI Agents for Beginners
-- LangGraph documentation
-- DeepLearning.AI: AI Agents courses
-
-**YouTube Playlists**
-- OpenAI: DevDay 2025, GPT-5, ChatGPT agent, o1 series
-- Google DeepMind: Gemini demos, research talks
-- Weights & Biases: LLM courses
-- IBM Technology: LLMs and Chatbots, AI Technical Tutorials
-
----
-
-### Phase 5 Resources → Specializations
-
-**Choose 1-2 specializations**:
-
-**A. Natural Language Processing** (MDTP: M6)
-- Stanford CS224n: NLP with Deep Learning
-- Hugging Face advanced tutorials
-- FastText, spaCy documentation
-- IBM Technology: AI in Action playlists
-
-**B. Computer Vision** (MDTP: M6)
-- Stanford CS231n: CNNs for Visual Recognition
-- Fast.ai: Part 2 (Advanced)
-- OpenCV tutorials
-- Stable Diffusion, DALL-E documentation
-- Google DeepMind: Veo video generation
-
-**C. Reinforcement Learning** (MDTP: M6)
-- DeepMind x UCL: RL Course 2018
-- Sutton & Barto: RL textbook
-- OpenAI Gym environments
-- Weights & Biases: PPO Implementation
-
-**D. Multimodal AI** (MDTP: M6, M9)
-- CLIP, GPT-4V documentation
-- Google DeepMind: Gemini multimodal demos
-- OpenAI: Sora video generation
-- Multimodal research papers
-
-**YouTube Playlists by Specialization**:
-- NLP: Hugging Face, Stanford CS224n
-- CV: Stanford CS231n, OpenAI Sora tutorials
-- RL: DeepMind x UCL RL courses
-- Multimodal: Google Cloud multimodal AI playlists
-
----
-
-### Phase 6 Resources → MLOps & Production
-
-**MLOps Platforms** (MDTP: D4, T1, T2, P1)
-- MLflow documentation
-- Weights & Biases: MLOps Course, Model CI/CD
-- Kubeflow tutorials
-- Neptune.ai guides
-
-**Cloud Platforms** (MDTP: T2, P1)
-- AWS: Official playlists (SageMaker, Lambda, EC2)
-- Google Cloud: AI/ML services playlists
-- Azure ML documentation
-- IBM Technology: Cloud Platform playlists
-
-**Data Engineering** (MDTP: D3, D4)
-- Airflow documentation
-- dbt tutorials
-- Kafka/Flink for streaming
-- DVC for data versioning
-
-**Deployment** (MDTP: P1, T2)
-- FastAPI for model serving
-- Docker & Kubernetes basics
-- Model monitoring and drift detection
-- A/B testing frameworks
-
-**YouTube Playlists**:
-- Weights & Biases: MLOps Course, Model Management
-- AWS: AI Services, SageMaker tutorials
-- Google Cloud: Deploying AI, Cloud Platform
-- Microsoft Build: Cloud Platform, Developer Tools
-
----
-
-### Phase 7 Resources → Ethics & Advanced
-
-**AI Safety** (MDTP: P3)
-- Microsoft: AI Red Teaming 101
-- Constitutional AI papers (Anthropic)
-- AI safety research (DeepMind)
-- IBM Technology: AI Ethics and Governance
-
-**Advanced Architectures** (MDTP: M9)
-- State Space Models (Mamba) papers
-- Mixture of Experts research
-- Vision Transformers (ViT)
-- Sparse transformers, Longformer
-
-**Research & Papers**:
-- Google DeepMind: Research playlist
-- Meta Open Source: AI & ML playlists
-- NeurIPS, ICML, ICLR conference talks
-- arXiv.org for latest papers
-
-**YouTube Playlists**:
-- Google DeepMind: AI for Science Forum, Talks
-- Meta Open Source: AI & ML, Project Aria
-- IBM Technology: Quantum Computing, Advanced AI
-- Microsoft Build: AI innovations
-
----
-
-
-
 ## 📋 Prerequisites
 
 Before diving into machine learning, ensure you have:
 
 - **Working knowledge of Python** - Basic programming concepts, data structures, control flow
+  - [] [Python Bro Code Refresher](https://github.com/PavanMudigondaTR/python-bro-code)
 - **Mathematical foundations** - Comfort with mathematical notation and concepts from:
-  - Linear algebra (vectors, matrices, operations)
+  - Linear algebra (vectors, matrices, operations) -
+    - [] [Khan Academy Linear Algebra](https://www.khanacademy.org/math/linear-algebra)
   - Calculus (derivatives, gradients, chain rule)
-  - Basic probability and statistics
+    - [] [Khan Academy Calculus 1](https://www.khanacademy.org/math/calculus-1)
+  - Basic probability and statistics -
+    - [] [Khan Academy Statistics & Probability](https://www.khanacademy.org/math/statistics-probability)
 
-If you need to strengthen these areas, refer to the resources in the sections below.
+If you need to strengthen these areas, refer to Khan Academy's free courses above or the resources in the sections below.
 
 ---
 
@@ -466,6 +276,7 @@ These denser textbooks serve as references alongside the core beginner track:
 ### Essential YouTube Channels (Not Yet Listed)
 
 **Deep Learning & Theory:**
+
 - [ ] **[Yannic Kilcher](https://www.youtube.com/@YannicKilcher)** - Paper explanations, daily ML news
   - Deep dives into latest research papers
   - Critical analysis of AI developments
@@ -476,6 +287,7 @@ These denser textbooks serve as references alongside the core beginner track:
 - [ ] **[AI Coffee Break with Letitia](https://www.youtube.com/@AICoffeeBreak)** - AI ethics & research
 
 **Practical Implementation:**
+
 - [ ] **[sentdex](https://www.youtube.com/@sentdex)** - Python, ML, and neural networks
   - Practical Python tutorials
   - Deep learning from scratch series
@@ -490,6 +302,7 @@ These denser textbooks serve as references alongside the core beginner track:
   - End-to-end ML projects
 
 **NLP & LLMs:**
+
 - [ ] **[Hugging Face](https://www.youtube.com/@HuggingFace)** - Transformers, NLP, latest models
   - Model releases and demos
   - Transformers library tutorials
@@ -501,11 +314,13 @@ These denser textbooks serve as references alongside the core beginner track:
   - LLM engineering
 
 **System Design & MLOps:**
+
 - [ ] **[ML System Design Interview](https://www.youtube.com/@MLSystemDesignInterview)** - Production ML systems
 - [ ] **[Neptune.ai](https://www.youtube.com/@neptune-ai)** - MLOps practices
 - [ ] **[Made With ML](https://www.youtube.com/@madewithml)** - MLOps by Goku Mohandas
 
 **Mathematics Deep Dives:**
+
 - [ ] **[Khan Academy](https://www.youtube.com/@khanacademy)** - Linear algebra, statistics, calculus
 - [ ] **[MIT OpenCourseWare](https://www.youtube.com/@mitocw)** - Gilbert Strang's Linear Algebra (18.06)
   - [ ] [Linear Algebra Full Course](https://www.youtube.com/playlist?list=PL49CF3715CB9EF31D)
@@ -515,22 +330,26 @@ These denser textbooks serve as references alongside the core beginner track:
   - Dynamic Mode Decomposition
 
 **Computer Science Fundamentals:**
+
 - [ ] **[CS50](https://www.youtube.com/@cs50)** - Harvard's CS fundamentals
 - [ ] **[MIT 6.006 Introduction to Algorithms](https://www.youtube.com/playlist?list=PLUl4u3cNGP61Oq3tWYp6V_F-5jb5L2iHb)**
 - [ ] **[Computerphile](https://www.youtube.com/@Computerphile)** - CS concepts explained
 
 **AI News & Trends:**
+
 - [ ] **[AI Explained](https://www.youtube.com/@aiexplained-official)** - AI developments analysis
 - [ ] **[Matthew Berman](https://www.youtube.com/@matthew_berman)** - Local LLMs, AI tools
 - [ ] **[Prompt Engineering](https://www.youtube.com/@engineerprompt)** - LLM prompting techniques
 - [ ] **[Wes Roth](https://www.youtube.com/@WesRoth)** - AI news and analysis
 
 **Interview Prep & Career:**
+
 - [ ] **[Clément Mihailescu](https://www.youtube.com/@clem)** - Coding interviews (general SWE)
 - [ ] **[Data Science Jay](https://www.youtube.com/@DataScienceJay)** - DS interview prep
 - [ ] **[Tina Huang](https://www.youtube.com/@TinaHuang1)** - Data science career advice
 
 **Specific Must-Watch Videos:**
+
 - [ ] [But what is a neural network? | 3Blue1Brown](https://www.youtube.com/watch?v=aircAruvnKk) - Start here
 - [ ] [Attention is All You Need - Explained](https://www.youtube.com/watch?v=iDulhoQ2pro) - Yannic Kilcher
 - [ ] [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) - Jay Alammar (blog)
@@ -553,6 +372,7 @@ These denser textbooks serve as references alongside the core beginner track:
 ### Mathematics for Machine Learning
 
 **Books & Courses:**
+
 - [ ] [Mathematics for Machine Learning (MML) book](https://mml-book.github.io/)
 - [ ] [Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/)
 - [ ] [Coursera Mathematics for Machine Learning Specialization](https://www.coursera.org/specializations/mathematics-machine-learning)
@@ -560,6 +380,7 @@ These denser textbooks serve as references alongside the core beginner track:
 - [ ] [Mathematics for ML GitHub Resources](https://github.com/dair-ai/Mathematics-for-ML)
 
 **Online Resources:**
+
 - [ ] [Math Visual Proofs YouTube](https://www.youtube.com/@MathVisualProofs/videos)
 - [ ] [Sinc Press](https://sincxpress.com/)
 - [ ] [EdX - Math for Machine Learning with Python](https://www.edx.org/learn/math/edx-math-for-machine-learning-with-python)
@@ -590,6 +411,7 @@ These denser textbooks serve as references alongside the core beginner track:
 ### Kaggle YouTube Learning Playlists
 
 **Official Micro-Courses (Free):**
+
 - [ ] **[Intro to Machine Learning](https://www.youtube.com/playlist?list=PLqFaTIg4myu8t5ycqvp7I07jTjol3RCl9)** - 7 lessons, scikit-learn basics
 - [ ] **[Intermediate Machine Learning](https://www.youtube.com/playlist?list=PLqFaTIg4myu-dNobDHQZPrD2wH27PthCG)** - Missing values, categorical variables, pipelines
 - [ ] **[Feature Engineering](https://www.youtube.com/playlist?list=PLqFaTIg4myu-Q4NTmxSwAdTjZSGxMXnvP)** - Creating better features
@@ -607,16 +429,17 @@ These denser textbooks serve as references alongside the core beginner track:
 - [ ] **[Data Visualization](https://www.youtube.com/playlist?list=PLqFaTIg4myu-Tv2-xdVCVQJ8RQZuoXQiF)** - Seaborn, matplotlib
 
 **Competition & Project Content:**
+
 - [ ] **[Kaggle Days Meetup](https://www.youtube.com/playlist?list=PLqFaTIg4myu8t3j_kIRk3I3tNFGPDUYhm)** - Community presentations
 - [ ] **[Kaggle CareerCon](https://www.youtube.com/playlist?list=PLqFaTIg4myu9f21aM1POYVxMWlTALbxIj)** - Career advice from data scientists
 - [ ] **[Kaggle Solutions](https://www.youtube.com/playlist?list=PLqFaTIg4myu-FVeGI6lZCxz8yYlKNOqeM)** - How winners solved competitions
 - [ ] **[Kaggle Notebooks Showcases](https://www.youtube.com/playlist?list=PLqFaTIg4myu-2nkFgHTbRHYCaSjBPFO3r)** - Featured community notebooks
 
 **Interview & Tutorial Series:**
+
 - [ ] **[Kaggle Reading Group](https://www.youtube.com/playlist?list=PLqFaTIg4myu-qfK4RsxL6YlVYyYdBfCKH)** - Paper discussions
 - [ ] **[Kaggle Data Science for Good](https://www.youtube.com/playlist?list=PLqFaTIg4myu9jLJQFaIRy4IQRqk0tBz3a)** - Social impact projects
 - [ ] **[Grandmaster Series](https://www.youtube.com/playlist?list=PLqFaTIg4myu8gbDh6oBl7XRYNBlthpDEW)** - Interviews with Kaggle GMs
-
 
 ### Domain-Specific Modeling
 
@@ -1567,6 +1390,7 @@ Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational c
 ### � Microsoft Developer YouTube Playlists
 
 **AI & Machine Learning Courses:**
+
 - [ ] **[AI Agents for Beginners - Video Course](https://www.youtube.com/playlist?list=PLlrxD0HtieHgKcRjd5-8DT9TbwdlDO-OC)** - Complete video series
 - [ ] **[MCP for Beginners - Video Course](https://www.youtube.com/playlist?list=PLlrxD0HtieHjYfVUpGl_-ai7D6FRBjV-d)** - Model Context Protocol
 - [ ] **[Java and AI for Beginners](https://www.youtube.com/playlist?list=PLlrxD0HtieHglvVKJ79O3EFuF1kpaNDKk)** - AI with Java
@@ -1575,6 +1399,7 @@ Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational c
 - [ ] **[Multimodality using Azure AI Content Understanding](https://www.youtube.com/playlist?list=PLlrxD0HtieHiy0w4peKmU-1eyMwFHd8UL)**
 
 **Microsoft Build 2025 Sessions:**
+
 - [ ] **[AI, Copilot & Agents | Build 2025](https://www.youtube.com/playlist?list=PLlrxD0HtieHg4OIwuQGsVgpQhTKl4fFdE)** - Latest AI announcements
 - [ ] **[MCP at Build 2025](https://www.youtube.com/playlist?list=PLlrxD0HtieHgmDWDYPh5YmsnQAX9AihJv)** - MCP updates
 - [ ] **[Data & Analytics | Build 2025](https://www.youtube.com/playlist?list=PLlrxD0HtieHhgw1Heysdf8_F0oWHXqoUj)** - Data platform
@@ -1586,12 +1411,14 @@ Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational c
 - [ ] **[Microsoft Build 2025 - Full Conference](https://www.youtube.com/playlist?list=PLlrxD0HtieHgFYS4DKbJ_xCYNE94ZLJjj)** - All sessions
 
 **Azure & Cloud Development:**
+
 - [ ] **[Inside Azure AI Foundry](https://www.youtube.com/playlist?list=PLlrxD0HtieHj61bBwrAqd5yHvwjB8s_oz)** - Azure AI platform
 - [ ] **[Python on Azure](https://www.youtube.com/playlist?list=PLlrxD0HtieHhdAox_GWvRO7phbPRcILRm)** - Python cloud development
 - [ ] **[Azure Database for PostgreSQL](https://www.youtube.com/playlist?list=PLlrxD0HtieHitWlq3erWOoxH5XFkI9mtO)** - Database talks
 - [ ] **[POSETTE: Postgres 2025](https://www.youtube.com/playlist?list=PLlrxD0HtieHjHHYfXx3llOlESrX1IpJro)** - PostgreSQL event
 
 **Developer Community & Events:**
+
 - [ ] **[MCP Dev Days](https://www.youtube.com/playlist?list=PLlrxD0HtieHgcpcE1DqEM3glmk02RJmzV)** - MCP community event
 - [ ] **[Context Window](https://www.youtube.com/playlist?list=PLlrxD0HtieHgbm7PGBQQvOEMqAl1Wgu0n)** - Developer discussions
 - [ ] **[PyCon 2025](https://www.youtube.com/playlist?list=PLlrxD0HtieHhgNpHEBAg58PG2nBMUIsd7)** - Python conference
@@ -1599,6 +1426,7 @@ Microsoft offers a comprehensive ecosystem of AI/agent frameworks, educational c
 - [ ] **[Sharp and Unfiltered](https://www.youtube.com/playlist?list=PLlrxD0HtieHh7wwfLMFV19aXy0VtWobIS)** - C# discussions
 
 **Security & Best Practices:**
+
 - [ ] **[Developer Security Quick-Fire Questions](https://www.youtube.com/playlist?list=PLlrxD0HtieHhS0duvF68agcio7edpL882)** - Security Q&A
 - [ ] **[Talking Security with Michael Howard](https://www.youtube.com/playlist?list=PLlrxD0HtieHiw2hOnceQHt1OEQjmk8zzC)** - Security deep dives
 
@@ -1724,13 +1552,16 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 ### 📺 AWS Official YouTube Playlists
 
 #### Latest Announcements & AI Services
+
 - [ ] [Just Announced](https://www.youtube.com/playlist?list=PLhr1KZpdzukcqC4WBSssSqrQXDjAUMCp5) - Latest AWS product launches (Amazon Quick Suite, QuickSight, Quick Research, Quick Flows, Quick Automate)
 - [ ] [Exploring AWS AI Services](https://www.youtube.com/playlist?list=PLhr1KZpdzukdNS_OcR8CF2BUsS5CnCNGs) - Amazon Quick Suite, SageMaker HyperPod, SageMaker AI, Amazon Q Business, Nova Multimodal Models, Nova Reel video generation
 
 #### Getting Started & Fundamentals
+
 - [ ] [Getting Started with AWS](https://www.youtube.com/playlist?list=PLhr1KZpdzukf4p57gUnTyToXYJxGAPx03) - What is AWS?, Cloud Computing basics, Free Tier program, Global Infrastructure, Skills Guild training
 
 #### Core AWS Services
+
 - [ ] [AWS Cloud Storage](https://www.youtube.com/playlist?list=PLhr1KZpdzukdcp4VEgsSKVUPH3OizmeRa) - Storage solutions (S3, EBS, EFS)
 - [ ] [AWS Databases](https://www.youtube.com/playlist?list=PLhr1KZpdzukc7S4YkuWujjSBmyLofNwPz) - Database services (RDS, DynamoDB, Aurora)
 - [ ] [AWS Compute](https://www.youtube.com/playlist?list=PLhr1KZpdzukduV91ar4X6hPU80Ubkwe0T) - Compute services (EC2, Lambda, ECS)
@@ -1738,11 +1569,13 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [Application Integration on AWS](https://www.youtube.com/playlist?list=PLhr1KZpdzukd7OwXdKMbbXWWfmcEKy9t6) - Integration patterns (SQS, SNS, EventBridge)
 
 #### Learning & Support
+
 - [ ] [Latest AWS Tutorials](https://www.youtube.com/playlist?list=PLhr1KZpdzukcONwoeZOK3oCZiOngt4-o4) - Technical demos and walkthroughs (SES, IoT, various AWS services)
 - [ ] [AWS Knowledge Center Videos](https://www.youtube.com/playlist?list=PLhr1KZpdzukfdjsOHZ-BazZt1iK1J8UUw) - Short troubleshooting videos for common AWS problems (SageMaker, Aurora, Athena, DMS)
 - [ ] [Latest AWS Podcasts](https://www.youtube.com/playlist?list=PLhr1KZpdzukfFtjuF85ydw0r-qlnLFkM9) - AWS for AI Podcast, Amazon Q Podcast, Agentic AI discussions, customer stories
 
 #### Customer Stories & Real-World Use Cases
+
 - [ ] [AWS Customer Success Stories](https://www.youtube.com/playlist?list=PLFC4DF7286B2419F9) - How companies use AWS (Deloitte, Rackspace, Trend Micro, U.S. Bank, Videoamp)
 
 **Pro Tip:** Start with "Getting Started with AWS" for foundational knowledge, then explore "Exploring AWS AI Services" for ML/AI focus. The Knowledge Center Videos are invaluable for troubleshooting specific SageMaker and other service issues during hands-on practice.
@@ -1750,6 +1583,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 ### � Google Cloud AI/ML YouTube Playlists
 
 #### Google Cloud Tech - AI & ML Focus
+
 - [ ] [Building an AI tutor with Memory on ADK](https://www.youtube.com/playlist?list=PLIivdWyY5sqK9XkA-jfNcylZzLnxh6d2T) - Building AI applications with memory capabilities
 - [ ] [Cloud Next 2025](https://www.youtube.com/playlist?list=PLIivdWyY5sqK9-Va4chd7r9R6WMpPHTVQ) - Latest announcements and innovations
 - [ ] [Google AI Studio: From Prompt to Prototype](https://www.youtube.com/playlist?list=PLIivdWyY5sqIagw3_50GeVHIwcUoOwTa7) - Complete course on AI Studio
@@ -1767,6 +1601,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [Deploying AI](https://www.youtube.com/playlist?list=PLIivdWyY5sqLVnGp10d9tQacZsvVh2_zM) - Production AI deployment
 
 #### Google Cloud - AI & ML Focus
+
 - [ ] [AI for Startups: A Comprehensive Guide](https://www.youtube.com/playlist?list=PLBgogxgQVM9vYmseCf6mVKpt3qQ_EqQ8w) - AI implementation for startups
 - [ ] [Google's AI Builders Forum 2025](https://www.youtube.com/playlist?list=PLBgogxgQVM9siibI9EyxcnVUD59cRh86H) - AI Builders community sessions
 - [ ] [Model Armor: Securing AI Deployments](https://www.youtube.com/playlist?list=PLBgogxgQVM9s34an_v57QwxuyZHVv7grt) - AI security best practices
@@ -1775,6 +1610,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [Next '25 Keynote demos](https://www.youtube.com/playlist?list=PLBgogxgQVM9uBYqU3tH3MS2yBcQ8imAaZ) - Latest product demos
 
 #### Google DeepMind - Research & Learning
+
 - [ ] [Gemini 2.5 demos](https://www.youtube.com/playlist?list=PLqYmG7hTraZCFhSuoJc5w_zQWkzOPCTyc) - Creating complex code with single prompts
 - [ ] [Gemini Robotics 1.5](https://www.youtube.com/playlist?list=PLqYmG7hTraZD65Oohj7Ujq1D-vtsurG08) - Latest robotics capabilities
 - [ ] [Gemini Robotics](https://www.youtube.com/playlist?list=PLqYmG7hTraZC4Mx6pEKr6FVJehafA7vWE) - Core robotics demonstrations
@@ -1801,6 +1637,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 ### 📺 OpenAI YouTube Playlists
 
 #### Latest Models & Announcements
+
 - [ ] [DevDay 2025](https://www.youtube.com/playlist?list=PLOXw6I10VTv8-mTZk0v7oy1Bxfo3D2K5o) - Latest OpenAI DevDay announcements
 - [ ] [Introducing GPT-5](https://www.youtube.com/playlist?list=PLOXw6I10VTv9tIp5Oh-RT_Gz8yE5iz799) - GPT-5 model release
 - [ ] [Introducing ChatGPT agent](https://www.youtube.com/playlist?list=PLOXw6I10VTv_9xLWUFMRDL6DWwVRg0Ts7) - ChatGPT agent capabilities
@@ -1810,25 +1647,28 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [12 Days of OpenAI](https://www.youtube.com/playlist?list=PLOXw6I10VTv9lin5AzsHAHCTrC7BdVdEM) - Product announcements series
 - [ ] [OpenAI DevDay 2024](https://www.youtube.com/playlist?list=PLOXw6I10VTv_o0ZLpFu2IQyQOho1l-v7y) - Previous DevDay sessions
 
-
 #### Sora (Video Generation)
+
 - [ ] [This is Sora 2.](https://www.youtube.com/playlist?list=PLOXw6I10VTv8scMJVOydXK4kfd2k4p-yl) - Sora 2.0 capabilities
 - [ ] [Sora](https://www.youtube.com/playlist?list=PLOXw6I10VTv9z1fIBypnJB_iZuqCKrX3P) - Original Sora demos
 - [ ] [Sora Tutorials](https://www.youtube.com/playlist?list=PLOXw6I10VTv8q5PPOsuECYDFqohnJqbYB) - How to use Sora
 - [ ] [Sora Fellows Tutorials](https://www.youtube.com/playlist?list=PLOXw6I10VTv_GLpoVPTpbXQf2LS8PTztP) - Advanced Sora techniques
 
 #### ChatGPT & Features
+
 - [ ] [ChatGPT Atlas](https://www.youtube.com/playlist?list=PLOXw6I10VTv-QP2Bd0heMM48S5okc0glG) - ChatGPT capabilities overview
 - [ ] [With ChatGPT](https://www.youtube.com/playlist?list=PLOXw6I10VTv_T8_5Ogpg6X08zBxSteZVJ) - Using ChatGPT effectively
 - [ ] [ChatGPT Features](https://www.youtube.com/playlist?list=PLOXw6I10VTv9AIB10rnngD1XYN76xHuzV) - Feature demonstrations
 
 #### Developer Resources
+
 - [ ] [OpenAI Build Hours](https://www.youtube.com/playlist?list=PLOXw6I10VTv9zUbhqqaT62O9AFjlndmjn) - Live coding sessions
 - [ ] [Codex Tutorials](https://www.youtube.com/playlist?list=PLOXw6I10VTv-ZkTjAFQx8P3i4QurANKyG) - Codex programming tutorials
 - [ ] [Introducing Codex](https://www.youtube.com/playlist?list=PLOXw6I10VTv-IwPfAPgK9F2YQOcgr1N8s) - Codex model introduction
 - [ ] [OpenAI for Business](https://www.youtube.com/playlist?list=PLOXw6I10VTv9x2ibdc5Iu7HQlhnibqYZm) - Enterprise use cases
 
 #### Community & Learning
+
 - [ ] [Community Creations: OpenAI o1](https://www.youtube.com/playlist?list=PLOXw6I10VTv8CRYkTeeeL1M4_9BRJ1X0c) - User-created o1 applications
 - [ ] [OpenAI on OpenAI](https://www.youtube.com/playlist?list=PLOXw6I10VTv90Fvo0IAS1OWFw9moK6TRX) - Inside OpenAI discussions
 - [ ] [The OpenAI Podcast](https://www.youtube.com/playlist?list=PLOXw6I10VTv9GAOCZjUAAkSVyW2cDXs4u) - In-depth conversations
@@ -1862,7 +1702,6 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [Data at Meta Open Source](https://www.youtube.com/playlist?list=PLzIwronG0sE6TLHbTxxAeEzU9UEZSKv1W) - Data infrastructure and tools
 
 **Pro Tip:** Start with "AI & ML at Meta Open Source" for overview of Meta's AI ecosystem. Project Aria playlists are excellent for cutting-edge egocentric AI research and AR/VR development. Follow the chronological CVPR/ICCV tutorials (2022→2025) to see research evolution. "The Diff Podcast" provides insights into engineering culture at Meta.
-
 
 ### IBM Technology YouTube Playlists
 
@@ -1898,7 +1737,6 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 
 **Pro Tip:** Start with "AI Academy" for structured learning, then dive into "AI Technical Tutorials" for hands-on practice. "Understanding AI Models" and "Large Language Models and Chatbots" provide essential theory. For enterprise AI, explore "AI in Action" and "Data and AI". IBM's watsonx platform integration is covered across multiple playlists. "AI Ethics and Governance" is crucial for responsible AI development.
 
-
 ### 3Blue1Brown YouTube Playlists
 
 #### Essential Mathematics for AI/ML
@@ -1927,9 +1765,6 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [Physics](https://www.youtube.com/playlist?list=PLZHQObOWTQDPHLHBuY0nPbAQ_WGEjtzLW) - Mathematical physics concepts
 
 **Pro Tip:** Start with "Essence of Linear Algebra" and "Essence of Calculus" - these are ESSENTIAL foundations for understanding machine learning mathematics. The "Neural Networks" series provides one of the best visual explanations of backpropagation and gradient descent. "Probabilities of Probabilities" is excellent for understanding Bayesian ML. Grant Sanderson's visual approach makes complex mathematical concepts intuitive - these playlists are highly recommended for building deep mathematical understanding required for AI/ML work.
-
-
-
 
 ### Weights & Biases YouTube Playlists
 
@@ -1966,7 +1801,6 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 
 **Pro Tip:** Start with "W&B 101" to understand experiment tracking, then move to "MLOps Course" for production best practices. The "Training & Fine-Tuning LLMs Course" is excellent for modern LLM work. "Building LLM-Powered Apps" and "RAG++ Course" cover practical production scenarios. "PyTorch Study Group" provides deep framework knowledge. Weights & Biases focuses on production ML and MLOps - essential for real-world deployment.
 
-
 ### freeCodeCamp YouTube Playlists
 
 #### Machine Learning & AI
@@ -1991,7 +1825,6 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 
 **Pro Tip:** freeCodeCamp offers comprehensive, beginner-friendly courses. Start with "Introduction to Computer Science - Harvard's CS50" for solid fundamentals. The "Machine Learning" playlist covers ML from basics to advanced topics. "Mathematics" playlist provides essential math background. "Deep Learning with PyTorch" courses are excellent hands-on resources. All content is completely free and community-driven - perfect for self-paced learning.
 
-
 ### Jon Krohn - Mathematics & ML YouTube Playlists
 
 #### Mathematics for Machine Learning (Essential Foundation)
@@ -2010,7 +1843,6 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] [Super Data Science Podcast](https://www.youtube.com/playlist?list=PLRDl2inPrWQVW4aBgenJsTvw97qMhRtb8) - Data science discussions and interviews
 
 **Pro Tip:** Jon Krohn's mathematics trilogy (Linear Algebra, Calculus, Probability) is specifically designed for machine learning practitioners. His teaching style focuses on building intuition with rigorous mathematical foundations. Start with Linear Algebra, then Calculus, followed by Probability - this order builds concepts progressively. These courses are perfect companions to 3Blue1Brown for deeper mathematical understanding. Jon is author of "Deep Learning Illustrated" and teaches at Columbia University.
-
 
 ### MIT OpenCourseWare YouTube Playlists
 
@@ -2065,11 +1897,13 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 ### 📝 Practice Exams (Quality Rankings)
 
 **Highly Recommended:**
+
 - [ ] **AWS Official** (exams/practice tests/sample questions) - 10/10 ⭐
 - [ ] [Tutorials Dojo by Jon Bonso](https://portal.tutorialsdojo.com/courses/aws-certified-machine-learning-specialty-practice-exams/) - 4/10 (+SageMaker; -ML theory)
 - [ ] AWS SkillBuilder sample questions and practice exam
 
 **Supplementary:**
+
 - [ ] Whizlabs practice exams
 - [ ] Chandra's practice tests - 2/10 (+ML questions; -SageMaker)
 - [ ] Abhishek's ML questions - 1/10 (Rote memory focused, not exam-style)
@@ -2115,6 +1949,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 ### 🎯 Key Exam Topics
 
 **SageMaker Focus:**
+
 - [ ] Built-in algorithms (Linear Learner, XGBoost, etc.)
 - [ ] Model training & hyperparameter tuning
 - [ ] Endpoint deployments & inference
@@ -2122,6 +1957,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] Model input formats (Parquet, RecordIO)
 
 **Data Engineering:**
+
 - [ ] AWS Glue (Data Catalog, ETL)
 - [ ] Kinesis Streams & Kinesis Firehose
 - [ ] Data preprocessing (imputation, unbalanced data)
@@ -2129,6 +1965,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] Data conversions and integrations
 
 **ML Theory:**
+
 - [ ] Confusion matrix (Precision, Recall, F1)
 - [ ] Hyperparameter tuning strategies
 - [ ] Supervised vs Unsupervised learning
@@ -2136,6 +1973,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] Deep Learning (CNN, RNN architectures)
 
 **AWS ML Services:**
+
 - [ ] Amazon Comprehend (NLP)
 - [ ] Amazon Forecast (Time series)
 - [ ] Amazon Rekognition (Computer Vision)
@@ -2144,6 +1982,7 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 - [ ] Amazon Mechanical Turk & Augmented AI
 
 **Production & MLOps:**
+
 - [ ] Model versioning & monitoring
 - [ ] A/B testing strategies
 - [ ] Distributed processing
@@ -2154,12 +1993,14 @@ Comprehensive resources for AWS SageMaker, ML services, and AWS Certified Machin
 ### 💡 Study Tips & Notes
 
 **What to Focus On:**
+
 - White papers referenced in practice exam explanations
 - Use cases and scenario-based questions (exam is heavy on these)
 - Service integrations (which services work together)
 - Avoid rote memorization (e.g., port numbers) - AWS doesn't test this
 
 **Study Strategy:**
+
 1. Complete official AWS training first (10/10 quality)
 2. Read AWS documentation for SageMaker thoroughly
 3. Take practice exams to identify weak areas
