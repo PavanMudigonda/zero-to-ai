@@ -25,6 +25,7 @@ A comprehensive comparison of tokenization approaches to help you choose the rig
 | **BPE** | Merge most frequent pairs | General text, code | GPT, RoBERTa, CodeGen | Fast, good compression | May split rare words oddly |
 | **WordPiece** | Maximize likelihood | BERT-style tasks | BERT, DistilBERT, ELECTRA | Good for English | Slower training |
 | **Unigram** | Probabilistic | Multilingual | T5, ALBERT, XLM-R | Best for many languages | More complex |
+| **SentencePiece** | BPE or Unigram | Language-agnostic | LLaMA, T5, XLM-R, ALBERT | No pre-tokenization needed, multilingual | Separate library required |
 | **WordLevel** | Word-based | Simple use cases | FastText, Word2Vec | Simple, fast | Huge vocabulary |
 | **CharLevel** | Character-based | Rare languages | Some specialized models | Handles anything | Very long sequences |
 
@@ -129,6 +130,57 @@ tokenizer.train(["data.txt"], trainer)
 
 ---
 
+#### SentencePiece
+
+```python
+# How SentencePiece works:
+# Language-agnostic tokenizer that works directly on raw text
+# Can use BPE or Unigram algorithm internally
+# No need for pre-tokenization or language-specific rules
+
+import sentencepiece as spm
+
+# Train SentencePiece model (BPE mode)
+spm.SentencePieceTrainer.train(
+    input='data.txt',
+    model_prefix='sentencepiece_bpe',
+    vocab_size=8000,
+    model_type='bpe',  # or 'unigram'
+    character_coverage=0.9995,  # Cover 99.95% of characters
+    num_threads=16
+)
+
+# Load and use
+sp = spm.SentencePieceProcessor()
+sp.load('sentencepiece_bpe.model')
+
+# Encode
+pieces = sp.encode_as_pieces('Hello, world!')
+ids = sp.encode_as_ids('Hello, world!')
+
+# Decode
+text = sp.decode_ids([ids])
+```
+
+**Pros**:
+- ✅ Language-agnostic (no language-specific rules)
+- ✅ Works on raw text (no pre-tokenization)
+- ✅ Excellent for multilingual
+- ✅ Used by many production models (LLaMA, T5)
+- ✅ Handles any Unicode
+- ✅ Both BPE and Unigram modes
+
+**Cons**:
+- ❌ Separate library (not in HuggingFace Tokenizers)
+- ❌ Different API from Tokenizers library
+- ❌ Requires training on representative data
+
+**Best for**: Multilingual models, production LLMs, language-agnostic systems
+
+**Key Difference from Others**: SentencePiece is both an algorithm AND a library. It treats text as a sequence of Unicode characters without any language-specific pre-processing, making it truly language-agnostic. Used by LLaMA, T5, ALBERT, and XLM-R.
+
+---
+
 #### Comparison Example
 
 ```python
@@ -148,6 +200,8 @@ def create_tokenizer(algorithm="bpe"):
     elif algorithm == "unigram":
         tokenizer = Tokenizer(models.Unigram())
         trainer = trainers.UnigramTrainer(vocab_size=1000)
+    # Note: SentencePiece requires separate library (sentencepiece)
+    # See SentencePiece section above for usage
     else:
         raise ValueError(f"Unknown algorithm: {algorithm}")
     
@@ -256,13 +310,17 @@ tokens = tokenizer.tokenize("Hello, world!")
 # Vocabulary: 32,000 tokens
 # Multilingual support (mT5)
 # Best for: Seq2seq, translation, summarization
+
+# Note: Uses SentencePiece library under the hood
+# pip install sentencepiece
 ```
 
 **Characteristics**:
 - Vocab size: 32K
-- Unigram algorithm
-- Language-agnostic
+- **SentencePiece** Unigram algorithm
+- Language-agnostic (no pre-tokenization)
 - No word boundary markers
+- Treats spaces as characters (▁)
 
 ### LLaMA Family (Meta)
 
@@ -278,13 +336,17 @@ tokens = tokenizer.tokenize("Hello, world!")
 # Vocabulary: 32,000 tokens
 # Trained on: Diverse multilingual data
 # Best for: General LLM tasks
+
+# Note: Uses SentencePiece library
+# pip install sentencepiece protobuf
 ```
 
 **Characteristics**:
 - Vocab size: 32K
-- SentencePiece BPE
-- Multilingual
+- **SentencePiece** BPE algorithm
+- Multilingual support
 - Byte fallback for unknown chars
+- Language-agnostic tokenization
 
 ---
 
@@ -347,7 +409,10 @@ for name, result in results.items():
 - BPE (HuggingFace Tokenizers): **Fastest** (Rust implementation)
 - WordPiece (HuggingFace Tokenizers): Very fast
 - Unigram (HuggingFace Tokenizers): Fast
+- **SentencePiece**: Very fast (C++ implementation)
 - Python implementations: 10-50x slower
+
+**Note**: Both HuggingFace Tokenizers (Rust) and SentencePiece (C++) are production-ready and much faster than pure Python implementations.
 
 ### Memory Usage
 
@@ -564,9 +629,13 @@ What's your language?
 └─ Many languages → XLM-R/mT5
 
 What's your priority?
-├─ Speed → HuggingFace Tokenizers (Rust)
+├─ Speed → HuggingFace Tokenizers (Rust) or SentencePiece (C++)
 ├─ Accuracy → Use pretrained tokenizers
+├─ Language-agnostic → SentencePiece
 └─ Custom domain → Train your own
+
+Note: Install SentencePiece for T5, LLaMA, ALBERT models:
+  pip install sentencepiece
 ```
 
 ---
