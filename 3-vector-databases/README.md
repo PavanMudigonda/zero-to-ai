@@ -57,9 +57,9 @@ By the end of this module:
 | Database | Best For | Language | License | Performance |
 |----------|----------|----------|---------|-------------|
 | **Chroma** | Local dev, prototyping | Python | Apache 2.0 | Fast |
-| **Qdrant** | Production, filtering | Rust | Apache 2.0 | Very Fast |
-| **Weaviate** | Enterprise, GraphQL | Go | BSD-3 | Fast |
-| **Milvus** | Large scale, hybrid search | C++/Python | Apache 2.0 | Very Fast |
+| **Qdrant** ⭐ | Production, filtering | Rust | Apache 2.0 | Very Fast |
+| **Weaviate** ⭐ | Enterprise, GraphQL | Go | BSD-3 | Fast |
+| **Milvus** ⭐ | Large scale, hybrid search | C++/Python | Apache 2.0 | Very Fast |
 | **FAISS** ⭐ | Research, benchmarking | C++/Python | MIT (Meta) | Fastest |
 | **pgvector** | Existing PostgreSQL | C/SQL | PostgreSQL | Fast |
 | **Redis** | Caching + vectors | C | BSD | Very Fast |
@@ -233,87 +233,420 @@ for doc in results:
     print(f"Score: {doc['score']:.4f} - {doc['text']}")
 ```
 
-### 4. Qdrant (Self-Hosted)
+### 4. Qdrant (Self-Hosted or Cloud)
 
 ```python
 # Install: pip install qdrant-client
 
 from qdrant_client import QdrantClient
-from qdrant_client.models import Distance, VectorParams, PointStruct
+from qdrant_client.models import Distance, VectorParams, PointStruct, Filter, FieldCondition, MatchValue
 
-# Initialize (local or cloud)
-client = QdrantClient(path="./qdrant_db")  # Local
+# Initialize
+client = QdrantClient(path="./qdrant_db")  # Local file-based
 # client = QdrantClient(url="http://localhost:6333")  # Docker
+# client = QdrantClient(url="https://xyz.cloud.qdrant.io", api_key="your-key")  # Cloud
 
-# Create collection
+# Create collection with advanced config
 client.create_collection(
     collection_name="documents",
-    vectors_config=VectorParams(size=1536, distance=Distance.COSINE)
+    vectors_config=VectorParams(
+        size=1536, 
+        distance=Distance.COSINE,
+        on_disk=False  # Keep in memory for speed
+    )
 )
 
-# Add vectors
+# Add vectors with rich metadata
 points = [
     PointStruct(
         id=1,
-        vector=[0.1] * 1536,  # Your embedding here
-        payload={"text": "Machine learning is a subset of AI"}
+        vector=[0.1] * 1536,
+        payload={
+            "text": "Machine learning is a subset of AI",
+            "category": "ML",
+            "date": "2024-01-15",
+            "author": "John Doe"
+        }
     ),
-    # ... more points
+    PointStruct(
+        id=2,
+        vector=[0.2] * 1536,
+        payload={
+            "text": "Deep learning uses neural networks",
+            "category": "DL",
+            "date": "2024-01-16",
+            "author": "Jane Smith"
+        }
+    ),
+    PointStruct(
+        id=3,
+        vector=[0.15] * 1536,
+        payload={
+            "text": "Natural language processing handles text",
+            "category": "NLP",
+            "date": "2024-01-17",
+            "author": "John Doe"
+        }
+    )
 ]
 
 client.upsert(collection_name="documents", points=points)
 
-# Search
+# Basic search
 search_result = client.search(
     collection_name="documents",
-    query_vector=[0.1] * 1536,  # Query embedding
+    query_vector=[0.1] * 1536,
     limit=3
 )
+
+for hit in search_result:
+    print(f"Score: {hit.score:.4f} - {hit.payload['text']}")
+
+# Advanced search with filtering
+filtered_result = client.search(
+    collection_name="documents",
+    query_vector=[0.1] * 1536,
+    query_filter=Filter(
+        must=[
+            FieldCondition(
+                key="category",
+                match=MatchValue(value="ML")
+            )
+        ]
+    ),
+    limit=3
+)
+
+# Batch search (multiple queries at once)
+batch_results = client.search_batch(
+    collection_name="documents",
+    requests=[
+        {
+            "vector": [0.1] * 1536,
+            "limit": 2
+        },
+        {
+            "vector": [0.2] * 1536,
+            "limit": 2
+        }
+    ]
+)
+
+# Scroll through all points (for export/backup)
+records, next_offset = client.scroll(
+    collection_name="documents",
+    limit=10
+)
+
+# Get collection info
+collection_info = client.get_collection("documents")
+print(f"Vectors count: {collection_info.vectors_count}")
+print(f"Points count: {collection_info.points_count}")
+
+# Delete by filter
+client.delete(
+    collection_name="documents",
+    points_selector=Filter(
+        must=[
+            FieldCondition(key="author", match=MatchValue(value="John Doe"))
+        ]
+    )
+)
 ```
 
-### 5. PostgreSQL pgvector
+### 5. Weaviate (Self-Hosted or Cloud)
 
 ```python
-# Install: pip install psycopg2-binary pgvector
+# Install: pip install weaviate-client
 
-import psycopg2
-from pgvector.psycopg2 import register_vector
+import weaviate
+from weaviate.classes.init import Auth
+from weaviate.classes.query import MetadataQuery
 
-# Connect
-conn = psycopg2.connect(database="vectordb")
-cur = conn.cursor()
+# Initialize
+client = weaviate.connect_to_local()  # Docker local
+# client = weaviate.connect_to_wcs(
+#     cluster_url="https://your-cluster.weaviate.network",
+#     auth_credentials=Auth.api_key("your-api-key")
+# )  # Weaviate Cloud
 
-# Enable extension
-cur.execute('CREATE EXTENSION IF NOT EXISTS vector')
-register_vector(conn)
+# Create collection (schema)
+from weaviate.classes.config import Configure, Property, DataType
 
-# Create table
-cur.execute('''
-    CREATE TABLE IF NOT EXISTS documents (
-        id SERIAL PRIMARY KEY,
-        text TEXT,
-        embedding vector(1536)
-    )
-''')
-
-# Insert
-embedding = [0.1] * 1536
-cur.execute(
-    'INSERT INTO documents (text, embedding) VALUES (%s, %s)',
-    ('Machine learning is a subset of AI', embedding)
+collection = client.collections.create(
+    name="Document",
+    description="A collection of documents with embeddings",
+    vectorizer_config=Configure.Vectorizer.none(),  # We provide our own vectors
+    properties=[
+        Property(name="text", data_type=DataType.TEXT),
+        Property(name="category", data_type=DataType.TEXT),
+        Property(name="date", data_type=DataType.DATE),
+        Property(name="author", data_type=DataType.TEXT)
+    ]
 )
-conn.commit()
 
-# Search
-cur.execute('''
-    SELECT text, embedding <-> %s AS distance
-    FROM documents
-    ORDER BY distance
-    LIMIT 3
-''', (embedding,))
+# Add objects with vectors
+documents = client.collections.get("Document")
+
+documents.data.insert_many([
+    {
+        "text": "Machine learning is a subset of AI",
+        "category": "ML",
+        "date": "2024-01-15T00:00:00Z",
+        "author": "John Doe",
+        "_vector": [0.1] * 1536
+    },
+    {
+        "text": "Deep learning uses neural networks",
+        "category": "DL",
+        "date": "2024-01-16T00:00:00Z",
+        "author": "Jane Smith",
+        "_vector": [0.2] * 1536
+    },
+    {
+        "text": "Natural language processing handles text",
+        "category": "NLP",
+        "date": "2024-01-17T00:00:00Z",
+        "author": "John Doe",
+        "_vector": [0.15] * 1536
+    }
+])
+
+# Vector search
+response = documents.query.near_vector(
+    near_vector=[0.1] * 1536,
+    limit=3,
+    return_metadata=MetadataQuery(distance=True)
+)
+
+for obj in response.objects:
+    print(f"Distance: {obj.metadata.distance:.4f}")
+    print(f"Text: {obj.properties['text']}")
+    print(f"Category: {obj.properties['category']}\n")
+
+# Filtered vector search
+from weaviate.classes.query import Filter
+
+response = documents.query.near_vector(
+    near_vector=[0.1] * 1536,
+    limit=3,
+    filters=Filter.by_property("category").equal("ML")
+)
+
+# Hybrid search (vector + keyword)
+response = documents.query.hybrid(
+    query="machine learning artificial intelligence",
+    vector=[0.1] * 1536,
+    alpha=0.5,  # 0.5 = balanced, 0 = pure keyword, 1 = pure vector
+    limit=3
+)
+
+# GraphQL query (Weaviate's native interface)
+# This gives you more flexibility
+result = client.query.get(
+    "Document",
+    ["text", "category", "author"]
+).with_near_vector({
+    "vector": [0.1] * 1536
+}).with_limit(3).with_additional(["distance", "certainty"]).do()
+
+print(result)
+
+# Aggregate queries
+response = documents.aggregate.over_all(
+    group_by="category"
+)
+
+# Get object by ID
+uuid = response.objects[0].uuid
+obj = documents.query.fetch_object_by_id(uuid)
+
+# Update object
+documents.data.update(
+    uuid=uuid,
+    properties={"text": "Updated text about machine learning"}
+)
+
+# Delete objects
+documents.data.delete_by_id(uuid)
+
+# Batch operations for performance
+with client.batch.dynamic() as batch:
+    for i in range(1000):
+        batch.add_object(
+            collection="Document",
+            properties={
+                "text": f"Document {i}",
+                "category": "Batch",
+                "date": "2024-01-01T00:00:00Z",
+                "author": "Batch User"
+            },
+            vector=[0.1] * 1536
+        )
+
+client.close()
 ```
 
-### 6. FAISS (Research/Benchmarking)
+### 6. Milvus (Self-Hosted or Zilliz Cloud)
+
+```python
+# Install: pip install pymilvus
+
+from pymilvus import (
+    connections,
+    utility,
+    FieldSchema,
+    CollectionSchema,
+    DataType,
+    Collection
+)
+
+# Connect to Milvus
+connections.connect(
+    alias="default",
+    host='localhost',
+    port='19530'
+)
+# Zilliz Cloud:
+# connections.connect(
+#     alias="default",
+#     uri="https://your-cluster.zillizcloud.com",
+#     token="your-token"
+# )
+
+# Check if collection exists
+collection_name = "documents"
+if utility.has_collection(collection_name):
+    utility.drop_collection(collection_name)
+
+# Define schema
+fields = [
+    FieldSchema(name="id", dtype=DataType.INT64, is_primary=True, auto_id=True),
+    FieldSchema(name="text", dtype=DataType.VARCHAR, max_length=1000),
+    FieldSchema(name="category", dtype=DataType.VARCHAR, max_length=100),
+    FieldSchema(name="author", dtype=DataType.VARCHAR, max_length=200),
+    FieldSchema(name="embedding", dtype=DataType.FLOAT_VECTOR, dim=1536)
+]
+
+schema = CollectionSchema(
+    fields=fields,
+    description="Document collection with embeddings",
+    enable_dynamic_field=True  # Allow dynamic fields
+)
+
+# Create collection
+collection = Collection(
+    name=collection_name,
+    schema=schema,
+    using='default',
+    shards_num=2  # Number of shards for distribution
+)
+
+# Insert data
+entities = [
+    ["Machine learning is a subset of AI", "Deep learning uses neural networks", "NLP handles text"],
+    ["ML", "DL", "NLP"],
+    ["John Doe", "Jane Smith", "John Doe"],
+    [[0.1] * 1536, [0.2] * 1536, [0.15] * 1536]
+]
+
+insert_result = collection.insert(entities)
+print(f"Inserted {len(insert_result.primary_keys)} entities")
+
+# Create index for fast search (required before searching)
+index_params = {
+    "metric_type": "COSINE",  # or "L2", "IP" (inner product)
+    "index_type": "IVF_FLAT",  # or "HNSW", "IVF_SQ8", etc.
+    "params": {"nlist": 128}
+}
+
+collection.create_index(
+    field_name="embedding",
+    index_params=index_params
+)
+
+# Load collection into memory (required before search)
+collection.load()
+
+# Vector search
+search_params = {
+    "metric_type": "COSINE",
+    "params": {"nprobe": 10}
+}
+
+query_vector = [[0.1] * 1536]
+
+results = collection.search(
+    data=query_vector,
+    anns_field="embedding",
+    param=search_params,
+    limit=3,
+    output_fields=["text", "category", "author"]
+)
+
+for hits in results:
+    for hit in hits:
+        print(f"Distance: {hit.distance:.4f}")
+        print(f"Text: {hit.entity.get('text')}")
+        print(f"Category: {hit.entity.get('category')}\n")
+
+# Filtered search (boolean expression)
+results = collection.search(
+    data=query_vector,
+    anns_field="embedding",
+    param=search_params,
+    limit=3,
+    expr='category == "ML"',  # Filter expression
+    output_fields=["text", "category", "author"]
+)
+
+# Hybrid search (with scalar filtering)
+results = collection.search(
+    data=query_vector,
+    anns_field="embedding",
+    param=search_params,
+    limit=3,
+    expr='author == "John Doe" and category in ["ML", "NLP"]',
+    output_fields=["text", "category", "author"]
+)
+
+# Query by ID
+query_result = collection.query(
+    expr="id in [1, 2, 3]",
+    output_fields=["id", "text", "category"]
+)
+
+# Delete entities
+collection.delete(expr='category == "DL"')
+
+# Get collection statistics
+stats = collection.get_stats()
+print(f"Collection stats: {stats}")
+
+# Partition support (for multi-tenancy)
+partition = collection.create_partition("partition_2024")
+partition.insert(entities)
+
+# Search in specific partition
+results = collection.search(
+    data=query_vector,
+    anns_field="embedding",
+    param=search_params,
+    limit=3,
+    partition_names=["partition_2024"]
+)
+
+# Release collection from memory
+collection.release()
+
+# Drop collection
+utility.drop_collection(collection_name)
+
+# Disconnect
+connections.disconnect("default")
+```
+
+### 7. FAISS (Research/Benchmarking)
 
 ```python
 # Install: pip install faiss-cpu (or faiss-gpu)
@@ -340,7 +673,7 @@ for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
     print(f"  {i+1}. Index: {idx}, Distance: {dist:.4f}")
 ```
 
-### 7. Redis with Vector Similarity
+### 8. Redis with Vector Similarity
 
 ```python
 # Install: pip install redis
@@ -389,7 +722,7 @@ for doc in results.docs:
     print(f"Score: {doc.score} - {doc.text}")
 ```
 
-### 8. Elasticsearch with Vector Search
+### 9. Elasticsearch with Vector Search
 
 ```python
 # Install: pip install elasticsearch
@@ -446,7 +779,7 @@ for hit in results["hits"]["hits"]:
     print(f"Score: {hit['_score']:.4f} - {hit['_source']['text']}")
 ```
 
-### 9. Google Vertex AI Vector Search
+### 10. Google Vertex AI Vector Search
 
 ```python
 # Install: pip install google-cloud-aiplatform
@@ -500,7 +833,7 @@ for neighbor in response[0]:
     print(f"ID: {neighbor.id}, Distance: {neighbor.distance}")
 ```
 
-### 10. Azure AI Search (formerly Azure Cognitive Search)
+### 11. Azure AI Search (formerly Azure Cognitive Search)
 
 ```python
 # Install: pip install azure-search-documents azure-identity
@@ -699,18 +1032,20 @@ for result in results:
 - No new infrastructure
 
 #### For Production RAG Systems
-**Best: Pinecone or Qdrant Cloud**
+**Best: Pinecone, Qdrant Cloud, or Weaviate Cloud**
 - Managed service (no ops)
 - Automatic scaling
 - High availability
 - Fast queries
+- Advanced filtering
 
 #### For Large-Scale Enterprise
-**Best: Weaviate or Milvus**
+**Best: Milvus, Weaviate, or Qdrant**
 - Hybrid search (vector + keyword)
 - Advanced filtering
 - Self-hosted control
-- Massive scale
+- Massive scale (billions of vectors)
+- Multi-tenancy support
 
 #### For Research / Benchmarking
 **Best: FAISS**
@@ -766,22 +1101,37 @@ for result in results:
 - Batch operations
 - Performance tuning
 
-### Module 5: pgvector (1 hour)
-**[05_pgvector_guide.py](./05_pgvector_guide.py)**
+### Module 5: Weaviate (1.5 hours)
+**[05_weaviate_guide.py](./05_weaviate_guide.py)**
+- Weaviate setup (Docker/Cloud)
+- GraphQL queries
+- Hybrid search (vector + keyword)
+- Schema design and modules
+
+### Module 6: Milvus (2 hours)
+**[06_milvus_guide.py](./06_milvus_guide.py)**
+- Milvus/Zilliz Cloud setup
+- Collection schema design
+- Index types (IVF, HNSW)
+- Partitioning and sharding
+- Large-scale deployments
+
+### Module 7: pgvector (1 hour)
+**[07_pgvector_guide.py](./07_pgvector_guide.py)**
 - PostgreSQL integration
 - SQL + vectors
 - Indexes (IVFFlat, HNSW)
 - Hybrid queries
 
-### Module 6: Production RAG (2 hours)
-**[06_production_rag.py](./06_production_rag.py)**
+### Module 8: Production RAG (2 hours)
+**[08_production_rag.py](./08_production_rag.py)**
 - Building RAG systems
 - Document chunking
 - Retrieval strategies
 - LLM integration
 
-### Module 7: Advanced Topics (2 hours)
-**[07_advanced_patterns.py](./07_advanced_patterns.py)**
+### Module 9: Advanced Topics (2 hours)
+**[09_advanced_patterns.py](./09_advanced_patterns.py)**
 - Hybrid search
 - Reranking
 - Multi-vector search
@@ -916,6 +1266,13 @@ pip install google-cloud-aiplatform  # Google Vertex AI
 pip install azure-search-documents  # Azure AI Search
 pip install opensearch-py  # AWS OpenSearch
 pip install qdrant-client  # Qdrant Cloud
+pip install weaviate-client  # Weaviate Cloud
+
+# For self-hosted (open source):
+pip install qdrant-client  # Qdrant
+pip install weaviate-client  # Weaviate
+pip install pymilvus  # Milvus
+pip install faiss-cpu  # FAISS (or faiss-gpu)
 
 # For existing databases:
 pip install pgvector  # PostgreSQL
@@ -952,8 +1309,11 @@ pip install transformers torch
 - [Chroma Docs](https://docs.trychroma.com/)
 - [Qdrant Docs](https://qdrant.tech/documentation/)
 - [Weaviate Docs](https://weaviate.io/developers/weaviate)
+- [Milvus Docs](https://milvus.io/docs)
 - [pgvector Docs](https://github.com/pgvector/pgvector)
 - [FAISS Wiki](https://github.com/facebookresearch/faiss/wiki)
+- [Redis Vector Search](https://redis.io/docs/stack/search/reference/vectors/)
+- [Elasticsearch Vector Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/knn-search.html)
 
 ### Tutorials
 - [LangChain Vector Stores](https://python.langchain.com/docs/modules/data_connection/vectorstores/)
@@ -970,10 +1330,12 @@ pip install transformers torch
 | Pinecone Guide | 1.5 hours | Beginner |
 | Chroma Guide | 1 hour | Beginner |
 | Qdrant Guide | 1.5 hours | Intermediate |
+| Weaviate Guide | 1.5 hours | Intermediate |
+| Milvus Guide | 2 hours | Intermediate |
 | pgvector Guide | 1 hour | Intermediate |
 | Production RAG | 2 hours | Intermediate |
 | Advanced Patterns | 2 hours | Advanced |
-| **Total** | **~11 hours** | **Beginner-Advanced** |
+| **Total** | **~14.5 hours** | **Beginner-Advanced** |
 
 ---
 
