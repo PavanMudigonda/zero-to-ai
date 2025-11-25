@@ -1,0 +1,577 @@
+"""
+Advanced Training Methods for Tokenizers
+=========================================
+
+This script demonstrates advanced training methods from the official HuggingFace
+tokenizers documentation, covering:
+
+1. Training from Python iterators (Lists, Tuples, Arrays)
+2. Training from 🤗 Datasets library
+3. Training from gzip files
+4. Batch iterators for efficiency
+5. Progress tracking
+
+Based on: https://huggingface.co/docs/tokenizers/python/latest/tutorials/python/training_from_memory.html
+"""
+
+from tokenizers import Tokenizer, models, normalizers, pre_tokenizers, decoders, trainers
+import os
+from pathlib import Path
+
+
+def setup_base_tokenizer():
+    """
+    Create a base tokenizer configuration (Unigram model).
+    This will be reused across all examples.
+    """
+    tokenizer = Tokenizer(models.Unigram())
+    tokenizer.normalizer = normalizers.NFKC()
+    tokenizer.pre_tokenizer = pre_tokenizers.ByteLevel()
+    tokenizer.decoder = decoders.ByteLevel()
+    
+    trainer = trainers.UnigramTrainer(
+        vocab_size=20000,
+        initial_alphabet=pre_tokenizers.ByteLevel.alphabet(),
+        special_tokens=["<PAD>", "<BOS>", "<EOS>"],
+    )
+    
+    return tokenizer, trainer
+
+
+def example_1_train_from_list():
+    """
+    Example 1: Train from a simple Python list
+    ==========================================
+    
+    The most basic way to train a tokenizer is using a Python list.
+    Any iterable works: List, Tuple, np.Array, Generator, etc.
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 1: Train from List")
+    print("="*70)
+    
+    tokenizer, trainer = setup_base_tokenizer()
+    
+    # First few lines of the "Zen of Python"
+    data = [
+        "Beautiful is better than ugly.",
+        "Explicit is better than implicit.",
+        "Simple is better than complex.",
+        "Complex is better than complicated.",
+        "Flat is better than nested.",
+        "Sparse is better than dense.",
+        "Readability counts.",
+        "Special cases aren't special enough to break the rules.",
+        "Although practicality beats purity.",
+        "Errors should never pass silently.",
+    ]
+    
+    print(f"\nTraining on {len(data)} sentences...")
+    
+    # Train from the list
+    tokenizer.train_from_iterator(data, trainer=trainer)
+    
+    print("✓ Training complete!")
+    
+    # Test the tokenizer
+    test_text = "Beautiful code is readable and simple."
+    encoding = tokenizer.encode(test_text)
+    
+    print(f"\nTest encoding: '{test_text}'")
+    print(f"Tokens: {encoding.tokens}")
+    print(f"IDs: {encoding.ids}")
+    
+    # Save tokenizer
+    os.makedirs("tokenizers", exist_ok=True)
+    tokenizer.save("tokenizers/list_trained.json")
+    print("\n💾 Saved to: tokenizers/list_trained.json")
+
+
+def example_2_train_from_tuple():
+    """
+    Example 2: Train from other iterables (Tuple, Generator)
+    ========================================================
+    
+    Demonstrates that ANY iterable works, not just lists.
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 2: Train from Tuple and Generator")
+    print("="*70)
+    
+    tokenizer, trainer = setup_base_tokenizer()
+    
+    # Using a tuple
+    data_tuple = (
+        "Python is a high-level programming language.",
+        "It emphasizes code readability.",
+        "Python supports multiple programming paradigms.",
+        "It features dynamic typing and garbage collection.",
+    )
+    
+    print("\n📦 Training from tuple...")
+    tokenizer.train_from_iterator(data_tuple, trainer=trainer)
+    print("✓ Tuple training complete!")
+    
+    # Using a generator
+    def text_generator():
+        """Generator that yields text lines"""
+        texts = [
+            "Generators are memory efficient.",
+            "They yield items one at a time.",
+            "Perfect for large datasets.",
+            "No need to load everything into memory.",
+        ]
+        for text in texts:
+            yield text
+    
+    tokenizer2, trainer2 = setup_base_tokenizer()
+    print("\n🔄 Training from generator...")
+    tokenizer2.train_from_iterator(text_generator(), trainer=trainer2)
+    print("✓ Generator training complete!")
+    
+    # Test both
+    test = "Python code is readable and efficient."
+    print(f"\nTest: '{test}'")
+    print(f"Tokens (tuple-trained): {tokenizer.encode(test).tokens}")
+    print(f"Tokens (gen-trained): {tokenizer2.encode(test).tokens}")
+
+
+def example_3_datasets_library():
+    """
+    Example 3: Train from 🤗 Datasets library
+    =========================================
+    
+    The Datasets library provides access to thousands of datasets.
+    We'll use a batch iterator for efficiency.
+    
+    NOTE: This requires 'datasets' library:
+          pip install datasets
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 3: Train from 🤗 Datasets Library")
+    print("="*70)
+    
+    try:
+        import datasets
+    except ImportError:
+        print("\n⚠️  'datasets' library not installed.")
+        print("To run this example: pip install datasets")
+        print("\nShowing code example instead:")
+        print("""
+# Load dataset
+dataset = datasets.load_dataset(
+    "wikitext", "wikitext-103-raw-v1", 
+    split="train+test+validation"
+)
+
+# Create batch iterator (much faster than one-by-one)
+def batch_iterator(batch_size=1000):
+    for i in range(0, len(dataset), batch_size):
+        yield dataset[i : i + batch_size]["text"]
+
+# Train with length for progress bar
+tokenizer.train_from_iterator(
+    batch_iterator(), 
+    trainer=trainer,
+    length=len(dataset)  # Enables accurate progress tracking
+)
+        """)
+        return
+    
+    print("\n📥 Loading small dataset (this may take a moment)...")
+    
+    # Use a smaller dataset for demo purposes
+    try:
+        dataset = datasets.load_dataset(
+            "wikitext", "wikitext-2-raw-v1",  # Smaller version
+            split="train[:1000]"  # Only first 1000 examples
+        )
+    except Exception as e:
+        print(f"\n⚠️  Could not load dataset: {e}")
+        print("Continuing with simulated data...")
+        # Simulate dataset
+        class FakeDataset:
+            def __init__(self):
+                self.data = [f"This is sentence number {i}." for i in range(100)]
+            def __len__(self):
+                return len(self.data)
+            def __getitem__(self, idx):
+                if isinstance(idx, slice):
+                    return {"text": self.data[idx]}
+                return {"text": self.data[idx]}
+        dataset = FakeDataset()
+    
+    print(f"✓ Loaded {len(dataset)} examples")
+    
+    tokenizer, trainer = setup_base_tokenizer()
+    
+    # Create batch iterator for efficiency
+    def batch_iterator(batch_size=100):
+        """Batch iterator - yields multiple examples at once"""
+        for i in range(0, len(dataset), batch_size):
+            batch_data = dataset[i : min(i + batch_size, len(dataset))]
+            if isinstance(batch_data["text"], list):
+                yield batch_data["text"]
+            else:
+                yield [batch_data["text"]]
+    
+    print(f"\n🚀 Training from batched iterator...")
+    print("💡 Batching is 10-20x faster than individual examples!")
+    
+    # Train with length parameter for progress tracking
+    tokenizer.train_from_iterator(
+        batch_iterator(), 
+        trainer=trainer,
+        length=len(dataset)  # Shows accurate progress
+    )
+    
+    print("✓ Dataset training complete!")
+    
+    # Test
+    test = "This is a test sentence."
+    encoding = tokenizer.encode(test)
+    print(f"\nTest: '{test}'")
+    print(f"Tokens: {encoding.tokens}")
+    
+    tokenizer.save("tokenizers/dataset_trained.json")
+    print("\n💾 Saved to: tokenizers/dataset_trained.json")
+
+
+def example_4_gzip_files():
+    """
+    Example 4: Train from gzip files
+    =================================
+    
+    Gzip files can be used as iterators directly.
+    Useful for training on compressed data without decompressing first.
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 4: Train from Gzip Files")
+    print("="*70)
+    
+    import gzip
+    
+    # Create sample gzip files
+    os.makedirs("training_data", exist_ok=True)
+    
+    sample_texts = [
+        "Gzip compression saves disk space.",
+        "Python can read gzip files directly.",
+        "No need to decompress first.",
+        "This is memory efficient.",
+        "Perfect for large datasets.",
+    ]
+    
+    # Create multiple gzip files
+    gzip_files = []
+    for i, text in enumerate(sample_texts):
+        filename = f"training_data/sample_{i}.txt.gz"
+        with gzip.open(filename, "wt") as f:
+            f.write(text + "\n")
+        gzip_files.append(filename)
+    
+    print(f"\n📦 Created {len(gzip_files)} gzip files")
+    
+    tokenizer, trainer = setup_base_tokenizer()
+    
+    # Method 1: Train from single gzip file
+    print("\n📖 Method 1: Single gzip file...")
+    with gzip.open(gzip_files[0], "rt") as f:
+        tokenizer_single, trainer_single = setup_base_tokenizer()
+        tokenizer_single.train_from_iterator(f, trainer=trainer_single)
+    print("✓ Single file training complete!")
+    
+    # Method 2: Train from multiple gzip files
+    print("\n📚 Method 2: Multiple gzip files...")
+    
+    def gzip_iterator(file_paths):
+        """Iterator over multiple gzip files"""
+        for path in file_paths:
+            with gzip.open(path, "rt") as f:
+                for line in f:
+                    yield line.strip()
+    
+    tokenizer.train_from_iterator(gzip_iterator(gzip_files), trainer=trainer)
+    print("✓ Multi-file training complete!")
+    
+    # Test
+    test = "Gzip files are efficient."
+    print(f"\nTest: '{test}'")
+    print(f"Tokens: {tokenizer.encode(test).tokens}")
+    
+    tokenizer.save("tokenizers/gzip_trained.json")
+    print("\n💾 Saved to: tokenizers/gzip_trained.json")
+    
+    # Cleanup
+    print("\n🧹 Cleaning up gzip files...")
+    for f in gzip_files:
+        os.remove(f)
+
+
+def example_5_batch_efficiency():
+    """
+    Example 5: Batch Iterator Efficiency
+    ====================================
+    
+    Demonstrates the performance difference between:
+    - Yielding one example at a time
+    - Yielding batches of examples
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 5: Batch Iterator Efficiency")
+    print("="*70)
+    
+    # Generate test data
+    num_examples = 1000
+    texts = [f"This is example number {i} with some additional text." for i in range(num_examples)]
+    
+    print(f"\n📊 Training on {num_examples} examples...")
+    
+    # Method 1: One at a time (slower)
+    print("\n⏱️  Method 1: Yielding one at a time...")
+    
+    def single_iterator():
+        for text in texts:
+            yield text
+    
+    import time
+    
+    tokenizer1, trainer1 = setup_base_tokenizer()
+    start = time.time()
+    tokenizer1.train_from_iterator(single_iterator(), trainer=trainer1)
+    time1 = time.time() - start
+    
+    print(f"✓ Time: {time1:.3f} seconds")
+    
+    # Method 2: In batches (faster)
+    print("\n⚡ Method 2: Yielding in batches of 100...")
+    
+    def batch_iterator(batch_size=100):
+        for i in range(0, len(texts), batch_size):
+            yield texts[i:i+batch_size]
+    
+    tokenizer2, trainer2 = setup_base_tokenizer()
+    start = time.time()
+    tokenizer2.train_from_iterator(batch_iterator(), trainer=trainer2, length=num_examples)
+    time2 = time.time() - start
+    
+    print(f"✓ Time: {time2:.3f} seconds")
+    
+    # Compare
+    speedup = time1 / time2
+    print(f"\n📈 RESULTS:")
+    print(f"   Single: {time1:.3f}s")
+    print(f"   Batch:  {time2:.3f}s")
+    print(f"   Speedup: {speedup:.2f}x faster!")
+    
+    print("\n💡 KEY TAKEAWAY:")
+    print("   Always use batch iterators for large datasets!")
+    print("   Typical batch sizes: 100-1000 examples")
+
+
+def example_6_custom_iterator():
+    """
+    Example 6: Custom Iterator Patterns
+    ===================================
+    
+    Advanced patterns for different data sources and transformations.
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 6: Custom Iterator Patterns")
+    print("="*70)
+    
+    tokenizer, trainer = setup_base_tokenizer()
+    
+    # Pattern 1: Filter iterator
+    print("\n🔍 Pattern 1: Filtering data during iteration...")
+    
+    all_texts = [
+        "This is a good example.",
+        "",  # Empty - will be filtered
+        "Another good example.",
+        "   ",  # Whitespace only - will be filtered
+        "Yet another example.",
+    ]
+    
+    def filtered_iterator():
+        """Only yield non-empty, non-whitespace texts"""
+        for text in all_texts:
+            if text and text.strip():
+                yield text
+    
+    print(f"   Input: {len(all_texts)} texts (some empty)")
+    valid_count = sum(1 for t in all_texts if t and t.strip())
+    print(f"   Output: {valid_count} valid texts")
+    
+    # Pattern 2: Transform iterator
+    print("\n🔄 Pattern 2: Transforming data during iteration...")
+    
+    raw_texts = [
+        "THIS IS UPPERCASE",
+        "This Is Mixed Case",
+        "this is lowercase",
+    ]
+    
+    def transform_iterator():
+        """Apply transformations on-the-fly"""
+        for text in raw_texts:
+            # Lowercase everything
+            yield text.lower()
+    
+    print("   Transforming to lowercase during training...")
+    
+    # Pattern 3: Multi-source iterator
+    print("\n📚 Pattern 3: Combining multiple data sources...")
+    
+    source1 = ["Text from source 1.", "More from source 1."]
+    source2 = ["Text from source 2.", "More from source 2."]
+    source3 = ["Text from source 3.", "More from source 3."]
+    
+    def multi_source_iterator():
+        """Combine multiple data sources"""
+        for text in source1:
+            yield text
+        for text in source2:
+            yield text
+        for text in source3:
+            yield text
+    
+    total = len(source1) + len(source2) + len(source3)
+    print(f"   Combining {len(source1)} + {len(source2)} + {len(source3)} = {total} texts")
+    
+    # Train with all patterns combined
+    def advanced_iterator():
+        """Combine filtering, transformation, and multi-source"""
+        sources = [all_texts, raw_texts, source1, source2, source3]
+        for source in sources:
+            for text in source:
+                # Filter empty
+                if text and text.strip():
+                    # Transform to lowercase
+                    yield text.lower()
+    
+    print("\n🚀 Training with advanced iterator...")
+    tokenizer.train_from_iterator(advanced_iterator(), trainer=trainer)
+    print("✓ Training complete!")
+    
+    # Test
+    test = "This is mixed case text."
+    encoding = tokenizer.encode(test.lower())
+    print(f"\nTest: '{test}'")
+    print(f"Tokens: {encoding.tokens}")
+
+
+def example_7_progress_tracking():
+    """
+    Example 7: Progress Tracking and Logging
+    ========================================
+    
+    Shows how to track training progress with length parameter.
+    """
+    print("\n" + "="*70)
+    print("EXAMPLE 7: Progress Tracking")
+    print("="*70)
+    
+    num_examples = 500
+    texts = [f"Example sentence number {i}." for i in range(num_examples)]
+    
+    tokenizer, trainer = setup_base_tokenizer()
+    
+    print(f"\n📊 Training on {num_examples} examples with progress tracking...")
+    print("💡 The 'length' parameter enables accurate progress bars\n")
+    
+    def counting_iterator():
+        """Iterator that we can count"""
+        for text in texts:
+            yield text
+    
+    # Train with length parameter
+    tokenizer.train_from_iterator(
+        counting_iterator(),
+        trainer=trainer,
+        length=num_examples  # This enables progress tracking!
+    )
+    
+    print("\n✓ Training complete with progress tracking!")
+    
+    print("\n💡 TIP:")
+    print("   - Without 'length': no progress bar")
+    print("   - With 'length': accurate progress percentage")
+    print("   - Essential for large datasets (millions of examples)")
+
+
+def summary():
+    """Print summary of all methods"""
+    print("\n" + "="*70)
+    print("📚 SUMMARY: Training Methods")
+    print("="*70)
+    
+    print("""
+✅ Training from Iterators:
+   - List/Tuple: tokenizer.train_from_iterator(data, trainer)
+   - Generator: tokenizer.train_from_iterator(gen(), trainer)
+   - Any iterable works!
+
+✅ Best Practices:
+   1. Use batch iterators (10-20x faster)
+   2. Provide 'length' parameter for progress bars
+   3. Filter empty/invalid data during iteration
+   4. Transform data on-the-fly (lowercase, clean, etc.)
+   5. Combine multiple data sources in one iterator
+
+✅ Common Patterns:
+   - 🤗 Datasets: Use batch_iterator() with length
+   - Gzip files: Read directly without decompression
+   - Multiple files: Chain iterators
+   - Large datasets: Generator to avoid loading all in memory
+
+✅ Performance Tips:
+   - Batch size: 100-1000 examples
+   - Use generators for memory efficiency
+   - Filter/transform during iteration, not before
+   - Enable progress tracking with length parameter
+
+📖 Reference:
+   https://huggingface.co/docs/tokenizers/python/latest/tutorials/python/training_from_memory.html
+    """)
+
+
+def main():
+    """Run all examples"""
+    print("\n" + "🎓 " + "="*66 + " 🎓")
+    print("   ADVANCED TRAINING METHODS - HuggingFace Tokenizers")
+    print("🎓 " + "="*66 + " 🎓")
+    
+    print("\n📌 This demonstrates advanced training patterns from official docs:")
+    print("   - Training from any Python iterator")
+    print("   - Using 🤗 Datasets library")
+    print("   - Reading gzip files directly")
+    print("   - Batch iterators for performance")
+    print("   - Custom iterator patterns")
+    
+    # Run examples
+    example_1_train_from_list()
+    example_2_train_from_tuple()
+    example_3_datasets_library()
+    example_4_gzip_files()
+    example_5_batch_efficiency()
+    example_6_custom_iterator()
+    example_7_progress_tracking()
+    
+    # Summary
+    summary()
+    
+    print("\n" + "="*70)
+    print("✅ All examples complete!")
+    print("="*70)
+    print("\n💾 Trained tokenizers saved in: ./tokenizers/")
+    print("\n🎯 Next Steps:")
+    print("   1. Try training on your own data")
+    print("   2. Experiment with different batch sizes")
+    print("   3. Load large datasets with 🤗 Datasets")
+    print("   4. Build custom iterators for your use case")
+    print("\n")
+
+
+if __name__ == "__main__":
+    main()

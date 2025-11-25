@@ -1,12 +1,62 @@
-Encoded Token IDs: [15339, 1268, 527, 499, 949]
-Decoded Text: hello how are you ?
+======================================================================
+BASIC TOKENIZATION EXAMPLE
+======================================================================
 
-Token Breakdown:
-15339 -> 'hello'
-1268 -> ' how'
-527 -> ' are'
-499 -> ' you'
-949 -> ' ?'
+Loading cl100k_base encoding (used by GPT-4)...
+✓ Encoding loaded
 
---Total Number of Tokens--
-5
+Original text: 'hello how are you ?'
+Character count: 19
+
+======================================================================
+ENCODING: Text → Token IDs
+======================================================================
+Token IDs: [15339, 1268, 527, 499, 949]
+Number of tokens: 5
+
+======================================================================
+DECODING: Token IDs → Text
+======================================================================
+Decoded text: 'hello how are you ?'
+Match original? True
+
+======================================================================
+TOKEN BREAKDOWN
+======================================================================
+Token ID     Text Piece
+----------------------------------------------------------------------
+15339        'hello'
+1268         ' how'
+527          ' are'
+499          ' you'
+949          ' ?'
+
+======================================================================
+SUMMARY
+======================================================================
+Input: 'hello how are you ?'
+Tokens: 5
+Characters: 19
+Ratio: 3.80 characters per token
+
+======================================================================
+TRY THESE EXAMPLES
+======================================================================
+
+See how different texts tokenize:
+
+ 9 tokens: 'The quick brown fox jumps over the lazy dog'
+ 7 tokens: 'I love AI and machine learning!'
+ 6 tokens: 'GPT-4 is amazing'
+ 7 tokens: 'print('Hello, World!')'
+11 tokens: 'supercalifragilisticexpialidocious'
+
+======================================================================
+NEXT STEPS
+======================================================================
+1. Read intro.md for detailed explanations
+2. Run token_exploration.py for advanced examples
+3. Try token_exercises.py for interactive practice
+4. Experiment by changing the 'text' variable above!
+======================================================================
+

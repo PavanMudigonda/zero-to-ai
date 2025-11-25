@@ -169,6 +169,12 @@ text = "I love ML"  # 3 words
    - Language-agnostic, treats text as raw bytes
    - No pre-tokenization (no word boundaries)
 
+Note: Learn more at 
+https://huggingface.co/docs/transformers/en/tokenizer_summary
+https://www.reddit.com/r/MachineLearning/comments/rprmq3/d_sentencepiece_wordpiece_bpe_which_tokenizer_is/
+https://medium.com/@lmpo/from-text-to-tokens-understanding-bpe-wordpiece-and-sentencepiece-in-nlp-1367d9d610af
+https://medium.com/@lmpo/a-brief-history-of-ai-with-deep-learning-26f7948bc87b
+https://medium.com/@lmpo/the-evolution-of-artificial-neurons-90619f224f63
 ### Model-Specific Encodings
 
 | Model | Encoding | Vocab Size | Best For |
