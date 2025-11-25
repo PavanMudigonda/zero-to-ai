@@ -1,7 +1,7 @@
 # Complete AI/ML Learning Path
 
 ## Phase 1: Tokenization ✅ (Complete)
-**Location**: `/Users/nagapavankumar.mudigonda/code/1-token/`
+**Location**: `1-token/`
 
 ### What You Learned
 - How to break text into tokens
@@ -18,7 +18,7 @@
 ---
 
 ## Phase 2: Embeddings (Next Step 📍)
-**Location**: `/Users/nagapavankumar.mudigonda/code/2-embeddings/`
+**Location**: `2-embeddings/`
 
 ### What You'll Learn
 - Convert tokens → dense vectors
@@ -36,7 +36,7 @@
 ---
 
 ## Phase 3: Vector Databases (After Embeddings 🔜)
-**Location**: `/Users/nagapavankumar.mudigonda/code/3-vector-databases/`
+**Location**: `3-vector-databases/`
 
 ### What You'll Learn
 - Store embeddings efficiently

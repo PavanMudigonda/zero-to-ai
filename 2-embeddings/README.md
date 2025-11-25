@@ -13,12 +13,14 @@
 - **Vector Operations**: king - man + woman ≈ queen
 - **Distance Metrics**: Cosine similarity, Euclidean distance
 - **Vector Databases**: Storing and searching embeddings efficiently
+- **Different Approaches**: HuggingFace Transformers vs Sentence Transformers vs OpenAI
 
 ### Why This Matters
 - Foundation for **all modern NLP** (GPT, BERT, etc.)
 - Powers **semantic search** (search by meaning, not keywords)
 - Enables **RAG systems** (Retrieval Augmented Generation)
 - Core of **recommendation systems**
+- **Connects Phase 1**: From tokenization → embeddings → applications
 
 ---
 
@@ -27,7 +29,7 @@
 ### Prerequisites
 ```bash
 # Install required packages
-pip install sentence-transformers numpy scikit-learn chromadb
+pip install sentence-transformers transformers torch numpy scikit-learn chromadb openai
 ```
 
 ### Learning Path (Run in Order)
@@ -62,7 +64,54 @@ python semantic_similarity.py
 
 ---
 
-#### 3. Vector Databases
+#### 3. HuggingFace Transformers Embeddings ⭐ NEW
+```bash
+python huggingface_embeddings.py
+```
+**What you'll learn:**
+- **Connect to Phase 1**: Use BERT/RoBERTa from tokenization phase
+- Extract embeddings from transformer models
+- CLS token vs mean pooling vs max pooling
+- Token-level vs sentence-level embeddings
+- Contextual embeddings (same word, different meanings)
+- Batch processing for efficiency
+- Compare different models (BERT, RoBERTa, DistilBERT)
+- Multilingual embeddings
+- Access embeddings from different layers
+
+**Time**: 45-60 minutes
+
+**⚡ This bridges Phase 1 and Phase 2!**
+- Phase 1: You learned BERT tokenizer
+- Phase 3: Learn how to get BERT embeddings
+- Connection: tokenization → embeddings → applications
+
+---
+
+#### 4. OpenAI Embeddings ⭐ NEW
+```bash
+python openai_embeddings.py
+```
+**What you'll learn:**
+- Cloud-based embeddings (highest quality)
+- Compare models: text-embedding-3-small vs 3-large
+- Batch processing for cost efficiency
+- Semantic search with OpenAI
+- Reduced dimensions to save storage
+- Caching strategy to reduce costs
+- Cost estimation for different workloads
+- Error handling and retry logic
+
+**Prerequisites**: OpenAI API key
+```bash
+export OPENAI_API_KEY='your-key-here'
+```
+
+**Time**: 40-50 minutes
+
+---
+
+#### 5. Vector Databases
 ```bash
 python vector_database_demo.py
 ```
@@ -77,26 +126,67 @@ python vector_database_demo.py
 
 ---
 
+#### 6. Embedding Model Comparison ⭐ NEW
+```bash
+# Read the comprehensive comparison guide
+open embedding_comparison.md
+# or on Linux:
+cat embedding_comparison.md
+```
+**What you'll learn:**
+- **HuggingFace Transformers** vs **Sentence Transformers** vs **OpenAI**
+- When to use which approach
+- Quality vs speed vs cost trade-offs
+- Decision tree for choosing models
+- Performance benchmarks
+- Cost analysis (self-hosted vs API)
+- Use case recommendations
+- Migration strategies
+
+**Time**: 30-40 minutes (reading + understanding)
+
+**⚡ This helps you choose the right approach!**
+
+---
+
 ## 🎯 Key Takeaways
 
 After completing this phase, you should understand:
 
 1. **Embeddings Bridge Language & Math**
-   - Text → Tokens → Embeddings → Machine Understanding
+   - Text → Tokens (Phase 1) → Embeddings (Phase 2) → Machine Understanding
    - Dense vectors capture semantic meaning
 
-2. **Similarity = Distance in Vector Space**
+2. **Multiple Ways to Generate Embeddings**
+   - **HuggingFace Transformers**: Maximum flexibility, requires more code
+   - **Sentence Transformers**: Optimized for simplicity and speed
+   - **OpenAI**: Highest quality, cloud-based, pay per use
+
+3. **Similarity = Distance in Vector Space**
    - Cosine similarity measures angle between vectors
    - Similar meaning = small angle = high similarity
 
-3. **Vector DBs Enable Semantic Search**
+4. **Pooling Strategies Matter**
+   - CLS token: Traditional BERT approach
+   - Mean pooling: Often better for similarity
+   - Max pooling: Captures strongest features
+   - Choose based on your task
+
+5. **Vector DBs Enable Semantic Search**
    - Store millions of embeddings
    - Search by meaning in milliseconds
    - Foundation for RAG systems
 
-4. **Applications Are Endless**
+6. **Trade-offs Are Real**
+   - Quality ↔ Speed ↔ Cost
+   - Local ↔ Cloud
+   - Flexibility ↔ Simplicity
+   - Use the comparison guide to decide!
+
+7. **Applications Are Endless**
    - Search, recommendations, Q&A, clustering
    - Duplicate detection, classification, generation
+   - RAG systems, chatbots, content moderation
 
 ---
 
@@ -241,13 +331,64 @@ Before moving to Phase 3:
 
 - [ ] Ran `embeddings_intro.py` and understood output
 - [ ] Ran `semantic_similarity.py` and compared different texts
+- [ ] Ran `huggingface_embeddings.py` - **connect Phase 1 to Phase 2** ⭐
+- [ ] Ran `openai_embeddings.py` (optional, needs API key)
+- [ ] Read `embedding_comparison.md` - **choose the right approach** ⭐
 - [ ] Ran `vector_database_demo.py` and queried the database
 - [ ] Understand cosine similarity formula
+- [ ] Understand difference between CLS token and mean pooling
 - [ ] Can explain embeddings to a friend
+- [ ] Know when to use HuggingFace vs Sentence Transformers vs OpenAI
 - [ ] Built at least one small project using embeddings
 
 ---
 
-**Ready to move on?** Head to Phase 3: Neural Networks & Transformers!
+**Ready to move on?** Head to Phase 3: Vector Databases!
 
 **Need more practice?** Build one of the project ideas above first.
+
+---
+
+## 📦 Summary of Files
+
+| File | Purpose | Time | Status |
+|------|---------|------|--------|
+| `embeddings_intro.py` | Introduction to embeddings | 15-20 min | Core |
+| `semantic_similarity.py` | Text similarity comparisons | 20-25 min | Core |
+| `huggingface_embeddings.py` | BERT/RoBERTa embeddings | 45-60 min | ⭐ NEW |
+| `openai_embeddings.py` | Cloud-based embeddings | 40-50 min | ⭐ NEW |
+| `embedding_comparison.md` | Choose the right approach | 30-40 min | ⭐ NEW |
+| `vector_database_demo.py` | Store & search embeddings | 30-35 min | Core |
+
+**Total Learning Time**: 3-4 hours (with new content)
+
+---
+
+## 🔗 Connections Between Phases
+
+### Phase 1 → Phase 2
+```
+Phase 1: BERT Tokenizer
+  ↓
+  "Hello world" → [101, 7592, 2088, 102]
+  ↓
+Phase 2: BERT Embeddings
+  ↓
+  [101, 7592, 2088, 102] → [0.23, -0.45, 0.67, ..., 0.12]
+                            (768 dimensions)
+  ↓
+Applications: Semantic search, Q&A, RAG
+```
+
+### Phase 2 → Phase 3
+```
+Phase 2: Generate Embeddings
+  ↓
+  Text → Vector [0.1, 0.2, ..., 0.9]
+  ↓
+Phase 3: Store in Vector Database
+  ↓
+  Millions of vectors → Fast semantic search
+  ↓
+Applications: Production RAG systems, chatbots, search engines
+```
