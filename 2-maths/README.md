@@ -1,22 +1,80 @@
 # Mathematics for Machine Learning
 
-This directory contains comprehensive Jupyter notebooks covering the mathematical foundations essential for understanding and implementing machine learning algorithms.
+This directory contains comprehensive Jupyter notebooks covering the mathematical foundations essential for understanding and implementing machine learning algorithms. The content is organized into well-structured folders for easy navigation:
 
-## 📚 Interactive Notebooks
+- **📁 foundational/** - Core math topics (9 notebooks)
+- **📁 mml-book/** - MML book chapters covering theory and ML applications (10 notebooks)
+- **📁 exercises/** - Practice exercises with solutions (4 notebooks)
+- **📁 resources/** - Reference materials including the MML textbook
 
-### [00. Python ML Libraries](./00_python_ml_libraries.ipynb)
-**Prerequisites for all math notebooks**
+## 📚 Table of Contents
+
+- [Directory Structure](#-directory-structure)
+- [Part I: Foundational Math Notebooks](#part-i-foundational-math-notebooks)
+- [Part II: MML Book - Mathematical Foundations](#part-ii-mml-book---mathematical-foundations-chapters-2-7)
+- [Part III: MML Book - ML Applications](#part-iii-mml-book---ml-applications-chapters-9-12)
+- [Practice Exercises](#️-practice-with-exercises)
+- [Learning Paths](#-learning-paths)
+- [Quick Start](#-quick-start)
+- [Resources](#-additional-mathematics-resources)
+
+---
+
+## 📁 Directory Structure
+
+```
+2-maths/
+├── README.md                    # This file
+├── foundational/                # Core mathematical topics (00-08)
+│   ├── 00_python_ml_libraries.ipynb
+│   ├── 01_linear_algebra_fundamentals.ipynb
+│   ├── 02_calculus_derivatives.ipynb
+│   ├── 03_probability_statistics.ipynb
+│   ├── 04_gradient_descent.ipynb
+│   ├── 05_information_theory.ipynb
+│   ├── 06_statistical_inference.ipynb
+│   ├── 07_neural_network_math.ipynb
+│   └── 08_advanced_linear_algebra.ipynb
+├── mml-book/                    # MML textbook chapters (01-10)
+│   ├── 01_linear_algebra.ipynb
+│   ├── 02_analytic_geometry.ipynb
+│   ├── 03_matrix_decompositions.ipynb
+│   ├── 04_vector_calculus.ipynb
+│   ├── 05_probability.ipynb
+│   ├── 06_optimization.ipynb
+│   ├── 07_linear_regression.ipynb
+│   ├── 08_pca.ipynb
+│   ├── 09_gmm.ipynb
+│   └── 10_svm.ipynb
+├── exercises/                   # Practice problems & solutions
+│   ├── mml_exercises_part1.ipynb
+│   ├── mml_solutions_part1.ipynb
+│   ├── mml_exercises_part2.ipynb
+│   └── mml_solutions_part2.ipynb
+└── resources/                   # Reference materials
+    └── mml-book.pdf
+```
+
+---
+
+## Part I: Foundational Math Notebooks
+
+**Location**: `foundational/` folder
+
+### [00. Python ML Libraries](./foundational/00_python_ml_libraries.ipynb)
+**Prerequisites for all math notebooks** ⭐ Start here!
 - NumPy fundamentals and array operations
 - Matplotlib for plotting and visualization
 - Seaborn for statistical plots
 - SciPy for scientific computing
 - scikit-learn basics for ML applications
+- **Bonus sections**: Broadcasting, fancy indexing, advanced numpy operations, sklearn pipelines
 
-**Start here** if you're new to Python's scientific computing ecosystem.
+**Duration**: 2-3 hours
 
 ---
 
-### [01. Linear Algebra Fundamentals](./01_linear_algebra_fundamentals.ipynb)
+### [01. Linear Algebra Fundamentals](./foundational/01_linear_algebra_fundamentals.ipynb)
 **Topics covered:**
 - Vectors and vector operations (addition, scalar multiplication, dot product)
 - Matrices and matrix operations (multiplication, transpose, inverse)
@@ -26,9 +84,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Linear algebra is the language of ML - from data representation to neural network operations.
 
+**Duration**: 3-4 hours
+
 ---
 
-### [02. Calculus & Derivatives](./02_calculus_derivatives.ipynb)
+### [02. Calculus & Derivatives](./foundational/02_calculus_derivatives.ipynb)
 **Topics covered:**
 - Derivatives and their geometric interpretation
 - Common activation functions (ReLU, Sigmoid, Tanh) and their derivatives
@@ -41,9 +101,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Calculus enables optimization - the foundation of training ML models.
 
+**Duration**: 3-4 hours
+
 ---
 
-### [03. Probability & Statistics](./03_probability_statistics.ipynb)
+### [03. Probability & Statistics](./foundational/03_probability_statistics.ipynb)
 **Topics covered:**
 - Probability fundamentals (rules, conditional probability)
 - Random variables (discrete and continuous)
@@ -56,9 +118,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Probability theory provides the mathematical framework for reasoning under uncertainty.
 
+**Duration**: 4-5 hours
+
 ---
 
-### [04. Gradient Descent](./04_gradient_descent.ipynb)
+### [04. Gradient Descent](./foundational/04_gradient_descent.ipynb)
 **Topics covered:**
 - Gradient descent algorithm
 - Learning rate effects (too small, too large, optimal)
@@ -72,9 +136,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Gradient descent is the workhorse algorithm that powers modern deep learning.
 
+**Duration**: 3-4 hours
+
 ---
 
-### [05. Information Theory](./05_information_theory.ipynb)
+### [05. Information Theory](./foundational/05_information_theory.ipynb)
 **Topics covered:**
 - Shannon entropy and information content
 - Cross-entropy loss (the main loss function in deep learning)
@@ -86,9 +152,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Information theory provides the mathematical foundation for loss functions and measuring uncertainty.
 
+**Duration**: 2-3 hours
+
 ---
 
-### [06. Statistical Inference](./06_statistical_inference.ipynb)
+### [06. Statistical Inference](./foundational/06_statistical_inference.ipynb)
 **Topics covered:**
 - Population vs sample statistics
 - Confidence intervals
@@ -103,9 +171,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Statistical inference enables us to make valid conclusions from data and evaluate ML models rigorously.
 
+**Duration**: 3-4 hours
+
 ---
 
-### [07. Neural Network Mathematics](./07_neural_network_math.ipynb)
+### [07. Neural Network Mathematics](./foundational/07_neural_network_math.ipynb)
 **Topics covered:**
 - Backpropagation and chain rule
 - Vanishing and exploding gradients
@@ -118,9 +188,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Modern neural networks combine multiple mathematical techniques to enable deep learning.
 
+**Duration**: 4-5 hours
+
 ---
 
-### [08. Advanced Linear Algebra](./08_advanced_linear_algebra.ipynb)
+### [08. Advanced Linear Algebra](./foundational/08_advanced_linear_algebra.ipynb)
 **Topics covered:**
 - Eigendecomposition in depth
 - Singular Value Decomposition (SVD)
@@ -133,77 +205,433 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 **Key takeaway**: Matrix decompositions are the foundation of many ML algorithms from PCA to recommender systems.
 
+**Duration**: 4-5 hours
+
 ---
 
-## 🎯 Learning Path
+## Part II: MML Book - Mathematical Foundations (Chapters 2-7)
 
-**Recommended order for beginners:**
+**Location**: `mml-book/` folder
 
-1. **00. Python ML Libraries** - Get familiar with the tools
-2. **01. Linear Algebra** - Foundation for data representation
-3. **02. Calculus** - Understand optimization mechanics
-4. **03. Probability** - Handle uncertainty and probabilistic models
-5. **04. Gradient Descent** - The core training algorithm
+> **Based on**: [Mathematics for Machine Learning](https://mml-book.github.io/) by Deisenroth, Faisal, and Ong
 
-**Advanced topics** (can be studied in any order after the basics):
+These notebooks provide hands-on Python implementations of the mathematical concepts from the MML textbook, with ~150+ executable code cells covering all foundational chapters.
 
-6. **05. Information Theory** - Understanding loss functions
-7. **06. Statistical Inference** - Model evaluation and testing
-8. **07. Neural Network Math** - Deep learning foundations
-9. **08. Advanced Linear Algebra** - Dimensionality reduction and decompositions
+### [01. Linear Algebra](./mml-book/01_linear_algebra.ipynb) - Chapter 2
+**Topics covered:**
+- Systems of linear equations and Gaussian elimination
+- Matrices and matrix operations
+- Solving linear systems (geometric and algorithmic perspectives)
+- Vector spaces, linear independence, basis, and rank
+- Linear mappings and transformations
+- Affine spaces
 
-## 📊 Coverage Status
+**Implementations**: Gaussian elimination from scratch, matrix operations, Gram-Schmidt orthogonalization, geometric transformations (rotation, scaling, shear)
 
-| Topic | Notebook | Status |
-|-------|----------|--------|
-| Python Libraries | 00 | ✅ Complete |
-| Linear Algebra Basics | 01 | ✅ Complete |
-| Calculus & Derivatives | 02 | ✅ Complete |
-| Probability & Statistics | 03 | ✅ Complete |
-| Gradient Descent | 04 | ✅ Complete |
-| Information Theory | 05 | ✅ Complete |
-| Statistical Inference | 06 | ✅ Complete |
-| Neural Network Math | 07 | ✅ Complete |
-| Advanced Linear Algebra | 08 | ✅ Complete |
+**Key ML connections**: Data representation, linear regression, neural network layers
 
-## 🔧 Prerequisites
+**Cells**: 20+ | **Duration**: 5-6 hours
+
+---
+
+### [02. Analytic Geometry](./mml-book/02_analytic_geometry.ipynb) - Chapter 3
+**Topics covered:**
+- Norms (L1, L2, L∞) and their properties
+- Inner products and orthogonality
+- Lengths, distances, and angles
+- Orthonormal bases and Gram-Schmidt process
+- Orthogonal projections (vectors and subspaces)
+- Rotations and reflections
+
+**Implementations**: Different norm visualizations, inner product computations, Gram-Schmidt, 2D/3D projections, rotation matrices
+
+**Key ML connections**: Distance metrics, similarity measures, feature transformations
+
+**Cells**: 18+ | **Duration**: 4-5 hours
+
+---
+
+### [03. Matrix Decompositions](./mml-book/03_matrix_decompositions.ipynb) - Chapter 4
+**Topics covered:**
+- Determinant and trace
+- Eigenvalues and eigenvectors (geometric interpretation)
+- Cholesky decomposition
+- Eigendecomposition and diagonalization
+- Singular Value Decomposition (SVD)
+- Matrix approximation (low-rank)
+
+**Implementations**: Eigenvalue computation, Cholesky solving, SVD visualization, image compression demo, matrix powers via eigendecomposition
+
+**Key ML connections**: PCA, spectral clustering, image compression, collaborative filtering
+
+**Cells**: 22+ | **Duration**: 5-6 hours
+
+---
+
+### [04. Vector Calculus](./mml-book/04_vector_calculus.ipynb) - Chapter 5
+**Topics covered:**
+- Differentiation of univariate functions
+- Partial differentiation and gradients
+- Jacobian matrices
+- Gradients of vector-valued functions
+- Backpropagation and automatic differentiation
+- Higher-order derivatives (Hessian)
+- Taylor series approximation
+
+**Implementations**: Numerical derivatives, gradient computation, Jacobian examples, manual backpropagation, Hessian computation, Taylor approximations
+
+**Key ML connections**: Gradient descent, neural network training, second-order optimization
+
+**Cells**: 25+ | **Duration**: 6-7 hours
+
+---
+
+### [05. Probability and Distributions](./mml-book/05_probability.ipynb) - Chapter 6
+**Topics covered:**
+- Probability spaces and probability theory axioms
+- Discrete and continuous distributions
+- Sum rule, product rule, Bayes' theorem
+- Summary statistics (mean, variance, covariance)
+- Gaussian distribution (univariate and multivariate)
+- Joint, marginal, and conditional distributions
+- Covariance and correlation
+
+**Implementations**: Distribution sampling and visualization, Bayes' theorem examples, multivariate Gaussians, covariance matrix analysis
+
+**Key ML connections**: Probabilistic models, MLE, Bayesian inference, GMMs
+
+**Cells**: 20+ | **Duration**: 5-6 hours
+
+---
+
+### [06. Continuous Optimization](./mml-book/06_optimization.ipynb) - Chapter 7
+**Topics covered:**
+- Optimization using gradient descent
+- Gradients and directional derivatives
+- Constrained optimization and Lagrange multipliers
+- Convex optimization
+- Learning rate selection and momentum
+- Numerical vs analytical solutions
+
+**Implementations**: Gradient descent (1D and 2D), momentum variants, Lagrange multiplier examples, convexity demonstrations, learning rate comparisons
+
+**Key ML connections**: Training algorithms, loss minimization, SVM dual problem
+
+**Cells**: 25+ | **Duration**: 5-6 hours
+
+---
+
+## Part III: MML Book - ML Applications (Chapters 9-12)
+
+These notebooks demonstrate how the mathematical foundations are applied to real machine learning algorithms, with complete implementations from scratch plus sklearn comparisons.
+
+### [07. Linear Regression](./mml-book/07_linear_regression.ipynb) - Chapter 9
+**Topics covered:**
+- Problem formulation (matrix form)
+- Maximum Likelihood Estimation (MLE)
+- Normal equations: w = (X^T X)^{-1} X^T y
+- Regularization: Ridge (L2) and Lasso (L1)
+- Bayesian linear regression with uncertainty quantification
+- Model selection and bias-variance tradeoff
+
+**Implementations**: MLE from scratch, polynomial regression, Ridge/Lasso comparison, Bayesian regression with predictive uncertainty, cross-validation
+
+**Real-world examples**: Synthetic data fitting, high-dimensional sparse problems, uncertainty visualization
+
+**Key insights**: MLE ≡ minimizing squared error, L1 produces sparsity, Bayesian approach quantifies uncertainty
+
+**Cells**: 22+ | **Duration**: 5-6 hours
+
+---
+
+### [08. Dimensionality Reduction with PCA](./mml-book/08_pca.ipynb) - Chapter 10
+**Topics covered:**
+- Problem setting (high-D → low-D)
+- Maximum variance perspective
+- Projection and reconstruction perspective
+- Eigendecomposition of covariance matrix
+- SVD for PCA (efficient computation)
+- Scree plots and explained variance
+- Data whitening and preprocessing
+
+**Implementations**: PCA from scratch (both eigendecomposition and SVD), scree plots, reconstruction with varying components, whitening transformation
+
+**Real-world examples**: Handwritten digits (MNIST), 3D → 2D visualization, image compression
+
+**Key insights**: Maximizing variance ≡ minimizing reconstruction error, principal components are eigenvectors of covariance matrix
+
+**Cells**: 20+ | **Duration**: 5-6 hours
+
+---
+
+### [09. Density Estimation with GMM](./mml-book/09_gmm.ipynb) - Chapter 11
+**Topics covered:**
+- Gaussian Mixture Models (mixture of Gaussians)
+- Expectation-Maximization (EM) algorithm
+- E-step: Computing responsibilities (soft assignments)
+- M-step: Updating parameters (means, covariances, weights)
+- Soft vs hard clustering
+- Model selection with BIC/AIC
+- Latent variable perspective
+
+**Implementations**: EM algorithm from scratch, responsibility visualization with pie charts, covariance ellipses, BIC/AIC comparison, anomaly detection
+
+**Real-world examples**: Synthetic mixture data, density estimation, clustering with uncertainty
+
+**Key insights**: EM guarantees convergence, soft clustering captures uncertainty, GMM can model complex distributions
+
+**Cells**: 18+ | **Duration**: 5-6 hours
+
+---
+
+### [10. Classification with SVM](./mml-book/10_svm.ipynb) - Chapter 12
+**Topics covered:**
+- Separating hyperplanes and margins
+- Maximum margin principle
+- Primal optimization problem (convex QP)
+- Dual formulation with Lagrange multipliers
+- Support vectors and KKT conditions
+- Kernel trick (linear, polynomial, RBF)
+- Soft margin SVM (slack variables and C parameter)
+
+**Implementations**: Linear SVM visualization, kernel comparisons (linear/poly/RBF), decision boundaries, support vector identification, hyperparameter tuning
+
+**Real-world examples**: XOR pattern (nonlinear), handwritten digit classification (3 vs 8), overlapping data
+
+**Key insights**: Kernel trick enables nonlinear classification without explicit feature mapping, C controls bias-variance tradeoff
+
+**Cells**: 20+ | **Duration**: 5-6 hours
+
+---
+
+## 🎯 Learning Paths
+
+Choose your path based on your goals and background:
+
+### Path 1: Foundations First (Recommended for Beginners)
+**Best for**: Those new to ML or wanting a solid mathematical foundation
+
+**Estimated time**: 6-8 weeks (30-40 hours)
+
+1. **00. Python ML Libraries** (2-3h) - Essential tools
+2. **01. Linear Algebra Fundamentals** (3-4h) - Core concepts
+3. **02. Calculus & Derivatives** (3-4h) - Optimization basics
+4. **03. Probability & Statistics** (4-5h) - Uncertainty and inference
+5. **04. Gradient Descent** (3-4h) - Core training algorithm
+6. **05. Information Theory** (2-3h) - Loss functions
+7. **06. Statistical Inference** (3-4h) - Model evaluation
+8. **07. Neural Network Mathematics** (4-5h) - Deep learning math
+9. **08. Advanced Linear Algebra** (4-5h) - Dimensionality reduction
+
+### Path 2: MML Book Track (Comprehensive Theory + Practice)
+**Best for**: Those following the MML textbook or wanting rigorous mathematical treatment
+
+**Estimated time**: 10-12 weeks (60-70 hours)
+
+**Part I - Mathematical Foundations** (6-8 weeks, 30-35 hours):
+1. **00. Python ML Libraries** (2-3h) - Setup
+2. **01. Linear Algebra** (5-6h) - Chapter 2
+3. **02. Analytic Geometry** (4-5h) - Chapter 3  
+4. **03. Matrix Decompositions** (5-6h) - Chapter 4
+5. **04. Vector Calculus** (6-7h) - Chapter 5
+6. **05. Probability and Distributions** (5-6h) - Chapter 6
+7. **06. Continuous Optimization** (5-6h) - Chapter 7
+
+**Part II - ML Applications** (4-6 weeks, 20-25 hours):
+8. **07. Linear Regression** (5-6h) - Chapter 9
+9. **08. PCA** (5-6h) - Chapter 10
+10. **09. GMM** (5-6h) - Chapter 11
+11. **10. SVM** (5-6h) - Chapter 12
+
+### Path 3: Quick ML Essentials (Fast Track)
+**Best for**: Practitioners who need ML math quickly
+
+**Estimated time**: 3-4 weeks (15-20 hours)
+
+1. **00. Python ML Libraries** (2h) - Speed through
+2. **01. Linear Algebra Fundamentals** (2h) - Core operations
+3. **02. Calculus & Derivatives** (2h) - Gradients only
+4. **04. Gradient Descent** (2h) - Main algorithm
+5. **07. Linear Regression** (3h) - First ML algorithm
+6. **08. PCA** (3h) - Dimensionality reduction
+7. **10. SVM** (3h) - Classification
+
+### Path 4: Deep Learning Focus
+**Best for**: Those specifically interested in neural networks
+
+**Estimated time**: 4-5 weeks (20-25 hours)
+
+1. **00. Python ML Libraries** (2h)
+2. **02. Calculus & Derivatives** (3h) - Backpropagation foundation
+3. **04. Gradient Descent** (3h) - Optimizer algorithms
+4. **04. Vector Calculus** (4h) - Chain rule, Jacobians
+5. **05. Information Theory** (2h) - Loss functions
+6. **07. Neural Network Mathematics** (4h) - Backprop, attention
+7. **07. Linear Regression** (3h) - Basic neural net
+8. **03. Matrix Decompositions** (3h) - Advanced architectures
+
+---
+
+## 📊 Complete Coverage Status
+
+| Notebook | Topic | Type | Cells | Duration | Status |
+|----------|-------|------|-------|----------|--------|
+| 00 | Python ML Libraries | Foundation | 18+ | 2-3h | ✅ Complete |
+| 01a | Linear Algebra Fundamentals | Foundation | 15+ | 3-4h | ✅ Complete |
+| 02 | Calculus & Derivatives | Foundation | 20+ | 3-4h | ✅ Complete |
+| 03 | Probability & Statistics | Foundation | 20+ | 4-5h | ✅ Complete |
+| 04 | Gradient Descent | Foundation | 18+ | 3-4h | ✅ Complete |
+| 05 | Information Theory | Foundation | 15+ | 2-3h | ✅ Complete |
+| 06 | Statistical Inference | Foundation | 18+ | 3-4h | ✅ Complete |
+| 07 | Neural Network Math | Foundation | 20+ | 4-5h | ✅ Complete |
+| 08 | Advanced Linear Algebra | Foundation | 20+ | 4-5h | ✅ Complete |
+| 01 | Linear Algebra (Ch 2) | MML Theory | 20+ | 5-6h | ✅ Complete |
+| 02 | Analytic Geometry (Ch 3) | MML Theory | 18+ | 4-5h | ✅ Complete |
+| 03 | Matrix Decompositions (Ch 4) | MML Theory | 22+ | 5-6h | ✅ Complete |
+| 04 | Vector Calculus (Ch 5) | MML Theory | 25+ | 6-7h | ✅ Complete |
+| 05 | Probability (Ch 6) | MML Theory | 20+ | 5-6h | ✅ Complete |
+| 06 | Optimization (Ch 7) | MML Theory | 25+ | 5-6h | ✅ Complete |
+| 07 | Linear Regression (Ch 9) | MML Application | 22+ | 5-6h | ✅ Complete |
+| 08 | PCA (Ch 10) | MML Application | 20+ | 5-6h | ✅ Complete |
+| 09 | GMM (Ch 11) | MML Application | 18+ | 5-6h | ✅ Complete |
+| 10 | SVM (Ch 12) | MML Application | 20+ | 5-6h | ✅ Complete |
+
+**Total**: 19 notebooks | **~350+ code cells** | **~80-100 hours of content**
+
+---
+
+## � Prerequisites & Setup
 
 ### Required Python Libraries
+
+All notebooks use standard scientific Python stack:
+
 ```bash
+# Core dependencies
+pip install numpy matplotlib seaborn scipy scikit-learn jupyter
+
+# Optional (for specific notebooks)
+pip install sympy  # Symbolic mathematics (some advanced notebooks)
+```
+
+### Using with Virtual Environment
+
+```bash
+# Create virtual environment
+python -m venv .venv
+
+# Activate
+source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Library Usage Across Notebooks
+
+- **NumPy**: Numerical computing, array operations, linear algebra
+- **Matplotlib**: 2D/3D plotting and visualization
+- **Seaborn**: Statistical plots and heatmaps
+- **SciPy**: Scientific computing, optimization, distributions
+- **scikit-learn**: ML algorithms for comparison/validation
+- **SymPy**: Symbolic math (derivatives, integrals)
+
+---
+
+## 🚀 Getting Started
+
+### Step 1: Set Up Environment
+
+```bash
+# Navigate to directory
+cd aiml/2-maths
+
+# Install dependencies (if not already installed)
 pip install numpy matplotlib seaborn scipy scikit-learn jupyter
 ```
 
-### Individual imports used across notebooks:
-- **NumPy**: Numerical computing, matrix operations
-- **Matplotlib**: Plotting and visualization
-- **Seaborn**: Statistical visualizations
-- **SciPy**: Scientific computing, statistical distributions
-- **scikit-learn**: ML demonstrations
+### Step 2: Launch Jupyter
 
-## 🚀 Quick Start
+```bash
+# Start Jupyter Notebook
+jupyter notebook
 
-1. **Clone or navigate to this directory**
-   ```bash
-   cd aiml/2-maths
-   ```
+# Or use JupyterLab (modern interface)
+jupyter lab
+```
 
-2. **Launch Jupyter**
-   ```bash
-   jupyter notebook
-   ```
+### Step 3: Choose Your Path
 
-3. **Open any notebook** and run cells sequentially
+- **New to ML?** → Start with [Path 1](#path-1-foundations-first-recommended-for-beginners)
+- **Following MML book?** → Follow [Path 2](#path-2-mml-book-track-comprehensive-theory--practice)
+- **Need quick essentials?** → Try [Path 3](#path-3-quick-ml-essentials-fast-track)
+- **Deep learning focus?** → Use [Path 4](#path-4-deep-learning-focus)
 
-## 💡 How to Use These Notebooks
+### Step 4: Run & Learn
 
-Each notebook follows this structure:
-- **Theory**: Mathematical concepts explained clearly
-- **Code Examples**: Hands-on Python implementations
-- **Visualizations**: Plots to build intuition
-- **ML Applications**: Real-world machine learning use cases
-- **Practice Exercises**: Test your understanding
+Each notebook is self-contained and follows this structure:
 
-**Tip**: Run every code cell! The notebooks are designed to be interactive - experiment with parameters and see how results change.
+1. **Overview** - What you'll learn and why it matters
+2. **Setup** - Imports and configuration
+3. **Theory** - Mathematical concepts with clear explanations
+4. **Implementations** - Python code from scratch
+5. **Visualizations** - Plots and diagrams for intuition
+6. **Applications** - Real ML use cases
+7. **Summary** - Key takeaways and connections
+
+**💡 Pro Tip**: Run every code cell sequentially! Experiment with parameters to build intuition.
+
+---
+
+## ✍️ Practice with Exercises
+
+**Location**: `exercises/` folder
+
+Master the concepts through hands-on exercises! Four dedicated exercise notebooks with solutions:
+
+### Part I: Mathematical Foundations (Chapters 2-7)
+
+**📝 [mml_exercises_part1.ipynb](./exercises/mml_exercises_part1.ipynb)** - Practice problems for:
+- Linear Algebra (Gaussian elimination, bases, transformations)
+- Analytic Geometry (norms, projections, Gram-Schmidt)
+- Matrix Decompositions (eigenvalues, SVD, Cholesky)
+- Vector Calculus (gradients, Jacobians, backpropagation)
+- Probability (Bayes' theorem, Gaussians, distributions)
+- Optimization (gradient descent, momentum, constraints)
+
+**24+ exercises** with difficulty levels: 🟢 Basic | 🟡 Intermediate | 🔴 Advanced
+
+**✅ [mml_solutions_part1.ipynb](./exercises/mml_solutions_part1.ipynb)** - Complete solutions with:
+- Step-by-step implementations
+- Detailed explanations
+- Visualizations and plots
+- Verification steps
+
+### Part II: ML Applications (Chapters 9-12)
+
+**📝 [mml_exercises_part2.ipynb](./exercises/mml_exercises_part2.ipynb)** - Apply math to ML:
+- Linear Regression (MLE, regularization, Bayesian uncertainty)
+- PCA (eigendecomposition, SVD, dimensionality reduction)
+- GMM (EM algorithm, model selection, soft clustering)
+- SVM (kernels, margin, multi-class classification)
+
+**16+ exercises** including end-to-end ML pipeline challenge
+
+**✅ [mml_solutions_part2.ipynb](./exercises/mml_solutions_part2.ipynb)** - Comprehensive solutions featuring:
+- From-scratch implementations
+- Comparison with sklearn
+- Performance analysis
+- Real dataset applications
+
+### Exercise Workflow
+
+1. **Attempt exercises** without looking at solutions
+2. **Compare your approach** with provided solutions
+3. **Experiment** - Modify parameters, try variations
+4. **Build intuition** - Understand why, not just how
+
+**⏱️ Time estimate**: ~15-20 hours for all exercises (worthwhile investment!)
 
 ---
 

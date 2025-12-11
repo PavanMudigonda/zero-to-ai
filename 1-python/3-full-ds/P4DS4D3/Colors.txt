@@ -1,0 +1,9 @@
+Color	Value
+Red	1
+Orange	2
+Yellow	3
+Green	4
+Blue	5
+Purple	6
+Black	7
+White	8
