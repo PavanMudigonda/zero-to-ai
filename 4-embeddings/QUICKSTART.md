@@ -34,7 +34,7 @@ pip install transformers torch sentence-transformers openai numpy scipy chromadb
 
 ### 2. Run the Bridge File
 ```bash
-cd 2-embeddings
+cd 4-embeddings
 python huggingface_embeddings.py
 ```
 
@@ -200,7 +200,7 @@ pip install transformers
 
 ### Before (Incomplete)
 ```
-2-embeddings/
+4-embeddings/
 ├── embeddings_intro.py          (Sentence Transformers)
 ├── semantic_similarity.py       (Sentence Transformers)
 └── vector_database_demo.py      (ChromaDB)
@@ -209,7 +209,7 @@ pip install transformers
 
 ### After (Complete) ✅
 ```
-2-embeddings/
+4-embeddings/
 ├── embeddings_intro.py              (Sentence Transformers)
 ├── semantic_similarity.py           (Sentence Transformers)
 ├── huggingface_embeddings.py    ⭐  (Bridges Phase 1!)
@@ -273,7 +273,7 @@ After Phase 2, you should be able to:
 
 Once you complete Phase 2:
 
-**Phase 3: Vector Databases** (already available in `3-vector-databases`)
+**Phase 3: Vector Databases** (already available in `6-vector-databases`)
 - 10 database options (Pinecone, MongoDB, Chroma, Qdrant, etc.)
 - Cloud providers (AWS, Google, Azure)
 - Production patterns

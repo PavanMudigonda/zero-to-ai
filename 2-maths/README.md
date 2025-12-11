@@ -184,7 +184,7 @@ pip install numpy matplotlib seaborn scipy scikit-learn jupyter
 
 1. **Clone or navigate to this directory**
    ```bash
-   cd aiml/1-maths
+   cd aiml/2-maths
    ```
 
 2. **Launch Jupyter**

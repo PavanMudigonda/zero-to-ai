@@ -300,7 +300,7 @@ A: Yes, but it requires training on large text corpora. Most developers use pre-
 Once you're comfortable with tokens, move to **Phase 2: Embeddings**:
 
 ```bash
-cd ../2-embeddings
+cd ../4-embeddings
 cat README.md
 ```
 

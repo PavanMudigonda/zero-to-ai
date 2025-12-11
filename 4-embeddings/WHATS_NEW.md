@@ -140,14 +140,14 @@ Enhanced the Phase 2 README to include:
 
 1. **First, run Phase 1** (if not already done):
    ```bash
-   cd ../1-token
+   cd ../3-token
    python 01_tokenizers_quickstart.py
    ```
    Learn BERT tokenizer basics
 
 2. **Then, bridge to Phase 2**:
    ```bash
-   cd ../2-embeddings
+   cd ../4-embeddings
    python huggingface_embeddings.py
    ```
    See how to extract embeddings from BERT
