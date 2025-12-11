@@ -1,3 +1,4 @@
+# setup
 # Setup Guide - AIML Learning Repository
 
 ## Quick Start with UV (Recommended)
