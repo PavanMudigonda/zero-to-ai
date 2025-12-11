@@ -302,15 +302,15 @@ print("Welcome to Python for Machine Learning! 🚀")
 
 After mastering Python fundamentals:
 
-1. **Move to Mathematics for ML** (`../1-maths/`)
+1. **Move to Mathematics for ML** (`../2-maths/`)
    - Linear algebra, calculus, probability
    - Mathematical foundations
 
-2. **Study Tokenization** (`../1-token/`)
+2. **Study Tokenization** (`../3-token/`)
    - Text processing fundamentals
    - NLP foundations
 
-3. **Learn Embeddings** (`../2-embeddings/`)
+3. **Learn Embeddings** (`../4-embeddings/`)
    - Vector representations
    - Semantic understanding
 

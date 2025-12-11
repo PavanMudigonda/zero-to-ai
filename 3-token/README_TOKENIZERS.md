@@ -414,7 +414,7 @@ After completing this module:
 
 ### Related Topics
 
-- **Phase 2**: [Embeddings Module](../2-embeddings/) - Next in learning path
+- **Phase 2**: [Embeddings Module](../4-embeddings/) - Next in learning path
 - **tiktoken**: [OpenAI's tokenizer](./intro.md) - Alternative approach
 - **SentencePiece**: Google's tokenizer - Another option
 

@@ -1,0 +1,6 @@
+# Include all base requirements
+-r requirements.txt
+
+# AWS tools
+boto3>=1.28.0
+awscli>=1.29.0
