@@ -58,35 +58,6 @@
 3. **Practice daily**
    - LeetCode Easy problems
    - HackerRank Python challenges
-
-### Phase 2: Python for Data Science (2-3 weeks)
-
-1. **Learn NumPy and Pandas**
-   - Python Data Science Handbook
-   - Kaggle micro-courses
-
-2. **Master data visualization**
-   - Matplotlib tutorials
-   - Seaborn documentation
-
-3. **Practice on real datasets**
-   - Kaggle datasets
-   - UCI Machine Learning Repository
-
-### Phase 3: Advanced Python (Ongoing)
-
-1. **Object-Oriented Programming**
-   - Corey Schafer OOP series
-   - Build class-based projects
-
-2. **Best practices and patterns**
-   - Fluent Python
-   - Effective Python
-
-3. **ML-specific Python**
-   - Scikit-learn documentation
-   - TensorFlow/PyTorch tutorials
-
 ---
 
 ## 💡 Study Tips
