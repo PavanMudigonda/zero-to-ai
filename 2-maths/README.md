@@ -82,7 +82,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 **Location**: `foundational/` folder
 
 ### [00. Python ML Libraries](./foundational/00_python_ml_libraries.ipynb)
+
 **Prerequisites for all math notebooks** ⭐ Start here!
+
 - NumPy fundamentals and array operations
 - Matplotlib for plotting and visualization
 - Seaborn for statistical plots
@@ -95,7 +97,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [01. Linear Algebra Fundamentals](./foundational/01_linear_algebra_fundamentals.ipynb)
+
 **Topics covered:**
+
 - Vectors and vector operations (addition, scalar multiplication, dot product)
 - Matrices and matrix operations (multiplication, transpose, inverse)
 - Eigenvalues and eigenvectors
@@ -109,7 +113,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [02. Calculus & Derivatives](./foundational/02_calculus_derivatives.ipynb)
+
 **Topics covered:**
+
 - Derivatives and their geometric interpretation
 - Common activation functions (ReLU, Sigmoid, Tanh) and their derivatives
 - Partial derivatives for multivariable functions
@@ -126,7 +132,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [03. Probability & Statistics](./foundational/03_probability_statistics.ipynb)
+
 **Topics covered:**
+
 - Probability fundamentals (rules, conditional probability)
 - Random variables (discrete and continuous)
 - Common distributions (Bernoulli, Binomial, Normal/Gaussian)
@@ -143,7 +151,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [04. Gradient Descent](./foundational/04_gradient_descent.ipynb)
+
 **Topics covered:**
+
 - Gradient descent algorithm
 - Learning rate effects (too small, too large, optimal)
 - 1D and 2D visualizations
@@ -161,7 +171,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [05. Information Theory](./foundational/05_information_theory.ipynb)
+
 **Topics covered:**
+
 - Shannon entropy and information content
 - Cross-entropy loss (the main loss function in deep learning)
 - Kullback-Leibler (KL) divergence
@@ -177,7 +189,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [06. Statistical Inference](./foundational/06_statistical_inference.ipynb)
+
 **Topics covered:**
+
 - Population vs sample statistics
 - Confidence intervals
 - Hypothesis testing framework
@@ -196,7 +210,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [07. Neural Network Mathematics](./foundational/07_neural_network_math.ipynb)
+
 **Topics covered:**
+
 - Backpropagation and chain rule
 - Vanishing and exploding gradients
 - Residual connections (ResNets)
@@ -213,7 +229,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 ---
 
 ### [08. Advanced Linear Algebra](./foundational/08_advanced_linear_algebra.ipynb)
+
 **Topics covered:**
+
 - Eigendecomposition in depth
 - Singular Value Decomposition (SVD)
 - Low-rank matrix approximation
@@ -238,7 +256,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 These notebooks provide hands-on Python implementations of the mathematical concepts from the MML textbook, with ~150+ executable code cells covering all foundational chapters.
 
 ### [01. Linear Algebra](./mml-book/01_linear_algebra.ipynb) - Chapter 2
+
 **Topics covered:**
+
 - Systems of linear equations and Gaussian elimination
 - Matrices and matrix operations
 - Solving linear systems (geometric and algorithmic perspectives)
@@ -255,7 +275,9 @@ These notebooks provide hands-on Python implementations of the mathematical conc
 ---
 
 ### [02. Analytic Geometry](./mml-book/02_analytic_geometry.ipynb) - Chapter 3
+
 **Topics covered:**
+
 - Norms (L1, L2, L∞) and their properties
 - Inner products and orthogonality
 - Lengths, distances, and angles
@@ -272,7 +294,9 @@ These notebooks provide hands-on Python implementations of the mathematical conc
 ---
 
 ### [03. Matrix Decompositions](./mml-book/03_matrix_decompositions.ipynb) - Chapter 4
+
 **Topics covered:**
+
 - Determinant and trace
 - Eigenvalues and eigenvectors (geometric interpretation)
 - Cholesky decomposition
@@ -289,7 +313,9 @@ These notebooks provide hands-on Python implementations of the mathematical conc
 ---
 
 ### [04. Vector Calculus](./mml-book/04_vector_calculus.ipynb) - Chapter 5
+
 **Topics covered:**
+
 - Differentiation of univariate functions
 - Partial differentiation and gradients
 - Jacobian matrices
@@ -307,7 +333,9 @@ These notebooks provide hands-on Python implementations of the mathematical conc
 ---
 
 ### [05. Probability and Distributions](./mml-book/05_probability.ipynb) - Chapter 6
+
 **Topics covered:**
+
 - Probability spaces and probability theory axioms
 - Discrete and continuous distributions
 - Sum rule, product rule, Bayes' theorem
@@ -325,7 +353,9 @@ These notebooks provide hands-on Python implementations of the mathematical conc
 ---
 
 ### [06. Continuous Optimization](./mml-book/06_optimization.ipynb) - Chapter 7
+
 **Topics covered:**
+
 - Optimization using gradient descent
 - Gradients and directional derivatives
 - Constrained optimization and Lagrange multipliers
@@ -346,7 +376,9 @@ These notebooks provide hands-on Python implementations of the mathematical conc
 These notebooks demonstrate how the mathematical foundations are applied to real machine learning algorithms, with complete implementations from scratch plus sklearn comparisons.
 
 ### [07. Linear Regression](./mml-book/07_linear_regression.ipynb) - Chapter 9
+
 **Topics covered:**
+
 - Problem formulation (matrix form)
 - Maximum Likelihood Estimation (MLE)
 - Normal equations: w = (X^T X)^{-1} X^T y
@@ -365,7 +397,9 @@ These notebooks demonstrate how the mathematical foundations are applied to real
 ---
 
 ### [08. Dimensionality Reduction with PCA](./mml-book/08_pca.ipynb) - Chapter 10
+
 **Topics covered:**
+
 - Problem setting (high-D → low-D)
 - Maximum variance perspective
 - Projection and reconstruction perspective
@@ -385,7 +419,9 @@ These notebooks demonstrate how the mathematical foundations are applied to real
 ---
 
 ### [09. Density Estimation with GMM](./mml-book/09_gmm.ipynb) - Chapter 11
+
 **Topics covered:**
+
 - Gaussian Mixture Models (mixture of Gaussians)
 - Expectation-Maximization (EM) algorithm
 - E-step: Computing responsibilities (soft assignments)
@@ -405,7 +441,9 @@ These notebooks demonstrate how the mathematical foundations are applied to real
 ---
 
 ### [10. Classification with SVM](./mml-book/10_svm.ipynb) - Chapter 12
+
 **Topics covered:**
+
 - Separating hyperplanes and margins
 - Maximum margin principle
 - Primal optimization problem (convex QP)
@@ -431,7 +469,9 @@ These notebooks demonstrate how the mathematical foundations are applied to real
 Comprehensive examples from Kevin Murphy's "Machine Learning: A Probabilistic Perspective". This book provides a unified probabilistic framework for understanding machine learning algorithms.
 
 ### [01. Probability Fundamentals](./mlpp-book/01_probability_fundamentals.ipynb)
+
 **Topics covered:**
+
 - Basic probability rules (sum rule, product rule)
 - Bayes' rule and Bayesian inference
 - Common probability distributions (Bernoulli, Binomial, Gaussian, Poisson)
@@ -447,7 +487,9 @@ Comprehensive examples from Kevin Murphy's "Machine Learning: A Probabilistic Pe
 ---
 
 ### [02. Generative Models for Classification](./mlpp-book/02_generative_models.ipynb)
+
 **Topics covered:**
+
 - Naive Bayes classifier (Gaussian, Multinomial, Bernoulli)
 - Gaussian Discriminant Analysis (GDA)
 - Linear and Quadratic Discriminant Analysis (LDA/QDA)
@@ -463,7 +505,9 @@ Comprehensive examples from Kevin Murphy's "Machine Learning: A Probabilistic Pe
 ---
 
 ### [03. Gaussian Models](./mlpp-book/03_gaussian_models.ipynb)
+
 **Topics covered:**
+
 - Multivariate Gaussian distribution properties
 - Maximum likelihood estimation for Gaussian parameters
 - Gaussian Mixture Models (GMM)
@@ -479,7 +523,9 @@ Comprehensive examples from Kevin Murphy's "Machine Learning: A Probabilistic Pe
 ---
 
 ### [04. Bayesian Statistics](./mlpp-book/04_bayesian_statistics.ipynb)
+
 **Topics covered:**
+
 - Bayesian inference and sequential updating
 - Conjugate priors (Beta-Binomial, Gamma-Poisson, Gaussian-Gaussian)
 - Posterior predictive distribution
@@ -499,6 +545,7 @@ Comprehensive examples from Kevin Murphy's "Machine Learning: A Probabilistic Pe
 Choose your path based on your goals and background:
 
 ### Path 1: Foundations First (Recommended for Beginners)
+
 **Best for**: Those new to ML or wanting a solid mathematical foundation
 
 **Estimated time**: 6-8 weeks (30-40 hours)
@@ -514,11 +561,13 @@ Choose your path based on your goals and background:
 9. **08. Advanced Linear Algebra** (4-5h) - Dimensionality reduction
 
 ### Path 2: MML Book Track (Comprehensive Theory + Practice)
+
 **Best for**: Those following the MML textbook or wanting rigorous mathematical treatment
 
 **Estimated time**: 10-12 weeks (60-70 hours)
 
 **Part I - Mathematical Foundations** (6-8 weeks, 30-35 hours):
+
 1. **00. Python ML Libraries** (2-3h) - Setup
 2. **01. Linear Algebra** (5-6h) - Chapter 2
 3. **02. Analytic Geometry** (4-5h) - Chapter 3  
@@ -534,6 +583,7 @@ Choose your path based on your goals and background:
 11. **10. SVM** (5-6h) - Chapter 12
 
 ### Path 3: Quick ML Essentials (Fast Track)
+
 **Best for**: Practitioners who need ML math quickly
 
 **Estimated time**: 3-4 weeks (15-20 hours)
@@ -547,6 +597,7 @@ Choose your path based on your goals and background:
 7. **10. SVM** (3h) - Classification
 
 ### Path 4: Deep Learning Focus
+
 **Best for**: Those specifically interested in neural networks
 
 **Estimated time**: 4-5 weeks (20-25 hours)
@@ -683,6 +734,7 @@ Master the concepts through hands-on exercises! Four dedicated exercise notebook
 ### Part I: Mathematical Foundations (Chapters 2-7)
 
 **📝 [mml_exercises_part1.ipynb](./exercises/mml_exercises_part1.ipynb)** - Practice problems for:
+
 - Linear Algebra (Gaussian elimination, bases, transformations)
 - Analytic Geometry (norms, projections, Gram-Schmidt)
 - Matrix Decompositions (eigenvalues, SVD, Cholesky)
@@ -693,6 +745,7 @@ Master the concepts through hands-on exercises! Four dedicated exercise notebook
 **24+ exercises** with difficulty levels: 🟢 Basic | 🟡 Intermediate | 🔴 Advanced
 
 **✅ [mml_solutions_part1.ipynb](./exercises/mml_solutions_part1.ipynb)** - Complete solutions with:
+
 - Step-by-step implementations
 - Detailed explanations
 - Visualizations and plots
@@ -701,6 +754,7 @@ Master the concepts through hands-on exercises! Four dedicated exercise notebook
 ### Part II: ML Applications (Chapters 9-12)
 
 **📝 [mml_exercises_part2.ipynb](./exercises/mml_exercises_part2.ipynb)** - Apply math to ML:
+
 - Linear Regression (MLE, regularization, Bayesian uncertainty)
 - PCA (eigendecomposition, SVD, dimensionality reduction)
 - GMM (EM algorithm, model selection, soft clustering)
@@ -709,6 +763,7 @@ Master the concepts through hands-on exercises! Four dedicated exercise notebook
 **16+ exercises** including end-to-end ML pipeline challenge
 
 **✅ [mml_solutions_part2.ipynb](./exercises/mml_solutions_part2.ipynb)** - Comprehensive solutions featuring:
+
 - From-scratch implementations
 - Comparison with sklearn
 - Performance analysis
@@ -732,17 +787,20 @@ For deeper study beyond the notebooks, explore these curated resources.
 ### 📚 Essential Textbooks
 
 **Primary Reference:**
+
 - **[Mathematics for Machine Learning](https://mml-book.github.io/)** by Deisenroth, Faisal, and Ong (2020)
   - Free textbook covering linear algebra, calculus, probability for ML
   - Part I: Mathematical foundations | Part II: ML applications
 
 **Classic ML Texts:**
+
 - **Bishop (2006)** - *Pattern Recognition and Machine Learning*
 - **Murphy (2022)** - *Probabilistic Machine Learning*
 
 ### 🎥 Video Courses & Channels
 
 **[3Blue1Brown](https://www.3blue1brown.com/)** by Grant Sanderson (⭐ Highly recommended)
+
 - [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 - [Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
 - Differential Equations, Multivariable Calculus
@@ -750,18 +808,21 @@ For deeper study beyond the notebooks, explore these curated resources.
 - Binomial Distributions, Neural Networks
 
 **University Courses:**
+
 - **[MIT 18.06](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/)** - Gilbert Strang's Linear Algebra (legendary!)
 - **[Khan Academy](https://www.khanacademy.org/)** - Linear Algebra, Calculus, Statistics & Probability
 - **Professor Leonard** - Comprehensive Calculus series
 - **Steve Brunton** - Control theory, SVD, Dynamic Mode Decomposition
 
 **Specialized Channels:**
+
 - Math Visual Proofs
 - MIT 6.006 Introduction to Algorithms
 
 ### 💻 Online Learning Platforms
 
 **Interactive Courses:**
+
 - **[Coursera](https://www.coursera.org/)** - Mathematics for Machine Learning Specialization
 - **EdX** - Math for Machine Learning with Python
 - **[Google ML Crash Course](https://developers.google.com/machine-learning/crash-course)** - Prerequisites section
@@ -772,6 +833,7 @@ For deeper study beyond the notebooks, explore these curated resources.
 ### 🧮 Advanced Topics Reference
 
 **Statistical Thinking (M0):**
+
 - Probability, random variables, distributions
 - Model vs. reality, digital twins
 - Structure and causality
@@ -779,16 +841,19 @@ For deeper study beyond the notebooks, explore these curated resources.
 - Measurement errors
 
 **Statistical Inference (M1):**
+
 - Data generating process, sample vs. population
 - Frequentist and Bayesian approaches
 - Model quality and performance measurement
 
 **Econometrics (M2):**
+
 - Linear regression and OLS
 - Violation of OLS assumptions
 - Estimation techniques: OLS, GMM, MLE, Bayesian
 
 **Advanced Mathematics (M8):**
+
 - Combinatorics
 - Mathematical statistics (point estimation, confidence intervals, hypothesis testing)
 - Central limit theorems, asymptotics, convergence
@@ -799,6 +864,7 @@ For deeper study beyond the notebooks, explore these curated resources.
 ### 🤖 Math for Neural Networks & Deep Learning
 
 **Core Concepts:**
+
 - Gradient descent and backpropagation
 - Matrix multiplication for layer operations
 - Chain rule for backpropagation
@@ -806,6 +872,7 @@ For deeper study beyond the notebooks, explore these curated resources.
 - Linear algebra for transformations
 
 **Advanced NN Math:**
+
 - Gradient flow through deep networks
 - Residual connections for gradient preservation
 - Gradient accumulation for large batches
@@ -823,6 +890,7 @@ For deeper study beyond the notebooks, explore these curated resources.
 ### What is CS229?
 
 Stanford's **CS229: Machine Learning** is one of the most influential ML courses in the world. This implementation provides:
+
 - Comprehensive lecture notebooks with theory and code
 - Real dataset implementations
 - 140+ practice exercises
@@ -835,12 +903,12 @@ Stanford's **CS229: Machine Learning** is one of the most influential ML courses
    - Normal equation, gradient descent variants
    - Learning rate analysis, feature scaling
    - California Housing dataset
-   
+
 2. **[Logistic Regression](./cs229-course/02_logistic_regression.ipynb)** ✅
    - Binary and multi-class classification
    - Decision boundaries, ROC curves
    - Breast cancer prediction
-   
+
 3. **[Regularization](./cs229-course/03_regularization.ipynb)** ✅
    - Ridge, Lasso, Elastic Net
    - Cross-validation, learning curves
@@ -861,12 +929,14 @@ Stanford's **CS229: Machine Learning** is one of the most influential ML courses
 ### 🐍 Essential Python Libraries
 
 **Mathematical Computing:**
+
 - **NumPy** - Numerical computing, arrays, linear algebra
 - **SciPy** - Scientific computing, optimization, statistics
 - **SymPy** - Symbolic mathematics
 - **Pandas** - Data manipulation and analysis
 
 **Visualization:**
+
 - **Matplotlib** - Foundational plotting library
 - **Seaborn** - Statistical data visualization
 - **Plotly** - Interactive visualizations
@@ -874,16 +944,16 @@ Stanford's **CS229: Machine Learning** is one of the most influential ML courses
 ### 💡 Study Tips
 
 > **Important**: You need basic comfort with mathematical notation rather than expert-level mathematics. The key areas are:
-> 
+>
 > 1. **Linear Algebra** - Matrix multiplication, transformations
 > 2. **Calculus** - Derivatives, gradients, chain rule
 > 3. **Probability** - Distributions, expected values, variance
-> 
+>
 > **Understanding concepts is more important than deep mathematical mastery!**
 
 **Recommended approach:**
+
 1. Work through the notebooks in this directory first
 2. Use external resources to deepen understanding of specific topics
 3. Practice with real ML problems to cement concepts
 4. Return to theory when you encounter gaps in understanding
-

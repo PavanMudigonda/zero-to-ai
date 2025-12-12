@@ -4,16 +4,19 @@
 ### Specialized Resources
 
 **[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)** by Jake VanderPlas
+
 - Free online book
 - NumPy, Pandas, Matplotlib, Scikit-Learn
 - Essential for ML practitioners
 
 **[Python for Data Analysis](https://wesmckinney.com/book/)** by Wes McKinney (Pandas creator)
+
 - Data wrangling with Pandas
 - Data cleaning and preparation
 - Time series analysis
 
 **[Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)** by Aurélien Géron
+
 - Practical ML with Python
 - Theory + implementation
 - Industry best practices
@@ -25,17 +28,20 @@
 ### Must-Know Libraries
 
 **Core Scientific Computing:**
+
 - **NumPy** - Numerical computing, arrays, linear algebra
 - **Pandas** - Data manipulation and analysis
 - **Matplotlib** - Plotting and visualization
 - **Seaborn** - Statistical data visualization
 
 **Machine Learning:**
+
 - **Scikit-learn** - Classical ML algorithms
 - **TensorFlow** / **PyTorch** - Deep learning frameworks
 - **Keras** - High-level neural networks API
 
 **Additional Tools:**
+
 - **Jupyter** - Interactive notebooks
 - **SciPy** - Scientific computing
 - **Plotly** - Interactive visualizations
@@ -58,6 +64,7 @@
 3. **Practice daily**
    - LeetCode Easy problems
    - HackerRank Python challenges
+
 ---
 
 ## 💡 Study Tips
@@ -65,26 +72,31 @@
 ### Best Practices for Learning Python
 
 **1. Code every day** 🔥
+
 - Consistency beats intensity
 - Even 30 minutes daily makes a difference
 - Build the habit early
 
 **2. Build projects** 🚀
+
 - Apply what you learn immediately
 - Start small, gradually increase complexity
 - Portfolio pieces for job applications
 
 **3. Read others' code** 📖
+
 - Study open-source projects
 - Learn from experienced developers
 - Understand different approaches
 
 **4. Debug intentionally** 🐛
+
 - Don't fear errors - they teach you
 - Use debuggers (pdb, IDE debuggers)
 - Understand error messages
 
 **5. Join communities** 👥
+
 - r/learnpython on Reddit
 - Python Discord servers
 - Stack Overflow for questions
