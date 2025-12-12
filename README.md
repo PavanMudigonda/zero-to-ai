@@ -42,7 +42,7 @@ aiml/
 ├── setup.md               # Installation & environment setup
 ├── requirements.txt       # All dependencies for 731 notebooks
 ├── glossary/              # AI/ML terminology & concepts
-├── 1-python/              # Python fundamentals + scikit-learn (278 notebooks!)
+├── 1-data-science/        # Python fundamentals + scikit-learn (278 notebooks!)
 ├── 2-maths/               # Mathematics for ML (40+ notebooks)
 ├── 3-token/               # Tokenization (tiktoken, sentencepiece, HF)
 ├── 4-embeddings/          # Word & sentence embeddings
@@ -68,7 +68,7 @@ aiml/
 | Phase | Topic | Time | Status |
 |-------|-------|------|--------|
 | **0** | [Glossary](glossary/GLOSSARY.md) | - | ⏳ Pending |
-| **1** | [Python Fundamentals](1-python/README.md) | 2-3 weeks | ⏳ Pending |
+| **1** | [Python Fundamentals](1-data-science/README.md) | 2-3 weeks | ⏳ Pending |
 | **2** | [Mathematics for ML](2-maths/README.md) | 2-3 months | ⏳ Pending |
 | **3** | [Tokenization](3-token/README_TOKENIZERS.md) | 1-2 weeks | ⏳ Pending |
 | **4** | [Embeddings](4-embeddings/README.md) | 3-4 weeks | ⏳ Pending |

@@ -28,12 +28,12 @@ Complete this checklist as you progress through the repository. Check off items 
 **Goal**: Master Python, NumPy, pandas, and scikit-learn
 
 ### Python Foundations
-- [ ] Complete NumPy tutorials in [1-python/1-numpy-examples/](1-python/1-numpy-examples/)
-- [ ] Complete pandas tutorials in [1-python/2-pandas-examples/](1-python/2-pandas-examples/)
-- [ ] Work through data science examples in [1-python/3-data-science-examples/](1-python/3-data-science-examples/)
+- [ ] Complete NumPy tutorials in [1-data-science/1-numpy-examples/](1-data-science/1-numpy-examples/)
+- [ ] Complete pandas tutorials in [1-data-science/2-pandas-examples/](1-data-science/2-pandas-examples/)
+- [ ] Work through data science examples in [1-data-science/3-data-science-examples/](1-data-science/3-data-science-examples/)
 
 ### Scikit-learn Mastery (278 notebooks)
-- [ ] Explore [1-python/5-scikit-learn/](1-python/5-scikit-learn/) - 278 example notebooks
+- [ ] Explore [1-data-science/5-scikit-learn/](1-data-science/5-scikit-learn/) - 278 example notebooks
 - [ ] Practice linear regression examples
 - [ ] Practice classification examples (SVM, Random Forest, etc.)
 - [ ] Practice clustering examples (K-means, DBSCAN, etc.)
