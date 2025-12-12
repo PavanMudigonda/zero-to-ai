@@ -1,0 +1,343 @@
+[
+  {
+    "title": "Data Science for Beginners: Quizzes",
+    "complete": "Congratulations, you completed the quiz!",
+    "error": "Sorry, try again",
+    "quizzes": [
+      {
+        "id": 32,
+        "title": "Data Science in the Cloud - Introduction - Pre-Quiz",
+        "quiz": [
+          {
+            "questionText": "What is the cloud?",
+            "answerOptions": [
+              {
+                "answerText": "A collection of databases for storing big data.",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "A collection of pay-as-you-go computing services over the internet.",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "A visible mass of particles suspended in the air.",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "What is cloud computing?",
+            "answerOptions": [
+              {
+                "answerText": "Delivery of computing services over the internet.",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Setting up your own datacenter.",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Using the internet.",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "What are some advantages of the cloud?",
+            "answerOptions": [
+              {
+                "answerText": "Flexibility, scalability, reliability, security",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Flexibility, scalability, variability, security",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Clarity, scalability, reliability, variability",
+                "isCorrect": "false"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 33,
+        "title": "Data Science in the Cloud - Introduction - Post-Quiz",
+        "quiz": [
+          {
+            "questionText": "Which one is NOT necessarily a good reason for choosing the cloud?",
+            "answerOptions": [
+              {
+                "answerText": "Using Machine Learning and data intelligence services",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Processing large amounts of data",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Storing sensitive/confidential governmental data",
+                "isCorrect": "true"
+              }
+            ]
+          },
+          {
+            "questionText": "In which way(s) do data scientists use the cloud?",
+            "answerOptions": [
+              {
+                "answerText": "Infrastructure tasks",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Storing large amounts of data",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Configuring networking options",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Which cloud computing service provides access to software applications without the need to maintain the software?",
+            "answerOptions": [
+              {
+                "answerText": "Infrastructure as a Service",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Platform as a Service",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Software as a Service",
+                "isCorrect": "true"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 34,
+        "title": "Data Science in the Cloud - Low-Code - Pre-Quiz",
+        "quiz": [
+          {
+            "questionText": "One benefit of using Jupyter Notebooks is that you can quickly prototype models.",
+            "answerOptions": [
+              {
+                "answerText": "True",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "False",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Why would a data scientist use Azure Machine Learning?",
+            "answerOptions": [
+              {
+                "answerText": "To save time exploring and pre-processing data.",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "To produce accurate models",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "All of the above",
+                "isCorrect": "true"
+              }
+            ]
+          },
+          {
+            "questionText": "You don't need to have expertise in coding to use Azure ML.",
+            "answerOptions": [
+              {
+                "answerText": "True",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "False, code is always needed",
+                "isCorrect": "false"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 35,
+        "title": "Data Science in the Cloud - Low-Code - Post-Quiz",
+        "quiz": [
+          {
+            "questionText": "What do you need to create before accessing Azure ML Studio?",
+            "answerOptions": [
+              {
+                "answerText": "A workspace",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "A compute instance",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "A compute cluster",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Which of the following tasks are supported by Automated ML?",
+            "answerOptions": [
+              {
+                "answerText": "Image generation",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Classification",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Natural language generation",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "In which case do you need GPU over CPU?",
+            "answerOptions": [
+              {
+                "answerText": "When you have tabular data",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "When you have enough money to afford it",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "When you do Deep Learning",
+                "isCorrect": "true"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 36,
+        "title": "Data Science in the Cloud - Azure - Pre-Quiz",
+        "quiz": [
+          {
+            "questionText": "Which of these would be affected by increasing the cluster size?",
+            "answerOptions": [
+              {
+                "answerText": "Responsiveness",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Cost",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Model performance",
+                "isCorrect": "true"
+              }
+            ]
+          },
+          {
+            "questionText": "What is a benefit of using low code tools?",
+            "answerOptions": [
+              {
+                "answerText": "No expertise of code required",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "Automatically label the dataset",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Better security of the model",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "What is AutoML?",
+            "answerOptions": [
+              {
+                "answerText": "A tool for automating the preprocessing of data",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "A tool for automating the deployment of models",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "All of the above",
+                "isCorrect": "false"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 37,
+        "title": "Data Science in the Cloud - Azure - Post-Quiz",
+        "quiz": [
+          {
+            "questionText": "What is the reason for creating an AutoMLConfig?",
+            "answerOptions": [
+              {
+                "answerText": "It is where the training and the testing data are split",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "It is where you specify the model to be trained",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "It provides all the details of your AutoML experiment",
+                "isCorrect": "true"
+              }
+            ]
+          },
+          {
+            "questionText": "Which of the following metrics is supported by Automated ML for a classification task?",
+            "answerOptions": [
+              {
+                "answerText": "Accuracy",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "r2_score",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "normalized_root_mean_error",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "What is NOT an advantage of using the SDK?",
+            "answerOptions": [
+              {
+                "answerText": "It can be used to automate multiple tasks and runs",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "It makes it easier to programmatically edit runs",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "It can be used through a Graphical User Interface",
+                "isCorrect": "true"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
