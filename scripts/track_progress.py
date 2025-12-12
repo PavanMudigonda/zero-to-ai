@@ -146,7 +146,7 @@ class ProgressTracker:
             "metadata": {
                 "total_notebooks": 732,
                 "last_updated": datetime.now().strftime("%Y-%m-%d"),
-                "repository": "aiml",
+                "repository": "zero-to-ai",
                 "owner": "PavanMudigondaTR"
             },
             "phases": {},

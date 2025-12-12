@@ -1,6 +1,6 @@
-# AIML Learning Repository
+# Zero to AI - Complete Learning Path
 
-> **Comprehensive AI/ML Learning Path** - From foundational mathematics to production-ready systems
+> **From Zero to AI Mastery** - 732 notebooks taking you from Python basics to production-ready AI systems
 
 ## 📊 Learning Progress
 
@@ -195,4 +195,5 @@ MIT License - Free to use for learning
 
 **🚀 Happy Learning!**
 
-*Last Updated: December 2025*
+**Last Updated:** December 2025  
+**Repository:** [zero-to-ai](https://github.com/PavanMudigondaTR/zero-to-ai)

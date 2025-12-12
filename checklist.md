@@ -646,4 +646,4 @@ Track your major achievements:
 ---
 
 *Last Updated: December 2025*
-*Repository: <https://github.com/PavanMudigondaTR/aiml>*
+*Repository: <https://github.com/PavanMudigondaTR/zero-to-ai>*
