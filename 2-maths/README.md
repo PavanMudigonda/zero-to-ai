@@ -4,8 +4,10 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 - **📁 foundational/** - Core math topics (9 notebooks)
 - **📁 mml-book/** - MML book chapters covering theory and ML applications (10 notebooks)
+- **📁 islp-book/** - Introduction to Statistical Learning with Python (13 chapters)
+- **📁 cs229-course/** - Stanford CS229 Machine Learning course implementation (14 lectures) 🆕
 - **📁 exercises/** - Practice exercises with solutions (4 notebooks)
-- **📁 resources/** - Reference materials including the MML textbook
+- **📁 resources/** - Reference materials (MML textbook, ISLP book, CS229 notes)
 
 ## 📚 Table of Contents
 
@@ -13,6 +15,8 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 - [Part I: Foundational Math Notebooks](#part-i-foundational-math-notebooks)
 - [Part II: MML Book - Mathematical Foundations](#part-ii-mml-book---mathematical-foundations-chapters-2-7)
 - [Part III: MML Book - ML Applications](#part-iii-mml-book---ml-applications-chapters-9-12)
+- [Part IV: ISLP Book - Statistical Learning](#part-iv-islp-book---statistical-learning-with-python)
+- [Part V: CS229 Course - Machine Learning Algorithms](#part-v-cs229-course---stanford-machine-learning-) 🆕
 - [Practice Exercises](#️-practice-with-exercises)
 - [Learning Paths](#-learning-paths)
 - [Quick Start](#-quick-start)
@@ -46,13 +50,27 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 │   ├── 08_pca.ipynb
 │   ├── 09_gmm.ipynb
 │   └── 10_svm.ipynb
+├── islp-book/                   # ISLP textbook implementation (13 chapters)
+│   ├── README.md
+│   ├── PRACTICE_EXERCISES.md
+│   └── 02_statistical_learning.ipynb through 13_multiple_testing.ipynb
+├── cs229-course/                # Stanford CS229 Machine Learning (14 lectures) 🆕
+│   ├── README.md
+│   ├── CS229_PRACTICE.md
+│   ├── requirements.txt
+│   ├── 01_linear_regression.ipynb
+│   ├── 02_logistic_regression.ipynb
+│   ├── 03_regularization.ipynb
+│   └── (Lectures 04-14 in progress)
 ├── exercises/                   # Practice problems & solutions
 │   ├── mml_exercises_part1.ipynb
 │   ├── mml_solutions_part1.ipynb
 │   ├── mml_exercises_part2.ipynb
 │   └── mml_solutions_part2.ipynb
 └── resources/                   # Reference materials
-    └── mml-book.pdf
+    ├── mml-book.pdf
+    ├── ISLP.pdf
+    └── cs229.pdf
 ```
 
 ---
@@ -721,6 +739,52 @@ For deeper study beyond the notebooks, explore these curated resources.
 - Gradient accumulation for large batches
 - Vanishing/exploding gradients problem
 - Attention mechanisms (mathematical foundations)
+
+---
+
+## Part V: CS229 Course - Stanford Machine Learning 🆕
+
+**Location**: `cs229-course/` folder  
+**Instructor**: Andrew Ng, Stanford University  
+**Status**: 3/14 lectures complete, more coming soon!
+
+### What is CS229?
+
+Stanford's **CS229: Machine Learning** is one of the most influential ML courses in the world. This implementation provides:
+- Comprehensive lecture notebooks with theory and code
+- Real dataset implementations
+- 140+ practice exercises
+- 10 major projects
+- Complete Python implementations from scratch
+
+### Available Lectures
+
+1. **[Linear Regression](./cs229-course/01_linear_regression.ipynb)** ✅
+   - Normal equation, gradient descent variants
+   - Learning rate analysis, feature scaling
+   - California Housing dataset
+   
+2. **[Logistic Regression](./cs229-course/02_logistic_regression.ipynb)** ✅
+   - Binary and multi-class classification
+   - Decision boundaries, ROC curves
+   - Breast cancer prediction
+   
+3. **[Regularization](./cs229-course/03_regularization.ipynb)** ✅
+   - Ridge, Lasso, Elastic Net
+   - Cross-validation, learning curves
+   - Feature selection with Lasso
+
+**Coming Soon**: Generative Models, SVMs, Neural Networks, Clustering, PCA, RL, and more!
+
+### Resources
+
+- **[CS229 README](./cs229-course/README.md)** - Complete course guide
+- **[Practice Exercises](./cs229-course/CS229_PRACTICE.md)** - 140+ problems
+- **[Requirements](./cs229-course/requirements.txt)** - Python dependencies
+
+**Estimated time**: 14 weeks (8-15 hours/week)
+
+---
 
 ### 🐍 Essential Python Libraries
 

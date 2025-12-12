@@ -1,0 +1,119 @@
+[
+  {
+    "title": "Data Science for Beginners: Quizzes",
+    "complete": "Congratulations, you completed the quiz!",
+    "error": "Sorry, try again",
+    "quizzes": [
+      {
+        "id": 38,
+        "title": "Data Science In the Wild - Pre-Quiz",
+        "quiz": [
+          {
+            "questionText": "Data Science can be used in many industries such as",
+            "answerOptions": [
+              {
+                "answerText": "Finance and the Humanities",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "Agriculture and Manufacturing",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "All of these and more",
+                "isCorrect": "true"
+              }
+            ]
+          },
+          {
+            "questionText": "Data Science in the context of research can be focus on:",
+            "answerOptions": [
+              {
+                "answerText": "innovation opportunities",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "error handling",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "boosting sales",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "The 'Gender Shades Study' focused on",
+            "answerOptions": [
+              {
+                "answerText": "transforming gender discourse",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "the biases inherent in facial analytics",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "neither of these",
+                "isCorrect": "false"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 39,
+        "title": "Data Science In the Wild - Post-Quiz",
+        "quiz": [
+          {
+            "questionText": "Digital Humanities is a practice that combines computational methods with humanistic inquiry",
+            "answerOptions": [
+              {
+                "answerText": "True",
+                "isCorrect": "true"
+              },
+              {
+                "answerText": "False",
+                "isCorrect": "false"
+              }
+            ]
+          },
+          {
+            "questionText": "Use Data Science for sustainability research by",
+            "answerOptions": [
+              {
+                "answerText": "studying deforestation",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "studying climate change data",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "both of these",
+                "isCorrect": "true"
+              }
+            ]
+          },
+          {
+            "questionText": "In finance, you can use data science for",
+            "answerOptions": [
+              {
+                "answerText": "research on your financial services",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "to customize mutual fund options based on the type of customer",
+                "isCorrect": "false"
+              },
+              {
+                "answerText": "both of the above",
+                "isCorrect": "true"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
