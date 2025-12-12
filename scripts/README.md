@@ -106,7 +106,9 @@ Edit `progress_tracker.json` to:
 - Set learning goals
 - Track streaks and milestones
 
-## Tips
+---
+
+*Part of [Zero to AI](https://github.com/PavanMudigondaTR/zero-to-ai) - Complete AI/ML Learning Path*
 
 1. **Be Consistent**: Update progress daily for accurate tracking
 2. **Export Weekly**: Generate reports to review your pace

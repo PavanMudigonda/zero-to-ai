@@ -1,4 +1,4 @@
-name: aiml-learning
+name: zero-to-ai
 channels:
   - pytorch
   - conda-forge

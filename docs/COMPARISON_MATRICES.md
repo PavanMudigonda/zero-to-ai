@@ -287,6 +287,6 @@ Need absolute best quality?
 ---
 
 **Last Updated:** December 2025  
-**Repository:** [aiml](https://github.com/PavanMudigondaTR/aiml)
+**Repository:** [zero-to-ai](https://github.com/PavanMudigondaTR/zero-to-ai)
 
 For detailed tutorials on any of these topics, see the relevant phase notebooks in the repository.
