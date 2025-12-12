@@ -2,6 +2,8 @@
 
 > **Comprehensive AI/ML Learning Path** - From foundational mathematics to production-ready systems
 
+## 📊 Learning Progress
+
 ---
 
 ## 🚀 Quick Start
@@ -65,20 +67,20 @@ aiml/
 ### Foundation (Phases 0-9)
 | Phase | Topic | Time | Status |
 |-------|-------|------|--------|
-| **0** | [Glossary](0-glossary/GLOSSARY.md) | - | 📚 Reference |
-| **1** | [Python Fundamentals](1-python/README.md) | 2-3 weeks | ✅ 278 notebooks |
-| **2** | [Mathematics for ML](2-maths/README.md) | 2-3 months | ⭐ 40+ notebooks |
-| **3** | [Tokenization](3-token/README_TOKENIZERS.md) | 1-2 weeks | ✅ Complete |
-| **4** | [Embeddings](4-embeddings/README.md) | 3-4 weeks | ⭐ Interactive |
-| **5** | [Neural Networks](5-neural-networks/README.md) | 2-3 months | ⭐ Complete |
-| **6** | [Vector Databases](6-vector-databases/README.md) | 2-3 weeks | ⭐ 5 databases |
-| **7** | [RAG Systems](7-rag/README.md) | 3-4 weeks | ✅ Production |
-| **8** | [MLOps](8-mlops/README.md) | 4-6 weeks | ✅ Deployment |
-| **9** | [Specializations](9-specializations/) | 2-3 months | ✅ Agents/CV/NLP |
-| **10** | [Prompt Engineering](10-prompt-engineering/README.md) | 3-4 weeks | 🔥 CoT, ReAct, Advanced |
-| **11** | [LLM Fine-tuning](11-llm-finetuning/README.md) | 1-2 months | 🔥 LoRA/QLoRA/PEFT |
-| **12** | [Multimodal AI](12-multimodal/README.md) | 1-2 months | 🔥 NEW - Vision/Audio |
-| **13** | [Local LLMs](13-local-llms/README.md) | 3-4 weeks | 🔥 NEW - Ollama/Privacy |
+| **0** | [Glossary](glossary/GLOSSARY.md) | - | ⏳ Pending |
+| **1** | [Python Fundamentals](1-python/README.md) | 2-3 weeks | ⏳ Pending |
+| **2** | [Mathematics for ML](2-maths/README.md) | 2-3 months | ⏳ Pending |
+| **3** | [Tokenization](3-token/README_TOKENIZERS.md) | 1-2 weeks | ⏳ Pending |
+| **4** | [Embeddings](4-embeddings/README.md) | 3-4 weeks | ⏳ Pending |
+| **5** | [Neural Networks](5-neural-networks/README.md) | 2-3 months | ⏳ Pending |
+| **6** | [Vector Databases](6-vector-databases/README.md) | 2-3 weeks | ⏳ Pending |
+| **7** | [RAG Systems](7-rag/README.md) | 3-4 weeks | ⏳ Pending |
+| **8** | [MLOps](8-mlops/README.md) | 4-6 weeks | ⏳ Pending |
+| **9** | [Specializations](9-specializations/) | 2-3 months | ⏳ Pending |
+| **10** | [Prompt Engineering](10-prompt-engineering/README.md) | 3-4 weeks | ⏳ Pending |
+| **11** | [LLM Fine-tuning](11-llm-finetuning/README.md) | 1-2 months | ⏳ Pending |
+| **12** | [Multimodal AI](12-multimodal/README.md) | 1-2 months | ⏳ Pending |
+| **13** | [Local LLMs](13-local-llms/README.md) | 3-4 weeks | ⏳ Pending |
 
 ---
 
