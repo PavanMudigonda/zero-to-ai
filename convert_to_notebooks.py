@@ -130,7 +130,7 @@ def convert_file(input_path: str, output_path: str):
 def main():
     """Convert all Python files to notebooks."""
     import sys
-    base_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('/Users/pavanmudigonda/code/aiml-repo/aiml/1-python/5-scikit-learn')
+    base_dir = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('/Users/pavanmudigonda/code/aiml-repo/aiml/1-data-science/5-scikit-learn')
     
     # Find all Python files
     python_files = []
