@@ -12,8 +12,15 @@
 # 1. Install dependencies with UV (fast!)
 ./install_dependencies.sh
 
+# OR use conda (recommended for ML)
+conda env create -f environment.yml
+conda activate aiml-learning
+
 # 2. Start learning
 jupyter notebook
+
+# 3. Track your progress
+python scripts/view_progress.py
 ```
 
 📖 **New here?** Start with the [Learning Checklist](checklist.md)
@@ -40,7 +47,8 @@ jupyter notebook
 aiml/
 ├── checklist.md           # ⭐ START HERE - Your complete learning roadmap
 ├── setup.md               # Installation & environment setup
-├── requirements.txt       # All dependencies for 731 notebooks
+├── requirements.txt       # All dependencies for 732 notebooks
+├── 0-python/              # Python prerequisites (external course pointer)
 ├── glossary/              # AI/ML terminology & concepts
 ├── 1-data-science/        # Python fundamentals + scikit-learn (278 notebooks!)
 ├── 2-maths/               # Mathematics for ML (40+ notebooks)
@@ -64,11 +72,13 @@ aiml/
 
 ## 🎯 Learning Phases
 
+> **Prerequisites**: New to Python? Start with [0-python/](0-python/) for Python fundamentals before Phase 1.
+
 ### Foundation (Phases 0-9)
 | Phase | Topic | Time | Status |
 |-------|-------|------|--------|
 | **0** | [Glossary](glossary/GLOSSARY.md) | - | ⏳ Pending |
-| **1** | [Python Fundamentals](1-data-science/README.md) | 2-3 weeks | ⏳ Pending |
+| **1** | [Python & Data Science](1-data-science/README.md) | 2-3 weeks | ⏳ Pending |
 | **2** | [Mathematics for ML](2-maths/README.md) | 2-3 months | ⏳ Pending |
 | **3** | [Tokenization](3-token/README_TOKENIZERS.md) | 1-2 weeks | ⏳ Pending |
 | **4** | [Embeddings](4-embeddings/README.md) | 3-4 weeks | ⏳ Pending |
@@ -87,7 +97,7 @@ aiml/
 ## 📖 Documentation
 
 - **[Learning Checklist](checklist.md)** ⭐ - Your complete learning roadmap
-  - Track progress through 731 notebooks
+  - Track progress through 732 notebooks
   - 14 progressive phases (Foundations → Cutting-Edge AI)
   - Comprehensive MDTP framework (Models, Data, Tools, Productisation)
   - 200+ advanced topics checklist
@@ -97,6 +107,17 @@ aiml/
   - Quick start with UV (recommended)
   - Manual installation options
   - Troubleshooting guide
+
+- **[Comparison Matrices](docs/COMPARISON_MATRICES.md)** 🆕 - Decision guides
+  - LLM model selection (GPT-4o vs Claude vs local)
+  - Fine-tuning methods (LoRA vs QLoRA vs Full)
+  - Vector databases (ChromaDB vs Qdrant vs Milvus)
+  - Deployment options (API vs self-hosted vs edge)
+
+- **[Progress Tracking](scripts/README.md)** 🆕 - Track your learning
+  - Automated progress tracking with Python scripts
+  - Visual progress dashboard
+  - Export reports to markdown
 
 ## 🧪 Hands-On Labs
 

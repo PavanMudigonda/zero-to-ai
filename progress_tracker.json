@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "total_notebooks": 732,
+    "last_updated": "2025-12-12",
+    "repository": "aiml",
+    "owner": "PavanMudigondaTR"
+  },
+  "phases": {
+    "phase_0": {
+      "name": "Glossary",
+      "notebooks": [],
+      "completed": []
+    },
+    "phase_1": {
+      "name": "Python & Data Science",
+      "total_notebooks": 278,
+      "completed": [],
+      "sections": {
+        "numpy": {
+          "total": 0,
+          "completed": []
+        },
+        "pandas": {
+          "total": 0,
+          "completed": []
+        },
+        "scikit_learn": {
+          "total": 278,
+          "completed": []
+        }
+      }
+    },
+    "phase_2": {
+      "name": "Mathematics for ML",
+      "total_notebooks": 40,
+      "completed": [],
+      "sections": {
+        "foundational": {
+          "total": 8,
+          "completed": []
+        },
+        "mml_book": {
+          "total": 10,
+          "completed": []
+        },
+        "islp_book": {
+          "total": 13,
+          "completed": []
+        },
+        "cs229": {
+          "total": 6,
+          "completed": []
+        }
+      }
+    },
+    "phase_3": {
+      "name": "Tokenization",
+      "total_notebooks": 8,
+      "completed": [
+        "tiktoken_example.ipynb"
+      ]
+    },
+    "phase_4": {
+      "name": "Embeddings",
+      "total_notebooks": 10,
+      "completed": []
+    },
+    "phase_5": {
+      "name": "Neural Networks",
+      "total_notebooks": 0,
+      "completed": []
+    },
+    "phase_6": {
+      "name": "Vector Databases",
+      "total_notebooks": 7,
+      "completed": []
+    },
+    "phase_7": {
+      "name": "RAG Systems",
+      "total_notebooks": 0,
+      "completed": []
+    },
+    "phase_8": {
+      "name": "MLOps",
+      "total_notebooks": 0,
+      "completed": []
+    },
+    "phase_9": {
+      "name": "Specializations",
+      "total_notebooks": 0,
+      "completed": []
+    },
+    "phase_10": {
+      "name": "Prompt Engineering",
+      "total_notebooks": 4,
+      "completed": []
+    },
+    "phase_11": {
+      "name": "LLM Fine-tuning",
+      "total_notebooks": 0,
+      "completed": []
+    },
+    "phase_12": {
+      "name": "Multimodal AI",
+      "total_notebooks": 2,
+      "completed": []
+    },
+    "phase_13": {
+      "name": "Local LLMs",
+      "total_notebooks": 1,
+      "completed": []
+    }
+  },
+  "statistics": {
+    "total_completed": 1,
+    "completion_percentage": 0.14,
+    "current_phase": "phase_0",
+    "notebooks_this_week": 0,
+    "streak_days": 0
+  }
+}

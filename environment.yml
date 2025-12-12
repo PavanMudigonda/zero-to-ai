@@ -1,0 +1,84 @@
+name: aiml-learning
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Core Python
+  - python=3.11
+  
+  # Jupyter & Development
+  - jupyter
+  - jupyterlab
+  - ipykernel
+  - notebook
+  
+  # Scientific Computing
+  - numpy>=1.24.0
+  - pandas>=2.0.0
+  - scipy>=1.11.0
+  - matplotlib>=3.7.0
+  - seaborn>=0.12.0
+  
+  # Machine Learning Fundamentals
+  - scikit-learn>=1.3.0
+  
+  # Deep Learning
+  - pytorch>=2.5.0
+  - torchvision>=0.20.0
+  - torchaudio>=2.5.0
+  - cpuonly  # Remove this line if you have CUDA GPU
+  
+  # Data Processing
+  - pillow>=10.0.0
+  - requests>=2.31.0
+  
+  # Utilities
+  - tqdm
+  - python-dotenv
+  
+  # Install via pip (packages not available in conda)
+  - pip
+  - pip:
+    # Transformers & NLP
+    - transformers>=4.47.0
+    - datasets>=3.2.0
+    - tokenizers>=0.20.0
+    - sentencepiece>=0.2.0
+    - tiktoken>=0.8.0
+    
+    # Fine-tuning & PEFT
+    - peft>=0.13.0
+    - accelerate>=1.2.0
+    - bitsandbytes>=0.45.0
+    - trl>=0.12.0
+    
+    # Embeddings & Vector DBs
+    - sentence-transformers>=3.3.0
+    - chromadb>=0.5.0
+    - qdrant-client>=1.12.0
+    - weaviate-client>=4.9.0
+    - pymilvus>=2.4.0
+    
+    # RAG & LLM Frameworks
+    - langchain>=0.3.0
+    - langchain-community>=0.3.0
+    - langchain-openai>=0.2.0
+    - llama-index>=0.12.0
+    
+    # Diffusion & Multimodal
+    - diffusers>=0.31.0
+    - safetensors>=0.4.0
+    
+    # APIs
+    - openai>=1.57.0
+    - anthropic>=0.39.0
+    
+    # MLOps
+    - mlflow>=2.17.0
+    - wandb>=0.18.0
+    
+    # Utilities
+    - python-dotenv>=1.0.0
+    - huggingface-hub>=0.26.0
