@@ -9,7 +9,7 @@ Complete this checklist as you progress through the repository. Check off items 
 1. Work through phases sequentially (0 → 13)
 2. Check off `- [ ]` items as you complete them
 3. Track your progress through notebooks, labs, and projects
-4. Reference [docs/learning-path.md](docs/learning-path.md) for detailed guidance
+4. Use this checklist alongside the main [README.md](README.md) and [setup.md](setup.md)
 
 ---
 
@@ -637,7 +637,7 @@ Track your major achievements:
 
 ---
 
-**Total Progress**: `___/731` notebooks completed
+**Total Progress**: `___/732` notebooks completed
 
 **Current Phase**: `Phase ___`
 
