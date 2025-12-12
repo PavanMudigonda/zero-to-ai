@@ -4,10 +4,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 - **📁 foundational/** - Core math topics (9 notebooks)
 - **📁 mml-book/** - MML book chapters covering theory and ML applications (10 notebooks)
+- **📁 mlpp-book/** - Machine Learning: A Probabilistic Perspective (4 notebooks) 🆕
 - **📁 islp-book/** - Introduction to Statistical Learning with Python (13 chapters)
 - **📁 cs229-course/** - Stanford CS229 Machine Learning course implementation (14 lectures) 🆕
 - **📁 exercises/** - Practice exercises with solutions (4 notebooks)
-- **📁 resources/** - Reference materials (MML textbook, ISLP book, CS229 notes)
+- **📁 resources/** - Reference materials (MML textbook, ISLP book, CS229 notes, MLPP book)
 
 ## 📚 Table of Contents
 
@@ -15,8 +16,9 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 - [Part I: Foundational Math Notebooks](#part-i-foundational-math-notebooks)
 - [Part II: MML Book - Mathematical Foundations](#part-ii-mml-book---mathematical-foundations-chapters-2-7)
 - [Part III: MML Book - ML Applications](#part-iii-mml-book---ml-applications-chapters-9-12)
-- [Part IV: ISLP Book - Statistical Learning](#part-iv-islp-book---statistical-learning-with-python)
-- [Part V: CS229 Course - Machine Learning Algorithms](#part-v-cs229-course---stanford-machine-learning-) 🆕
+- [Part IV: MLPP Book - Probabilistic Machine Learning](#part-iv-mlpp-book---probabilistic-machine-learning) 🆕
+- [Part V: ISLP Book - Statistical Learning](#part-v-islp-book---statistical-learning-with-python)
+- [Part VI: CS229 Course - Machine Learning Algorithms](#part-vi-cs229-course---stanford-machine-learning-) 🆕
 - [Practice Exercises](#️-practice-with-exercises)
 - [Learning Paths](#-learning-paths)
 - [Quick Start](#-quick-start)
@@ -422,7 +424,77 @@ These notebooks demonstrate how the mathematical foundations are applied to real
 
 ---
 
-## 🎯 Learning Paths
+## Part IV: MLPP Book - Probabilistic Machine Learning
+
+**Location**: `mlpp-book/` folder
+
+Comprehensive examples from Kevin Murphy's "Machine Learning: A Probabilistic Perspective". This book provides a unified probabilistic framework for understanding machine learning algorithms.
+
+### [01. Probability Fundamentals](./mlpp-book/01_probability_fundamentals.ipynb)
+**Topics covered:**
+- Basic probability rules (sum rule, product rule)
+- Bayes' rule and Bayesian inference
+- Common probability distributions (Bernoulli, Binomial, Gaussian, Poisson)
+- Monte Carlo sampling and rejection sampling
+- Information theory: entropy, KL divergence, mutual information
+
+**Implementations**: Bayesian updating for coin flips, medical diagnosis with Bayes' rule, multivariate Gaussian visualization, Monte Carlo π estimation, rejection sampling
+
+**Key insights**: Bayesian inference provides a principled framework for updating beliefs, different distributions model different types of data, information theory quantifies uncertainty
+
+**Cells**: 15+ | **Duration**: 4-5 hours
+
+---
+
+### [02. Generative Models for Classification](./mlpp-book/02_generative_models.ipynb)
+**Topics covered:**
+- Naive Bayes classifier (Gaussian, Multinomial, Bernoulli)
+- Gaussian Discriminant Analysis (GDA)
+- Linear and Quadratic Discriminant Analysis (LDA/QDA)
+- Generative vs discriminative models
+- Text classification and spam detection
+
+**Implementations**: Naive Bayes from scratch, text classification with 20 newsgroups, LDA/QDA decision boundaries, spam detector, feature correlation impact
+
+**Key insights**: Naive Bayes works surprisingly well despite independence assumption, LDA assumes shared covariance (linear boundary), QDA allows class-specific covariance (quadratic boundary)
+
+**Cells**: 18+ | **Duration**: 5-6 hours
+
+---
+
+### [03. Gaussian Models](./mlpp-book/03_gaussian_models.ipynb)
+**Topics covered:**
+- Multivariate Gaussian distribution properties
+- Maximum likelihood estimation for Gaussian parameters
+- Gaussian Mixture Models (GMM)
+- Expectation-Maximization (EM) algorithm
+- Missing data imputation
+
+**Implementations**: MLE convergence analysis, GMM with EM from scratch, parameter evolution visualization, missing data imputation comparison
+
+**Key insights**: Gaussians are closed under marginalization and conditioning, EM elegantly handles latent variables, GMM can model complex multimodal distributions
+
+**Cells**: 16+ | **Duration**: 5-6 hours
+
+---
+
+### [04. Bayesian Statistics](./mlpp-book/04_bayesian_statistics.ipynb)
+**Topics covered:**
+- Bayesian inference and sequential updating
+- Conjugate priors (Beta-Binomial, Gamma-Poisson, Gaussian-Gaussian)
+- Posterior predictive distribution
+- Bayesian decision theory and loss functions
+- Empirical Bayes and hierarchical models
+
+**Implementations**: Sequential Bayesian updating, conjugate prior examples, posterior predictive sampling, optimal decisions under different losses, empirical Bayes for baseball batting averages
+
+**Key insights**: Conjugate priors enable analytical solutions, posterior predictive accounts for parameter uncertainty, different loss functions lead to different optimal estimates, empirical Bayes provides data-driven shrinkage
+
+**Cells**: 17+ | **Duration**: 5-6 hours
+
+---
+
+## Part V: ISLP Book - Statistical Learning with Python
 
 Choose your path based on your goals and background:
 
