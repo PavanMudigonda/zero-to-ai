@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "total_notebooks": 732,
+    "total_notebooks": 761,
     "last_updated": "2025-12-12",
     "repository": "zero-to-ai",
     "owner": "PavanMudigondaTR"
@@ -32,7 +32,7 @@
     },
     "phase_2": {
       "name": "Mathematics for ML",
-      "total_notebooks": 40,
+      "total_notebooks": 69,
       "completed": [],
       "sections": {
         "foundational": {
@@ -49,6 +49,22 @@
         },
         "cs229": {
           "total": 6,
+          "completed": []
+        },
+        "3blue1brown_linear_algebra": {
+          "total": 7,
+          "completed": []
+        },
+        "3blue1brown_calculus": {
+          "total": 12,
+          "completed": []
+        },
+        "3blue1brown_differential_equations": {
+          "total": 8,
+          "completed": []
+        },
+        "3blue1brown_neural_networks": {
+          "total": 9,
           "completed": []
         }
       }
@@ -67,8 +83,14 @@
     },
     "phase_5": {
       "name": "Neural Networks",
-      "total_notebooks": 0,
-      "completed": []
+      "total_notebooks": 5,
+      "completed": [],
+      "sections": {
+        "5-neural-networks": {
+          "total": 5,
+          "completed": []
+        }
+      }
     },
     "phase_6": {
       "name": "Vector Databases",
