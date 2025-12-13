@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+zero_to_ai.egg-info/PKG-INFO
+zero_to_ai.egg-info/SOURCES.txt
+zero_to_ai.egg-info/dependency_links.txt
+zero_to_ai.egg-info/requires.txt
+zero_to_ai.egg-info/top_level.txt

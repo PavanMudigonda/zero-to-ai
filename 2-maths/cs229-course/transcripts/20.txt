@@ -1,0 +1,1210 @@
+0:03
+All right. Hey, everyone, actually started a little bit late. So welcome to the, uh,
+0:10
+final lecture of, uh, CS229 of this quarter or I guess,
+0:15
+uh, to the home viewers, welcome to the season finale.
+0:22
+So what I'd like to do today is, um, wrap up our discussion on reinforcement learning and then,
+0:29
+um, and then we'll conclude the class. Um, so I think you know,
+0:34
+over the last, uh, few lectures you saw a lot of,
+0:40
+uh, uh, we- we saw a lot of NAV. So maybe as a brief interlude here are some videos.
+0:48
+Um, so self-autonomous helicopter, um, you know, this is a project that, uh, I know Pieter Abbeel,
+0:56
+Adam Coates, uh, some- some former students here, now some of the machine learning greats worked on when they were,
+1:02
+um, PhD students here. Uh, and- and- and I think, uh,
+1:08
+using algorithms similar to the ones you learned in this class, how do you make a helicopter fly? So just for fun, this is a video shot on top of
+1:14
+one of the Stanford, uh, soccer fields. I was actually the camera man that day [LAUGHTER] ,
+1:21
+um, and zooming out the camera. See the trees touching the sky.
+1:27
+[BACKGROUND].
+1:39
+Say, uh, um, it- it- it turns out- that's a small radio-controlled helicopter.
+1:45
+It turns out that, uh, when you're very far away you can't tell if this is a small radio-controlled helicopter or if there's
+1:51
+like a helicopter with people sitting in it [LAUGHTER]. So, um, uh, there was- actually there's, uh, you know, foot is on, uh,
+1:58
+a kind of a soccer field, the big, uh, grass field off San Hill Road and turns out across San Hill Road,
+2:05
+um, one of the high rises there was a- there was an elderly lady that lives in one of those apartments. And when she saw that, she would call 9-1-1 and say,
+2:12
+"Hey, there's a helicopter about to crash." [LAUGHTER] And then the- the firemen would come out, so,
+2:18
+[LAUGHTER] I had to tell them that and I- I think they were partly relieved, partly disappointed that there was no one for us for- for them to save.
+2:26
+And, uh, um, and so- and- and I think, uh, let's see.
+2:32
+Uh, uh, one of the things I promised to do, um,
+2:37
+in the debugging learning algorithms lecture was just go over the um,
+2:42
+reinforcement learning example again. So let me just do that now but, uh, with notation that I think you now understand compared to- oh, yes.
+2:50
+Why is the helicopter flying upside down? Oh, uh, it was an aerobatic stunt.
+2:56
+Uh, yeah, I- I don't think there's any good reason for flying a helicopter upside down [LAUGHTER] , uh, other than that you can.
+3:02
+Uh, there- there a lot of videos of self-autonomous helicopters flying all sorts of stunts, go to heli.stanford.edu,
+3:10
+heli.stanford.edu and the Stanford autonomous helicopter did- did-
+3:15
+did a lot more than flying upside down. Uh, it could, I mean, make some maneuvers that looked aerodynamically
+3:22
+impossible such as the helicopter that looks like it's tumbling, just spinning randomly but staying same place in the air, right?
+3:29
+Um, it's called a chaos maneuver and if you look you go, wow. This helicopter was turning upside down, spinning around the air in every single direction but it was
+3:35
+just staying right there in the air not crashing, and so there are maneuvers like that- that, um, the very best human pilots in the world can fly with helicopters and I think,
+3:43
+uh, this was just, uh, um, uh, a demonstration I guess, uh, and I think a lot of this work wound up influencing some of
+3:51
+the later work on the quadcopter drones in a few research labs and. Yeah, I think, uh,
+3:56
+it was a difficult control problem and it was, uh, it was one of those things you do when you're, you- you when you're a university and you want to solve the hardest problems around.
+4:05
+But I wanted to step through a few of the debugging process that we went through as we were building a helicopter like this.
+4:14
+So, uh, when you're trying to get the helicopter to fly upside down, fly stunts, you don't want to crash too often.
+4:19
+So step one is build a model or build a simulator of a helicopter, right? Much- much as you saw, um,
+4:25
+when we start to talk about fitted value iteration and then, um, choose a reward function, uh,
+4:32
+like that, and it turns out that specific reward function for staying in place is not that high,
+4:38
+you know, like the quadratic function like that works okay. But if you want the helicopter to fly aggressive maneuvers it's actually quite
+4:46
+tricky to specify what is a good turn for a helicopter, right? Um, and then what you do is you run reinforcement learning algorithm, um,
+4:56
+to try to maximize say the finite horizon MDP formulation and maximize sum of rewards over T timesteps,
+5:02
+so you get a policy Pi. And then whenever you do this, the first time you do this,
+5:08
+you find that the resulting controller does much worse than the human pilot, and the question is what do you do next, right?
+5:14
+This is- by the way- this is almost- I think this is almost exactly the slide I showed you last time except I cleaned up the slide
+5:20
+using reinforcement learning notation rather than the slightly simplified notation you saw before [NOISE] you learned about reinforcement learning.
+5:28
+And so the question is, um, and- and again if you're working on the reinforcement learning problem yourself, you know, uh,
+5:35
+there's a good chance you have to answer this question yourself for whatever robot or other reinforcement learning or
+5:41
+factory automation or stock trading system or whatever it is, um, you are trying to get to work in reinforcement learning.
+5:47
+But do you want to improve the model sim- model or do you want to modify the reward function or do you want to,
+5:52
+uh, modify the reinforcement learning algorithm. All right. And modifying the reinforcement learning algorithm includes things like,
+5:59
+uh, playing with the discretization that you're using. Um, if you're taking a continuous state MDP and discretizing it to solve over
+6:08
+finite state MDP formulation or modifying the reinforcement learning algorithm includes also maybe choosing new features to use in fitted value iteration, right?
+6:16
+There are a lot of things you could try. Or maybe instead of using a linear function approximator, instead of fitting a linear function for fitted value iteration.
+6:23
+Maybe you want to use a bigger, you know, deep neural network, right? Um, but so which of these steps is the most useful thing to do?
+6:31
+So this is the analysis of those three things, uh, you know, if, I'll give you a second to read this, right?
+6:41
+But if these three statements are true, then the learn controller should have flown well on the helicopter.
+6:49
+Right? Um, and so
+6:56
+those three sentences correspond to the three things in yellow that you could work on,
+7:04
+um, there's a problem that, you know, um, statement 1 is false, that the simulator isn't good enough,
+7:10
+there's a problem that statement 2 is false. That, um, ah, oh,
+7:18
+sorry I think actually two or three are reversed. But, uh, the three statements corresponds to the three things in yellow. I think the two and three are in, uh,
+7:24
+are in, uh, opposite order, right? Ah, as the RL algorithm maximizing some rewards is a reward function,
+7:31
+actually the right thing to maximize. And so here are the diagnostics you could use, um, to see if this helicopter simulator is accurate,
+7:39
+uh, well, first check if, um, the policy flies well in simulation.
+7:45
+If your policy flies well in simulation but not in real life, then this shows that the problem is with
+7:53
+your simulator and you should try to learn a better model for your helicopter, right? And, and if you're using a linear model this with the matrices a and b, um,
+8:02
+if, you know, st plus 1 equals ast plus bat, if you're [inaudible] try, try getting more data or maybe try a non-linear model,
+8:11
+but if you find that the problem's not your simulator, if you find that, uh,
+8:16
+your policy is flying poorly in simulation and flying poorly in real life,
+8:21
+right, then this is the diagnostic I would use. Um, so I shall show these two lines.
+8:28
+So let human be the human control policy, so hire a human pilot, right? Which, which we did.
+8:34
+We're fortunate to have one of the best- one, one of, um, America's top, you know,
+8:39
+aerobatic helicopter pilots working with us, and he, using his control sticks and radio control,
+8:44
+can make a helicopter fly upside-down, tumble, do flips, loops, rolls. So we had a very good human pilot, um,
+8:51
+help us, uh, fly the helicopter manually. So what you can do is, um,
+8:58
+test whether or not the, uh- so this, this thing here, right?
+9:04
+That's just a pay off of the, um, learn policy as measured on your reward function.
+9:12
+So check if, um, the learn policy achieves a better or worse pay off than a human pilot can, right?
+9:21
+And so that means, you know, go ahead and let the learn policy fly the helicopter and we get the human to fly the helicopter and compute the sum of rewards
+9:30
+on the sequence of states that these two systems take the helicopter through and
+9:35
+just see whether the human or the learn policy achieves a higher payoff,
+9:41
+achieves a higher sum of rewards. And if, um, the payoff achieved
+9:47
+by the learning algorithm is less than the payoff achieved by the human, then this shows that, um,
+9:53
+the learn policy's not actually maximizing the sum of rewards, right? Because whether the human is doing, you know,
+10:00
+he or she is doing a better job, maximizes the sum of rewards then the learn policy. So this means that you should, you know,
+10:07
+consider working on the reinforcement learning algorithm to try to make it do a better job maximizing the sum of rewards, right?
+10:13
+Um, and then on the flip side, this inequality goes the other way, right?
+10:19
+Uh, so if pa- if, if the payoff or the RL algorithm is greater than the payoff of the human,
+10:25
+then what that means is that, you know, RL algorithm is actually doing a better job,
+10:30
+maximizing the sum of rewards, but it's still flying worse. So what this tells you is that,
+10:36
+doing a really good job maximizing the sum of rewards does not correspond to how you actually want
+10:41
+the helicopter to fly and so that means that maybe you should work on,
+10:46
+um, improving the reward function, that the reward function is not capturing what's actually most
+10:52
+important to fly a helicopter well and then, then you modify the reward function, right?
+10:58
+So in a typical workflow, uh, hoping to describe to you what, what it feels like to work on a machine learning project like this,
+11:05
+and this was a big multi-year machine learning project, but when you're working on a big complicated machine learning project like this,
+11:11
+um, the bottleneck moves around meaning that you build a helicopter, you get a human pilot to fly it,
+11:17
+you know, gets in the work, they run these diagnostics and maybe the first time you do this you'll find, wow,
+11:22
+the simulation's really inaccurate, then you are going to work on improving the simulator for a couple months. And then, you know, and every now and then you come back and rerun
+11:30
+this diagnostic and maybe for the first two months of the project, you keep on saying, "Yup, simulator is not good enough, simulator
+11:36
+is not good enough, simulator is not good enough." After working on the simulator for a couple months you, you may find that, um,
+11:42
+item 1 is no longer the problem, you might then find that, um, item 3 is the problem,
+11:47
+the simulator's now good enough, but when you run this diagnostic, two months into the project, you might say,
+11:53
+"Wow, looks like your RL algorithm, uh, is maximizing the reward function but this is not good flying."
+11:59
+So now I think the biggest problem for the project or the biggest bottleneck for the project is that the ref- the reward function is not good enough,
+12:06
+and then you might spend, you know, another one or two, or three, or, or, or sometimes longer months working to try to improve the reward function,
+12:13
+then you might do that for a while, and then when the reward function is good enough then that exposes the next problem in your system which might be that the RL algorithm isn't good enough.
+12:21
+And so the problem you should be working on actually moves around and it's different in different phases of the project.
+12:28
+And, um, when you're working on this it feels like every time you solve the current problem that exposes the next most important problem to work
+12:36
+on and then you work on that and you solve that then this helps you identify and expose the next most important problem to work on
+12:43
+and you kind of keep doing that or you keep iterating, and keep solving problems until hopefully, you get a helicopter that does what you want it to, make sense?
+12:51
+Okay. Um, but I think [NOISE] teams that have the discipline to, um,
+12:58
+prioritize according to diagnostics like this, uh, tend to be much more efficient, the teams that kind of go by gut feeling in terms of selecting,
+13:06
+you know, what to, what to spend the time on. All right, um, any,
+13:11
+any questions about this? [inaudible].
+13:16
+Oh, sorry, say that again. [inaudible] the simulator's
+13:21
+accurate [inaudible].
+13:29
+Yeah, uh, I, I kind of wanna say yes, um, let me think. Yeah, I would usually check step 1 first and then
+13:37
+if I think simulator is okay then look at steps 2 and 3. Um, maybe one, one other thing, uh, er, about,
+13:44
+when you work on these projects there is some judgment involved so I think I'm presenting these things as though- as a rigid mathematical formula,
+13:51
+that's cut and dry, this formula says, now work on step 1, then this one says, now work on step 3. Um, there is, there is, um,
+13:57
+more judgment involved because when you run these diagnostics you might say, well, it looks like the simulators not that good but it's kinda good,
+14:04
+it's little bit ambiguous, and oh it looks like, you know, uh, and so that's what it often feels like. And so a team would get together,
+14:11
+look at the evidence from all three steps and then say, you know, "Well, maybe the simulator is not that good but it's maybe good
+14:16
+enough and but both the reinforcement- the, the reward function is really bad, let's focus on that." So there is some,
+14:23
+um- so rather than a hard and fast rule there, there is some judgment needed to, to make these decisions,
+14:29
+uh, but having a, um- so when leading machine learning teams often my teams will, you know,
+14:34
+run these diagnostics, get together and look at the evidence and then discuss and debate what's the best way to move forward,
+14:40
+but I think the process in making sure that discussion and the debate is much better than the alternative, which is, you know,
+14:46
+someone just picks something kind of at random and, and the team does that, right?
+14:51
+Yeah, okay. Cool. Um-
+14:56
+All right, cool. So, um, just, uh,
+15:02
+yeah maybe you, while I have the laptop up, you know, a little bit for fun but a little bit because I'm,
+15:08
+uh, to illustrate fitted value iteration. Um, let me just show another,
+15:14
+um, reinforcement learning video. Um, oh, by the way, one of the- I- I think if I look at the future of AI,
+15:21
+the future of machine learning, you know, there's a lot of hype about reinforcement learning for game playing which is fine.
+15:26
+You know, we all like- we all love, uh, computers playing computer games, like that's a great thing I think or something, er.
+15:33
+But- but I think that some of the most exciting applications of reinforcement learning coming down the pipe I think will be robotics.
+15:38
+So I think over the next few years, even though there are only a few success stories of reinforcement learning applied to robotics.
+15:44
+There are more and more right now. One of the trends I see, you know, when you look at, uh, the academic publications and some of the things making
+15:51
+their way into industrial environments is I think in the next several years, just based on the stuff I see, my friends in many different companies,
+15:58
+in many different institutes working on, I think there will be a rise of, uh, reinforcement learning algorithms applied to robotics.
+16:03
+I think this would be one important area to- to- to watch out for. All right. Uh, but, uh, uh,
+16:11
+so, you know, uh, uh, this is another Stanford video, this is again just using reinforcement learning to get a robot dog,
+16:18
+um, to climb over obstacles like these. Uh, my friends that were less generous, um [NOISE] ,
+16:26
+uh, uh, did not want to think of this as a robot dog. Uh, they thought it was more like a robot cockroach, uh, [LAUGHTER].
+16:34
+But I think cockroaches don't have four legs, right, cockroaches have six legs [LAUGHTER].
+16:41
+Um, yeah but so,
+16:55
+uh, how do you program a robot dog like this, right, to, uh, climb over terrain?
+17:01
+So one of the key components, this is work by, um, Zico Kolter, uh, now a Carnegie Mellon professor, uh,
+17:08
+another one of the machine learning greats, uh, is, ah, ah, a key part of this was,
+17:14
+ah, value function of approximation, uh, where it- dog starts on the left and it goes get to the right then, uh,
+17:21
+the approximate value function kind of, um, ah, I- I'm- I'm sort of finding a little bit, right?
+17:27
+But- but the approximate value function tells it, uh, given the 3D shape of the terrain, uh,
+17:33
+the middle plot is a height map where the different shades tell you how- how- how tall is the terrain,
+17:38
+uh, but given the shape of the terrain, the dog, uh, learns a value function that tells it what is the cost of putting
+17:46
+his feet on different locations to the terrain and it learns among other things, you know, not to put his feet at the edge of a cliff because then it's
+17:53
+likely to slip off the edge of a cliff and fall over, right? And so, um, but- but hopefully this gives a visualization of whether,
+18:01
+uh, learn value function for a very complicated function they'll say. And- and the state is very high-dimensional,
+18:07
+this is all kind of projected onto a 2D space so you can visualize it. But- but this is what, uh, a simplified value function looks like for a robot like this.
+18:15
+Okay. All right. So with that,
+18:20
+um, let me return to the white board [BACKGROUND] um. So, um, there's just one class of algorithms I want to describe to you
+18:47
+today which are called policy search algorithms.
+18:55
+And uh, sometimes, uh, policy searches are also called,
+19:00
+uh, direct policy search.
+19:07
+And, um, to explain what this means, so far our approach to reinforcement learning has
+19:15
+been to first learn or approximate the value function, you know, approximate V star and then use that
+19:22
+to learn or at least hopefully approximate Pi star, right? So we have- you saw value iteration,
+19:28
+top, we had policy iteration. But philosophy to reinforcement learning was to estimate the value function and then use that,
+19:34
+you know, that equation with the arg max to figure out what is Pi star. So this is an indirect way of getting a policy
+19:40
+because we- we first try to figure out what's the value function. In direct policy search, um,
+19:47
+we try to find a good policy directly,
+19:56
+hence the term direct policy search because you don't- you go straight for trying to find a good policy
+20:02
+without the intermediate step of finding an approximation to the value function.
+20:08
+So, um, let's see. I'm going to use, uh,
+20:13
+as the motivating example the inverted pendulum. Right. So that is that thing with a free hinge here,
+20:20
+and let's say your actions are to accelerate left or to accelerate right, right?
+20:25
+And then you can have- and you can have states to accelerate strong, accelerate less strong, accelerate right. You got more than two actions but let's just say you've
+20:33
+inverted pendulum with, um, two actions. So, um, if you
+20:40
+want to- I- I'll- I'll talk about pros and cons of direct policy search later. But if you want to apply polic- direct policy search,
+20:46
+you want to apply policy search, the first step is to, um, come up with the class of policies you'll entertain or
+20:53
+come up with the set of functions you use to approximate the policy. So, um, again to make an analogy,
+21:00
+when, uh, you saw logistic regression for the first time, you know, we kind of said that we would approximate y as the hypothesis,
+21:12
+um, right, whose form was governed by this sigmoid function. And you remember in week 2 when,
+21:21
+uh, I first described logistic regression, I kind of pulled this out of a hat, right, and said, "Oh yeah, trust me,
+21:27
+let's use the logistic function," and- and then later, we saw this was a special case of the generalized linear model.
+21:32
+Um, but, you know, we just had to write down some form for how we will predict y as a function of x.
+21:40
+So in direct policy search, we will have to come up with a form for Pi, right?
+21:47
+So we have to just come up with a function for algorithms in h. Um, in direct policy search,
+21:53
+we'll have to come up with a way for how we approximate the policy Pi. Right? And so, you know,
+21:58
+one thing we have to do is say, well, maybe the action were approximate with some policy Pi, um,
+22:06
+maybe parameterized by Theta and is now a function of the state, and maybe it'll be 1 over 1 plus e to the negative Theta transpose,
+22:16
+you know, to state vector. Right? Where the same vector maybe something like,
+22:22
+um, x, x dot, uh, and- and the angle- and the angle dot right
+22:28
+if- if this angle is Phi and maybe add an intercept there. Okay. And- and I- I switch this from Theta to Phi to avoid,
+22:36
+uh, conflict in the notation. Okay. Um, this isn't really the formative policy we'll write.
+22:41
+So let me- let me make one more definition and then I'll, um, show you a form of a specific form of policy you can use,
+22:48
+but it's actually not quite this. We'll- we'll need to tweak this a little bit. So, uh, the direct policy search algorithm we'll use,
+22:55
+will use a stochastic policy. So this is a new definition.
+23:03
+Um, so stochastic policy is a function.
+23:16
+Right.
+23:30
+Um, so we're going to use,
+23:49
+um, for the direct policy search algorithm that you see today, we are going to use stochastic policies meaning that,
+23:55
+um, on every time step, uh, the policy will tell you what's the chance you want to
+24:02
+accelerate left versus what's the chance you want to accelerate right, and then you use a random gen- number generator to select either left or
+24:10
+right to accelerate on the inverted pendulum depending on the policies- no, depending on the probabilities output by this policy.
+24:17
+Okay. Um, and so here's one example.
+24:23
+Um, let's see which is
+24:28
+you can have [BACKGROUND].
+24:38
+So, you know, continuing with the inverted pendulum, here's one policy that, um, [BACKGROUND] might be reasonable,
+24:51
+uh, where you say that, um, let's see.
+25:01
+Right. So, you know,
+25:08
+in a state s, the chance that you take the accelerate right action is given by this sigmoid function.
+25:15
+And the chance that in a state s, you take the accelerate left action is given by that.
+25:25
+Okay. Um, and here's one example for why this might be a reasonable policy.
+25:31
+So let's say the state vector s is 1, x, x dot phi, phi dot, um,
+25:38
+where, you know, this angle of the inverted pendulum,
+25:45
+um, is the angle phi. And let's say for the sake of argument that
+25:51
+we set the parameter of this policy phi to be, um, 0, 0, 0, 1, 0.
+26:01
+So in this case, this is saying that, um, let's see, so theta transpose s is just equal to phi, right?
+26:10
+And so in this case, uh, right, because, you know, theta transpose s is just 1 times phi,
+26:16
+everything else gets multiplied by 0. And so in this case is saying that the chance you accelerate to the right is equal to 1 over 1 plus e to the negative,
+26:25
+how far is the pole tilted over to the right. Um, and so this policy gives you
+26:31
+the effect that the further the pole is tilted to the right, the more aggressively you want to accelerate to the right, okay?
+26:39
+So this is a very simple policy, it's not a great policy, but it's not a totally unreasonable policy, which is well,
+26:45
+look at how far the pole is tilted to the left or the right, apply sigmoid function, and then accelerate to the left or right, you know,
+26:51
+depending on how far it's tilted to the right. Um, now, uh, and,
+26:57
+and, and because this is the, right, so this is really the chance of taking the accelerate right action as a function of the,
+27:08
+um, pole angle Pi, right? Now, this is not the best policy because it ignores all the features other than phi.
+27:18
+Um, but if you were to set theta equals, you know, 0, negative 0.5,
+27:25
+0, 1, 0, then this policy,
+27:30
+um, the negative 0.5 now multiplies into the x position. Right. Uh, now this new policy if you have this value of theta,
+27:40
+it takes into account how far is your cart is already to the right, um, where I guess this is the x distance, right?
+27:49
+And the further your cart is already, I guess if, if your cart is on a set of rails, right, is on a set of railway track.
+27:56
+And you don't want to fall off the rail- and you want to keep the cart kind of centered, you don't want it to fall off the end of your table.
+28:01
+But this now says the further this is to the right already well, the less likely you should be to accelerate to the right.
+28:07
+Okay? And so maybe this is a slightly better policy than with this set of parameters.
+28:12
+And more generally, what you would like is to
+28:17
+come up with five numbers that tells you how to trade off, how much you should accelerate to the right based on the position, velocity, angle,
+28:27
+and angular velocity, um, of the current state of the cart- of the,
+28:32
+of the inverted pendulum. And what a direct policy search algorithm will do is, um,
+28:37
+help you come up with a set of numbers that results in hopefully a reasonable policy for controlling the inverted pendulum.
+28:45
+Hope- and in a policy that hopefully result in a appropriate set of probabilities that cause it to
+28:50
+accelerate to the right whenever it's good to do so and accelerate to the left, you know, more often when it's good to do so.
+28:56
+Okay. So, um, all right.
+29:03
+So our goal is to find the parame- find parameters
+29:11
+theta so that when
+29:17
+we execute pi of s,
+29:23
+a, um, we maximize, well,
+29:32
+max over theta the expected value of R of s_0 is 0 plus dot,
+29:37
+dot, dot, plus, okay?
+29:49
+Um, and so the reward function could be negative 1 whenever the inverted pendulum falls over,
+29:55
+uh, and 9 whenever it stays up that of, of, of, whatever, or something that measures how well your inverted pendulum is doing.
+30:01
+But the goal of a direct policy search algorithm is to choose a set of parameters theta so that we execute the policy,
+30:08
+you maximize your expected payoff. And I'm gonna use the finite horizon setting, um, for the algorithm that we'll talk about today.
+30:15
+Okay? Uh, and then one, one other difference between policy search compared to, um,
+30:24
+estimating the value function is that in direct policy search here s_0 is,
+30:31
+um, a fixed initial state, okay?
+30:39
+Um, it turns out that when we were estimating the value function v-star,
+30:45
+um, you found the best possible policy for starting from any state. Right. And there's kind of no matter what state you start from is
+30:52
+simultaneously the best possible policy for all states. In direct policy search, we assume that either there's a fixed start state- fixed
+31:00
+initial state s0 or there's a fixed distribution over initial state. So I'm gonna try to maximize the expected reward with respect to your initial state or
+31:08
+respect to your initial probability distribution over what is the initial state. Okay. So that's, that's one other, um, difference.
+31:28
+So, um, let me think how I'm going to do this. All right.
+31:34
+So let's write this out.
+31:39
+The goal is to maximize overall theta, the expected value of R of s_0,
+31:46
+a_0, plus R of s_1, a_1, plus dot, dot, dot up to R of sc, aT
+31:53
+um, you know, given pi theta.
+32:02
+And, um, in order to simplify the math we'll write on this board today,
+32:09
+um, I'm just going to set T equals 1 to simplify the math, uh, in order to not carry such a long summation.
+32:17
+But it turns out that, um, uh, so I'm just gonna do like a 2 times set MDP, uh,
+32:22
+just to simplify the derivation, but everything works, you know, just with a longer sum if you,
+32:27
+uh, have a more general version of T. Okay. Um, and so this term here,
+32:33
+the expectation is equal to sum over all possible state action sequences, right?
+32:40
+And again, this will go up to sT and aT. But as we said T equals 1 of,
+32:46
+um, what's the chance your MDP starts out in some state s_0? So this is your initial state distribution times the chance that in
+32:56
+that state you take the first action a_0- oh, actually sorry.
+33:02
+Let me just- let me write this out. Right. So the chance of your MDP going through this state action sequence, right,
+33:12
+times, times that, right.
+33:22
+So that's what it means to sort of compute the expected value of, uh, the payoff.
+33:28
+Um, and so instead of writing out this sum,
+33:33
+I'm just gonna call this the payoff, right? And so this is equal to sum of s_0,
+33:42
+a_0, s_1, s_1, a_1 of the chance your MDP starts in state 0, times the chance that in state 0,
+33:49
+you end up choosing the action a_0 times, um, uh, the chance governed by
+33:56
+the state transition probabilities that you end up in state 1, uh, state s_1,
+34:02
+times the chance at state s_1 you end up choosing, let's see, s_1 and then times the payoff, okay.
+34:15
+And so what we're going to really do is, um, derive a gradient ascent algorithm- actually a stochastic gradient ascent algorithm as
+34:25
+a function of theta to maximize this thing- to maximize the expected value of this thing.
+34:31
+And that- and this is a, um, this is how we'll do direct policy search.
+34:36
+Okay. So let me just write out the algorithm, and then we'll go through why, um,
+34:44
+the algorithm that I write down is maximizing this expected payoff. [NOISE].
+34:58
+So this algorithm is called the, um, reinforce algorithm.
+35:08
+Ah, the objective of the reinforce algorithm, um, uh, had a few other bells and whistles, but,
+35:13
+but I'm gonna to explain the core of the idea. But the reinforcing- the reinforce algorithm, um,
+35:22
+does the following which is you're going to run your MDP, right?
+35:30
+And just you know run it for a trajectory of T timesteps. So, um, again, you know, I'm just gonna, [NOISE] well.
+35:37
+Right. And and actually you would, uh, right.
+35:43
+Technically, you would, um, run it for T timesteps but, you know,
+35:49
+let, let's just say for now, we'll - we'll do only the thing in blue. We run it for one timestep, because we set capital T equal to 1.
+35:55
+Um, and then you would compute the payoff, right,
+36:03
+equals R of s0 + R of s1 and again, in the more general case, you know,
+36:09
+plus dot dot dot plus R of st right? [NOISE] And then you perform the following update which
+36:20
+is Theta gets updated as Theta plus the learning rate alpha, times.
+36:51
+Right? Um, and then times the payoff. Right? And again, I'm just setting capital T equals 1.
+37:00
+If capital T was bigger, you would just sum this all the way up to time T. Okay?
+37:07
+So that's the algorithm. Um, that's on every iteration through the reinforce algorithm,
+37:15
+through the reinforce algorithm, you will take your robot, take your inverted pendulum, um,
+37:21
+run it through T timesteps, uh, executing your current policy, so choose actions randomly according to
+37:28
+the current stochastic policy using current values of the parameters Theta, compute the total sum of rewards you receive, that's called a payoff
+37:36
+and then update Theta using this funny formula. Right? Now, on every iteration of this algorithm,
+37:45
+um, you're going to update Theta. And it turns out that reinforce is a stochastic gradient ascent algorithm.
+37:54
+Um, and you remember when we talked about, uh, linear regression, right?
+38:00
+You saw me draw pictures like this. It is a global minimum. Then uh, gradient descents with just,
+38:06
+you know, take a straight path to the minimum, but stochastic gradient descent would take a more random path right towards the minimum and it kind of
+38:13
+oscillates around then, maybe it doesn't quite converge unless you slowly decrease the learning rate alpha.
+38:20
+So this is what we have for stochastic gradient descent, um, for linear regression.
+38:26
+What we'll see in a minute, is that reinforce is a stochastic gradient ascent algorithm meaning that each of these updates is random,
+38:35
+because it depends on what was this state action sequence that you just saw and what was the payoff that you just saw.
+38:41
+But what will this show is that on expectation, the average update.
+38:49
+You know, this- this update to Theta. This thing you are adding to theta, that on average let's see,
+38:55
+that- that on average this update here is exactly in the direction of the, um, gradient.
+39:03
+So that on average, um, you know, because, uh, every-every loop, every time through this loop you're making
+39:11
+a random update to Theta and it's random and noisy because it depends on this random state sequence.
+39:17
+Right? That and this state sequence is random because of the state transition probabilities and also because of the fact that you're choosing actions randomly.
+39:25
+But on- but the expected value of this update, uh, you'll see in a little bit it turns out to be exactly the direction of the gradient.
+39:33
+Um, which is why this, uh, reinforce algorithm is a gradient ascent algorithm.
+39:39
+Okay? So let's, uh, let's show that now.
+39:45
+Okay.
+39:55
+So [NOISE] all right.
+40:05
+So what we want to do is maximize the expected payoff which is a formula we derive up there and so,
+40:12
+um, we're going to, want to take derivatives with respect to Theta of the expected pay-off.
+40:20
+Right? Of, uh, I'm just gonna copy that formula up there [NOISE].
+40:37
+Okay? So there's a chance of that, you're going through that state-action sequence times the pay off.
+40:44
+And so we want to take derivatives of this and, you know, so we can like go uphill using gradient ascent.
+40:51
+Um, so we're going to do this in, uh, four steps.
+40:57
+Um, now, first, um, let me remind you when you take the derivative of three,
+41:05
+of- of a product of three things. Right? So let's say that you have, uh, three functions,
+41:10
+f of Theta times g of Theta times h of Theta.
+41:16
+So by the product rule of, um, you know, derivatives product rule from calculus,
+41:23
+the derivative of the product of three things is obtained by, um, you know, taking the derivatives of each of them one at a time.
+41:32
+Right? So this is f prime times g times h plus,
+41:38
+um, g prime here plus h prime.
+41:48
+Okay? So the product rule from calculus is that if you want to take derivatives of a product of three things,
+41:56
+then you kind of take the derivatives one at a time and you end up with three sums.
+42:02
+Right? And so we're going to apply the product rule to this where, um,
+42:08
+we have- here we have two different terms that depend on, um,
+42:15
+Theta, and so when we take the derivative of this thing with respect to theta,
+42:20
+we're gonna have two terms. Uh, that correspond to taking derivative of this ones and taking the derivative of that ones.
+42:25
+Right? And so, um,
+42:35
+this derivative is equal to, so the first term is the sum over all the state action sequences,
+42:46
+um, P of s0, um, and then let's see.
+42:55
+So now we have pi of Theta, excuse me. The derivative with respect to pi Theta,
+43:02
+s0, a0.
+43:14
+Right? And then plus, um, [NOISE].
+43:35
+Right? And then times the payoff. Right? So the whole thing here is then multiplied by the payoff.
+43:44
+Okay? So we just apply the product rule for calculus where, uh, for the first term in the sum,
+43:50
+we kinda took the derivative of this first thing and then for the second term of the sum we took the derivative of this second thing.
+43:58
+Okay? And now, um, I'm gonna make one more algebraic trick which is,
+44:05
+I'm going to multiply and divide by that same term,
+44:13
+and then multiply and divide by the same thing here.
+44:22
+Right? So lots of multiply, multiply and divide by the same thing.
+44:27
+Right? And then finally,
+44:33
+um, if you factor out. So now, the final step is, um,
+44:41
+I'm- I'm gonna factor out these terms I'm underlining. Ah, right?
+44:49
+Because this terms I underlined, this is just you know, the probability of the whole state sequence.
+45:00
+Right? And again, for the orange thing, this this orange thing.
+45:07
+Right? These two orange things multiplied together is equal to that orange thing on that box as well.
+45:16
+And so the final step is to factor out the orange box which is just P of s0,
+45:24
+a0, s1, a1, right? So that's the thing I boxed-up in orange times,
+45:36
+then those two terms involving the derivatives [NOISE].
+45:56
+Times the payoff [NOISE].
+46:04
+Okay? And I think, ah, right,
+46:09
+where- because I guess this term goes there, [NOISE] and this term goes there, okay?
+46:28
+And so this is just equal to, um, well- and if you look at the reinforce algorithm,
+46:37
+right, that we wrote down, ah, this is just equal to sum over, you know,
+46:45
+all the state action sequences times the probability of the gradient update,
+46:55
+right.
+47:01
+[NOISE] Because, ah, I guess I'm running out of colors. But, you know, this is a gradient update and that's just like equal to this thing, okay?
+47:12
+So what this shows is that, um,
+47:19
+even though on each iteration the direction of the gradient updates is random, um,
+47:28
+the, ah, the expected value of how you
+47:35
+update the parameters is exactly equal to the derivative of your objective,
+47:41
+of your expected total payoff, right. So we started saying that this formula is your expected total payoff,
+47:49
+um, so let's figure out what's the derivative of your expected total payoff, and we found that the expected- the- the derivative,
+47:56
+your expected total payoff, the derivative of the thing you want to maximize is equal to the expected value of your gradient update.
+48:03
+And so this proves that, um, on average, you know, if you have a very small learning rate,
+48:09
+you end up averaging over many steps, right? But on average, the updates that reinforce is taking on
+48:15
+every iteration is exactly in the direction of the derivative of the,
+48:21
+um, expected total payoff that you're trying to maximize, okay makes sense?
+48:27
+Yes, any questions about this? Yeah. [inaudible].
+48:36
+Oh, it is independent of the choice of its function. Um, this is true for any form of a stochastic policy,
+48:43
+ah, where the definition is that, you know, Pi Theta of s0, [NOISE] ah,
+48:49
+a0 has to be the chance of taking that action in that state, but this could be any function you want.
+48:55
+Ah, it could be a softmax, it could be a logistic function of many, many different complicated features, it could be- or it has to be a continuous de- or it has to be a differential function.
+49:04
+And actually one of the reasons we shifted to stochastic policies was because, um, previously just have two actions,
+49:11
+is either left or right, right? And so you can't define a derivative over a discontinuous function like either left or
+49:17
+right but now we have a probability that shifts slowly between what's the probability to go left, versus
+49:22
+go right and by making this a continuous function of Theta, you can then take derivatives and plot gradient ascent,
+49:28
+but it does need to be a logistic function. Yeah, go ahead.
+49:40
+Ah, [inaudible]?
+49:47
+Sure. So, um, ah, another way to train a, um, helicopter controller is you use supervised learning,
+49:54
+where you have a human expert train, um, you know, so you can also actually have a human pilot demonstrate in this state,
+50:01
+take this action, right, and then you use supervised learning to just learn directly a mapping from a state to the action.
+50:08
+Um, I think this, I don't know, this might be okay for low speed helicopter flight,
+50:13
+I don't think it works super well, ah, I bet you could do this and not crash a helicopter, but, ah, um, ah,
+50:19
+ah, but to get the best results, I wouldn't use this approach, um, yeah.
+50:26
+It turns out for some of the maneuvers it'll actually fly better than human pilots as well, um, yeah, no.
+50:33
+Cool. All right. Um, and so, um,
+50:40
+for other types of policies, um, let's see, right.
+50:48
+[NOISE]
+51:02
+So, ah, direct policy search also works, um, if you have continuous value actions and you don't want to discretize the actions.
+51:10
+So here's a simple example. Let's say a is a real number, ah, such as the magnitude of the force you apply to accelerating left or right. All right.
+51:18
+So run discretizing, you invert your pendulum, you wanna output a continuous number of how hard you swerve to left or right.
+51:25
+Um, or for a self-driving car maybe Theta is the steering angle which is a real value number.
+51:31
+So simple policy would be a equals, you know, Theta transpose S, um,
+51:37
+and then plus [NOISE] Gaussian noise.
+51:43
+And if just for the purpose of training, you're willing to pretend that your policy is to
+51:48
+apply the action Theta transpose S and add a little bit of Gaussian noise to it, then, um, the whole framework for
+51:55
+reinforce but this type of gradient descent also, ah, will, will also work, great, um,
+52:01
+and then I guess if you're actually implementing this, you can probably turn off the Gaussian noise variability, there, there are little tricks like that as well.
+52:07
+Um, so let's see.
+52:13
+Some pros and cons of, um, so, whe - whe- when should you use direct policy search and when should you
+52:19
+use value iteration or a value function based type of approach? Um, so it, ah,
+52:27
+turns out there's one setting, ah, actually there are two settings where direct policy search works much better.
+52:33
+One is if you have a, um, POMDP, ah, PO in this case stands for partially observable.
+52:41
+[NOISE] And that's if for example, um, you know,
+52:51
+for the inverted pendulum, um, does a polar angle Phi, you have,
+52:57
+you have a car and this is your position x. Um, and what this is saying that the state space is, ah,
+53:03
+x, x dot Phi, Phi dot. All right? [NOISE] But let's say that, um,
+53:10
+you have sensors on this inverted pendulum that allow you to measure only the position and only the angle of the inverted pendulum.
+53:19
+[NOISE] Uh, so you might have an angle sensor, you know, down here and you may have a position sensor for your inverted pendulum,
+53:25
+but maybe you don't know the velocity or you don't know the angular velocity, right. So this is an example of a partially observable Markov decision process because,
+53:34
+ah, and what this means is that on every step, you do not get to see the host state because you,
+53:40
+you don't have enough sensors to tell you exactly what is the state of the entire system, okay?
+53:46
+So in a partially observable MDP, um, at each step,
+53:51
+you get a partial and potentially
+53:59
+noisy measurement of the state,
+54:09
+right, and then have to take actions, or, have to choose an action a. [NOISE]
+54:22
+Using these partial and potentially noisy elements, right? Which is, uh, maybe you only observe the position and the angle,
+54:30
+but your senses aren't even totally accurate. So you get a slightly noisy, you know, estimate of the position.
+54:35
+You get a slightly noisy estimate of the angle but you just have to choose an action based on your noisy estimates of just two of the four state variables, right?
+54:44
+Um, it turns out
+54:51
+that there's been a lot of academic literature trying to generalize value function base approaches,
+54:57
+the POMDPs, ah, and they're very complicated algorithms in the literature on trying to apply value function based approaches of POMDPs.
+55:05
+But those algorithms despite their very high level of complexity, you know, are not- are not widely in production, right?
+55:13
+Um, but if you use the direct policy search algorithm, then there's actually very little problem.
+55:19
+Oh, let me just write this out. So let's say the observation is on every timestep you
+55:26
+observe y equals x Phi plus noise, right?
+55:32
+So you just don't know whether it's a state. And in a POMDP you cannot approximate a value function.
+55:38
+Or even if you knew what was V star, right? You can't compute Pi-star because,
+55:45
+uh, and maybe you know what is Pi star best. This can compute V star and Pi star. But if you don't know what the state is,
+55:51
+you can't apply Pi star to the state because- so- so how do you choose an action. Um, if you're using direct policy search,
+55:58
+then here's one thing you could do. Which is you can say that, uh, Pi of, um, given an observation,
+56:07
+the chance of going to the right given your current observation is equal to 1 over 1 plus e to negative Theta transpose y,
+56:16
+where I guess y can be 1, right, x plus noise, Phi plus noise.
+56:24
+But, sorry that's x plus noise, Phi plus noise, right?
+56:29
+And so you could run reinforce using just the observations you have to, um,
+56:35
+try to- stochastically try to randomly choose an action, and nothing in the framework we talked about prevents this algorithm from working.
+56:42
+And so direct policy search just works very naturally even if you have only partial observations of the state.
+56:49
+Um, and more generally instead of plugging the direct observations this can be any set of features, right?
+57:00
+I'll just make a side comment for those who don't know what common filters are. Don't worry if you don't. But one common- one common way of, uh, uh,
+57:08
+using direct policy search would be to use some estimates such as common filter, or probabilistic graphical model or something to use your historical estimates.
+57:16
+Look, don't, don't just look at your one, uh, set of measurements now but look at all the historical meas- measurements.
+57:22
+And then there are algorithms such as something we call the common filter that lets you estimate whatever is the current state,
+57:27
+the full state vector. You can plug that full state vector estimate into the features you use to choose- to choose an action.
+57:34
+That's a common design paradigm. If you don't know what the common filter is, don't worry about it. Ah, we take- take one of Stephen Boyd's classes or something, I don't know. Yeah, right.
+57:41
+But, but that's one common paradigm where you can use your partial observations as for the full state and plug that as a feature into the policy search, okay?
+57:50
+So that's one setting where direct policy search works. Um, just, just applies in a way that
+57:57
+value function approximation is very difficult to even get to apply.
+58:02
+Um, now one last thing is, uh, one last consideration
+58:11
+so should you apply search policy search algorithm or a value function approximation algorithm? Oh, it turns out, um,
+58:16
+the reinforce algorithm is, is actually very inefficient. Ah, as in, ah, you end up, you know, whe- when,
+58:22
+when you look at research papers on the reinforce algorithm, it's not unusual for people that run the reinforce algorithm for like a million iterations,
+58:29
+or 10 million iterations. So you just have to train. It turns out that gradient estimates for the reinforce algorithm even though the expected value is right,
+58:36
+it's actually very noisy. And so if you train the reinforce algorithm, you end up just running it for a very,
+58:42
+very, very long time, right? It does work but it is a pretty inefficient algorithm. So that's one disadvantage of the reinforce algorithm is that
+58:49
+the gradient estimates on expectation are exactly what you want it to be, but there's a lot of variance in the gradient.
+58:56
+So you have to run it for a long time for a very small learning range. Um, but one other reason to use, um,
+59:03
+direct policy search is, is kind of ask yourself, do you think Pi star is simpler?
+59:10
+Or is V star simpler, right?
+59:17
+And so, um, here's what I mean, there are, ah, ah, ah, there- in, in robotics,
+59:24
+there's sometimes what we call low-level control tasks.
+59:31
+And, uh, one way to think of low-level control task is flying a helicopter.
+59:40
+Hovering a helicopter is example of a low-level control task. And one way to inform of when you think of low-level control task is kind of a really skilled human,
+59:48
+um, you know, holding a joystick. Control this thing, making seat of the pants decisions, right?
+59:54
+So those are kind of almost instinctual, in a tiny fraction of a second, almost by feel you could control the thing.
+1:00:00
+Those, those are- tend to be low-level control tasks. Those are seat of the pants, holding a joystick, a skilled person could balance the inverted pendulum or,
+1:00:08
+you know, steer a helicopter. Those are low-level control tasks. In contrast, um, playing chess is not a low-level control task.
+1:00:16
+You know, because for the most part, a very good chess player is not really a seat of the pants, you know,
+1:00:21
+take that- make a decision in like- in, in 0.1 seconds, right. You kind of have to think multiple steps ahead.
+1:00:28
+Um, and in low-level control tasks, there's usually some control policy that is quite simple.
+1:00:35
+A very fun- simple function mapping some state actions, that's pretty good. And so that allows you to specify a relatively simple class of functions of
+1:00:44
+Pi star and direct policy search would be relatively promising for tasks like those.
+1:00:51
+Whereas in contrast, if you want to play chess or play Go, or do these things where we have multiple steps of reasoning,
+1:00:57
+um, I think that, if you're driving a car on a straight road, that's a low-level control task.
+1:01:03
+Where you just look at the road and you just, you know, you know turn the steering a little bit to stay on the road. So that's a low-level control task.
+1:01:08
+But if you are planning how to, um, you know, overtake this car and avoid that other car,
+1:01:15
+or there's a pedestrian and a bicycle is along the way, then that's less of a low level control task.
+1:01:20
+Um, and that requires more multi-step reasoning, right? I guess depends on how aggressive of a driver you are, right?
+1:01:26
+Driving on the highway, you know, may require more or less multistep reasoning. Where you want to, ah,
+1:01:31
+overtake this car before the truck comes in this lane. So that- that type of thing is, um, more multi-step reasoning.
+1:01:37
+Um, and approaches like that tend to be difficult for a very simple like a linear function to be a good policy.
+1:01:44
+And for those things in playing chess, playing Go, playing checkers, um, a value function approximation approach may be more promising.
+1:01:53
+Okay, um, cool.
+1:02:01
+So any, um, questions about the- oh, and so, um, okay for, for, ah, autonomous helicopter flight, ah,
+1:02:08
+actually, my first attempt for flying helicopters were actually a direct policy search because flying helicopters,
+1:02:16
+are actually a seat of the pants thing. Ah, but then when you try to fly more complex maneuvers, then you end up using something maybe closer to
+1:02:24
+value function approximation methods if you want to fly a very complicated maneuver, right? Um, oh, so the video you saw just now,
+1:02:31
+of the helicopter flying upside down, the algorithm implemented on, you know, for that particular video that was a direct policy search algorithm, right?
+1:02:38
+Not, not exactly this one, a little bit different. But that was a direct policy search algorithm. But if you want the helicopter to fly a very complicated maneuver,
+1:02:44
+then you need something maybe closer to a value function approximator. And so the- and there is exciting research on how to blend
+1:02:51
+direct policy search approaches together with value function approximation approaches. So actually AlphaGo.
+1:02:56
+Ah, ah, ah, ah, one of the reasons AlphaGo works was, um, sorry, ah, you know Go playing program, right, by DeepMind,
+1:03:05
+ah, was, was a blend of ideas from both of these types of literature which enabled it to scale to a much bigger system to play Go and,
+1:03:13
+you know clearly at a very, very impressive level. All right. Any questions about this, anyone?
+1:03:20
+[NOISE]
+1:03:26
+All right. Um, so just final application examples, um, you know,
+1:03:32
+reinforcement learning today, um, is, uh, making strong- let's see.
+1:03:38
+So there's a lot of work on reinforcement learning for game playing, Checkers, Chess, um, uh, Go.
+1:03:44
+That is exciting, um, reinforcement learning today is used in, uh, is used in a growing number of robotics applications,
+1:03:52
+um, I think for controlling a lot of robots. Um, there is a, uh- if you've go to the robotics conferences,
+1:03:58
+if you look at some of the projects being done by some of the very large companies that make very large machines, right.
+1:04:04
+Uh, I have many friends in multiple, you know, large companies making large machines that
+1:04:09
+are increasingly using reinforcement learning to control them. Um, there is fascinating work, uh,
+1:04:16
+using reinforcement learning for optimizing, um, entire factory deployments.
+1:04:21
+Um, there is, uh, academic research work, uh, still in research for a class, I know, actually may- maybe Science to be deployed on
+1:04:28
+using reinforcement learning to build chatbots. Um, uh, uh, and actually, on, on,
+1:04:33
+on using reinforcement learning to, uh, build a, uh, AI-based guidance counselor, for example, right, where,
+1:04:39
+uh, the actions you take up, of what you say to students, and then, and then the reward is, you know, do you manage to help a student navigate their coursework and navigate their career.
+1:04:48
+Uh, there is, uh, uh, and that's also starting to be applied to healthcare,
+1:04:53
+where- one of the keys of reinforcement learning is, this is a sequential decision making process, right? Where, do you have to take a sequence of decisions that may affect your reward over time?
+1:05:03
+And I think um, uh, and, uh, in, in healthcare, there is work on medical planning,
+1:05:10
+where, um, the goal is not to, you know, send you to get, uh, a blood test and then we're done, right?
+1:05:16
+In, in, in complicated, um, medical procedures, we might essentially get a blood test,
+1:05:22
+then based on the outcome of the blood test, we might send you to get a biopsy or not, or we might ask you to take a drug and then come back in two weeks.
+1:05:29
+But this is a very complicated sequential decision-making process for a treatment of complicated healthcare conditions,
+1:05:35
+and so there's fascinating work on trying to apply reinforcement learning to this set of multi-step reasoning, where it's not about, well,
+1:05:42
+we'll send you for a treatment and then you'll never see again for the rest your life. It's about here's the first thing you do then come back,
+1:05:47
+let's see what state you get to after taking this blood test, or let's see what- state you get to after trying a drug,
+1:05:53
+and then coming back in a week to see what has happened to symptoms. But I think that, um, these are all sectors where reinforcement learning,
+1:06:00
+uh, is making inroads, um, or, or even actually, stock trading. Okay, maybe not the most inspiring one,
+1:06:06
+but one of my friends, um, on the East Coast was, uh, uh, in, in- was, uh- and just actually,
+1:06:13
+if, if you or your parents, uh, invest in mutual funds, this may be being used to, um,
+1:06:18
+buy and sell shares with them today, depending on what bank they are investing. I know what bank is doing this, but I won't say it out loud.
+1:06:23
+Uh, but, um, uh, uh, but, uh, if you want to buy or sell, you know, say,
+1:06:29
+a million shares of stock, a, a very large volume of stock, you may not want to do it in
+1:06:34
+a very public way because that will affect the price of the shares, right? So everyone knows that a very large investor
+1:06:40
+is about to buy a million shares or buy 10 million shares or whatever, that will, um, cause the price to increase, uh,
+1:06:46
+and this, this is, this disadvantages the person wanting to buy shares. But so that's been very interesting work on using reinforcement learning to, um,
+1:06:54
+decide how to sequence out your, your buy, how to buy the stock in small lots,
+1:07:00
+and this trading market is called dark pools. You could Google if you're curious. Actually, don't bother, uh, uh, uh, to,
+1:07:06
+to try to, um, buy a very large lot of shares. Also, sell a very large lot of shares without affecting
+1:07:12
+the market price too much because the way you affect the market price always breaks against, you know, is always against you,
+1:07:18
+it's always bad, right. Um, so there's work laid down as well. So anyway, I think, um, uh,
+1:07:24
+many applications- I personally think that one of the most exciting areas for reinforcement learning will be robotics,
+1:07:29
+but, uh, we'll, we'll see what, what happens over the next few years, right?
+1:07:35
+Okay. All right. So let's see, well, just five more minutes. Um, and, and just to wrap up, I think,
+1:07:42
+you know, um, uh, we've gone through quite a lot of stuff. I guess, uh, for supervised learning to, uh, learning theory,
+1:07:50
+and advice for applying learning algorithms to unsupervised learning, although- was it, K-means, PCA, uh,
+1:07:55
+EM mixture of Gaussians, uh, factor analysis, and PrinCo analysis to most recently,
+1:08:01
+reinforcement learning with the value function approaches, fitted value iteration, policy search.
+1:08:07
+So, um, feels like we did, feels like, feels like- I- feels like you've seen a lot of learning algorithms.
+1:08:13
+Um, go ahead. [inaudible]
+1:08:19
+How is reinforcement learning compared to adversarial learning? I think of those as pretty distinguished literatures.
+1:08:24
+Uh, uh, yeah, yeah, so I think, uh, and again, actually, I, I, I know a lot of
+1:08:31
+non-publicly known facts about the machine learning world, but, uh, one of the things that I actually happen to know is that, er,
+1:08:38
+uh, some of the ideas in adversarial learning, uh, uh, you know, so can you tweak a picture by,
+1:08:45
+you know, very little bit, by tweaking a bunch of pixel values that are not visible to human eye, that fools the learning algorithm into thinking that this picture is actually a cat,
+1:08:52
+when it's clearly not a cat or whatever. So I actually know that there are attackers out in the world today using techniques like that to attack,
+1:08:59
+you know, websites, to try to fool, um, uh, ah, you know- some of the websites I'm pretty sure you guys use,
+1:09:06
+and fool their anti-spam, anti-fraud, anti-undermining democracy types of algorithms into,
+1:09:12
+um, [LAUGHTER] into making poor decisions. Uh, so, so it's an exciting to time to do machine learning, right?
+1:09:18
+[LAUGHTER] That, that, we get to fight battles like these [LAUGHTER]. Yeah, I'm sorry. Um, uh, okay, um,
+1:09:27
+and, and I think, you know, I think with, with- really, I think that with the things that you guys have learned in machine learning,
+1:09:32
+I think all of you, um, uh, are now very knowledgeable, right? I think all of you are experts in all the ideas of core machine learning,
+1:09:41
+and I hope that, um- I, I think you- when you look around the world, there are so many worthwhile projects you could do with machine learning and the number of
+1:09:48
+you that know these techniques is so small that I hope that, um, you take these skills. Um, and some of you will go, you know,
+1:09:55
+build businesses and make a lot of money, that's great. Some of you will take these ideas and, uh, help drive basic research at Stanford or at other institutions.
+1:10:03
+I think that's fantastic. But I think whatever you are doing, the number of worthwhile projects on the planet is so large and
+1:10:10
+the number of you that actually know how to use these techniques is so small that I hope that, um, you take these skills you're learning from
+1:10:16
+this course and go and do something meaningful, go and do something that helps other people. Um, I think we are seeing in the Silicon Valley that there a lot of ways, you know,
+1:10:25
+to build very valuable businesses, uh, and some of you do that and that's great, but I hope that you do it in a way that helps other people.
+1:10:33
+Um, uh, I think, er, over the past few years we've seen, uh, um- I think that,
+1:10:39
+er, in Silicon Valley, maybe 10 years ago, the contract we had with society was that people would
+1:10:45
+trust us with their data and then we'll use their data to help them. But I think in the past year,
+1:10:51
+that contract feels like it has been broken and the world's faith in Silicon Valley has been shaken up,
+1:10:58
+but I think that places even more pressure on all of us, on all of you, to make sure that, um,
+1:11:03
+the work you go out in the world to do is work that actually is respectful of individuals, respectful of individual's privacy,
+1:11:09
+is transparent and open, and ultimately is, uh, helping drive forward, um, uh, humanity, or helping people,
+1:11:16
+or helping drive forward basic research, or building products that actually help people, rather than, um, exploit their foibles for profit but to their own harm.
+1:11:25
+So I hope that all of you will take your superpowers that you now have, and, um, go out to,
+1:11:31
+to, to do meaningful work. Um, and let's see, um, and I think, uh- oh, and,
+1:11:37
+and lastly, just, just on a personal note, I want, to, you know, thank all of you. On behalf of the TAs and the whole teaching team and myself,
+1:11:44
+I want to thank all of you for your hard work. Uh, sometimes, they go over the homework problems. They look at probably some of these problems and go, "Wow,
+1:11:49
+there she got that problem, I thought that was really hard," or the project milestones go, "Hey, that's really cool, look forward to seeing
+1:11:54
+your final project results at the final poster session." So, um, I know that all of you have worked really hard.
+1:12:01
+Uh, uh, and if you didn't, don't tell me, but I think almost all of you have [LAUGHTER] but, but, but, I will make sure you know there's
+1:12:08
+a- I think it wasn't that long ago that I was a student, you know, working late at night on homework problems and,
+1:12:13
+and I know that many of you have been doing that, uh, for the homework, for studying for the midterm, um, for working on your final term project.
+1:12:21
+So, um I want to make sure, um, you know I'm very grateful for the hard work you put into this course,
+1:12:26
+and I hope that, um- I hope that, uh, your, your hard earned skills will also reward you very well in the future,
+1:12:33
+and also help you do work that, that you find as meaningful, so thank you very much [APPLAUSE].

@@ -1,0 +1,1286 @@
+Introduction
+0:03
+All right. Good morning. Um, let's get started. So, ah, today you'll see the Support Vector Machine Algorithm.
+Support vector machine algorithm
+0:13
+Um, and this is one of my favorite algorithms because it's very turnkey, right? If you have a classification problem, um,
+0:19
+you just, kind of, run it and it more or less works. So in particular, I'll talk a bit more about
+0:26
+the optimization problem that you have to solve for the support vector machine, then talk about something called the representer theorem,
+0:35
+and this will be a key idea to how we'll work in potentially very high-dimensional,
+0:41
+like 100,000 dimensional, or a million dimensional, or 100 billion dimensional, or even infinite-dimensional feature spaces.
+0:47
+And just to teach you how to represent feature vectors and how to represent parameters that may be,
+0:53
+you know, 100 billion dimensional, or 100 trillion dimensional, or infinite dimensional. Um, and based on this we derived kernels which is
+1:01
+the mechanism for work on these incredibly high dimensional fea- feature spaces, and then hopefully, time permitting wrap up with
+1:08
+a few examples of concrete implementations of these ideas. So to recap, on last Wednesday,
+1:16
+we had started to talk about the optimal margin classifier, which said that,
+1:22
+if you have a dataset that looks like this, then you want to find
+1:27
+the decision boundary with the greatest possible geometric margin, right? So the geometric margin, um,
+1:34
+can be calculated by this formula, and this is just the- the- the derivations in the lecture notes. It's just, you know, measuring the distance,
+1:41
+uh, to the nearest point, right? Um, and for now let's assume the data can be separated by a straight line.
+1:48
+Um, and so Gamma i is- this is sort of geometry, I guess, derivation in the lecture notes.
+1:55
+This is the formula for co- computing the distance from the example x_i, y_i,
+2:00
+to the decision boundary governed by the parameters w and b. Um, and Gamma is the worst case geometric margin, right?
+2:09
+You will make- so- right. Of all of your M training examples,
+2:15
+which one has the least or has the worst possible geometric margin? And, the support vector, the optimal margin classifier,
+2:22
+we tried to make this as big as possible. And by the way, what we'll- what you see later on
+2:27
+is that the optimal margin classifier is basically this algorithm. And optimal margin classifier plus kernels meaning basically take
+2:34
+this idea of pi in a 100 billion dimensional feature space that's a support vector machine, okay?
+2:41
+So I saw- one thing I didn't have time to talk about, uh,
+2:46
+on Wednesday was the derivation of this classification problem, so where does this optimization objective come from?
+Derivation of this classification problem
+2:54
+So let me- let me just go over that very briefly. Um, so, the way I motivated these definitions we said that given a training set,
+3:02
+you want to find the decision boundary parameterized by w and b, um, that maximizes the geometric margin, right?
+3:10
+And so again, as recap, your classifier will output g equals w transpose x plus b.
+3:17
+Um, and so you want to find premises w and b. They'll define the decision boundary where
+3:23
+your classifications switch from positive to negative, that maximizes the geometric module.
+3:29
+And so one way to pose this as an optimization problem is- um, let's see,
+3:35
+is to try to find the biggest possible value of Gamma
+3:41
+subject to that- subject to that the,
+3:54
+um, geometric margin must be greater than or equal to Gamma, right? So, um, so, in this optimization problem,
+4:01
+the parameters you get to fiddle with are, Gamma, w and b. And if you solve this optimization problem,
+4:08
+then you are finding the values of w and b that defines a straight line, that defines a decision boundary, um,
+4:15
+so that- so, so this constraint says that every example, right?
+4:21
+So this constraint says every example has geometric margin greater than or equal to Gamma.
+4:29
+This is- this is what they are saying. And you wanna set Gamma as big as possible,
+4:34
+which means that you're maximizing the worst-case geometric margin. This makes sense, right?
+4:40
+So- so if- if I- so the only way to make Gamma say 17,
+4:46
+or 20, or whatever, is if every training example has geometric margin bigger than 17, right?
+4:53
+And so this optimization problem was trying to find w and b to drive up Gamma as big as possible and have every example
+5:00
+have geometric margin even bigger than Gamma. So this optimization problem maximizes the Geom- causes, um,
+5:09
+causes you to find w and b with as big a geometric margin as poss- so as big as the worst-case geometric margin as possible, okay?
+5:18
+Um, and so, does this make sense actually, right?
+5:23
+Okay. Actually rai- raise your hand if this makes sense. Uh, oh, good. Okay. Well, many of you. All right.
+5:29
+Let me see if I can explain this in a slightly different way. So let's say you have a few training examples, you know,
+5:34
+the training examples geometric margins are, 17, 2, and 5, right?
+5:42
+Then the geometric margin in this case is a worst-case value 2, right? And so if you are solving an optimization problem
+5:49
+where I want every example- where I want the- the- the, uh, uh, where I want the min of i- of Gamma i to be as big as possible,
+6:02
+one way to enforce this is to say that Gamma i must be bigger than or equal to Gamma, for every possible value of i.
+6:09
+And then I'm going to lift Gamma up as much as possible, right? Because the only way to lift Gamma up
+6:15
+subject to this is if every va- value of Gamma i is bigger than that. And so, lifting Gamma up,
+6:21
+maximizing Gamma has effective maximizing the worst-case examples geometric margin,
+6:27
+which is, which is, which is how we define this optimization problem, okay?
+6:33
+Um, and then the last one step to turn this problem into this one on the left,
+6:40
+is this interesting observation that, um, you might remember when we talked about the functional margin,
+6:48
+which is the numerator here, that, you know, the functional margin you can scale w and b
+6:54
+by any number and the decision boundary stays the same, right? And so, you know,
+6:59
+if- if your classifier is y, so this is g of w transpose x plus b, right?
+7:05
+So if- let's see the example I want to use, uh, 2, 1.
+7:11
+If w was the vector 2, 1- [NOISE]
+7:20
+Let's say that's the classifier, right? Then you can take W and B,
+7:25
+and multiply it by any number you want. I can multiply this by 10, [NOISE] and this defines the same straight line, right?
+7:38
+Um, so in particular, I think, uh, let's see with this 2 1x.
+7:45
+[NOISE] This actually defines the decision boundary that looks like that.
+Decision boundary
+7:51
+Uh, if this is X1 and this is X2, then this is the equation of the straight line where W transpose X plus
+7:58
+B equals 0, right?
+8:04
+Uh, that's uh, one, and two. Uh, you can- you can verify it for yourself. You plug in this point,
+8:10
+then W transpose X plus B equals 0. We plug in this point, W transpose X equals 0, um and so that's the decision boundary where the,
+8:18
+uh- as yet we'll predict positive [NOISE] everywhere here and we'll predict [NOISE] negative everywhere to the lower left,
+8:25
+and this straight line, you know, stays the same even when you multiply these parameters by any constant, okay?
+8:32
+Um, and so, um, to simplify this, uh,
+8:40
+notice that you could choose anything you want for the normal W, right? Just by scaling this by a factor of 10,
+8:46
+you can increase it, or scaling it by a factor of 1 over 10, you can decrease it. But you have the flexibility to scale the parameters W and B, you know,
+8:54
+up or down by any fixed constant without changing the decision boundary,
+9:00
+and so the trick to simplify this equation into that one is if you choose
+9:05
+[NOISE] to scale the normal W to be equal to 1 over gamma.
+9:12
+Um, uh because if you do that, then this optimization objective
+9:19
+[NOISE] becomes- [NOISE] Um,
+9:29
+maximize 1 over norm of W subject to-
+9:34
+[NOISE]
+9:45
+right? Uh, so it substitutes norm of W equals 1 of gamma, and so that cancels out,
+9:53
+and so you end up with this optimization problem instead of maximizing 1 over norm W,
+9:58
+you can minimize one half the norm of W squared subject to this. [NOISE] Right?
+10:11
+Okay, and so that's a rough- I know I did this relatively quickly.
+10:16
+Again- as usual the full derivation is written on your lecture notes but hopefully this gives you a flavor for why.
+10:22
+If you solve this optimization problem and you're minimizing over W and B
+10:27
+that you are solving for the parameters W and B that give you the optimal margin classifier. Okay.
+10:34
+Now, delta margin classifier,
+10:40
+we've been deriving this algorithm as if you know the features X I um,
+10:46
+let's see, we've been deriving this algorithm as if the features X I are some reasonable dimensional feature X equals R2,
+10:55
+X equals 100 or something. Um, what we will talk about
+11:00
+later is a case where the features X I become you know, 100 trillion dimensional right?
+11:05
+Or infinite dimensional. And um, what's- uh,
+11:12
+what we will assume is that W,
+11:18
+can be represented [NOISE] as a sum- as a linear combination of the training examples.
+11:27
+Okay? So um, in order to derive the support vector machine, we're gonna make an additional restriction that the parameters W
+11:35
+can be expressed as a linear combination of the training examples. Right? So um, and it turns out that when X I is you know, 100 trillion dimensional,
+11:47
+doing this will let us derive algorithms that work even in these 100 trillion or these infinite-dimensional feature spaces.
+11:53
+Now, I'm just deriving this uh, just as an assumption. It turns out that there's a theorem called the representer theorem that
+The represented theorem
+12:01
+shows that you can make this assumption without losing any performance. Uh, the proof that represents the theorem is quite complicated.
+12:07
+I don't wanna do this in this class, uh, it is actually written out, the proof for why you can make this assumption is also written in the lecture notes,
+12:13
+it's a pretty long and involved proof involving primal dual optimization. Um, I don't wanna present the whole proof here but let me give you
+12:19
+a flavor for why this is a reasonable assumption to make. Okay? And when- just to- just to make things complicated later on uh,
+12:27
+we actually do this. Right? So Y I is always plus minus 1. So- so we're actually by- by convention,
+12:33
+we're actually going to assume that W I can be written right? So in- in this example this is plus minus 1 right?
+12:40
+So um, this makes some of the math a little bit downstream, come out easier but it is- but it's still
+12:45
+saying that W is- can be represented as a linear combination of the training examples.
+12:51
+Okay? So um [NOISE] let me just describe less formally why this is a reasonable assumption,
+12:58
+but it's actually not an assumption. The representer theorem proves that you know, this is just true at the optimal value of W. But let me convey a couple ways why um,
+13:08
+this is a reasonable thing to do, or assume I guess. So um, maybe here's intuition number one.
+13:18
+And I'm going to refer to logistic regression. [NOISE] Right? Where uh,
+Logistic Regression
+13:29
+suppose that you run logistic regression with uh, gradient descent, say stochastic gradient descent, then you initialize the parameters to be equal to 0 at first.
+13:39
+And then for each iteration of stochastic gradient descent,
+13:45
+right [NOISE] you update theta it gets updated as theta minus the learning rate times [NOISE] you know,
+13:54
+[NOISE] times X and Y okay?
+14:00
+And so- sorry here alpha is the learning rate, uh, nothing, this is overloaded notation,
+14:05
+this alpha has nothing to do with that alpha. But so this is saying that on every iteration, you're updating the parameters theta as- uh,
+14:12
+by- by adding or subtracting some constant times some training example.
+14:18
+And so kind of proof by induction, right if theta starts out at 0, and if- if on every iteration of
+14:24
+gradient descent you're adding a multiple of some training example, then no matter how many iterations you run gradient descent,
+14:32
+theta is still a linear combination of your training examples. Okay. And- and again I did this with theta- the- the- it was really
+14:40
+theta 0 theta 1 up to theta n. Right? Whereas here we have uh,
+14:45
+B and then W1 down to WN. Wow, this pen is really bad.
+14:50
+[NOISE] I feel like- alright um, I feel like we should throw these away so they don't keep haunting us in the future.
+14:59
+Okay. Right, so but- but um, if you- but uh, uh,
+15:04
+so I did this a theta rather than W, but it turns out if you work through the algebra this is the proof by induction that, you know,
+15:11
+as you run a logistic regression after every iteration the parameters theta or the parameters W are always a linear combination of the training examples.
+15:22
+Um, and this is also true if you use batch gradient descent. [NOISE] If you use batch gradient descent [NOISE] then the update rule is this.
+15:29
+Um, Yeah, right, [NOISE] okay, alright.
+15:39
+And so it turns out you can derive gradient descent for the support vector machine learning algorithm as well.
+15:44
+You can derive gradient descent optimized W subject to this and you can have a proof by induction. You know that no matter how many iterations you run during descent,
+15:52
+it will always be a linear combination of the training examples. So that's one intuition for how
+16:00
+[NOISE] you might see that assuming W is a linear combination of the training examples,
+16:07
+you know is a- is a reasonable assumption. [NOISE] I wanna present a second set of
+16:15
+intuitions and this one will be easier if you're good at visualizing high dimensional spaces I guess.
+16:21
+But uh, let me just give intuition number two which is um let's see.
+16:28
+So um, so first of all let's take our example just now right?
+16:37
+Let's say that the classifier uses this, 2, 1 [NOISE] X minus 2, right?
+16:45
+So this is W and this is B. Then it turns out that the decision boundary is this where this is 1 and this is uh,
+16:57
+2 and it turns out that the vector W is always at 90 degrees to the decision boundary right?
+17:06
+This is a factor of I guess geometry or something or linear algebra, right?
+17:11
+Where as the vector W 2, 1. So the vector W, you know, is sort of 2 to the right side and 1 up is always at- well, alright.
+17:21
+The vector w is always at 90 degrees um, to the decision boundary and the decision boundary separates where
+17:28
+you predict positive from where you predict negative. Okay? And so it it turns out that uh,
+17:38
+if you have uh, to take a simple example, let's say you have um,
+17:44
+two training examples, a positive example and a negative example.
+17:50
+Right? Then by illus- X2 right? The linear algebra way of saying this is that
+17:57
+the vector W lies in the span of the training examples. Okay? Oh and- and- and um,
+18:03
+the way to picture this is that W sets the direction of the decision boundary and as you vary B then the position so you- the relative position,
+18:12
+you know setting different values of B will move that decision boundary back and forth like this. And W uh, pins the direction of the decision boundary.
+18:21
+Okay? Um, and just one last example for- for why this might be true um,
+18:32
+is uh- so we're going to be working in very very high dimensional feature spaces.
+18:39
+For this example, let's say you have uh, [NOISE] three features X1, X2, X3 right? And_ and later we'll get to where this is like 100 trillion right?
+18:47
+Um, and let's say for the sake of illustration that all of your examples lie in the plane of X1 and X2.
+18:53
+So let's say X3 is equal to 0.
+19:00
+Okay, so let's say if all your training examples x equals 0, um,
+19:05
+then the decision boundary, you know, will be- will be some sort of vertical plane that looks like this, right?
+19:13
+So this is going to be the plane specifying, um, w transpose x plus b equals 0 when now w and x are three-dimensional.
+19:23
+Um, and so the vector w, uh, will have a- should have W_3 equals 0 right.
+19:35
+If- if one of the features is always 0, is always fixed then you know, W_3 should be equal to 0 and that's another way of saying that the vector w,
+19:44
+you know, should be, um, represented as a- as a- in- in the span of just the features x1,
+19:50
+x2, as a span of the training examples [NOISE] okay.
+19:56
+All right, I'm not sure if- if either intuition 1 or intuition 2 convinces you,
+20:01
+I think hopefully that's good enough. But this- the second intuition would be easier if you're used to thinking about vectors in high-dimensional feature spaces.
+20:11
+Um, and again the formal proof of this result which is called the representation theorem is given in the lecture notes, but it's a very bizarre
+20:21
+I don't know, it's actually- it's actually one of the most complicated- it's one- it's definitely the high end in terms of complexity of the- of the full derivation,
+20:28
+of the formal derivation of this result. Um, so.
+20:34
+[NOISE] All right,
+20:41
+so let's assume that W can be written as follows. Um, so optimization problem was this,
+20:51
+you wanna solve for w and b so that the norm of w squared is as small as
+20:57
+possible and so that the a-this is bigger than the other one, right?
+21:06
+Um, for every value of i. [NOISE] So let's see,
+21:14
+norm of w squared. This is just equal to w transpose w,
+21:20
+um, and so if you plug in this definition of W,
+21:26
+you know, into these equations you have as the optimization objective min of one half, um,
+21:34
+sum from i equals 1 through m. [NOISE]
+21:39
+So this is w transpose W,
+21:51
+um, which is equal to I guess sum of i's sum over j,
+22:01
+alpha i, alpha j, y_i y_j. And then, um, X_i transpose X_j right?
+22:13
+And, um, I'm going to take this. So this is an inner product between X_I and X_J.
+22:19
+And I'm gonna use- I'm just gonna write it as this. Right, x_i this notation so x comma z, uh,
+22:30
+equals x transpose z, uh, is the inner product between two vectors.
+22:38
+This is maybe another alternative notation for writing inner products and when we derive kernels you see that, uh,
+22:44
+expressing your algorithm in terms of inner products between features X is-is the key mathematical step needed to derive kernels and we'll
+22:51
+use this slightly different sort of open-angle brackets close-angle brackets notation to denote
+22:57
+the-the inner product between two different feature vectors. So that is the optimization objective,
+23:05
+um, oh, and then this constraint it becomes something else i guess, this becomes, uh, uh,
+23:11
+what is it, um, y_i times W which is,
+23:20
+um, transpose x plus b is greater than 1.
+23:31
+And again this simplifies or if you just multiply this out. [NOISE].
+23:49
+So just to make sure that mapping is clear, um- uh, all these pens are dying.
+23:55
+All right I'll not [NOISE]. All right.
+24:04
+So that becomes this and this becomes that, okay.
+24:13
+Um, and the key property we're going to use is that,
+24:19
+if you look at these two equations in terms of how we pose the optimization problem, the only place that the feature vectors appears is in this inner product.
+24:30
+Right, um, and it turns out when we talked about the Kernel Trick and we talked with the application of kernels,
+24:37
+it turns out that, um, if you can compute this very efficiently, that's when you can get away with manipulating even infinite dimensional feature vectors.
+24:47
+We- we'll get to this in a second. But the reason we want to write the whole algorithm in terms of inner products is, uh,
+24:52
+there'll be important cases where the feature vectors are 100 trillion dimensional but you
+24:58
+can compute the- or even infinite dimensional but you can compute the inner product very efficiently without needing to loop over,
+25:05
+you know, the other 100 trillion elements in an array, right? And- and we'll see exactly how to do that, um, later in- in- very shortly.
+25:13
+Okay? [NOISE]
+25:25
+So. All right, um, now it turns out that,
+25:32
+uh, we've now expressed the whole, um, optimization algorithm in terms of these parameters Alpha, right?
+25:40
+Defined here, uh, and b. So now the parameters Theta, now- now the parameter z is optimized for our Alpha, um,
+25:47
+it turns out that by convention in the way that you see support vector machines referred to,
+25:53
+you know, in research papers or in textbooks. It turns out there's a further simplification of that optimization problem which is that you can simplify to this,
+26:01
+[NOISE] um, and the derivation to go from that to this is again relatively complicated.
+26:10
+[NOISE] But it turns out you can further simplify the optimization problem I wrote there to this.
+26:20
+Okay? And again, uh, you- you can copy this down if you want but this is also written in the lecture notes.
+26:27
+And by convention this slightly simplified version optimization problem is called the dual optimization problem.
+The dual optimization problem
+26:36
+Um, the way to simplify that optimization problem to this one that's actually done by,
+26:44
+um, using convex optimization theory, uh, and- and- and again the derivation
+26:50
+is written in the lecture notes but I don't want to do that here. If- if you want think of it as doing a bunch more algebra to simplify that problem to this one
+26:57
+and consequently, you cancel out B along the way, it's a little more complicated than that but-but right, the full derivation is given in the lecture notes.
+27:05
+Um, and so, um, finally, you know, the way you train for-the way you make a prediction, right,
+27:14
+as you saw for the alpha i's and maybe for b, right, since you solve
+27:20
+this optimization problem or that optimization problem for the Alpha i's and then to make a prediction,
+27:31
+um, you need to compute
+27:38
+h of W b of x for a new test example which is g of w transpose x plus b.
+27:46
+Right. But because of the definition of w- w this is equal to g of,
+27:59
+um, that's W transpose X plus b because this is
+28:07
+w and so that's equal to g of sum over
+28:13
+i Alpha_i y_i inner product between X_i and X plus b.
+28:20
+And so once again, you know, once you have stored the Alphas in your computer memory,
+28:25
+um, you can make predictions using just inner products again, right? And so the entire algorithm both
+28:30
+the optimization objective you need to deal with during training. As well as how you make predictions is, um-uh,
+28:36
+is expressed only in terms of inner products, okay?
+28:42
+So we're now ready to
+Apply kernels
+28:49
+apply kernels and sometimes in
+28:55
+machine learning people sometimes we call this a kernel trick and let me just the other recipe for what this means,
+Kernel trick
+29:02
+uh, step 1 is write your whole algorithm, [NOISE] um.
+29:08
+[NOISE] In terms of X_i, X_j, in terms of inner products.
+29:16
+Uh, and instead of carrying the superscript, you know X_i, X_j, I'm sometimes gonna write inner product between X and Z, right?
+29:24
+Where X and Z are supposed to be proxies for two different training examples X_i and X_j but it
+29:29
+simplifies the notation, uh, right a little bit. Two, um, let there be some mapping,
+29:45
+um, from your original input features
+29:51
+X to some high dimensional set of features Phi.
+29:57
+Um, and so one example would be, let's say you try to predict the housing prices
+30:02
+or predicting a house will be sold in the next month. So maybe X in this case is the size of the house,
+30:08
+uh, or maybe is, uh, size and yeah, let write. Maybe X is the size of a house,
+30:14
+and so you could, um, take this 1D feature and expand it to a high dimensional feature vector with X,
+30:24
+X squared, X cubed, X to the 4th, right? So this would be one way of defining a high dimensional feature mapping.
+30:31
+Or another one could be, if you have two features X_1 and X_2, uh, corresponding to the size of the house and number of bedrooms,
+30:38
+now you can map this to different Phi X, which may be X_1, X_2,
+30:43
+X_1 times X_2, X_1 squared X_2, uh, X_1 X_2 squared, and so on.
+30:49
+They are kind of polynomials, set of features, or maybe another set of features as well, okay? And what we'll be able to do is,
+30:57
+work with, um, feature mappings, Phi of X, where the original input X may be 1D or 2D or, or whatever,
+31:05
+and Phi of X could be, you know, 100,000 dimensional or infinite dimensional.
+31:12
+That we'll be able to do this very efficiently right. Or even infinite dimensional, okay?
+31:20
+So I guess we will get some concrete examples of this later, but I want to give you the overall recipe.
+31:26
+And then, what we're going to do is to find a way to compute K of X comma Z,
+31:37
+equals Phi of X transpose Phi of Z.
+31:44
+So this is called the kernel function. And what we're gonna do is, we'll see that there are clever tricks so
+A kernel function
+31:51
+that you can compute the inner product between X and Z even when Phi of X and Phi of Z are incredibly high dimensional, right?
+31:59
+We'll see an example of this in a- in- in very very soon. And step four is, um,
+32:06
+replace X, Z in algorithm
+32:12
+with K of X, Z, okay?
+32:19
+Um, because if you could do this then what you're doing is, you're running the whole learning algorithm on this high dimensional set of features,
+32:30
+um, and the problem with swapping out X for Phi of X,
+32:36
+right, is that, it can be very computationally expensive if you're working with 100,000 dimensional feature vectors, right.
+32:41
+I,I- even by to this standards, you know, 100,000, it's. it's not the biggest I've seen, I've seen, actually,
+32:46
+biggest I've seen that you have a billion features, uh, but even by today's standards, 100,000 features is actually quite a lot.
+32:52
+Um, uh, and- and if you're launching I said, just 100,000 is, is- this is a lot- lot of large number of features, I guess.
+33:00
+Um, and the problem of using this is it's quite computationally expensive, to carry around these 100,000 or million
+33:07
+dimensional or 100 million dimensional feature vectors or whatever. Um, but that's what you would do if you were to swap in Phi of X,
+33:16
+you know in the naive straightforward way for X, but what we'll see is that, if you can compute K of X, Z then you could,
+33:23
+because you've written your whole algorithm just in terms of inner products, then you don't ever need to explicitly compute Phi of X,
+33:30
+you can always just compute these kernels. Yeah. [inaudible]
+33:41
+Let me get to that later,
+33:50
+you know, I will go for some kernels and I will talk about uh, bias-variance probably on Wednesday. Yeah. I think the no free lunch theorem is
+No free lunch theorem
+33:58
+a fascinating theoretical concept but I think that it has been, I don't know, it's been less useful actually because I think we
+34:04
+have inductive biases that turn out to be useful. There's a famous theorem in learning theory called no free lunch.
+34:11
+It was like 20 years ago. That basically says that, in the worst case, learning algorithms do not work [NOISE].
+34:18
+For any learning algorithm, I can come up with some data distribution so that your learning algorithm sucks. That, that's roughly the no free lunch theorem,
+34:24
+proved about like 20 years ago. But it turns out most of the world- most of the time, the universe is not that hostile toward us.
+34:29
+So- so, yeah, so as the learning algorithms turned out okay [LAUGHTER].
+34:36
+Um, all right, let's go through one example of kernels.
+Example of kernels
+34:42
+Um, so for this example, let's say that your offer is not input features was three-dimensional X_1, X_2, X_3.
+34:50
+And let's say I'm gonna choose the feature mapping, Phi of X to be, um, o- so pair-wise, um, monomial terms.
+34:59
+So I'm gonna choose X_1 times X_1, X_1 X_2, X_1 X_3, X_2 X_1, all.
+35:14
+Okay. And there are a couple of duplicates so X_1 X_3 is equal to X_3 X_1 but I'll just write it out this way.
+35:21
+And so notice that, er, if you have- if X is in R_n, right?
+35:27
+Then Phi of X is in R_n squared, right. So got the three-dimensional features to nine dimensional.
+35:35
+And I'm using small numbers for illustration. In practice, think of X as 1,000 dimensional and so this is now a million.
+35:42
+Or think of this as maybe 10,000 and this is now like 100 million, okay. So n squared features is much bigger [NOISE].
+35:49
+Um, and then similarly, Phi of Z is going to be Z_1 Z_1, Z_1 Z_2,
+36:07
+okay? So we've gone from n features like 10,000 features,
+36:14
+to n squared features which, in this case, 100 million features. Um, so because there are n squared elements, right?
+36:28
+You will need order n squared time to compute Phi of
+36:37
+X or to compute phi X transpose Phi of Z explicitly, right?
+36:48
+So if you wanna compute the inner product between Phi of X and Phi of Z and they do it explicitly, in the obvious way, it'll take n squared time to just compute all of
+36:54
+these inner products and then do the- and, and then they'll compute this, er, com- compute this, right.
+37:00
+And it- it's actually n squared over 2, because a lot of these things are duplicated but that's the order n-squared.
+37:15
+But let's see if we can find a better way to do that. So what we want is to write out the kernel of x, z.
+37:23
+So this phi of x transpose phi of z, right?
+37:29
+And, uh, what I'm gonna prove is that this can be computed as x transpose z squared, right?
+37:38
+And the cool thing is that remember x is n-dimensional, z is n-dimensional.
+37:46
+So x transpose z squared, this is an order n time computation, right?
+37:52
+Because taking x transpose z, you know, that's just in a product of two n-dimensional vectors and then you take that number,
+37:59
+x transpose z is a real number, and you just square that number. So that's the order n time computation.
+38:06
+Um, and so let me just prove that x transpose z is equal to, well, le- le- le- let me, let me,
+38:12
+let me prove this step, right? Um, and so x transpose z squared that's equal to,
+38:19
+um, right.
+38:27
+So this is x transpose z, right?
+38:33
+And then times this is also x transpose z.
+38:40
+So this formula is z transpose z squared, it's x transpose z times itself. Um, and then if I rearranged sums,
+38:48
+this is equal to sum from i equals 1 through n, sum from j equals 1 through n, um,
+38:55
+x_i z_i, x_j z_j. Um, and this in turn is,
+39:03
+you know, sum over i, sum over j, of x_i x_j times z_i z_j, right?.
+39:18
+And so what this is doing, is it's marching through all possible pairs of i and j and multiplying x_i x_j,
+39:29
+with the corresponding z_i z_j and adding that up.
+39:35
+But of course; if you were to compute phi of x transpose phi of z,
+39:40
+what you do is you take this and multiply with that and then add it to the sum,
+39:45
+then take this and multiply with that and add it to the sum, and so on until you end up taking this and multiplying
+39:51
+that and adding it to your sum, right? So that's why, um- so that's why this formula is just,
+40:02
+you know, marching down these two lists this, and multiplying, multiplying, multiplying and add it up,
+40:07
+which is exactly, um, phi transpose.
+40:12
+Which is exactly phi of x transpose phi of z.
+40:19
+Okay? So this proves that, um, you've turned what was previously an order n square time calculation,
+40:26
+into an order n time calculation. Which means that, um,
+40:32
+if n was 10,000, instead of needing to manipulate 100,000
+40:38
+dimensional [NOISE] vectors to come up with these. Sorry. That's my phone buzzing. This is really loud.
+40:44
+Okay. Instead of needing to manipulate sort of 100,000 dimensional vectors,
+40:50
+you could do so manipulating only 10,000 dimensional vectors, okay?.
+40:55
+Now, um, a few other examples of kernels.
+41:11
+It turns out that, um, if you choose this kernel- so let's see.
+41:17
+We had k of x comma z equals x transpose z squared, um,
+41:24
+if we now add a plus c there where c is a constant, um, so c is just some fixed real number,
+41:31
+that corresponds to modifying your features as follows. Um, where instead of just this- you know,
+41:38
+binomial terms of pairs of these things, if we add plus c there, it corresponds to adding x_1,
+41:46
+x_2, x_3, uh, to this- to your set of features. Ah, technically, there's actually weighting on this.
+41:52
+There's your root 2c, root 2c, root 2c and then as a constant c there as well.
+41:58
+And you can prove this yourself, and it turns out that if this is your new definition for phi of x, and make the same change to phi of z.
+42:05
+You know, so root 2c z_1 and so on. Then if you can take the inner product of these, then it can be computed as this.
+42:12
+Right? And so that's- and, and, and so the role of the, um, constant c it trades off the relative weighting between the binomial terms the- you know,
+42:21
+x_i x_j, compared to the, to the single- to the first-degree terms the x_1 or, x_2 x_3.
+42:29
+Um, other examples, uh, if you choose this to the power of d, right?
+42:43
+Um, notice that this still is an order n time computation, right?
+42:50
+X transpose z takes order n time, you add a number to it and you take this the power of d. So you can compute this in order n time.
+42:56
+But this corresponds to now phi of x has all- um,
+43:04
+the number of terms turns out to be n plus d choose d but it doesn't matter. Uh, it turns out this contains all features of, uh,
+43:12
+monomials up to, uh,
+43:19
+order d. So by which I mean, um, i- i- if, let's say d is equal to 5, right?
+43:25
+Then this contains- then phi of x contains all the features of the form x_1 x_2 x_5 x_17 x_29, right?
+43:34
+This is a fifth degree thing, uh, or x, or x_1 x_2 squared x_3 x, you know, 18.
+43:42
+This is also a fifth order polynomial- a fifth order monomial it's called and so if you, um,
+43:48
+choose this as your kernel, this corresponds to constructing phi of x to contain all of these features and there are not exponentially many of them, right?
+43:56
+There a lot of these features. Any or all the, um, all, all the- these are called monomials. Basically all the polynomial terms, all the monomial terms,
+44:03
+up to a fifth degree polynomial, up to a fifth order monomial term. So- and there are- it turns out there are n plus z choose ds which is,
+44:11
+uh, roughly n plus d to the power of d very roughly. So this is a very, very large number of features, um,
+44:17
+but your computation doesn't blow up exponentially even as d increases.
+44:23
+Okay? So, um, what a support vector machine is, is, um,
+44:31
+taking the optimal margin classifier that we derived earlier, and applying the kernel trick to it,
+44:39
+uh, in which we already had the- so well. So optimal margin classifier plus the kernel trick,
+44:53
+right, that is the support vector machine. Okay? And so if you choose some of these kernels for example,
+45:02
+then you could run an SVM in these very, very high-dimensional feature spaces, uh, in these, you know, 100 trillion dimensional feature spaces.
+45:10
+But your computational time, scales only linearly, um, as order n,
+45:15
+as the numb- as a dimension of your input features x rather than as a function of this 100 trillion dimensional feature space,
+45:21
+you're actually building a linear classifier. Okay? So, um, why is this a good idea?
+45:29
+Let me just, sheesh. Let's show a quick video to give you intuition for what this is doing.
+45:39
+Um, let's see. Okay. I think the projector takes a while to warm up, does it?
+45:45
+[NOISE] All right. Any questions while we're- Yeah?
+45:51
+[inaudible]
+46:00
+Uh, yes. So, uh, this kernel function appears- applies only to this visual mapping. So each kernel function of, um, uh,
+46:07
+uh, yes, after trivial differences, right? If you have a feature mapping where the features that
+46:13
+could- are permuted or something, then the Kernel function stays the same. Uh, uh, so there are trivial chunk function- transformations like that but, uh,
+46:21
+if we have a totally different feature mapping, you would expect to need a totally different kernel function. Cool.
+46:33
+So I wanted to- let's see.
+46:39
+Ah, cool, awesome. Uh, I want to give you a visual picture [NOISE]
+46:53
+of what this um, [NOISE].
+47:09
+All right, um, this is a YouTube video that, uh, Kian Katanforoosh who teaches CS230 found and suggested I use.
+47:16
+So I don't- I don't know who Udi Aharoni is but this is a nice visualization of what a support vector machine is doing.
+47:22
+So um, let's see how the uh, uh, learning algorithm where you're trying to separate the blue dots from the red dots.
+47:31
+Right? So um, the blue and the red dots can't be separated by a straight line, but you put them on the plane and you use a feature mapping
+47:39
+phi to throw these points into much higher-dimensional space. So there's now three of these points in the three-dimensional space.
+47:45
+In the three-dimensional space, you can then find w. So w is now three-dimensional because it applied
+47:51
+the optimal margin classifier in this three-dimensional space that separates the blue dots and the red dots.
+47:57
+Uh, and if you now you know examine what this is doing back in the original space,
+48:03
+then your linear classifier actually defines that elliptical decision boundary.
+48:08
+That makes sense right? So you're taking the data- all right um,
+48:14
+so you're taking the data, uh, mapping it to a much higher dimensional feature space,
+48:20
+three-dimensional visualization that in practice can be 100 trillion dimensions and then finding
+48:25
+a linear decision boundary in that 100 trillion-dimensional space uh, which is going to be a hyperplane like a- like a straight, you know,
+48:32
+like a plane or a straight line or a plane and then when you look at what you just did in the original feature space you found a very non-linear decision boundary, okay?
+48:42
+Um, so this is why uh- and again here you can only
+48:48
+visualize relatively low dimensional feature spaces even, even on a display like that.
+48:54
+But you find that if you use an SVM kernel you know, um, right,
+49:07
+you could learn very non-linear decision boundaries like that. But that is a linear decision boundary in a very high-dimensional space.
+49:14
+But when you project it back down to you know, 2D you end up with a very non-linear decision boundary like that okay? All right.
+49:25
+So. Yeah. [inaudible] digital words [inaudible]
+49:34
+Oh sure, yes. So uh, in this high dimensional space represented by the feature mapping phi of X does the data always have to be linearly separable?
+49:42
+So far we're pretending that it does, I'll come here back and fix that assumption later today. Yeah.
+49:53
+Okay, so um now, how do you make kernels?
+50:02
+Right? Um, so here's here's some- so here's some intuition you might have about kernels.
+50:12
+Um if X and Z are
+50:18
+similar you know if two if two- and for
+50:23
+the examples X and Z are close to each other or similar to each other then K of x z,
+50:29
+which is the inner product between X and Z, right?
+50:34
+Presumably this should be large. Um and conversely if X and Z are dissimilar then K of x z,
+50:47
+you know this maybe should be small, right? Because uh the inner product of
+50:53
+two very similar vectors that are pointing the same direction should be large and the inner product of two dissimilar vectors should be small.
+51:01
+Right? So this is one uh guiding principle behind, you know, what you see in a lot of kernels.
+51:06
+Just if- if this is phi of x and this is phi of z, the inner product is large but then they kinda point off in random directions,
+51:14
+the inner product will be small right? That's how vector inner product works. Um and so- well what if we just pull
+51:22
+a function out of these three here, out of the air um, which is K of xz equals e to the negative x minus z squared over 2 sigma squared.
+51:35
+Right? So this is one example of a similarity sim sim sim sim- if you think of kernels as a similarity measure of a function,
+51:44
+this you know let's just make up another similarity measure of a function and this does have the property that if
+51:50
+X and Z are very close to each other then this would be e to the 0 which is about 1.
+51:56
+But if X and Z are very far apart then this would be small, right? So this function it- it actually satisfies this criteria.
+52:04
+It satisfies those criteria and the question is uh, is it okay to use this as a kernel function?
+52:13
+Right? So it turns out that um a function like that K of x z,
+52:20
+you can use it as a kernel function. Only if there exists
+52:30
+some phi such that K of x z equals phi of X transpose phi Z right?
+52:41
+So we derived the whole algorithm assuming this to be true and it turns out if you plug in the kernel function for which this isn't true,
+52:47
+then all of the derivation we wrote down breaks down and the optimization problem you know um, uh, can have very strange solutions, right?
+52:57
+That don't correspond to good classification though a good classifier at all. Um and so this puts some constraints on
+53:03
+what kernel functions we could or for example, one thing it must satisfy is K of X X which is phi X transpose phi of Z.
+53:13
+This would better be greater than equal to 0, right? Sorry right?
+53:18
+Because inner product of a vector with itself had better be non-negative. So K of X X is ever 0 or less than 0,
+53:24
+then this is not a valid kernel function, okay? Um, more generally, there's
+53:31
+a theorem that uh proves when is something a valid kernel.
+53:36
+Um, somebody just outlined that that proof very briefly which is uh,
+53:42
+less than X_1 up to X_d you know be any d points, right?
+53:51
+And let's let K- sorry about overloading of
+53:58
+notation um this is a- so K represents a kernel function and I'm gonna use K to represent the kernel matrix as well.
+54:09
+Sometimes it's also called the gram matrix uh but it's called the kernel matrix.
+Kernel matrix
+54:14
+So that K_ ij is equal to the kernel function applied to two of those points um X_i and X_j, right?
+54:24
+So you have d points. So just apply the Kernel function to every pair of those points and put them in a matrix, in a big d by d matrix like that.
+54:36
+So it turns out that uh, given any vector Z- I think you've seen something similar to this in problem set one,
+54:48
+but given any vector z, z transpose K z which is sum over i sum over
+54:57
+j z i k i j z j, right?
+55:03
+Um if K is a valid kernel function so if there is some feature mapping phi,
+55:10
+then this should equal to sum of i sum of j Z_i phi of X_i transpose phi
+55:19
+of z X_j times Z_j and by a couple other steps.
+55:29
+Um let's see. This phi of X_i transpose phi of X_j.
+55:35
+I'm gonna to expand out that inner product. So sum over k, phi of X_ i,
+55:41
+element k times phi of X_j element k times Z_ j,
+55:47
+um and then we are arranging
+55:53
+sums is sum- sum over K oh sorry I'm running out of whiteboard let me just do it on the next board.
+56:14
+So we arrange sums, sum of k, sum of i, sum of j,
+56:22
+z i phi of x i subscript k,
+56:28
+times phi of x [NOISE] j subscript k times z j.
+56:39
+Which is sum of the k [NOISE]
+56:48
+squared and therefore this must be greater than or equal to 0. Right. And so this proves that the matrix K,
+56:57
+ah, the kernel matrix k is positive semi-definite. Okay. Um, and so more generally,
+57:06
+it turns out that this is also a sufficient condition, um, for a kernel function to- for our function k to be a valid kernel function.
+57:17
+So let me just write this out. This is called a Mercer's Theorem, M-E-R-C-E-R.
+57:28
+Wait, um, so K is a valid kernel.
+57:36
+[NOISE] So K is
+57:42
+a valid kernel function i.e there exists phi such that K of x z,
+57:50
+equals phi of x, transpose phi of z if and only
+57:56
+if for any d points,
+58:04
+you know, x one up to x z, on the corresponding kernel matrix
+58:12
+[NOISE] is a positive semi-definite.
+58:22
+So if you write this K greater equals 0. Okay. Um, and I proved just one-dimens- one- one direction of this implication.
+58:30
+Right. This proof outline here shows that if it is a valid kernel function, ah, then this is positive semi-definite.
+58:36
+Um, this outline didn't prove the opposite direction. You see if and only if. Right. Shows both directions.
+58:42
+So this, ah, algebra we did just now proves that dimension of the proof I didn't prove the reverse dimension.
+58:49
+But this turns out to be an if and only if condition. And so this gives maybe one test for,
+58:54
+um, whether or not something is a valid kernel function. Okay. Um, and it turns out that- the kernel I wrote up there, um,
+59:04
+that one, K of x z, uh.
+59:13
+Right. And it turns out this is a valid kernel. This is called the Gaussian kernel.
+Gaussian kernel
+59:20
+This is, uh, probably the most widely used kernel. Um, well a- actually well,
+59:27
+uh, let me [NOISE].
+59:36
+Well, but the actually the most widely used kernel is-is maybe the linear kernel, um,
+The gaussian kernel
+59:44
+which just uses K of x z equals x transpose z,
+59:50
+ah, and so this is using you know phi of x equals x. Right. So no- no- no high dimensional features.
+59:56
+So sometimes you call it the linear kernel. It just means you're not using a high dimensional feature mapping or the feature mapping is just equal to the original features.
+1:00:04
+Ah, this is this is actually a pretty commonly used kernel function, ah, you- you're not taking advantage of kernels in other words.
+1:00:11
+Ah,but after the linear kernel the Gaussian kernel is probably the most widely used kernel, uh,
+1:00:16
+the one I wrote up there and this corresponds to a feature dimensional space that is um, infinite dimensional.
+1:00:26
+Right. And, ah, this is actually- this particular kernel function,
+1:00:31
+corresponds to using all monomial features. So if you have, ah, you know, X one and also X 1,
+1:00:37
+X 2 and X 1 squared X 2 and X 1 squared X 5 to the 10 and so on up to X 1 to the 10,000 and X 2 to the 17.
+1:00:47
+Right. Whatever. Um, ah, so this particular kernel corresponds to using
+1:00:53
+all these polynomial features without end going to arbitrarily high dimensional um,
+1:00:59
+by giving a smaller weighting to the very very high dimensional ones. Which is why it's wide. Yeah.
+1:01:05
+Okay. Um, great.
+1:01:15
+So the, ah, kernel to end- toward the end, I'll give some other examples of kernels. Um, so it turns out that the kernel trick
+1:01:23
+is more general than the support vector machine. Um, it was really popularized by
+1:01:29
+the support vector machine where you know researchers, ah, because Vladimir Vapnik and Corinna Cortes found that applying these kernel tricks to a support vector machine,
+1:01:39
+makes for a very effective learning algorithm. But the kernel trick is actually more general and if you have any learning algorithm that you can write in terms of inner products like this,
+1:01:49
+then you can apply the kernel trick to it. Ah and so you- you play with this for a different learning algorithm in the ah,
+1:01:55
+in the programming assignments as well. And the way to apply the kernel trick is, take a learning algorithm write the whole thing in terms of
+1:02:01
+inner products and then replace it with K of x z for some appropriately chosen kernel function K of x z.
+1:02:10
+And all of the discriminative learning algorithms we've learned so far, um, ah, can be written in this way so that you can apply the kernel trick.
+1:02:19
+So linear regression, logistic regression, ah, everything of the generalized linear model family, the perceptron algorithm, all of the- all of those algorithms,
+1:02:27
+um, you can actually apply the kernel trick to. Which means that you could um, apply linear regression in an infinite dimensional feature space if you wish.
+1:02:35
+Right. Um, and later in this class we'll talk about principal components analysis,
+1:02:40
+which you've heard of but when we talk about principal components analysis, turns out that's yet another algorithm that can be written only in terms of
+1:02:46
+linear products and so there's an algorithm called kernel PCA, kernel principal component analysis. If you don't know what PCA is, don't worry about it we'll get to it later.
+1:02:53
+But a lot of algorithms can be, ah, married with the kernel trick. So implicitly apply the algorithm even in an infinite dimensional feature space,
+1:03:02
+but without needing your computer to have an infinite amount of memory or using infinite amounts of computation. Ah, for this- actually
+1:03:10
+the single place this is most powerfully applied is the- is the support vector machine. In practice I don't- in practice the kernel trick is
+1:03:16
+applied all the time for support vector machines and less often in other algorithms. [NOISE] All right.
+1:03:37
+Um, [NOISE] any questions, before we move on. No. Okay. [NOISE]
+1:03:54
+All right. So last two things I wanna do today, Um, one is fix the assumption that we had made that the data is linearly separable, right?
+1:04:07
+Um, so, you know, uh, sometimes you don't want your learning algorithm to have, uh,
+1:04:15
+um, zero errors on the training set, right? So when- when you take this low dimensional data and map it to a very high dimensional feature space,
+1:04:23
+the data does become much more separable. Uh, but it turns out that if your data set is a little bit noisy, [NOISE]
+1:04:43
+right, if your data looks like this, you've, maybe you wanted to find a decision boundary like that,
+1:04:51
+uh, and you don't want it to try so hard to separate every little example,
+1:04:56
+right, that's defined a really complicated decision boundary like that, right? So sometimes either the low-dimensional space or in the high dimensional space Phi, um,
+1:05:05
+you don't actually want the algorithms to separate out your data perfectly and- and then sometimes even in high dimensional feature space,
+1:05:10
+your data may not be linearly separable. You don't want the algorithm to, you know, have zero error on the training set.
+1:05:17
+And so, um, there's an algorithm called the L_1 norm [NOISE] soft margin SVM,
+1:05:28
+which is a, um, modification to the basic algorithm.
+1:05:34
+So the basic algorithm was min over this, right,
+1:05:40
+subject to, [NOISE] okay.
+1:05:48
+Um, [NOISE] and so what the L_1 norm sub margin does is the following;
+1:05:58
+It says, um, you know, previously this is saying that remember this is the geometric margin.
+1:06:04
+[NOISE] Right. If you normalize this by the norm of w becomes- excuse me,
+1:06:11
+this is the functional margin. Um, if you divide this by the norm of w it becomes the geometric margin.
+1:06:17
+Um, so this optimization problem was saying let's make sure each example has functional margin greater or equal to 1.
+1:06:25
+And in the L_1 soft margin SVM we're going to relax this. We're gonna say that this needs to be bigger than 1 minus
+1:06:31
+c. There's a Greek alphabet C. Um, and then we're gonna modify the cost function as follows.
+1:06:40
+[NOISE] Where these c I's are greater than or equal to 0.
+1:06:49
+Okay. So remember, um, if the function margin is greater or equal to 0, it means the algorithm is classifying that example correctly, right?
+1:06:57
+So long as this thing is getting 0, then, you know, y and this thing will have the same sign either both positive or both negative.
+1:07:06
+Uh, that's what it means for a product of two things to be greater than zero, both things have to have the same sign, right,
+1:07:12
+and so if this is if- if, um, so as long as this is bigger than 0,
+1:07:17
+it means it's classifying that example correctly. Um, and the SVM is asking for it to not just classify correctly,
+1:07:24
+but classify correctly with the- with the functional margin of the- at least 1. Um, and if you allow CI to be positive,
+1:07:34
+then that's relaxing that constraint. Okay. Um, but you don't want the CIs to be too big which is why
+1:07:41
+you add to the optimization cost function, a cost for making CI too big.
+1:07:49
+[NOISE] And so you optimize this as function of W. [NOISE] And these are Greek alphabets c.
+1:07:55
+[NOISE] Um, and if- if you draw a picture,
+1:08:01
+it turns out that, um,
+1:08:06
+in this example with that being the optimal decision boundary, um, it turns out that these examples- [NOISE]
+1:08:13
+these three examples would be equidistant from this straight line, right? Because if they weren't, then you can fiddle the straight line
+1:08:19
+to improve the margin even a little bit more. It turns out that these few examples have, um, functional margin exactly equal to 1.
+1:08:27
+And this example over there, we have functional margin equal to 2, and the further away examples of even bigger functional margins.
+1:08:33
+And what this optimization objective is saying is that it is okay if you have an example here,
+1:08:40
+where functional margin so everything right so everything here has functional margin one.
+1:08:47
+If an example here I have functional margin a little bit less than one. And this by having- by setting Ci to 0.5 say is
+1:08:55
+letting me [NOISE] get away with having function module lower than, less than 1. [NOISE] Um, er, one other reason why,
+1:09:07
+um, you might want to use the L_1 norm soft margin SVM is the following,
+1:09:13
+which is, um, [NOISE] let's say you have a data set that looks like this. [NOISE] You know,
+1:09:22
+seems like- it seems like that would be a pretty good decision boundary, right? But, um, if we add just,
+1:09:29
+you know, measure a lot of examples, a lot of evidence. But if you have just one outlier,
+1:09:35
+say over here, then technically the data set is still linearly separable, right?
+1:09:43
+[NOISE] If you really want to separate this data set, um, sorry, I seem to be killing these pens myself as well.
+1:09:51
+[NOISE] All right. If you want to separate out this data set, you can actually, you know,
+1:09:58
+choose that decision boundary. But the basic optimal margin classifier will allow the presence of one training example
+1:10:06
+[NOISE] to cause you to have this dramatic swing in the position of the decision boundaries.
+1:10:12
+So they are, because the original optimal margin classifier it optimizes for the worst-case margin,
+1:10:18
+the concept of optimizing for the worst-case margin allows one example by being the worst case training examples have a huge impact on
+1:10:26
+your decision boundary and so the L_1 soft margin SVM, um, allows the SVM to still keep the decision boundary closer to the blue line,
+1:10:35
+even when there's one outlier. And it makes it, um, much more robust outliers.
+1:10:41
+Okay. Um, [NOISE] and then if you go through the representer theorem derivation, uh,
+1:10:51
+you know, represent w as a function of the Alphas and so on, um, It turns out that the problem then simplifies to the following;
+1:10:58
+So this is- I'm just [NOISE] right,
+1:11:06
+after some- some- after, you know, the whole representing the calc- the whole represents a calculation, [NOISE] derivation.
+1:11:17
+[NOISE] This is just what we had previously.
+1:11:23
+[NOISE] I've not changed anything so far. [NOISE] Right.
+1:11:31
+This is just exactly what we had. Um, all right, and, uh- [NOISE]
+1:11:39
+And it turns out that, um, the only change to this is we end up with an additional condition on the authorize.
+1:11:49
+So if- if you go for that simplification, uh, now that you've changed the algorithm to have this extra term, uh,
+1:11:55
+then the- the- the new form- this is called the dual form with the optimization problem. The only change is that you end up with this additional condition, right?
+Dual form
+1:12:05
+The, the constraints between Alpha are between 0 and C. Um,
+1:12:11
+and it turns out that, uh, today there are very good, you know, packages, uh, software packages which are solving that for you.
+1:12:19
+I- I- I- I think once upon a time we were doing machine learning, you need to worry about whether your code for inverting matrices was good enough, right?
+1:12:27
+And when- when code for inverting matrices was less mature there's just one thing you had to think about. But today uh, linear algebra, you know,
+1:12:34
+packages have gotten good enough that when you invert the matrix you just invert the matrix. You don't have to worry too much- when you're
+1:12:39
+solving you don't have to worry too much about it. So in the early days of SVM solving this problem was really hard.
+1:12:45
+You had to worry if your optimization packages were optimizing it. But I think today there are very good numerical optimization packages.
+1:12:51
+They just solve this problem for you and you can just code without worrying about the- the details that much. All right.
+1:12:58
+So this L1 norm soft margin SVM and, uh, oh and so, um,
+1:13:04
+and so this parameter C is something you need to choose. We'll talk on Wednesday about how to choose this parameter.
+1:13:10
+But it trades off um- how much you want to insist on getting the training examples right versus you know,
+1:13:17
+saying it's okay if you label a few terms out of this one. [NOISE] We'll- we'll discuss on Wednesday when we discuss bias and variance.
+1:13:23
+How they choose a parameter like c. All right.
+1:13:30
+So the last thing I want to- last thing I'd like you to see today is uh just a few examples of um, SVM kernels.
+Examples of SVM kernels
+1:13:39
+Uh, let me just give um- all right. So, uh, it turns out the SVM with the polynomial kernel,
+1:13:48
+uh, works quite well. So this is, uh, you know k of x, z equals x transpose z to the d. This thing is called a polynomial kernel,
+1:13:59
+um, and this is called a Gaussian kernel which is really uh- the most widely used one is the Gaussian kernel.
+1:14:05
+Right. And it turns out that I guess early days of SVMs, you know, one of the proof points of SVMs was, um,
+1:14:12
+the field of machine learning was doing a lot of work on handwritten digit classification so that's uh- so a- a digit is a matrix of pixels with values that are,
+Handwritten digit classification
+1:14:21
+you know, 0 or 1 or maybe grayscale values, right? And so if you take a list of pixel intensity values and list them,
+1:14:28
+so this is 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0 and just- this is all the pixel intensity values,
+1:14:37
+then this can be your feature X and you feed it to an SVM using either of these kernels um,
+1:14:44
+it'll do not too badly, uh, as a handwritten digit classification, right?
+1:14:49
+So there's a classic data set, um, called MNIST, which is a classic benchmark, uh, in computing- uh,
+1:14:55
+in- in history of machine learning and, um, it was a very surprising result many years ago that, you know,
+1:15:01
+support vector machine with a kernel like this does very well on handwritten digit classification.
+1:15:07
+Uh, in the past several years we've found that deep learning algorithms, specific convolutional neural networks do even better than the SVM.
+1:15:14
+But for some time, um, SVMs were the best algorithm uh, and- and they're very easy to use in turnkey.
+1:15:20
+There aren't a lot of parameters to filter with. So that's the one very nice property about them. Um, but more generally,
+1:15:29
+uh, a lot of the most innovative work in SVMs has been into design of kernels.
+1:15:35
+So here's one example. Um, let's say you want a protein sequence classifier, right?
+Protein sequence classifier
+1:15:46
+So uh, uh protein sequences are made up of ami- of- of amino acids so,
+1:15:52
+you know, I guess a lot of our bodies are made of proteins and proteins are just sequences of amino acids and there are 20 amino acids, um, but, uh,
+1:16:01
+in order to simplify the description and really not worry too much of biology, I hope the biologists don't get mad at me,
+1:16:07
+I'm gonna pretend there are 26 amino acids even though there aren't because there are 26 alphabets. So I'm gonna use the alphabets A through Z to denote amino acids
+1:16:16
+even though I know there's supposed to be only 20 but it's just easier to talk with- with 26 alphabets. And so a protein is a sequence of alphabets.
+1:16:29
+Right? Because a protein in your body is a sequence that's made up of a sequence of amino acids and,
+1:16:36
+uh, amino acids can be very- variable length, some can be very, very long, some can be very, very short. So the question is,
+1:16:43
+how do you represent the feature X?
+1:16:49
+So it turns out- uh, and so, um, the goal is to get an input x and make a prediction about this particular protein.
+1:16:58
+Like, what is the function of this protein, right? And so- well, here's one way to design a feature vector which is, uh,
+Design a feature vector
+1:17:06
+I'm going to list out all combinations of four amino acids.
+1:17:13
+You can tell this will take a while. Right. Go down to AAAZ and then AABA and so on.
+1:17:23
+Uh, and eventually, you know, there'll be a BAJT, TSTA down to ZZZZ.
+1:17:31
+Right. Um, and then I'm gonna construct phi of x according to the number of times I see this sequence in the amino acids.
+1:17:42
+So for example, BAJT appears twice.
+1:17:47
+So I'm gonna put 2 there um, uh, you know, TSTA, oh whatever.
+1:17:53
+Right. Appears once so I'm gonna put a 1 there and there are no AAAAs, no AAABs, no AAACs and so on.
+1:18:00
+Okay? So this is a- uh, a 20 to the 4, you know,
+1:18:06
+26 to the 4, 20 to the 4-dimensional feature vector. So this is a very, very high dimensional feature vector.
+1:18:11
+And it turns out that, um, using some statistic as 20 to the 4 is 160,000.
+1:18:17
+That's pretty high dimensional. Quite expensive to compute. And it turns out that using dynamic programming,
+1:18:25
+given two amino acid sequences you can compute phi of x transpose phi of z,
+1:18:30
+that's K of x,z. And there's a- there's a- there's a dynamic programming algorithm for doing this.
+1:18:36
+Uh, the details aren't important for first-year students, uh, if any of you, um, have taken an advanced CS algorithms course and learned
+1:18:42
+about the Knuth-Morris-Pratt algorithm, uh, it's- it's- it's quite similar to that.
+1:18:47
+Uh, so it's Don Knuth, right, Stanford- Stanford professor, emeritus professor here. So the DP algorithm is quite similar to that and um,
+1:18:54
+uh using this is actually quite um, this is actually a pretty decent algorithm for inputting a sequence of, say,
+1:19:03
+amino acids and training a supervised learning algorithm to make a call- binary classification on amino acid sequences.
+1:19:10
+Okay? So as you apply support vector machines one of the things you see is that depending on the input data you have,
+1:19:15
+there can be innovative kernels to use, uh, in order to measure the similarity of two amino acid sequences or
+1:19:23
+the similarity of two of whatever else and then to use that to um, build a classifier even on very strange shaped object which,
+1:19:31
+you now, do not come, um, as a feature. Okay? So um, uh,
+1:19:38
+and- and I think actually- another example- or if the input x is a histogram, you know, maybe of two different countries.
+1:19:44
+You have histograms of people's demographics it turns out that there is a kernel that's taking the min of
+1:19:50
+the two histograms and then summing up to compute a kernel function that inputs two histograms that measures how similar they are.
+1:19:56
+So there are many different kernel functions for many different unique types of inputs you might want to classify.
+1:20:01
+Okay? So that's it for SVMs uh, very useful algorithm and what we'll do on Wednesday is
+1:20:08
+continue with more advice on now the- all of these learning algorithms. We'll talk about bias and variance to give you more advice on how to actually apply them.
+1:20:17
+So let's break and then I'll look forward to seeing you on Wednesday.

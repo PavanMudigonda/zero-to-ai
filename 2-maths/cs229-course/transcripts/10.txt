@@ -1,0 +1,1168 @@
+0:03
+Hello everyone. Uh, so my name is Raphael Townshend.
+0:09
+I'm one of the head TAs for this class. This week Andrew is traveling and my advisor is still dealing with medical issues.
+0:15
+So I'm going to be giving today's lecture. Um, you heard from my wonderful co-head TA Anand a couple of weeks ago.
+0:21
+And so today, we're gonna be going over decision trees and various ensemble methods.
+0:27
+Uh, so these might seem a bit like disparate topics at first, but really decision trees are, sort of, a classical example model class to use with various ensembling methods.
+0:36
+We're gonna get into a little bit why in a bit, but just to give you guys an overview of what the outlines can be.
+0:42
+We're first gonna go over decision trees, then we're gonna go over general ensembling methods and then go specifically into bagging random forests and boosting.
+0:49
+Okay. So let's get started. So first let's cover some decision trees.
+1:04
+Okay. So last week, Andrew was covering SVNs that are, sort of, one of the classical linear models and,
+1:12
+sort of, brought to a close a lot of discussion of those linear models. And so today we gonna be getting to decision trees which is really
+1:18
+one of our first examples of a non-linear model. And so to motivate these guys let me give you guys an example.
+1:24
+Okay. So I'm Canadian, I really like to ski. So I'm gonna motivate it using that.
+1:30
+So pretend you have a classifier that given a time and a location tells you whether or not you can ski,
+1:36
+so it's a binary classifier saying yes or no. And so you have, you can imagine, a graph like this,
+1:43
+and on the x-axis we're gonna have time in months, so counting from the start.
+1:52
+So starting at 1 for January to 12 for December, and then on the y-axis we're gonna use latitude in degrees, okay?
+2:02
+And so for those of you who might have forgotten what latitude is, it's basically at positive 90 degrees you're at the North Pole,
+2:09
+at negative 90 degrees you're at the South Pole. So positive 90, negative 90,
+2:17
+0 being the Equator and it's, sort of, your location along the north-south axis.
+2:22
+Okay. So given this, if you might recall, the winter in the Northern Hemisphere generally happens in the early months of the year.
+2:32
+So you might see that you can ski in these early months over here and it has some positive data points, and then in the later months,
+2:38
+right, and then in the middle, you can't really ski.
+2:45
+Versus in the Southern Hemisphere, it's basically flipped, where you can not ski in the early months.
+2:51
+You can ski during the May, June, July, August time period,
+2:57
+and then you can't ski in the earlier months, and then the equator in general is just not great for skiing that's the reason I don't live there,
+3:03
+and so you just have a bunch of negatives here. Okay. And so when you look at a data set like this,
+3:11
+you've sort of got these separate regions that you're looking at, right? And you sort of want to isolate out those regions of positive examples.
+3:17
+If you had a linear classifier, you'd sort of be hard-pressed to come up with any sort of decision boundary that would separate this reasonably.
+3:23
+Now you could think okay, maybe you have an SVM or something, you've come up with a kernel that could perh- perhaps project this into a higher feature space that would make it linearly separable,
+3:32
+but it turns out that with decision trees, you have a very natural way to do this.
+3:38
+So to sort of make clear exactly what we want to do with decision trees, is we wanna sort of partition the space into individual regions.
+3:46
+So we sort of wanna isolate out these, like, positive examples, for example. In general this problem is fairly intractable just coming up with the optimal regions.
+3:54
+But how we do with decision trees is we do it in this basically greedy,
+4:01
+top-down, recursive manner,
+4:12
+and this is going to be recursive partitioning.
+4:19
+Okay? And so it's- basically it's top-down because we're starting with the overall region and we wanna slowly partition it up, okay?
+4:28
+And then it's greedy because at each step we wanna pick the best partition possible. Okay. So let's actually try and work out intuitively what a decision tree would do, okay?
+4:39
+So what we do is we start with the overall space and the tree is basically gonna play 20 Questions with this space.
+4:45
+Okay. So like for example, one question it might ask is, if we have the data coming in like this, is,
+4:52
+is the latitude greater than 30 degrees, okay?
+4:58
+And that would involve, sort of, cutting the space like this, for example, okay?
+5:03
+And then we'd have a yes or a no.
+5:08
+And so starting from, like, the most general space now we have partitioned the overall space into two separate spaces using this, this question.
+5:18
+Okay. And this is where the recursive part comes in now, because now that you've sort of split the space into two,
+5:24
+you can then sort of treat each individual space as a new problem to ask a new question about.
+5:29
+So for example now that you've asked this latitude greater than 30 question, you could then ask something like,
+5:35
+month less than like March or something like that.
+5:40
+All right, and that would give you a yes or no. And what that works out to effectively,
+5:47
+is that now you've taken this upper space here and divided it up into these two separate regions like this.
+5:55
+And so you could imagine how through asking these recursive questions over and over again,
+6:00
+you could start splitting up the entire space into your individual regions like this.
+6:08
+Okay, and so to make this a little bit more formal, what we're looking for is,
+6:14
+we're looking for, sort of, the split function, okay? So you can, sort of, define a region. So you have a region and let's call that region R_p in this case for R parent, okay?
+6:29
+And we're looking for, looking for a split S_p,
+6:43
+such that you have an S_p, you can, sort of, write out this S_p function as a function of j,t.
+6:52
+Okay, where we saw you- j is which feature number and T is the threshold you're using.
+6:58
+And so you can, sort of, write this out formally as, sort of, you're outputting a tuple, where on the one hand you have a set X where you
+7:07
+have the x j- the jth feature of x is less than the threshold,
+7:12
+and you have Xs element of R-p, since we're only partitioning that parent region.
+7:19
+And then the second set is literally the same thing, except it's just those that are greater than t. And so we can refer
+7:33
+to each one of these as R_1 and R_2.
+7:43
+Any questions so far? No? Okay. So we,
+7:50
+sort of, define now how we would, sort of, do this. We're trying to, like, greedily pick these peaks that are partitioning our input space and the splits are,
+7:57
+sort of, defined by which feature you're looking at and the threshold that you're applying to that feature.
+8:03
+Uh, sort of a natural question to ask now is, is how do you choose these splits,
+8:22
+right? And so I sort of gave this intuitive explanation, that really what you're trying to do is you're trying to isolate out
+8:29
+the space of positives and negatives in this case. And so what is useful to define is a loss on a region, okay?
+8:38
+So define your loss L on R,
+8:45
+loss on R. And
+8:53
+so for now let's define our loss as something fairly obvious, is your misclassification loss.
+8:59
+It's how many examples in your region you get wrong. And so assuming that you have, uh,
+9:06
+given C classes total,
+9:14
+you can define P hat c
+9:26
+to be the proportion
+9:35
+of examples in R
+9:44
+that are of class c. [NOISE]
+9:54
+And so now that we've got this definition, where we had this p hat c of telling us the proportion of examples that we've gotten that case,
+10:00
+you can try to define the loss of any region as loss,
+10:06
+let's call it misclassification, it's just 1 minus max over c of p hat c, okay?
+10:20
+And so the reasoning behind this is basically you can say that for any region that you've subdivided generally,
+10:26
+what you'll want to do is predict the most common class there, which is just the maximum p hat c, right?
+10:32
+And so then all the remaining probability just gets thrown onto misclassification errors, okay?
+10:39
+And so then once we do this, we want to basically pick- now that we have a loss defined,
+10:45
+we want to, um, pick a split that decreases the loss as much as possible.
+10:51
+So you recall I've defined this region, R_parent, and then these two children regions R_1 and R_2.
+10:58
+And you basically want to reduce that loss as much as possible. So you want to, um,
+11:04
+basically minimize loss,
+11:11
+R_parent minus loss of R_1 plus loss of R_2.
+11:22
+And so this is sort of your parent loss,
+11:31
+this is your children loss.
+11:37
+Okay. And since you're picking- and basically what you're minimizing over in some case is this j, t that we
+11:44
+defined over here since this split is really what is gonna define our two children regions, right.
+11:51
+And what you'll notice is that the loss of the parent doesn't really matter in this case because that's already defined.
+11:57
+So really all you're trying to do is minimize this negative sum of losses of your children, okay?
+12:07
+So let's move to the next board here. [NOISE]
+12:27
+So I started to find this misclassification loss. Let's get a little bit into actually why misclassification loss isn't actually the right loss to use for this problem, so,
+12:50
+okay? And so for a simple example, let's pretend- So I've sort of drawn out a tree like this,
+12:57
+Let's pretend that instead we have another setup here where we're coming into a decision node.
+13:04
+And at this point we have 900 positives and 100 negatives, okay?
+13:10
+So this is sort of a misclassification loss, of 100 in this case because you'd predict the most common class and end up with 100 misclassified examples.
+13:19
+All right, and so this would be your region R_p right now, right? And so then you can split it into these two other regions, right?
+13:27
+Say R_1 and R_2.
+13:34
+And say that what you've achieved now is you have the 700 positive,
+13:39
+100 negatives on this side versus, uh, 200 positives and 0 negatives on this side, okay?
+13:49
+Now, this seems like a pretty good split since you're getting out some more examples.
+13:54
+But what you can see is that, if you just drew the same thing again, right, R_p with 900 and 100,
+14:04
+split split, and say in this case, instead,
+14:11
+you've got 400 positives over here, 100 negatives, and 500 positives and 0 negatives.
+14:22
+So most people would argue that this bright decision boundary is better than the left one because you're basically isolating out even more positives in this case.
+14:30
+However, if you're just looking at your misclassification loss, it turns out that on this left one here,
+14:35
+let's call this R_1 and R_2 versus this right one, Let's call this R_1 prime, R_2 prime, okay?
+14:41
+So your loss of R_1 plus R_2,
+14:47
+on this left case it's just 100 plus 0. All right, so it's just 100.
+14:53
+And then on the right side here, it's actually still just the same, right?
+15:04
+And in fact, if you'd look at the original loss of your parent it's also just 100, right?
+15:09
+So you haven't really according to this loss metric changed anything at all. And so that sort of brings up one problem with the misclassification loss is that,
+15:17
+it's not really sensitive enough, okay? So like instead what we can do is we can define this cross-entropy loss, okay?
+15:26
+So which we'll define as L_cross.
+15:51
+Let me just write this out here.
+16:00
+And so really what you're doing is you're just summing over the classes and it's the probability- that the proportion of elements in that class
+16:07
+times the log of the proportion in that class. And how you can think of this is, It's sort of this concept that we borrow from information theory,
+16:15
+which is sort of like the number of bits you need to communicate to tell someone who already knows what the probabilities are what class you are looking at.
+16:23
+And so that sounds like a mouthful but really you can sort of think of it intuitively as, if someone already knows the probabilities,
+16:29
+like say it's a 100% chance that it is of one class, then you don't need to communicate anything to tell
+16:35
+them exactly which class it is because it's obvious that it is that one class versus if you have a fairly even split then you'd need to communicate
+16:41
+a lot more information to tell someone exactly what class you were in.
+16:46
+Any questions so far? Yeah? [inaudible].
+16:57
+The R_1, R_2 for the parent class? [inaudible].
+17:05
+For this case here? Yeah, yeah, so, um, for that case there so you see that, er,
+17:11
+I'll try and reach up there, but so it's like say like R_p was your start region, right? You could say it's the overall region, right?
+17:19
+And then R_1 would be all the points above this latitude 30 line. And R_2 would be all the points below the latitude 30 line.
+17:28
+Yeah, yeah? [inaudible].
+17:39
+Yeah. So the question is, when you're trying to minimize this loss here, is it the same as maximizing the,
+17:45
+the children loss, and since, er - no, uh, ah, let's see, of maximizing the children loss.
+17:51
+And yeah, it turns out it doesn't really matter, which, um, which way you put it. It just- basically, you're trying to either minimize the loss of
+17:58
+the children or maximize the gain in information, basically. [inaudible].
+18:15
+Yeah. Let's see. Yeah, you're right. That should actually be a max. Let me fix that really quick.
+18:30
+Because you start with your parent loss, and then you're subtracting out your children's loss,
+18:36
+and so the amount left, let's see, the higher this loss is- yeah. So you really want to maximize this guy.
+18:45
+Makes sense, everyone? Thanks for that.
+19:02
+Okay, so I've sort of given this like, hand-wavy- Oh, sure, what's up? [inaudible].
+19:10
+So that would be log-based. The question is, for the cross-entropy loss, is it log base 2 or log base c? It's log base 2.
+19:16
+Okay, here, I can write that out. Yep.
+19:24
+[inaudible]. Oh, sorry, I didn't quite hear that.
+19:29
+[inaudible].
+19:39
+Okay. Um, so the question is can- uh, what is the proportion that are correct versus incorrect
+19:44
+for these two examples we've worked through here? Um, and so, yeah- basically, what we're starting with is,
+19:51
+we're starting with we have 900/100, 900 positives and 100 negatives. All right, so you can imagine that if you just stopped at this point, right,
+19:58
+you would just cla- classify everything as positive, right, and so you get 100 negatives incorrect.
+20:04
+Does that make sense? Because this is 900 positives and 100 negatives. So if you just stopped here and just tried to classify,
+20:11
+given this whole region R_p, you would end up getting 10% of your examples wrong, right?
+20:18
+In this case, we're sort of talking- we're not talking about percentages, we're talking about absolute number of examples that we've gotten wrong,
+20:24
+but you can also definitely talk in terms of percentages instead. And then down here, once you've split it,
+20:31
+right, now you've got these two subregions, right? And for- on this, on this left one here,
+20:37
+you still have more positives than negatives, right? So you're still gonna classify positive in this leaf, right?
+20:44
+And you're still gonna classify positive in this leaf, too, because they- they're both majority class,
+20:51
+or the positives are still the majority class there. And in this case, since you have 0 negatives, you're not gonna make any errors in your classification,
+20:57
+whereas in this case here, it's still going to make 100 errors. And so what I'm saying is that, at this level, so if we just look above this line at R_p,
+21:05
+right, you're making 100 mistakes, and then below this line you're still making 100 mistakes.
+21:10
+So what I'm saying is that, that the loss in this case is not very informative. [inaudible].
+21:18
+Um, so this, this p-hat- okay, I'm being a little bit loose with terminology with the notation here,
+21:23
+but the p-hat in this case is a proportion, okay? But you can also easily- basically,
+21:28
+it's like whether you're normalizing the whole thing or not. Yeah. Okay. So I've
+21:38
+sort of given this a bit handwavy explanation as to why misclassification loss versus cross-entropy loss might be better or worse.
+21:44
+Um, we can actually get a fairly good intuition for why this is the case by looking at it from a sort of geometric perspective.
+21:52
+So pretend now that you have this, this plot, okay?
+22:00
+And what you're plotting here is- pretend you have a binary classification problem, okay? So you have just- is it positive class or negative class, okay?
+22:08
+And so you can sort of represent, say p-hat, as like the proportion of positives in your set, okay?
+22:15
+And what you've got plotted up here is your loss. Okay. For cross-entropy loss,
+22:22
+where your curve is gonna end up looking like is, is gonna end up looking like this strictly concave curve like this, okay?
+22:29
+And what you can do is you can sort of look at where your children versus your parent would fall on this curve.
+22:36
+So say that you have two children, okay? You have one up here, so like let's call this LR1.
+22:43
+And you have one down here, LR2, okay?
+22:49
+And say that you have an equal number of examples in both R1 and R2, so they're equally weighted.
+22:56
+If you take- when you're looking at the overall loss between the two, right, that's really just the average of the two.
+23:02
+So you can draw a line between these two, and the midpoint turns out to be the average of your two losses.
+23:09
+So this is LR1 plus LR2 divided by 2.
+23:22
+That's for this guy, okay? And what you can notice is that, in fact,
+23:29
+the loss of the parent node is actually just this point projected upwards here,
+23:35
+so this would be your LR parent. And this difference right here,
+23:41
+this difference, is sort of your change in loss.
+23:56
+Does this makes sense? Any questions?
+24:03
+Okay. So we have this- just to recap, okay. So we have- say, we have two children regions, right?
+24:09
+And they have different probabilities of positive examples occurring, right? They sort of would fall- one would fall on this point on the curve, and say,
+24:18
+the other one falls on this point on the curve, then the average of the two losses sort of falls on the midpoint between these two original losses.
+24:24
+And if you look at the parent, it's really just halfway between on the x-axis,
+24:30
+and you can project up towards for that as well, and you end up with the loss of R_parent. What's up? [inaudible].
+24:44
+Okay. So what we're looking at here is we're looking at the cross entropy loss. So you've got this function here, this L cross entropy right,
+24:51
+and that's in terms of p-hat c's, right? In this case here, we're just assuming that we have two classes, okay?
+24:58
+So what we're doing is we're just modifying the p-hat c, we're, we're changing that on the x-axis and then we're looking at what
+25:05
+the response of the overall loss function is on the y-axis. And so what I just did here is for any- this curve just represents for any p-hat c,
+25:14
+what the cross entropy loss would look like. Okay. And so we can come back to this, for example, right?
+25:21
+And if we look at this parent here right, this guy has a 10%, right? It's sort of like p-hat,
+25:28
+p-hat for this guy is 0.1, it's 10% basically or,
+25:34
+or I guess no, in this case, would be 0.9 sorry. And then versus here, in these two cases, right,
+25:40
+your p-hat, in this case, is 1 since you've got them all right, all right, and then, in this case,
+25:47
+it's 0.8, okay? So you can sort of see since these are equal, there's the same number of examples in both of these,
+25:54
+the p-hat of the parent is just the average of the p-hat's of the children. Okay. And so that's how we can sort of take this LR_parent,
+26:02
+this LR_parent is just halfway, if we projected this down, all right. Let me just erase this little bit here.
+26:13
+If we projected this down like this,
+26:20
+we'd see that this- that this point here is the midpoint.
+26:29
+Okay. Um, but then when you're actually averaging the two losses after you've done the split,
+26:36
+then you can basically just, you're just taking the average loss right? You're just summing LR1 plus
+26:41
+LR2 and if you're taking the average then you're dividing by two, and what you can do is you can just draw the line and take the midpoint of this line instead. Yeah.
+26:49
+[inaudible]. Yeah. [inaudible]
+27:05
+Yeah. Exactly. So yeah really any- if there- it's a good point. The question was if you have an uneven split,
+27:12
+uh what would that look like on this curve, right? And so at this point, I've been making the math easy by
+27:18
+just saying there's an even split but really if there was a slightly uneven split you- the average would just be any point along this line that you've drawn.
+27:25
+As you can see the whole thing is strictly concave so any point along that line is going to lie below the original loss curve for the parent.
+27:34
+So you're basically, as long as you're not picking the exact same points on the probability curve and not making any gain at all in your split,
+27:41
+you're gonna gain some amount of information through this split.
+27:47
+Okay. Now, this was the cross-entropy loss, right?
+28:02
+If instead, we look at the misclassification loss over here,
+28:08
+let's draw this one instead.
+28:32
+What we can see, in this case, if you draw it is that it's in fact really this pyramid kind of shape where
+28:38
+it's just linear and then flips over once you start classifying the other side. And if you did the same argument here where we had LR1 and LR2,
+28:50
+and then you drew a line between them, all right, that's basically just still the loss curve, and so,
+28:56
+in this case, like your midpoint would be the same point as your parent. So your loss of R_parent, in this case,
+29:03
+would equal your loss of R1 plus loss of R2 divided by 2.
+29:12
+All right. And so in this case, you can- there's even now according to the cross entropy formulation,
+29:18
+you do have a gain in information and intuitively we do see a gain in information over here. For the misclassification loss, since it's not very sensitive,
+29:25
+if you end up with points on the same side of the curve, then you actually don't see any sort of information gain based on this kind of representation.
+29:36
+And so there's actually a couple, I, I presented the cross entropy loss here. There's also the Gini loss which is another one,
+29:44
+which people just write out as, as the sum over your classes p-hat c times one minus p-hat c,
+29:54
+okay, and it turns out that this curve also looks very similar to this original cross entropy curve.
+30:00
+And what you'll see is that actually most curves that are successfully used for de- decision splits,
+30:06
+look basically like the strictly concave function.
+30:11
+Okay. So that's where it covers a lot of the criteria we use for splits.
+30:17
+Um, let's look at some extensions for decision trees.
+30:38
+Actually, I'm going to keep this guy.
+30:58
+Okay. So, so far I've been talking about decision trees for classification.
+31:03
+You could also imagine having decision trees for regression, and people generally call these regression trees, okay.
+31:11
+So taking the ski example again let's pretend that instead of now predicting whether or not you can ski,
+31:16
+you're predicting the amount of snowfall you would expect in that area around that time. Um, so like let's- I'm just gonna say it's like inches of snowfall I guess or something,
+31:27
+per like day or something and just like maybe have some values up here.
+31:33
+Some high value because you're- it's winter over there, it's mostly 0s over here because there's summer,
+31:40
+and then you have some more high values over here, and then you have 0s along the equator again.
+31:51
+0s, southern hemisphere over our winter,
+31:59
+and then more 0s like this. And you can sort of see how you would do just the exact same thing.
+32:05
+You still want to isolate out regions and sort of increase like the purity of those regions. So you could still create like your trees like this,
+32:13
+all right, and split out like this for example. And what you do when you get to one of your leaves
+32:20
+is instead of just predicting a majority class, what you can do is predict the mean of the values left.
+32:27
+So you're predicting, predict y hat where, well for Rm.
+32:38
+So pretend you have a region Rm, you're predicting y hat of m which is the sum of all the indices in Rm,
+32:47
+Y i minus y hat m, and you want the squared loss and then you can sort of I guess,
+32:55
+in this case, you want to normalize by the overall cardinality of Rm or how many points you have in Rm.
+33:05
+And so in this case, basically all you've done is you've switched your loss function or, no sorry that's wrong.
+33:14
+[LAUGHTER] This is actually- I got a little bit ahead of myself. This is actually just- the,
+33:20
+the mean value would just be this, in this case, right? It's just your summing all the values within your region.
+33:25
+So in this case, 7, 9, 8, 10, and then just taking the average of that. Um, but so then what you do,
+33:33
+what I was starting to write out there was actually really the, the loss that you would use, in this case, right, which is your squared loss, okay?
+33:41
+So like we'll just call that L squared which, in this case,
+33:48
+would be equal to Y i minus
+33:55
+y hat m squared over R m. That's what I started to write over there.
+34:03
+But in this case, right, you have your mean prediction and then your loss in this case, is how far off your mean prediction is from the overall predictions,
+34:12
+in this case. Yep.
+34:21
+So in terms of [inaudible].
+34:34
+So that's a really good question. The question was uh, how do you actually search for your splits,
+34:39
+how do you actually solve the optimization problem of finding these splits? And it turns out that you can actually basically brute force it very efficiently.
+34:46
+I'm going to get into sot of the details of how you do that shortly, but it turns out that you can just go through everything
+34:51
+fairly quickly. Um, I'll get into that. I think that's in a couple of sections from now,
+34:57
+yeah. Any other questions? Okay. So this is,
+35:05
+uh, for regression trees, right? It turns out that, um, another useful extension that,
+35:11
+that you don't really get for other learning algorithms is that you can also deal with, uh, categorical variables fairly easily.
+35:29
+And basically, for this case, you could imagine that instead of having your latitude in degrees,
+35:35
+you could just have three categories right? You could have something like, uh,
+35:41
+this is the northern hemisphere, this is the equator,
+35:47
+and this is the southern hemisphere, okay? And then you could ask questions instead of the sort,
+35:56
+like that initial question we had before, where it was latitude greater than 30. Your question could instead be is,
+36:03
+is- I guess this would be, is location in northern hemisphere?
+36:14
+Right. And you can have basically any sort of subset- you could ask me question about any sort of subset of the categories you're looking at.
+36:21
+Right? So in this case Northern, you would still- this question would still split out this top part from these bottom pieces here.
+36:27
+One thing to be careful about though is that if you have q categories,
+36:36
+then you have- I mean, you basically are considering every single possible subset of these categories.
+36:43
+So that's 2 to the q possible splits.
+36:52
+And so in general, you don't want to deal with too many categories because this will become quickly intractable to look through that many possible examples.
+37:01
+It turns out that in certain very specific cases, you can still deal with a lot of categories.
+37:07
+One such case is for binary classification where then you can just- the math is a little
+37:13
+bit complicated for this one but you can basically sort your categories by how many positive examples are in each category,
+37:18
+and then just take that as like a sorted order then search through that linearly, and it turns out that that yields to an optimal solution.
+37:34
+So decision trees, we can use them for regression, we can also use them for categorical variables.
+37:39
+Um, one thing that I've not gotten into is that, you can imagine that in the limit if you grew your tree without ever stopping,
+37:46
+you could end up just having a separate region for every single data point that you have. Um, so that's really- you could consider that probably
+37:55
+over fitting if you ran it all the way to that completion, right? So you can sort of see that decision trees are fairly high variance models.
+38:05
+So one thing that we're interested in doing is regularizing these high variance models.
+38:24
+And generally, how people have solved this problem is through a number of heuristics, okay? So one such heuristic is that if you hit a certain minimum leaf size,
+38:34
+you stop splitting that leaf, okay? So for example in this case if you've hit like you only have
+38:43
+four examples left in this leaf, then you just stop. Another one is you can enforce a maximum depth,
+38:54
+and sort of a related one in this case is a max number of nodes.
+39:07
+And then a fourth very tempting one I've got to say to use is you say,
+39:13
+a minimum decrease in loss, right?
+39:24
+I say this one's tempting because it's generally not actually a good idea to use this minimum decrease in loss 1.
+39:31
+You can think about that, by thinking that if you have any sort of higher-order interactions between your variables, um,
+39:37
+you might have to ask one question that is not very optimal, or doesn't give you that much of an increase in loss,
+39:43
+and then your follow-up question combined with that first question might give you a much better increase. And you can sort of see that in this case,
+39:49
+where the initial latitude questions doesn't really give us that much of a gain. We sort of split some positive and negatives,
+39:54
+but the combination of the latitude question plus the time question really nails down what we want.
+40:00
+And if we were looking at it purely from the minimum decrease in loss perspective, we might stop too early and miss that entirely.
+40:07
+And so a better way to do this kind of loss decrease is instead you grow out your full tree,
+40:13
+and then you prune it backwards instead. So you grow out the whole thing and then you check which nodes to prune out.
+40:20
+Pruning. And how you generally do this, is you, you take it- you have a validation set that you use this with,
+40:27
+and you evaluate what your misclassification error is on your validation set. If for each example that you might remove for each leaf that you might remove.
+40:36
+So you would use misclassification in
+40:41
+this case with a validation set.
+41:00
+Any questions? Yeah? The minimum decrease in loss.
+41:06
+The minimum decrease in loss? So, um, yeah of course. Uh, so you'll recall that before I was talking about sort of this RP,
+41:14
+this loss of R_parent versus loss of R_1 plus loss of R_2. All right, so when we're- I had written out a maximization basically,
+41:22
+um, oh to be clear, the question is, can you explain a little bit more clearly what this minimum decrease in loss means?
+41:31
+And so you have your loss of R_1 and R_2 versus your loss of R_parent, right? So the split before the split, right,
+41:39
+you have your loss before split.
+41:45
+You have the loss of R_parent, and then after split,
+41:56
+you have loss of R_1 plus loss of R_2.
+42:01
+Yeah. And if, if this decrease between your loss of R_parent to your loss of your children is not great enough,
+42:08
+you might be tempted to say, "Okay, that question didn't really gain us anything, and so therefore we will not actually use that question."
+42:15
+But what I'm saying is that sometimes you have to ask multiple questions, right? You have to ask sort of sub-optimal questions first to get to the really good questions,
+42:23
+especially if you have sort of interaction between your variables, if there is some amount of correlation between your variables.
+42:36
+Okay. So we talked about regularization.
+42:42
+I said that we would get to run time, let's actually just go up here again.
+42:47
+[NOISE] So let's cover that really quickly.
+42:54
+[NOISE]
+43:28
+Okay. So it'll be useful to define a couple of numbers at this point. So say you have n examples.
+43:35
+[NOISE] You have f features,
+43:47
+and finally, you have, uh, d- let's say the depth of your tree is d, okay.
+43:57
+All right. So you've gra- you, you have n examples that you trained on you- with the each of f features and your resulting tree has depth d. So at test time,
+44:06
+your run-time is basically just your depth d, right? [NOISE] It's just o of d,
+44:17
+right? Which is your depth. And typically, though not in all cases, um,
+44:23
+d is sort of about- is less than the log of your number of examples.
+44:30
+And you can sort of think about this as if you have a fairly balanced tree right, you'll end up sort of evenly splitting out all the examples and sort of recursively like
+44:39
+doing these binary splits and so you'll be splitting it at the log of that n. Okay. So at test-time you've generally got it pretty quick.
+44:46
+Uh, at train time,
+44:52
+um, you have each point.
+44:57
+So if you return back to this example, you'll see that each point, right, once you've done a split only belongs to
+45:04
+the left or right of that split afterwards. All right. So it's sort of like, like this point right here, once you've split here will only ever be part of this region,
+45:11
+will never be considered on the other side, on the right-hand side of that split. All right.
+45:16
+So if your, if your tree is of depth d, each point,
+45:22
+each point is part
+45:28
+of Od nodes.
+45:36
+Okay. And then at each node, you can actually work out that the cost of evaluating that point
+45:45
+for- at training time is actually just proportional to the number of features f.
+46:04
+I won't get too much into the details of why this is, but you can consider that if you're doing binary features, for example,
+46:11
+where each feature is just yes or no of some sort, then you only have to consider, if you have f features total,
+46:17
+you only have to consider, um, f possible splits. So that's why the cost in that case would be f,
+46:23
+and then if it was instead a, uh, quantitative feature, I mentioned briefly that you could sort
+46:28
+the overall features and then scan through them linearly, um, and that also ends up being asymptotically O of f to do that.
+46:37
+Okay. So each point is at most O of d nodes, and then the cost of point at each node is O of f and you have n points total.
+46:46
+So the total cost is really just,
+46:54
+is just O of nfd, like this.
+46:59
+It turns out that this is actually surprisingly fast, uh,
+47:05
+especially if you consider that n times f is just the size of your original design matrix,
+47:12
+right or your data matrix, all right. Your data matrix is
+47:21
+of size n times f,
+47:26
+right, and then you're only- your, your runtime is going through the data matrix that most depth times,
+47:32
+and since depth is log of n, that turns out to be or generally bounded by log of n, you have generally, a fairly,
+47:39
+fast training time as well. Any questions about runtime? [NOISE] Okay.
+47:50
+So I've been talking a lot about the good sides of decision trees right, they seem pretty nice so far.
+47:55
+However, there are a number of downsides too. Um, and one big one is that it doesn't have additive structure to it.
+48:06
+And so let me explain a little bit what that means.
+48:29
+Okay. So let's say now we have an example and you have just two features again,
+48:35
+so x1 and x2, and you ca- say you define a line, okay,
+48:41
+just running through the middle defined by x1 equals x2. And all the points above this line are positive,
+48:50
+and all the points below it are negative. Now, if you have a simple linear model like logistic regression,
+48:56
+you'll have no issue with this kind of setup. But for a decision tree, [LAUGHTER] basically,
+49:02
+you'd have to ask a lot of questions that even somewhat approximate this line. Like, what you can try is you're going to say okay let's split it this way,
+49:09
+and maybe we can do a split this way and then now I split here, maybe something like this,
+49:15
+and basically something like that, right? Even here you- so you've asked a lot of questions and you've only gotten
+49:22
+a very rough approximation of the actual line that you've drawn in this case. And so decision trees do have a lot of issues with these kind of structures
+49:30
+where the v- the features are interacting additively with one another.
+49:36
+Okay. So to recap so far, since we've covered a number of different things about decision trees,
+49:46
+there's a number of pu- pluses and minuses to decision trees. Okay. So on the plus side, they're actually,
+49:53
+I think this is an important point is that they're actually pretty easy to explain, right? If you're explaining what a decision tree is to like a non-technical person,
+50:01
+it's fairly obvious you're like okay you have this tree, you're just playing 20 Questions with your data and letting it co- come up with one question at a time.
+50:08
+There are also interpretable, you can just draw out the tree especially for shorter trees to see exactly what it's doing.
+50:20
+It can deal with categorical variables,
+50:29
+and it's generally pretty fast.
+50:35
+However, on the negative side, one that I alluded to is that they're
+50:42
+fairly high variance models and so are oftentimes prone to overfitting your data.
+50:51
+They're bad at additive structure.
+51:00
+And then finally they have, because in large part because of these first two,
+51:06
+they generally have fairly low predictive accuracy. [NOISE] I know what you guys are thinking,
+51:16
+I just spent all this time talking about decision trees and then I tell you guys they actually sort of suck. So why did I actually cover decision trees?
+51:22
+And the answer is that in fact you can make decision trees a lot better through ensembling.
+51:28
+And a lot of the methods, for example at the leading methods in Kaggle these days are actually built on ensembles of decision trees,
+51:35
+and they really provide an ideal sort of model framework to look at, through which we can examine a lot of these different ensembling methods.
+51:43
+Any questions about decision trees before I move on? [NOISE] Yeah?
+51:48
+[inaudible].
+51:54
+I don't think that's strictly- Okay. So the question is for the cross-entropy loss,
+52:00
+does the log need to be base 2? And the answer is I'm pretty sure that it's not very relevant in this case,
+52:06
+I'm not 100% sure about that but I'm pretty sure that the base of the log of that makes, it's cross entropy loss actually initially came out of like information theory,
+52:12
+we have like computer bits and you're transmitting bits. So it's useful to think in terms of bits of information that you can transmit,
+52:18
+which is why it came up as log base 2 in the initial formulation. [NOISE]
+52:54
+Okay. So now let's talk about ensembling.
+53:06
+Okay. So why does ensembling help? At some level, you can sort of think back to your basic, uh, statistics.
+53:14
+So say you have, um, you have XIs, XIs, which are random variables.
+53:36
+I'll sometimes write this as just RV, um,
+53:42
+that are independent and identically distributed.
+53:58
+And so probably a lot of you are familiar with this already or you can call this IID, okay.
+54:10
+Now say that your variance of one of these variables is Sigma squared.
+54:21
+Then what you can show is that the variance of the mean of many of these variables.
+54:28
+So let's- of many of these random variables or written alternatively,
+54:33
+1 over N sum over I to the XI is equal to Sigma
+54:42
+squared over N. And so each independent variable you factor in is
+54:48
+decreasing the variance of your model, all right? And so the thought is that if you can factor in a number of independent sources,
+54:57
+you can slowly decrease your variance. Okay, so, uh, so that- though this is
+55:02
+a little bit simplistic of a way of looking at this, because really all these different things are factoring together have some amount of correlation with each other.
+55:09
+And so this independence assumption is oftentimes not correct. So if instead,
+55:21
+you drop the independence assumption.
+55:37
+So now your variables are just ID, right?
+55:51
+Okay. And say we can characterize what the correlation between any two XIs is and we can write that down as Rho. So Xi.
+56:14
+Then you can actually write out the variance of your mean as
+56:22
+Rho Sigma squared- Sigma squared,
+56:28
+plus 1 minus Rho over M or- no, N Sigma squared, okay?
+56:38
+And so you can sort of see that if your correlation- if they're fully correlated, then your- this term will drop to 0 and
+56:43
+that you'll just have Sigma squared again because adding a bunch of fully correlated variables is just gonna give you the original variable's variance versus if they're
+56:50
+completely decorrelated then this term drops to 0 and you just end up with Sigma squared over N which gives you the initial,
+56:56
+uh, independent identically distributed equation.
+57:01
+And so in this case, really what you wanna do- the name of the game is, you wanna have as many different models that you're
+57:09
+factoring as possible to increase this N which drives this term down. And then on the other hand, you also want to make sure
+57:14
+those models are as decorrelated as possible so that your Rho goes down and this first term goes down as well, okay?
+57:35
+And so this gives rise to a number of different ways to ensemble.
+57:48
+And one way you could think about doing this is you just use different algorithms, right?
+58:02
+This is actually what a lot of people in Kaggle, for example, will do, is they'll just take a neural network or Random Forest, an SVM,
+58:10
+average them all together and generally that actually works pretty well but- then you sort of have to
+58:15
+spend your time implementing all these separate algorithms which is oftentimes not the most efficient use of your time.
+58:21
+Another one that people would like to do is just use different training sets.
+58:37
+Okay. And again, in this case, like you probably spent a lot of effort collecting your initial training set,
+58:43
+you don't want your- like machine learning person to just come and recommend to you that, just go collect a whole second training set
+58:50
+or something like that to improve your performance. Like that's generally not the most helpful recommendation, okay?
+58:57
+And so then, what we're gonna cover now are these two other methods that we use to do ensembling. And one of them is called bagging,
+59:04
+which is sort of trying to approximate having different training sets.
+59:10
+We'll get into that quickly. And then you also have boosting.
+59:18
+And just so that you guys will have a little bit of context, we're gonna be using decision trees to talk a lot about these models;
+59:24
+and so bagging, you might have heard of random forests, that's a variant of bagging for decision trees.
+59:33
+And then for boosting, you might have heard of things like AdaBoost,
+59:40
+or XGBoost, which are variants of boosting for decision trees.
+59:50
+Okay, so that sort of covers at a high level what we would wanna do. These first two are very nice because they're sort of would give us a much
+59:58
+more like independently correlated- or less correlated variables. But generally, we're- we end up doing these latter two
+1:00:06
+because we don't want to collect new training sets or train entirely new algorithms. Okay, so let's cover bagging first.
+1:00:20
+Okay, so bagging really stands for this thing. It's called bootstrap aggregation, okay?
+1:00:27
+Um, and so- first,
+1:00:41
+let's just break down this term. So bootstrap, what that is, is it's typically this method used in statistics to measure
+1:00:47
+the uncertainty of your estimate, okay? And so what- what is useful to define in this case for when you're talking about bagging
+1:00:55
+is you can say that you have a true population P, okay?
+1:01:07
+And your training set- training set S is sampled from P, right?
+1:01:18
+So you just start drawing a bunch of examples from P and that's what forms your training set at some level. And so ideally, like for example,
+1:01:25
+this different training set's approach. What you do is, you just draw S1, S2, S3, S4, and then train your model in each one of those separately.
+1:01:32
+Unfortunately, you generally don't have the time to do that. And so what ba- what Bootstrapping does,
+1:01:39
+is you assume basically that your population is your training sample, okay?
+1:01:48
+So you assume that your population is your training sample. And so now that you have this S is approximating your P,
+1:01:54
+then you can draw new samples from your population by just drawing samples from S instead, okay?
+1:02:01
+So you have bootstrap samples, is what they're called.
+1:02:11
+Z sampled from S. And so how that works is you basically just take your train- your- your training sample, okay?
+1:02:20
+Say it's of like cardinality N or something. And you just sample N times from S and this is important,
+1:02:26
+you do it with replacement. Because they're pretending that this is the population, and so doing it with replacement sort of makes that assumption
+1:02:33
+hold that you're sampling from it as a population.
+1:02:38
+Okay, so that's bootstrapping. So you generate all these different bootstrap samples Z on your- from your training set.
+1:02:47
+And what you can do is you can take your model and train it on all these separate bootstrap samples, and then you can sort of look at the variability in
+1:02:54
+the predictions that your model ends up making based on these different bootstrap samples. And that gives you sort of a measure of uncertainty.
+1:03:01
+I'm not gonna go into too much detail now because that's not actually what we're gonna use Bootstrapping for. What we want to use bootstrapping for is we wanna aggregate these two Bootstrap samples.
+1:03:11
+And so at a very high level, what that means is we're gonna take a bunch of Bootstrap samples, train separate models on each and then average their outputs, okay?
+1:03:22
+So let's make that a little bit more formal. [NOISE]
+1:03:46
+So you have bootstrap samples
+1:03:59
+Z_1 through Z_M say, okay, capital M. That's just say how many bootstrap samples you're going to take.
+1:04:07
+Okay, you train [NOISE] a model,
+1:04:16
+G_M, okay, on Z_M, okay?
+1:04:25
+Then all you're doing is you're just defining this new sort of meta model.
+1:04:30
+I'm not putting a subscript on this one to show that it's a meta model, T of M, which is just the sum of your predictions of your individual models,
+1:04:43
+divided by the total number of models you have, all right? And this is just me writing out what I was sort of talking about right up there for bagging.
+1:04:54
+If you're taking these bootstrap samples and then you're training separate models, and then you're just aggregating them all together to get this bagging approach.
+1:05:06
+So if we just do a little bit of analysis from the bias-variance perspective on this,
+1:05:12
+we can sort of see why this kind of thing might work. [NOISE]
+1:05:28
+And so you recall we had this equation up here, right? The va- variance of the mean is rho sigma squared,
+1:05:33
+plus 1 minus rho, over n of sigma squared. So let me just write that out here. [NOISE]
+1:05:49
+And in this case, our M is actually really uh, just the number of bootstrap samples. So we'll just use big M in this case.
+1:05:57
+And what you're doing is by taking these bootstrap samples, you're sort of decorrelating the models you're training.
+1:06:03
+Your bootstrapping [NOISE] is
+1:06:11
+driving down [NOISE] rho.
+1:06:17
+Okay. And so by driving this down,
+1:06:22
+you're sort of making this term get smaller and smaller. And then your question might be okay, what about this term here? And it turns out that basically you can take as many bootstrap samples as you want,
+1:06:32
+and that will slowly drive down- it increases M and drive down this second term. And it turns out that one nice thing about bootstrapping,
+1:06:40
+is that increasing the number of bootstrap models in your training, doesn't actually cause you to overfit anymore than you were beforehand.
+1:06:49
+Because all you're doing, is you're driving down this term here. So more M [NOISE] and it's just less in variance.
+1:06:59
+[NOISE] All you're doing is driving down the second term as much
+1:07:06
+as possible when you're getting more and more bootstrap samples. So generally, it only improves performance. And so generally what people will do is they'll sample
+1:07:12
+more and more models until they see that their error stops going down. Because that means they basically eliminated this term over here.
+1:07:19
+So this seems kinda nice, right? You're decreasing the variance, where is the trade-off coming in? Oh, there is a question there.
+1:07:27
+[inaudible].
+1:07:33
+Yeah, there's definitely a bound, right? Because um, I'm not going to define one formally right now.
+1:07:39
+Oh, the question is can you define a bound on how much you decrease rho by? Uh, I'm not- yeah,
+1:07:45
+so there's definitely a lower bound [NOISE] or, oh yeah, a lower bound on how far you can decrease rho.
+1:07:52
+Basically it comes down to your bootstrap samples are still fairly highly correlated with one another, all right.
+1:07:58
+Because they're still just drawing it from the same sample set S. Really, your Z is gonna end up containing about two- each Z is going to contain
+1:08:05
+about two thirds of S. And so your Zs are still gonna be fairly highly correlated with each other. And no, I don't have a formal equation to write down as to
+1:08:12
+exactly how much that decreases rho by, or how much that bounds rho by, you can sort of see intuitively that there is a bound there and that you can't just
+1:08:20
+magically decrease rho all the way down to 0 and achieve 0 variance. [NOISE] All right.
+1:08:29
+So saying that you decrease variance, that seems very nice. One issue that comes up with, with uh,
+1:08:36
+bootstrapping is that in fact you're actually slightly increasing the bias of your models when you're doing this.
+1:08:41
+And the reasoning for that [NOISE] is because of
+1:08:52
+this sub-sampling that I was talking about here. Each one of your Zs is now about two-thirds of the original S. So you're training on less data um,
+1:09:00
+and so your models are becoming slightly less uh, you know, complex and so that increases your bias in this case. Yes.
+1:09:07
+[inaudible]
+1:09:14
+Yeah, for sure. Um, so the question is, can you explain the difference between
+1:09:20
+a random variable and an algorithm in this case, right? And so you could sorta- at a, at a very high level,
+1:09:25
+you can think of an algorithm as a classifier- as a function that's taking in some data and making a prediction.
+1:09:31
+Right? And if you sort of see those- that whole setup as sort of like, the probability, the algorithm is
+1:09:37
+giving some sort of output in the probabilistic perspective, you can sort of see the algorithm as like a random variable in the case- in this case.
+1:09:45
+Sort of like, you're basically considering, sort of the space of possible predictions that
+1:09:51
+your algorithm can make and that you can sort of see as a distribution of possible predictions
+1:09:56
+and that you can approximate that as a random variable. I mean it is a random variable at some level, because it's sort of like based on what's training sample you end up with,
+1:10:05
+your predictions of your output model are gonna change. And so since you're sampling sort of these random samples from your population set,
+1:10:13
+you can consider your algorithm as sort of based on that random sample and therefore a random variable itself.
+1:10:21
+Okay. So yeah, your bias is slightly increased because [NOISE] of random subsampling,
+1:10:32
+[NOISE] but generally,
+1:10:41
+the decrease in variance that you get from doing this, is much larger than the slight increase in bias you get from,
+1:10:47
+from doing this randomized subsampling. So in a lot of cases, bagging is quite nice. [NOISE] Okay?
+1:11:08
+So I've talked a bit about ba- about bagging, uh, let's talk about decision trees plus bagging now.
+1:11:23
+Okay. So you recall that decision trees are high [NOISE] variance,
+1:11:35
+low bias okay? And this right here sort of explains why they're a pretty good fit for bagging.
+1:11:43
+Okay? Because bagging what you're doing, is you're decreasing the variance of your models for a slight increase in bias.
+1:11:49
+And since most of your error from your decision trees is coming from the high variance side of things,
+1:11:54
+by sort of driving down that variance, you get a lot more benefit than for a, a model that would be on the reverse high bias and low variance.
+1:12:03
+Okay? So, so this makes this like an ideal fit [NOISE] for bagging.
+1:12:10
+[NOISE]
+1:12:24
+Okay. [NOISE] So now, um, this is sort of decision trees plus bagging.
+1:12:29
+I said that random forests are sort of a version of decision trees plus bagging. And so what I've described here is actually almost a random forest at this point.
+1:12:38
+The one key point we're still missing is that random forests actually introduce even more randomization into each individual decision tree.
+1:12:46
+And the idea behind that is that- as I had a question from before is this Rho,
+1:12:51
+you can only drive it down so far through just pure bootstrapping. But if you can further decorrelate your different random variables,
+1:12:58
+then you can drive down that variance even further, okay? Um, and so the idea there is that basically for- at each split for random forests,
+1:13:18
+at each split, you consider only a fraction
+1:13:29
+of your total features, right?
+1:13:45
+So it's sort of like, for that ski example, maybe like for the first split, I only let it look at latitude, and then for the second split,
+1:13:52
+I only let it look at, uh, the time of the year. [NOISE] And so this might seem a little bit unintuitive at first,
+1:13:59
+but you can sort of get the intuition from two ways. One is that you're decreasing Rho and then the other one
+1:14:11
+is you can think that- say you have a classification example, where you have one very strong predictor that gets you very good performance on its own.
+1:14:19
+And regardless of what bootstrap sample you select, your model is probably gonna use that predictor as its first split.
+1:14:24
+That's gonna cause all your models to be very highly correlated right at that first split, for example, and by instead forcing it to,
+1:14:32
+to sample from different features. Instead, that's going to increase the, uh, or decrease the correlation between your models.
+1:14:39
+And so it's all about decorrelating your models in this case. [NOISE] Okay.
+1:14:52
+And that sort of brings to a close a lot of our discussion of bagging. Are there any questions regarding bagging?
+1:15:00
+Okay. Now, I've covered bagging.
+1:15:06
+Let's get a little bit into boosting. [NOISE] And I'll make this quick.
+1:15:16
+But basically, whereas bagging we sort of saw in the intuition that
+1:15:24
+we were decreasing variance, boosting is sort of actually more of the opposite where you're decreasing the bias of your models, okay?
+1:15:31
+So- [NOISE]
+1:15:43
+and also it- it's basically, um, more additive in, um, in how it's doing things.
+1:15:49
+So versus- [NOISE] you'll recall that for bagging,
+1:15:55
+you were taking the average of a number of variables. In boosting, what happens, you train one model and then you add that prediction into your ensemble.
+1:16:02
+And then when you turn a new model, you just add that in as a prediction. And so- and that's a little bit handwavy right now.
+1:16:07
+So let me actually make that clear through an example. [NOISE] So say you have a dataset, again, X1,
+1:16:17
+X2, X2 and you have some data points, maybe some- that's actually- just call them pluses and minuses.
+1:16:27
+So you have some more pluses here, and then maybe a couple of minuses and some pluses here, okay?
+1:16:35
+And what you- say you're training a size one decision tree. So decision stumps is what we call them.
+1:16:41
+And so you only get to ask one question at a time. And the reason behind this, just really quickly is that because you're decreasing bias
+1:16:48
+by restricting your trees to be only depth 1, you basically are increasing
+1:16:54
+their amount of bias and decreasing their amount of variance, which makes them a better fit for boosting kind of methods.
+1:16:59
+And say that you come up with a, a decision boundary, okay? Say this one here, okay?
+1:17:06
+And what you're gonna do is, on this side you predict positive, right? And on this side you predict negative.
+1:17:11
+There's like a reasonable like line that you could draw here, but it's not perfect, right? You've made some mistakes. And in fact, what you can do is you can sort of identify these mistakes.
+1:17:21
+Now, if we draw this in red, right? You've got- made these guys as mistakes.
+1:17:26
+And what boosting does is basically it increases the weights of the mistakes you've made.
+1:17:33
+And then for the next out- uh, decision stump that you train, it's now trained on this modified set.
+1:17:39
+Which we could, let's just draw it over here.
+1:17:45
+One. [NOISE] And so now you- these positives,
+1:17:50
+I'll just draw them much bigger. You know, you've got big positives here and some small negatives, and some small positives,
+1:17:57
+some big negatives here. And so now your model, to try and get these right,
+1:18:03
+might pick a decision boundary like this, right? And this is also basically recursive in that each step, right?
+1:18:10
+You're gonna be reweighting each of the examples based on how many of your previous ones have gotten it wrong or right in the past.
+1:18:17
+[NOISE] And so basically what you're doing is you can sort of weight each one of these classifiers.
+1:18:25
+You can determine [NOISE]
+1:18:32
+for classifier Gm,
+1:18:39
+a weight Alpha m, which is proportional to how many examples you got wrong or right.
+1:18:49
+So a better classifier, you wanna give it more weight, um, and, uh, a bad classifier you wanna give it less weight proportional.
+1:18:59
+And, uh, I think that the exact equation used in AdaBoost, for example,
+1:19:04
+is just log of 1 minus the error of your nth model divided with basically log odds, okay?
+1:19:14
+And then your total classifier is just F of- or let's just call it G of x again.
+1:19:19
+G of x is just the sum over m of Alpha m,
+1:19:28
+G of m, right? And then each G of m is trained
+1:19:34
+on a weighted- on a reweighted,
+1:19:47
+actually, reweighted training set.
+1:19:56
+And so I've glossed over a lot of the details here in interest of time, but the specifics of an algorithm like this are- will be in the lecture notes.
+1:20:05
+And this algorithm is actually known as AdaBoost. [NOISE] And basically through similar techniques,
+1:20:13
+you can derive algorithms such as XGBoost or gradient boosting machines that also allow you to
+1:20:20
+basically reweight the examples you're getting right or wrong in this sort of dynamic fashion and slowly adding them in this additive fashion to your composite model.
+1:20:29
+[NOISE] And that about finishes it for today. Uh, thanks for coming. Um, yeah, a great rest of your week.

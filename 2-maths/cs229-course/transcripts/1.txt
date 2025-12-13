@@ -1,0 +1,1327 @@
+Introduction
+0:03
+Welcome to CS229 Machine Learning. Uh, some of you know that this class has been taught at Stanford for a long time.
+0:09
+And this is often the course that, um, I most look forward to teaching each year because this is where we've helped I think,
+0:17
+several generations of Stanford students become experts in machine learning, go on to build many of their products and services and startups that I'm
+0:24
+sure many of you are pre- or all of you are using, uh, uh, today. Um, so what I want to do today was spend some time talking over, uh, logistics,
+0:35
+and then, uh, spend some time, you know, giving you a beginning of a intro, talk a little bit about machine learning.
+0:41
+So about 229. Um, you know,
+0:47
+all of you have been reading about AI in the news, uh, about machine learning in the news.
+0:52
+Um, and you probably heard me or others say, AI is the new electricity.
+0:58
+Uh, the emergence and rise of electricity about 100 years ago, it transformed every major industry. I think AI already we call machine learning for the rest of the world seems to call AI.
+1:07
+[NOISE] Um, machine learning and, and AI and deep learning will change the world.
+1:13
+And I hope that through 229, we'll give you the tools you need so that you can be many of
+1:19
+these future titans of industries that you can be one to go out and build, you know, help the large tech companies do the amazing things they do,
+1:27
+or build your own start-up, or go into some other industry. Go, go transform healthcare or go transform transportation or go build a self-driving car.
+1:34
+Um, and do all of these things that, um, after this class, I think you'll be able to do.
+1:40
+You know, um, the majority of students supplying- the,
+1:45
+the demand for AI skills- the demand for machine learning skills is so vast. I think you all know that. Um, and I think it's because machine learning has advanced
+1:53
+so rapidly in the last few years that there are so many opportunities, um, to apply the learning algorithms, right?
+2:00
+Both in industry as well as in academia. I think today, we have, um, the English department professors trying to
+2:06
+apply learning algorithms to understand history better. Uh, we have lawyers trying to apply machine learning into
+2:11
+process legal documents and off-campus, every company, both the tech companies as well as lots of
+2:17
+other companies that you wouldn't consider tech companies, everything from manufacturing companies, to healthcare companies,
+2:22
+to logistics companies are also trying to apply machine learning. So I think that, um, uh, uh,
+2:30
+if you look at it on a- on a factual basis, the number of people doing
+2:35
+very valuable machine learning projects today is much greater than it was six months ago. And six months ago is much greater than it was 12 months ago.
+2:42
+And the amount of value, the amount of exciting meaningful work being done in machine learning is, is, is very strongly going up.
+2:50
+Um, and I think that given the rise of, you know, the,
+2:56
+the amounts of data we have as well as the new machine learning tools that we have, um, it will be a long time before we run out of opportunities.
+3:04
+You know, before, before society as a whole has enough people with the machine learning skill set. Um, so just as maybe, I don't know,
+3:12
+20 years ago was a good time to start working on this Internet thing and all people that started working on the Internet like 20 years ago have fantastic careers.
+3:22
+I think today is a wonderful time to jump into machine learning, uh, and, and,
+3:27
+and the number of- and the opportunities for you to do unique things that no one has- no one else is doing, right?
+3:34
+The opportunity for you to go to a logistics company and find that exciting way to apply machine learning, uh,
+3:39
+will be very high because chances are that logistic company has no one else even working on this.
+3:46
+Because, you know, they probably can't- they, they may not be able to hire a fantastic Stanford student that's a graduate of CS229, right?
+3:52
+Because there just aren't a lot of CS229 graduates around. Um, so what I want to do today is,
+3:59
+um, do a quick intro talking about logistics. Um, and then uh, we'll,
+4:05
+we'll spend the second half of the day, you know, giving an overview and, and talk a little bit more about machine learning.
+4:10
+Okay? And uh- oh, and I apologize. I- I think that, uh, this room, according to that sign there, seats,
+4:16
+what, 300 and something students. Uh, I think- we have, uh, uh, like not quite 800 people enrolled in this class.
+4:24
+[LAUGHTER] Uh, so there are people outside, and, and all of the classes, uh, are recorded and broadcast in SCPD.
+4:31
+Uh, they usually- the videos are usually made available the same day. So for those who they can't get into the room, my apologies.
+4:38
+Um, the- there were some years, um, where even I had trouble getting into the room but I'm glad [LAUGHTER] they let me in.
+4:44
+But, but I'm- but, but hopefully, you can watch. You, you can watch all of these things online shortly. [inaudible].
+4:51
+Oh, I see. Yes. Yeah. [LAUGHTER] I don't know, it's a bit complicated. [LAUGHTER] Yeah. Thank you.
+4:57
+I think it's okay. Yeah. I- I- okay, yeah. Yeah. Maybe for the next few classes you can squeeze in and use the NTC.
+5:04
+So for now, it might be too complicated. Okay. So quick intros, um,
+5:10
+uh, I'm sorry, I should have introduced myself. My name is Andrew Ng. [LAUGHTER] Uh, uh, uh, and I wanted to introduce
+5:17
+some of the rest of the teaching team as well. There's a class coordinator.
+Teaching team introductions
+5:24
+Um, she has been playing this role for many years now and helps keep the trains run on time and make sure that everything in
+5:30
+class happens when it's supposed to. Uh, uh, so, so, so should be uh- and then, uh,
+5:36
+we're thrilled to have- Do you guys want to stand up? Uh, we have the co-head TAs,
+5:42
+uh, respectively are PhD students working with me. Uh, and so bringing a lot of, um, uh,
+5:50
+technical experience, uh, technical experience in machine learning as well as practical know-how on how to actually make these things work.
+5:57
+And with the large class that we have, we have a large TA team. Um, maybe I won't introduce all of the TAs here today
+6:04
+but you'll meet many of them throughout this course here. But the TAs expertise span everything from computer vision and natural language processing,
+6:10
+to computational biology, to robotics. And so, um, through this quarter, as you work on your class projects,
+6:17
+I hope that you get a lot of, uh, help and advice and mentoring from the TAs, uh, all of which- all of whom have deep expertise not just in
+6:24
+machine learning but often in a specific vertical application area, um, of machine learning.
+6:29
+So depending on what your projects, we tried to match you to a TA that can give you advice, um, eh,
+6:34
+the most relevant, uh, whatever project you end up working on. Um, so yeah, goal of this class,
+Goals for the course and the state of machine learning across research and industry
+6:42
+I hope that after the next 10 weeks, uh, you will be an expert in machine learning.
+6:48
+Um, it turns out that, uh, uh, you know, um,
+6:54
+and- and I hope that after this class, you'll be able to go out and build very meaningful machine learning applications,
+7:01
+uh, either in an academic setting where, uh, hopefully you can apply it to your problems in mechanical engineering,
+7:08
+electrical engineering, and, uh, English, and law and, um, uh, and- and- and education and all of this wonderful work that happens on campus,
+7:16
+uh, as well as after you graduate from Stanford to be able to apply it to whatever jobs you find. Um, one of the things I find very exciting about machine learning is that it's no
+7:25
+longer a sort of pure tech company only kind of thing, right? I think that many years ago,
+7:32
+um, machine learning, it was like a thing that, you know, the computer science department would do and that
+7:38
+the elite AI companies like Google and Facebook and Baidu and Microsoft would do. Uh, but now, it is so pervasive that even companies that are
+7:46
+not traditional because there are tech companies see a huge need to apply these tools, and I find a lot of the most exciting work, uh, these days.
+7:54
+Um, and, and, and maybe some of you guys know my history some would be biased, right? I- I led the Google Brain team which helped Google transform
+8:00
+from what was already a great company 10 years ago to today which is, you know, a great AI company. And then I also led the AI group at Baidu,
+8:08
+and, you know, led the company's technology strategy to help Baidu. Also, it transformed from what was already a great company
+8:14
+many years ago to today arguably China's greatest AI company. So having led the, you know,
+8:20
+built the teams that led the AI transformations of two large tech companies, I, I, I feel like that's a great thing to do.
+8:27
+Uh, but even beyond tech, I think that, um, there's a lot of exciting work to do as well to help other industries,
+8:33
+to help other sectors, uh, embrace machine learning and use these tools effectively. Um, but after this class,
+8:40
+I hope that each one of you will be well qualified to get a job at a shiny tech company and do machine learning there,
+8:46
+or go into one of these other industries and do very valuable machine learning projects there. Um, and in addition,
+8:54
+if any of you, um, are taking this class with the primary goal of, uh,
+8:59
+being able to do research, uh, in machine learning, so, so, actua- so some of you I know are PhD students.
+9:06
+Um, I hope that this class will also leave you well-equipped to, um, be able to read and understand research papers, uh,
+9:13
+as well as, uh, you know, be qualified to start pushing forward, um, the state of the art, right.
+9:20
+Um, so let's see. Um, so today, uh,
+9:29
+so, so just as machine learning is evolving rapidly, um, the whole teaching team,
+9:34
+we've been constantly updating CS229 as well. So, um, it's actually very interesting.
+9:39
+I feel like the pace of progress in machine learning has accelerated, so it, it actually feels like that,
+9:45
+uh, the amounts we changed the class year over year has been increasing over time.
+9:50
+So- so for your friends who took the class last year, you know, things are a little bit different this year because we're, we're constantly updating the class
+9:57
+to keep up with what feels like still accelerating progress in the whole field of machine learning. Um, so, so, so, so there are some logistical changes.
+10:06
+For example, uh, uh, we've gone from- uh, what we used to hand out paper copies of handouts,
+Prerequisites for the course
+10:11
+uh, that we're, we're trying to make this class digital only. Uh, but let me talk a little bit about, uh, prerequisites as well as in case your friends have taken this class before,
+10:19
+some of the differences for this year, right? Um, so prerequisites.
+10:24
+Um, we are going to assume that, um, all of you have a knowledge of basic computer skills and principles.
+10:33
+Uh, so, you know, Big O notation, queues, stacks, binary trees. Hopefully, you understand what all of those concepts are.
+10:39
+And, uh, assume that all of you have a basic familiarity with, um, uh, probability, right?
+10:45
+Hopefully, you know what's a random variable, what's the expected value of a random variable, what's the variance of a random variable.
+10:51
+Um, and if- for some of you, maybe especially the SCPD students taking this remotely,
+10:56
+it has been, you know, some number of years since you last had a probability and statistics class. Uh, we will have review sessions, uh,
+11:04
+on, on, on Fridays, uh, where we'll go over some of this prerequisite material as well. But it's okay. Hopefully, you know what a random variable is,
+11:10
+what expected value is. But if you're a little bit fuzzy on those concepts, we'll go over them again, um, at a- at a discussion section, uh, on Friday.
+11:19
+Also, seem to be familiar with basic linear algebra. So hopefully that you know what's a matrix, what's a vector, how to multiply two matrices and multiplying matrices and a vector.
+11:28
+Um, if you know what an eigenvector then that's even better. Uh, if you're not quite sure what an eigenvector is,
+11:34
+we'll go over it that- that you, you, you better- uh, yeah, we'll, we'll, we'll go over it I guess.
+11:40
+And then, um, a large part of this class, uh, uh, is,
+11:47
+um, having you practice these ideas through the homeworks, uh, as well as I mention later a, uh, open-ended project.
+Homework, and a note about the Stanford honor code
+11:55
+And so, um, one, uh, there are- we've actually, uh, until now we used to use uh MATLAB,
+12:02
+uh and Octave for the programming assignments, uh, but this year, we're trying to shift the programming assignments to, uh,
+12:08
+Python, um, and so, um, I think for a long time, uh, even today, you know,
+12:14
+I sometimes use Octave to prototype because the syntax in Octave is so nice and just run,
+12:19
+you know, very simple experiments very quickly. But I think the machine learning world, um, is,
+12:24
+you know, really migrating I think from a MATLAB Python world to increasing- excuse me,
+12:30
+MATLAB Octave world to increasingly a Python maybe and- and then eventually for production Java or C++, kind of world.
+12:38
+And so, uh, we're rewriting a lot of the assignments
+12:44
+for this class this school year. Having, having driving that process, uh, so that- so that this course, uh, you could do more of the assignments.
+12:50
+Uh, uh, maybe most- maybe all of the assignments in, um, Python, uh, NumPy instead.
+12:56
+Um, now, a note on the honor codes, um, we ask that, you know,
+13:01
+we, we actually encourage you to form study groups. Uh, so, so you know I've been um, fascinated by education, a long time.
+13:08
+I spent a long time studying education and pedagogy and how instructors like us can help support youth to learn more efficiently.
+13:15
+And one of the lessons I've learned from the educational research literature is that the highly technical classes like this,
+13:21
+if you form study groups, uh, you will probably have an easier time, right? So, so CS229, we go for the highly technical material.
+13:29
+There's a lot of math, some of the problems are hard and if you have a group of friends to study with, uh,
+13:34
+you probably have an easier time uh, uh, because you can now ask each other questions and work together and help each other.
+13:39
+Um, where we ask you to draw the line or what we ask you to, to, to do relative to Stanford's,
+13:46
+uh, Honor Code is, um, we ask that you do the homework problems by yourself, right?
+13:51
+Uh, and, and, and most specifically, um, it's okay to discuss the homework problems with friends, but if you, um,
+13:58
+but after discussing homework problems with friends, we ask you to go back and write out the solutions by yourself, uh,
+14:03
+without referring to notes that, you know, you and your friends had developed together, okay? Um, the class's honor code is written clearly
+14:11
+on the class handouts posted digitally on the website. So if you ever have any questions about what
+14:18
+is allowed collaboration and what isn't allowed, uh, please refer to that written document on the course website where we describe this more clearly, but,
+14:25
+um, out of respect for the Stanford honor code as well as for, uh, uh, you know,
+14:30
+for, for, for students kind of doing their own work, we asked you to basically do your own work, uh, for the- it's okay to discuss it,
+14:38
+but after discussing homework problems with friends, ultimately, we ask you to write up your problems by yourself so that
+14:43
+the homework submissions reflect your own work, right? Um, and I care about this because it turns out that having CS 229,
+14:52
+you know, CS 229 is one of those classes that employers recognize. Uh- uh, I don't know if you guys know,
+14:57
+but there have been, um, companies that have put up job ads that say stuff like,
+15:02
+"So long as you've got- so long as you completed CS 229 we guarantee you get an interview," right?
+15:08
+[LAUGHTER] I've- I've seen stuff like that. And so I think you know in order to, to maintain that sanctity of what it means to be a CS 229 completer,
+15:16
+I think, um, and I'll ask all of you so that- really do your homework. Um, or stay within the bounds of acceptable,
+15:22
+acceptable collaboration relative to the honor code. Um, let's see.
+15:29
+And I think that um, uh, if- uh, you know what?
+15:34
+This is, um, [NOISE] yeah. And I think that, uh, one of the best parts of CS 229,
+15:41
+it turns out is, um, excuse me. So I'm trying, sorry, I'm going to try looking for my mouse cursor.
+16:06
+Uh, all right. Sorry about that.
+16:11
+My- my- my displays are not mirrored. So this is a little bit awkward.
+16:21
+Um, so one of the best parts of the class is- oh,
+16:29
+shoot. Sorry about that. [LAUGHTER] All right, never mind. I won't do this.
+16:36
+Um, you could do, you could do it yourself online later. Um, yeah, I started
+16:43
+using- I started using Firefox recently in addition to Chrome here. It's a mix up.
+16:49
+Um, one of the best parts of, um, the class is, um, the class project.
+Overview of the class project
+16:57
+Um, and so, you know, one of the goals of the class is to leave you well-qualified to do a meaningful machine learning project.
+17:03
+And so, uh, one of the best ways to make sure you have that skill set is through this class and hopefully with the help of some of our TAs.
+17:12
+Uh, we wanna support you to work on a small group to complete a meaningful machine learning project.
+17:19
+Um, and so one thing I hope you start doing, you know, later today, uh, is to start brainstorming maybe with your friends.
+17:26
+Um, some of the- some of the class projects you might work on. Uh, and the most common class project that, you know,
+17:33
+people do in CS 229 is to pick an area or pick an application that excites you and
+17:39
+to apply machine learning to it and see if you can build a good machine learning system for some application area.
+17:45
+And so, um, if you go to the course website, you know, cs229.stanford.edu and look at previous year's projects,
+17:51
+you ha- you, you see machine learning projects applied to pretty much, you know, pretty much every imaginable application under the sun.
+17:58
+Everything from I don't know, diagnosing cancer to creating art to, uh, lots of, um, uh, projects applied to other areas of engineering, uh,
+18:07
+applying to application areas in EE, or Mechanical engineering, or Civil engineering, or Earthquake engineering, and so on, uh,
+18:13
+to applying it to understand literature, to applying it to um, uh, I don't know.
+18:18
+And, and, and, and, and so, uh, if you look at the previous year's projects of many of which are posted on the course website.
+18:24
+You could use that as inspiration to see the types of projects students complete, completing this class are able to do and also encourage you to, um, uh,
+18:33
+you can look at that for inspiration to get a sense of what you'll be able to do at the end- conclusion of this class and also see if looking at
+18:41
+previous year's projects gives you inspiration for what, um, you might do yourself.
+18:47
+Uh, so we asked you to- we, we invite you I guess to do class projects in small groups and so, um,
+18:54
+after class today, also encourage you to start making friends in the class both for the purpose of forming
+18:59
+study groups as well as with the purpose of maybe finding a small group to do a class project with.
+19:04
+Um, uh, we asked you to form project groups of, um, up to size three.
+19:09
+Uh, uh, most project groups end up being size two or three. Um, if you insist on doing it by yourself,
+19:15
+right without any partners that's actually okay too. You're welcome to do that. But, uh, but- but I think often, you know,
+19:21
+having one or two others to work with may give you an easier time. And for projects of exceptional scope,
+19:27
+if you have a very very large project, that just cannot be done by three people. Um, uh, sometimes, you know,
+19:32
+let us know and we're open to- with, with to some project groups of size four,
+19:38
+but our expectation- but we do hold projects, you know, with a group of four to a higher standard than projects with size one to three, okay.
+19:46
+So- so what that means is that if your project team size is one, two or three persons, the grading is one criteria.
+19:53
+If your project group is bigger than three persons, we use a stricter criteria when it comes to grading class projects.
+20:00
+Okay. Um, and that, that reminds me um, uh, I know that uh- let's see.
+20:06
+So for most of you since this- since this started 9:30 AM on the first day of the quarter, uh, for many of you,
+20:12
+this may be- this may be your very first class at Stanford. How many of you, this is your very first class at Stanford?
+20:18
+Wow. Cool. Okay. Awesome. Great. Welcome to Stanford. [LAUGHTER] Uh, and if someone next to
+20:24
+you just raise their hand- uh actually, rai- raise your hand again. So I hope that, you know, maybe after class today, if someone next to you raised a hand, uh,
+20:31
+help welcome them to Stanford, and then, say hi and introduce yourself and make friends on the way. Yeah. Cool. Nice, nice to see so many of you here.
+20:38
+Um. [NOISE]
+20:44
+All right. So um, just a bit more on logistics, uh-
+20:52
+So, um, let's see, in addition to the main lectures that we'll have here,
+21:00
+uh, on Mondays and Wednesdays, um, CS229 also has discussion sections, uh,
+21:06
+on- held on Fridays that are- and everything we do including the- all the, all the lectures and discussion sections are recorded and broadcast through SCPD,
+21:15
+uh, through the online websites. Um, and one of- and, uh, discussion sections are taught,
+21:22
+uh, usually by the TAs on Fridays and attendance at discussion sections is optional.
+21:28
+Uh, and what I mean is that, um, you- you know, you- 100% promise, there won't be material on the midterm that will sneak in from this kind of section.
+21:36
+So it's 100% optional. Uh, and you will be able to do all the homework and the projects without attending the discussion section.
+21:43
+But what we'll use the discussion section for, uh, for the first three discussion sections. So, you know, this week, next week, uh, the week after that,
+21:49
+we'll use the discussion sections to go over prerequisite material in greater depth. So, uh, go over, uh,
+21:55
+linear algebra, basic probability statistics, teach a little bit about Python NumPy in case you're less familiar with those frameworks.
+22:03
+Uh, so we'll do that for the first few weeks. And then for the discussion sections that are held later this quarter,
+22:08
+we'll usually use them to go over more advanced optional material. Uh, for example, um,
+22:14
+CS229, most of the learning algorithms, you- you hear about in a class rely on convex optimization algorithms,
+22:21
+but we want to focus the class on the learning algorithms and spend less time on convex optimization.
+22:27
+So you want to come and hear about more advanced concepts in convex optimization. We'll defer that to the discussion section.
+22:34
+Uh, and then, there, there are few other advanced topics, uh, Hidden Markov Models, time series,
+22:39
+uh, that we're planning to defer to the, um, Friday discussion sections.
+22:45
+Okay. Um, so, uh, let's see.
+22:51
+Um, cool, and, uh, and, um, a final bit of logistics, um, uh,
+22:59
+for- there are digital tools that some of you have seen, but, um, for this class, we'll drive a lot of the discussion through the,
+23:07
+uh, online website Piazza. How- how many of you have used Piazza before? Okay, cool, mostly. Wow, all of you?
+23:13
+That's very amazing. Uh, good. So, so, uh, online discussion board
+23:18
+for those of you that haven't seen it before, but, um, I definitely encourage you to participate actively
+23:24
+on Piazza and also to answer other student's questions. I think that one of the best ways to learn as well as contribute, you know,
+23:32
+back to the class as a whole is if you see someone else ask a question on Piazza, if you jump in and help answer that, uh,
+23:38
+that, that often helps you and helps your classmates. I strongly encourage you to do that.
+23:44
+For those of you that have a private question, you know, sometimes we have students, um, uh,
+23:49
+reaching out to us to- with a personal matter or something that, you know,
+23:55
+is not appropriate to share in a public forum in which case you're welcome to email us at the class email address as well.
+24:01
+Uh, and we answer in, in the class email address- the cla- teaching staff's email address on the course website, you can find it there and contact us.
+24:08
+But for anything technical, anything reasonable to share with the class, uh, which includes most technical questions and most logistical questions, right?
+24:16
+Questions like, you know, can you confirm what date is midterm, or, or, you know, what happens? Uh, can you confirm when is the handout for this going out and so on?
+24:25
+For questions that are not personal or private in nature, I strongly encourage you to post on Piazza rather than emailing us because statistically,
+24:33
+you actually get a faster answer, uh, posting it on- post- posting on Piazza than- than, you know,
+24:38
+if you wait for one of us to respond to you, um, and we'll be using Gradescope as well, um, to- for, for online grading.
+24:45
+And then, if, if you don't know what Gradescope is, don't worry about it. We'll, we'll, we'll send you links and show you how to use it later.
+24:53
+Um, oh, and, uh, again, relative to- one last logistical thing to plan for, um,
+25:00
+unlike previous, um, uh, years where we taught CS229,
+25:06
+uh, so we're constantly updating the syllabus, right? The technical content to try to show you the latest machine learning algorithms, uh,
+25:12
+and the two big logistical changes we're making this year, I guess one is, uh,
+25:17
+Python instead of MATLAB, and the other one is, um, instead of having a midterm exam, you know,
+25:25
+there's a timed midterm, uh, we're planning to have a take-home midterm, uh, this course, instead.
+25:31
+So I, I know some people just breathed in sharply when I said that. [LAUGHTER] I don't know what that means.
+25:37
+[LAUGHTER] Was that shock or happiness? I don't know. Okay. Don't worry, midterms are fun. You- you'll, you'll love it.
+25:43
+[LAUGHTER] All right. So that's it for the- that's it for the logistical aspects.
+25:54
+Um, let me check with the- so let- let me check if there are any questions.
+Questions
+26:02
+Oh, yeah, go ahead. On campus, are those courses offered every quarter [inaudible].
+26:15
+Yeah. So that's interesting. Uh, let's see. I think it's offered in spring.
+26:20
+And one other person. Oh, yes, is teaching it. So someone else is teaching it in spring quarter.
+26:27
+Um, uh, I actually did not know it was gonna be offered in winter.
+26:34
+[inaudible] Yeah. [inaudible]. Yeah, right, yeah. So- so I think a free guide and teaching it in- sorry,
+26:47
+in their [inaudible] and you are right, are teaching it in, uh, spring, uh, and I don't think it is offered in winter.
+26:53
+[inaudible].
+26:58
+Will the session be recorded? Yes, they will be. Oh, and by the way, if, if, if you wonder why I'm recording that I'm repeating the question,
+27:05
+I know it feels weird, I'm recording with a microphone, so that- so that people watching this at home can hear the question. But, uh, both the lectures and the discussion sections,
+27:13
+uh, will be- will be recorded and put on the website. Uh, maybe the one thing we do that's not
+27:19
+recorded and broadcast are the office hours. Great. Isn't that right? [LAUGHTER] Oh, oh, but,
+27:24
+uh, I think, uh, this year, uh, we have a 60-hour, how many hour? Well, 60 office hours.
+27:30
+Uh, 60 office hours per week. Right, yeah. [LAUGHTER] So- so- so hopefully, I- I just again,
+27:36
+we- we're constantly trying to improve the course. In previous years, one of the feedback we got was that the office hours were really crowded.
+27:42
+So- so we have 60 hour- 60 hours, about 60 office hour slots per week this year. That- that seems like a lot.
+27:48
+So hopefully, if you need to track down one of us, track down a TA to get help, hopefully, that- that'll make it easier for you to do so. Go ahead.
+27:54
+[inaudible]. Say that again. Well-
+28:01
+[inaudible]. Oh, well logistical things like when homeworks are due, would be covered in lectures.
+28:09
+Uh, we have uh, yes, so we have uh, four planned homeworks. Oh sorry. [inaudible]
+28:16
+Yeah, and if you go to the- if you go to the course website and you click on the syllabus link uh, that has a calendar with when each homework assignments go out and when they'll be due.
+28:25
+Uh, so four homeworks and uh, project proposals due a few weeks from now and uh,
+28:31
+final projects due at the end of the quarter. But all the, all the exact days are listed on the course website I think.
+28:37
+[inaudible] Uh, sure yes, difference between this class and 229a.
+28:46
+Um, let me think how to answer that. Yes. Uh, so yeah I know,
+28:51
+I was debating earlier this morning how to answer that because I've been asked that a few times. Um, so I think that what has happened at Stanford is that
+29:00
+the volume of demand for machine learning education is just, right skyrocketing because anything everyone sees,
+29:07
+everyone wants to learn this stuff and so um, uh, so within- so
+29:12
+the computer science department has been trying to grow the number of machine learning offerings we have. Um, uh, we actually kept the enrollments to
+29:20
+CS229a at a relatively low number at 100 students. So I actually don't want to encourage too many of you to sign up because uh,
+29:28
+I think we might be hitting the enrollment cap already so, so please don't all sign up for CS229a because um,
+29:35
+we- CS229a, does not have the capacity this quarter but since CS229a is uh, um,
+29:41
+much less mathematical and much more applied, uh, uh, a relatively more applied version of machine learning and uh,
+29:51
+so I, I guess I'm teaching CS229a and CS230 and CS229, this quarter. Of the three, CS229,
+29:57
+is the most mathematical. Um, it is a little bit less applied than CS229a which is more applied machine learning and CS230 which is deep learning.
+30:06
+My advice to students is that um, CS229, uh, CS229a, excuse me, let me write this down.
+30:13
+I think I'm- so CS229a, uh,
+30:23
+is taught in a flipped classroom format which means that, uh, since taking it, we'll mainly watch videos um,
+30:30
+on the Coursera website and do a lot of uh, programming exercises and then, meet for weekly discussion sections.
+30:37
+Uh, but there's a smaller class with [inaudible] . Um, I, I would advise you that um,
+30:43
+if you feel ready for CS229 and CS230 to do those uh, but CS229,
+30:50
+you know, because of the math we do, this is a, this is a very heavy workload and pretty challenging class and so,
+30:58
+if you're not sure you're ready for CS229 and CS229a, it may be a good thing to,
+31:04
+to, to take first, uh, and then uh, CS229, CS229a
+31:10
+cover a broader range of machine learning algorithms uh, and CS230 is more focused on deep learning algorithms specifically, right.
+31:19
+Which is a much narrow set of algorithms but it is, you know, one of the hardest areas of deep learning.
+31:24
+Uh, there is not that much overlap in content between the three classes. So if you actually take all three,
+31:30
+you'll learn relatively different things from all of them uh, in the past, we've had students simultaneously take 229 and 229a and there is a little bit of overlap.
+31:39
+You know, they, they do kind of cover related algorithms but from different points of view. So, so some people actually take multiple of these courses at the same time.
+31:47
+Uh, but 229a is more applied, a bit more, you know practical know-how hands-on and so on and,
+31:54
+and uh, much less mathematical. Uh, and, and CS230 is also less
+32:00
+mathematical more applied more about kind of getting it to work where CS229a, um, we do much more mathematical derivations in CS229.
+32:10
+Cool, any questions? Yes, someone had their hand up.
+32:16
+[inaudible]
+32:23
+So uh, once you say that what- I would generally prefer students not do that in the interest of time but what, what do you want?
+32:33
+[inaudible] Oh, I see, sure go for it.
+32:39
+Who is enrolled in 229 and 230? Oh not that many of you, interesting.
+32:44
+Oh, that's actually interesting. Cool. Yeah. Thank you, yeah, I just didn't want to set the presence of students using this as a forum to run surveys.
+32:52
+[LAUGHTER] That was, that was, that was, that that was an interesting question. So thank you. [LAUGHTER]
+32:58
+Um, cool. All right, and, and by the way I think uh, you know,
+33:04
+just one thing about Stanford is the AI world and machine learning world, AI is bigger than machine learning right
+33:10
+and machine learning is bigger than deep learning. Um, one of the great things about being a Stanford student is,
+33:15
+you can and I think should take multiple classes, right. I think that your CS229,
+33:21
+has for many years been the core of the machine learning world at Stanford. Uh, but even beyond CS229,
+33:28
+it's worth your while to take multiple classes and getting multiple perspectives. So, so if you want to uh,
+33:34
+be really effective, you know, after you graduate from Stanford, you do wanna be an expert in machine learning. You do wanna be an expert in deep learning.
+33:41
+Uh, and you probably wanna know probability statistics. Maybe you wanna know a bit of convex optimization, and maybe you
+33:46
+wanna know a bit more about reinforcement learning, know a ittle bit about planning, know a bit about lots of things.
+33:51
+So, so I actually encourage you to take multiple classes I guess.
+33:58
+Cool. All right. Good. Um, if there are no more questions,
+34:04
+let's go on to talk a bit about some machine learning.
+34:11
+So um, all right, so the remainder of this class,
+34:17
+what I'd like to do is um, give a quick overview of uh,
+34:23
+you know, the major uh, areas of machine learning and also um,
+34:30
+and, and also give you a sort of overview of the things you learn uh, in the next 10 weeks.
+34:35
+So, you know, what is machine learning? Right. It seems to be everywhere these days and it's useful for so many spaces,
+34:42
+and, and I think that um, and uh, you know, and uh, uh,
+34:47
+and I, I feel like they uh- just to share with you my personal bias, right. You, you read the news about these people who are making
+34:54
+so much money building learning algorithms. I think that's great. I hope, I hope all of you go make a lot of money
+35:00
+but the thing I find even more exciting is, is the meaningful work we could do. I think that, you know,
+35:05
+I think that every time there's a major technological disruption which there is now, through machine learning um,
+35:11
+it gives us an opportunity to remake large parts of the world and if we behave ethically in a principled way and use the superpowers of machine learning to do things that,
+35:20
+you know, helps people's lives, right. Maybe we could um, uh, maybe you can improve the healthcare system,
+35:26
+maybe you can improve give every child a personalized tutor. Uh, maybe we can make our democracy run better rather than make it run worse.
+35:34
+But I think that um, the meaning I find in machine learning is that there's so many people that
+35:40
+are so eager for us to go in and help them with these tools that um, if, if you become good at these tools,
+35:47
+it gives you an opportunity to really remake some piece, some meaningful piece of the world.
+35:52
+Uh, hopefully in a way that helps other people and makes the world kind of, makes the world a better place is very cliche in Silicon Valley.
+35:59
+But, but I think, you know, with these tools, you actually have the power to do that and if you go make a ton of money, that's great too.
+36:05
+But I find uh, much greater meaning of the work we could do. Um, it gives us a unique opportunity to do these things, right.
+36:13
+But um, despite all the excitement of machine learning. What is machine learning? So let me give you a couple um,
+36:19
+definitions of machine learning. Um, Arthur Samuel whose claim to fame was uh,
+36:25
+building a checkers playing program, uh, defined it as follows. So field of study gives computers the ability to learn without being explicitly programmed.
+36:32
+Um, and you know interesting- when, when Arthur Samuel many,
+36:37
+many decades ago, built the checkers playing program. Uh, the debates of the day was can a computer ever do something
+36:46
+that it wasn't explicitly told to do? And Arthur Samuel uh, wrote a
+36:51
+checkers playing program, that through self play learns whether the patterns of uh,
+36:58
+the checkerboard that are more likely to lead to win versus more likely to lead to a loss and learned uh,
+37:03
+to be even better than Arthur Samuel the author himself at playing checkers.
+37:09
+So back then, this was viewed as a remarkable result that a computer programmer, you know that could write a piece of
+37:15
+software to do something that the computer program himself could not do, right, because this program became better than Arthur Samuel um,
+37:22
+at, uh, uh, at, at, at the task of playing checkers.
+37:28
+Um, and I think today we um, are used to computers or machine learning algorithms outperforming humans on so many tasks.
+37:37
+Uh, but it turns out that when you choose a narrow task like, speech recognition on a certain type of task,
+37:43
+you can maybe surpass human level performance. If you choose a narrow task like, playing the game of Go,
+37:48
+than by throwing really, tons of computational power at it and self play. Uh, uh, uh you can have a computer,
+37:55
+you know become very good at, at these narrow tasks. But this is maybe one of the first such examples in the history of computing. Um.
+38:06
+Uh, and I think this is the one of the most widely cited, um, definitions right.
+38:12
+Gives computers the ability learn without being explicitly programmed. Um, my friend Tom Mitchell in his textbook,
+38:19
+defined this as a Well-posed Learning Problem. Uh, a program is said to learn from
+38:25
+experience E with respect to task T and some performance measure P, if its performance on T, as measured by P, improves with experience E. And I- I asked Tom this.
+38:33
+I asked Tom if, um, he wrote this definition just because he wanted it to rhyme and [LAUGHTER] he, he, he, he, he did not say yes,
+38:41
+but I, I, I don't know. Um, but in this definition, the experienced E. For- for the case of playing checkers,
+38:49
+the experience E would be the experience of having a checkers play- program played tons of games against itself.
+38:54
+Uh, so computers lots of patients and sit there for days playing games or checkers against itself.
+39:00
+So that's experience E. The task T is the task of playing checkers, the performance measure P maybe,
+39:05
+um, what's the chance of this program winning the next game of checkers it plays against the next opponent.
+39:11
+Right. So- so we say that, ah, this is a well-posed learning problem, learning the game of checkers.
+39:16
+Now, within this, um, set of ideas with machine learning, there are many different tools we use in machine learning.
+39:25
+And so in the next 10 weeks, you'll learn about a variety of these different tools.
+39:31
+Um, and so the first of them and the most widely used one is supervised learning.
+39:36
+Um, let's see. I wanna switch to the white board. Do you guys know how to raise the screen?
+39:43
+[NOISE]
+40:00
+So what I wanna do today is really go over some of the major categories of, uh, Machine Learning Tools, and, uh,
+40:06
+and so what you learn in the next, um, ah, by the end of this quarter.
+40:12
+So the most widely used machine learning tool is,
+40:21
+uh, today is supervised learning. Actually, let me check, how, how many of you know what supervised learning is? Ah, like two-thirds, half of you maybe.
+40:29
+Okay cool. Let me, let me just briefly define it. Um, here's one example. Let's say, you have a database of
+40:37
+housing prices and so I'm gonna plot your dataset where on the horizontal axis, I'm- I'm gonna plot the size of the house in square feet.
+40:47
+And on the vertical axis, we'll plot the price of the house. Right. And, um, maybe your dataset looks like that.
+40:58
+Um, and so horizontal axis, I guess we'd call this X and vertical axis we'll call that Y.
+41:05
+So, um, the supervised learning problem is given a dataset like this to find the relationship mapping from X to Y.
+41:13
+And so, um, for example, let's say- let's say- let's say you have- let's say you're fortunate enough to own a house in Palo Alto.
+41:21
+Right. Ah, and you're trying to sell it, and you want to know how the price of the house. So maybe your house has a size,
+41:28
+you know, of that amount on the horizontal axis. I don't know, maybe this is 500 square feet,
+41:34
+1,000 square feet, 1,500 square feet. So your house is, ah, 1,250 square feet.
+41:40
+Right. And you want to know, you know, how do you price this house. So given this dataset,
+41:45
+one thing you can do is, um, fit a straight line to it. Right. And then you could estimate or predicts the price
+41:54
+to be whatever value you read off on the, um, vertical axis. So in supervised learning,
+42:00
+you are given a dataset with, ah, inputs X and labels Y,
+42:07
+and your goal is to learn a mapping from X to Y.
+42:12
+Right. Now, um, fitting a straight line to data is maybe the simplest possible.
+42:18
+Maybe the simplest possible learning algorithm, maybe one of the simplest poss- learning algorithms.
+42:23
+Um, given a dataset like this, there are many possible ways to learn a mapping, to learn the function mapping from the input size to the estimated price.
+42:32
+And so, um, maybe you wanna fit a quadratic function instead, maybe that actually fits the data a little bit better.
+42:38
+And so how do you choose among different models will be, ah, either automatically or manual intervention will be-
+42:43
+will be something we'll spend a lot time talking about. Now to give a little bit more.
+42:49
+Um, to define a few more things. This example is a problem called a regression problem.
+42:57
+And the term regression refers to that the value y you're trying to predict is continuous.
+43:04
+Right. Um, in contrast, here's a- here's a different type of problem.
+43:10
+Um, so problem that some of my friends were working on, and- and I'll simplify it was- was a healthcare problem, where, ah,
+43:16
+they were looking at, uh, breast cancer or breast tumors, um, and trying to decide if a tumor is benign or malignant.
+43:25
+Right. So a tumor is a lump in a- in a woman's breast, um, is- can be ma- malign,
+43:32
+or cancerous, um, or benign, meaning you know, roughly it's not that harmful. And so if on the horizontal axis,
+43:40
+you plot the size of a tumor. Um, and on the vertical axis,
+43:46
+you plot is it malignant or not. Malignant means harmful, right.
+43:52
+Um, and some tumors are harmful some are not. And so whether it is malignant or not,
+43:58
+takes only two values, 1 or 0.
+44:03
+And so you may have a dataset, um, like that.
+44:14
+Right. Ah, and given this, can you learn a mapping from X to Y,
+44:19
+so that if a new patient walks into your office, uh, walks in the doctor's office and the tumor size is,
+44:25
+you know say, this, can the learning algorithm figure out from this data that it was probably,
+44:31
+well, based on this dataset, looks like there's- there's a high chance that that tumor is, um, malignant.
+44:37
+Um, so, ah, so this is an example of
+44:43
+a classification problem and
+44:49
+the term classification refers to that Y here takes on a discrete number of variables.
+44:55
+So for a regression problem, Y is a real number. I guess technically prices can be rounded off to the nearest dollar and cents,
+45:02
+so prices aren't really real numbers. Um, you know that- because you'd probably not price it,
+45:07
+how's it like Pi times 1 million or whatever. Ah, but, so, so- but for all practical purposes prices are continuous
+45:14
+so we call them housing price prediction to be a regression problem, whereas if you have, ah, two values of possible output,
+45:20
+0 and 1, call it a classification problem. Um, if you have K discrete outputs so,
+45:25
+uh, if the tumor can be, uh, malignant or if there are five types of cancer, right,
+45:31
+so you have one of five possible outputs, then that's also a classification problem. If the output is discrete.
+45:37
+Now, um, I wanna find a different way to visualize this dataset which is,
+45:44
+um, let me draw a line on top. And I'm just going to, you know, map all this data on the horizontal axis upward onto a line.
+45:53
+But let me show you what I'm gonna do. I'm going to use a symbol O to denote.
+46:06
+Right. Um, I hope what I did was clear. So I took the two sets of examples,
+46:12
+uh, the positive and negative examples. Positive example was this 1, negative example was 0. And I took all of these examples and- and kinda pushed them up onto a straight line,
+46:22
+and I use two symbols, I use O's to denote negative examples and I use crosses to denote positive examples.
+46:29
+Okay. So this is just a different way of visualizing the same data, um,
+46:35
+by drawing it on the line and using, you know, two symbols to denote the two discrete values 0 and 1, right?
+46:42
+So, um, it turns out that, uh, uh, in both of these examples,
+46:47
+the input X was one-dimensional, it was a single real number. For most of the, um,
+46:53
+machine learning applications you work with, the input X will be multi-dimensional. You won't be given just one number and asked to predict another number.
+47:01
+Instead, you'll often be given, uh, multiple features and multiple numbers to predict another number.
+47:07
+So for example, instead of just using a tumor size to predict- to estimate malignancy- malignant versus benign tumors, um,
+47:16
+you may instead have two features where one is tumor size and the second is age of the patient,
+47:26
+and be given a dataset, [NOISE]
+47:43
+right? And be given a dataset that looks like that, right?
+47:48
+Where now your task is, um, given two input features, so X is tumor size and age,
+47:55
+you know, like a two-dimensional vector, um, and your task is given, uh, these two input features,
+48:02
+um, to predict whether a given tumor is malignant or benign. So if a new patient walks in a doctor's office
+48:08
+and that the tumor size is here and the age is here, so that point there,
+48:13
+then hopefully you can conclude that, you know, this patient's tumor is probably benign, right? Corresponding the O, that negative example.
+48:20
+Um, and so what thing- one thing you'll learn, uh, next week is a learning algorithm that can fit a straight line to the data as follows,
+48:30
+kinda like that, to separate out the positive and negative examples. Separate out the O's and the crosses.
+48:35
+And so next week, you'll learn about the logistic regression algorithm which, um, which can do that.
+48:41
+Okay? So, um, one of the most interesting things you'll learn about is, uh, let's see.
+48:49
+So in this example, I drew a dataset with two input features, um,
+48:54
+when- so I have friends that actually worked on the breast cancer, uh, prediction problem,
+48:59
+and in practice you usually have a lot more than one or two features, and usually you have so many features you can't plot them on the board, right?
+49:06
+And so for an actual breast cancer prediction problem, my friends are working on this were- were using many other features such as,
+49:13
+don't worry about what these me- mean, I guess clump thickness, uh, you know, uniformity of cell size,
+49:24
+uniformity of cell shape, right? Um, uh, adhesion, how well the cells stick together.
+49:33
+Don't worry about what this means but, uh, if you are actually doing this in a- in a actual medical application,
+49:39
+there's a good chance that you'll be using a lot more features than just two. Uh, and this means that you actually can't plot this data,
+49:45
+right? It's two high-dimensional. You can't plot things higher than 3-dimensional or maybe 4-dimensional, or something like that and so when we have lots of
+49:51
+features it's actually difficult to plot this data. I'll come back to this in a second in learning theory.
+49:56
+Um, and, uh, one of the things you'll learn about- so as we develop learning algorithms,
+50:03
+you'll learn how to build, um, regression algorithms or classification algorithms that can deal with these relatively large number of features.
+50:11
+One of the, uh, most fascinating results you learn is that, um, [NOISE] you'll also learn about an algorithm called the Support Vector Machine which uses
+50:20
+not one or two or three or 10 or 100 or a million input features,
+50:26
+but uses an infinite number of input features, right? And so, so, so just to be clear, if in
+50:32
+this example the state of a patient were represents as one number, you know, tumor size, uh,
+50:38
+in this example we had two features. So the state of a patient were represented using two numbers, the tumor size and the age.
+50:44
+If you use this list of features maybe a patient that's represented with five or six numbers. Uh, but there's an algorithm called the support vector machine that
+50:51
+allows you to use an infinite-dimensional vector,
+50:57
+um, to represent a patient. And, um, how do you deal with that
+51:04
+and how can the computer even store an infinite-dimensional vector, right? I mean, you know, computer memory,
+51:09
+you can store one row number, two row numbers, but you can't store an infinite number of row numbers in a computer without running out of memory or processor speed or whatever.
+51:17
+So so how do you do that? Uh, so when we talk about support vector machines and specifically the technical method called kernels,
+51:25
+you'll learn how to build learning algorithms that work with, uh, so that the infinitely long lists of features,
+51:31
+infinitely long list of feature of- for for- which which- and you can imagine that if you have an infinitely long list of numbers to represent a patient,
+51:39
+that might give you a lot of information about that patient and so that is one of the relatively effective learning algorithms to solve problems, okay?
+51:49
+Um, so that's supervised learning. And, you know, let me just,
+51:55
+um, uh, play a video, um, show you a fun- slightly older example
+52:02
+of supervised learning to give you a sense of what this means. [NOISE] But at the heart of supervised learning is the idea that during training, uh,
+52:12
+you are given inputs X together with the labels Y and you give it both at the same time,
+52:17
+and the job of your learning algorithm is to, uh, find a mapping so that given a new X,
+52:24
+you can map it to the most appropriate output Y. Um, so this is a very old video, uh, made by, um,
+52:31
+DA Pomerleau and we've known him for a long time as well, uh, using supervised learning for autonomous driving. Uh, this is not state of the art for autonomous driving anymore,
+52:39
+but it actually does remarkably well. Oh, and, uh, um, as you, uh, you hear a few technical terms like back-propagation,
+52:46
+you'll learn all those techniques in this class, uh, and by the end of class, you'll either build a learning algorithm much more effective than what you see here.
+52:53
+But let's- let's- let's see this application.
+52:58
+Uh, could you turn up the volume maybe have that? Are you guys getting volume audio?
+53:04
+[BACKGROUND] Oh, I see.
+53:12
+All right, I'll narrate this. [LAUGHTER] So I'll be using artificial neural network to drive this vehicle that,
+53:20
+uh, was built at Carnegie Mellon University, uh, many years ago. And what happens is, uh,
+53:26
+during training, it watches the human, um, drive the vehicle and I think 10 times per second,
+53:32
+uh, it digitizes the image in front of the vehicle. And, um, so that's a picture taken by a front-facing camera.
+53:41
+Um, and what it does is in order to collect labeled data, the car while the human is driving it,
+53:47
+records both the image such as it's seeing here, as well as, the steering direction that was chosen by human.
+53:55
+So at the bottom here is the image turned to grayscale and lower res, and, uh, on top,
+54:01
+let me pause this for a second. Um, this is the driver direction,
+54:07
+the font's kinda blurry but this text says driver direction. So this is the Y label,
+54:12
+the label Y that the human driver chose. Um, and so the position of this white bar of
+54:18
+this white blob shows how the human is choosing to steer the car. So in this, in this image,
+54:24
+the white blob is a little bit to the left of center so the human is, you know, steering just a little bit to the left.
+54:29
+Um, this second line here is the output of the neural network and initially,
+54:36
+the neural network doesn't know how to drive, and so it's just outputting this white smear everywhere and it's saying,
+54:42
+"No, I don't know, do I drive left, right, center? I don't know." So it's outputting this gray blur everywhere.
+54:47
+Um, and as the algorithm learns using the back-propagation learning algorithm
+54:53
+or gradient descents which you'll learn about, uh, you'll actually learn about gradient descent this Wednesday. Um, you see that
+54:59
+the neural network's outputs becomes less and less of this white smear, this white blur but starts to, uh,
+55:05
+become sharper, um, and starts to mimic more accurately the human selected driving direction.
+55:16
+Right. So this, um, is an example of supervised learning because
+55:22
+the human driver demonstrates inputs X and outputs Y, uh, meaning, uh, if you see this in front of the car steer like that so that's X and Y.
+55:31
+And, uh, after the learning algorithm has learned, um, you can then,
+55:37
+uh, well, he pushes a button, takes the hands off the steering wheel, um, [NOISE] and then it's using this neural network to drive itself, right?
+55:47
+Digitizing the image in front of the road, taking this image and passing it through the learning algorithm,
+55:53
+through the trained neural network, letting the neural networks select a steering direction, uh, and then using a little motor to turn the wheel.
+56:03
+Um, this is slightly more advanced version which has trained two separate models; one for, I think, a two-lane road,
+56:09
+one for a four-lane road. Uh, so that's the, um, uh, so the second and third lines this is for a two-lane road,
+56:17
+this is a four-lane road. And the arbitrator is, is another algorithm that tries to decide whether
+56:24
+the two-lane or the four-lane road model is the more, more appropriate one for a particular given situation.
+56:29
+Um, and so as Alvin is, excuse me a one-lane road or,
+56:34
+uh, a two-lane road. So, so, so it's driving from a one-lane road here, uh, to another intersection,
+56:51
+um, the, uh the the algorithm realizes it should swi- switch over from,
+56:56
+um, I think I forget, I think the one-lane neural network to the- to the two-lane neural network [NOISE] one of these, right?
+57:04
+All right. Um.
+57:17
+Okay. Oh, oh, right. Fine. We'll just see the final dramatic moment of switching from a one-way road to a two-lane road.
+57:24
+[LAUGHTER]
+57:37
+All right. Um, uh, and I think, you know, so this is just using supervised learning to- take as input,
+57:44
+what's in front of the car to decide on the steering direction. This is not state of the art for how self-driving cars are built today,
+57:51
+but you know, you could do some things in some limited contexts. Uh, uh, and I think,
+57:56
+uh, in, in several weeks, you'll actually be able to build something that is more sophisticated than this.
+58:01
+Right. Um, so after supervised learning,
+58:08
+uh, we wi- will- in this class we'll spend a bit of time talking about machine learning strategy.
+58:14
+Also, well, I think on the class notes we annotate this as a learning theory. But what that means is, um,
+58:20
+when I give you the tools to go out and apply learning algorithms effectively. And I think I've been fortunate to have,
+58:28
+uh, you know, to know a lot of, uh, uh, I, I think that,
+58:33
+um, I've been fortunate to have, you know, over the years constantly visited lots of great tech companies.
+58:40
+Uh, uh, more than once that I've that- that I've been probably associated with, right? But often, just to help friends out,
+58:45
+I visit various tech companies, uh, whose products I'm sure are installed on your cell phone.
+58:51
+Uh, but I often visit tech companies and you know, talk to the machine learning teams and see what they're doing, and see if I can help them out.
+58:57
+And what I see is that there's a huge difference in the effectiveness of how
+59:02
+two different teams could apply the exact same learning algorithm. All right? Uh, and I think that, um,
+59:09
+what I've seen sadly is that sometimes there will be a team or even in some of the best tech companies, right?
+59:16
+The, the, the, the EV, AI companies, right? And, and, and multiple of them, where you go talk to a team and they'll
+59:22
+tell you about something that they've been working on for six months. And then, you can quickly take a look at the data and,
+59:29
+and hear that they're not- the algorithm isn't quite working and sometimes you can look at what they're doing,
+59:34
+and go yeah, you know, I could have told you six months ago that this approach is never gonna work, right?
+59:39
+Um, and, um, what I find is that the most skilled machine learning practitioners are very strategic.
+59:46
+By which I mean that your skill at deciding- um, when you work on a machine learning project,
+59:52
+you have- you- you have a lot of decisions to make. Right? Do you collect more data? Do you try a different learning algorithm?
+59:58
+Uh, do you rent faster GPUs to train your learning algorithm for longer? Or if you collect more data, what type of data do you collect?
+1:00:04
+Or for- all of these architectural choices, using neural networks for reference machine which is regression, which ones do you pick?
+1:00:10
+Um, but there are a lot of decisions you need to make when building these learning algorithms.
+1:00:16
+So one thing that's quite unique to the way we teach is, uh, we want to help you become more systematic in driving machine learning as a,
+1:00:27
+as a systematic engineering discipline, so that when one day when you are working on as machine learning project, you can efficiently figure out what to do next.
+1:00:34
+Right? Um, and I sometimes make an analogy to how, um, to, uh, uh,
+1:00:39
+to, to software engineering. Um, you know, like many years ago, I had a friend, um,
+1:00:45
+that would debug code by compiling it and then, um, uh, this friend would look for all of the syntax errors, right?
+1:00:53
+That, you know, C++ compiler outputs. And they thought that the best way to eliminate the errors
+1:00:59
+is to delete all the lines of code with syntax errors and that was [LAUGHTER] their first heuristic. So that did not go well, right?
+1:01:05
+Um, uh, it took me a while to persuade them to stop doing that. Uh, but, but, but so it turns out that, um,
+1:01:11
+when you run a learning algorithm, you know, it almost never works the first time. All right? It's this just life.
+1:01:17
+Uh, uh, and, and the way you go about debugging the learning algorithm will have a huge impact on your efficiency o- on,
+1:01:24
+on how quickly you can build effective learning systems. And I think until now, too much of the- of this process of, uh,
+1:01:32
+making your learning algorithms work well has been a black magic kind of process where, you know, has worked on this for decades.
+1:01:39
+So when you run something, you don't know why it does not recognize it like, "Hey, what do I do and it says, Oh, yeah, do that."
+1:01:44
+And then, and then, because he's so experienced it works, but I think, um, what we're trying to do with the discipline of machine learning
+1:01:50
+is to evolve it from a black magic, tribal knowledge, experience-based thing to a systematic engineering process.
+1:01:57
+All right. And so um, later this quarter, as we talk about machine learning strategy,
+1:02:02
+we'll talk about learning theory. We'll try to systematically give you tools on how to, um, uh, go about strategizing.
+1:02:09
+Uh, so- so it can be very efficient in, um, how you- how you yourself, how you can lead a team to build an effective learning system,
+1:02:17
+because I don't want you to be one of those people that, you know, wastes six months on some direction that
+1:02:23
+maybe could have relatively quickly figured out it was not promising. Or maybe one last analogy,
+1:02:28
+if you- um, if you're used to optimizing code, right? Making code run faster,
+1:02:33
+I'm not sure if you have done that. Uh, uh, uh, less experienced software engineers,
+1:02:39
+who'll just dive in and optimize the code, they try to make it run faster, right? Let's take the C++ and code in assembly or something.
+1:02:45
+But more experienced people will run a profiler to try to figure out what part of code is actually the bottleneck and then just focus on changing on that.
+1:02:52
+So, uh, one of the things we hope to do this quarter is, uh, uh, convey to you some of these more systematic engineering principles.
+1:03:00
+All right. And yeah. Oh, and actually this is very interesting. This is a, uh, uh, yeah. Actually, I've been- I've been invited,
+1:03:07
+so actually- so how many of you have heard the machine learning journey? Oh, just a few of you, interesting.
+1:03:14
+Oh, so actually, so, so- if any of you are interested, um, just in my, uh, spare time, uh,
+1:03:22
+I've been writing a book, um, uh, to try to codify systematic engineering principles for machine learning and so if you are,
+1:03:30
+uh, and so uh, if you want the, you know, free draft copy of the book, sign up for a mailing list here.
+1:03:36
+I tend to just write stuff and put it on the Internet for free, yeah. So if you want a free draft copy of the book,
+1:03:42
+uh, uh, you know, go to this website, uh, enter your e-mail address and the website will send you a copy of that book.
+1:03:49
+And I'll talk a little bit about these engineering principles as well. Okay. All right. So, uh,
+1:03:55
+so first subject, machine learning. Second subject, learning theory. Um, and, uh, the third major subject we'll talk about is, uh, deep learning, right?
+1:04:05
+And so you have a lot of tools in machine learning and many of them are worth learning about and I use many different tools in machine learning,
+1:04:13
+you know, for many different applications. There's one subset of machine learning that's really hot right now because it's just advancing very rapidly, which is deep learning.
+1:04:21
+And so we'll spend a little time talking about deep learning so that you can understand the basics of how to train a neural network as well.
+1:04:29
+But I think that's where CS229 covers a much broader set of algorithms which are all useful.
+1:04:36
+CS230, more narrowly covers just deep learning, right? Um.
+1:04:42
+So, uh, other than deep learning slash after- after deep learning slash neu- neural networks the other,
+1:04:49
+the four, four of the five major topics we'll cover will be on unsupervised learning.
+1:04:55
+Um, so what is unsupervised learning? [NOISE]
+1:05:06
+So you saw me draw a picture like this just now, right?
+1:05:12
+And this would be a classification problem like the tumor, malignant, benign problems, this is a classification problem.
+1:05:17
+And that was a supervised learning problem because you have to learn a function mapping from X to Y.
+1:05:23
+Um, unsupervised learning would be if I give you a dataset like this with no labels.
+1:05:29
+So you're just given inputs X and no Y, and you're asked to find me something interesting in this data,
+1:05:36
+figure out, you know, interesting structure in this data. Um, and so in this dataset, it looks like there are two clusters,
+1:05:43
+and then unsupervised learning algorithm which we learned about called K-means clustering, will discover this, um,
+1:05:49
+this structure in the data. Um, other examples as well as learning, you know,
+1:05:55
+if- if you actually, Google News is a very interesting website. Sometimes I use it to look up, right?
+1:06:00
+Latest news, just this old example. But Google News everyday crawls or reads,
+1:06:06
+uh, uh, I don't know, uh, uh, many many thousands or tens of thousands of news articles on the Internet and groups them together, right?
+1:06:14
+For example, there's a set of articles on the BP Oil Well spill, and it has,
+1:06:19
+uh, taken a lot of the articles written by different reporters and grouped them together.
+1:06:25
+So you can, you know, figure out that what BP, uh, Macondo oil well, right?
+1:06:32
+That this is a CNN article about the oil well spill, there's a Guardian article about oil well spill and this is
+1:06:37
+an example of a clustering algorithm whereas taking these different news sources and figuring out that these are
+1:06:43
+all stories kind of about the same thing, right? Um, and other examples of clustering,
+1:06:51
+just getting data and figuring out what groups belong together. Um, a lot of work on, um, genetic data.
+1:06:59
+This is a visualization of- of genetic microarray data.
+1:07:05
+Where given data like this, you can group individuals into different types of- into individuals of different, uh, characteristics, um,
+1:07:14
+or clustering algorithms grouping this type of data together is used to, um,
+1:07:19
+organize computing clusters, you know, figure out what machines workflows are more related to each other and organize computing clusters appropriately.
+1:07:26
+So take a social network like LinkedIn or Facebook or other social networks and figure out which are the groups of
+1:07:33
+friends and which are the cohesive communities within a social network, um, or market segmentation.
+1:07:39
+Um, actually many companies I've worked with look at the customer database and cluster the users together. So you can say that looks like we're four types of users, you know,
+1:07:47
+looks like that, um, there are the, uh, young professionals looking to develop themselves,
+1:07:53
+there are the, you know, soccer moms and soccer dads, there are this category and these categories. You can then market to the different market segments, um, separately.
+1:08:02
+Uh, and- and actually, many years ago my friend Andrew Moore, uh, uh,
+1:08:07
+was using this type of data for astronomical data analysis to group together galaxies. You have a question?
+1:08:12
+[inaudible]. Is unsupervised learning the same as learning clustering? No it's not.
+1:08:19
+So unsupervised learning broadly is the concept of using unlabeled data. So just X and finding interesting things about it, right?
+1:08:27
+Um, so, um, for example, uh, actually here's- shoot.
+1:08:33
+This won't work with all of you will do this later in the cla- in the class I guess. Um, maybe I say we'll do this later.
+1:08:39
+Cocktail party problem, um, uh, is another unsupervised learning problem.
+1:08:46
+Reading the audio for this to explain this though, um, let me think how to explain this.
+1:08:52
+Um, the cocktail party problem and I'll try to do the demo when we can get all your work on this laptop.
+1:08:57
+Is a problem where, um, if you have a noisy room and you stick mult- multiple microphones in the room and record overlapping voices,
+1:09:05
+um, so that no labels reaches multiple microphones, an array of microphones, in a room of lots of people talking.
+1:09:12
+Uh, how can you have the algorithm separate out the people's voices. So that's an unsupervised learning problem because,
+1:09:18
+um, there are no labels. So you just stick microphones in the room and have it record different people's voices, overlapping voices,
+1:09:24
+you have multiple users at the same time and then have it try to separate out people's voices. And one of the programming exercises you do later is,
+1:09:32
+if we have, you know, five people talking. So each microphone records five people's overlapping voices, right?
+1:09:40
+Because, you know, each microphone hears five people at the same time. How can you have an algorithm separate out
+1:09:45
+these voices so you get clean recordings of just one voice at a time. So that's called the cocktail party problem and the algorithm you
+1:09:52
+use to do this is called ICA, Independent Components Analysis. And that's something you implement in one of these later homework exercises, right?
+1:10:00
+Um, and there are other examples of unsupervised learning as well. Uh, the Internet has tons of unlabeled text data.
+1:10:08
+You just suck down data from the Internet. There are no labels necessarily but can you learn interesting things about language,
+1:10:15
+figure out what- figure out on, I don't know, one of the best cited results recently was learning analogies,
+1:10:21
+like yeah, man is to woman as king is to queen, right? Or a- what's a Tokyo is to Japan as Washington DC is to the United States, right?
+1:10:32
+To learn analogies like that. It turns out you can learn analogies like that from unlabeled data, just from texts on the Internet.
+1:10:37
+So that's also unsupervised learning. Okay? Um, so after unsupervised learning,
+1:10:45
+oh, and unsupervised learning. So you know machine learning is very useful today. It turns out that most of the recent wave of
+1:10:52
+economic value created by machine learning is through supervised learning. Uh, but there are important use cases for unsupervised learning as well.
+1:11:01
+So I use them in my work occasionally. Uh, and is also a bleeding edge for a lot of exciting research.
+1:11:07
+And then the final topic. Finally, the five topics we covered. So talk about supervised learning, machine learning strategy,
+1:11:15
+deep learning, unsupervised learning, and then the fifth one is reinforcement learning, is this. Which is, um, let's say, I give you the keys to Stanford autonomous helicopter.
+1:11:24
+This helicopter is actually sitting in my office, and I'm trying to figure out how to get rid of it. Um, and I'll ask you to write a program to- to make it fly, right?
+1:11:32
+So how do you do that? Um, so this is a video of a helicopter flying.
+1:11:39
+The audio is just a lot of helicopter noise. So that's not important. But we'll zoom out the video.
+1:11:45
+You see she's found in the sky, right? There. So, um, you can use learning alg- that's kinda cool, right?
+1:11:51
+[LAUGHTER] I was- I was the camera man that day. Um, but so you can use learning algorithms to get,
+1:11:56
+you know, robots to do pretty interesting things like this. Um, and it turns out that a good way to do this is through reinforcement learning.
+1:12:05
+So what's reinforcement learning? Um, it turns out that no one knows what's the optimal way to fly a helicopter, right?
+1:12:11
+If you fly a helicopter, you have two control sticks that you're moving. Um, but no one knows what's the optimal way to move the control stick.
+1:12:18
+So the way you can get a helicopter fly itself is, um, let the helicopter do whatever- think of this as training a dog, right?
+1:12:26
+You can't teach a dog the optimal way to behave, but- actually, how many of you have had a pet dog or pet cat before?
+1:12:33
+Oh, not that many of you. This is fascinating. Okay. So I had a pet dog when I was a kid
+1:12:39
+and my family made it my job to train the dog. So how do you train a dog? You let the dog do whatever it wants,
+1:12:45
+and then whenever it behaves well, you go, "Oh, good dog". And when it misbehaves you go, "bad dog".
+1:12:51
+[LAUGHTER] Um, and then over time, the dog learns to do more of the good dog things and fewer of the bad dog things,
+1:12:58
+and so reinforcement learning is a bit like that, right? I don't know what's the optimal way to fly a helicopter. So you let the helicopter do whatever it wants and then whenever it flies well, you know,
+1:13:07
+does some maneuver you want, or flies accurately without jetting around too much, you go, "Oh, good helicopter".
+1:13:13
+[LAUGHTER] And when it crashes you go, "bad helicopter" and it's the job of the reinforcement learning algorithms to figure out how to
+1:13:20
+control it over time so as to get more of the good helicopter things and fewer of the bad helicopter things.
+1:13:26
+Um, and I think, um, well, just one more video. Um, oh, yeah, that's interesting. All right.
+1:13:38
+And so again given a robot like this, I actually don't know how to program a- actually a robot like this has a lot of joints, right?
+1:13:46
+So how do you get a robot like this to climb over obstacles? So well, this is actually a robot dog,
+1:13:52
+so you can actually say, "Good dog" or "Bad dog". [LAUGHTER] By giving those signals,
+1:13:58
+called a reward signal, uh, you can have a learning algorithm figure out by itself, how to optimize the reward,
+1:14:04
+and therefore, [LAUGHTER] climb over these types of obstacles. Um, and I think recently,
+1:14:10
+the most famous applications of reinforcement learning happened for game-playing, playing Atari games or playing,
+1:14:16
+you know, Game of Go, like AlphaGo. I think that's a- I think that is a- game playing has made some remarkable stunts a
+1:14:26
+remarkable PR but I'm also equally excited or maybe even more excited about the integrals and reinforcement learning is making
+1:14:33
+into robotics applications, right? So I think, um, I think- yeah, reinforcement learning has been proven to be fantastic at playing
+1:14:40
+games, it's also getting- making real traction in optimizing robots and optimizing sort of logistic system and things like that.
+1:14:48
+Um, so you learned about all these things. Um, last thing for today, uh,
+1:14:55
+I hope that you will start to, to meet people in the class, make friends, find project partners and study groups,
+1:15:03
+and if you have any questions, [NOISE] you know, dive on the Piazza, asking questions as you help others answer their questions.
+1:15:09
+So let's break for today, and I look forward to seeing you on Wednesday. Welcome to 229.

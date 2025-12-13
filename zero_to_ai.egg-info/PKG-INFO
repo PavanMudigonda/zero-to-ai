@@ -1,0 +1,292 @@
+Metadata-Version: 2.4
+Name: zero-to-ai
+Version: 0.1.0
+Summary: Comprehensive AI/ML learning path from zero to production
+Author-email: mnpawan <mnpawan@gmail.com>
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch>=2.5.0
+Requires-Dist: torchvision>=0.20.0
+Requires-Dist: transformers>=4.47.0
+Requires-Dist: datasets>=3.1.0
+Requires-Dist: tiktoken>=0.8.0
+Requires-Dist: tokenizers>=0.20.0
+Requires-Dist: sentencepiece>=0.2.0
+Requires-Dist: sentence-transformers>=3.3.0
+Requires-Dist: openai>=1.58.0
+Requires-Dist: chromadb>=0.5.23
+Requires-Dist: qdrant-client>=1.12.0
+Requires-Dist: weaviate-client>=4.9.3
+Requires-Dist: pymilvus>=2.4.9
+Requires-Dist: pinecone-client>=5.0.0
+Requires-Dist: faiss-cpu>=1.9.0
+Requires-Dist: redis>=5.2.0
+Requires-Dist: elasticsearch>=8.16.0
+Requires-Dist: pymongo>=4.10.0
+Requires-Dist: psycopg2-binary>=2.9.10
+Requires-Dist: pgvector>=0.3.6
+Requires-Dist: numpy>=2.1.0
+Requires-Dist: pandas>=2.2.0
+Requires-Dist: scikit-learn>=1.6.0
+Requires-Dist: scipy>=1.14.0
+Requires-Dist: matplotlib>=3.10.0
+Requires-Dist: seaborn>=0.13.0
+Requires-Dist: plotly>=5.24.0
+Requires-Dist: jupyter>=1.1.0
+Requires-Dist: ipykernel>=6.29.0
+Requires-Dist: ipywidgets>=8.1.0
+Requires-Dist: langchain>=0.3.0
+Requires-Dist: langchain-openai>=0.2.0
+Requires-Dist: llama-index>=0.12.0
+Requires-Dist: anthropic>=0.40.0
+Requires-Dist: peft>=0.13.0
+Requires-Dist: accelerate>=1.2.0
+Requires-Dist: trl>=0.12.0
+Requires-Dist: ollama>=0.4.0
+Requires-Dist: vllm>=0.6.0
+Requires-Dist: diffusers>=0.32.0
+Requires-Dist: pillow>=11.0.0
+Requires-Dist: opencv-python>=4.10.0
+Requires-Dist: timm>=1.0.0
+Requires-Dist: spacy>=3.8.0
+Requires-Dist: nltk>=3.9.0
+Requires-Dist: seqeval>=1.2.0
+Requires-Dist: sacrebleu>=2.4.0
+Requires-Dist: rouge-score>=0.1.2
+Requires-Dist: google-cloud-aiplatform>=1.73.0
+Requires-Dist: azure-search-documents>=11.6.0
+Requires-Dist: azure-identity>=1.19.0
+Requires-Dist: opensearch-py>=2.7.0
+Requires-Dist: fastapi>=0.115.0
+Requires-Dist: uvicorn>=0.32.0
+Requires-Dist: pydantic>=2.10.0
+Requires-Dist: mlflow>=2.17.0
+Requires-Dist: wandb>=0.18.0
+Requires-Dist: prometheus-client>=0.21.0
+Requires-Dist: psutil>=6.1.0
+Requires-Dist: joblib>=1.4.0
+Requires-Dist: statsmodels>=0.14.0
+Requires-Dist: lifelines>=0.30.0
+Requires-Dist: python-dotenv>=1.0.0
+Requires-Dist: tqdm>=4.67.0
+Requires-Dist: requests>=2.32.0
+Requires-Dist: huggingface-hub>=0.27.0
+Requires-Dist: click>=8.1.0
+Requires-Dist: pyyaml>=6.0.0
+Requires-Dist: boto3>=1.28.0
+Requires-Dist: awscli>=1.29.0
+Provides-Extra: gpu
+Requires-Dist: bitsandbytes>=0.45.0; sys_platform != "darwin" and extra == "gpu"
+Provides-Extra: dev
+Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: black>=23.7.0; extra == "dev"
+Requires-Dist: flake8>=6.1.0; extra == "dev"
+Requires-Dist: mypy>=1.5.0; extra == "dev"
+Provides-Extra: all
+Requires-Dist: bitsandbytes>=0.45.0; sys_platform != "darwin" and extra == "all"
+Requires-Dist: pytest>=7.4.0; extra == "all"
+Requires-Dist: black>=23.7.0; extra == "all"
+Requires-Dist: flake8>=6.1.0; extra == "all"
+Requires-Dist: mypy>=1.5.0; extra == "all"
+Dynamic: license-file
+
+# Zero to AI - Complete Learning Path
+
+> **From Zero to AI Mastery** - 732 notebooks taking you from Python basics to production-ready AI systems
+
+## 📊 Learning Progress
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# 1. Install dependencies with UV (fast!)
+./install_dependencies.sh
+
+# OR use conda (recommended for ML)
+conda env create -f environment.yml
+conda activate aiml-learning
+
+# 2. Start learning
+jupyter notebook
+
+# 3. Track your progress
+python scripts/view_progress.py
+```
+
+📖 **New here?** Start with the [Learning Checklist](checklist.md)
+
+### 🧭 Quick Navigation
+
+**Just starting?**  
+→ [Setup Guide](setup.md) → [Learning Checklist](checklist.md) → [Hands-On Labs](labs/README.md)
+
+**Need video tutorials?**  
+→ [Video Courses](labs/videos/README.md) - Stanford, 3Blue1Brown, Andrej Karpathy, DeepLearning.AI
+
+**Want hands-on practice?**  
+→ [Microsoft Labs](labs/microsoft-labs/README.md) - 100+ free lessons
+
+**Going to production?**  
+→ [Learning Checklist](checklist.md) - See MDTP Framework section for Models, Data, Tools, Productisation
+
+---
+
+## 📂 Repository Structure
+
+```
+aiml/
+├── checklist.md           # ⭐ START HERE - Your complete learning roadmap
+├── setup.md               # Installation & environment setup
+├── requirements.txt       # All dependencies for 732 notebooks
+├── 0-python/              # Python prerequisites (external course pointer)
+├── glossary/              # AI/ML terminology & concepts
+├── 1-data-science/        # Python fundamentals + scikit-learn (278 notebooks!)
+├── 2-maths/               # Mathematics for ML (40+ notebooks)
+├── 3-token/               # Tokenization (tiktoken, sentencepiece, HF)
+├── 4-embeddings/          # Word & sentence embeddings
+├── 5-neural-networks/     # From scratch to Transformers
+├── 6-vector-databases/    # Chroma, Qdrant, Weaviate, Milvus, pgvector
+├── 7-rag/                 # Retrieval-Augmented Generation
+├── 8-mlops/               # Deployment, monitoring, optimization
+├── 9-specializations/     # AI Agents, Computer Vision, NLP
+├── 10-prompt-engineering/ # 🔥 Systematic prompting techniques
+├── 11-llm-finetuning/     # 🔥 LoRA, QLoRA, PEFT fine-tuning
+├── 12-multimodal/         # 🔥 Vision, audio, video AI
+├── 13-local-llms/         # 🔥 Ollama, privacy-first AI
+└── labs/                  # 🧪 Microsoft courses, videos, cloud tutorials
+```
+
+**Start with `00_START_HERE.ipynb` in each section!**
+
+---
+
+## 🎯 Learning Phases
+
+> **Prerequisites**: New to Python? Start with [0-python/](0-python/) for Python fundamentals before Phase 1.
+
+### Foundation (Phases 0-9)
+| Phase | Topic | Time | Status |
+|-------|-------|------|--------|
+| **0** | [Glossary](glossary/GLOSSARY.md) | - | ⏳ Pending |
+| **1** | [Python & Data Science](1-data-science/README.md) | 2-3 weeks | ⏳ Pending |
+| **2** | [Mathematics for ML](2-maths/README.md) | 2-3 months | ⏳ Pending |
+| **3** | [Tokenization](3-token/README_TOKENIZERS.md) | 1-2 weeks | ⏳ Pending |
+| **4** | [Embeddings](4-embeddings/README.md) | 3-4 weeks | ⏳ Pending |
+| **5** | [Neural Networks](5-neural-networks/README.md) | 2-3 months | ⏳ Pending |
+| **6** | [Vector Databases](6-vector-databases/README.md) | 2-3 weeks | ⏳ Pending |
+| **7** | [RAG Systems](7-rag/README.md) | 3-4 weeks | ⏳ Pending |
+| **8** | [MLOps](8-mlops/README.md) | 4-6 weeks | ⏳ Pending |
+| **9** | [Specializations](9-specializations/) | 2-3 months | ⏳ Pending |
+| **10** | [Prompt Engineering](10-prompt-engineering/README.md) | 3-4 weeks | ⏳ Pending |
+| **11** | [LLM Fine-tuning](11-llm-finetuning/README.md) | 1-2 months | ⏳ Pending |
+| **12** | [Multimodal AI](12-multimodal/README.md) | 1-2 months | ⏳ Pending |
+| **13** | [Local LLMs](13-local-llms/README.md) | 3-4 weeks | ⏳ Pending |
+
+---
+
+## 📖 Documentation
+
+- **[Learning Checklist](checklist.md)** ⭐ - Your complete learning roadmap
+  - Track progress through 732 notebooks
+  - 14 progressive phases (Foundations → Cutting-Edge AI)
+  - Comprehensive MDTP framework (Models, Data, Tools, Productisation)
+  - 200+ advanced topics checklist
+  - Portfolio projects and milestones
+
+- **[Setup Guide](setup.md)** - Installation & environment setup
+  - Quick start with UV (recommended)
+  - Manual installation options
+  - Troubleshooting guide
+
+- **[Comparison Matrices](docs/COMPARISON_MATRICES.md)** 🆕 - Decision guides
+  - LLM model selection (GPT-4o vs Claude vs local)
+  - Fine-tuning methods (LoRA vs QLoRA vs Full)
+  - Vector databases (ChromaDB vs Qdrant vs Milvus)
+  - Deployment options (API vs self-hosted vs edge)
+
+- **[Progress Tracking](scripts/README.md)** 🆕 - Track your learning
+  - Automated progress tracking with Python scripts
+  - Visual progress dashboard
+  - Export reports to markdown
+
+## 🧪 Hands-On Labs
+
+- **[Microsoft Labs](labs/microsoft-labs/README.md)** - 10 free courses with 100+ lessons
+  - AI for Beginners (38.8k ⭐)
+  - Machine Learning for Beginners (72.2k ⭐)
+  - Generative AI for Beginners (75.5k ⭐)
+  - LangChain for Python, JavaScript, Java
+
+- **[Video Courses](labs/videos/README.md)** - Essential tutorials from top educators
+  - Stanford CS229, CS224N, CS231N
+  - 3Blue1Brown, Andrej Karpathy
+  - DeepLearning.AI short courses
+
+---
+
+## 💻 Prerequisites
+
+- **Python** - Basic programming (loops, functions, classes)
+- **Math** - High school algebra (Khan Academy for review)
+- **Time** - 10-15 hours/week for 6-12 months
+
+**No prior ML experience required!**
+
+---
+
+
+## 📚 Learning Resources
+
+### Books (Integrated in Repository)
+- **Mathematics for Machine Learning** - Notebooks in [2-maths/mml-book/](2-maths/mml-book/)
+- **ISLP** - 13 interactive notebooks in [2-maths/islp-book/](2-maths/islp-book/)
+- **Stanford CS229** - Course notebooks in [2-maths/cs229-course/](2-maths/cs229-course/)
+
+### Video Courses
+- **50+ curated channels** - See [labs/videos/README.md](labs/videos/README.md)
+  - Stanford CS229, CS224N, CS231N
+  - 3Blue1Brown, Andrej Karpathy, StatQuest
+  - DeepLearning.AI, Fast.ai, MIT courses
+
+### Cloud Platforms
+- **AWS, Google Cloud, Azure** - See [labs/cloud-platforms/README.md](labs/cloud-platforms/README.md)
+
+---
+
+## 🤝 Contributing
+
+This is a personal learning repository, but suggestions welcome! Open an issue or PR.
+
+---
+
+## 📄 License
+
+MIT License - Free to use for learning
+
+---
+
+## 🔗 Quick Links
+
+- **[Learning Checklist](checklist.md)** ⭐ - Your complete roadmap (start here!)
+- **[Setup Guide](setup.md)** - Installation & environment setup
+- **[Microsoft Labs](labs/microsoft-labs/README.md)** - 100+ free hands-on lessons
+- **[Video Courses](labs/videos/README.md)** - 50+ curated educational channels
+- **[Cloud Platforms](labs/cloud-platforms/README.md)** - AWS, GCP, Azure tutorials
+
+---
+
+**Ready to start?** → [Learning Checklist](checklist.md)
+
+**Need help?** → [Setup Guide](setup.md)
+
+**Want practice?** → [Hands-On Labs](labs/README.md)
+
+---
+
+**🚀 Happy Learning!**
+
+**Last Updated:** December 2025  
+**Repository:** [zero-to-ai](https://github.com/PavanMudigondaTR/zero-to-ai)
