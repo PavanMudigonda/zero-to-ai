@@ -1,0 +1,1266 @@
+0:03
+Hey, morning everyone. Welcome back. Um, so last week you heard about uh,
+0:11
+logistic regression and um, uh, generalized linear models.
+0:16
+And it turns out all of the learning algorithms we've been learning about so far are called discriminative learning algorithms,
+0:22
+which is one big bucket of learning algorithms. And today um, what I'd like to do is share with you how generative learning algorithms work.
+0:30
+Um, and in particular you learned about Gaussian discriminant analysis so by the end of the day, you will know how to implement this.
+0:35
+And it turns out that uh, compared to say logistic regression for classification, GDA is actually a um,
+0:43
+simpler and maybe more computationally efficient algorithm to implement ah, in some cases. So um, and it sometimes works better if you have uh,
+0:51
+very small data sets sometimes with some caveats. Um, and there was a helpful comparison between generative learning algorithms,
+0:58
+which is a new class of algorithms you hear about today, versus discriminative learn- learning algorithms. And then we'll talk about naive Bayes and how you can use that to uh,
+1:06
+build a spam filter, for example. Okay? So um, we'll use binary classification as the motivating example for today.
+1:17
+And um, if you have a data set that looks like this with two classes,
+1:24
+then what a discriminative learning algorithm, like logistic regression would do, is use gradient descent to search for
+1:31
+a line that separates the positive-negative examples, right? So if you randomish - randomly initialize parameters,
+1:38
+maybe starts with some digital boundary like that and over the course of gradient descent, you know,
+1:43
+the line migrates or evolves until you get maybe a line like that, that separates the positive and negative examples.
+1:49
+And um, logistic regression is really searching for a line, searching for a decision boundary that separates the positive and negative examples.
+1:58
+Um, and so if this was the uh, malignant tumors [NOISE] and the benign tumors example,
+2:05
+right, that's - that's what logistic regression would do. Now, there's a different class of algorithm which isn't searching for this separation,
+2:14
+which isn't trying to maximize the likelihood that you - the way you saw last week, which is um,
+2:20
+here's an alternative, just call it generative learning algorithm; which is rather than looking at two classes and trying to find the separation.
+2:27
+Instead, the algorithm is going to look at the classes one at a time. First, we'll look at all of the malignant tumors, right?
+2:34
+In the cancer example and try to build a model for what malignant tumors look like.
+2:39
+So you might say, ah, it looks like all the malignant tumors um, roughly [NOISE] all the malignant tumors roughly live in that ellipse.
+2:49
+And then you look at all the benign tumors in isolation and say, ah, it looks like all the benign tumors roughly live in that ellipse.
+2:58
+And then at classification time, if there's a new patient in your office with those features, uh,
+3:06
+it would then look at this new patient and compare it to the malignant tumor model compared to the benign tumor model and then say,
+3:15
+in this case, ah, it looks like this one. Looks a lot more like the benign tumors I had previously seen, so we're gonna classify that as a benign tumor.
+3:22
+Okay? So um, rather than looking at both classes simultaneously and searching for a way to separate them,
+3:31
+a generative learning algorithm, uh, instead builds a model of what each of the classes looks like,
+3:38
+kind of almost in isolation, with some details we'll learn about later. And then at test time uh,
+3:44
+it evaluates a new example against the benign model, evaluates against the malignant model and tries to see which of
+3:50
+the two models it matches more closely against. So let's formalize this.
+3:56
+Um, a discriminative learning [NOISE] algorithm
+4:01
+learns P of y given x, right?
+4:10
+Um, or uh, what it learns um,
+4:16
+[NOISE] right?
+4:22
+Some mapping [NOISE] from x to y directly. You know, as I learn- Or it can learn,
+4:28
+I think Annan briefly talked about the Perceptron algorithm, it's helpful to support vector machines later. But learns a function mapping from x to the labels directly.
+4:36
+So that's a discriminative learning algorithm. We're trying to discriminate between positive and negative classes. [NOISE] In contrast, a generative learning algorithm,
+4:45
+[NOISE] it learns P
+4:54
+of um, x given y.
+5:01
+So this says, what are the features like, [NOISE] given the class, right?
+5:11
+So um, instead P of y given x, we're gonna learn p of x given y.
+5:16
+So in other words, given that a tumor is malignant, what are the features likely gonna be like? Or given the tumor's benign,
+5:22
+what are the features x gonna be like? Okay? And then as- and then they'll also- generative learning algorithm,
+5:29
+will also learn P of y. So this is a- this is also called the class prior to be this probability, I guess.
+5:37
+It's called a class prior. It's just- when the patient walks into your office, before you've even examined them,
+5:42
+before you've even seen them, what are the odds that their tumor is malignant versus benign, right? Before you see any features, okay?
+5:50
+And so using Bayes' Rule, [NOISE] if you can build a model for P of x given y and for P of y,
+6:01
+um, if- you know, if you can calculate numbers for both of these quantities then using Bayes' rule,
+6:07
+when you have a new test example [NOISE] with features x, you can then calculate the chance of y being equal to
+6:14
+1 as this, [NOISE] right?
+6:25
+Where P of x by the - [NOISE] okay?
+6:38
+[NOISE] Um, and so
+6:48
+if you learn this term, P of x given y, then you can plug that in here, right?
+6:58
+And if you've also learned this term P of y, you can plug that in here.
+7:03
+Right. Um, and so P of x in the denominators,
+7:10
+goes into denominator, okay? So if you've learned both- both of those terms in the red square and in the orange square,
+7:17
+you could plug it into all of those terms and therefore use Bayes' rule to calculate P of y equals 1, given x.
+7:25
+So given the new patient with features x, you could use this formula to calculate what's the chance that a tumor is malignant.
+7:31
+If you've estimated you know these - these two quantities in the red and in the orange circles.
+7:38
+Okay? So um, [NOISE] that's the framework we'll use to build generative learning algorithms.
+7:44
+And in fact, today you see two examples of generative learning algorithms. One for continuous value features,
+7:51
+which is used for things like the tumor classification and one for discrete features, which uh, you can use for building,
+7:57
+like in email spam, for example, right? Or - or I don't know. Or If you want to download Twitter things and see how positive or negative a sentiment on Twitter is or something.
+8:06
+right? Well we'll have a natural language processing example later. So um, let's talk about Gaussian discriminant analysis.
+8:17
+[NOISE] GDA.
+8:24
+Um, so uh,
+8:34
+let's develop this model, assuming that the features x are continuous values.
+8:39
+And when we develop um, generative learning algorithms, I'm gonna use x and Rn.
+8:45
+So you know, I'm gonna drop the x 0 equals 1, convention.
+8:50
+So I'm not gonna- we're not gonna need that extra x equals 1. So x is now Rn rather than Rn plus 1.
+8:58
+And the key assumption in Gaussian discriminant analysis is, we're going to assume that P of x given y
+9:07
+[NOISE] is distributed Gaussian, right?
+9:13
+In other words conditioned on the tumors being malignant, the distribution of the features is Gaussian.
+9:19
+The other features like uh, size of the- size of the tumor, the- the cell adhesion or whatever features you use to measure a tumor um,
+9:26
+and condition on it being benign, the distribution is also Gaussian. So um, actually, how many of you are familiar with the multivariate Gaussian?
+9:35
+Raise your hand if you are. Like half of you? One-third? No. Two-fifths? Okay. Cool. Alright. How many
+9:41
+of you are familiar about a uni-variate, like a single dimensional Gaussian? Okay. Cool. Almost everyone. All right.
+9:46
+Cool. So let me- let me just go through what is a multivariate Gaussian distribution. So the Gaussian is this familiar bell-shaped curve.
+9:54
+A multivariate Gaussian is the generalization of this familiar bell-shaped curve over a 1-dimensional random
+10:00
+variable to multiple random variables at the same time to- to- to vector value random variables rather than a uni-variate random variable.
+10:07
+So um, if z, [NOISE] this is due to Gaussian, with some mean vector mu and some covariance matrix sigma um,
+10:18
+so if z is in Rn then mu would be Rn as well.
+10:26
+And sigma, the covariance matrix, will be n by n. So z is two-dimensional, mu is two-dimensional and sigma is two-dimensional.
+10:33
+And the expected value of z is equal to um, the mean.
+10:39
+And the um, covariance of z, [NOISE] if you're familiar with multivariate co-variances,
+10:48
+uh, this is the formula. Right. Um, and this simplifies,
+10:54
+we show in the lecture notes. You can get this in the lecture notes. [NOISE] So you- and uh,
+11:02
+following sometimes semi-standard convention, I'm sometimes gonna omit the square brackets.
+11:07
+So instead of writing the expected value of z, meaning the mean of z, sometimes I just write to this e, z right?
+11:13
+And omit- omit the square brackets to simplify the notation a bit. Okay? And the derivation from this step to this step is given in the lecture notes.
+11:22
+Um, and so, well, [NOISE] the probability density function for a Gaussian looks like this.
+11:30
+[NOISE]
+11:36
+And this is one of those formulas that, I don't know. When you're implementing these algorithms you use it over and over.
+11:44
+But what I've seen for a lot of people is al- almost no one- well, very few people start their machine learning and memorize this formula.
+11:50
+Just look at it every time you need it. I've used it so many times I seem to have it seared in my brain by now, but most people don't even- when you've used it enough,
+11:58
+you- you- you end up memorizing it. But let me show you some pictures of what this looks like since I think that would,
+12:04
+um, that might be more useful. So the Multivariate Gaussian density has two parameters; Mu and Sigma.
+12:13
+They control the mean and the variance of this density.
+12:18
+Okay? So this is a picture of the Gaussian density. Um, this is a two-dimensional Gaussian bump.
+12:26
+And for now, I've set the mean parameter to 0. So Mu is a two dimensional parameter,
+12:32
+it's uh, it's 0, 0, which is why this Gaussian bump is centered at 0.
+12:38
+Um, and the Co-variance matrix Sigma is the identity,
+12:45
+um, i- i- i - is the identity matrix. So uh, so you know, well,
+12:50
+so- so you've have this standard- this is also called the standard Gaussian distribution which means 0 and covariance equals to the identity.
+12:58
+Now, I'm gonna take the covariance matrix and shrink it, right? So take a covariance matrix and multiply it by a number less than 1.
+13:04
+That should shrink the variance- reduce the variability of distributions. If I do that, the density um,
+13:12
+the p- probability density function becomes taller. Uh, this- this is a probability density function.
+13:18
+So it always integrates to 1, right? The area under the curve, you know, is- is 1. And so by reducing the covariance from the identity to 0.6 times the identity,
+13:28
+it reduces the spread of the Gaussian density, um, but it also makes it tall as a result, because,
+13:33
+you know, the area under the curve must integrate to 1. Now let's make it fatter.
+13:39
+Let's make the covariance two times the identity. Then you end up with a wider distribution where the values of
+13:46
+um- I guess the axes here, this would be the z1 and the z2 axis; the two-dimensional Gaussian density, right?
+13:53
+Increases the variance of the density. So let's go back to a standard Gaussian, uh, covariance equal 1, 1.
+13:59
+Now, let's try fooling around with the off-diagonal entries. Um, I'm gonna- So right now,
+14:05
+the off diagonal entries are 0, right? So in this Gaussian density, the off-diagonal elements are 0, 0.
+14:11
+Let's increase that to 0.5 and see what happens. So if you do that, then the Gaussian density,
+14:18
+uh, hope you can see see the change, right? It goes from this round shape to this slightly narrower thing. Let's increase that further to 0.8, 0.8.
+14:25
+Then the density ends up looking like that, um, where now, it's more likely that z1 now- z1 and z2 are positively correlated.
+14:35
+Okay? So let's go through all of these plots. But now looking at contours of these Gaussian densities instead of these 3-D bumps.
+14:42
+So uh, this is the contours of the Gaussian density when the covariance matrix
+14:48
+is the identity matrix and I apologize the aspect ratio. These are supposed to be perfectly round circles
+14:53
+but the aspect ratio makes this look a little bit fatter, but this is supposed to be perfectly round circles.
+14:59
+Um, and so, uh, when, uh, the covariance matrix is the identity matrix,
+15:04
+you know, z1 and z2 are uncorrelated. Um, uh, and the contours of the Gaussian bump,
+15:10
+of the Gaussian density look like brown circles. And if you increase the off-diagonal, excuse me, then it looks like that.
+15:17
+If you increase it further to 0.8, 0.8, it looks like that, okay? Uh, where now, most of
+15:22
+the probability mass- probability ma- most probably density function places value on, um, z1 and z2 being positively correlated.
+15:31
+Um, next, let's look at, uh, what happens if we set the off-diagonal elements to negative values, right?
+15:39
+So, um, actually what do you think will happen? Let's set the off-diagonals to negative 0.5, 0.5.
+15:47
+Right. Oh well. People are seeing, fewer making that hand gesture. Okay, cool. Right. [LAUGHTER] Right.
+15:52
+So- so- so as you- you endow the two random variables with negative correlation, so you end up with, um,
+15:58
+this type of probability density function, right? Uh, and the contours, it looks like this.
+16:05
+Okay? Whe- whereas now slanted the other way. So now z1 and z2 have a negative correlation.
+16:10
+And that's 0.8, 0.8. Okay? All right. So- so far we've been keeping the mean vector as
+16:16
+0 and just varying the covariance matrix. Um, oh good. Yeah? [inaudible].
+16:24
+Uh, yes. Every covariance matrix is symmetric. Yeah. [inaudible] Uh, the true thing about
+16:37
+the covariance matrix has interesting column vectors, that point in interesting directions. Not really.
+16:42
+Um, let me think. Maybe you should- yeah- yeah- uh,
+16:48
+no I- I- I think the covariance matrix is always symmetric. And so I would usually not look at single columns of the covariance matrix in isolation.
+16:59
+Uh, when we talk about Principal components analysis, we talk about the Eigenvectors of the covariance matrix, which are the principle directions in which it points but,
+17:06
+uh, yeah we- we- we- we'll get to that later. [inaudible]
+17:12
+Uh, yeah. So the Eigenvectors are a covariance matrix, points in the principal axes of the ellipse. That's defined by the contents.
+17:18
+Yeah. Cool. Okay. Um, so this standard Gaussian would mean 0.
+17:25
+So the Gaussian bump is centered at 0, 0 because mu is 0, 0. Uh, let's move Mu around.
+17:31
+So I'm going to move, you know, Mu to 0, 1.5. So that moves the Gaussian, uh,
+17:37
+the position of the Gaussian density right. Now let's move it to a different location. Move it to minus 1.5, minus 1.
+17:44
+And so by varying the value of Mu, you could also shift the center of the Gaussian density around.
+17:50
+Okay? So I hope this gives you a sense of, um, as you vary the parameters,
+17:55
+the mean and the covariance matrix of the 2D Gaussian density, um,
+18:00
+those are probably- probably density functions you can get as a result of changing Mu and Sigma.
+18:06
+Okay? Um, any other questions about this?
+18:12
+Raise the screen. [NOISE] All right, cool.
+18:49
+Here is a GDA, right, model.
+18:56
+Um, and- and, uh, let's see.
+19:02
+So, um, remember for GDA,
+19:09
+we need to model P of x given y, right? It's up here, y given x. So I'm gonna write this separately in two separate equations P of x given y equals 0.
+19:18
+So what's the chance- what's the, uh, probability density of the features if it is a benign tumor?
+19:24
+Um, I'm going to assume it's Gaussian. So I'm just going to write down the formula for Gaussian.
+19:30
+[NOISE]
+19:55
+And then similarly, I'm going to assume that if is a malignant tumor as if y is equal to 1,
+20:01
+that the density of the features is also Gaussian, okay?
+20:11
+And, um, I wanna point out a couple of things, so the parameters of the GDA model are
+20:18
+mu0, mu1, and sigma.
+20:24
+Um, and for reasons, we'll go into a little bit, we'll use the same sigma for both class.
+20:31
+Um, but we use different means, 0 and 1, okay?
+20:37
+Uh, and we can come back to this later. If you want, you could use separate parameters, you know,
+20:42
+sigma 0 and sigma 1, but that's not usually done. So we're going to assume that the two Gaussians,
+20:48
+for the positive and negative classes, have the same covariance matrix but they, they have different means. Uh, you don't have to make this assumption,
+20:54
+but this is the way it's most commonly done. And then we can talk about the reason why we tend to do that in a second.
+21:00
+Um, so this is a model for P of y given x. The other thing we need to do is model P of y.
+21:09
+Uh, so y is just a Bernoulli random variable, right. It takes on, you know, the values 0 or 1.
+21:15
+And so, I'm going to write it like this, phi to the y times 1 minus phi to the 1 minus y, okay?
+21:26
+Um, and you saw this kind of notation when we talked about logistic regression,
+21:32
+but all this means is that, um, you know, probability of y being equal to 1 is equal to phi, right.
+21:40
+Because y is either 0 or 1. And so, um, this is the way of writing, uh, uh, probability of y equals 1 is equal to phi, okay?
+21:49
+And, uh, you saw a similar explanation, it's a notation when we're talking about, um, logistic regression, right,
+21:55
+one week ago, last Monday. And so, the last parameter is phi.
+22:01
+So this is Rn, this is also Rn,
+22:06
+this is Rn by n and that's just a real number between 0 and 1, okay?
+22:25
+So, um, for any- let's see. So if you can fit mu0,
+22:31
+mu1, sigma, and phi to your data, then these parameters will define P of x given y and P of y.
+22:40
+And so, if at test time you have a new patient walk into your office, and you need to compute this,
+22:47
+then you can compute, right, these things in the red and the orange boxes. Each of these is a number,
+22:52
+and by plugging all these numbers in the formula, you get a number alpha P of y equals 1 given x and you can then predict,
+22:58
+you know, malignant or benign tumor. Right. So let's talk about how to fit the parameters.
+23:05
+So you have a training set, um, as usual,
+23:10
+I'm gonna write the tre- well, I'm go- let me write the training set like this xi, yi, for i equals 1 through m, right?
+23:17
+This is a usual training set. Um, and what we're going to do,
+23:24
+in order to fit these parameters is maximize the joint likelihood.
+23:32
+And in particular, um, let me define the likelihood of
+23:38
+the parameters to be
+23:46
+equal to the product from i equals 1 through m, up here, xi, yi, you know,
+23:55
+parameterized by the, um, the parameters, okay?
+24:13
+Um, and I'm, I'm just like dropped the parameters here, right?
+24:19
+To simplify the notation a little bit, okay? And the big difference between, um,
+24:27
+a generative learning algorithm like this, compared to a discriminative learning algorithm, is that the cost function you maximize is this joint likelihood which is p of x, y.
+24:41
+Whereas for a discriminative learning algorithm,
+24:46
+we were maximizing, um, this other thing, right.
+25:00
+Uh, which is sometimes also called the conditional likelihood, okay?
+25:10
+So the big difference between the- these two cost functions, is that for logistic regression or linear regression and generalized linear models,
+25:18
+you were trying to choose parameters theta, that maximize p of y given x.
+25:24
+But for generative learning algorithms, we're gonna try to choose parameters that maximize p of x and y or p of x, y, right.
+25:32
+Okay? So all right.
+26:03
+So if you use, um, maximum likelihood estimation.
+26:18
+Um, so you choose the parameters phi, mu0, mu1,
+26:25
+and sigma they maximize the log likelihood, right.
+26:31
+Where this you define as, you know, log of the likelihood that we defined up there.
+26:38
+Um, and so, uh, th- we, we actually ask you to do this as a problem set in the next homework.
+26:43
+But so the way you maximize this is, um, look at that formula for the likelihood,
+26:49
+take logs, take derivatives of this thing, set the derivative equal to 0 and then solve for the values of the parameters that maximize this whole thing.
+26:56
+And I'll, I'll, I'll just tell you the answers you are supposed to get. [LAUGHTER]. But you still have to do the derivation.
+27:05
+Right. um, the value of phi that maximizes this is,
+27:11
+you know, not that surprisingly. So, so phi is the estimate of probability of y being equal to 1, right?
+27:18
+So what's the chance when the next patient walks into your, uh, doctor's office that they have a, a malignant tumor?
+27:25
+And so the maximum likelihood estimate for phi is, um, it's just of all of your training examples,
+27:31
+what's the fraction with label y equals 1, right. So it's the, the maximum likelihood of the, uh,
+27:36
+bias of a coin toss is just, well, count up the fraction of heads you got, okay? So this, this is it.
+27:42
+um, and one other way to write this is, um, sum from i equals 1 through m indicator.
+27:54
+Okay. Right. Um, let's see.
+28:04
+So as you saw the indicator notation on Wednesday, did you? No. Uh, did you so- do, did we talk about the indicator notation on Wednesday?
+28:12
+No. Okay. Um, so, um, uh, this notation is an indicator function, uh, where,
+28:18
+um, indicator yi, equals 1 is, uh, uh, return 0 or 1 depending on whether the thing inside is true, right?
+28:25
+So there's an indicator notation in which an indicator of a true statement is equal to 1 and indicator of a false statement is equal to 0.
+28:35
+So that's another way of writing, writing this formula, right. Um, and then the maximum likelihood estimate for mu0 is this, um,
+28:46
+I'll just write out.
+29:02
+Okay. Ah, so, well, it- it actually if you,
+29:08
+ah, put aside the math for now, what do you think is the maximum likelihood estimate of the mean of all of the,
+29:13
+ah, features for the benign tumors, right? Well, what you do is you take all the benign tumors in your training set and just take the average,
+29:20
+that seems like a very reasonable way. Just look- look at your training set. Look at all of the- look at all of the benign tumors, all the Os,
+29:28
+I guess, and you just take the mean of these, and that, you know, seems like a pretty reasonable way to estimate Mu 0, right?
+29:35
+Look all of your negative examples and average their features. So this is a way of writing out that intuition.
+29:40
+Um, So the denominator is sum from i equals 1 through m indicates a y_i equals, 0,
+29:46
+and so the denominator will count up the number of examples that have benign tumors, right?
+29:53
+Because every time y_i equals 0, you get an extra 1 in this sum,
+29:59
+um, ah, and so the denominator ends up being the total number of benign tumors in your training set.
+30:06
+Okay? Um, and the numerator, ah, sum for m equals 1 through m indicator is a benign tumor times x_i.
+30:15
+So the effect of that is, um, whenever, a tumor is benign is 1 times the features,
+30:23
+whenever an example is malignant is 0 times the features and so the numerator is summing up all the features,
+30:32
+all the feature vectors for all of the examples that are benign. Does that make sense?
+30:38
+I- I just write this out, so this is the sum of feature vectors for,
+30:47
+um, for all the examples with y equals 0 and the denominator is a number of the examples,
+31:01
+where y equals 0, okay? And then if you take this ratio,
+31:07
+if you take this fraction, then you're summing up all of the feature vectors for the benign tumors divide by the total number of benign tumors in the training set,
+31:15
+and so that's just the mean of the feature vectors of all of the benign examples.
+31:21
+Okay? Um, and then,
+31:38
+right, maximum likelihood for Mu 1, no surprises, is sort of kind of what you'd expect,
+31:43
+sum up all of the positive examples and divide by the total number of positive examples and get the means.
+31:49
+So that's maximum likelihood for Mu_1, um, and then I just write this out.
+31:57
+If you are familiar with covariance matrices, this formula may not surprise you.
+32:04
+But if you're less familiar, then I guess you can see the details in the homework.
+32:19
+Okay. Don't worry too much about that. Ah, you can unpack the details in the lecture notes.
+32:25
+So we'll know how it works, okay? But the covariance matrix, basically tries to,
+32:31
+you know, fit contours to the ellipse, right? Like we saw, ah, so- so try to fill the Gaussian to both of these with
+32:38
+these corresponding means but you want one covariance matrix to both of these. Okay? Um, So these are the- so- so- so the way- so the way I motivated this was,
+32:49
+you know, I said, well, if you want to estimate the mean of a coin toss, just count up the fraction of coin tosses, they came up heads,
+32:55
+ah, and then it seems that the mean for Mu_0 and Mu_1, you just look at these examples and pick the mean, right?
+33:00
+So that- that was the intuitive explanation for how you get these formulas. But the mathematically sound way to get
+33:06
+these formulas is not by this intuitive argument that I just gave, it's instead to look at the likelihood, ah,
+33:13
+take logs, get the log likelihood, take derivatives, set derivatives equal to 0, solve for all these values and prove more formally that these
+33:21
+are the actual values that maximize this thing, right? By- by the same theories as you solved,
+33:26
+so you can see that for yourself, um, in the problem sets. Okay? So- All right.
+33:40
+Um, finally, having fit these parameters,
+33:46
+um, if you want to make a prediction, right?
+33:54
+So given the new patient, ah, how do you make a prediction for whether their tumor is malignant or benign?
+34:01
+Um, so if you want to predict the most likely class label,
+34:09
+ah, you choose max over y, of p of y, given x, right?
+34:17
+Um, and by Bayes' rule, this is max over y of p of x given y,
+34:23
+p of y divided by p of x.
+34:29
+Okay? Now, um, I wanna introduce one esh- well, one- one more piece of notation which is,
+34:36
+ah, I wanna introduce, actually, how- how many of you are familiar with the arg max notation?
+34:43
+Most of you? Like two- two-thirds? Okay, cool. I- I- I'll go over this quickly.
+34:49
+So, um, this is just an example. So the, um, let's see.
+34:57
+Ah, boy. All right.
+35:03
+So, you know, the Min over z of, uh, z minus 5 squared is equal to 0
+35:11
+because the smallest possible value of z by a 5 squared is 0, right? and the arg min over z of z minus 5 squared is equal to 5.
+35:23
+Okay? So the min is the smallest possible value attained by the thing inside
+35:28
+and the arg min is the value you need to plug in to achieve that smallest possible value, right?
+35:34
+So ah, the prediction you actually want to make, if you want to output a value for y, you don't wanna output a probability, right?
+35:40
+You know what I'm saying? Well, what do I think is the value of y? So you might choose a value of y that maximizes this, and- so- so there's the arg max of this and this would be either 0 or 1, right?
+35:49
+Um, so that's equal to arg max of that, and you notice that, ah, this denominator is just a constant, right?
+35:56
+It doesn't- it doesn't- it's a p of x, it's- y doesn't even appear in there? It's just some positive number.
+36:02
+And so this is equal to, just arg max over y,
+36:07
+p of x given y times p of y, okay? So when implementing, um, ah,
+36:15
+when- when making predictions with Gaussian disc- in a- with the generative learning algorithms,
+36:21
+sometimes to save on computation, you don't bother to calculate the denominator, if all you care about is to make a prediction,
+36:28
+but if you'd actually need a probability, then you'd have to normalize the probability, okay?
+36:36
+Okay. So let's examine
+36:47
+what the algorithm is doing. [NOISE].
+36:56
+All right. So let's look at the same dataset and compare and contrast what
+37:02
+a discriminative learning algorithm versus a generative learning algorithm will do on this dataset.
+37:07
+Right. Um, here's example with two features X1 and X2 and positive and negative examples.
+37:15
+So let's start with a discriminative learning algorithm. Um, let say you initialize the parameters randomly.
+37:21
+Typically, when you run a logistic regression, I almost always initialize the parameters as 0 but- but this just, you know,
+37:27
+it's more interesting to start off for the purposes of visualization, with a random line I guess. And then if you run one iteration of gradient descent on the conditional likelihood,
+37:37
+um, one iteration of logistic regression moves the line there. There's two iterations, three iterations, um,
+37:44
+four iterations and so on and after about 20 iterations it will converge to that pretty decent discriminative boundary.
+37:53
+So that's logistic regression, really searching for a line that separates positive and negative examples.
+37:58
+How about the generative learning algorithm? What it does is the following,
+38:03
+which is fit with Gaussian discriminant analysis. What we'll do, is fit Gaussians to the positive and negative examples.
+38:13
+Right, and just one- one technical detail, um, I described this as if we look at the two classes separately
+38:20
+because we use the same covariance matrix sigma for the positive and negative classes. We actually don't quite look at them totally separately but we do
+38:26
+fit two Gaussian densities to the positive and negative examples. And then what we do is,
+38:33
+for each point try to decide whether this is class label using Bayes' rule,
+38:38
+using that formula and it turns out that this implies the following decision boundary.
+38:43
+Right. So points to the upper right of this decision boundary, to that straight line I just drew,
+38:49
+you are closer to the negative class. You end up classifying them as negative examples and points to the lower left of that line,
+38:56
+you end there classifying as- as a positive examples. And I've- I've also drawn in green here the decision boundary for logistic regression.
+39:06
+So- so- so these two algorithms actually come up with slightly different decision boundaries.
+39:11
+Okay, but the way you arrive at these two decision boundaries are a little bit different.
+39:16
+So, um. All right,
+39:23
+let's go back to the- Any questions about this? Yeah. [NOISE] [inaudible].
+39:41
+Oh, sure yes, good question. So why- why- why do we use two separate means, mu 0 and mu 1 and a single covariance matrix sigma?
+39:49
+It turns out that, um-. It turns out that if you choose to build the model this way,
+39:56
+the decision boundary ends up being linear and so for a lot of problems if you want to linear decision boundary,
+40:01
+um, uh, um, yeah. And it turns out you could choose to use two separate,
+40:07
+um, covariance matrix sigma 0 and sigma 1, and they'll actually work okay. Right. There's- it is actually very reasonable to do so as well,
+40:14
+but you double the number of parameters roughly and you end up with a decision boundary that isn't linear anymore.
+40:21
+But it is actually not an unreasonable algorithm to do that as well. Um, now, there's one-
+40:30
+[BACKGROUND].
+40:51
+Now, there's one very interesting property, um, about Gaussian discriminant analysis and it turns out that's- ah.
+41:02
+Well, let's- let's compare
+41:09
+GDA to logistic regression and,
+41:16
+um, for a fixed set of parameters.
+41:24
+Right. So let's say you've learned some set of parameters.
+41:29
+Um, I'm going to do an exercise where we're going to plot,
+41:38
+P of Y equals 1 given X, you're parameterized by all these things,
+41:47
+right, as a function of x.
+41:54
+So I'm gonna do this little exercise in a second, but what this means is,
+41:59
+um, well, this formula, this is equal to P of X given Y equals 1, you know,
+42:08
+which is parameterized by- right well, the various parameters times p of y equals 1,
+42:15
+is parameterized by phi divided by P of X which depends on all the parameters, I guess.
+42:26
+Right. So by Bayes rule,
+42:31
+you know this formula is equal to this little thing and just as we saw earlier, I guess right.
+42:40
+Once you have fixed all the parameters that's just a number you compute by evaluating the Gaussian density.
+42:46
+Um, this is the Bernoulli probability, so actually P of Y equals 1 parameterized by phi is just equal to phi
+42:53
+is that second term and you similarly calculate the denominator. But so for every value of x,
+42:59
+you can compute this ratio and thus get a number for the chance of Y being 1 given X. So I'm gonna go
+43:08
+through one example of
+43:14
+what function you'd get for P of Y equals 1 given X, for what function you get for this if you actually plot this for,
+43:22
+um, different values of X. Okay. So, um, let's see.
+43:31
+Let's say you have just one feature X, so X is a- a- and let's say that you have
+43:39
+a few negative examples there and a few positive examples there.
+43:45
+Right. So it's a simple dataset. Okay, and let's see what Gaussian discriminant analysis will do on this dataset.
+43:55
+Um, with just one feature so that's why all the data is parsing on 1D. So let me map all this data to an x-axis.
+44:12
+I just filled this data and mapped it down. And if you fit a Gaussian to each of these two data sets then you end up with, you know,
+44:23
+Gaussians as follows where this bump on the left is P of X given Y equals 0 and
+44:30
+this bump on the right is P of X given Y equals 1.
+44:37
+Right, and- and again just to check on all details that we set the same variance to the two Gaussians,
+44:42
+but you know, you kinda model the Gaussian densities of what does this class 0 look like? What does class 1 look like with two Gaussian bumps like this?
+44:50
+Then because the dataset is split 50-50 P of Y equals 1 is 0.5. Right, so one half prior.
+44:57
+Okay. Now, let's go through that exercise I described on the left of trying to
+45:03
+plot P of Y equals 1 given X for different values of X.
+45:09
+So the vertical axis here as P of Y equals 1 given different values of X.
+45:14
+So, um, let's pick a point far to the left here. Right. With this model you- if you actually
+45:23
+calculate this ratio you find that if you have a point here, it almost certainly came from this Gaussian on the left.
+45:32
+If- if you have an unlabeled example here, you're almost certain it came from the class 0 Gaussian
+45:38
+because the chance of this Gaussian generating example all the way to left is almost 0.
+45:43
+Right, and so chance of P- P of Y equals 1 given X is very small. So for a point-like that,
+45:48
+you end up with a point you know, very close to 0, right. Um, let's pick another point.
+45:55
+Right, how about this point, the midpoint. Well, if you're getting example right at the midpoint, you- you really have no idea. You really can't tell.
+46:01
+Did this come from the negative or the positive Gaussian? Can't tell. Right. So this is really 50-50.
+46:07
+So I guess if this is 0.5 for that midpoint you would have P of Y equals 1 given X is 0.5.
+46:16
+Um, then if you go to a point away to the variance, if you get an example way here, then you'd be pretty sure this came from the positive examples and so,
+46:23
+you know, you get a point like that. Right. Now, it turns out that if you repeat this exercise
+46:31
+sweeping from left to right for many many points on the X axis you find that,
+46:37
+for points far to the left, the chance of this coming from, um,
+46:43
+the Y equals 1 class is very small and as you approach this midpoint,
+46:48
+it increases to 0.5 and it surpasses 0.5. And then beyond a certain point,
+46:54
+it becomes very very close to 1. Right, and you do this exercise and actually just for every point, you know,
+47:01
+for a dense grid on the x-axis evaluate this formula which will give you a number between 0 and 1.
+47:08
+Is the probability and go ahead and plot, you know, the values you get a curve like this.
+47:13
+It turns out that if you connect up the dots, um, then this is exactly a sigmoid function.
+47:20
+The shape of that turns out to be exactly a shaped sigmoid function and you prove this in the problem sets as well.
+47:27
+Right. Um, so, um,
+47:38
+both logistic regression and Gaussian discriminant analysis actually end up using
+47:43
+a sigmoid function to calculate P of Y equals 1 given X or- or the,
+47:50
+the outcome ends up being a sigmoid function. I guess the mechanics is, you actually use this calculation rather than compute a sigmoid function.
+47:57
+Right. But, um, the specific choice of the parameters they end up
+48:02
+choosing are quite different and you saw when I was projecting the results on the display just now in PowerPoint,
+48:08
+that the two algorithms actually come up with two different decision boundaries. Right. So, um, let's discuss when
+48:18
+a genitive algorithm like GDA is superior and when a distributed algorithm like logistic regression is superior.
+48:25
+Um, let's see if I can get rid of this.
+48:32
+[BACKGROUND]
+48:48
+All right. So GDA, Gaussian Distributed Analysis.
+48:53
+So the generative approach. This assumes that x given y equals 0,
+49:02
+this is Gaussian, with mean Mu_0 and co variance Sigma. It assumes x given y equals 1,
+49:09
+this is Gaussian with mean Mu_1 and covariance Sigma, and y is Bernoulli with, um, parenthesis Phi.
+49:20
+Right. And what logistic regression does. [NOISE] This is a discriminative algorithm,
+49:30
+uh, there is some [LAUGHTER] strange wind at the back, is it?
+49:39
+Yeah. I see. Okay. Cool. All right. Yeah. Why? You know
+49:46
+the-there's just a scary UN report on global [LAUGHTER] warming over the weekend. I hope we don't already have storms here, um.
+49:52
+Okay. It's okay. Did you guys see the UN report? It's slightly scary actually wa- the-
+49:58
+the UN report on global warming but hopefully- all right. Good. Hurricane stopped.
+50:03
+[LAUGHTER] Um, let's see.
+50:09
+Uh, so what logistic regression assumes is p of y equals 1 given x.
+50:20
+You know, that this is, uh, governed by logistic function. Right. So this is really 1 over 1 plus e is a negative Theta transpose x.
+50:26
+We-where some details about x_0 equals 1 and so on.
+50:32
+Right. So just- just- okay. So- so in other words, uh, it's assumed that this is,
+50:38
+um, p of y equals 1 given x is logistic.
+50:45
+Okay. And the argument that I just described just now, uh,
+50:50
+plotting you know p of y equals 1 given x point-by-point to really the sigmoid curve I drew on the other board.
+50:57
+What that illustrates. Um, it doesn't prove it. You prove it yourself in a homework problem.
+51:02
+But what that illustrates is that, this set of assumptions implies that p of y equals 1 given x is governed by a logistic function.
+51:14
+Right. But it turns out that the implication in the opposite direction is not true.
+51:21
+Right. So if you assume p of y equals 1 given x is governed by logistic function by- by this shape,
+51:28
+this does not in any way shape or form assume that x given y is Gaussian,
+51:33
+uh, uh, x given y equals 0 is Gaussian x given y equals 1 is Gaussian. Right. So what this means is that GDA,
+51:43
+the generative learning algorithm in this case, this makes a stronger set of assumptions and which this regression makes
+51:55
+a weaker set of
+52:00
+assumptions because you can prove these assumptions from these assumptions. Okay. Um, and by the way as- as- uh,
+52:11
+as- as- uh, let's see. And so what you see in a lot of learning algorithms is that, um,
+52:20
+if you make strongly modeling assumptions and if your modeling assumptions are roughly correct,
+52:25
+then your model will do better because you're telling more information to the algorithm.
+52:30
+So if indeed x given y is Gaussian, then GDA will do better because you're telling
+52:38
+the algorithm x given y is Gaussian and so it can be more efficient. And so even if a very small dataset, um,
+52:44
+if these assumptions are roughly correct, then GA will do better. And the problem with GDA is,
+52:50
+if these assumptions turn out to be wrong. So if x given y is not at all Gaussian, then this might be a very bad set of assumptions to make.
+52:57
+You might be trying to fit a Gaussian density to data that is not at all Gaussian and then GDA would do more poorly.
+53:04
+Okay. So here's one fun fact. Here's another example, get to your question in a second,
+53:11
+which is let's say the following are true; let's say that x given y equals 1 is Poisson with, uh,
+53:22
+parameter Lambda_1 and x given y equals 0 is Poisson with mean,
+53:31
+uh, Lambda_0, or lambda_1 not 0 and y, as before, is Bernoulli 5x.
+53:39
+Right. It turns out that this set of assumptions also imply that p of y equals 1 given x.
+53:47
+This is logistic, okay, and you can prove this.
+53:52
+And this is actually true for, um, any generalized linear model, actually where, uh, where- where, uh, the difference between
+53:59
+these two distributions varies only according to the natural parameter as a generalized name. Excuse me, of the exponential family distribution.
+54:06
+Right. And so what this means is that, um, if you don't know if your data is Gaussian or Poisson,
+54:14
+um, if you're using logistic regression you don't need to worry about it. It'll work fine either way.
+54:20
+Right. So- so, you know, maybe, um, you are fitting data to s- maybe a fitting, uh,
+54:25
+uh, a model, binary classification model to some data. And you don't know, is a data Gaussian?
+54:30
+Is it Poisson? Is this some other exponential family model? Maybe you just don't know. But if you're fitting logistic regression,
+54:36
+it- it'll do fine under all of those scenarios. Right. But if your data was actually Poisson but you assumed it was Gaussian,
+54:44
+then your model might do quite poorly. Okay. So the key high level principles when you take away from this is, um, uh, uh,
+54:55
+if you make weaker assumptions as in logistic regression, then your algorithm will be more robust to modeling
+55:03
+assumptions such as accidentally assuming the data is Gaussian and it is not. Uh, but on the flip side,
+55:08
+if you have a very small dataset, then, um, using a model that makes more assumptions will actually allow you to do better
+55:16
+because by making more assumptions you're just telling the algorithm more truth about the world which is,
+55:21
+you know, "Hey, algorithm, the world is Gaussian," and if it is Gaussian, then it will actually do- do- do better.
+55:27
+Okay. Your question at the back or a few questions. Go ahead. Just from that, is there a point do you know like what sort
+55:35
+of data it usually has a Gaussian problem?
+55:40
+Oh, oh, yeah. Practical sample without data is a Gaussian probably, you know, it's, uh, uh- yeah, you know,
+55:47
+it's a matter of degree. Right. Most data on this universe is Gaussian [LAUGHTER] uh, uh, uh, except at this feed data, I guess.
+55:55
+Yeah, but- but, um- I think it's actually a- a matter of degree. Right. If- if you plot- actually if you take
+56:01
+continuous value data- no, ther- ther- there are exceptions. You could plot it and most data that you plot, you know,
+56:06
+will not really be Gaussian but a lot of it you can convince yourself is vaguely Gaussian. So I think a lot of it is amount of degree.
+56:13
+I- I- I actually tell you the way I choose to use, um, these two algorithms. So I think that the whole world has moved toward using bigger than three datasets.
+56:21
+Right. Digital Civil Society which is a lot of data and so for a lot of problems we have a lot of data,
+56:26
+I would probably use logistic regression. Because with more data, you could overcome telling the algorithm less about the world.
+56:34
+Right. So- so the algorithm has two sources of knowledge. Uh, one source of knowledge is what did you tell it,
+56:40
+what are the assumptions you told it to make? And the second source of knowledge is learned from the data and in this era of big data,
+56:47
+we have a lot of data, you know, there is a strong trend to use logistic regression which makes less assumptions and just lets the algorithm
+56:53
+figure out whether it wants to figure out from the data. Right. Now, one practical reason why I still use algorithms like the GDA,
+57:01
+general discriminant analysis, so algorithms like this, um, uh, is that, it's actually quite computationally efficient and so
+57:07
+the- there's actually one use case at Landing. AI that we're working on where we just need to fit a ton of models and don't have the patience to run the GC progression over and over.
+57:15
+And it turns out computing mean and variances of, um, covariance matrices is very efficient and so
+57:22
+there's actually apart from the assumptions type of benefit, uh, which is a general philosophical point.
+57:27
+We'll see again later in this course. Right. Th- this idea about do you make strong or weak assumptions? This is a general principle in machine learning that we'll see again in other places.
+57:35
+But the very concrete- the other reason I tend to use GDA these days is less that I think I perform better from
+57:41
+an accuracy point of view but there's actually a very efficient algorithm. We just compute the mean covar- covariance and we are done and there's no iterative process needed.
+57:48
+So these days when I use these models, um, is more motivated by computation and less by performance.
+57:56
+But this general principle is one that we'll come back to again later when we develop more sophisticated learning algorithms. Yeah.
+58:02
+Uh, if the data is generated from a Gaussian but my program synthesis are different with the assumption
+58:10
+that we just use the same program for performance-? Oh, right, ah, so what happens when the co-variance matrices are different?
+58:17
+It turns out that, uh, uh, trying to remember, it still ends up being a logistic function but with a bunch of quadratic terms in the logistic function.
+58:23
+So it's not a linear decision boundary anymore. You can end up with a decision boundary, you know, that- that- that looks like this, right?
+58:29
+With positive and negative examples separated by some- by some other shape from a linear decision boundary. Uh, you- you could- you could- you could fig- actually,
+58:36
+I- if you're curious, I encourage you to, you know, uh, uh, fire up Python NumPy and- and
+58:42
+play around their parameters and plot this for yourself, uh, questions? Is it recommended that we use some kind of statistical global test to make
+58:50
+sure that the plot distribution results have a equal variance before we do GDA?
+58:55
+Yeah. It's recommended that you do some cyclical tests to see if it's Gaussian, um, I can tell you what's done in practice.
+59:02
+I think in practice, if you have enough data to do a cyclical test and gain conviction, you probably have enough data to just use logistic regression,
+59:10
+um, uh, the- the- I- I don't know. [LAUGHTER] Well no, that's not really fair. I don't know. If they're very high dimensional data,
+59:16
+I- I think what often happens more, is people just plot the data, and if it looks clearly non-Gaussian,
+59:22
+then, you know, there will be reasons not to use GDA. But what happens often is that um,
+59:29
+uh, uh, yeah sometimes you just have a very small training set and it's just a matter of judgment, right?
+59:34
+Like if you have, you- if you have, uh, uh, uh, you know, I don't know, 50 examples of healthcare records,
+59:40
+then you just have to ask some doctors and ask, "Well, do you think the distribution is rath- rath- relatively Gaussian," and use domain knowledge like that.
+59:47
+Right? I think- by the way a- another philosophical point, um, I think that, uh, the machine learning world has,
+59:55
+frank- you know, a little bit overhyped big data, right? And- and yes it's true that when we have more data,
+1:00:01
+it's great and I love data and a- um, having more data pretty much never hurts and usually the more data the better, so all that is true.
+1:00:07
+And I think we did a good job telling people that high-level message, you know, more data almost always helps. But, um, uh, I think a lot of the skill in machine learning
+1:00:16
+these days is getting your algorithms to work even when you don't have a million in examples, even you don't have a hundred million examples.
+1:00:22
+So there are lots of machine learning applications where you just don't have a million examples, uh, you have a hundred examples and, um,
+1:00:29
+it's then the skill in designing your learning algorithm matters much more. Um, so if you take something like ImageNet,
+1:00:35
+mi- million in- in- images, there are now dozens of teams, maybe hundreds of teams, I don't know. They can get great results.
+1:00:40
+They give a million examples, right? and so the performance difference between teams, you know, there are now dozens of teams that get great performance,
+1:00:47
+if a million examples, uh, for- for- for image classification, for ImageNet. But if you have only a hundred examples,
+1:00:54
+then the high-skilled teams will actually do much, much, much, much better than the low skilled teams,
+1:00:59
+whereas the performance gap is smaller when you have giant data sets I think, so and I think that it's these types of intuitions,
+1:01:05
+you know, what assumptions you use, generative or discriminative, that actually distinguishes the high-skilled teams and, uh, and, uh,
+1:01:11
+and the less experienced teams and drives a lot of the performance differences when you have small data.
+1:01:16
+Oh, and if someone goes to you and says, "Oh you only have a hundred examples, you'll never do anything."
+1:01:22
+Uh, then I don't know, if- if there's a competitor saying that, then I'll say, "Great, you know, don't do it because I can make it work."
+1:01:28
+Uh, well, I don't know. Uh, but- but I think there are a lot of applications where your skill at designing a machine learning system,
+1:01:34
+really makes a bigger difference when you have a- make- makes a- it makes a difference from big data and small data, but it just- this is a very clear where you don't have much data,
+1:01:41
+is the assumptions you code into the algorithm like, is it Gaussian, is it Poisson? That- that skill allows you to drive
+1:01:48
+much bigger performance than a lower-skill team would be able to. All right. This is- uh- uh-
+1:01:55
+coul- could- I should still take questions from all of you. Yeah, go ahead.
+1:02:03
+Um, what's the implication when [inaudible]. Oh, sure. So does this, uh, yes, so what's the general statement of this?
+1:02:10
+Yes, so if, uh, x given y equals 1, uh, it comes from an exponential family distribution,
+1:02:16
+x given y equals 0 comes to an exponential family distribution, it's the same exponential family distribution and if they
+1:02:21
+vary only by the natural parameter of the exponential family distribution, then this will be logistic.
+1:02:27
+Yeah. Um, I think this was once a midterm homework problem to prove this actually?
+1:02:32
+But, yeah. All right, uh, actually let's take one last question then we move on, go ahead.
+1:02:42
+Uh, if performance [inaudible] Oh, uh, does performance improvement happen even as you increase the number of classes?
+1:02:49
+Uh, ye- I think so yes,
+1:02:55
+uh, and the generalization of this would be the Softmax Regression which I didn't talk about. But yes. I think it's a similar thing holds true for, um,
+1:03:02
+GDA for multiple- and we have so far we're going to talk about Binary Classification, whether you have more than two classes. But, uh, but yes, similar- similar things holds true for,
+1:03:10
+uh, like a GDA with three classes and Softmax. Yeah. Oh yes, right. You saw Softmax the other day.
+1:03:17
+Cool. Um, and this- this theme
+1:03:23
+that when you have less data the algorithm needs to rely more on assumptions you code in.
+1:03:28
+This is a recurring theme that we'll come back to it as well. This is one of the important principles of machine learning,
+1:03:34
+that when you have less data your skill at coding and your knowledge matters much more.
+1:03:39
+Uh, this is a theme we'll come back to you when we talk about much more complicated learning algorithms as well. All right.
+1:03:48
+So, uh, I want a fresh board for this.
+1:03:59
+So you've seen GDA in the context of, um, continuous valued, uh, features x.
+1:04:08
+The last thing I want to do today, um, is talk about one more generative learning algorithm called Naive Bayes,
+1:04:18
+um, and I'm gonna use as most of the example; e-mail spam classification, but this- this is- this-
+1:04:26
+I guess this is our first foray into natural language processing, right? But given in a piece of text, like given a piece of email,
+1:04:31
+can you classify this as spam or not spam? Or, uh, other examples, uh, uh, actually several years ago, Ebay,
+1:04:37
+used to have a problem of, you know, the- if someone's trying to sell something and you write a text description, right? "Hey, I have a secondhand, you know,
+1:04:44
+Roomba, I'm trying to sell it on Ebay." How do you take that text that someone wrote over the description and categorize it, is it an electronic thing or are they trying to sell a TV?
+1:04:52
+Are they trying to sell clothing? Uh, but these- these examples of text classification problems, we have a piece of text and you want to classify into one of
+1:04:59
+two categories for spam or not spam or one of maybe thousands of categories, and they're trying to take a product description and classify it into one of the classes.
+1:05:08
+Um, and so the first question we will have is, um, uh,
+1:05:14
+given the e-mail problem, uh, given the e-mail classification problem, how do you represent it as a feature vector?
+1:05:27
+And so, um, in Naive Bayes what we're going to do is take your e-mail,
+1:05:34
+take a piece of e-mail and first map it to a feature vector X.
+1:05:40
+And we'll do so as follows, which is first, um, let's start with a- let's start with
+1:05:47
+the English dictionary and make a list of all the words in the English dictionary, right?
+1:05:52
+So first of all there's the English dictionary as A, second word in the English edition is aardvark. Third word is aardwolf.
+1:05:59
+[BACKGROUND] No, it's easy, look it up. [NOISE] [LAUGHTER]
+1:06:04
+Um, and then, you know, uh, uh, e- e-mail spam lot of people asking to buy stuff so that they would buy, right?
+1:06:11
+And then, um, uh, and then the last word in my dictionary is zymurgy,
+1:06:16
+which is the technological chemistry that refers to the fermentation process in brewing.
+1:06:23
+Um, So- so- I think it is a useful way to think about it, in- in- in- practice, what you do is not, uh, uh,
+1:06:28
+actually look at the dictionary but look at the top 10,000 words, you know, in your training set. Right? So maybe you have 10,000,
+1:06:34
+it's easier to think about it as if it was a dictionary but, you know, in practice, well, you- the other thing that's- dictionary has too many words,
+1:06:41
+but where- the other way to do this is to look through your own e-mail co-pairs and just find the top 10,000 occurring words and use that as a feature set,
+1:06:49
+and so I don't know. Right? And your e-mails, I guess you're getting a bunch of e-mail about- from us or maybe others about CS229.
+1:06:55
+So CS229 might appear in your dictionary of building your e-mail spam filter for yourself, even if it doesn't appear in the- in the official, uh,
+1:07:02
+was it like the Oxford dictionary, just yet just- just- just- you wait, we'll- we- we'll get CS229 there someday.
+1:07:08
+All right. Um, and so given an e-mail,
+1:07:14
+what we would like to do is then, um, take this piece of text and represent it as a feature vector.
+1:07:20
+And so one way to do this is, um, you can create a binary feature vector,
+1:07:25
+that puts a 1, if a word appears in the e-mail and puts a 0 if it doesn't.
+1:07:31
+Right? So if you've gotten an e-mail, um, uh, that asks you to, you know, buy some stuff and then the word A appears in e-mail, you put a 1 there.
+1:07:39
+Did not try to sell aardvark or aardwolf, so 0 there, buy and so on.
+1:07:46
+Right? So you take a- take an e-mail and turn it into a binary feature vector.
+1:07:53
+Um, and so here the feature vector is 0, 1 to the n,
+1:08:01
+because there's a n-dimensional binary feature vector, where- where for the purpose of illustration, let's say,
+1:08:07
+n is 10,000 because you're using, you know, take the top 10,000 words, uh, that appear in your e-mail training set as the dictionary that you will use.
+1:08:16
+So, um.
+1:08:29
+So in other words, X_i is indicator word i appears in the e-mail, right?
+1:08:42
+So it's either 0 or 1 depending on whether or not that word i from this list appears in your e-mail.
+1:08:49
+Now, um, in the Naive Bayes algorithm, we're going to build a generative learning algorithm.
+1:08:58
+Um, and so we want to model P of x given y, right?
+1:09:09
+As well as P of y, okay? But there are, uh,
+1:09:15
+2 to the 10,000 possible values of x, right?
+1:09:25
+Because x is a binary vector of this 10,000 dimensional. So we try to model P of x in the straightforward way as a multinomial distribution over,
+1:09:35
+you know, 2 to the 10,000 possible outcomes. Then you need, right, uh, uh, you need,
+1:09:41
+you know 2 to the 10,000 parameters, right? Which is a lot, or technically,
+1:09:47
+you need 2 to 10,000 minus 1 parameter because that adds up to 1, and you can see one parameter.
+1:09:52
+But so, modeling this without additional assumptions won't- won't work, right, because of the excessive number of parameters.
+1:10:00
+So in the Naive Bayes algorithm, we're going to assume that X_i's are
+1:10:08
+conditionally independent given y, okay?
+1:10:21
+Uh, let me just write out what this means, but so P of x_1 up to x_10,000 given y by the chain rule of probability,
+1:10:32
+this is equal to P of x_1 given y times P of x_2 given,
+1:10:43
+um, x_1 and y times p of x_3 given x_1,
+1:10:50
+x_2 Y up to your p of x_10,000 given, and so on, right?
+1:10:57
+So I haven't made any assumptions yet. This is just a true statement of fact as always true by the- by the chain rule of probability.
+1:11:04
+Um, and what we're going to assume which is what this assumption is,
+1:11:15
+is that this is equal to this first term no change the
+1:11:20
+x_2 given y p of x_3 given y and so on,
+1:11:26
+p of X_10,000 given y, okay?
+1:11:31
+So this assumption is called a conditional independence assumption it's also sometimes called the Naive Bayes assumption.
+1:11:39
+But you're assuming that, um, so long as you know why the chance of seeing the words,
+1:11:46
+um, aardvark in your e-mail does not depend on whether the word "A" appears in your e-mail, right?
+1:11:53
+Um, and this is one of those assumptions that is definitely not a true assumption and that is just not mathematically true assumption.
+1:11:59
+Just that sometimes your data isn't perfectly Gaussian, but if it was Gaussian you can kind of get away with it. So this assumption is not true,
+1:12:07
+um, in a mathematical sense, but it may be not so horrible that you can't get away with it, right?
+1:12:13
+Um, and so- so- so it's like, if you- if any of you are familiar with probabilistic graphical models,
+1:12:19
+if you've taken CS-228, uh, this assumption is summarizing this picture,
+1:12:24
+and if you haven't taken CS-228 this picture won't make sense, but don't worry about it. Um, right, that, uh,
+1:12:32
+once you know the class label is a spam or not spam whether or not each word appears or does not appear is independent, okay?
+1:12:40
+So this is called conditional. So the mechanics of this assumption is really just captured by this equation,
+1:12:46
+um, and you just use this equation, that's all you need to derive Naive Bayes. But intuition is that if I tell you whether
+1:12:54
+this piece- if I tell you that this piece of e-mail is spam then whether the word by appears in it doesn't affect you believes that what- whether the word
+1:13:01
+mortgage or discount or whatever spammy words appear, right?
+1:13:07
+So just to summarize, this is product from i equals 1 through n of p of X_i given y.
+1:13:46
+All right, so the parameters of this model,
+1:13:51
+um, are, I'm going to write it, Phi subscript,
+1:13:57
+um, j given y equals
+1:14:03
+1 as the probability that x_j equals 1 given y equals 1,
+1:14:09
+phi subscript j given y equals 0, and then Phi.
+1:14:24
+And just to distinguish all these Phi's from each other, we can just call this Phi subscript y, okay?
+1:14:32
+So this parameter says, if a spam e-mail, if y equals 1 is spam and y equals 0 is not spam.
+1:14:38
+If it's a spam e-mail, what's the chance of word j appearing in the e-mail? If it's not spam e-mail what's the chance of word j appearing in the e-mail.
+1:14:47
+Then also, what's the cost prior, what's the prior probability that the next e-mail you receive in your, uh, in your- in your inbox is spam e-mail?
+1:15:00
+And so to fit the parameters of this model,
+1:15:05
+you would s- similar to Gaussian discriminant analysis,
+1:15:12
+write down the John- joint likelihood. So the joint likelihood of these parameters, right?
+1:15:22
+Is a product, you know,
+1:15:28
+given these parameters, right?
+1:15:34
+Similar to what we had for Gaussian discriminant analysis. And the maximum likelihood estimates, um, if you take this,
+1:15:43
+take logs, take derivatives, set derivatives to 0, solve for the values that maximize this, you find that the maximum likelihood estimates of the parameters are, Phi_y,
+1:15:52
+this is pretty much what you'd expect, right?
+1:16:00
+It's just a fraction of spam e-mails and, uh, Phi of j given y equals 1 is, um, well,
+1:16:09
+I'll write this out in indicator function notation.
+1:16:19
+Oh, shoot, sorry.
+1:16:43
+Okay. So that's the indicator function notation of writing notes.
+1:16:49
+Look through your, uh, training set, find all the spam e-mails and of all the spam e-mails,
+1:16:54
+i.e., examples of y equals 1 count up what fraction of them had word j in it, right?
+1:17:00
+So you estimate that the chance of word j appearing- you estimate the chance of the word by appearing in a spam e-mail is
+1:17:07
+just we have all the spam e-mails in your training set, what fraction of them contain the word by?
+1:17:12
+What- what fraction of them had, you know, x_j equals 1 for say, the word by, okay?
+1:17:17
+Um, and so it turns out that if you implement this algorithm,
+1:17:23
+it will- it will nearly work, I guess, uh, uh, but this is Naive Bayes for,
+1:17:28
+um, for e-mail spam classification, right? And I mentioned, uh, one reason this,
+1:17:35
+uh, and it turns out that what one fixed to this algorithm, which we'll talk about on Wednesday, um,
+1:17:41
+this is actually, it's actually a not too horrible spam classifier. It turns out that if you used logistic regression
+1:17:48
+for spam classification you do better than this almost all the time. But this is a very efficient algorithm,
+1:17:54
+because estimating these parameters is just counting, and then computing probabilities is just multiplying a bunch of numbers.
+1:18:00
+So there's nothing iterative about this. So you can fit this model very efficiently and also keep on updating this model even as you get new data,
+1:18:07
+even as you get new- new- new uses hits mark or spam or whatever, even as you get new data, you can update this model very efficiently.
+1:18:14
+Um, but it turns out that, uh, actually, the biggest problem with this algorithm is,
+1:18:20
+what happens if, uh, this is zero or if- if you get zeros in some of these equations, right?
+1:18:25
+But we'll come back to that when we talk about Laplace moving on Wednesday, okay?
+1:18:31
+All right, any quick questions before we wrap up? Okay, okay good.
+1:18:38
+So now you've learned about generative learning algorithms, um, we'll come back on Wednesday and learn about some more fine details how to make this work even better.
+1:18:45
+So let's break, I'll see you on Wednesday.

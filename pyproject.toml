@@ -1,0 +1,157 @@
+[project]
+name = "zero-to-ai"
+version = "0.1.0"
+description = "Comprehensive AI/ML learning path from zero to production"
+authors = [
+    {name = "mnpawan", email = "mnpawan@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    # Core ML/DL
+    "torch>=2.5.0",
+    "torchvision>=0.20.0",
+    "transformers>=4.47.0",
+    "datasets>=3.1.0",
+    
+    # Tokenization
+    "tiktoken>=0.8.0",
+    "tokenizers>=0.20.0",
+    "sentencepiece>=0.2.0",
+    
+    # Embeddings
+    "sentence-transformers>=3.3.0",
+    "openai>=1.58.0",
+    
+    # Vector Databases - Cloud
+    "chromadb>=0.5.23",
+    "qdrant-client>=1.12.0",
+    "weaviate-client>=4.9.3",
+    "pymilvus>=2.4.9",
+    "pinecone-client>=5.0.0",
+    
+    # Vector Databases - Self-hosted
+    "faiss-cpu>=1.9.0",
+    "redis>=5.2.0",
+    "elasticsearch>=8.16.0",
+    "pymongo>=4.10.0",
+    
+    # PostgreSQL with vector support
+    "psycopg2-binary>=2.9.10",
+    "pgvector>=0.3.6",
+    
+    # Data Science
+    "numpy>=2.1.0",
+    "pandas>=2.2.0",
+    "scikit-learn>=1.6.0",
+    "scipy>=1.14.0",
+    
+    # Visualization
+    "matplotlib>=3.10.0",
+    "seaborn>=0.13.0",
+    "plotly>=5.24.0",
+    
+    # Jupyter
+    "jupyter>=1.1.0",
+    "ipykernel>=6.29.0",
+    "ipywidgets>=8.1.0",
+    
+    # RAG and LLM Frameworks
+    "langchain>=0.3.0",
+    "langchain-openai>=0.2.0",
+    "llama-index>=0.12.0",
+    "anthropic>=0.40.0",
+    
+    # Fine-tuning
+    "peft>=0.13.0",
+    "accelerate>=1.2.0",
+    "trl>=0.12.0",
+    
+    # Local LLMs
+    "ollama>=0.4.0",
+    "vllm>=0.6.0",
+    
+    # Multimodal
+    "diffusers>=0.32.0",
+    "pillow>=11.0.0",
+    "opencv-python>=4.10.0",
+    "timm>=1.0.0",
+    
+    # NLP Tools
+    "spacy>=3.8.0",
+    "nltk>=3.9.0",
+    "seqeval>=1.2.0",
+    "sacrebleu>=2.4.0",
+    "rouge-score>=0.1.2",
+    
+    # Cloud Platforms
+    "google-cloud-aiplatform>=1.73.0",
+    "azure-search-documents>=11.6.0",
+    "azure-identity>=1.19.0",
+    "opensearch-py>=2.7.0",
+    
+    # MLOps
+    "fastapi>=0.115.0",
+    "uvicorn>=0.32.0",
+    "pydantic>=2.10.0",
+    "mlflow>=2.17.0",
+    "wandb>=0.18.0",
+    "prometheus-client>=0.21.0",
+    "psutil>=6.1.0",
+    "joblib>=1.4.0",
+    
+    # Statistical Analysis
+    "statsmodels>=0.14.0",
+    "lifelines>=0.30.0",
+    
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "tqdm>=4.67.0",
+    "requests>=2.32.0",
+    "huggingface-hub>=0.27.0",
+    "click>=8.1.0",
+    "pyyaml>=6.0.0",
+    
+    # AWS
+    "boto3>=1.28.0",
+    "awscli>=1.29.0",
+]
+
+[project.optional-dependencies]
+# GPU support (NVIDIA CUDA) - Linux/Windows only
+gpu = [
+    "bitsandbytes>=0.45.0; sys_platform != 'darwin'",
+]
+
+# Development tools
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
+]
+
+# All optional dependencies
+all = [
+    "bitsandbytes>=0.45.0; sys_platform != 'darwin'",
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# This is a learning repository with notebooks, not a traditional package
+py-modules = []
+
+[dependency-groups]
+dev = [
+    "pytest>=7.4.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
+]

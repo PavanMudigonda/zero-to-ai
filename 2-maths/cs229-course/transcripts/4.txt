@@ -1,0 +1,1246 @@
+0:03
+Couple of announcements, uh, before we get started. So, uh, first of all, PS1 is out.
+0:10
+Uh, problem set 1, um, it is due on the 17th.
+0:16
+That's two weeks from today. You have, um, exactly two weeks to work on it. You can take up to,
+0:22
+um, two or three late days. I think you can take up to, uh, three late days, um.
+0:27
+There is, uh, there's a good amount of programming and a good amount of math you, uh, you need to do.
+0:34
+So PS1 needs to be uploaded. Uh, the solutions need to be uploaded to Gradescope. Um, you'll have to make two submissions.
+0:42
+One submission will be a PDF file, uh, which you can either, uh,
+0:48
+which you can either use a LaTeX template that we provide or you can handwrite it as well but you're strongly encouraged to use the- the LaTeX template.
+0:56
+Um, and there is a separate coding assignment, uh, for which you'll have to submit code as a separate,
+1:03
+uh, Gradescope assignment. So they're gonna- you're gonna see two assignments in Gradescope. One is for the written part.
+1:08
+The other is for the, uh, is for the programming part. Uh, with that, let's- let's jump right into today's topics.
+1:16
+So, uh, today, we're gonna cover, uh- briefly we're gonna cover, uh, the perceptron, uh, algorithm.
+1:23
+Um, and then, you know, a good chunk of today is gonna be exponential family and,
+1:28
+uh, generalized linear models. And, uh, we'll- we'll end it with, uh, softmax regression for multi-class classification.
+1:35
+So, uh, perceptron, um, we saw in logistic regression, um.
+1:42
+So first of all, the perceptron algorithm, um, I should mention is not something that is widely used in practice.
+1:48
+Uh, we study it mostly for, um, historical reasons. And also because it is- it's nice and simple and, you know,
+1:56
+it's easy to analyze and, uh, we also have homework questions on it. So, uh, logistic regression.
+2:04
+Uh, we saw logistic regression uses, uh, the sigmoid function.
+2:33
+Right. So, uh, the logistic regression, uh, using the sigmoid function which, uh,
+2:39
+which essentially squeezes the entire real line from minus infinity to infinity between 0 and 1.
+2:45
+Um, and - and the 0 and 1 kind of represents, uh, the probability right?
+2:50
+Um, you could also think of, uh, a variant of that, uh, which will be, um,
+2:57
+like the perceptron where, um. So in- in- in the sigmoid function at, um,
+3:03
+at z equals 0- at z equals 0- g of z is a half.
+3:12
+And as z tends to minus infinity, g tends to 0 and as z tends to plus infinity,
+3:18
+g tends to 1. The perceptron, um, algorithm uses,
+3:26
+uh, uh, a somewhat similar but, uh, different, uh, function which,
+3:38
+uh, let's say this is z.
+3:48
+Right. So, uh, g of z in this case
+3:55
+is 1 if z is greater than or equal to 0 and 0 if z is less than 0, right?
+4:05
+So you ca- you can think of this as the hard version of- of- of the sigmoid function, right?
+4:10
+And this leads to, um, um, this leads to the hypothesis function, uh,
+4:18
+here being, uh, h Theta of x is equal to,
+4:24
+um, g of Theta transpose x.
+4:30
+So, uh, Theta transpose x, um, your Theta has the parameter,
+4:35
+x is the, um, x is the input and h Theta of x will be 0 or 1,
+4:41
+depending on whether Theta transpose x was less than 0 or- or, uh, greater than 0.
+4:47
+And you tol- and, um, similarly in, uh, logistic regression we had a state of x is equal to,
+4:56
+um, 1 over 1 plus e to the minus Theta transpose x. Yeah.
+5:01
+That's essentially, uh, g of- g of z where g is s, uh, the sigma- sigmoid function.
+5:07
+Um, both of them have a common update rule, uh, which, you know,
+5:13
+on the surface looks similar. So Theta j equal to Theta j plus Alpha times y_i
+5:25
+minus h Theta of- of
+5:31
+x_i times x_ij, right?
+5:38
+So the update rules for, um, the perceptron and logistic regression, they look the same except h Theta of x means
+5:45
+different things in- in- in- in the two different, um, uh, scenarios. We also saw that it was similar for linear regression as well.
+5:53
+And we're gonna see why this- this is, um, you know, that this is actually a- a more common- common theme.
+5:59
+So, uh, what's happening here? So, uh, if you inspect this equation, um,
+6:06
+to get a better sense of what's happening in- in the perceptron algorithm, this quantity over here is a scalar, right?
+6:16
+It's the difference between y_i which can be either 0 and 1 and h Theta of x_i which can either be 0 or 1, right?
+6:24
+So when the algorithm makes a prediction of h Theta of- h Theta of x_i for a given x_i,
+6:32
+this quantity will either be zero if- if, uh,
+6:41
+the algorithm got it right already, right?
+6:49
+And it would be either plus 1 or minus 1 if- if y_i- if- if the actual, uh,
+6:59
+if the ground truth was plus 1 and the algorithm predicted 0, then it, uh, uh,
+7:04
+this will evaluate to 1 if wrong and y_i equals 1 and similarly it is,
+7:15
+uh, minus 1 if
+7:21
+wrong and y_i is 0.
+7:27
+So what's happening here? Um, to see what's- what's- what's happening, uh, it's useful to see this picture, right?
+7:38
+So this is the input space, right? And, uh, let's imagine there are two, uh,
+7:45
+two classes, boxes and,
+7:52
+let's say, circles, right? And you want to learn, I wanna learn an algorithm that can separate these two classes, right?
+8:00
+And, uh, if you imagine that the, uh, uh,
+8:06
+what- what the algorithm has learned so far is a Theta that represents this decision boundary, right?
+8:14
+So this represents, uh, Theta transpose x equals 0.
+8:19
+And, uh, anything above is Theta transpose, uh, x is greater than 0.
+8:26
+And anything below is Theta transpose x less than 0, all right?
+8:32
+And let's say, um, the algorithm is learning one example at a time, and a new example comes in.
+8:38
+Uh, and this time it happens to be- the new example happens to be a square, uh, or a box.
+8:47
+And, uh, but the algorithm has mis- misclassified it, right? Now, um, this line, the separating boundary,
+8:56
+um, if- if- if the vector equivalent of that would be a vector that's normal to the line.
+9:03
+So, uh, this was- would be Theta, all right? And this is our new x, right? This is the new x.
+9:13
+So this got misclassified, this, uh, uh, this is lying to, you know,
+9:19
+lying on the bottom of the decision boundary. So what- what- what's gonna happen here? Um, y_i, let's call this the one class and this is- this is the zero class, right?
+9:29
+So y_i minus- h state of i will be plus 1, right?
+9:34
+And what the algorithm is doing is, uh, it sets Theta to be Theta plus Alpha times x, right?
+9:42
+So this is the old Theta, this is x. Alpha is some small learning rate.
+9:47
+So it adds- let me use a different color here. It adds, right, Alpha times x to
+9:57
+Theta and now say this is- let's call it Theta prime, is the new vector.
+10:04
+That's- that's the updated value, right? And the- and the separating, um, uh, hyperplane corresponding to this is something that is normal to it, right?
+10:14
+Yeah. So- so it updated the, um, decision boundary such that x is now included in the positive class, right?
+10:22
+The- the, um, idea here- here is that, um, Theta,
+10:29
+we want Theta to be similar to x in general, where such- where y is 1.
+10:38
+And we want Theta to be not similar to x when y equals 0.
+10:44
+The reason is, uh, when two vectors are similar, the dot product is positive and they are not similar,
+10:50
+the dot product is negative. Uh, what does that mean? If, uh, let's say this is, um, x and let's say you have Theta.
+10:57
+If they're kind of, um, pointed outwards, their dot product would be, um, negative.
+11:03
+And when- and if you have a Theta that looks like this, we call it Theta prime, then the dot product will be
+11:09
+positive if the angle is- is less than r. So, um, this essentially means that as Theta is rotating,
+11:15
+the, um, decision boundary is kind of perpendicular to Theta. And you wanna get all the positive x's on one side of the decision boundary.
+11:23
+And what's the- what's the, uh, most naive way of- of- of taking Theta and given x,
+11:30
+try to make Theta more kind of closer to x? A simple thing is to just add a component of x in that direction.
+11:37
+You know, add it here and kind of make Theta. And so this- this is a very common technique used in lots of
+11:42
+algorithms where if you add a vector to another vector, you make the second one kind of closer to the first one, essentially.
+11:49
+So this is- this is, uh, the perceptron algorithm. Um, you go example by example in an online manner,
+11:56
+and if the al- if the, um, example is already classified, you do nothing. You get a 0 over here.
+12:02
+If it is misclassified, you either add the- add a small component of, uh,
+12:08
+as, uh, you add the vector itself, the example itself to your Theta or you subtract it, depending on the class of the vector.
+12:15
+This is about it. Any- any- any questions about the perceptron?
+12:21
+Cool. So let's move on to the next topic, um, exponential families.
+12:29
+Um, so, um, exponential family is essentially a class of- yeah.
+12:39
+Why don't we use them in practice? Um, it's, um, not used in practice because,
+12:46
+um, it- it does not have a probabilistic interpretation of what's- what's happening.
+12:51
+You kinda have a geometrical feel of what's happening with- with the hyperplane but it- it doesn't have a probabilistic interpretation.
+12:57
+Also, um, it's, um, it- it was- and I think the perceptron was,
+13:04
+uh, pretty famous in, I think, the 1950s or the '60s where people thought this is a good model of how the brain works.
+13:10
+And, uh, I think it was, uh, Marvin Minsky who wrote a paper saying, you know, the perceptron is- is kind of limited because it- it could never classify,
+13:20
+uh, points like this. And there is no possible separating boundary that can,
+13:25
+you know, do- do something as simple as this. And kind of people lost interest in it, but, um, yeah.
+13:31
+And in fact, what- what we see is- is, uh, in logistic regression, it's like a software version of,
+13:36
+uh, the perceptron itself in a way. Yeah. [inaudible]
+13:48
+It's- it's, uh, it's up to, you know, it's- it's a design choice that you make. What you could do is you can- you can kind of,
+13:55
+um, anneal your learning rate with every step, every time, uh, you see a new example decrease your learning rate until something,
+14:02
+um, um, until you stop changing, uh, Theta by a lot. You can- you're not guaranteed that you'll- you'll be able to get every example right.
+14:10
+For example here, no matter how long you learn you're- you're never gonna, you know, um, uh, find, uh, a learning boundary.
+14:16
+So it's- it's up to you when you wanna stop training. Uh, a common thing is to just decrease the learning rate,
+14:21
+uh, with every time step until you stop making changes. All right.
+14:29
+Let's move on to exponential families. So, uh, exponential families is, uh, is a class of probability distributions,
+14:36
+which are somewhat nice mathematically, right? Um, they're also very closely related to GLMs,
+14:43
+which we will be going over next, right? But first we kind of take a deeper look at, uh,
+14:49
+exponential families and, uh, and- and what they're about. So, uh, an exponential family is one, um, whose PDF,
+15:10
+right? So whose PDF can be written in the form- by PDF I mean probability density function,
+15:17
+but for a discrete, uh, distribution, then it would be the probability mass function, right?
+15:23
+Whose PDF can be written in the form, um. All right. This looks pretty scary.
+15:50
+Let's- let's- let's kind of, uh, break it down into, you know, what- what- what they actually mean. So y over here is the data, right?
+16:00
+And there's a reason why we call it y because- yeah. Can you write a bit larger.
+16:06
+A bit larger, sure.
+16:16
+Is this better?
+16:30
+Yeah. So y is the data. And the reason- there's a reason why we call it y and not x. And that- and that's because we're gonna use exponential families
+16:38
+to model the output of your- of- of your data, you know, in a, uh, in a supervised learning setting. Um, and- and you're gonna see x when we move on to GLMs.
+16:46
+Until, you know, until then we're just gonna deal with y's for now. Uh, so y is the data. Um, Eta is- is called the natural parameter.
+17:03
+T of y is called a sufficient statistic.
+17:09
+If you have a statistics background and you've learn- if you come across the word sufficient statistic before, it's the exact same thing.
+17:16
+But you don't need to know much about this because for all the distributions that we're gonna be seeing today,
+17:24
+uh, or in this class, t of y will be equal to just y. So you can, you can just replace t of y with y for,
+17:32
+um, for all the examples today and in the rest of the calcu- of the class.
+17:38
+Uh, b of y, is called a base measure.
+17:47
+Right, and finally a of Eta,
+17:52
+is called the log-partition function. And we're gonna be seeing a lot of this function, log-partition function.
+18:02
+Right, so, um, again, y is the data that, uh, this probability distribution is trying to model.
+18:10
+Eta is the parameter of the distribution. Um, t of y,
+18:16
+which will mostly be just y, um, but technically you know, t of y is more, more correct.
+18:21
+Um, um, b of y, which means it is a function of only y.
+18:27
+This function cannot involve Eta. All right. And similarly t of y cannot involve Eta. It should be purely a function of y. Um,
+18:35
+b of y is called the base measure, and a of Eta, which has to be a function of only Eta and, and constants.
+18:42
+No, no y can, can, uh, can be part of a of, uh, Eta. This is called the log-partition function.
+18:48
+Right. And, uh, the reason why this is called the log-partition function
+18:53
+is pretty easy to see because this can be written as b of y,
+19:00
+ex of Eta, times t of y over.
+19:11
+So these two are exactly the same. Um, just take this out and, um, um.
+19:19
+Sorry, this should be the log.
+19:31
+I think it's fine. These two are exactly the same.
+19:38
+And, uh. It should be the [inaudible] and that should be positive. Oh, yeah, you're right. This should be positive, um. Thank you.
+19:50
+So, uh, this is, um, you can think of this as a normalizing constant of the distribution such that the,
+19:57
+um, the whole thing integrates to 1, right? Um, and, uh, therefore the log of this will be a of Eta,
+20:04
+that's why it's just called the log of the partition function. So the partition function is a technical term to indicate the normalizing constant of, uh, probability distributions.
+20:12
+Now, um, you can plug-in any definition of b,
+20:20
+a, and t. Yeah.
+20:26
+Sure. So why is your y, and for most of, uh, most of our example is going to be a scalar.
+20:34
+Eta can be a vector. But we will also be focusing, uh,
+20:41
+except maybe in Softmax, um, this would be, uh, a scalar. T of y has to match,
+20:48
+so these- the dimension of these two has to match [NOISE].
+20:55
+And these are scalars, right? So for any choice of a,
+21:04
+b and t, that you've- that, that, that can be your choice completely.
+21:09
+As long as the expression integrates to 1, you have a family in the exponential family, right?
+21:17
+Uh, what does that mean? For a specific choice of, say, for, for, for some choice of a,
+21:23
+b, and t. This can actually- this will be equal to say the, uh, PDF of the Gaussian, in which case you,
+21:30
+you got for that choice of t, a, and, and b, you got the Gaussian distribution.
+21:36
+A family of Gaussian distribution such that for any value of the parameter, you get a member of the Gaussian family. All right.
+21:44
+And this is mostly, uh, to show that, uh, a distribution is in the exponential family.
+21:51
+Um, the most straightforward way to do it is to write out the PDF of the distribution in a form that you know,
+21:58
+and just do some algebraic massaging to bring it into this form, right? And then you do a pattern match to, to and,
+22:06
+and, you know, conclude that it's a member of the exponential family. So let's do it for a couple of examples.
+22:15
+So, uh, we have [NOISE].
+22:31
+So, uh, a Bernoulli distribution is one you use to, uh, model binary data.
+22:41
+Right. And it has a parameter, uh, let's call it Phi, which is,
+22:47
+you know, the probability of the event happening or not. Right, right. Now, the,
+23:00
+uh, what's the PDF of a Bernoulli distribution?
+23:07
+One way to, um, write this is Phi of y,
+23:13
+times 1 minus Phi, 1 minus y. I think this makes sense.
+23:20
+This, this pattern is like, uh, uh, a way of writing a programming- programmatic if else in,
+23:28
+in, in math. All right. So whenever y is 1, this term cancels out, so the answer would be Phi.
+23:35
+And whenever y is 0 this term cancels out and the answer is 1 minus Phi. So this is just a mathematical way to,
+23:41
+to represent an if else that you would do in programming, right. So this is the PDF of, um, a Bernoulli.
+23:49
+And our goal is to take this form and massage it into that form, right,
+23:55
+and see what, what the individual t, b, and a turn out to be, right.
+24:00
+So, uh, whenever you, you, uh, see your distribution in this form, a common, um,
+24:08
+technique is to wrap this with a log and then Exp.
+24:20
+Right, um, because these two cancel out so, uh, this is actually exactly equal to this [NOISE].
+24:32
+And, uh, if you, uh, do some more algebra and this, uh, we will see that,
+24:39
+this turns out to be Exp of log Phi over 1 minus Phi times y,
+24:51
+plus log of 1 minus Phi, right?
+24:59
+It's pretty straightforward to go from here to here. Um, I'll, I'll let you guys,uh, uh, verify it yourself.
+25:05
+But once we have it in this form, um, it's easy to kind of start doing some pattern matching,
+25:10
+from this expression to, uh, that expression. So what, what we see, um,
+25:15
+here is, uh, the base measure b of y is equal to.
+25:21
+If you match this with that, b of y will be just 1.
+25:26
+Uh, because there's no b of y term here. All right. And, um, so this would be b of y.
+25:35
+This would be Eta. This would be t of y.
+25:42
+This would be a of Eta, right? So that could be, uh, um,
+25:50
+you can see that the kind of matching pattern. So b of y would be 1.
+25:57
+T of y is just y, as, um, as expected.
+26:03
+Um, so Eta is equal to log Phi over 1 minus Phi.
+26:14
+And, uh, this is an equivalent statement is to invert this operation and say
+26:23
+Phi is equal to 1 over 1 plus e to the minus Eta.
+26:33
+I'm just flipping the operation from, uh, this went from Phi to Eta here.
+26:38
+It's, it's, it's the equivalent. Now, here it goes from Eta to Phi, right? And a of Eta is going to be, um,
+26:51
+so here we have it as a function of Phi, but we got an expression for Phi in terms of eta,
+26:58
+so you can plug this expression in here, and that, uh, change of minus sign.
+27:06
+So, so, let, let me work out this, minus log of 1 minus Phi.
+27:12
+This is, uh, just, uh, the pattern matching there. And minus log 1 minus,
+27:22
+this thing over, 1 over 1 plus Eta to the minus Eta. The reason is because we want an expression in terms of Eta.
+27:30
+Here we got it in terms of Phi, but we need to, uh, plug in, um, plug in Eta over here.
+27:35
+Uh, Eta, and this will just be, uh, log of 1 plus e to the Eta.
+27:44
+Right. So there you go. So this, this kind of, uh,
+27:49
+verifies that the Bernoulli distribution is a member of the exponential family. Any questions here? So note that this may look familiar.
+28:01
+It looks like the, uh, sigmoid function, somewhat like the sigmoid function,
+28:06
+and there's actually no accident. We'll see, uh, why, why it's, uh, actually the sigmoid- how,
+28:12
+how it kind of relates to, uh, logistic regression in a minute. So another example, um
+28:18
+[NOISE].
+28:28
+So, uh, a Gaussian with fixed variance.
+28:41
+Right, so, um, a Gaussian distribution, um, has two parameters the mean and the variance, uh,
+28:49
+for our purposes we're gonna assume a constant variance, um, you-you can, uh, have,
+28:55
+um, you can also consider Gaussians with, with where the variance is also a variable,
+29:01
+but for-for, uh, our course we are go- we are only interested in, um, Gaussians with fixed variance and we are going to assume,
+29:11
+assume that variance is equal to 1.
+29:16
+So, this gives the PDF of a Gaussian to look like this, p of y parameterized as mu. So note here,
+29:26
+when we start writing out, we start with the, uh, parameters that we are, um,
+29:32
+commonly used to, and we- they are also called like the canonical parameters. And then we set up a link between the canonical parameters and the natural parameters,
+29:41
+that's part of the massaging exercise that we do. So we're going to start with the canonical parameters, um,
+29:47
+is equal to 1 over root 2 pi, minus over 2.
+30:02
+So this is the Gaussian PDF with, um, with- with a variance equal to 1, right,
+30:10
+and this can be rewritten as- again,
+30:15
+I'm skipping a few algebra steps, you know, straightforward no tricks there,
+30:21
+uh, any question? Yep? [BACKGROUND].
+30:26
+Fixed variance. E to the minus y squared over 2, times EX.
+30:43
+Again, we go to the same exercise, you know, pattern match, this is b of y,
+30:52
+this is eta, this is t of y,
+30:59
+and this would be a of eta, right?
+31:05
+So, uh, we have, uh, b of y equals 1 over root 2
+31:11
+pi minus y squared by 2.
+31:17
+Note that this is a function of only y, there's no eta here, um, t of y is just y, and in this case,
+31:26
+the natural parameter is-is mu, eta is mu, and the log partition function is equal to mu square by 2,
+31:37
+and when we-and we repeat the same exercise we did here,
+31:43
+we start with a log partition function that is parameterized by the canonical parameters,
+31:49
+and we use the, the link between the canonical and, and, uh, the natural parameters, invert it and,
+31:57
+um, um, so in this case it's- it's the- it's the same sets, eta over 2.
+32:04
+So, a of eta is a function of only eta, again here a of eta was a function of only eta,
+32:09
+and, um, p of y is a function of only y, and b of y is a function of only,
+32:14
+um, y as well. Any questions on this? Yeah.
+32:24
+If the variance is unknown [inaudible]. Yeah, you- if, if the variance is unknown you can write it as
+32:31
+an exponential family in which case eta will now be a vector, it won't be a scalar anymore, it'll be- it'll have two, uh,
+32:37
+like eta1 and eta2, and you will also have, um,
+32:42
+you will have a mapping between each of the canonical parameters and each of the natural parameters,
+32:48
+you, you can do it, uh, you know, it's pretty straightforward. Right, so this is- this is exponential- these are exponential families, right?
+32:58
+Uh, the reason why we are, uh, why we use exponential families is because it has some nice mathematical properties, right?
+33:10
+So, uh, so one property is now,
+33:16
+uh, if we perform maximum likelihood on, um, on the exponential family,
+33:22
+um, as, as, uh, when, when the exponential family is parameterized in the natural parameters,
+33:29
+then, uh, the optimization problem is concave. So MLE with respect to eta is concave.
+33:43
+Similarly, if you, uh, flip this sign and use the, the, uh, what's called the negative log-likelihood,
+33:50
+so you take the log of the expression negate it and in this case, the negative log-likelihood is like
+33:55
+the cost function equivalent of doing maximum likelihood, so you're just flipping the sign, instead of maximizing, you minimize the negative log likelihood,
+34:02
+so-and, and you know, uh, the NLL is therefore convex, okay.
+34:10
+Um, the expectation of y.
+34:25
+What does this mean? Um, each of the distribution,
+34:31
+uh, we start with, uh, a of eta, differentiate this with respect to eta,
+34:37
+the log partition function with respect to eta, and you get another function with respect to eta,
+34:43
+and that function will- is, is the mean of the distribution as parameterized by eta,
+34:48
+and similarly the variance of y parameterized by eta,
+34:58
+is just the second derivative, this was the first derivative, this is the second derivative, this is eta.
+35:08
+So, um, the reason why
+35:13
+this is nice is because in general for probability distributions to calculate the mean and the variance,
+35:18
+you generally need to integrate something, but over here you just need to differentiate, which is a lot easier operation, all right?
+35:23
+And, um, and you
+35:31
+will be proving these properties in your first homework.
+35:38
+You're provided hints so it should be [LAUGHTER]. All right, so, um,
+35:45
+now we're going to move on to, uh, generalized linear models, uh, this- this is all we wanna talk about exponential families, any questions? Yep.
+35:59
+[inaudible].
+36:06
+Exactly, so, ah, if you're-if you're, um, if you're- if it's a multi-variate Gaussian,
+36:11
+then this eta would be a vector, and this would be the Hessian.
+36:22
+All right, let's move on to, uh, GLM's.
+36:35
+So the GLM is, is, um, somewhat like a natural extension of the exponential families to include,
+36:44
+um, include covariates or include your input features in some way, right.
+36:49
+So over here, uh, we are only dealing with, uh, in, in the exponential families, you're only dealing with like the y, uh, which in,
+36:56
+in our case, it- it'll kind of map to the outputs, um. But, um, we can actually build a lot of many powerful models by,
+37:08
+by choosing, uh, an appropriate, um, um, family in the exponential family and kind of plugging it onto a, a linear model.
+37:19
+So, so the, uh, assumptions we are going to make for GLM is that one, um,
+37:26
+so these are the assumptions or
+37:32
+design choices that are gonna take us from exponential families to,
+37:40
+uh, generalized linear models. So the most important assumption is that, uh, well, yeah.
+37:46
+Assumption is that y given x parameterized
+37:51
+by Theta is a member of an exponential family.
+38:06
+Right. By exponential family of Theta, I mean that form.
+38:11
+It could, it could, uh, in, in the particular, uh, uh, uh, scenario that you have, it could take on any one of these, um, uh, distributions.
+38:21
+Um, we only, we only, uh, talked about the Bernoullian Gaussian.
+38:26
+There are also, um, other distributions that are- those are part of the, uh, exponential family.
+38:32
+For example, um, I forgot to mention this. So if you have, uh,
+38:38
+real value data, you use a Gaussian.
+38:43
+If you have binary, a Bernoulli.
+38:51
+If you have count, uh, like, counts here.
+38:56
+And so this is a real value. It can take any value between zero and infinity by count. That means just non-negative integers,
+39:03
+uh, but not anything between it. So if you have counts, you can use a Poisson. If you have uh, positive real value integers like say,
+39:14
+the volume of some object or a time to an event which, you know, um, that you are only predicting into the future.
+39:20
+So here, you can use, uh, like Gamma or exponential.
+39:29
+So, um, so there is the exponential family, and there is also a distribution called the exponential distribution,
+39:35
+which are, you know, two distinct things. The exponential distribution happens to be a member of the exponential family as well,
+39:41
+but no, they're not the same thing. Um, the exponential and, um, yeah,
+39:47
+and you can also have, um, you can also have probability distributions over probability distributions.
+39:54
+Like, uh, the Beta, the Dirichlet.
+40:01
+These mostly show up in Bayesian machine learning or Bayesian statistics.
+40:06
+Right. So depending on the kind of data that you have,
+40:15
+if your y-variable is, is, is if you're trying to do a regression, then your y is going to be say, say a Gaussian.
+40:21
+If you're trying to do a classification, then your y is, and if it's a binary classification, then the exponential family would be Bernoulli.
+40:28
+So depending on the problem that you have, you can choose any member of the exponential family,
+40:33
+um, as, as parameterized by Eta.
+40:38
+And so that's the first assumption. That y conditioned on y given x is a member of the exponential family.
+40:46
+And the, uh, second, the design choice that we are making here is that Eta is equal to Theta transpose x.
+40:56
+So this is where your x now comes into the picture. Right. So Theta is, um,
+41:03
+is in Rn, and x is also in Rn.
+41:11
+Now, this n has nothing to do with anything in the exponential family. It's purely, um, a dimensions of your of,
+41:19
+of your data that you have, of the x's of your inputs, and, and this does not show up anywhere else. And that, that- that's, um.
+41:27
+And, and, uh, Eta is, is, uh, we,
+41:32
+we make a design choice that Eta will be Theta transpose- transpose x. Um, and
+41:39
+another kind of assumption is that at test time, um, right.
+41:49
+When we want an output for a new x, given a new x, we want to make an output, right. So the output will be, right.
+42:04
+So given an x and, um, given an x, we get, uh, an exponential family distribution, right.
+42:11
+And the mean of that distribution will be the prediction that we make for a given, for a given x. Um, this may sound a little abstract, but, you know,
+42:19
+uh, we're going to make this, uh, uh, more clear. So this- what this essentially means is that the hypothesis function
+42:26
+is actually just, right.
+42:33
+This is our hypothesis function. And we will see that, you know, what we do over here, if you plug in the,
+42:38
+uh, um, exponential family, uh, as, as Gaussian, then the hypothesis will be the same, you know,
+42:44
+Gaussian hypothesis that we saw in linear regression. If we plug in a Bernoulli, then this will turn out to be the same hypothesis that we saw in logistic regression,
+42:52
+and so on, right. So, uh, one way to kind of, um, visualize this is,
+43:40
+right. So one way to think of is, of- if this is, there is a model and there is a distribution, right.
+43:47
+So the model we are assuming it to be a linear model, right. Given x, there is a learnable parameter Theta,
+43:53
+and Theta transpose x will give you a parameter, right. This is the model, and here is the distribution.
+43:59
+Now, the distribution, um, is a member of the exponential family. And the parameter for this distribution is the output of the linear model, right.
+44:10
+This, this is the picture you want to have in your mind. And the exponential family, we make, uh, depending on the data that we have.
+44:17
+Whether it's a, you know, whether it's, uh, a classification problem or a regression problem or a time to vent problem, you would choose an appropriate b,
+44:25
+a and t, uh, based on the distribution of your choice, right.
+44:31
+So this entire thing, uh, a-and from this, you can say, uh,
+44:37
+get the, uh, expectation of y given Eta.
+44:45
+And this is the same as expectation of y given Theta transpose x, right.
+44:54
+And this is essentially our hypothesis function.
+44:59
+Right.
+45:12
+Yep. [BACKGROUND] That's exactly right. Uh, so, uh, so the question is, um, are we training Theta to, uh, uh, um,
+45:21
+to predict the parameter of the, um, exponential family distribution whose mean is,
+45:28
+um, the, uh, uh, uh, prediction that we're gonna make for y. That's, that's correct, right.
+45:34
+And, um, so this is what we do at test time, right.
+45:40
+And during training time, how do we train this model?
+45:46
+So in this model, the parameter that we are learning by doing gradient descent, are these parameters, right.
+45:52
+So you're not learning any the parameters in the, uh, in the, uh, uh, exponential family.
+45:59
+We're not learning Mu or Sigma square or, or Eta. We are not learning those. We're learning Theta that's part of the model,
+46:05
+and not part of, uh, the distribution. And the output of this will become the, um, the distributions parameter.
+46:12
+It's unfortunate that we use the word parameter for this and that, but, uh, there,
+46:18
+there are- it's important to understand what, what is being learned during training phase and, and, and what's not.
+46:25
+So this parameter is the output of a function. It's not, it's not a variable that we,
+46:31
+that we, uh, do gradient descent on. So during learning, what we do is maximum likelihood.
+46:39
+Maximize with respect to Theta of P of
+46:46
+y i given, right.
+46:54
+So you're doing gradient ascent on the log probability of,
+47:00
+of y where, um, the, the, um, natural parameter was re-parameterized, uh,
+47:07
+with the linear model, right. And we are doing gradient ascent by taking gradients on Theta, right.
+47:15
+Thi-this is like the big picture of what's happening with GLMs, and how they kind of, yeah, are an extension of exponential families.
+47:21
+You re-parameterize the parameters with the linear model, and you get a GLM. [NOISE].
+47:41
+So let's, let's look at, uh, some more detail on what happens at train time. [NOISE]
+48:20
+So another, um, kind of incidental benefit of using, uh, uh,
+48:25
+GLMs is
+48:33
+that at train time, we saw that you wanna do, um,
+48:40
+maximum likelihood on the log prob- using the log probability with respect to Thetas, right?
+48:46
+Now, um, at first it may appear that, you know, we need to do some more algebra, uh,
+48:53
+figure out what the expression for, you know, P is, um, represented in the- in-
+48:59
+in- as a function of Theta transpose x and take the derivatives and, you know, come up with a gradient update rule and so on.
+49:06
+But it turns out that, uh, no matter which- uh,
+49:13
+what kind of GLM you're doing, no matter which choice of distribution that you make, the learning update rule is the same.
+49:21
+[NOISE] The learning update rule is Theta equals
+49:32
+Theta j plus Alpha times y_i
+49:38
+minus h Theta of x_i.
+49:47
+You guys have seen this so many times by now. So this is- you can,
+49:52
+you can straight away just apply this learning rule without ever having to,
+49:58
+um, do any more algebra to figure out what the gradients are or what the- what, what the loss is.
+50:05
+You can go straight to the update rule and do your learning. You plug in the appropriate h Theta of x,
+50:13
+you plug in the appropriate h Theta of x, uh, depending on the choice of distribution that you make and you can start learning.
+50:20
+Initialize your Theta to some random values and, and, and you can start learning. So um, any question on this? Yeah.
+50:30
+[inaudible] You can do, uh- if you wanna do it for batch gradient descent,
+50:39
+then you just, um, sum over all your examples. [inaudible]
+50:50
+Yeah. So, um, the uh, Newton method is, is, uh, is probably the most common you would use with GLMs, uh,
+50:58
+and that again comes with the assumption that you're- the dimensionality of your data is not extremely high.
+51:03
+As long as the number of features is less than a few thousand, then you can do Newton's method.
+51:12
+Any other questions? Good. So, um,
+51:23
+so this is the same update rule for any, any, um, any specific type of GLM based on the choice of distribution that you have.
+51:32
+Whether you are modeling, uh, you know, um, you're doing classification, whether you're doing regression, whether you're doing- you know,
+51:38
+a Poisson regression, the update rule is the same. You just plug in a different h Theta of x and you get your learning rule.
+51:46
+Another, um, some more terminology.
+51:58
+So Eta is what we call the natural parameter.
+52:03
+[NOISE] So Eta is
+52:12
+the natural parameter and the function that links the natural parameter
+52:27
+to the mean of the distribution and this has a name, it's called the canonical response function.
+52:42
+Right. And, um, similarly, you can also- let's call it Mu.
+52:48
+It's like the mean of the distribution. Uh, similarly you can go from Mu back to Eta with the inverse of this,
+52:57
+and this is also called the canonical link function.
+53:06
+There's some, uh, terminology. We also already saw that g of Eta is also equal to the,
+53:18
+the, the gradient of the log partition function with respect to Eta. So a side-note g is equal to- [NOISE]
+53:40
+right. And it's also helpful to make- explicit the distinction between
+53:46
+the three different kinds of parameterizations we have. So we have three parameterizations.
+53:56
+So we have the model parameters, that's Theta,
+54:06
+the natural parameters, that's Eta,
+54:14
+and we have the canonical parameters.
+54:19
+And this is a Phi for Bernoulli, Mu and Sigma square for Gaussian, Lambda for Poisson.
+54:31
+Right. So these are three different ways we are- we can parameterize,
+54:37
+um, either the exponential family or, or, or the G- uh, GLM. And whenever we are learning a GLM,
+54:45
+it is only this thing that we learn. Right. That is the Theta in the linear model.
+54:53
+This is the Theta that is, that is learned. Right. And, uh, the connection between these two is, is linear.
+55:00
+So Theta transpose x will give you a natural parameter. Uh, and this is the design choice that we're making.
+55:11
+Right. We choose to reparameterize Eta by a linear model,
+55:16
+uh, a linear of- linear in your data. And, um, between these two,
+55:22
+you have g to go this way and g inverse to come back this way where g is also the,
+55:30
+uh, uh, uh, derivative of the log partition. So yeah. So it's important to,
+55:36
+to kind of realize. It can get pretty confusing when you're seeing this for the first time because you have so many parameters that are being swapped around and,
+55:44
+you know, getting reparameterized. There are three kind of spaces in which- three different ways in which we are parameterizing,
+55:51
+uh, uh, generalized linear models. Uh, the model parameters, the ones that we learn and the output of this is
+55:58
+the natural parameter for the exponential family and you can, you know, do some algebraic manipulations and get the canonical parameters for, uh,
+56:07
+the distribution, uh, that we are choosing, uh, depending on the task where there's classification or regression.
+56:13
+[NOISE]
+56:21
+Any questions on this? [NOISE]
+56:33
+So no- now it's actually pretty, you know, um, you can- you can see that, you know,
+56:38
+when you are doing logistic regression, [NOISE] right?
+56:46
+So h theta of X, um, so h theta of X, um,
+56:53
+is the expected value of- of,
+57:02
+um, of Y, uh, conditioned on X theta,
+57:07
+[NOISE] and this is equal to phi, right?
+57:15
+Because, um, here the choice of distribution is a Bernoulli. And the mean of a Bernoulli distribution is
+57:21
+just phi the- in- in the canonical parameter space. And if we, um,
+57:28
+write that as, um, in terms of the, um, h minus eta and this is
+57:37
+equal to 1 over minus theta transpose X, right?
+57:43
+So, ah, the logistic function which when we introduced, ah, linear reg-, uh,
+57:48
+logistic regression we just, you know, pulled out the logistic function out of thin air, and said, hey,
+57:54
+this is something that can squash minus infinity to infinity, between 0 and 1, seems like a good choice.
+58:00
+Bu-but now we see that it is- it is a natural outcome. It just pops out from
+58:06
+this more elegant generalized linear model where if you choose Bernoulli to be, uh,
+58:13
+uh, to be the distribution of your, uh, output, then, you know, the logistic regression just- just pops out naturally.
+58:21
+[NOISE] So,um, [NOISE] any questions? Yeah.
+58:34
+Maybe you speak a little bit more about choosing a distribution to be the output.
+58:40
+Yeah. So the, uh, the choice of what distribution you are going to
+58:45
+choose is really dependent on the task that you have. So if your task is regression,
+58:51
+where you want to output real valued numbers like, you know, price of the house, or- or something, uh, then you choose a distribution over the real va- real- real numbers like a Gaussian.
+59:02
+If your task is classification, where your output is binary 0, or 1,
+59:08
+you choose a distribution that models binary data. Right? So the task in a way influences you to pick the distribution.
+59:18
+And, you know, uh, most of the times that choice is pretty obvious. [NOISE] If you want to model the number of visitors to a website which is like a count,
+59:26
+you know, you want to use a Poisson distribution, because Poisson distribution is a distribution over integers. So the task deci-,
+59:32
+you know, pretty much tells you what distribution you want to choose, and then you- you do the- you know, uh,
+59:38
+um, you do this, you know, all- you- you go through this machinery of- of- of figuring out what are the, uh,
+59:46
+what h state of X is, and you plug in h state of X over there and you have your learning rule.
+59:53
+Any more questions? So, uh, it-,
+59:58
+so we made some assumptions. Uh, these assumptions.
+1:00:03
+Now it- it- it's also helpful to kind of get,
+1:00:09
+uh, a visualization of what these assumptions actually mean, right? [NOISE]
+1:00:36
+So to expand upon your point, um, um. You know if you think of the question,
+1:00:42
+"Are GLMs used for classification, or are they used for regression, or are they used for, you know, um, something else?"
+1:00:48
+The answer really depends on what is the choice of distribution that you're gonna choose, you know.
+1:00:53
+GLMs are just a general way to model data, and that data could be, you know, um, binary, it could be real value.
+1:00:59
+And- and, uh, as long as you have a distribution that can model, ah, that kind of data,
+1:01:04
+and falls in the exponential family, it can be just plugged into a GLM and everything just, uh, uh, uh works out nicely.
+1:01:11
+Right. So, uh, [NOISE] so the assumptions that we made.
+1:01:20
+Let, uh, let's start with regression, [NOISE] right?
+1:01:26
+So for regression, we assume there is some X. Uh, to simplify I'm, um,
+1:01:32
+I'm drawing X as one dimension but, you know, X could be multi-dimensional.
+1:01:37
+And there exists a theta, right? And theta transpose X would- would be some linear, um,
+1:01:46
+um, some linear, uh, uh, uh, hyperplane.
+1:01:53
+And this, we assume is Eta, right?
+1:02:03
+And in case of regression Eta was also Mu.
+1:02:09
+So Eta was also Mu, right? Um, and then we are assuming that the Y,
+1:02:15
+for any given X, is distributed as a Gaussian with Mu as the mean.
+1:02:21
+So which means, for every X, every possible X, you have the appropriate, uh, um, um, Eta.
+1:02:29
+And with this as the mean, let's- let's think of this as Y. So that is, uh, a Gaussian distribution at
+1:02:37
+every possible- we assume a variance of 1.
+1:02:45
+So this is like, uh, a Gaussian with standard deviation or variance equal to 1, right? So for every possible X,
+1:02:50
+there is a Y given X, um, which is parameterized by- by- by theta transpose X as- as the mean, right?
+1:03:00
+And you assume that your data is generated from this process, right?
+1:03:07
+So what does it mean? It means, um, you're given X,
+1:03:12
+and let's- let's say this is Y. So you would have examples in your training set that- that may look like this, right?
+1:03:24
+The assumption here is that, for every X there is, um, um- let's say for this particular value of X,
+1:03:32
+um, there was a Gaussian distribution that started from the mean over here.
+1:03:37
+And from this Gaussian distribution this value was sampled, right?
+1:03:44
+You're - you're- you're- you're just sampling it from- from the distribution. Now, the, um- this is how your data is generated.
+1:03:51
+Again, this is our assumption, [NOISE] right?
+1:03:56
+Now that- now based on these assumptions what we are doing with the GLM is we start with the data.
+1:04:04
+We don't know anything else. We make an assumption that there is some linear model from which the data was-was- was- was generated in this format.
+1:04:12
+And we want to work backwards, right, to find theta that will give us this line, right?
+1:04:20
+So for different choice of theta we get a different line, right? We assume that, you know,
+1:04:26
+if -if that line represents the- the Mu's, or the means of the Y's for that particular X, uh,
+1:04:32
+from which it's sampled from, we are trying to find a line, [NOISE] ah,
+1:04:39
+which is- which will be like your theta transpose X from which these Y's are most likely to have sampled.
+1:04:45
+That's- that's essentially what's happening when you do maximum likelihood with- with -with the GLM, right? Ah, similarly, um, [NOISE]
+1:05:06
+Similarly for, um, classification, again let's assume there's an x, right?
+1:05:12
+And there are some Theta transpose x, right?
+1:05:17
+And, uh, and this Theta transpose x is equal- is Eta.
+1:05:23
+We assign this to be Eta, right? And this Eta is, uh, from this Eta,
+1:05:30
+we- we run this through the sigmoid function, uh, 1 over 1 plus e to the minus Eta to get Phi, right?
+1:05:41
+So if these are the Etas for each, um, for each Eta we run it through the sigmoid and we get something like this, right?
+1:05:53
+So this tends to, uh, 1. This tends to 0. And, um, when- at this point when Eta is 0,
+1:06:01
+the sigmoid is- is 0.5. This is 0.5, right?
+1:06:08
+And now, um, at each point- at- at- at any given choice of x,
+1:06:15
+we have a probability distribution. In this case, it's- it's a- it's a binary.
+1:06:23
+So let's assume probability of y is the height to the sigmoid line and here it is low.
+1:06:30
+Um, right. Every x we have a different, uh, Bernoulli distribution essentially, um, that's obtained where,
+1:06:36
+you know, the- the probability of y is- is the height to the, uh, uh, sigmoid through the natural parameter.
+1:06:43
+And from this, you have a data generating distribution that would look like this.
+1:06:48
+So x and, uh, you have a few xs in your training set. And for those xs, you calc- you- you figure out what your,
+1:06:57
+you know, y distribution is and sample from it. So let's say- right.
+1:07:11
+And now, um, again our goal is to stop- given- given this data,
+1:07:17
+so- so over here this is the x and this is y. So this is- these are points for which y is 0.
+1:07:22
+These are points for which y is 1. And so given- given this data, we wanna work backwards to find out,
+1:07:29
+uh, what Theta was. What's the Theta that would have resulted in a sigmoid like
+1:07:36
+curve from which these- these y's were most likely to have been sampled?
+1:07:41
+That's- and- and figuring out that y is- is- is essentially doing logistic regression.
+1:07:46
+Any questions?
+1:07:57
+All right. So in the last 10 minutes or so, we will, uh, go over softmax regression.
+1:08:30
+So softmax regression is, um, so in the lecture notes,
+1:08:36
+softmax regression is, uh, explained as, uh, as yet another member of the GLM family.
+1:08:43
+Uh, however, in- in- in today's lecture we'll be taking a non-GLM approach and kind of, um,
+1:08:48
+seeing- and- and see how softmax is- is essentially doing, uh, what's also called as cross entropy minimization.
+1:08:57
+We'll end up with the same- same formulas and equations. You can- you can go through the GLM interpretation in the notes.
+1:09:03
+It's a little messy to kind of do it on the whiteboard. So, um, whereas this has- has- has a nicer, um, um, interpretation.
+1:09:11
+Um, and it's good to kind of get this cross entropy interpretation as well. So, uh, let's assume- so here we are talking about multiclass classification.
+1:09:20
+So let's assume we have three cat- three, uh, classes of data.
+1:09:25
+Let's call them circles, um, squares, and say triangles.
+1:09:40
+Now, uh, if- here and this is x1 and x2.
+1:09:46
+We're just- we're just visualizing your input space and the output space, y is kind of implicit in the shape of this, so, um, um.
+1:09:53
+So, um, in- in, um, in multicl- multiclass classification,
+1:10:00
+our goal is to start from this data and learn a model that can,
+1:10:06
+given a new data point, you know, make a prediction of whether this point is a circle,
+1:10:13
+square or a triangle, right? Uh, you're just looking at three because it's
+1:10:18
+easy to visualize but this can work over thousands of classes. And, um, so what we have is
+1:10:28
+so you have x_is in R_n.
+1:10:34
+All right. So the label y
+1:10:39
+is, uh, is 0, 1_k.
+1:10:45
+So k is the number of classes, right?
+1:10:57
+So the labels y is- is- is a one-hot vector. What would you call it as a one-hot vector?
+1:11:04
+Where it's a vector which indicates which class the,
+1:11:09
+uh, x corresponds to. So each- each element in the vector, uh, corresponds to one of the classes.
+1:11:16
+So this may correspond to the triangle class, circle class, square class or maybe something else.
+1:11:22
+Uh, so the labels are, uh, in this one-hot vector where we have a vector that's filled with 0s
+1:11:30
+except with a 1 in one of the places, right? And- and- and- and the way we're gonna- the way we're gonna,
+1:11:44
+uh, um, think of softmax regression is that each class has its- its own set of parameters.
+1:11:52
+So we have, uh, Theta class, right, in R_n.
+1:12:01
+And there are k such things where class is in here,
+1:12:11
+triangle, circle, square, etc, right? So in logistic regression,
+1:12:17
+we had just one Theta, which would do a binary, you know, yes versus no. Uh, in softmax, we have one such vector of Theta per class, right?
+1:12:29
+So you could also optionally represent them as a matrix. There's an n by k matrix where, you know,
+1:12:36
+you have a Theta class- Theta class, right? Uh, so in softmax, uh, regression, um,
+1:12:44
+it's- it's- it's a generalization of logistic regression where you have, um, a set of parameters per class, right?
+1:12:53
+And we're gonna do something, um,
+1:13:01
+something similar to, uh, so, uh,
+1:13:18
+[NOISE] so corresponding
+1:13:29
+to each- each class, uh, uh, of- of, uh, parameters that exists, um [NOISE]
+1:13:41
+So there's- there exists this line which represents say, Theta triangle transpose x equals 0,
+1:13:48
+and anything to the left, will be Theta triangle transpose x is greater than 0,
+1:13:53
+and over here it'll be less than 0, right? So if, if- for, for- uh, uh, the- Theta triangle class,
+1:13:59
+um, there is- uh, there is this line, um, which- which corresponds to,
+1:14:05
+uh, uh, Theta transpose x equals 0. Anything to the left, uh will give you a value greater than on- zero, anything to the right.
+1:14:12
+Similarly, there is also-. Uh, so this corresponds to Theta,
+1:14:18
+uh, square transpose x equals 0. Anything below will be greater than 0,
+1:14:26
+anything above will be less than 0. Similarly you have another one for,
+1:14:33
+um, this corresponds to Theta circle transpose x equals 0.
+1:14:40
+And, and, and, and this half plane, we have, uh, to be greater than 0,
+1:14:45
+and to the left, it is less than 0, right? So we have, um,
+1:14:50
+a different set of parameters per class which, um, which, which, which hopefully satisfies this property, um,
+1:15:00
+and now, um, our goal is to take these parameters and let's see what happens when,
+1:15:10
+when we field a new example. So given an example x, we get a set of- given x,
+1:15:24
+um, and over here we have classes, right? So we have the circle class,
+1:15:30
+the triangle class, the square class, right? So, um, over here, we plot Theta class transpose x.
+1:15:39
+So we may get something that looks like this.
+1:15:45
+So let's say for a new point x over here,
+1:15:50
+uh, if that's our new x, we would have Theta transpose, um, Theta trans- Theta square transpose x to be positive.
+1:16:00
+So we- all right. And maybe for, um, for the others,
+1:16:06
+we may have some negative and maybe something like this for this, right? So- th- this space is,
+1:16:13
+is also called the logic space, right? So these are real numbers, right? Thi- this will, this will, uh,
+1:16:19
+this is not a value between 0 and 1, this is between plus infinity and minus infinity, right?
+1:16:24
+And, and our goal is to get, uh, a probability distribution over the classes.
+1:16:33
+Uh, and in order to do that, we perform a few steps. So we exponentiate the logics which would give us- so now it is x above Theta class
+1:16:45
+transpose x and this will make everything positive so it should be a small one.
+1:16:57
+Squares, triangles and circles, right? Now we've got a set of positive numbers.
+1:17:03
+And next, we normalize this.
+1:17:10
+By normalize, I mean, um, divide everything by the sum of all of them.
+1:17:17
+So here we have Theta e to the Theta class transpose x over the sum of i in triangle,
+1:17:30
+square, circle, e to the Theta i transpose x.
+1:17:37
+So n- once we do this operation, we now get a probability distribution
+1:17:53
+where the sum of the heights will add up to 1, right? So, uh- so given- so- if, if,
+1:18:01
+if- given a new point x and we run through this pipeline, we get a probability output over the classes for which
+1:18:09
+class that example is most likely to belong to, right?
+1:18:14
+And this whole process, so let's call this p hat of,
+1:18:20
+of, of, of y for the given x, right? So this is like our hypothesis.
+1:18:26
+The output of the hypothesis function will output this probability distribution. In the other cases, the output of the hypothesis function,
+1:18:32
+generally, output a scalar or a probability. In this case, it's outputting a probability di- distribution over all the classes.
+1:18:39
+And now, the true y would look something like this, right?
+1:18:45
+Let's say, the point over there was- le- let's say it was a triangle,
+1:18:50
+for, for whatever reason, right? If that was the triangle, then the p of y which is also called the label,
+1:18:59
+you can think of that as a probability distribution which is 1 over
+1:19:04
+the correct class and 0 elsewhere, right?
+1:19:09
+So p of y. This is essentially representing the one-hot representation as a probability distribution, right?
+1:19:15
+Now the goal or, or, um, the learning approach that we're going to do is in a way minimize
+1:19:23
+the distance between these two distributions, right?
+1:19:28
+This is one distribution, this is another distribution. We want to change this distribution to look like that distribution, right?
+1:19:34
+Uh, and, and, uh, technically, that- the term for that is minimize the cross entropy between the two distributions.
+1:19:55
+So the cross entropy
+1:20:00
+between p and p hat is equal to,
+1:20:12
+for y in circle, triangle, square,
+1:20:19
+p of y times log p hat of
+1:20:25
+y. I don't think we'll have time to go over the interpretation of cross entropy but you can look that up.
+1:20:32
+So here we see that p of y will be one for just one of the classes and zero for the others.
+1:20:37
+So let's say in this, this example, p of- so y was say a triangle. So this will essentially boil down to- there's a little min-
+1:20:46
+minus log p hat of y triangle, right?
+1:20:56
+And what we saw that this- the hypothesis is essentially that expression.
+1:21:02
+So that's equal to minus log x e x of
+1:21:08
+Theta triangle transpose x over sum of class in triangle,
+1:21:15
+square, circle, e to the triangle.
+1:21:23
+Right. And on this, you, you, you, you treat this as the loss and do gradient descent.
+1:21:34
+Gradient descent with respect to the parameters. Right, um, yeah.
+1:21:43
+With, with, with that I think, uh, uh, any, any questions on softmax?
+1:21:53
+Okay. So we'll, we'll break for today in that case. Thanks.

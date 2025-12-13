@@ -1,0 +1,1314 @@
+0:03
+Okay. Welcome everyone. So, um, today we'll be going over learning theory.
+0:09
+Um, this is, um, this used to be taught in the main lectures in- and in previous offerings.
+0:15
+Ah, this year we're gonna cover it as, ah, as a Friday section. Um, however, some of the concepts here are,
+0:22
+ah, we gonna be covering today are- are, um, important in the sense that they kind of deepen
+0:28
+your understanding of how machine learning kind of works under the covers. What are the assumptions that we're making and you know,
+0:35
+um, why do things generalize, um, and- and so forth. So here's the rough agenda for today.
+0:40
+So, ah, we're going to quickly start off with, ah, framing the learning problem and, ah,
+0:46
+we'll go deep into bias-variance, um, trade off. We'll go- we'll spend some time over there and we look at, uh,
+0:55
+some other ways where you can kind of, ah, decompose the error, ah, as approximation error and estimation error.
+1:02
+Um, we'll see what empirical, ah, risk minimization is and then we'll spend some time
+1:07
+on uniform convergence and, um, VC dimensions. So, ah, let's jump right in.
+1:15
+Right. So the, um,
+1:23
+so the assumptions under which we are going to be operating, um, for- for this lecture and in fact for most of- most of
+1:31
+the- the algorithms that we'll be covering in this course, um, is that there are two main assumptions.
+1:39
+One is that there exists a data distribution,
+1:47
+distribution D from which x y pairs are sampled.
+1:55
+So this is, ah, this makes sense in the supervised learning setting where,
+2:00
+um, you're expected to learn a mapping from x to y. But, ah, the assumption also actually holds
+2:06
+more generally even in the unsupervised, ah, setting case. The- the main assumption is that there is
+2:12
+a ge- data-generating distribution and the examples that we have in our training set,
+2:19
+and the ones we will be encountering when we test it,
+2:24
+ah, are all coming from the same distribution. Right. That's- that's like the core assumption. Um, without this, um,
+2:31
+coming up with any theory is- is- is gonna be much harder. So the assumption here is that you know, um,
+2:37
+there is some kind of a data ge-, ah, generating process. And we have a few samples from the data generating
+2:43
+process that becomes our training set and that is a finite number. Um, you can get an infinite number of samples from this data generating process,
+2:52
+and the examples that we're gonna encounter, ah, at test-time are also samples from the same process.
+2:59
+Right. That's- that's the assumption. And there is a second assumption. Um, which is that all the samples are sampled independently.
+3:15
+Um, so, um, with these two assumptions, ah, we can imagine a learning,
+3:22
+ah, the process of learning to look something like this. So, we have a set of x y pairs which we call as s. Um,
+3:35
+these are just x 1, y 1, x m y m. So we have m samples from- from- sample from the data
+3:48
+generating process and we feed this into
+3:53
+a learning algorithm and
+4:04
+the output of the learning algorithm is what we call as a hypothesis. Hypothesis, ah, is- is a function, um,
+4:13
+which accepts an input- a new input x and makes a prediction about- about y for that x.
+4:20
+So, ah, this hypothesis is sometimes also in the form of Theta hat.
+4:26
+So if we- if we restrict ourselves to a class of hypothesis. For example, ah, all possible logistic regression models of,
+4:33
+ah, of dimension n, for example, then, um, it's, you know, um, obtaining those parameters is equivalent to obtaining the hypothesis function itself.
+4:43
+So a key thing to note here is that this s is a random variable.
+4:51
+All right. This is a random variable.
+4:57
+This is a deterministic function.
+5:06
+And what happens when you feed a random variable through a deterministic function you get a? Random variable.
+5:14
+Exactly. So, um, the hypothesis that we get is also a random variable.
+5:25
+Right. So all random variables have a distribution associated with them.
+5:30
+The distribution associated with the data is the distribution of- of capital D. Um,
+5:36
+this just a fixed, ah, deterministic function. And there is a distribution associated with the,
+5:44
+um, um, with the- with the parameters that we obtain. That has a certain distribution as well.
+5:51
+In, um, in the sta- in- in a more statistical setting,
+5:58
+um, we call this an estimator. So if you take some advanced statistics courses you will call,
+6:04
+ah, what you will come across as an estimator. Here we call it a learning algorithm.
+6:09
+Right, and the distribution of Theta, um, is also called the sampling distribution.
+6:22
+And the, um, what's implied in this process is that there exists some Theta star,
+6:30
+ah, or in A star. However you want to view it which is in a sense a true parameter.
+6:39
+A true parameter that we wish,
+6:47
+ah, to be the output of the learning algorithm, ah, but of course, we never know- we never know what, ah,
+6:52
+Theta star is, um, and when, um, what we get out of the learning algorithm, um,
+6:59
+is- is going to be just a- a sample from a random, um, random variable.
+7:06
+Now, a thing to note is that this the Theta star or A star is not random.
+7:13
+It's just an unknown constant.
+7:18
+Not a- when we say it's not random it means there is no probability distribution associated with it.
+7:25
+It's just a constant which we don't know, that- that's- that's the assumption under which you operate.
+7:30
+Right. Now, um, let- let's see what's,
+7:35
+ah, let's see what's- what's- what are some properties about this Theta- Theta-hat.
+7:41
+So all the, um, all- all the- all the entities that we estimate are generally,
+7:47
+um, decorated with a hat on top, which- which indicates that it's- it's something that we estimated.
+7:53
+Um, and anything with a star is like, you know, the true or the right answer which we don't have access to it generally.
+8:01
+So any questions with this so far? Yeah. [BACKGROUND]
+8:11
+Yeah. So, yeah, this could be, uh, um, in case of like, uh, uh,
+8:17
+linear or, or logi- logistic regression or linear regression generally happens to be a vector. It could be a scalar,
+8:23
+it could be, you know, a matrix, it could be anything. Right. Uh, it's just an entity that we estimate.
+8:28
+Um, and sometimes, uh, H star can also be so generic that it,
+8:33
+it need not even be parameterized. It's just some function that you estimate. So, uh, yeah, so it could,
+8:41
+it could be a vector or a scalar or, or a matrix, it could be anything. Right? So, uh, let's see what happens when we- so in the lecture,
+8:54
+we saw, uh, this diagram for in, in the - when we were talking about bias-variance. So in case of, uh, regression,
+9:08
+[NOISE] and, um, we saw that this was one fit,
+9:22
+this was just, uh, let me use a different color,
+9:28
+straight line, and, right?
+9:40
+And we saw this as, uh, the concepts of [NOISE] sorry,
+9:46
+underfitting and this is overfit and this is like just right.
+9:58
+Right, so the concept of underfitting and overfitting are, kind of, closely related to bias and variance.
+10:04
+Uh, so this is how you would view it from the data. So this is from the data view, right?
+10:12
+Cause this is x, this is y. You know this is your data. Um, and if, if you look at, you know, um,
+10:19
+look at it from a data point of view, these are the kind of, uh, different algorithms that you might get, right?
+10:26
+However, uh, to get a more formal sense, uh, formal view into what's, what's bias and variance,
+10:31
+it's more useful to see it from the parameter view. [NOISE].
+10:41
+So let's imagine we have four different learning algorithms, right? I'm just going to plot four different.
+10:54
+And here this is the parameter space, let's say theta 1, theta 2. Let's imagine, you know,
+10:59
+uh, we have just two parameters. It's easier to visualize theta 1 and theta 2, right.
+11:07
+And this corresponds to algorithm A, algorithm B, C, and D. Right.
+11:15
+There is, there is a true theta star. Let's, let's- which is unknown, right?
+11:30
+Now, let's imagine we run through this, this process of sampling m examples running it through the algorithm,
+11:39
+obtain a theta hat, right? And then we start with a new sample- sample from
+11:45
+D run it through the algorithm we get a different theta hat, right? And theta hat is going to be different for different learning algorithms.
+11:52
+So, so let's imagine first we, we sample some data that's our training set,
+11:59
+run it through algorithm A and let's say this is the parameter we got and then we run it through
+12:06
+Algorithm B and let's say this is the parameter we got and through C here and through D over here.
+12:14
+And we're gonna repeat this, you know, second one maybe here, maybe here, here, here and so on and you repeat this process over and over and over.
+12:25
+The, the key is that the number of samples per input is m, that is fixed, right?
+12:31
+But we're gonna repeat this process and over and over and for every time we repeat it, we get a different point over here.
+12:38
+[NOISE]
+12:53
+Right? So, uh, each point each dot corresponds to a sample of size M, right?
+13:01
+The number of points is basically the number of times we repeated the experiment, right? And what we see is that
+13:08
+these dots are basically samples from the sampling distribution, right?
+13:13
+Now, the concept of, of bias and variance is kind of visible over here.
+13:21
+So if we were to classify this, now we would call this as bias and variance, right?
+13:37
+So these two are algorithms that have low bias, these two are- have high variance,
+13:44
+these two have low varia- I'm so- these two have low bias, high bias low variance, high variance.
+13:50
+So what does this mean? Uh, so bias is basically, um,
+13:56
+checking are the- is, is the sampling distribution kind of centered around the true parameter,
+14:02
+the true unknown parameter? Is it centered around the true parameter? Right? And variance is, um, is,
+14:08
+is measuring basically how dispersed the, the sampling distribution is, right?
+14:15
+So, so formally speaking, this is bias and variance and it becomes, uh, you know pretty clear when we see it in the parameter view instead of in,
+14:22
+uh, uh, uh, the data view. And essentially bias and variance are basically just properties of the first and second moments of your sampling distribution.
+14:31
+So you're asking the first moment that's the mean, is it centered around the true parameter and the second moment that variance - that's
+14:38
+literally variance of the bias-variance trade-off. Yeah. [inaudible].
+14:57
+Yeah. [inaudible]. Um, so this is, a, a diagram where I am using only two thetas just to fit,
+15:02
+you know write on a whiteboard. So you, you would imagine something that has high variance, for example,
+15:07
+this one to probably be of a much, much higher dimension, not just two, but it would still be spread out.
+15:13
+It would still have like high variance. There would be points in a higher-dimensional space, you know but more spread out.
+15:25
+Right, so, so the question was, um, the question was,
+15:30
+um, in over here we, uh, we actually had more number of thetas but, uh, here with the higher variance,
+15:36
+um, uh, plots we are having the same number of thetas. So, uh, yeah so you could imagine this to be higher-dimensional.
+15:44
+And also, different algorithms could have different, uh, bias and variance even though they have the same number of parameters.
+15:54
+For example, if you had regularization, the variance would come down, for example. Let me go over that, um, um, um,
+16:01
+a few observations that we want to make, uh, is that as we increase the size of the data,
+16:07
+every time we feed in, so if this were to, to be made bigger, if you take a bigger sample for every, um,
+16:15
+every time we learn, uh, the variance of theta hat would become small, right?
+16:23
+So if we repeat the same thing but with, with larger number of examples,
+16:28
+this would be more- all of these would be more, um, tightly concentrated, right? So, so the spread is, uh, uh,
+16:36
+so the spread is a function of how many examples we have in each, um, in each, uh, uh, iteration.
+16:45
+Right? So, uh, as m tends to infinity, right?
+16:52
+The variance tends to zero, right?
+16:57
+If you were to collect an infinite number of samples, run it through the algorithm,
+17:03
+you would get some particular, um, um, theta-hat. And if you were to repeat that with an infinite number of examples
+17:10
+we'll always keep getting the same, um, uh, theta hat. Now the rate at which the variance goes,
+17:18
+goes to 0 as you increase m, is you can think of it as what's also, uh, called the statistical efficiency.
+17:31
+It's basically a measure of how efficient your algorithm is in squeezing out information from a given amount of data.
+17:38
+And if theta hat tends
+17:44
+to theta star as m tends to infinity,
+17:50
+you call such algorithms as consistent.
+17:56
+So, um, consistent and if
+18:04
+the expected value of your theta hat is equal to theta star for all m, right?
+18:13
+So no matter how big your, um, sample size is, if you always end up with
+18:19
+a sampling distribution that's centered around the true parameter, then your estimator is called an unbiased estimator. Yes.
+18:27
+[inaudible]. So efficiency is, is, uh, basically the rate at which, uh,
+18:34
+the variance drops to 0 as m tends to 0.
+18:41
+So for example, you may have one algorithm which, uh, which, which, where the variance is a function of 1 over M square.
+18:50
+Another algorithm where the variance is a function of e to the, uh, uh minus m. You,
+18:57
+you can have- the variance can, uh, drive down at different rates, uh, relative to m. So that's kind of captures, um, uh,
+19:04
+what- what's efficiency here. [NOISE] Right? Yeah.
+19:10
+[inaudible]
+19:18
+Yeah. So uh, theta-theta hat approaches um,
+19:25
+so um, this is a random variable here so so here's one thing to be clear about here.
+19:32
+This is ah, a number, a constant, and this is a constant but here this is a random variable, right?
+19:40
+So what we're seeing is that as m tends to infinity, theta hat,
+19:45
+that is the distribution, converges towards being a constant and that constant is going to be a theta star.
+19:52
+Which means at smaller values of m, your algorithm might be centered elsewhere,
+19:57
+but as you get more and more data, your sampling distribution variance reduces and also gets
+20:03
+centered around the true theta star eventually. Okay. So um, informally speaking,
+20:13
+if your algorithm has high bias, it essentially means no matter how much data or evidence you provided,
+20:21
+it kind of always keeps away from from theta star, right? You cannot change its mind no matter how much data you feed it,
+20:28
+it's never going to center itself around theta star. That's like a high biased algorithm, it's biased away from the true parameter.
+20:35
+And variance is, you can think of it as your algorithm that's kind of highly distracted by
+20:42
+the noise in the data and kind of easily get swayed away, you know, far away depending on the noise in your data.
+20:50
+So uh, these algorithms you would call them as those having high variance, because they can easily get swayed by noise in the data.
+20:58
+And as we are seeing here, bias and variance are kind of independent of each other.
+21:05
+You can have algorithms that have, you know, an independent amount of bias and variance in them,
+21:10
+you know, there is there is no um, um correlation between ah, ah bias and variance.
+21:18
+And one way- so the- how do we how- do we kind of fight variance?
+21:23
+So first let's look at how we can address variance. Yes.
+21:31
+[BACKGROUND]. So bias and variance are properties of the algorithm at a given size m. Right?
+21:43
+So these plots were from um, were from a fixed size m and for that fixed size data,
+21:51
+this algorithm has high bias, low variance, this algorithm has high variance and high bias and so on.
+22:01
+Yeah. Yeah. You can you can um, you can think of it as yeah, it, you- you assume like a fixed data size.
+22:07
+Right? So uh, fighting variance.
+22:18
+Okay. So uh, one way to kind of ah,
+22:23
+address if you're in a high variance situation, this will just increase the amount of data that you have,
+22:30
+and that would naturally just reduce the variance in your algorithm. Yes. [BACKGROUND].
+22:40
+That is true. So you don't know upfront what uh, whether you're you're uh, in a in a high bias or high variance um, um, scenario.
+22:48
+One way to kind of um- one way to kind of uh, uh,
+22:54
+test that is by looking at your training performance versus test performance uh,
+23:00
+we'll go- we'll go over that um. In fact we're gonna go into um, you know, much more detail in the main lectures of how do you identify bias and variance,
+23:08
+here we're just going over the concepts of what are bias and what are variance. So one way to um,
+23:16
+address variance is you just get more data, right? As you as you get more data, the- your sampling distributions kind of tend to get more concentrated.
+23:24
+Um, the other way is what's called as regularization.
+23:32
+So when you- when you um, add regularization like L2 regularization or L1 regularization um,
+23:40
+what we're effectively doing is let's say we have an algorithm with high variance maybe low bias,
+23:52
+low bias, high variance and you add regularization, right?
+24:01
+What you end up with is an algorithm that
+24:06
+has maybe a small bias,
+24:11
+you increase the bias by adding regularization but low variance.
+24:19
+So if what you care about is your predictive accuracy, you're probably better off trading off
+24:28
+high variance to some bias and getting down- reducing your your um, variance ah, to a large extent. Yeah.
+24:35
+[BACKGROUND]. Yeah. We'll- we- we- we're gonna uh,
+24:41
+uh, look into that next.
+24:51
+Right. So in order to kind of um, get a better understanding of this uh, let's imagine um.
+25:02
+So think of this as the space of hypothesis, space of, right?
+25:12
+So um, let's assume there is a true- there exists, this hypothesis.
+25:21
+Let's call it g, right? Which is like the best possible hypothesis you can think of.
+25:28
+By best possible hypothesis, I mean if you were to kind of take this uh, um, um,
+25:37
+take this hypothesis and take the expected value of the loss with respect to the data generating distribution across an infinite amount of data,
+25:46
+you kind of have the lowest error with this. So this is, you know, um, you know the best possible hypothesis.
+25:52
+And then, there is this class of hypotheses. Let's call this classes h, right?
+26:01
+So this, for example, can be the set of all logistic regression ah,
+26:07
+hypotheses, or the set of all ah, SVMs you know. So this is a class of hypotheses and what we,
+26:17
+what we end up with when we ah, take a finite amount of data, is some member over here, right?
+26:24
+So let me call h star. Okay. There is also some hypothesis in this class,
+26:34
+let me call it kind of h star, which is the best in-class hypotheses.
+26:41
+So within the set of all logistic regression functions, there exists some, you know, some model which would give you the lowest um,
+26:50
+lowest error if you were to ah, test it on the full data distribution, right? Um, the best possible hypothesis may not be inside ah, your ah, um,
+27:01
+inside your hypothesis class, it's just some, you know, some hypothesis that that's um, um,
+27:06
+that's conceptually something outside the class, right? Now g is not the best possible hypothesis,
+27:21
+h star is best in-class h,
+27:31
+and h hat is one you learned from finite data, right?
+27:46
+So, uh, we also introduce some new notation. Um, so epsilon of H is,
+27:56
+you will call this the risk or generalization error.
+28:02
+[NOISE] Right?
+28:08
+And it is defined to be equal to the expectation of xy sampled from
+28:16
+E of indicator of h of x not equal to y.
+28:24
+Right? So you sample examples from the data-generating process,
+28:31
+run it through the hypothesis, check whether it matches with,
+28:36
+uh, with your output and if it matches, you get a 1, if it does, uh, if it- if it, uh,
+28:42
+doesn't match you get a 1, if it matches you get a 0. So on average, this is, you know,
+28:47
+roughly speaking the fraction of all examples on which you make a mistake.
+28:53
+And here we are kind of thinking about this, um, from a classification point of view to check if, you know,
+28:59
+the class of your output matches the true class or not. But you can also extend this to,
+29:04
+uh, the regression setting. Uh, but that's a little harder to analyze but, you know, the generalization holds to, um uh,
+29:11
+the regression setting as well but we'll stick to classification for now. And we have an epsilon hat,
+29:19
+s of h and this is called the empirical risk.
+29:29
+This is the empirical risk or empirical error. And this over here is 1 over m,
+29:39
+i equal to 1 to m, indicator of h of x_i not equal to y_i, right?
+29:53
+The difference here is that here this is like an infinite process. You're- you're- you're, um,
+29:59
+sampling from D forever and calculating like the long-term average. Whereas this is you have a finite number that's given to you
+30:05
+and what's the fraction of examples on which you make - you make an error. Right. All right, uh,
+30:14
+before we go further, uh, there was a question of how, um, adding regularization reduces your variance.
+30:22
+So what you can see, um, or actually let me- let me get back to that,
+30:28
+um - um, in a- in a bit. Uh, so E of g and this is called the Bayes error.
+30:41
+[NOISE] So this essentially means if you take the best possible hypothesis,
+30:49
+what's the fraction, uh, what's - what's the rate at which you make errors? You know, uh, and that can be non-zero, right?
+30:55
+Even if you take the best possible hypothesis ever and that can still - still make some - some mistakes and - and this is also called irreducible error.
+31:03
+[NOISE] For example if your data-generating process you know, uh,
+31:14
+spits out examples where for the same x you have different y's, uh, in two different examples then no - no learning algorithm can,
+31:24
+you know, uh - uh, do well in such cases. That's just one- one kind of irreducible error,
+31:31
+they can be other kinds of irreducible, uh, errors as well. And epsilon of h_*,
+31:42
+epsilon of g is called the approximation error. [NOISE] So this essentially
+31:54
+means what is the price that we are paying for limiting ourselves to some class, right?
+32:00
+So it's the - it's the error between - it's the difference between the best possible error that you can get and
+32:07
+the best possible error you can get from h_*. Right, so this is, um, this is an attribute of the class.
+32:15
+So what's the cost we are paying for restricting yourself to a class? Then you have, uh,
+32:22
+epsilon of h_i minus epsilon h_* and this you call it the estimation error.
+32:29
+[NOISE] The estimation error is,
+32:36
+given the data that we got, the m examples that we got and we estimated,
+32:42
+you know, using our estimator sum h - h - h_i. What's the - what's
+32:53
+the - what's the error due to estimation and this is like approximation.
+33:04
+All right. So, this - this, uh, the error on G is the Bayes error.
+33:11
+The gap between this error and the best in class is the approximation error and the gap
+33:18
+between the best in class and the hypothesis that you end up with is called the estimation error, right?
+33:24
+And, uh, it's easy to see that, um, h hat is actually equal to
+33:34
+estimation error
+33:40
+plus approximation error plus irreducible error.
+33:53
+Right? It's pretty easy. You know, if you just add them up all these cancel out and you're just left with,
+33:58
+uh um, epsilon of H hat. Um, so it's - it's kind of useful to think about
+34:05
+your generalization error as different components. Um, some error which you just cannot,
+34:13
+you know, uh - uh, reduce it no matter what - no matter what hypothesis you pick no matter how much of training data you have.
+34:18
+There's no way you can get rid of the irreducible error. And then you make some - some decisions about
+34:24
+- that you're going to limit yourself to neural networks or Logistic regression or whatever and thereby you're defining a class of
+34:32
+all possible models and that has a cost itself and that's your approximation error. And then you are working with limited data.
+34:38
+And this is generally due to data, right? And with the limited data that you have and
+34:44
+possibly due to some nuances of your algorithm, you also have an estimation error, right?
+34:49
+We can further see that the estimation error can be broken down into
+34:55
+estimation variance and the estimation bias, right?
+35:03
+Um, and, uh, you can not, therefore,
+35:08
+write this as approximation error plus irreducible error.
+35:18
+And what we commonly call as bias and variance are - this we call it as variance
+35:25
+and this we call it as bias and this is just irreducible.
+35:33
+So sometimes you see the bias-variance decomposition and
+35:40
+sometimes you see the estimation approximation error decomposition. There are somewhat related, they're not exactly the same.
+35:45
+So, uh, the bias is basically why is,
+35:52
+you know, bias is basically trying to capture why is H hat far from a - from G, right?
+35:57
+Why is it staying away from G? You know. Why did our hypothesis stay away from the true hypotheses?
+36:03
+And that could be because your classes, uh, is- is kind of too small or it could be due to other reasons,
+36:09
+uh, such as, you know, um - um, as we'll see maybe regularization that kind of keeps you away from a certain- certain,
+36:17
+uh - uh, hypothesis, right? And the variance is generally due to it like - it's almost always due to having small data.
+36:24
+It could be due to other, uh - uh, reasons as well. But these are two different ways of,
+36:31
+uh, of decomposing your, um, your error. So now, um, if you have high bias,
+36:38
+how do you fight high bias? Fight high bias.
+36:51
+So how would you fight high bias? Any guesses. [inaudible] Yeah exactly.
+37:01
+So one way is to just, you know make your h bigger, right.
+37:10
+Make your h bigger. And also you can - you can try, you know different algorithms, um - um uh, after making your h bigger.
+37:19
+And what this generally means is what we saw there was regularization kind of,
+37:25
+you know reduces your - your, um, variance by paying a small cost in bias and over here,
+37:33
+you know, um. [NOISE]
+37:49
+So let's say your algorithm has some bias, right.
+37:57
+So it has a high bias and some variance, right,
+38:06
+and you make H bigger, your,
+38:12
+your class bigger right and this generally results in something which reduces your bias but also increases your variance, right?
+38:23
+So, with, with this picture you can, you can also see, you know, what's the effect of, um,
+38:29
+how, how does variance come into the picture? Now just by having a bigger class, there is a higher probability that
+38:35
+the hypothesis that you estimate can vary a lot, right, if you reduce your- the space of hypothesis,
+38:45
+you may be increasing your bias because you may be moving away from g, but you're also effectively reducing your variance, right.
+38:52
+So that's, that's the, the one of the, you know, trade off that you observe that any step,
+38:58
+you- a step that you take for example in, um, reducing bias by making it
+39:05
+bigger also makes it possible for your h hat to land at much, you know, a- at a wider space and increases your variance.
+39:12
+And if you take a step to reducing your variance by maybe making your, um, your, your class smaller,
+39:19
+you may end up making it smaller by being away from the end thereby increase your, your, um, um, increase your bias.
+39:27
+So, when you, when you add regularization, you know, th- the question, uh, uh,
+39:33
+somebody asked before of how does, um, in, how does adding regularization decrease the variance?
+39:42
+By adding regularization, you are effectively, kind of shrinking the class of hypothesis that you have.
+39:48
+You start penalizing those hypotheses whose Theta is very, is very large, and in a way you're kind of,
+39:54
+you know, shrinking the class of hypothesis that you have. So, if you shrink the class of hypothesis your,
+40:00
+your variance is kind of reduced because, you know, there's much smaller wiggles room for your estimator to place your h hat.
+40:07
+And, you know, if you shrink it by going away from, from, uh, from g, you,
+40:13
+you also introduce bias. That's like, you know, the bias variance, uh, um, trade off.
+40:19
+Any questions on this so far?
+40:31
+Yeah. [BACKGROUND].Yeah, you, you probably wanna think of each of these, you probably wanna think of this as a generalized version of this,
+40:40
+right, so here we have, like, fixed Theta 1, Theta 2, but you know, uh, because you could parameterize them into,
+40:46
+uh, uh, a few parameters you can kind of plot it in a metric space but that's like a more general, um, um, like a bag of hypotheses, and, you know,
+40:55
+but in any case in both of- both those diagrams, a point here is one hypothesis,
+41:01
+a point there is one hypothesis. Here it's parameterized, here it's not parameterized. Yes. [BACKGROUND]. The thing
+41:15
+is we differ, d, um, so the question is, how- what if we,
+41:21
+we shrink it towards h star, right. The thing is, uh, we don't know where h star is, right.
+41:26
+If we knew it, we didn't even need to learn anything. We could just go straight there, right. So, um, yeah.
+41:32
+[BACKGROUND].
+41:45
+With regularization? So the question is, when we add regularization, are we sure that the bias is going up?
+41:51
+No, we, we don't know and, and this is a common scenario what happens, right. You, when you add regularization, you, you,
+41:58
+you reduce the variance for sure but you're very likely gonna introduce some bias in that process.
+42:04
+[BACKGROUND].
+42:09
+So if you add regularization, you're shrinking your hypothesis space in some ways. So you're kind of moving away from 2g. So you're kind of adding a little bit of bias.
+42:19
+You're very likely to add some bias in that process. Yes, so, it's, uh, so I, I,
+42:27
+I would encourage you to, you know, kind of, after this lecture to think about this a little more slowly, it's, it's,
+42:32
+it takes a while to kind of internalize this, the concept of bias and variance and, and, um,
+42:37
+uh, It's not very intuitive but, but, uh thinking about it more definitely helps.
+42:45
+All right, an- any other questions before we move on? [BACKGROUND].
+42:53
+So an example for a hypothesis class, right? So the- an example would be, um, the set of all logistic regression models, right?
+43:02
+And, uh, when you do gradient descent on your, you know, logistic regression class, you're kind of implicitly restricting yourself to set
+43:09
+up possible logistic regression models, that's kind of implicit. [BACKGROUND].
+43:21
+So, the h is the output of the learning algorithm, right?
+43:26
+So you feed and input your algorithm. Like this is not the model. This the learning algorithm like, this is,
+43:32
+like gradient descent for example. And the output of that is the parameters that you learned that converge to.
+43:39
+Right. So d- so, yeah, you, you probably don't wanna think about this as the model that you learned but this as the,
+43:47
+like the training process and the output of the training process is a model that you learn.
+43:53
+And that is a point in your, in the class of hypotheses. [BACKGROUND]. Yes, so, so,
+44:05
+you fix, um, that, uh, th- the class of learning models, you, you, say I'm gonna only gonna learn logistic regression models, right?
+44:13
+For different, different samples of data that you feed it as your training set, you're gonna get, learn a different Theta hat.
+44:20
+[BACKGROUND]. Yes, the- they have to be within the class of hypotheses.
+44:28
+All right, so let's move on.
+44:56
+Next, we come across this concept called empirical risk minimization. [NOISE].
+45:22
+ERM. So this is the Empirical Risk Minimizer.
+45:35
+Right. So, so the empirical risk minimizer is a learning algorithm.
+45:41
+Right. It is one of those kind of boxes that we drew. It is, you know, ah- so in the box
+45:54
+that we drew earlier as learning algorithm, right.
+46:04
+So the- the- the diagram that we drew earlier based on which we- we ah, reasoned everything so far,
+46:09
+didn't actually tell you what actually happens inside. It could be doing gradient descent, it could just do something else.
+46:15
+It could be, you know, some- some, you know, smart programmer who's written a whole bunch of if,
+46:20
+else and just returns a theta, it could be anything. Right. Uh, and no matter what kind of algorithm was used,
+46:27
+the- the bias-variance theory still holds. Right. Now we're going to look at, ah,
+46:33
+a very specific type of learning algorithms called the empirical risk minimizer.
+46:39
+Right. So, um, and this was feed into your algorithm and
+46:46
+you get h star, h hat ERM.
+46:58
+Right? Now, h, um, h hat ERM is equal to- what is ERM, empirical risk minimization?
+47:11
+It's what we've been doing so far in the course. Right? We, we tried to find
+47:19
+a minimizer in a class of hypotheses that minimizes the average training error.
+47:36
+Right. Um, so for example, um, this is trying to minimize the training error from a classification, ah, ah, perspective.
+47:46
+This is kind of minimizing the- or increasing the training accuracy,
+47:51
+which is different from what actually logistic regression did with, where we were doing the maximum likelihood or minimizing the negative log-likelihood.
+47:57
+It can be shown that, ah, losses like the logistic loss are - are can be well approximated by,
+48:03
+um, by the ERM. And, and, and this theory should- should, ah, ah, hold nonetheless. Um, All right.
+48:13
+So if- if we are limiting ourselves to do that class of algorithms which,
+48:23
+which worked by minimizing the training loss, right, um, as opposed to something that say returns a
+48:31
+constant all the time or- or- or does something else. If we limit ourselves to, um,
+48:37
+empirical risk minimizers, then we can come up with more theoretical results.
+48:43
+For example, uniform convergence, which we are gonna look at right now. [NOISE].
+49:02
+Right. So, so we're limiting ourselves to empirical risk minimizers and starting off, er, uniform convergence.
+49:25
+Right. So there are two central questions that we are kind of interested in.
+49:31
+So, ah, one question is, if we do empirical risk minimization,
+49:37
+that is if we just reduce the training loss, right, what- what does that say about the generalization of an effect?
+49:45
+So that is basically, um, e hat of h versus h. So for,
+49:56
+you know, consider some hypotheses. Right. And that gives you some amount of training error.
+50:01
+Right. What does that say about its generalization error? And that's one central question we wanna, um, um, consider.
+50:10
+And the second one is, how does the generalization error of our learned hypothesis
+50:19
+compare to the best possible generalization error in that class?
+50:26
+Right. Note we're- you know, we're only talking about h star and not, g um, there.
+50:32
+So h star is- is- is the best in class um, um. So these are- these are two central questions that we wanna- we wanna um, explore.
+50:42
+And for this, we're gonna use our two tools.
+50:47
+Right. So one is called the union bound. [NOISE] Right.
+50:55
+What's the union bound? Um, if we have um, k different events A_2, A_K.
+51:05
+Then, ah, these need not be independent.
+51:13
+Independent. Then the probability of A_1 union A_2 union A_k,
+51:23
+is less than equal to the sum of-
+51:37
+If this looks trivial, it is trivial. It's- it's um, it's probably one of the axioms in- in- in your,
+51:44
+ah, undergrad probability class. But the, the probability of any one of these events happening
+51:50
+is less than or equal to the sum of the probabilities of, ah, each of them, ah, happening.
+51:57
+Right. And then we have a second tool. Right. It's called the Hoeffding's inequality.
+52:09
+[NOISE].
+52:16
+We're only going to state the- the inequality here, ah, there is ah, um, a supplemental notes on the website that actually proves the Hoeffding inequality.
+52:25
+You can, ah, go through that, um, but here we're only going to state the result.
+52:30
+In fact, throughout this session, we are going to state results. We're not gonna prove anything. Um, so, ah, let Z_1, Z_2, Z_m,
+52:45
+be sampled from some Bernoulli distribution of parameter phi.
+52:51
+And let's call well, phi hat to be the average of them,
+53:01
+m of z_i, and let there be a Gamma greater than zero,
+53:13
+which we call it as the margin. So the Hoeffding Inequality basically says,
+53:20
+the probability that the absolute difference between
+53:27
+the estimated phi parameter and the true phi parameter is greater than some margin,
+53:36
+can be bounded by 2 times the exponential
+53:42
+of minus 2 gamma square m. Right?
+53:51
+Not very obvious but you know, you can, you can show this. What, what it's basically saying,
+53:56
+is there is some- there is some- some ber- ah, parameter between 0 and 1 of a Bernoulli distribution.
+54:06
+The fact that it is between 0 and 1 means it's- it's bounded. And- and that's a key requirement for,
+54:13
+ah, the Hoeffding's inequality. And now, we take samples from this Bernoulli distribution,
+54:18
+and the estimator for this is basically- and these are just 0s or 1s.
+54:24
+Z- Z- each of the Z is either a 0 or 1. The sample of 0 or a 1 with probability, um, um,
+54:30
+Phi, and the estimator is basically just the averages of your samples.
+54:35
+Right. And, um, the absolute difference between the estimated value and the true value,
+54:43
+the probability that this difference becomes greater than some margin Gamma is bounded by this expression.
+54:52
+Right. So there are a lot of things happening here. So you probably want to, um, um, you know, slowly think through this.
+54:57
+So this is a margin. All right.
+55:03
+And this is like- basically like the deviation of the error.
+55:09
+[NOISE] Right. Um, the absolute value of how- how- how far away
+55:16
+your estimated values from- from the true. And you'd like it to be small- closer.
+55:22
+So you- you- you probably want, ah, your -your Phi hat and phi, to be not more than,
+55:28
+I don't know, 0.001. Right. So in which case, if the absolute value between,
+55:34
+ah, ah, the estimated and, um, the true parameter is greater than 0.01,
+55:40
+if that's the margin your- that you're interested in. Then this, ah, the Hoeffding's inequality proves
+55:46
+that if you were to repeat this process over and over and over, the number of times phi hat is going to be
+55:55
+great- is going to be farther than 0.001 from the true parameter, it's going to be less than this expression,
+56:01
+which is a function of m. Right. And that is- you- you- you can kind of, ah, believe it because as m increases, this becomes smaller,
+56:09
+which means the probability of, um, your estimate deviating more than a certain margin only reduces as you increase m. Right.
+56:18
+So this is Hoeffding's inequality and we're gonna use this. [inaudible].
+56:27
+Oh, yeah. Questions? [inaudible].
+56:36
+Not, so, so the question is, is h star, uh, the limit of h_r as M goes to infinity?
+56:43
+Uh, it is h star in, in the limit as M goes to infinity,
+56:49
+if it is a consistent estimator, right? So we, we, we went over the concept of consistency.
+56:55
+Given infinite data, will you eventually get to the right answer? And if your estimator is not consistent,
+57:00
+then it will- it need not be. So, uh, in general h hat need not converge to h star as you get an infinite amount of data.
+57:07
+[NOISE] All right? So, uh, now we wanna use, um, uh,
+57:14
+these tools, tool 1 and tool 2 to answer our- like the central questions.
+57:20
+[NOISE] Any other questions?
+57:25
+Yeah. [BACKGROUND]
+57:38
+This is a more limited version of Hoeffding's inequality and yes, uh, if we limit ourselves to a Bernoulli variable, uh,
+57:45
+ba- um, which has some parameter phi and you take samples from it. And you construct an estimator which
+57:53
+is the average of th- the samples of the 0s and 1s, then, um, this inequality holds.
+58:00
+That's- thi- this inequality is called the Hoeffding's inequality. Yes.
+58:09
+[BACKGROUND] So if you're, um, in general, there, there are- there are- there
+58:17
+is this class of algorithms called maximum likelihood algorithms, maximum likelihood estimators and a pure
+58:23
+maximum likelihood estimator is generally consistent. If you include regularization,
+58:29
+then it need not be- it need not be, uh, uh, uh, consistent though,
+58:35
+uh, I'm not very sure about that. I'm not very sure about that. [NOISE] Yeah, sure.
+58:42
+Yeah. So basically like- if you think about a neural net where you have something that's completely
+58:47
+[inaudible] neural net is not always consistent.
+59:08
+Yeah. So the- basically, um, um, um, I know for the mic, uh,
+59:14
+wha- what, what, what he responded was, um, if you have an algorithm like a neural net which is, um,
+59:21
+which is non-convex, you may actually not end up with the same, uh, uh, result even if you, uh, um,
+59:27
+increase, um, increase like, uh, the number of, um, uh- though I would probably call the,
+59:34
+uh, uh, the fact- I, I would probably think of the non-convexity to be part of an estimation bias,
+59:41
+um, because you could in theory always find like the global minima of a neural network.
+59:46
+It's just that there's some bias in our estimator that we are using gradient descent and we cannot solve it.
+59:54
+Okay. So now, uh, let's- let's use these two tools, uh, and for that, uh, we're gonna start [NOISE] how do we look at this diagram, right?
+1:00:05
+So, [NOISE] so over here,
+1:00:14
+um, we have hypotheses. [NOISE] Here we have error,
+1:00:20
+[NOISE] and let's think of this.
+1:00:26
+[NOISE] There's actually one,
+1:00:36
+one curve which I'm trying to make it thick and probably make it look like multiple curves, this is just one curve and this we will call it as.
+1:00:44
+[NOISE] So this is the generalization risk or the,
+1:00:53
+uh, uh, the generalization error of every possible hypothesis,
+1:00:59
+uh, in our class, right? So pick one hypothesis that's gonna be somewhere on this axis,
+1:01:06
+calculate the generalization error, not the empirical, the generalization error
+1:01:13
+and- no that's the height of that curve, right? And we also have something like this.
+1:01:21
+[NOISE] Right?
+1:01:29
+So this dotted line now corresponds to sum each of s_h.
+1:01:41
+Now let's, let's sample a set of m examples and calculate
+1:01:47
+the empirical error of all our hypotheses in our class and plot it as a curve, right?
+1:01:55
+Any questions on what, what, what these two are? Yeah. [BACKGROUND] It need not meet.
+1:02:01
+I'm, I'm just, uh, uh, in fact, thi- this is very likely not even a straight line, you're just thinking of all, all possible hypotheses.
+1:02:08
+It may not be convex. Um, this just to, to, um, get some ideas, um,
+1:02:14
+um, get, get better intuitions on some of these ideas. Yes. [BACKGROUND] So, uh, the black line,
+1:02:21
+the thick black line is the generalization error of all your hypotheses, right?
+1:02:27
+And let's say you sample some, some, some data, right? Let's call it S. On that sample,
+1:02:33
+you have training error for all possible hypotheses, right? [NOISE] We haven't not learned anything, right?
+1:02:39
+It's, it's, uh, uh, this is the generalization error and this is the empirical error for the given S, right?
+1:02:47
+Now, uh, in order to app- apply Hoeffding's Inequality here, right?
+1:02:59
+So let's consider some h_i, right?
+1:03:05
+This is some hypothesis. We- we don't know. So we start with some random hypotheses, right?
+1:03:12
+And- so by starting with some hypotheses like think of this as you start with some parameter, [NOISE] right?
+1:03:21
+And, uh, let's- right.
+1:03:30
+So the height of this line up to the,
+1:03:36
+the thick black curve is basically, um, the generalization error of h_i is the height to the thick black curve.
+1:03:49
+So let me call this Epsilon of h_i, right?
+1:03:56
+And the height to the dotted curve until here. And this is Epsilon hat of h_i.
+1:04:08
+I'm gonna ignore the S for now, right?
+1:04:14
+And this corresponds to like the, the sample that we obtain.
+1:04:19
+Now one thing, ah, you can, you can check is that the expected value of- [NOISE]
+1:04:45
+where the expectation is with respect to the data's sample. So what this means is that, ah, for one particular sample you,
+1:04:52
+ah, -this is the generalization error you got. Take another set of samples, that curve might look som- some,
+1:04:58
+you know, some other way, and, you know, the height of the dotted line would be there. So in general on average,
+1:05:04
+if you sum average across all possible training samples that you can get, ah, the,
+1:05:09
+the expected value of the height to the dotted line is gonna be the height to the,
+1:05:16
+the, the thick line. Right? That's, that's justified. Now here if you apply Hoeffding's inequality,
+1:05:22
+you basically get probability of absolute difference between the empirical error versus
+1:05:32
+the generalization error to be greater than Gamma is
+1:05:39
+less than equal to 2 minus 2 Gamma square.
+1:05:47
+And- this is basically, you know, Hoeffding's inequality. We have right here except in place of phi and phi hat,
+1:05:55
+we have the true generalization error, and the empirical error.
+1:06:01
+Any questions on this so far? So what we are saying is essentially
+1:06:09
+the gap between the generalization error and the empirical error. All right.
+1:06:16
+Right. The gap being greater than
+1:06:22
+some margin Gamma is gonna be bounded by this expression.
+1:06:29
+Right? So loosely speaking what this means is, as we increase the size M,
+1:06:37
+if our training is up- if we plot the set of all dotted lines for a larger M,
+1:06:44
+they are gonna be more concentrated around the black line. Does that make sense? So, so take a moment and think about it.
+1:06:53
+This dotted line corresponds to S of some particular size M. We could take another sample of,
+1:07:02
+you know, a fixed set of examples, and that might look kinda something like this.
+1:07:09
+Right. And take another sample of size M, and that might look something like [NOISE] this.
+1:07:17
+Now- and now, consider the set of all deviations from the black line
+1:07:24
+to every possible dotted line along the vertical line of HI. Right? Now this gap is greater than some margin
+1:07:34
+Gamma with probability less than this term over here.
+1:07:40
+Right? So, so it essentially means that if you start plotting dotted lines with a bigger M, right,
+1:07:48
+where the set of all those dotted lines correspond to a bigger M, they are gonna be much more tightly
+1:07:55
+concentrated around the true generalization of that, of that edge.
+1:08:00
+That make sense? And you're basically applying Hoeffding's inequality to this gap over here instead of some phi.
+1:08:08
+That's basically what you're doing. Right? Now, that's good.
+1:08:14
+But there's a problem here. The problem here is that, we started with some hypotheses,
+1:08:21
+and then averaged across all possible data that you could sample. But in practice, this is useless.
+1:08:27
+Because in practice we start with some data, and run the empirical risk minimizer to find the lowest H for that particular data.
+1:08:35
+Right? And when you, when, when- which means that H,
+1:08:40
+and the data that you have are not really independent. Right? You, you chose the H to minimize, ah,
+1:08:46
+minimize the risk for the empirical risk for th- the particular data that you are given in the first place.
+1:08:53
+Right? So to, to fix this, what we wanna do is basically extend this result that we got
+1:09:03
+to account for all H. Right.
+1:09:11
+Now if we want to get a bound on the gap between the probabilistic bound,
+1:09:19
+and the gap between the generalization error, and the empirical error for all H. You know what's that bound gonna look like.
+1:09:32
+Right. And this is basically called uniform, uniform convergence. This is- I'll just call uniform convergence because we are trying to, ah,
+1:09:40
+we are trying to see how the risk curve converges uniformly to the generalization risk curve,
+1:09:47
+or how the empirical risk curve uniformly converges to the generalization risk curve.
+1:09:52
+And, ah, it's, ah, that's called uniform convergence which you can apply to functions in general, but here we are applying to the risk curves across our hypotheses.
+1:10:02
+And we can show- I'm gonna, ah, just, um, skip the math.
+1:10:07
+So, um, this we showed using Hoeffding's inequality, and you can apply the union bound for unioning across all H.
+1:10:17
+Except we can- first we're going to limit ourselves to, um- all right.
+1:10:24
+So let me start over. So we got this bound for a fixed H. Right?
+1:10:30
+But we are interested in getting the bound for any possible H. Right?
+1:10:36
+So that's our next step. Right? And the way we're gonna, gonna extend this pointwise result to across all of them,
+1:10:43
+is gonna look different for two possible cases. One is a case of a finite hypothesis class,
+1:10:49
+and the other case is gonna be the case for infinite hypothesis classes. So what does it look like?
+1:10:55
+So, [NOISE]
+1:11:07
+so let's first consider finite hypothesis classes.
+1:11:19
+So first we're gonna assume that the class of H has a finite number of hypotheses.
+1:11:28
+The result by itself is not very useful, but it's gonna be like a building block for, for the, for the other case.
+1:11:35
+So let's assume that the number of hypotheses in this class is some number K. Right?
+1:11:43
+Ah, we can show that- I'm not gonna go over the,
+1:11:49
+the derivation, but I'm just gonna, um, write out the result. It's, it's pretty intuitive.
+1:11:54
+So basically what we do is, ah, we apply the union bound for all K hypotheses,
+1:12:00
+and we end up just multiplying that by a factor of K. Right? So what we get is the probability that there exists some hypotheses
+1:12:15
+in H such that the empirical error
+1:12:22
+minus generalization error is greater than Gamma,
+1:12:32
+is less than equal to K times,
+1:12:37
+K times the probability of any 1 which is equal to K times,
+1:12:42
+ah, 2 minus xp 2 Gamma square M. And this we flip it over,
+1:12:54
+we negate it, and we get the probability that for all hypotheses in our class,
+1:13:04
+the empirical risk minus generalization risk is less than Gamma,
+1:13:14
+is gonna be greater than equal to 1 minus 2K,
+1:13:23
+minus 2 Gamma square. Okay. So with probability at least 1 minus,
+1:13:33
+you know this expression, which we can, we can call this Delta with probability at least so much.
+1:13:43
+For all hypotheses, our margin is gonna be less than some Gamma.
+1:13:50
+Right? This is, this is just, um, Hoeffding's inequality plus union bound,
+1:13:57
+and just negate the two sides, you get this. And you, you can go with this slowly, um, um,
+1:14:03
+you know later from the notes, the notes goes over this, um, in more detail.
+1:14:08
+Right? Now, basically now what we have is, you know, now let's let Delta equals to
+1:14:17
+K exp minus 2 Gamma squared M. So we basically now have,
+1:14:25
+um, a relation between Delta which is like the probability of error.
+1:14:37
+By here, um, ah, by error I mean that the, um, empirical risk, and the generalization risk are farther than some, some margin.
+1:14:47
+And Gamma is called the margin of error.
+1:14:54
+And M is your sample size.
+1:15:00
+So, so what this basically tells us, um, if your algorithm is the empirical risk minimizer,
+1:15:09
+it could have been any kind of algorithm. But if it is the kind that minimizes the training error, then you can get by, by,
+1:15:17
+by just changing the sample size, you can get a relation between the margin of error and
+1:15:25
+the probability of error and relate it to the sample size, right? So, um, what we can do with this relation is basically
+1:15:36
+fix any two and solve for the third, and that gives us,
+1:15:41
+nope, some actionable results. For example, you can fix any two and solve for the third from this relationship, right?
+1:15:53
+And what, what, what that could, uh, mean is for example,
+1:15:59
+so you, you can choose any two and solve for the third. Um, I'm only gonna go over one, one of those.
+1:16:04
+So let, let's fix, fix uh, Gamma and Delta to be greater than zero.
+1:16:16
+And we solve for m, and we get m [NOISE] weighted to, equal 1 over 2 Gamma square,
+1:16:27
+log 2K over Delta.
+1:16:32
+So what this means is with probability at least 1 minus Delta which means probably at least 99% or 99.9%.
+1:16:42
+For example, with probability at least, uh, 1 minus delta, the margin of error between
+1:16:49
+the empirical risk and the true generalization risk is gonna be less
+1:16:54
+than Gamma as long as your training size is bigger than this expression, right.
+1:17:03
+That's something actionable for us, right. Now, theory can be useful. So this is also called the sample complexity dessert.
+1:17:08
+[NOISE] right? And uh, basically,
+1:17:16
+what this means is as you increase m and you, you sample different [NOISE] sets of, uh, uh, data-sets,
+1:17:23
+your dotted lines are gonna get closer and closer to, to, uh, the thick line which means,
+1:17:31
+minimizing your- minimizing on the dotted line will also get you closer to the generalization error.
+1:17:38
+So this, this is basically telling you how minimizing on, on, um, minimizing on the empirical risk gets you closer to,
+1:17:47
+uh, gen- generalization, right? Okay, so that- so we started off with two questions,
+1:17:54
+relating the empirical risk to generalization risk. Now, let's, let's explore the second question.
+1:18:01
+What about, uh, the generalization error [NOISE] of [NOISE] our minimizer with the,
+1:18:10
+uh, um, best possible in class? So let's look at this diagram again.
+1:18:17
+Let's say we started with this dotted curve, right. And the minimizer of that would be h-star.
+1:18:24
+This is h-star. Sorry the diagram is a little, uh, [NOISE] let me erase the previous one [NOISE] right?
+1:18:37
+So this is h-hat. Sorry, this is h-hat.
+1:18:43
+And this has a particular generalization error, right? That is the point of, of- uh,
+1:18:49
+let- let- let's assume we got this data-set. We ran the empirical [NOISE] risk minimizer and we obtained this hypothesis.
+1:18:56
+And when we deploy this in the world- in the real world, its error is gonna be so much, right?
+1:19:02
+Now, how does this compare [NOISE] to the performance of the minimizer of the, the,
+1:19:09
+the best possible [NOISE] ,
+1:19:17
+so this is h-star, best in class, right?
+1:19:22
+Now, we want to get a relation between this error level and this error level.
+1:19:28
+We got one bound that relates this to this, and now we want something that relates this to this.
+1:19:35
+Now, how do we do that? It's pretty straightforward. Um, so the em- generalization error of h-hat,
+1:19:49
+that's this dot over here, is less than equal to the empirical risk of h-hat plus Gamma.
+1:20:01
+So we got the result, um, using a Hoeffding and union bound that the gap between the dotted line and the,
+1:20:09
+the thick black line is always less than Gamma, right? And it's the absolute value. So we can, we can, uh, um,
+1:20:16
+write it this way as well. And this, right? So basically, we, we start it from the,
+1:20:23
+the thick black line, drop down to the dotted line.
+1:20:29
+And this is gonna be less than the empirical error of h-star plus Gamma. Why is that?
+1:20:39
+Because em- empirical error, um, the empirical error, uh, uh,
+1:20:46
+of h-hat by definition, is less than or equal to the empirical error on any other hypotheses,
+1:20:53
+including the best in class. Because this is the training error, not, not, not the generalization error, right?
+1:20:59
+So which means, um- and,
+1:21:04
+and this is less than or equal to. So we, we dropped from the generalization to the test.
+1:21:11
+And we said, this test is, thi- this training error is always gonna to be less
+1:21:17
+than the empirical error of the best-in-class.
+1:21:22
+You see that the best-in-class is higher for the trade to be empirical error. And this again, is now- this gap is also bounded because we,
+1:21:32
+we proved uniform convergence. That the gap between the dotted line and thick line is bounded by Gamma for any h, right?
+1:21:39
+And this is therefore h-star plus 2 Gamma,
+1:21:49
+because we added the extra margin. So we wanted the relation between the, uh,
+1:21:54
+the- our, our hypothesis generalization error to the generalization error of the best in class hypotheses.
+1:22:02
+So we dropped from the generalization error to the empirical error of our hypotheses,
+1:22:09
+related that to the empirical one of the best in class and again bounded by the gap between these two.
+1:22:15
+So we- we've got a gap between the generalization bound, the generalized error for hypothesis to the best in
+1:22:21
+class generalization. Any questions on this?
+1:22:29
+So the result basically says,
+1:22:35
+with probability, 1 minus Delta, and for training size m,
+1:22:41
+[NOISE] the generalization error of [NOISE] the hypothesis from
+1:22:50
+the empirical risk minimizer is going to be within the
+1:22:57
+best in class generalization error plus 2 times 1 over,
+1:23:04
+1 over 2m plus log 2K over Delta.
+1:23:12
+So this was basically uh, so you can get this, uh, when you,
+1:23:18
+when you- so in this expression,
+1:23:24
+if you set this equal to Delta and solve for Gamma, you will get this.
+1:23:30
+Any questions? [NOISE] I think we're already over time.
+1:23:40
+So, uh, the case for infinite classes is an extension to this.
+1:23:46
+Maybe I'll just write the results. So there is a concept called VC dimension, which is a pretty simple concept but [NOISE] we won't be going over it today.
+1:23:55
+VC dimension basically says, um, what is the- so VC dimension is,
+1:24:01
+you can think of it as trying to assign a size to an infinitely,
+1:24:07
+uh, to an infinite size hypothesis class. For a fixed size hypothesis class, we had like, you know, K to be the size of the hypothesis class.
+1:24:13
+So VC [NOISE] of some hypothesis class is gonna be some number, right?
+1:24:21
+Some number which, which kind of, um, which is like the size of the hypothesis. It's basically, telling you how,
+1:24:26
+how expressive it is um, and, and, uh, on using, using the VC dimension,
+1:24:34
+uh, there are very nice uh, geometrical meanings of VC dimension. You can, you can get a bound, similar bound.
+1:24:41
+But now, it's not for, uh, uh, um, it's not for uh,
+1:24:46
+uh, finite classes anymore.
+1:24:52
+Some big O of [NOISE]
+1:25:20
+right? So in place of this margin, we ended up with, uh, a different margin that is, uh,
+1:25:27
+a function of the, the VC dimension. And the, the key takeaway from this is that uh,
+1:25:35
+the number of data examples, that the sample complexity that you want is generally,
+1:25:44
+uh, an order of the VC dimension to get good results. That's basically, the, uh, uh,
+1:25:49
+main result from that, right? From, uh- with that, I guess we'll, we'll, uh, we'll break for the day and,
+1:25:56
+uh, we'll take more questions.

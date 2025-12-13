@@ -2,10 +2,14 @@
 
 A comprehensive implementation of Stanford's CS229 Machine Learning course using Python. This collection provides hands-on, code-first implementations of all major machine learning algorithms covered in the course.
 
+**🆕 Updated with actual lecture transcripts from Andrew Ng's 2018 MIT course!**  
+Real examples, explanations, and insights from the original lectures integrated into interactive notebooks.
+
 ## 📚 Course Overview
 
 **Instructor**: Andrew Ng  
-**Institution**: Stanford University  
+**Institution**: Stanford University (Autumn 2018)  
+**Source**: Lecture transcripts + [Official Syllabus](https://cs229.stanford.edu/syllabus-autumn2018.html)  
 **Focus**: Foundational machine learning algorithms and theory  
 **Implementation**: Python with NumPy, scikit-learn, and modern ML libraries  
 
@@ -22,21 +26,27 @@ A comprehensive implementation of Stanford's CS229 Machine Learning course using
 ### Part I: Supervised Learning
 
 #### Lecture 1: Linear Regression
-**File**: `01_linear_regression.ipynb`
+**File**: `01_linear_regression.ipynb`  
+**Source**: Lecture 2 Transcript (Linear Regression lecture)
 
 **Topics**:
 - Machine learning introduction and motivation
+- Portland Housing dataset example (from Craigslist)
 - Linear regression hypothesis and cost function
 - Gradient descent (batch, stochastic, mini-batch)
 - Normal equation (closed-form solution)
 - Feature scaling and normalization
 - Learning rate tuning
 
+**From the Lecture**:
+> "Let's say you want to predict or estimate the prices of houses. This is data from Portland, Oregon..." - Andrew Ng
+
 **Implementations**:
+- Portland housing price prediction (real data from lecture!)
 - Gradient descent from scratch
-- Normal equation solver
+- Normal equation solver: θ = (XᵀX)⁻¹Xᵀy
 - Vectorized implementations
-- Learning rate comparison
+- Learning rate comparison (α = 0.001, 0.01, 0.1, 0.5)
 - Multi-variate regression on California Housing
 
 **Key Equations**:
@@ -44,23 +54,82 @@ A comprehensive implementation of Stanford's CS229 Machine Learning course using
 Hypothesis: h_θ(x) = θᵀx
 Cost: J(θ) = (1/2m)Σ(h_θ(x⁽ⁱ⁾) - y⁽ⁱ⁾)²
 Update: θ := θ - α∇J(θ)
+Normal Equation: θ = (XᵀX)⁻¹Xᵀy
 ```
 
 **Practice**: 8 exercises covering implementation, optimization, and analysis
 
 ---
 
-#### Lecture 2: Logistic Regression (Classification)
-**File**: `02_logistic_regression.ipynb`
+#### Lecture 3: Locally Weighted Regression
+**File**: [03_locally_weighted_regression.ipynb](03_locally_weighted_regression.ipynb) **[NEW!]**  
+**Source**: Lecture 3 Transcript (LWR, Probabilistic Interpretation)
 
 **Topics**:
+- Parametric vs Non-parametric learning algorithms
+- Locally weighted regression (LWR) algorithm
+- Weight functions and bandwidth parameter τ
+- Avoiding feature engineering
+- Curse of dimensionality
+- When to use LWR vs other methods
+
+**From the Lecture**:
+> "If you have curved data... it's quite difficult to find features. Is it √x, log(x), x³? What is the set of features that lets you do this? Locally weighted regression sidesteps all those problems." - Andrew Ng
+
+**Implementations**:
+- Complete LWR class from scratch
+- Gaussian weight function: w⁽ⁱ⁾ = exp(-(x⁽ⁱ⁾-x)²/(2τ²))
+- Weighted least squares: θ = (XᵀWX)⁻¹XᵀWy
+- Bandwidth comparison (τ = 0.1, 0.5, 1.0, 2.0)
+- Weight visualization for different query points
+- Comparison: Linear vs Polynomial vs LWR
+
+**Key Insights**:
+- **Non-parametric**: Must keep training data around
+- **Local fitting**: Different θ for each prediction
+- **Automatic**: No feature engineering needed
+- **Computational**: O(n³) per prediction
+
+**Best For**:
+✓ Low dimensional data (n ≤ 5)  
+✓ Non-linear patterns  
+✗ High dimensions  
+✗ Real-time prediction
+
+---
+
+#### Lecture 2 & 4: Logistic Regression (Classification)  
+**File**: `02_logistic_regression.ipynb` **[ENHANCED!]**  
+**Source**: Lectures 3-4 Transcripts (Logistic Regression, Newton's Method)
+
+**Topics**:
+- Why linear regression fails for classification
 - Binary classification problem
 - Logistic/sigmoid function
-- Decision boundaries
-- Cost function for classification
+- Decision boundaries (linear and non-linear)
+- Cost function for classification (cross-entropy)
 - Gradient descent for logistic regression
+- **Newton's Method** (new!)
 - Multi-class classification (One-vs-All)
-- Advanced optimization (Newton's method)
+- Regularization for logistic regression
+
+**From the Lecture**:
+> "Probably by far the most commonly used classification algorithm... Linear regression is just not a good algorithm for classification." - Andrew Ng
+
+> "Gradient ascent takes baby steps, takes a lot of iterations. Newton's method allows you to take much bigger jumps - you might need only 10 iterations instead of 100 or 1000." - Andrew Ng
+
+**New Implementations**:
+- **Newton's Method from scratch**:
+  - Second-order optimization
+  - Hessian computation: H = XᵀDX
+  - Update: θ := θ + H⁻¹∇ℓ(θ)
+  - Convergence comparison with gradient ascent
+  - 5-20x faster convergence!
+
+**When to Use What**:
+- Gradient Ascent: Large n (> 10,000 features)
+- Newton's Method: Small to medium n (< 10,000 features)
+- L-BFGS: Middle ground (used in sklearn)
 
 **Implementations**:
 - Sigmoid function and properties
@@ -79,8 +148,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 3: Regularization
-**File**: `03_regularization.ipynb`
+#### Lecture 8: Regularization and Bias-Variance  
+**File**: [04_regularization.ipynb](04_regularization.ipynb) **[ENHANCED!]**
 
 **Topics**:
 - Overfitting and underfitting
@@ -105,22 +174,32 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 4: Generative Learning Algorithms
-**File**: `04_generative_models.ipynb`
+#### Lecture 5-6: Generative Learning Algorithms  
+**File**: [05_generative_models.ipynb](05_generative_models.ipynb) **[ENHANCED!]**  
+**Source**: Lectures 5-6 Transcripts (GDA, Naive Bayes)
 
 **Topics**:
-- Discriminative vs generative models
-- Gaussian Discriminant Analysis (GDA)
-- Naive Bayes
+- Discriminative vs Generative learning paradigms
+- Bayes' rule framework: P(y|x) = P(x|y)P(y)/P(x)
+- **Gaussian Discriminant Analysis (GDA)**
+- Multivariate Gaussian distribution
+- Covariance matrix visualization
+- **Naive Bayes classifier**
 - Laplace smoothing
-- Text classification with Naive Bayes
-- Event models for text
+- Text classification and spam filtering
+
+**From the Lecture**:
+> "Rather than looking at two classes and trying to find the separation, the algorithm looks at the classes one at a time." - Andrew Ng
+
+**Multivariate Gaussian**:
+> "The Gaussian is this familiar bell-shaped curve. A multivariate Gaussian is the generalization to vector-valued random variables." - Andrew Ng
 
 **Implementations**:
-- GDA from scratch
+- GDA from scratch with MLE
+- Multivariate Gaussian visualization (μ and Σ effects)
 - Naive Bayes for spam detection
-- Multinomial vs Bernoulli event models
-- Feature engineering for text
+- Laplace smoothing demonstration
+- Text classification with Multinomial vs Bernoulli event models
 
 **Comparison**:
 - Logistic Regression vs GDA
@@ -128,24 +207,41 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 5: Support Vector Machines
-**File**: `05_support_vector_machines.ipynb`
+#### Lecture 6-7: Support Vector Machines  
+**File**: [06_svm.ipynb](06_svm.ipynb) **[ENHANCED!]**  
+**Source**: Lectures 6-7 Transcripts (SVM, Kernels)
 
 **Topics**:
 - Optimal margin classifier
 - Functional and geometric margins
+- **Representer theorem**
 - Primal and dual formulation
-- Kernel trick
-- Common kernels (Linear, Polynomial, RBF, Sigmoid)
+- **The Kernel Trick** (new!)
+- Common kernels (Linear, Polynomial, RBF)
+- Working in infinite-dimensional feature spaces
 - Soft margin (slack variables)
-- SMO algorithm (conceptual)
+
+**From the Lecture**:
+> "Support vector machine is one of my favorite algorithms - very turnkey, very widely applicable." - Andrew Ng
+
+> "We can work in 100,000 dimensional, or a million dimensional, or 100 billion dimensional, or even **infinite-dimensional feature spaces**." - Andrew Ng
+
+**New Theory**:
+- **Representer Theorem**: w = Σ αᵢy⁽ⁱ⁾x⁽ⁱ⁾
+  - Even in infinite dimensions, only need to store m coefficients!
+- **Kernel Trick**: Never compute φ(x) explicitly
+  - Use K(x,z) = ⟨φ(x), φ(z)⟩ instead
+  - Example: Polynomial kernel K(x,z) = (xᵀz + 1)ᵈ
+  - RBF kernel: K(x,z) = exp(-γ||x-z||²)
 
 **Implementations**:
-- SVM with different kernels
+- Linear SVM with dual formulation
+- Kernel SVM (polynomial, RBF)
+- Non-linearly separable data (circles, moons)
 - Hyperparameter tuning (C, γ)
 - Decision boundary visualization
 - Support vector identification
-- Multi-class SVM (OvO, OvR)
+- RBF kernel deep dive (gamma effects)
 
 **Applications**:
 - Image classification
@@ -154,8 +250,48 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 6: Neural Networks - Basics
-**File**: `06_neural_networks_basics.ipynb`
+#### Lecture 8: Regularization and Bias-Variance  
+**File**: [04_regularization.ipynb](04_regularization.ipynb) **[ENHANCED!]**  
+**Source**: Lecture 8 Transcript (Bias-Variance Tradeoff)
+
+**Topics**:
+- **Bias-variance tradeoff theory** (new!)
+- Overfitting and underfitting from theoretical perspective
+- Ridge regression (L2)
+- Lasso regression (L1)
+- Elastic Net
+- Choosing regularization parameter λ
+
+**From the Lecture**:
+> "Bias and variance is one of those concepts that's easy to understand but hard to master. I've had PhD students that worked with me for several years, and their understanding continues to deepen." - Andrew Ng
+
+**New Theoretical Framework**:
+- **High Bias (Underfitting)**: "Strong preconceptions that don't match reality"
+  - Example: Fitting linear to curved data
+  - Model too simple
+- **High Variance (Overfitting)**: "Predictions vary wildly with different datasets"
+  - Example: 5th-order polynomial through noisy points
+  - Model too complex
+- **Just Right**: Captures true pattern, generalizes well
+
+**Workflow from Lecture**:
+1. Train quick/dirty baseline
+2. Identify: High bias or high variance?
+3. Apply appropriate fix:
+   - High bias → Add features, more complexity, decrease λ
+   - High variance → More data, regularization, increase λ
+
+**Demonstrations**:
+- Housing price polynomial fits (underfit/just right/overfit)
+- Classification overfitting examples
+- Regularization path visualization
+- Cross-validation for λ selection
+- Feature selection with Lasso
+
+---
+
+#### Lecture 11: Neural Networks - Basics
+**File**: [08_neural_networks_basics.ipynb](08_neural_networks_basics.ipynb)
 
 **Topics**:
 - Biological motivation
@@ -180,8 +316,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 7: Neural Networks - Advanced
-**File**: `07_neural_networks_advanced.ipynb`
+#### Lecture 12: Neural Networks - Advanced
+**File**: [09_neural_networks_advanced.ipynb](09_neural_networks_advanced.ipynb)
 
 **Topics**:
 - Convolutional Neural Networks (CNNs)
@@ -200,8 +336,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ### Part II: Unsupervised Learning
 
-#### Lecture 8: Clustering
-**File**: `08_clustering.ipynb`
+#### Lecture 14: Clustering
+**File**: [12_clustering.ipynb](12_clustering.ipynb)
 
 **Topics**:
 - K-Means algorithm
@@ -220,8 +356,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 9: Dimensionality Reduction
-**File**: `09_dimensionality_reduction.ipynb`
+#### Lecture 15-17: Dimensionality Reduction
+**File**: [13_dimensionality_reduction.ipynb](13_dimensionality_reduction.ipynb)
 
 **Topics**:
 - Principal Component Analysis (PCA)
@@ -240,8 +376,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 10: Anomaly Detection
-**File**: `10_anomaly_detection.ipynb`
+#### Anomaly Detection
+**File**: [14_anomaly_detection.ipynb](14_anomaly_detection.ipynb)
 
 **Topics**:
 - Gaussian distribution
@@ -260,26 +396,156 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ### Part III: Learning Theory
 
-#### Lecture 11: Learning Theory
-**File**: `11_learning_theory.ipynb`
+#### Lecture 9: Learning Theory  
+**File**: [10_learning_theory.ipynb](10_learning_theory.ipynb) **[ENHANCED!]**  
+**Source**: Lecture 9 Transcript (Friday Section - Learning Theory)
 
 **Topics**:
-- Bias and variance
-- Regularization and model selection
+- **Core assumptions of learning theory** (new!)
+- **Bias and variance from parameter view** (new!)
+- Sampling distributions and estimators
+- Empirical risk minimization (ERM)
 - VC dimension
 - PAC learning
 - Sample complexity
-- Error analysis
+- Uniform convergence
+
+**From the Lecture**:
+> "This deepens your understanding of how machine learning works under the covers. What are the assumptions we're making and why do things generalize." - TA Anand
+
+**New Foundations**:
+- **Assumption 1**: Data distribution D exists
+  - Training and test data from **same distribution**
+  - This is critical for generalization!
+- **Assumption 2**: Independent sampling (i.i.d.)
+
+**The Learning Process**:
+```
+S (random variable) → Algorithm A (deterministic) → θ̂ (random variable)
+```
+
+> "When you feed a random variable through a deterministic function, you get a random variable"
+
+**Bias-Variance: Parameter Space View**:
+- Imagine running learning algorithm many times with different samples
+- Each run gives different θ̂ → cloud of points in parameter space
+- **Bias**: Is cloud centered on true θ*? (first moment)
+- **Variance**: How spread out is cloud? (second moment)
+
+**Four Algorithm Types**:
+| Bias | Variance | Behavior |
+|------|----------|----------|
+| Low  | Low      | ✓ Best: Centered, tight |
+| Low  | High     | Centered but spread out |
+| High | Low      | Off-center but consistent |
+| High | High     | Worst: Off-center, spread out |
+
+**Effects of Data Size m**:
+- ↑ m → ↓ Variance (more stable)
+- ↑ m → Bias stays same (assumptions unchanged)
+
+**Effects of Regularization**:
+- ↑ λ → ↓ Variance (more constraints)
+- ↑ λ → May increase bias (stronger assumptions)
 
 **Theoretical Results**:
 - Hoeffding inequality
 - Union bound
 - Training/test error relationship
+- Generalization bounds
 
 ---
 
-#### Lecture 12: ML Strategy
-**File**: `12_ml_strategy.ipynb`
+#### Lecture 10: Decision Trees and Ensembles  
+**File**: [07_decision_trees.ipynb](07_decision_trees.ipynb) **[NEW!]**  
+**Source**: Lecture 10 Transcript (Decision Trees, Bagging, Boosting)
+
+**Topics**:
+- **Decision trees from scratch** (new!)
+- Recursive partitioning
+- **Split functions and loss functions** (new!)
+- Why cross-entropy beats misclassification loss
+- Gini impurity
+- Tree depth and overfitting
+- **Ensemble methods** (new!)
+- Bagging and Random Forests
+- Boosting (AdaBoost, Gradient Boosting)
+
+**From the Lecture**:
+> "Decision trees are one of our first examples of a non-linear model" - TA Raphael Townshend
+
+**The Skiing Example**:
+- **Problem**: Predict if you can ski given month and latitude
+- **Data**: Northern Hemisphere winter (Jan-Mar), Southern Hemisphere winter (Jun-Aug)
+- **Challenge**: Non-linearly separable regions
+- **Solution**: Recursive rectangular partitions
+
+> "The tree is basically gonna play 20 Questions with this space"
+
+**Greedy, Top-Down, Recursive Partitioning**:
+1. Start with overall space
+2. Ask best question: "Is latitude > 30°?" or "Is month < 3?"
+3. Split space into two regions
+4. Recursively apply to each region
+5. Stop when pure or max depth
+
+**Split Function**: S_p(j, t)
+```
+R₁ = {x ∈ R_p : x_j < t}
+R₂ = {x ∈ R_p : x_j ≥ t}
+```
+- j = feature index
+- t = threshold value
+
+**Loss Functions Comparison**:
+
+**Misclassification Loss** (Don't Use!):
+```
+L = 1 - max_c(p̂_c)
+```
+**Problem from lecture**: Can't distinguish between splits!
+```
+Parent: 900 pos, 100 neg → Loss = 100
+Split 1: (700,100) + (200,0) → Loss = 100  
+Split 2: (400,100) + (500,0) → Loss = 100  (clearly better but same loss!)
+```
+
+**Cross-Entropy Loss** (Use This!):
+```
+L = -Σ p̂_c log(p̂_c)
+```
+> "From information theory: Number of bits needed to communicate which class"
+
+**Gini Impurity** (Also Good):
+```
+L = 1 - Σ p̂_c²
+```
+
+**Implementations**:
+- Skiing classifier (lecture example recreated!)
+- Decision tree visualization (20 Questions)
+- Loss function comparison (verifying lecture claim)
+- Tree depth experiments (2, 4, 8, unlimited)
+- Overfitting demonstration
+- Bootstrap aggregating (bagging)
+- Random Forest
+- AdaBoost and Gradient Boosting
+
+**Key Insights**:
+- **Advantages**: Interpretable, handles non-linearity, no scaling needed
+- **Disadvantage**: High variance (overfits easily)
+- **Solution**: Ensemble methods reduce variance!
+
+**When to Use**:
+- ✓ Need interpretability
+- ✓ Mixed data types
+- ✓ Non-linear patterns
+- ✗ Need stable predictions → Use Random Forest instead
+
+---
+
+#### Lecture 13: ML Strategy
+**File**: [11_ml_strategy.ipynb](11_ml_strategy.ipynb)
 
 **Topics**:
 - Orthogonalization
@@ -301,8 +567,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ### Part IV: Special Topics
 
-#### Lecture 13: Recommender Systems
-**File**: `13_recommender_systems.ipynb`
+#### Recommender Systems
+**File**: [15_recommender_systems.ipynb](15_recommender_systems.ipynb)
 
 **Topics**:
 - Content-based filtering
@@ -318,8 +584,8 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 
 ---
 
-#### Lecture 14: Reinforcement Learning
-**File**: `14_reinforcement_learning.ipynb`
+#### Lecture 18-20: Reinforcement Learning
+**File**: [16_reinforcement_learning.ipynb](16_reinforcement_learning.ipynb)
 
 **Topics**:
 - Markov Decision Processes
