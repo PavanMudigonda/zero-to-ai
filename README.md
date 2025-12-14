@@ -1,4 +1,23 @@
-# Zero to AI - Complete Learning Path
+# Zero to AI - Complete Learning Path 🚀
+
+[![Notebooks](https://img.shields.io/badge/Notebooks-732-blue?style=for-the-badge)](./checklist.md)
+[![Topics](https://img.shields.io/badge/Topics-200+-green?style=for-the-badge)](./checklist.md)
+[![GitHub stars](https://img.shields.io/github/stars/PavanMudigondaTR/zero-to-ai?style=for-the-badge&logo=github)](https://github.com/PavanMudigondaTR/zero-to-ai/stargazers)
+[![Free Labs](https://img.shields.io/badge/Free_Labs-100+-orange?style=for-the-badge)](./labs/microsoft-labs/)
+
+> ⭐ **Found this helpful?** Star this repo to show your support and help others discover it!
+
+### 🚀 Launch Instantly in Your Favorite Environment
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigondaTR/zero-to-ai/blob/main)
+[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigondaTR/zero-to-ai)
+[![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigondaTR/zero-to-ai)
+[![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigondaTR/zero-to-ai)
+[![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?style=flat&logo=github)](https://github.dev/PavanMudigondaTR/zero-to-ai)
+
+**Zero Setup Required!** Click any badge above to start coding in seconds.
+
+---
 
 > **From Zero to AI Mastery** - 732 notebooks taking you from Python basics to production-ready AI systems
 
