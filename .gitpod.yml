@@ -1,0 +1,35 @@
+# Gitpod configuration (alternative to Codespaces)
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Setup Environment
+    init: |
+      bash install_dependencies.sh
+    command: |
+      echo "🚀 Zero to AI environment ready!"
+      echo "📓 Start Jupyter: jupyter notebook"
+      echo "📊 View progress: python scripts/view_progress.py"
+
+ports:
+  - port: 8888
+    onOpen: notify
+    name: Jupyter Notebook
+  - port: 8501
+    onOpen: notify
+    name: Streamlit
+  - port: 6006
+    onOpen: notify
+    name: TensorBoard
+
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - GitHub.copilot
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
