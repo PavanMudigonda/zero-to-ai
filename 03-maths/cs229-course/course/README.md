@@ -622,7 +622,7 @@ pip install -r requirements.txt
 
 ```bash
 # Clone repository
-git clone https://github.com/PavanMudigondaTR/aiml.git
+git clone https://github.com/PavanMudigonda/aiml.git
 cd aiml/2-maths/cs229-course
 
 # Create virtual environment
@@ -905,7 +905,7 @@ MIT License - Free for educational and commercial use
 
 ## 📧 Contact
 
-**Repository**: [github.com/PavanMudigondaTR/aiml](https://github.com/PavanMudigondaTR/aiml)  
+**Repository**: [github.com/PavanMudigonda/aiml](https://github.com/PavanMudigonda/aiml)  
 **Issues**: Report bugs via GitHub Issues  
 
 ## 🙏 Acknowledgments

@@ -23,17 +23,17 @@ Before asking for help, please check these resources:
 
 ## 🔍 Search Existing Resources
 
-1. **GitHub Issues**: [Search existing issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues) to see if your question has been answered
-2. **GitHub Discussions**: [Browse discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions) for Q&A
+1. **GitHub Issues**: [Search existing issues](https://github.com/PavanMudigonda/zero-to-ai/issues) to see if your question has been answered
+2. **GitHub Discussions**: [Browse discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions) for Q&A
 3. **README Files**: Each section has its own README with specific guidance
 
 ## 💬 Community Support
 
 ### GitHub Discussions (Recommended)
 For questions, discussions, and general help:
-- [Ask a Question](https://github.com/PavanMudigondaTR/zero-to-ai/discussions/new?category=q-a)
-- [Share Your Experience](https://github.com/PavanMudigondaTR/zero-to-ai/discussions/new?category=show-and-tell)
-- [Suggest Ideas](https://github.com/PavanMudigondaTR/zero-to-ai/discussions/new?category=ideas)
+- [Ask a Question](https://github.com/PavanMudigonda/zero-to-ai/discussions/new?category=q-a)
+- [Share Your Experience](https://github.com/PavanMudigonda/zero-to-ai/discussions/new?category=show-and-tell)
+- [Suggest Ideas](https://github.com/PavanMudigonda/zero-to-ai/discussions/new?category=ideas)
 
 ### Discord Community
 Join our learning community (Coming Soon!)
@@ -46,7 +46,7 @@ Join our learning community (Coming Soon!)
 Found a bug or error in the course material?
 
 ### Before Creating an Issue
-1. Search [existing issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues) to avoid duplicates
+1. Search [existing issues](https://github.com/PavanMudigonda/zero-to-ai/issues) to avoid duplicates
 2. Verify the issue with the latest version of the repository
 3. Gather relevant information (error messages, environment details)
 
@@ -65,7 +65,7 @@ When creating an issue, please include:
 7. **Screenshots**: If applicable
 8. **Code Samples**: Minimal code that reproduces the issue
 
-[Create an Issue →](https://github.com/PavanMudigondaTR/zero-to-ai/issues/new)
+[Create an Issue →](https://github.com/PavanMudigonda/zero-to-ai/issues/new)
 
 ## 📖 Contributing
 
@@ -93,9 +93,9 @@ Want to help improve the course?
 ## 📧 Contact
 
 For other inquiries:
-- **GitHub**: [@PavanMudigondaTR](https://github.com/PavanMudigondaTR)
-- **Issues**: [Create an issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
-- **Discussions**: [Start a discussion](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
+- **GitHub**: [@PavanMudigonda](https://github.com/PavanMudigonda)
+- **Issues**: [Create an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
+- **Discussions**: [Start a discussion](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 
 ## ⚠️ What NOT to Do
 
@@ -114,6 +114,6 @@ Thank you for being part of the Zero to AI learning community! We're here to hel
 
 **Need immediate help?**
 1. Check [Course Setup Guide](00-course-setup/README.md#troubleshooting)
-2. Search [GitHub Issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
-3. Ask in [GitHub Discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
-4. Create a [new issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues/new) (for bugs only)
+2. Search [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)
+3. Ask in [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
+4. Create a [new issue](https://github.com/PavanMudigonda/zero-to-ai/issues/new) (for bugs only)

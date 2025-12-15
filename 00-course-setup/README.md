@@ -9,8 +9,8 @@ Welcome to Zero to AI! This comprehensive learning path will take you from Pytho
 Before you begin, connect with other learners and get support:
 
 - **💬 Discord Community**: [Join our Discord server](https://discord.gg/your-discord-link) (Coming Soon)
-- **📧 Discussions**: [GitHub Discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
-- **🐛 Issues**: Found a bug or have a suggestion? [Create an issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
+- **📧 Discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
+- **🐛 Issues**: Found a bug or have a suggestion? [Create an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
 
 ## 🍴 Fork or Clone This Repository
 
@@ -18,7 +18,7 @@ Before you begin, connect with other learners and get support:
 
 Forking creates your own copy where you can track progress and make changes:
 
-1. Click the **"Fork"** button at the top-right of [this page](https://github.com/PavanMudigondaTR/zero-to-ai)
+1. Click the **"Fork"** button at the top-right of [this page](https://github.com/PavanMudigonda/zero-to-ai)
 2. This creates `https://github.com/YOUR-USERNAME/zero-to-ai`
 
 ### Step 2: Clone Your Fork
@@ -29,7 +29,7 @@ git clone https://github.com/YOUR-USERNAME/zero-to-ai.git
 cd zero-to-ai
 
 # Add upstream remote (to sync with original repo)
-git remote add upstream https://github.com/PavanMudigondaTR/zero-to-ai.git
+git remote add upstream https://github.com/PavanMudigonda/zero-to-ai.git
 ```
 
 ### Quick Clone Options
@@ -139,19 +139,19 @@ jupyter notebook
 
 ### Google Colab
 
-- Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigondaTR/zero-to-ai/blob/main)
+- Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
 - Each notebook can be opened directly in Colab
 - Free GPU access available
 
 ### Replit
 
-- Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigondaTR/zero-to-ai)
+- Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai)
 - Collaborative coding environment
 - Great for learning with others
 
 ### Kaggle Kernels
 
-- Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigondaTR/zero-to-ai)
+- Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai)
 - Access to free GPU/TPU
 - Large dataset library included
 
@@ -219,8 +219,8 @@ zero-to-ai/
 ### Getting Help
 
 1. **Check [troubleshooting.md](./troubleshooting.md)** (Coming Soon)
-2. **Search [GitHub Issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues)**
-3. **Ask in [Discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)**
+2. **Search [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)**
+3. **Ask in [Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)**
 4. **Join our Discord community** (Coming Soon)
 
 ## 🎯 Verification Checklist
@@ -254,6 +254,6 @@ Before moving to Lesson 1, ensure:
 
 ---
 
-**Need Help?** Open an [issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues) or join our community!
+**Need Help?** Open an [issue](https://github.com/PavanMudigonda/zero-to-ai/issues) or join our community!
 
 **Found this helpful?** ⭐ Star this repo to support the project!

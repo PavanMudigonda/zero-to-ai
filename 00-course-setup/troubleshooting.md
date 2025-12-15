@@ -400,7 +400,7 @@ conda install pytorch torchvision -c pytorch
 New-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name "LongPathsEnabled" -Value 1 -PropertyType DWORD -Force
 
 # Or clone to shorter path:
-git clone https://github.com/PavanMudigondaTR/zero-to-ai.git C:\ai
+git clone https://github.com/PavanMudigonda/zero-to-ai.git C:\ai
 ```
 
 #### Problem: Visual C++ redistributable missing
@@ -474,9 +474,9 @@ which python3
 
 If your issue isn't listed here:
 
-1. **Search existing issues**: [GitHub Issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
-2. **Check discussions**: [GitHub Discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
-3. **Create new issue**: [New Issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues/new)
+1. **Search existing issues**: [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)
+2. **Check discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
+3. **Create new issue**: [New Issue](https://github.com/PavanMudigonda/zero-to-ai/issues/new)
 4. **Community support**: Join our Discord (Coming Soon!)
 
 ### When Asking for Help
@@ -542,4 +542,4 @@ Save as `check_env.py` and run: `python check_env.py`
 
 ---
 
-**Still stuck?** Don't hesitate to [ask for help](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)!
+**Still stuck?** Don't hesitate to [ask for help](https://github.com/PavanMudigonda/zero-to-ai/discussions)!

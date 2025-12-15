@@ -52,7 +52,7 @@
 
 ### Phase 1: Python Fundamentals (2-4 weeks)
 
-1. **Start with [Python Bro Code](https://github.com/PavanMudigondaTR/python-bro-code)**
+1. **Start with [Python Bro Code](https://github.com/PavanMudigonda/python-bro-code)**
    - Work through all examples
    - Complete exercises
    - Build small projects
