@@ -200,19 +200,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 🎯 Your Next Steps
-
-Ready to begin your AI journey? Follow these steps:
-
-1. ⭐ **Star this repository** - Show your support and find it easily later
-2. 🍴 **Fork the repository** - Create your own copy to track progress
-3. 📘 **Read [Course Setup](00-course-setup/README.md)** - Set up your environment
-4. ✅ **Review [Learning Checklist](checklist.md)** - Understand your roadmap
-5. 🚀 **Start Learning** - Begin with [Phase 1: Python & Data Science](1-data-science/README.md)
-6. 💬 **Join Community** - Connect with other learners (Coming Soon!)
-
----
-
 **🚀 From Zero to AI - Your Journey Starts Here!**
 
 > "The best time to start learning AI was yesterday. The second best time is now."
