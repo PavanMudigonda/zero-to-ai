@@ -174,9 +174,11 @@ print(results)
 
 from pymongo import MongoClient
 from pymongo.operations import SearchIndexModel
+import os
 
-# Connect to MongoDB Atlas
-client = MongoClient("mongodb+srv://username:password@cluster.mongodb.net/")
+# Connect to MongoDB Atlas using environment variable
+# Set your connection string: export MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/"
+client = MongoClient(os.getenv("MONGODB_URI"))
 db = client['vector_db']
 collection = db['documents']
 
