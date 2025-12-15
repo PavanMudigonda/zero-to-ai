@@ -2,26 +2,26 @@
 
 ### A comprehensive curriculum teaching everything you need to build production-ready AI systems
 
-[![GitHub license](https://img.shields.io/github/license/PavanMudigondaTR/zero-to-ai.svg)](https://github.com/PavanMudigondaTR/zero-to-ai/blob/master/LICENSE)
-[![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigondaTR/zero-to-ai.svg)](https://GitHub.com/PavanMudigondaTR/zero-to-ai/graphs/contributors/)
-[![GitHub issues](https://img.shields.io/github/issues/PavanMudigondaTR/zero-to-ai.svg)](https://GitHub.com/PavanMudigondaTR/zero-to-ai/issues/)
-[![GitHub pull-requests](https://img.shields.io/github/issues-pr/PavanMudigondaTR/zero-to-ai.svg)](https://GitHub.com/PavanMudigondaTR/zero-to-ai/pulls/)
+[![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/pulls/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-[![GitHub watchers](https://img.shields.io/github/watchers/PavanMudigondaTR/zero-to-ai.svg?style=social&label=Watch)](https://GitHub.com/PavanMudigondaTR/zero-to-ai/watchers/)
-[![GitHub forks](https://img.shields.io/github/forks/PavanMudigondaTR/zero-to-ai.svg?style=social&label=Fork)](https://GitHub.com/PavanMudigondaTR/zero-to-ai/network/)
-[![GitHub stars](https://img.shields.io/github/stars/PavanMudigondaTR/zero-to-ai.svg?style=social&label=Star)](https://GitHub.com/PavanMudigondaTR/zero-to-ai/stargazers/)
+[![GitHub watchers](https://img.shields.io/github/watchers/PavanMudigonda/zero-to-ai.svg?style=social&label=Watch)](https://GitHub.com/PavanMudigonda/zero-to-ai/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/PavanMudigonda/zero-to-ai.svg?style=social&label=Fork)](https://GitHub.com/PavanMudigonda/zero-to-ai/network/)
+[![GitHub stars](https://img.shields.io/github/stars/PavanMudigonda/zero-to-ai.svg?style=social&label=Star)](https://GitHub.com/PavanMudigonda/zero-to-ai/stargazers/)
 
 ---
 
 
 ### 🚀 Launch Instantly - Zero Setup Required!
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigondaTR/zero-to-ai/blob/main)
-[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigondaTR/zero-to-ai)
-[![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigondaTR/zero-to-ai)
-[![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigondaTR/zero-to-ai)
-[![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?style=flat&logo=github)](https://github.dev/PavanMudigondaTR/zero-to-ai)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
+[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai)
+[![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai)
+[![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai)
+[![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?style=flat&logo=github)](https://github.dev/PavanMudigonda/zero-to-ai)
 
 **Click any badge above to start coding in seconds!**
 
@@ -39,7 +39,7 @@ This comprehensive AI/ML curriculum has **23 progressive phases** covering every
 
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
-- 🍴 [Fork this repo](https://github.com/PavanMudigondaTR/zero-to-ai/fork) to track your personal progress
+- 🍴 [Fork this repo](https://github.com/PavanMudigonda/zero-to-ai/fork) to track your personal progress
 
 ### 🎯 What You'll Learn
 
@@ -80,7 +80,7 @@ This comprehensive AI/ML curriculum has **23 progressive phases** covering every
 #### Option 1: UV - Fast & Recommended
 ```bash
 # Clone the repository
-git clone https://github.com/PavanMudigondaTR/zero-to-ai.git
+git clone https://github.com/PavanMudigonda/zero-to-ai.git
 cd zero-to-ai
 
 # Install dependencies with UV (fastest!)
@@ -93,7 +93,7 @@ jupyter notebook
 #### Option 2: Conda - Best for ML/Data Science
 ```bash
 # Clone the repository
-git clone https://github.com/PavanMudigondaTR/zero-to-ai.git
+git clone https://github.com/PavanMudigonda/zero-to-ai.git
 cd zero-to-ai
 
 # Create conda environment
@@ -105,8 +105,8 @@ jupyter notebook
 ```
 
 #### Option 3: Cloud (No Installation!)
-- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigondaTR/zero-to-ai)
-- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigondaTR/zero-to-ai/blob/main)
+- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai)
+- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
 
 ### Your First Steps
 
@@ -160,8 +160,8 @@ We welcome contributions from the community! Here's how you can help:
 
 ### Ways to Contribute
 
-- **🐛 Report Issues**: Found a bug or error? [Open an issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
-- **✨ Suggest Features**: Have an idea? Share it in [Discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
+- **🐛 Report Issues**: Found a bug or error? [Open an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
+- **✨ Suggest Features**: Have an idea? Share it in [Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 - **📝 Improve Documentation**: Fix typos, clarify explanations
 - **💻 Add Examples**: Contribute new notebooks or examples
 - **🌍 Translations**: Help translate content to other languages
@@ -220,6 +220,6 @@ Ready to begin your AI journey? Follow these steps:
 
 ---
 
-**Questions?** Open an [issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues) or start a [discussion](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)!
+**Questions?** Open an [issue](https://github.com/PavanMudigonda/zero-to-ai/issues) or start a [discussion](https://github.com/PavanMudigonda/zero-to-ai/discussions)!
 
 **Found this helpful?** ⭐ Star this repo and share it with others!

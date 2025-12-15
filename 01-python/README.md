@@ -8,7 +8,7 @@ If you're new to Python or need to brush up on programming fundamentals, start h
 
 ## 📚 Primary Python Course
 ---
-**[Python Bro Code](https://github.com/PavanMudigondaTR/python-bro-code)** ⭐ **Start Here!**
+**[Python Bro Code](https://github.com/PavanMudigonda/python-bro-code)** ⭐ **Start Here!**
 
 Complete Python programming course covering:
 - Python syntax and basics

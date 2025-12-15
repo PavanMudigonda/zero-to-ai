@@ -20,7 +20,7 @@ Please **do not** create a public GitHub issue for security vulnerabilities. Thi
 ### 2. Report Privately
 
 Send a detailed report to:
-- **GitHub Security Advisories**: [Report a vulnerability](https://github.com/PavanMudigondaTR/zero-to-ai/security/advisories/new)
+- **GitHub Security Advisories**: [Report a vulnerability](https://github.com/PavanMudigonda/zero-to-ai/security/advisories/new)
 - **Email**: Create a private issue or use GitHub's security advisory feature
 
 ### 3. Include in Your Report
@@ -120,7 +120,7 @@ safety check
 ### Reporting Dependency Issues
 
 If you discover a vulnerable dependency:
-1. Check if it's already reported in [GitHub Issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
+1. Check if it's already reported in [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)
 2. If not, create a security advisory or private issue
 3. Include the CVE number if available
 4. Suggest an updated/alternative package if possible
@@ -166,7 +166,7 @@ This security policy applies to:
 ## Questions?
 
 If you have questions about this security policy:
-- Open a [GitHub Discussion](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
+- Open a [GitHub Discussion](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 - Create a non-sensitive issue for policy clarifications
 
 ---

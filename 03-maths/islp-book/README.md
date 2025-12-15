@@ -374,7 +374,7 @@ pip install -r requirements.txt
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/PavanMudigondaTR/aiml.git
+git clone https://github.com/PavanMudigonda/aiml.git
 cd aiml/2-maths/islp-book
 ```
 
@@ -675,7 +675,7 @@ MIT License - feel free to use for learning and teaching.
 
 ## 📧 Contact
 
-**Repository**: [PavanMudigondaTR/aiml](https://github.com/PavanMudigondaTR/aiml)
+**Repository**: [PavanMudigonda/aiml](https://github.com/PavanMudigonda/aiml)
 
 **Issues**: Report bugs or suggest improvements via GitHub Issues
 

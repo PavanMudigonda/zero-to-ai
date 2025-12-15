@@ -66,8 +66,8 @@ jupyter notebook
 ```
 
 ### Option 2: Cloud Platforms
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigondaTR/zero-to-ai/blob/main/path/to/lesson)
-- [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigondaTR/zero-to-ai/tree/main/path/to/lesson)
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main/path/to/lesson)
+- [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai/tree/main/path/to/lesson)
 
 ---
 
@@ -248,17 +248,17 @@ Test your understanding:
 ## 🤝 Contributing
 
 Found an issue or have suggestions?
-- [Report an issue](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
-- [Contribute improvements](https://github.com/PavanMudigondaTR/zero-to-ai/pulls)
-- [Share feedback](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
+- [Report an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
+- [Contribute improvements](https://github.com/PavanMudigonda/zero-to-ai/pulls)
+- [Share feedback](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 
 ---
 
 ## 💬 Community & Support
 
-- **Discussions**: [GitHub Discussions](https://github.com/PavanMudigondaTR/zero-to-ai/discussions)
+- **Discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 - **Discord**: Join our community (Coming Soon!)
-- **Issues**: [GitHub Issues](https://github.com/PavanMudigondaTR/zero-to-ai/issues)
+- **Issues**: [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)
 
 ---
 
