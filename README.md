@@ -35,7 +35,7 @@
 
 ## 🌱 Getting Started
 
-This comprehensive AI/ML curriculum has **23 progressive phases** covering everything from Python fundamentals to cutting-edge AI systems. Each phase includes hands-on notebooks, projects, and practical applications.
+This comprehensive AI/ML curriculum has **25 progressive phases** covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each phase includes hands-on notebooks, projects, and practical applications.
 
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
@@ -50,6 +50,7 @@ This comprehensive AI/ML curriculum has **23 progressive phases** covering every
 | **Advanced ML** | RAG Systems, Vector Databases, MLOps |
 | **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
 | **Production** | Deployment, Monitoring, Optimization |
+| **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
 
 ### 🎓 Who Is This For?
 
@@ -125,6 +126,11 @@ zero-to-ai/
 ├── 📚 01-python/                Python fundamentals (if needed)
 ├── 📊 02-data-science/          NumPy, Pandas, Scikit-learn (278 notebooks!)
 ├── 🔢 03-maths/                 Linear Algebra, Calculus, Statistics (40+ notebooks)
+│   ├── foundational/           Core math topics
+│   ├── mml-book/              MML textbook implementation
+│   ├── islp-book/             Statistical learning with Python
+│   ├── cs229-course/          Stanford ML course
+│   └── advanced/ 🆕           Learning theory, advanced optimization, Bayesian non-parametrics
 ├── 🔤 04-token/                 Tokenization (tiktoken, sentencepiece, HF)
 ├── 🎯 05-embeddings/            Word & sentence embeddings
 ├── 🧠 06-neural-networks/       Deep learning from scratch to Transformers
@@ -136,17 +142,19 @@ zero-to-ai/
 ├── ⚙️ 12-llm-finetuning/      LoRA, QLoRA, PEFT fine-tuning
 ├── 🎭 13-multimodal/           Vision, audio, video AI
 ├── 🏠 14-local-llms/           Ollama, privacy-first AI
-├── �  15-ai-agents/            🆕 Function calling, ReAct, Multi-agent
-├── 📊 16-model-evaluation/     🆕 Metrics, fairness, LLM evaluation
-├── 🐛 17-debugging-troubleshooting/ 🆕 Profiling, data issues, debugging
-├── 🎨 18-low-code-ai-tools/    🆕 Gradio, Streamlit, AutoML
-├── 🔒 19-ai-safety-redteaming/ 🆕 Security, bias, red teaming
-├── ⚡  20-real-time-streaming/  🆕 Streaming AI, WebSockets
-├── ?  21-quizzes/              Questions to test your knowledge
-├── �🧪 22-labs/                    Microsoft courses, videos, cloud tutorials
-├── 📖  23-glossary/                AI/ML terminology & concepts
+├── 🤖 15-ai-agents/            Function calling, ReAct, Multi-agent
+├── 📊 16-model-evaluation/     Metrics, fairness, LLM evaluation
+├── 🐛 17-debugging-troubleshooting/ Profiling, data issues, debugging
+├── 🎨 18-low-code-ai-tools/    Gradio, Streamlit, AutoML
+├── 🔒 19-ai-safety-redteaming/ Security, bias, red teaming
+├── ⚡ 20-real-time-streaming/  Streaming AI, WebSockets
+├── ❓ 21-quizzes/              Questions to test your knowledge
+├── 🧪 22-references/           Resources, papers, external materials
+├── 📖 23-glossary/             AI/ML terminology & concepts
+├── 🎓 23-advanced-mathematics/ 🆕 **16 notebooks**: PAC, Rademacher, NTK, VI, Bayesian NP
+├── 🔬 24-advanced-deep-learning/ 🆕 **39 notebooks**: GANs, VAEs, NeRF, Diffusion, BNNs
 ├── ✅ checklist.md             Your complete learning roadmap
-└── 📋 setup.md                 Detailed installation guide
+├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models
 ```
 
