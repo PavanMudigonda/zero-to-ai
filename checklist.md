@@ -6,7 +6,7 @@ Complete this checklist as you progress through the repository. Check off items 
 
 ## 📋 How to Use This Checklist
 
-1. Work through phases sequentially (0 → 13)
+1. Work through phases sequentially (0 → 25)
 2. Check off `- [ ]` items as you complete them
 3. Track your progress through notebooks, labs, and projects
 4. Use this checklist alongside the main [README.md](README.md) and [setup.md](setup.md)
@@ -17,7 +17,7 @@ Complete this checklist as you progress through the repository. Check off items 
 
 **Goal**: Understand core AI/ML terminology
 
-- [ ] Read [glossary/GLOSSARY.md](glossary/GLOSSARY.md)
+- [ ] Read [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md)
 - [ ] Familiarize yourself with basic ML concepts
 - [ ] Understand the difference between supervised/unsupervised learning
 
@@ -621,6 +621,71 @@ Track your major achievements:
 - [ ] **Modern AI Stack** - Phases 3-6 done (Tokenization, Embeddings, Neural Nets, Vector DBs)
 - [ ] **Production Ready** - Phases 7-9 done (RAG, MLOps, Specializations)
 - [ ] **Cutting-Edge AI** - Phases 10-13 done (Prompt Engineering, Fine-tuning, Multimodal, Local LLMs)
+- [ ] **Advanced Research** - Phases 24-25 done (Advanced Math, Deep Learning Research)
+- [ ] **Portfolio Built** - 5+ projects deployed and documented
+- [ ] **Certified** - At least 1 ML certification (AWS, Google, Azure, or DeepLearning.AI)
+
+---
+
+## Phase 24: Advanced Deep Learning (RESEARCH LEVEL) 🔬
+
+**Goal**: Master cutting-edge deep learning research topics
+
+**Prerequisites**: Complete Phase 6 (Neural Networks) and Phase 3 (Advanced Mathematics)
+
+### Generative Models - Advanced
+- [ ] [01_gan_mathematics.ipynb](24-advanced-deep-learning/01_gan_mathematics.ipynb) - GAN theory and vanilla implementation
+- [ ] [02_wgan_theory_implementation.ipynb](24-advanced-deep-learning/02_wgan_theory_implementation.ipynb) - Wasserstein GAN with gradient penalty
+- [ ] [03_variational_autoencoders_advanced.ipynb](24-advanced-deep-learning/03_variational_autoencoders_advanced.ipynb) - VAE theory, ELBO, β-VAE
+- [ ] [04_neural_ode.ipynb](24-advanced-deep-learning/04_neural_ode.ipynb) - Neural ODEs and continuous normalizing flows
+
+### Advanced Topics (To Be Implemented)
+- [ ] Info-GAN and Conditional GANs
+- [ ] Bayesian GANs
+- [ ] Advanced VAE architectures
+- [ ] 3D Vision and NeRF
+- [ ] Vision Transformers (ViT)
+- [ ] Advanced Transformer architectures
+
+**See**: [24-advanced-deep-learning/README.md](24-advanced-deep-learning/README.md) for full roadmap
+
+---
+
+## Phase 25: Advanced Mathematics for ML (RESEARCH LEVEL) 📐
+
+**Goal**: Master rigorous mathematical foundations for ML research
+
+**Prerequisites**: Complete Phase 3 (Basic Mathematics)
+
+### Learning Theory
+- [ ] [01_introduction_learning_theory.ipynb](03-maths/advanced/01_introduction_learning_theory.ipynb) - PAC learning, bias-variance, sample complexity
+- [ ] [02_concentration_inequalities.ipynb](03-maths/advanced/02_concentration_inequalities.ipynb) - MCMC, Metropolis-Hastings, Gibbs sampling
+- [ ] Rademacher complexity and uniform convergence (planned)
+- [ ] PAC-Bayesian theory (planned)
+- [ ] Neural Tangent Kernel (planned)
+
+### Probabilistic Models
+- [ ] [09_expectation_maximization.ipynb](03-maths/advanced/09_expectation_maximization.ipynb) - EM algorithm, GMM, convergence proofs
+- [ ] MCMC and variational inference (planned)
+- [ ] Bayesian non-parametrics (planned)
+- [ ] State space models (planned)
+
+### Optimization Theory
+- [ ] Gradient descent convergence analysis (planned)
+- [ ] Duality theory and Lagrangian methods (planned)
+- [ ] Conjugate gradient methods (planned)
+
+**See**: [03-maths/advanced/README.md](03-maths/advanced/README.md) for full roadmap
+
+---
+
+## 🏆 Completion Milestones
+
+- [ ] **Foundation Complete** - Phases 0-2 done (Python, Math, ML basics)
+- [ ] **Modern AI Stack** - Phases 3-6 done (Tokenization, Embeddings, Neural Nets, Vector DBs)
+- [ ] **Production Ready** - Phases 7-9 done (RAG, MLOps, Specializations)
+- [ ] **Cutting-Edge AI** - Phases 10-13 done (Prompt Engineering, Fine-tuning, Multimodal, Local LLMs)
+- [ ] **Research Mastery** - Phases 24-25 done (Advanced Deep Learning, Advanced Mathematics)
 - [ ] **Portfolio Built** - 5+ projects deployed and documented
 - [ ] **Certified** - At least 1 ML certification (AWS, Google, Azure, or DeepLearning.AI)
 
@@ -632,12 +697,14 @@ Track your major achievements:
 - [ ] Write blog posts about your learning journey
 - [ ] Mentor others in AI/ML
 - [ ] Build your own AI product
-- [ ] Apply for ML/AI jobs
+- [ ] Apply for ML/AI jobs or research positions
 - [ ] Continue learning (AI never stops evolving!)
+- [ ] Read and implement papers from top conferences (NeurIPS, ICML, ICLR)
+- [ ] Contribute to ML research
 
 ---
 
-**Total Progress**: `___/732` notebooks completed
+**Total Progress**: `___/790+` notebooks completed (732 foundational + 58+ advanced)
 
 **Current Phase**: `Phase ___`
 
@@ -645,5 +712,5 @@ Track your major achievements:
 
 ---
 
-*Last Updated: December 2025*
+*Last Updated: January 2026*
 *Repository: <https://github.com/PavanMudigonda/zero-to-ai>*
