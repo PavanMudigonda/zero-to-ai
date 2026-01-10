@@ -4,9 +4,11 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 
 - **📁 foundational/** - Core math topics (9 notebooks)
 - **📁 mml-book/** - MML book chapters covering theory and ML applications (10 notebooks)
-- **📁 mlpp-book/** - Machine Learning: A Probabilistic Perspective (4 notebooks) 🆕
+- **📁 mlpp-book/** - Machine Learning: A Probabilistic Perspective (4 notebooks)
 - **📁 islp-book/** - Introduction to Statistical Learning with Python (13 chapters)
-- **📁 cs229-course/** - Stanford CS229 Machine Learning course implementation (14 lectures) 🆕
+- **📁 cs229-course/** - Stanford CS229 Machine Learning course implementation (14 lectures)
+- **📁 advanced/** 🆕 - Learning theory, advanced optimization, Bayesian non-parametrics (Research-level)
+- **📁 3blue1brown/** - Visual mathematics from 3Blue1Brown
 - **📁 exercises/** - Practice exercises with solutions (4 notebooks)
 - **📁 resources/** - Reference materials (MML textbook, ISLP book, CS229 notes, MLPP book)
 
@@ -16,9 +18,10 @@ This directory contains comprehensive Jupyter notebooks covering the mathematica
 - [Part I: Foundational Math Notebooks](#part-i-foundational-math-notebooks)
 - [Part II: MML Book - Mathematical Foundations](#part-ii-mml-book---mathematical-foundations-chapters-2-7)
 - [Part III: MML Book - ML Applications](#part-iii-mml-book---ml-applications-chapters-9-12)
-- [Part IV: MLPP Book - Probabilistic Machine Learning](#part-iv-mlpp-book---probabilistic-machine-learning) 🆕
+- [Part IV: MLPP Book - Probabilistic Machine Learning](#part-iv-mlpp-book---probabilistic-machine-learning)
 - [Part V: ISLP Book - Statistical Learning](#part-v-islp-book---statistical-learning-with-python)
-- [Part VI: CS229 Course - Machine Learning Algorithms](#part-vi-cs229-course---stanford-machine-learning-) 🆕
+- [Part VI: CS229 Course - Machine Learning Algorithms](#part-vi-cs229-course---stanford-machine-learning-)
+- [Part VII: Advanced Mathematics (Research-Level)](#part-vii-advanced-mathematics-research-level) 🆕
 - [Practice Exercises](#️-practice-with-exercises)
 - [Learning Paths](#-learning-paths)
 - [Quick Start](#-quick-start)
