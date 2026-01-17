@@ -35,7 +35,7 @@
 
 ## 🌱 Getting Started
 
-This comprehensive AI/ML curriculum has **25 progressive phases** covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each phase includes hands-on notebooks, projects, and practical applications.
+This comprehensive AI/ML curriculum has **27 progressive phases** covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each phase includes hands-on notebooks, projects, and practical applications.
 
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
@@ -153,6 +153,9 @@ zero-to-ai/
 ├── 📖 23-glossary/             AI/ML terminology & concepts
 ├── 🎓 23-advanced-mathematics/ 🆕 **16 notebooks**: PAC, Rademacher, NTK, VI, Bayesian NP
 ├── 🔬 24-advanced-deep-learning/ 🆕 **39 notebooks**: GANs, VAEs, NeRF, Diffusion, BNNs
+├── 🎲 25-reinforcement-learning/ 🆕 **6 notebooks**: MDP, Q-Learning, Policy Gradients, Actor-Critic
+├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
+└── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
 ├── ✅ checklist.md             Your complete learning roadmap
 ├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models
