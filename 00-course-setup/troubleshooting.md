@@ -2,8 +2,48 @@
 
 Common issues and solutions for Zero to AI learning path.
 
-## 📋 Table of Contents
+## � Quick Fixes (Most Common Issues)
 
+**Having trouble?** Try these first:
+
+1. **Environment not activating?**
+   ```bash
+   source .venv/bin/activate  # macOS/Linux
+   .venv\Scripts\activate     # Windows
+   ```
+
+2. **Import errors?**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Jupyter won't start?**
+   ```bash
+   pip install jupyter notebook
+   jupyter notebook --no-browser
+   ```
+
+4. **CUDA not working?**
+   ```python
+   # Check PyTorch CUDA availability
+   import torch
+   print(torch.cuda.is_available())
+   ```
+
+5. **Wrong Python version?**
+   ```bash
+   python --version  # Should be 3.9+
+   ```
+
+**Still stuck?** See detailed solutions below or run the [diagnostic script](#quick-diagnosis-script).
+
+---
+
+## �📋 Table of Contents
+
+- [Quick Fixes](#-quick-fixes-most-common-issues)
+- [Error Message Quick Reference](#-error-message-quick-reference)
+- [Compatibility Matrix](#-compatibility-matrix)
 - [Installation Issues](#installation-issues)
 - [Environment Problems](#environment-problems)
 - [Jupyter Notebook Issues](#jupyter-notebook-issues)
@@ -11,7 +51,73 @@ Common issues and solutions for Zero to AI learning path.
 - [GPU/CUDA Issues](#gpucuda-issues)
 - [Memory Issues](#memory-issues)
 - [Platform-Specific Issues](#platform-specific-issues)
+- [Quick Diagnosis Script](#quick-diagnosis-script)
 - [Getting More Help](#getting-more-help)
+
+---
+
+## 🔍 Error Message Quick Reference
+
+**Jump directly to solutions for common error messages:**
+
+| Error Message | Category | Quick Fix | Details |
+|---------------|----------|-----------|------|
+| `ModuleNotFoundError: No module named 'X'` | Import | `pip install package-name` | [Package Import Errors](#package-import-errors) |
+| `CUDA error: out of memory` | GPU | Reduce batch size | [GPU/CUDA Issues](#gpucuda-issues) |
+| `pip install fails with permission errors` | Installation | Use virtual environment | [Installation Issues](#installation-issues) |
+| `ImportError: DLL load failed` | Windows | Reinstall Visual C++ | [Platform-Specific Issues](#platform-specific-issues) |
+| `conda command not found` | Environment | Install Miniconda | [Installation Issues](#installation-issues) |
+| `Jupyter kernel keeps dying` | Jupyter | Reduce memory usage | [Jupyter Notebook Issues](#jupyter-notebook-issues) |
+| `RuntimeError: CUDA not available` | GPU | Install PyTorch with CUDA | [GPU/CUDA Issues](#gpucuda-issues) |
+| `SyntaxError: invalid syntax` | Python | Check Python version (3.9+) | [Environment Problems](#environment-problems) |
+| `Virtual environment not activating` | Environment | Check activation command | [Environment Problems](#environment-problems) |
+| `SSL certificate errors` | macOS | Install certificates | [Platform-Specific Issues](#platform-specific-issues) |
+
+---
+
+## 📊 Compatibility Matrix
+
+**Recommended versions and compatibility information:**
+
+### Core Dependencies
+
+| Component | Minimum | Recommended | Tested Versions | Notes |
+|-----------|---------|-------------|-----------------|-------|
+| **Python** | 3.9 | 3.11 | 3.9, 3.10, 3.11, 3.12 | 3.12 may have package compatibility issues |
+| **pip** | 21.0 | Latest | 23.0+ | Use `pip install --upgrade pip` |
+| **Jupyter** | 1.0 | Latest | 1.0+ | Includes notebook and lab |
+| **NumPy** | 1.21 | 1.26+ | 1.21-1.26 | Core numerical computing |
+| **Pandas** | 1.3 | 2.0+ | 1.3-2.1 | Data manipulation |
+| **Scikit-learn** | 1.0 | 1.4+ | 1.0-1.4 | Traditional ML |
+
+### Deep Learning Frameworks
+
+| Framework | Minimum | Recommended | CUDA Support | Notes |
+|-----------|---------|-------------|--------------|-------|
+| **PyTorch** | 2.0 | 2.2+ | CUDA 11.8, 12.1 | Main framework |
+| **TensorFlow** | 2.10 | 2.15+ | CUDA 11.8 | Optional |
+| **Transformers** | 4.30 | 4.37+ | - | HuggingFace library |
+
+### GPU/CUDA Compatibility
+
+| GPU Series | CUDA Version | PyTorch Command |
+|------------|--------------|----------------|
+| **RTX 40XX** | 12.1 | `pip install torch --index-url https://download.pytorch.org/whl/cu121` |
+| **RTX 30XX** | 11.8 or 12.1 | `pip install torch --index-url https://download.pytorch.org/whl/cu118` |
+| **RTX 20XX / GTX 16XX** | 11.8 | `pip install torch --index-url https://download.pytorch.org/whl/cu118` |
+| **GTX 10XX** | 11.8 | `pip install torch --index-url https://download.pytorch.org/whl/cu118` |
+| **CPU Only** | N/A | `pip install torch` |
+
+### Platform-Specific
+
+| Platform | Python Install | Package Manager | GPU Support |
+|----------|----------------|-----------------|-------------|
+| **macOS (Intel)** | [python.org](https://python.org) or Homebrew | pip or conda | No CUDA (MPS for M1/M2) |
+| **macOS (M1/M2/M3)** | [python.org](https://python.org) or conda | conda preferred | Metal Performance Shaders |
+| **Windows** | [python.org](https://python.org) | pip or conda | CUDA supported |
+| **Linux** | System package manager | pip or conda | CUDA supported |
+
+**Last Updated:** January 2026
 
 ---
 
@@ -477,7 +583,7 @@ If your issue isn't listed here:
 1. **Search existing issues**: [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)
 2. **Check discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 3. **Create new issue**: [New Issue](https://github.com/PavanMudigonda/zero-to-ai/issues/new)
-4. **Community support**: Join our Discord (Coming Soon!)
+4. **Run diagnostics**: Use the [Quick Diagnosis Script](#quick-diagnosis-script) above
 
 ### When Asking for Help
 
@@ -492,53 +598,154 @@ Include:
 
 ## Quick Diagnosis Script
 
-Run this to check your environment:
+### 🔧 One-Command Diagnostics
+
+**Quick environment checks (copy and paste):**
+
+```bash
+# Check Python version and location
+python --version && which python
+
+# Verify key packages in one line
+python -c "import sys; import numpy as np; import pandas as pd; import sklearn; import torch; print(f'✅ Python {sys.version_info.major}.{sys.version_info.minor} | NumPy {np.__version__} | Pandas {pd.__version__} | PyTorch {torch.__version__} | CUDA: {torch.cuda.is_available()}')"
+
+# Check CUDA setup
+python -c "import torch; print(f'CUDA Available: {torch.cuda.is_available()}'); print(f'CUDA Version: {torch.version.cuda}' if torch.cuda.is_available() else 'CPU Only'); print(f'GPU: {torch.cuda.get_device_name(0)}' if torch.cuda.is_available() else 'No GPU')"
+
+# List installed packages
+pip list | grep -E 'numpy|pandas|torch|transformers|jupyter'
+```
+
+### 📝 Comprehensive Diagnostic Script
+
+Run this complete diagnostic to check your environment:
 
 ```python
 #!/usr/bin/env python3
-"""Quick environment diagnostic script"""
+"""Comprehensive environment diagnostic script for Zero to AI"""
 
 import sys
 import platform
+import subprocess
 
-print("=" * 50)
-print("ENVIRONMENT DIAGNOSTICS")
-print("=" * 50)
+print("=" * 60)
+print("ZERO TO AI - ENVIRONMENT DIAGNOSTICS")
+print("=" * 60)
 
-print(f"\nPython Version: {sys.version}")
+# System Information
+print("\n📋 SYSTEM INFORMATION")
+print("-" * 60)
 print(f"Platform: {platform.platform()}")
+print(f"Python Version: {sys.version}")
 print(f"Python Executable: {sys.executable}")
+print(f"Architecture: {platform.machine()}")
 
-print("\n" + "=" * 50)
-print("CHECKING PACKAGES")
-print("=" * 50)
+# Check Python version compatibility
+python_version = sys.version_info
+if python_version >= (3, 9):
+    print(f"✅ Python version {python_version.major}.{python_version.minor} is compatible")
+else:
+    print(f"❌ Python {python_version.major}.{python_version.minor} detected. Please upgrade to 3.9+")
+
+# Package Checks
+print("\n📦 CHECKING PACKAGES")
+print("-" * 60)
 
 packages = [
     'numpy', 'pandas', 'matplotlib', 'scikit-learn',
-    'torch', 'transformers', 'jupyter'
+    'torch', 'torchvision', 'transformers', 'tokenizers',
+    'jupyter', 'notebook', 'ipykernel'
 ]
+
+missing_packages = []
 
 for package in packages:
     try:
-        mod = __import__(package)
+        mod = __import__(package.replace('-', '_'))
         version = getattr(mod, '__version__', 'Unknown')
-        print(f"✅ {package}: {version}")
+        print(f"✅ {package:20s} {version}")
     except ImportError:
-        print(f"❌ {package}: NOT INSTALLED")
+        print(f"❌ {package:20s} NOT INSTALLED")
+        missing_packages.append(package)
 
-# Check CUDA
+# GPU/CUDA Check
+print("\n🎮 GPU/CUDA STATUS")
+print("-" * 60)
 try:
     import torch
-    print(f"\n✅ CUDA Available: {torch.cuda.is_available()}")
-    if torch.cuda.is_available():
-        print(f"   GPU: {torch.cuda.get_device_name(0)}")
-except:
-    print("\n❌ PyTorch/CUDA check failed")
+    cuda_available = torch.cuda.is_available()
+    print(f"CUDA Available: {'✅ YES' if cuda_available else '❌ NO'}")
+    
+    if cuda_available:
+        print(f"CUDA Version: {torch.version.cuda}")
+        print(f"GPU Device: {torch.cuda.get_device_name(0)}")
+        print(f"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB")
+    else:
+        print("Running in CPU-only mode")
+        print("For GPU support, install PyTorch with CUDA:")
+        print("  pip install torch --index-url https://download.pytorch.org/whl/cu118")
+    
+    # Check MPS (Apple Silicon)
+    if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available():
+        print("✅ Apple Metal Performance Shaders (MPS) available")
+except ImportError:
+    print("❌ PyTorch not installed - cannot check CUDA status")
 
-print("\n" + "=" * 50)
+# Memory Check
+print("\n💾 SYSTEM RESOURCES")
+print("-" * 60)
+try:
+    import psutil
+    mem = psutil.virtual_memory()
+    print(f"Total RAM: {mem.total / 1024**3:.2f} GB")
+    print(f"Available RAM: {mem.available / 1024**3:.2f} GB")
+    print(f"RAM Usage: {mem.percent}%")
+except ImportError:
+    print("⚠️  psutil not installed - cannot check memory")
+
+# Jupyter Check
+print("\n📓 JUPYTER STATUS")
+print("-" * 60)
+try:
+    result = subprocess.run(['jupyter', '--version'], capture_output=True, text=True)
+    if result.returncode == 0:
+        print("✅ Jupyter installed:")
+        print(result.stdout)
+    else:
+        print("❌ Jupyter command failed")
+except FileNotFoundError:
+    print("❌ Jupyter not found in PATH")
+
+# Summary
+print("\n" + "=" * 60)
+print("SUMMARY")
+print("=" * 60)
+
+if missing_packages:
+    print(f"\n❌ Missing packages ({len(missing_packages)}):")
+    print("   " + ", ".join(missing_packages))
+    print("\n📝 To install missing packages:")
+    print(f"   pip install {' '.join(missing_packages)}")
+else:
+    print("\n✅ All core packages installed!")
+
+if python_version < (3, 9):
+    print("\n⚠️  WARNING: Python version upgrade required (3.9+)")
+
+print("\n💡 For detailed troubleshooting, visit:")
+print("   https://github.com/PavanMudigonda/zero-to-ai/blob/main/00-course-setup/troubleshooting.md")
+print("\n" + "=" * 60)
 ```
 
-Save as `check_env.py` and run: `python check_env.py`
+**Save as `diagnose_env.py` and run:**
+```bash
+python diagnose_env.py
+```
+
+**Or download and run directly:**
+```bash
+curl -fsSL https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/scripts/diagnose_env.py | python
+```
 
 ---
 

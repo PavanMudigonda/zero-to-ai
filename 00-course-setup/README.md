@@ -1,5 +1,18 @@
 # Course Setup - Zero to AI
 
+## ⏱️ Quick Setup (5 minutes)
+
+**Ready to start coding immediately?** Here's the fastest way:
+
+1. **Fork & Clone**: Click "Fork" → `git clone https://github.com/YOUR-USERNAME/zero-to-ai.git`
+2. **Install**: Run `./install_dependencies.sh` (uses UV - fastest!)
+3. **Start**: `jupyter notebook` → Open any `.ipynb` file
+4. **Begin Learning**: Start with [1-data-science/00_START_HERE.ipynb](../1-data-science/00_START_HERE.ipynb)
+
+**Not ready?** See detailed setup below.
+
+---
+
 ## 🎯 Introduction
 
 Welcome to Zero to AI! This comprehensive learning path will take you from Python basics to production-ready AI systems. This setup guide will ensure you have everything you need to begin your AI journey.
@@ -8,8 +21,7 @@ Welcome to Zero to AI! This comprehensive learning path will take you from Pytho
 
 Before you begin, connect with other learners and get support:
 
-- **💬 Discord Community**: [Join our Discord server](https://discord.gg/your-discord-link) (Coming Soon)
-- **📧 Discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
+- ** Discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 - **🐛 Issues**: Found a bug or have a suggestion? [Create an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
 
 ## 🍴 Fork or Clone This Repository
@@ -107,6 +119,16 @@ jupyter notebook
 
 ## 🎓 What You'll Need
 
+### Hardware Requirements
+
+| Component | Minimum | Recommended | Notes |
+|-----------|---------|-------------|-------|
+| **RAM** | 8GB | 16GB+ | 32GB for advanced topics |
+| **Storage** | 10GB free | 50GB+ free | Large datasets & models |
+| **CPU** | Any modern CPU | Multi-core (4+ cores) | Intel i5/AMD Ryzen or better |
+| **GPU** | Optional | NVIDIA with CUDA | GTX 1060 or RTX 2060+ |
+| **Internet** | Stable connection | High-speed | For cloud options & downloads |
+
 ### Prerequisites
 
 - **Python Knowledge**: Basic understanding of Python (loops, functions, classes)
@@ -159,23 +181,43 @@ jupyter notebook
 
 ```
 zero-to-ai/
-├── 00-course-setup/          ⭐ You are here!
-├── 0-python/                 📚 Python fundamentals (if needed)
-├── 1-data-science/           📊 NumPy, Pandas, Scikit-learn (278 notebooks)
-├── 2-maths/                  🔢 Math for ML (Linear Algebra, Calculus, Stats)
-├── 3-token/                  🔤 Tokenization fundamentals
-├── 4-embeddings/             🎯 Word & sentence embeddings
-├── 5-neural-networks/        🧠 Deep learning from scratch
-├── 6-vector-databases/       💾 Chroma, Qdrant, Weaviate, Milvus
-├── 7-rag/                    🔍 Retrieval-Augmented Generation
-├── 8-mlops/                  🚀 Deployment & production
-├── 9-specializations/        🎨 Computer Vision, NLP, Agents
-├── 10-prompt-engineering/    💬 Advanced prompting
-├── 11-llm-finetuning/        ⚙️ LoRA, QLoRA, PEFT
-├── 12-multimodal/            🎭 Vision, Audio, Video AI
-├── 13-local-llms/            🏠 Ollama & private AI
-├── labs/                     🧪 External courses & tutorials
-└── glossary/                 📖 AI/ML terminology
+├── 📘 00-course-setup/        ⭐ START HERE - Setup & orientation
+├── 📚 01-python/                Python fundamentals (if needed)
+├── 📊 02-data-science/          NumPy, Pandas, Scikit-learn (278 notebooks!)
+│   ├── 1-numpy-examples/       Array operations & data manipulation
+│   ├── 2-pandas-examples/      DataFrames & analysis
+│   ├── 3-data-science-examples/ Statistical analysis & visualization
+│   ├── 4-matplotlib/           Plotting & charts
+│   └── 5-scikit-learn/         Machine learning algorithms
+├── 🔢 03-maths/                 Linear Algebra, Calculus, Statistics (40+ notebooks)
+│   ├── foundational/           Core math topics
+│   ├── mml-book/              Mathematics for Machine Learning
+│   ├── islp-book/             Statistical learning with Python
+│   ├── cs229-course/          Stanford ML course
+│   └── advanced/ 🆕           Learning theory, optimization
+├── 🔤 04-token/                 Tokenization (tiktoken, sentencepiece, HF)
+├── 🎯 05-embeddings/            Word & sentence embeddings
+├── 🧠 06-neural-networks/       Deep learning from scratch to Transformers
+├── 💾 07-vector-databases/      Chroma, Qdrant, Weaviate, Milvus, pgvector
+├── 🔍 08-rag/                   Retrieval-Augmented Generation
+├── 🚀 09-mlops/                 Deployment, monitoring, optimization
+├── 🎨 10-specializations/       AI Agents, Computer Vision, NLP
+├── 💬 11-prompt-engineering/    Advanced prompting techniques
+├── ⚙️ 12-llm-finetuning/        LoRA, QLoRA, PEFT
+├── 🎭 13-multimodal/            Vision, Audio, Video AI
+├── 🏠 14-local-llms/            Ollama & private AI
+├── 🧪 15-ai-agents/             Autonomous AI systems
+├── 🔍 16-vector-search/         Advanced search & retrieval
+├── 📈 17-ml-evaluation/         Model evaluation & metrics
+├── 🔧 18-debugging/             Troubleshooting & optimization
+├── ⚡ 19-low-code-ai/           No-code AI tools
+├── 🛡️ 20-ai-safety/            AI safety & red teaming
+├── 📡 21-real-time-streaming/   Live AI applications
+├── 📝 22-quizzes/               Knowledge assessments
+├── 📖 23-references/            Research papers & resources
+├── 🧠 24-advanced-deep-learning/ Cutting-edge techniques
+├── 📋 25-quizzes/               Progress assessments
+└── 📚 scripts/                  Utility scripts & tools
 ```
 
 ## 🗺️ Your Learning Path
@@ -218,10 +260,9 @@ zero-to-ai/
 
 ### Getting Help
 
-1. **Check [troubleshooting.md](./troubleshooting.md)** (Coming Soon)
+1. **Check [troubleshooting.md](./troubleshooting.md)** for detailed solutions
 2. **Search [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)**
 3. **Ask in [Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)**
-4. **Join our Discord community** (Coming Soon)
 
 ## 🎯 Verification Checklist
 
