@@ -651,31 +651,67 @@ Track your major achievements:
 
 ---
 
-## Phase 25: Advanced Mathematics for ML (RESEARCH LEVEL) 📐
+## Phase 25: Reinforcement Learning (6 notebooks)
 
-**Goal**: Master rigorous mathematical foundations for ML research
+**Goal**: Master reinforcement learning from fundamentals to advanced algorithms
 
-**Prerequisites**: Complete Phase 3 (Basic Mathematics)
+### Core Notebooks
+- [x] [00_START_HERE.ipynb](25-reinforcement-learning/00_START_HERE.ipynb) - RL fundamentals and overview
+- [x] [01_markov_decision_processes.ipynb](25-reinforcement-learning/01_markov_decision_processes.ipynb) - MDP theory and Bellman equations
+- [x] [02_dynamic_programming.ipynb](25-reinforcement-learning/02_dynamic_programming.ipynb) - Value iteration and policy iteration
+- [x] [03_monte_carlo_methods.ipynb](25-reinforcement-learning/03_monte_carlo_methods.ipynb) - MC prediction and control
+- [x] [04_temporal_difference_learning.ipynb](25-reinforcement-learning/04_temporal_difference_learning.ipynb) - TD learning, Q-learning, SARSA
+- [x] [05_function_approximation.ipynb](25-reinforcement-learning/05_function_approximation.ipynb) - Linear function approximation
 
-### Learning Theory
-- [ ] [01_introduction_learning_theory.ipynb](03-maths/advanced/01_introduction_learning_theory.ipynb) - PAC learning, bias-variance, sample complexity
-- [ ] [02_concentration_inequalities.ipynb](03-maths/advanced/02_concentration_inequalities.ipynb) - MCMC, Metropolis-Hastings, Gibbs sampling
-- [ ] Rademacher complexity and uniform convergence (planned)
-- [ ] PAC-Bayesian theory (planned)
-- [ ] Neural Tangent Kernel (planned)
+### Advanced Topics
+- [ ] Policy gradients and actor-critic methods (planned)
+- [ ] Deep reinforcement learning (planned)
+- [ ] Multi-agent reinforcement learning (planned)
 
-### Probabilistic Models
-- [ ] [09_expectation_maximization.ipynb](03-maths/advanced/09_expectation_maximization.ipynb) - EM algorithm, GMM, convergence proofs
-- [ ] MCMC and variational inference (planned)
-- [ ] Bayesian non-parametrics (planned)
+**See**: [25-reinforcement-learning/README.md](25-reinforcement-learning/README.md) for full roadmap
+
+---
+
+## Phase 26: Time Series Analysis & Forecasting (6 notebooks)
+
+**Goal**: Master time series analysis, forecasting, and temporal pattern recognition
+
+### Core Notebooks
+- [x] [00_START_HERE.ipynb](26-time-series-analysis/00_START_HERE.ipynb) - Time series fundamentals
+- [x] [01_stationarity_unit_roots.ipynb](26-time-series-analysis/01_stationarity_unit_roots.ipynb) - Stationarity tests and unit root problems
+- [x] [02_arima_models.ipynb](26-time-series-analysis/02_arima_models.ipynb) - ARIMA, SARIMA, and seasonal models
+- [x] [03_exponential_smoothing.ipynb](26-time-series-analysis/03_exponential_smoothing.ipynb) - ETS models and Holt-Winters
+- [x] [04_prophet_forecasting.ipynb](26-time-series-analysis/04_prophet_forecasting.ipynb) - Facebook Prophet for business forecasting
+- [x] [05_neural_forecasting.ipynb](26-time-series-analysis/05_neural_forecasting.ipynb) - LSTM and Transformer forecasting
+
+### Advanced Topics
+- [ ] GARCH models for volatility (planned)
 - [ ] State space models (planned)
+- [ ] Bayesian time series (planned)
 
-### Optimization Theory
-- [ ] Gradient descent convergence analysis (planned)
-- [ ] Duality theory and Lagrangian methods (planned)
-- [ ] Conjugate gradient methods (planned)
+**See**: [26-time-series-analysis/README.md](26-time-series-analysis/README.md) for full roadmap
 
-**See**: [03-maths/advanced/README.md](03-maths/advanced/README.md) for full roadmap
+---
+
+## Phase 27: Causal Inference & Experimental Design (6 notebooks)
+
+**Goal**: Master causal inference methods and experimental design principles
+
+### Core Notebooks
+- [x] [00_START_HERE.ipynb](27-causal-inference/00_START_HERE.ipynb) - Causal inference overview
+- [x] [01_potential_outcomes.ipynb](27-causal-inference/01_potential_outcomes.ipynb) - Rubin causal model
+- [x] [02_causal_graphs_dags.ipynb](27-causal-inference/02_causal_graphs_dags.ipynb) - DAGs and causal graphs
+- [x] [03_experimental_design.ipynb](27-causal-inference/03_experimental_design.ipynb) - RCT design and analysis
+- [x] [04_observational_methods.ipynb](27-causal-inference/04_observational_methods.ipynb) - Propensity scores, matching
+- [x] [05_confounding_bias.ipynb](27-causal-inference/05_confounding_bias.ipynb) - Simpson's paradox, collider bias
+- [x] [06_quasi_experimental_designs.ipynb](27-causal-inference/06_quasi_experimental_designs.ipynb) - RDD, DiD, IV methods
+
+### Advanced Topics
+- [ ] Mediation analysis (planned)
+- [ ] Causal discovery (planned)
+- [ ] Difference-in-differences with multiple periods (planned)
+
+**See**: [27-causal-inference/README.md](27-causal-inference/README.md) for full roadmap
 
 ---
 
@@ -685,7 +721,7 @@ Track your major achievements:
 - [ ] **Modern AI Stack** - Phases 3-6 done (Tokenization, Embeddings, Neural Nets, Vector DBs)
 - [ ] **Production Ready** - Phases 7-9 done (RAG, MLOps, Specializations)
 - [ ] **Cutting-Edge AI** - Phases 10-13 done (Prompt Engineering, Fine-tuning, Multimodal, Local LLMs)
-- [ ] **Research Mastery** - Phases 24-25 done (Advanced Deep Learning, Advanced Mathematics)
+- [x] **Research Mastery** - Phases 24-27 done (Advanced Deep Learning, Reinforcement Learning, Time Series, Causal Inference)
 - [ ] **Portfolio Built** - 5+ projects deployed and documented
 - [ ] **Certified** - At least 1 ML certification (AWS, Google, Azure, or DeepLearning.AI)
 
@@ -706,7 +742,7 @@ Track your major achievements:
 
 **Total Progress**: `___/790+` notebooks completed (732 foundational + 58+ advanced)
 
-**Current Phase**: `Phase ___`
+**Current Phase**: `Phase 27 Complete ✅`
 
 **Target Completion Date**: `____________________`
 
