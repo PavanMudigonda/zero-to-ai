@@ -1,4 +1,4 @@
-# AI Coding Tools for ML Engineers (2026)
+# AI Coding Tools for ML Engineers (March 2026)
 
 A practical guide to the tools that are reshaping how ML engineers write, debug, and ship code. This covers the four major AI coding assistants, a head-to-head comparison, ML-specific workflows, and AI-assisted research tools.
 
@@ -13,6 +13,46 @@ A practical guide to the tools that are reshaping how ML engineers write, debug,
 5. [Comparison Table](#5-comparison-table)
 6. [For ML Engineers Specifically](#6-for-ml-engineers-specifically)
 7. [AI-Assisted Research Tools](#7-ai-assisted-research-tools)
+
+---
+
+## March 6, 2026 Update Snapshot
+
+This quick snapshot highlights what matters most right now for working engineers.
+
+### What Changed Most
+
+- **Agentic IDE workflows are now mainstream**: multi-file, tool-using, test-aware coding agents are no longer experimental.
+- **Model routing inside IDEs matters more than IDE choice**: teams now optimize by task routing (fast model for iteration, reasoning model for hard bugs).
+- **Terminal-native automation increased**: scriptable flows (Aider-style) are widely used for batch refactors, CI fixes, and repo hygiene tasks.
+- **Enterprise adoption accelerated**: policy controls, auditability, and data-governance features are now buying criteria.
+
+### Recommended 2026 Tooling Split
+
+| Workflow Need | Recommended Default |
+|---|---|
+| Daily coding in large repo | Cursor or Copilot Agent Mode |
+| Autonomous feature implementation | Windsurf Cascade or Copilot Workspace |
+| CI/CD code maintenance | Aider in non-interactive mode |
+| Regulated enterprise teams | GitHub Copilot Business/Enterprise |
+| Remote SSH / terminal-first teams | Aider |
+
+### Practical Model Routing Policy (Use in Any IDE)
+
+| Task Type | Model Class |
+|---|---|
+| Fast edits, boilerplate, tests | Fast chat model |
+| Hard debugging / architecture | Reasoning model |
+| Large refactor across modules | Reasoning model + diff review |
+| Docs and comments pass | Fast chat model |
+
+### Current Team Baseline (March 2026)
+
+1. Use AI tools for scaffolding, refactors, and tests; keep humans on architecture and acceptance criteria.
+2. Require explicit diffs and test runs before merge.
+3. Add repo-level rules (`.cursor/rules`, `.aider.conf.yml`, Copilot instructions) to reduce drift.
+4. Track AI-generated changes with commit hygiene and code ownership rules.
+5. Use a security scanner and test suite on every AI-assisted PR.
 
 ---
 
@@ -632,4 +672,4 @@ aider --model claude-opus-4-6
 
 ---
 
-*Last updated: February 2026. Tool features and pricing change frequently — check the official documentation for the latest information.*
+*Last updated: March 6, 2026. Tool features and pricing change frequently — check the official documentation for the latest information.*
