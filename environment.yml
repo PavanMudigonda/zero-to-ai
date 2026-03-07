@@ -137,7 +137,7 @@ dependencies:
     
     # --- API Clients ---
     - openai>=1.58.0
-    - anthropic>=0.39.0
+    - anthropic>=0.40.0
     
     # --- Local LLMs ---
     - ollama>=0.4.0
