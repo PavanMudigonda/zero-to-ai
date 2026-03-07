@@ -1,0 +1,50 @@
+# ============================================================================
+# Kaggle Requirements
+# Only packages NOT pre-installed in Kaggle (as of 2025)
+# Pre-installed in Kaggle: torch, torchvision, numpy, pandas, matplotlib,
+#   scipy, scikit-learn, PIL, requests, tqdm, xgboost, lightgbm, seaborn,
+#   transformers, datasets, tokenizers, huggingface-hub, accelerate
+# NOTE: Enable "Internet" toggle in Kaggle notebook settings before running
+# ============================================================================
+
+# Tokenization
+sentencepiece>=0.2.0
+tiktoken>=0.8.0
+
+# Embeddings
+sentence-transformers>=3.3.0
+
+# API Clients
+openai>=1.58.0
+anthropic>=0.39.0
+
+# RAG & LLM Frameworks
+langchain>=0.3.0
+langchain-openai>=0.2.0
+langchain-community>=0.3.0
+
+# Vector Databases
+chromadb>=0.5.23
+faiss-cpu>=1.9.0
+qdrant-client>=1.12.0
+
+# Fine-tuning
+peft>=0.13.0
+bitsandbytes>=0.45.0
+trl>=0.12.0
+safetensors>=0.4.0
+
+# MLOps
+mlflow>=2.17.0
+wandb>=0.18.0
+fastapi>=0.115.0
+uvicorn>=0.32.0
+
+# NLP Evaluation
+seqeval>=1.2.0
+sacrebleu>=2.4.0
+rouge-score>=0.1.2
+
+# Utilities
+python-dotenv>=1.0.0
+plotly>=5.24.0

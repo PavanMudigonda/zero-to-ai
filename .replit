@@ -1,11 +1,11 @@
 language = "python3"
-run = "jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser --allow-root"
+run = "pip install -q -r requirements-replit.txt && jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser --allow-root"
 
 [nix]
 channel = "stable-22_11"
 
 [deployment]
-run = ["sh", "-c", "jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser --allow-root"]
+run = ["sh", "-c", "pip install -q -r requirements-replit.txt && jupyter notebook --ip=0.0.0.0 --port=8080 --no-browser --allow-root"]
 deploymentTarget = "cloudrun"
 
 [[ports]]

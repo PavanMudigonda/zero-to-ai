@@ -106,8 +106,22 @@ jupyter notebook
 ```
 
 #### Option 3: Cloud (No Installation!)
-- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai)
-- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
+
+- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai) — fully automated, all dependencies install via `install_dependencies.sh`
+
+- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main) — then run this in the first cell:
+  ```python
+  !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/colab_requirements.txt
+  ```
+
+- **Kaggle**: Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai) — enable **Internet** in notebook settings, then run:
+  ```python
+  !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/kaggle_requirements.txt
+  ```
+
+- **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) — packages auto-install on first run via `requirements-replit.txt`
+
+- **github.dev**: Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai) — browser-based editor only (no execution)
 
 ### Your First Steps
 
