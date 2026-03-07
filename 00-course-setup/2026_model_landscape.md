@@ -41,22 +41,22 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **Limitation**: slower than standard models (generates reasoning traces internally)
 - **Best for**: theorem proving, complex code debugging, multi-step planning
 
-### Claude 3.7 (Anthropic)
+### Claude 4.6 Family (Anthropic)
 
-- **Key feature**: extended thinking mode — can spend more tokens "thinking" before responding
-- **Context**: 200,000 tokens
-- **Strengths**: long document analysis, nuanced instruction following, coding, safety
-- **Extended thinking**: toggleable; dramatically improves accuracy on hard problems
-- **API**: `claude-3-7-sonnet-20250219` via Anthropic API or Amazon Bedrock
-- **Best for**: enterprise tasks requiring careful instruction following, long-context analysis
+- **Models**: Opus 4.6 (most capable), Sonnet 4.6 (balanced), Haiku 4.5 (fastest)
+- **Key update**: Sonnet 4.6 launched in Feb 2026; Claude lineup is now centered on the 4.x family
+- **Strengths**: coding, agent workflows, long-form analysis, enterprise safety controls
+- **Best for**: teams needing strong instruction-following and reliable coding/analysis across workloads
+- **API**: see current model IDs in Anthropic platform docs; names evolve quickly across preview/stable variants
 
-### Gemini 3.1 Pro (Google)
+### Gemini 3.1 Pro / Gemini 2.5 Family (Google)
 
-- **Context window**: 1,000,000 tokens (largest among frontier models)
-- **Multimodal**: text, images, video, audio, code — native
-- **Strengths**: 1M context for entire codebases or video analysis, strong multilingual performance
-- **API**: `gemini-3.1-pro` via Google AI Studio / Vertex AI
-- **Best for**: video understanding, massive codebase analysis, multimodal applications
+- **Context window**: up to 1,000,000 tokens depending on model variant
+- **Core models**: Gemini 3.1 Pro Preview, Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.5 Flash-Lite
+- **Important deprecation note**: Gemini 3 Pro Preview is deprecated; migrate to Gemini 3.1 Pro Preview
+- **Strengths**: massive context, strong multimodal and agentic tool use, broad media generation stack
+- **API**: model strings vary by stable/preview/latest aliases in Google AI Studio / Vertex AI
+- **Best for**: large-context analysis, multimodal applications, real-time and voice-enabled agents
 
 ### Mistral Large 3 (Mistral AI)
 
@@ -75,7 +75,7 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 | GPT-5.2 (OpenAI) | 400K | All-around best, 100% AIME 2025 | Highest |
 | o3 (OpenAI) | 200K | Math, science, reasoning | Very High |
 | o4-mini (OpenAI) | 128K | Reasoning, cost-efficient | Medium |
-| Claude 3.7 (Anthropic) | 200K | Long docs, instruction following | High |
+| Claude 4.6 Family (Anthropic) | 200K+ | Coding, agents, instruction following | High |
 | Gemini 3.1 Pro (Google) | 1M | Video, multimodal, massive context | High |
 | Mistral Large 3 (Mistral) | 128K | Cost-efficient, multilingual, GDPR | Low-Medium |
 
@@ -105,6 +105,20 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 - **Download**: `Qwen/Qwen3-235B-A22B`
 - **Best for**: production OSS deployments where quality is top priority; reasoning tasks
 - **Note**: the 22B active parameter count means inference cost is much lower than the 235B total suggests
+
+### Qwen 3.5 Family (Alibaba)
+
+- **Recent release**: major refresh in early March 2026 with larger multimodal MoE variants
+- **Notable checkpoints**: Qwen3.5-397B-A17B, Qwen3.5-122B-A10B, Qwen3.5-35B-A3B and smaller tiers
+- **Strengths**: strong multimodal quality, broad size ladder for production optimization, active quantized ecosystem
+- **License**: Apache 2.0 lineage for core Qwen open checkpoints
+- **Best for**: teams that want one family spanning edge to high-end cluster deployments
+
+### Qwen3-Coder-Next (Alibaba)
+
+- **Focus**: code generation and software engineering agents
+- **Notable checkpoint**: 80B class model with actively maintained quantized variants
+- **Best for**: code assistants, repo-scale refactors, and agentic software engineering workflows
 
 ### DeepSeek R1 (DeepSeek)
 
@@ -144,6 +158,12 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 - **Strengths**: punches far above its weight on reasoning and math; excellent for structured outputs
 - **Best for**: math tutoring, code generation, scientific Q&A; fine-tuning when training compute is limited
 
+### Phi-4-Reasoning-Vision 15B (Microsoft)
+
+- **Size**: 15B multimodal reasoning model
+- **Focus**: image-text reasoning plus strong general reasoning behavior
+- **Best for**: multimodal assistants that need better reasoning than small vision-language baselines
+
 ### Phi-4-mini (Microsoft)
 
 - **Size**: 3.8B parameters
@@ -158,10 +178,13 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 | Llama 4 Maverick | 400B MoE | 10M | Llama 4 | Top quality, ultra-long context |
 | Llama 4 Scout | 17B active | 10M | Llama 4 | Fast, long-context, edge |
 | Qwen 3 235B-A22B | 22B active | 128K | Apache 2.0 | Best OSS overall |
+| Qwen 3.5 family | 17B/10B/3B active (MoE tiers) | 128K+ | Apache 2.0 | Latest broad OSS lineup |
+| Qwen3-Coder-Next | 80B class | task-dependent | Apache 2.0 | Code and SWE agents |
 | DeepSeek R1 | 37B active | 128K | MIT | Reasoning, math, coding |
 | DeepSeek V3.2 | 37B active | 128K | MIT | General base model |
 | Gemma 3 27B | 27B | 128K | Gemma ToU | Single GPU, multilingual |
 | Phi-4 | 14B | 16K | MIT | STEM, math, coding |
+| Phi-4-Reasoning-Vision | 15B | task-dependent | MIT | Multimodal reasoning |
 | Phi-4-mini | 3.8B | 16K | MIT | On-device, mobile |
 
 ---
@@ -355,6 +378,7 @@ This section captures practical updates since the February snapshot so learners 
 - **Very-long-context workflows matured**: 1M+ token workflows are increasingly practical for repository analysis, long legal docs, and multimodal audit pipelines.
 - **Open-weight quality ceiling improved**: Qwen3, Llama 4, and DeepSeek families are now viable for many production tasks that previously required frontier APIs.
 - **License-aware model choice is now mandatory**: teams increasingly split by policy: Apache/MIT-first stacks for commercial redistribution, and restricted-license stacks for internal-only deployments.
+- **This-month additions**: Claude 4.6 family, Qwen 3.5 / Qwen3-Coder-Next, and Phi-4-Reasoning-Vision entered many teams' shortlists.
 
 ### Training and Alignment Updates (March 2026)
 
