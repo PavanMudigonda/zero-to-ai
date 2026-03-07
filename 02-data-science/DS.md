@@ -70,11 +70,6 @@
 - [Guide to High Performance Distributed Computing](https://www.amazon.com/Guide-High-Performance-Distributed-Computing/dp/3319134965) by K.G. Srinivasa & Anil Kumar Muppalla
 - [Data Pipelines with Apache Airflow](https://www.manning.com/books/data-pipelines-with-apache-airflow) by Bas P. Harenslak and Julian Rutger de Ruiter
 
-### Courses
-- [Data Engineering on Google Cloud Platform Specialization](https://www.coursera.org/specializations/gcp-data-machine-learning) by Google
-- [Data Engineer Nanodegree](https://udacity.com/course/data-engineer-nanodegree--nd027) by Udacity
-- [Data Engineering with Python](https://www.datacamp.com/tracks/data-engineer-with-python) by DataCamp
-
 ### Blogs
 - [Martin Kleppmann](https://martin.kleppmann.com/) author of Designing Data-Intensive Application
 - [BaseDS](https://medium.com/baseds) by Vaidehi Joshi about Distributed Systems
