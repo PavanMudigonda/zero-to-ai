@@ -72,10 +72,10 @@ jobs:
           echo "⚠️  Skipping execution (requires API key)"
         fi
         
-        if [ -f "2-maths/foundational/01_linear_algebra_fundamentals.ipynb" ]; then
+        if [ -f "03-maths/foundational/01_linear_algebra_fundamentals.ipynb" ]; then
           echo "Testing math fundamentals notebook..."
           jupyter nbconvert --to notebook --execute \
-            2-maths/foundational/01_linear_algebra_fundamentals.ipynb \
+            03-maths/foundational/01_linear_algebra_fundamentals.ipynb \
             --output temp_test.ipynb 2>&1 || echo "⚠️  Execution requires full environment"
         fi
         
