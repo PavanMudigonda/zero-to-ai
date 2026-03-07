@@ -43,7 +43,7 @@ echo "📥 Installing dependencies with UV (this is FAST!)..."
 echo ""
 
 # Install main dependencies from pyproject.toml
-uv pip install -r pyproject.toml
+uv pip install -e .
 
 echo ""
 echo "✅ All dependencies installed successfully!"
