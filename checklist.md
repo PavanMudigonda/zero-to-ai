@@ -969,12 +969,6 @@ Track job-readiness separately from learning completion:
 
 **Total Progress**: `___/790+` notebooks completed (732 foundational + 58+ advanced)
 
-**Current Phase**: `___________________________`
-
-**Target Job-Ready Date**: `____________________`
-
-**Track**: `[ ] AI Engineer  [ ] ML Engineer  [ ] Data Scientist  [ ] MLOps`
-
 ---
 
 *Last Updated: March 2026*
