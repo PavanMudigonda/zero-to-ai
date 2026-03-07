@@ -31,6 +31,10 @@
 
 > **From Zero to AI Mastery** WORK IN PROGRESS. OPEN FOR FEEDBACK.
 
+**Latest updates (March 6, 2026):**
+- Model landscape snapshot: [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md)
+- AI dev tools snapshot: [00-course-setup/ai_dev_tools_2026.md](00-course-setup/ai_dev_tools_2026.md)
+
 ---
 
 ## 🌱 Getting Started
