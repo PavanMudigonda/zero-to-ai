@@ -75,7 +75,7 @@ This comprehensive AI/ML curriculum has **27 progressive phases** covering every
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Basic Python knowledge (or start with [0-python/](0-python/))
+- Basic Python knowledge (or start with [01-python/](01-python/))
 - High school mathematics
 - A computer (GPU helpful but not required initially)
 - 10-15 hours/week
@@ -133,8 +133,23 @@ jupyter notebook
 
 1. **📖 Course Setup**: Read [00-course-setup/README.md](00-course-setup/README.md) for detailed setup
 2. **✅ Learning Checklist**: Review [checklist.md](checklist.md) - your complete roadmap
-3. **📚 Start Learning**: Begin with [1-data-science/00_START_HERE.ipynb](1-data-science/00_START_HERE.ipynb)
-4. **📊 Track Progress**: Use `python scripts/view_progress.py` to monitor your journey
+3. **📚 Start Learning**: Begin with [02-data-science/00_START_HERE.ipynb](02-data-science/00_START_HERE.ipynb)
+4. **📊 Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
+
+---
+
+## 📚 Important Guides
+
+| Guide | Description |
+|-------|-------------|
+| [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) | Learning paths for AI Engineer, ML Engineer, Data Scientist tracks |
+| [checklist.md](checklist.md) | Phase-by-phase completion checklist with checkboxes |
+| [REFERENCES.md](REFERENCES.md) | Curated videos, papers, and courses organized by phase |
+| [COMPARISON_MATRICES.md](COMPARISON_MATRICES.md) | Side-by-side comparisons of models, tools, and frameworks |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute notebooks and fixes |
+| [SUPPORT.md](SUPPORT.md) | Getting help, community links |
+| [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md) | Current AI model landscape (updated March 2026) |
+| [00-course-setup/troubleshooting.md](00-course-setup/troubleshooting.md) | Comprehensive troubleshooting guide |
 
 ---
 

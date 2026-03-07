@@ -94,7 +94,7 @@ pip install -r requirements-aws.txt
 
 ```bash
 # Check Python version
-python --version  # Should be 3.9+
+python --version  # Should be 3.11+
 
 # Test imports
 python -c "import torch; print(f'PyTorch {torch.__version__}')"
@@ -142,12 +142,25 @@ jupyter notebook
 
 Once setup is complete, follow this path:
 
-1. **0-glossary/** - AI/ML terminology
-2. **1-token/** - Tokenization (tiktoken, sentencepiece)
-3. **2-embeddings/** - Word/sentence embeddings
-4. **3-vector-databases/** - Chroma, Qdrant, Weaviate, Milvus, Aurora
-5. **4-neural-networks/** - From scratch to Transformers
+1. **23-glossary/** - AI/ML terminology
+2. **04-token/** - Tokenization (tiktoken, sentencepiece)
+3. **05-embeddings/** - Word/sentence embeddings
+4. **07-vector-databases/** - Chroma, Qdrant, Weaviate, Milvus, pgvector
+5. **06-neural-networks/** - From scratch to Transformers
 6. Start with `00_START_HERE.ipynb` in each section!
+
+---
+
+## Which Requirements File to Use?
+
+| File | Use When |
+|------|----------|
+| `requirements.txt` | Local development (pip) |
+| `environment.yml` | Local development (Conda/Mamba) |
+| `colab_requirements.txt` | Google Colab — skips pre-installed packages |
+| `kaggle_requirements.txt` | Kaggle notebooks — skips pre-installed packages, requires Internet toggle enabled |
+| `requirements-replit.txt` | Replit — auto-installed on run |
+| `pyproject.toml` | `uv pip install -e .` or editable installs |
 
 ---
 
