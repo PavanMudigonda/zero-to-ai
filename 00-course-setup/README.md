@@ -173,7 +173,8 @@ jupyter notebook
 
 ### Kaggle Kernels
 
-- Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai)
+- Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://www.kaggle.com/code)
+- Create a new notebook, enable Internet, and clone this repo from GitHub inside the notebook
 - Access to free GPU/TPU
 - Large dataset library included
 
