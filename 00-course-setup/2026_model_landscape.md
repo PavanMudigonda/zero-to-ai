@@ -1,4 +1,4 @@
-# AI Model Landscape: Feb 2026
+# AI Model Landscape: March 6, 2026
 
 A comprehensive reference for learners navigating the rapidly evolving AI ecosystem.
 Use this guide to understand which models, tools, and techniques are worth your time right now.
@@ -7,16 +7,17 @@ Use this guide to understand which models, tools, and techniques are worth your 
 
 ## Table of Contents
 
-1. [Frontier Closed Models](#1-frontier-closed-models-feb-2026)
-2. [Best Open-Weight Models](#2-best-open-weight-models-feb-2026)
-3. [Best Models for Fine-tuning](#3-best-models-for-fine-tuning-feb-2026)
+1. [Frontier Closed Models](#1-frontier-closed-models-march-2026)
+2. [Best Open-Weight Models](#2-best-open-weight-models-march-2026)
+3. [Best Models for Fine-tuning](#3-best-models-for-fine-tuning-march-2026)
 4. [Key Training Techniques](#4-key-training-techniques-2025-2026)
 5. [Key Infrastructure](#5-key-infrastructure-2025-2026)
-6. [Learning Path for Feb 2026](#6-what-to-learn-in-what-order)
+6. [What Changed Since February 2026](#6-what-changed-since-february-2026)
+7. [Learning Path for March 2026](#7-what-to-learn-in-what-order)
 
 ---
 
-## 1. Frontier Closed Models (Feb 2026)
+## 1. Frontier Closed Models (March 2026)
 
 These are the state-of-the-art proprietary models available via API. You cannot download or fine-tune them directly, but they set the performance ceiling that open-weight models are converging toward.
 
@@ -80,7 +81,7 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 
 ---
 
-## 2. Best Open-Weight Models (Feb 2026)
+## 2. Best Open-Weight Models (March 2026)
 
 Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately. The gap with closed models has narrowed dramatically.
 
@@ -165,7 +166,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 
 ---
 
-## 3. Best Models for Fine-tuning (Feb 2026)
+## 3. Best Models for Fine-tuning (March 2026)
 
 Not all open-weight models are equally good starting points for fine-tuning. These are the recommended choices grouped by compute budget.
 
@@ -344,9 +345,47 @@ The agent ecosystem has consolidated around a few dominant tools:
 
 ---
 
-## 6. What to Learn in What Order
+## 6. What Changed Since February 2026
 
-A structured learning path for Feb 2026. Follow this order to build solid foundations before tackling advanced topics.
+This section captures practical updates since the February snapshot so learners can prioritize what changed.
+
+### Model Selection Updates (March 2026)
+
+- **Reasoning-first routing is now standard**: use reasoning models (`o3`, `o4-mini`, DeepSeek R1 family) for math/coding/planning tasks; use standard chat models for latency-sensitive UX.
+- **Very-long-context workflows matured**: 1M+ token workflows are increasingly practical for repository analysis, long legal docs, and multimodal audit pipelines.
+- **Open-weight quality ceiling improved**: Qwen3, Llama 4, and DeepSeek families are now viable for many production tasks that previously required frontier APIs.
+- **License-aware model choice is now mandatory**: teams increasingly split by policy: Apache/MIT-first stacks for commercial redistribution, and restricted-license stacks for internal-only deployments.
+
+### Training and Alignment Updates (March 2026)
+
+- **SimPO and DPO remain default alignment baselines** for most teams; PPO-style stacks are mostly reserved for specialized research workflows.
+- **GRPO adoption increased** for reasoning-tuned models and synthetic curriculum training.
+- **Unsloth + TRL became a common default** for small/medium fine-tuning projects due to speed and memory efficiency.
+
+### Inference and Agent Stack Updates (March 2026)
+
+- **SGLang and vLLM remain the top two production inference choices**; SGLang keeps an edge in high-throughput agent/RAG workloads with shared-prefix caching.
+- **MCP solidified as the cross-vendor tool protocol** in agent ecosystems.
+- **LangGraph + OpenAI Agents SDK + MCP** is a common production architecture for stateful, tool-using systems.
+
+### March 2026 Practical Defaults
+
+| Layer | March 2026 Default Recommendation |
+|------|------------------------------------|
+| Fast API assistant | `o4-mini` / Claude Sonnet class |
+| Hard reasoning | `o3` / DeepSeek R1 |
+| Open-weight general | Qwen3 235B-A22B |
+| Open-weight long context | Llama 4 Maverick/Scout |
+| Small local model | Phi-4-mini / Gemma 3 4B |
+| Fine-tuning starter | Qwen2.5-7B + QLoRA + RSLoRA |
+| Inference server | SGLang (prod) / Ollama (local dev) |
+| Agent runtime | LangGraph + MCP + OpenAI Agents SDK |
+
+---
+
+## 7. What to Learn in What Order
+
+A structured learning path for March 2026. Follow this order to build solid foundations before tackling advanced topics.
 
 ### Phase 1: Foundations (Weeks 1-4)
 
@@ -418,7 +457,7 @@ A structured learning path for Feb 2026. Follow this order to build solid founda
 ### Summary: The 2026 AI Engineer Stack
 
 ```
-Layer               Tools (Feb 2026 Best Choices)
+Layer               Tools (March 2026 Best Choices)
 ---------           ------------------------------
 Frontier APIs       GPT-5.2, Claude 3.7, Gemini 3.1 Pro
 Open Models         Qwen3 235B-A22B, Llama 4 Maverick, DeepSeek R1
