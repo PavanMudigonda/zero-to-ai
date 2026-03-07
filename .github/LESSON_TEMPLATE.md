@@ -67,7 +67,7 @@ jupyter notebook
 
 ### Option 2: Cloud Platforms
 - [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main/path/to/lesson)
-- [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF)](https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai/tree/main/path/to/lesson)
+- [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF)](https://www.kaggle.com/code)
 
 ---
 
