@@ -1,4 +1,4 @@
-LICENSE
+LICENSE.md
 README.md
 pyproject.toml
 zero_to_ai.egg-info/PKG-INFO

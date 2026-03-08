@@ -6,7 +6,7 @@ authors = [
     {name = "mnpawan", email = "mnpawan@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11"
+requires-python = ">=3.11,<3.14"
 dependencies = [
     # Core ML/DL
     "torch>=2.5.0",
@@ -69,7 +69,8 @@ dependencies = [
     
     # Local LLMs
     "ollama>=0.4.0",
-    "vllm>=0.6.0",
+    # vllm: Linux-only, no macOS wheels available
+    # "vllm>=0.6.0",
     
     # Multimodal
     "diffusers>=0.32.0",
