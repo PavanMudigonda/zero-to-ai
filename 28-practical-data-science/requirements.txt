@@ -1,0 +1,82 @@
+# Phase 28: Practical Data Science
+# Install all dependencies: pip install -r requirements.txt
+# Minimum Python: 3.9+
+
+# ── Core data science ──────────────────────────────────────────
+numpy>=1.24
+pandas>=2.0
+scipy>=1.11
+scikit-learn>=1.3
+matplotlib>=3.7
+seaborn>=0.12
+plotly>=5.15
+
+# ── Machine learning extras ────────────────────────────────────
+xgboost>=2.0
+lightgbm>=4.0
+imbalanced-learn>=0.11    # SMOTE, oversampling
+shap>=0.43                # Model interpretability
+joblib>=1.3
+
+# ── Deep learning ──────────────────────────────────────────────
+torch>=2.0                # CNN, LSTM, U-Net, NeuMF
+torchvision>=0.15         # Pretrained vision models (ResNet, Faster R-CNN)
+
+# ── NLP / LLM ─────────────────────────────────────────────────
+transformers>=4.35        # BERT, DistilBERT, GPT-2
+datasets>=2.14            # HuggingFace datasets
+tokenizers>=0.14
+peft>=0.6                 # LoRA / QLoRA fine-tuning
+accelerate>=0.24          # Distributed training utils
+openai>=1.0               # LLM patterns notebook (optional)
+
+# ── Time series ────────────────────────────────────────────────
+statsmodels>=0.14         # ARIMA, SARIMA, SARIMAX, ADF/KPSS
+prophet>=1.1              # Facebook/Meta Prophet
+pmdarima>=2.0             # auto_arima
+
+# ── Data engineering ───────────────────────────────────────────
+sqlalchemy>=2.0           # SQL abstraction
+duckdb>=0.9               # In-process SQL (fast, no server)
+apache-airflow>=2.7       # DAG orchestration (optional, heavy)
+pyspark>=3.4              # Distributed compute (optional, needs JVM)
+dbt-core>=1.6             # dbt data modeling (optional)
+dbt-duckdb>=1.6           # dbt + DuckDB adapter
+
+# ── Streaming ──────────────────────────────────────────────────
+kafka-python>=2.0         # Kafka producer/consumer (optional)
+
+# ── Feature stores ─────────────────────────────────────────────
+feast>=0.34               # Open-source feature store (optional)
+
+# ── Recommender systems ────────────────────────────────────────
+faiss-cpu>=1.7            # Approximate nearest neighbor search
+implicit>=0.7             # ALS for implicit feedback (CPU)
+
+# ── Causal inference ───────────────────────────────────────────
+econml>=0.14              # Double ML, causal forests
+dowhy>=0.11               # Causal DAGs, refutation tests
+
+# ── Bayesian / stats ───────────────────────────────────────────
+pymc>=5.0                 # Bayesian modeling (optional, large)
+
+# ── Monitoring / MLOps ─────────────────────────────────────────
+evidently>=0.4            # Data drift detection
+fastapi>=0.104            # Model serving
+uvicorn>=0.24             # ASGI server
+pydantic>=2.4             # Data validation
+
+# ── Utilities ──────────────────────────────────────────────────
+jupyter>=1.0
+ipykernel>=6.26
+tqdm>=4.66
+python-dotenv>=1.0
+networkx>=3.1             # Graph algorithms, DAG visualization
+pillow>=10.0              # Image processing
+
+# ── Minimal install (just the essentials, no optional heavy deps) ──
+# pip install numpy pandas scipy scikit-learn matplotlib seaborn \
+#             xgboost imbalanced-learn shap torch torchvision \
+#             transformers datasets statsmodels prophet \
+#             sqlalchemy duckdb faiss-cpu fastapi uvicorn pydantic \
+#             jupyter tqdm networkx pillow
