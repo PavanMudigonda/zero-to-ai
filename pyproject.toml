@@ -28,7 +28,7 @@ dependencies = [
     "qdrant-client>=1.12.0",
     "weaviate-client>=4.9.3",
     "pymilvus>=2.4.9",
-    "pinecone-client>=5.0.0",
+    "pinecone>=5.0.0",  # formerly pinecone-client
     
     # Vector Databases - Self-hosted
     "faiss-cpu>=1.9.0",
