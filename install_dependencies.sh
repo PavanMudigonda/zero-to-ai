@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 # Installation script for AIML Learning Repository
 # Uses UV for fast dependency management
@@ -8,16 +8,44 @@ echo "🚀 AIML Learning Repository - Dependency Installation"
 echo "======================================================"
 echo ""
 
+# Ensure common user-level binary paths are available in this shell.
+export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+
 # Check if UV is installed
 if ! command -v uv &> /dev/null; then
     echo "❌ UV is not installed!"
     echo ""
     echo "Installing UV..."
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    
-    # Add UV to PATH for current session
-    export PATH="$HOME/.cargo/bin:$PATH"
-    
+
+    if command -v curl &> /dev/null; then
+        if curl -LsSf https://astral.sh/uv/install.sh | sh; then
+            echo "✅ UV installed via Astral install script"
+        else
+            echo "⚠️  Astral install script failed (likely network/SSL)."
+            echo "   Falling back to pip user install..."
+            python3 -m pip install --user uv
+        fi
+    elif command -v wget &> /dev/null; then
+        if wget -qO- https://astral.sh/uv/install.sh | sh; then
+            echo "✅ UV installed via Astral install script"
+        else
+            echo "⚠️  Astral install script failed (likely network/SSL)."
+            echo "   Falling back to pip user install..."
+            python3 -m pip install --user uv
+        fi
+    else
+        echo "⚠️  Neither curl nor wget found. Installing UV via pip user install..."
+        python3 -m pip install --user uv
+    fi
+
+    # Re-export PATH in case installer added uv after shell start.
+    export PATH="$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
+
+    if ! command -v uv &> /dev/null; then
+        echo "❌ UV installation failed. Please check network/SSL settings and retry."
+        exit 1
+    fi
+
     echo "✅ UV installed successfully!"
     echo ""
 fi
@@ -28,7 +56,7 @@ echo ""
 
 # Create virtual environment with UV
 echo "🔧 Creating virtual environment..."
-uv venv .venv
+uv venv .venv --python 3.11
 echo "✅ Virtual environment created at .venv/"
 echo ""
 
