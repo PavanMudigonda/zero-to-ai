@@ -3,13 +3,13 @@ Name: zero-to-ai
 Version: 0.1.0
 Summary: Comprehensive AI/ML learning path from zero to production
 Author-email: mnpawan <mnpawan@gmail.com>
-Requires-Python: >=3.11
+Requires-Python: <3.14,>=3.11
 Description-Content-Type: text/markdown
-License-File: LICENSE
+License-File: LICENSE.md
 Requires-Dist: torch>=2.5.0
 Requires-Dist: torchvision>=0.20.0
 Requires-Dist: transformers>=4.47.0
-Requires-Dist: datasets>=3.1.0
+Requires-Dist: datasets>=3.2.0
 Requires-Dist: tiktoken>=0.8.0
 Requires-Dist: tokenizers>=0.20.0
 Requires-Dist: sentencepiece>=0.2.0
@@ -44,7 +44,6 @@ Requires-Dist: peft>=0.13.0
 Requires-Dist: accelerate>=1.2.0
 Requires-Dist: trl>=0.12.0
 Requires-Dist: ollama>=0.4.0
-Requires-Dist: vllm>=0.6.0
 Requires-Dist: diffusers>=0.32.0
 Requires-Dist: pillow>=11.0.0
 Requires-Dist: opencv-python>=4.10.0
@@ -91,202 +90,261 @@ Requires-Dist: flake8>=6.1.0; extra == "all"
 Requires-Dist: mypy>=1.5.0; extra == "all"
 Dynamic: license-file
 
-# Zero to AI - Complete Learning Path
+# Zero to AI - Complete Learning Path 🚀
 
-> **From Zero to AI Mastery** - 732 notebooks taking you from Python basics to production-ready AI systems
+### A comprehensive curriculum teaching everything you need to build production-ready AI systems
 
-## 📊 Learning Progress
+[![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/master/LICENSE)
+[![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/graphs/contributors/)
+[![GitHub issues](https://img.shields.io/github/issues/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/issues/)
+[![GitHub pull-requests](https://img.shields.io/github/issues-pr/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/pulls/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[![GitHub watchers](https://img.shields.io/github/watchers/PavanMudigonda/zero-to-ai.svg?style=social&label=Watch)](https://GitHub.com/PavanMudigonda/zero-to-ai/watchers/)
+[![GitHub forks](https://img.shields.io/github/forks/PavanMudigonda/zero-to-ai.svg?style=social&label=Fork)](https://GitHub.com/PavanMudigonda/zero-to-ai/network/)
+[![GitHub stars](https://img.shields.io/github/stars/PavanMudigonda/zero-to-ai.svg?style=social&label=Star)](https://GitHub.com/PavanMudigonda/zero-to-ai/stargazers/)
+
+---
+
+
+### 🚀 Launch Instantly - Zero Setup Required!
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
+[![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai)
+[![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://www.kaggle.com/code)
+[![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai)
+[![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?style=flat&logo=github)](https://github.dev/PavanMudigonda/zero-to-ai)
+
+**Click any badge above to start coding in seconds!**
+
+---
+
+## 📊 Course Overview
+
+> **From Zero to AI Mastery** WORK IN PROGRESS. OPEN FOR FEEDBACK.
+
+**Latest updates (March 6, 2026):**
+- Model landscape snapshot: [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md)
+- AI dev tools snapshot: [00-course-setup/ai_dev_tools_2026.md](00-course-setup/ai_dev_tools_2026.md)
+
+---
+
+## 🌱 Getting Started
+
+This comprehensive AI/ML curriculum has **27 progressive phases** covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each phase includes hands-on notebooks, projects, and practical applications.
+
+**Don't forget to:**
+- ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
+- 🍴 [Fork this repo](https://github.com/PavanMudigonda/zero-to-ai/fork) to track your personal progress
+
+### 🎯 What You'll Learn
+
+| Category | Topics Covered |
+|----------|---------------|
+| **Foundations** | Python, Data Science, Mathematics for ML |
+| **Core AI** | Neural Networks, Embeddings, Transformers |
+| **Advanced ML** | RAG Systems, Vector Databases, MLOps |
+| **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
+| **Production** | Deployment, Monitoring, Optimization |
+| **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
+
+### 🎓 Who Is This For?
+
+- **Beginners**: Start from Python basics, no ML experience required
+- **Self-Learners**: Structured path with 732 hands-on notebooks
+- **Career Switchers**: Complete curriculum from fundamentals to job-ready skills
+- **Professionals**: Deep dive into specific topics (RAG, Fine-tuning, MLOps)
+
+### ⏱️ Time Commitment
+
+- **Full Program**: 6-12 months (10-15 hours/week)
+- **Foundations Only**: 2-3 months
+- **Advanced Topics**: 3-4 months
+- **Flexible**: Learn at your own pace
 
 ---
 
 ## 🚀 Quick Start
 
+### Prerequisites
+- Basic Python knowledge (or start with [01-python/](01-python/))
+- High school mathematics
+- A computer (GPU helpful but not required initially)
+- 10-15 hours/week
+
+### Installation (Choose One)
+
+#### Option 1: UV - Fast & Recommended
 ```bash
-# 1. Install dependencies with UV (fast!)
+# Clone the repository
+git clone https://github.com/PavanMudigonda/zero-to-ai.git
+cd zero-to-ai
+
+# Install dependencies with UV (fastest!)
 ./install_dependencies.sh
 
-# OR use conda (recommended for ML)
+# Start learning
+jupyter notebook
+```
+
+#### Option 2: Conda - Best for ML/Data Science
+```bash
+# Clone the repository
+git clone https://github.com/PavanMudigonda/zero-to-ai.git
+cd zero-to-ai
+
+# Create conda environment
 conda env create -f environment.yml
 conda activate aiml-learning
 
-# 2. Start learning
+# Start learning
 jupyter notebook
-
-# 3. Track your progress
-python scripts/view_progress.py
 ```
 
-📖 **New here?** Start with the [Learning Checklist](checklist.md)
+#### Option 3: Cloud (No Installation!)
 
-### 🧭 Quick Navigation
+- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai) — fully automated, all dependencies install via `install_dependencies.sh`
 
-**Just starting?**  
-→ [Setup Guide](setup.md) → [Learning Checklist](checklist.md) → [Hands-On Labs](labs/README.md)
+- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main) — then run this in the first cell:
+  ```python
+  !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/colab_requirements.txt
+  ```
 
-**Need video tutorials?**  
-→ [Video Courses](labs/videos/README.md) - Stanford, 3Blue1Brown, Andrej Karpathy, DeepLearning.AI
+- **Kaggle**: Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?logo=kaggle)](https://www.kaggle.com/code) and create a **New Notebook**, then enable **Internet** in notebook settings and run:
+  ```python
+  !git clone https://github.com/PavanMudigonda/zero-to-ai.git
+  %cd zero-to-ai
+  !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/kaggle_requirements.txt
+  ```
 
-**Want hands-on practice?**  
-→ [Microsoft Labs](labs/microsoft-labs/README.md) - 100+ free lessons
+- **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) — packages auto-install on first run via `requirements-replit.txt`
 
-**Going to production?**  
-→ [Learning Checklist](checklist.md) - See MDTP Framework section for Models, Data, Tools, Productisation
+- **github.dev**: Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai) — browser-based editor only (no execution)
+
+### Your First Steps
+
+1. **📖 Course Setup**: Read [00-course-setup/README.md](00-course-setup/README.md) for detailed setup
+2. **✅ Learning Checklist**: Review [checklist.md](checklist.md) - your complete roadmap
+3. **📚 Start Learning**: Begin with [02-data-science/00_START_HERE.ipynb](02-data-science/00_START_HERE.ipynb)
+4. **📊 Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
+
+---
+
+## 📚 Important Guides
+
+| Guide | Description |
+|-------|-------------|
+| [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) | Learning paths for AI Engineer, ML Engineer, Data Scientist tracks |
+| [checklist.md](checklist.md) | Phase-by-phase completion checklist with checkboxes |
+| [REFERENCES.md](REFERENCES.md) | Curated videos, papers, and courses organized by phase |
+| [COMPARISON_MATRICES.md](COMPARISON_MATRICES.md) | Side-by-side comparisons of models, tools, and frameworks |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute notebooks and fixes |
+| [SUPPORT.md](SUPPORT.md) | Getting help, community links |
+| [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md) | Current AI model landscape (updated March 2026) |
+| [00-course-setup/troubleshooting.md](00-course-setup/troubleshooting.md) | Comprehensive troubleshooting guide |
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-aiml/
-├── checklist.md           # ⭐ START HERE - Your complete learning roadmap
-├── setup.md               # Installation & environment setup
-├── requirements.txt       # All dependencies for 732 notebooks
-├── 0-python/              # Python prerequisites (external course pointer)
-├── glossary/              # AI/ML terminology & concepts
-├── 1-data-science/        # Python fundamentals + scikit-learn (278 notebooks!)
-├── 2-maths/               # Mathematics for ML (40+ notebooks)
-├── 3-token/               # Tokenization (tiktoken, sentencepiece, HF)
-├── 4-embeddings/          # Word & sentence embeddings
-├── 5-neural-networks/     # From scratch to Transformers
-├── 6-vector-databases/    # Chroma, Qdrant, Weaviate, Milvus, pgvector
-├── 7-rag/                 # Retrieval-Augmented Generation
-├── 8-mlops/               # Deployment, monitoring, optimization
-├── 9-specializations/     # AI Agents, Computer Vision, NLP
-├── 10-prompt-engineering/ # 🔥 Systematic prompting techniques
-├── 11-llm-finetuning/     # 🔥 LoRA, QLoRA, PEFT fine-tuning
-├── 12-multimodal/         # 🔥 Vision, audio, video AI
-├── 13-local-llms/         # 🔥 Ollama, privacy-first AI
-└── labs/                  # 🧪 Microsoft courses, videos, cloud tutorials
+zero-to-ai/
+├── 📘 00-course-setup/        ⭐ START HERE - Setup & orientation
+├── 📚 01-python/                Python fundamentals (if needed)
+├── 📊 02-data-science/          NumPy, Pandas, Scikit-learn (278 notebooks!)
+├── 🔢 03-maths/                 Linear Algebra, Calculus, Statistics (40+ notebooks)
+│   ├── foundational/           Core math topics
+│   ├── mml-book/              MML textbook implementation
+│   ├── islp-book/             Statistical learning with Python
+│   ├── cs229-course/          Stanford ML course
+│   └── advanced/ 🆕           Learning theory, advanced optimization, Bayesian non-parametrics
+├── 🔤 04-token/                 Tokenization (tiktoken, sentencepiece, HF)
+├── 🎯 05-embeddings/            Word & sentence embeddings
+├── 🧠 06-neural-networks/       Deep learning from scratch to Transformers
+├── 💾 07-vector-databases/      Chroma, Qdrant, Weaviate, Milvus, pgvector
+├── 🔍 08-rag/                   Retrieval-Augmented Generation
+├── 🚀 09-mlops/                 Deployment, monitoring, optimization
+├── 🎨 10-specializations/       AI Agents, Computer Vision, NLP
+├── 💬 11-prompt-engineering/   Advanced prompting techniques
+├── ⚙️ 12-llm-finetuning/      LoRA, QLoRA, PEFT fine-tuning
+├── 🎭 13-multimodal/           Vision, audio, video AI
+├── 🏠 14-local-llms/           Ollama, privacy-first AI
+├── 🤖 15-ai-agents/            Function calling, ReAct, Multi-agent
+├── 📊 16-model-evaluation/     Metrics, fairness, LLM evaluation
+├── 🐛 17-debugging-troubleshooting/ Profiling, data issues, debugging
+├── 🎨 18-low-code-ai-tools/    Gradio, Streamlit, AutoML
+├── 🔒 19-ai-safety-redteaming/ Security, bias, red teaming
+├── ⚡ 20-real-time-streaming/  Streaming AI, WebSockets
+├── ❓ 21-quizzes/              Questions to test your knowledge
+├── 🧪 22-references/           Resources, papers, external materials
+├── 📖 23-glossary/             AI/ML terminology & concepts
+├── 🎓 23-advanced-mathematics/ 🆕 **16 notebooks**: PAC, Rademacher, NTK, VI, Bayesian NP
+├── 🔬 24-advanced-deep-learning/ 🆕 **39 notebooks**: GANs, VAEs, NeRF, Diffusion, BNNs
+├── 🎲 25-reinforcement-learning/ 🆕 **6 notebooks**: MDP, Q-Learning, Policy Gradients, Actor-Critic
+├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
+└── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
+├── ✅ checklist.md             Your complete learning roadmap
+├── 📋 setup.md                 Detailed installation guide
+└── !! COMPARISON_MATRICES.md   Comparison of LLM Models
 ```
 
-**Start with `00_START_HERE.ipynb` in each section!**
-
----
-
-## 🎯 Learning Phases
-
-> **Prerequisites**: New to Python? Start with [0-python/](0-python/) for Python fundamentals before Phase 1.
-
-### Foundation (Phases 0-9)
-| Phase | Topic | Time | Status |
-|-------|-------|------|--------|
-| **0** | [Glossary](glossary/GLOSSARY.md) | - | ⏳ Pending |
-| **1** | [Python & Data Science](1-data-science/README.md) | 2-3 weeks | ⏳ Pending |
-| **2** | [Mathematics for ML](2-maths/README.md) | 2-3 months | ⏳ Pending |
-| **3** | [Tokenization](3-token/README_TOKENIZERS.md) | 1-2 weeks | ⏳ Pending |
-| **4** | [Embeddings](4-embeddings/README.md) | 3-4 weeks | ⏳ Pending |
-| **5** | [Neural Networks](5-neural-networks/README.md) | 2-3 months | ⏳ Pending |
-| **6** | [Vector Databases](6-vector-databases/README.md) | 2-3 weeks | ⏳ Pending |
-| **7** | [RAG Systems](7-rag/README.md) | 3-4 weeks | ⏳ Pending |
-| **8** | [MLOps](8-mlops/README.md) | 4-6 weeks | ⏳ Pending |
-| **9** | [Specializations](9-specializations/) | 2-3 months | ⏳ Pending |
-| **10** | [Prompt Engineering](10-prompt-engineering/README.md) | 3-4 weeks | ⏳ Pending |
-| **11** | [LLM Fine-tuning](11-llm-finetuning/README.md) | 1-2 months | ⏳ Pending |
-| **12** | [Multimodal AI](12-multimodal/README.md) | 1-2 months | ⏳ Pending |
-| **13** | [Local LLMs](13-local-llms/README.md) | 3-4 weeks | ⏳ Pending |
-
----
-
-## 📖 Documentation
-
-- **[Learning Checklist](checklist.md)** ⭐ - Your complete learning roadmap
-  - Track progress through 732 notebooks
-  - 14 progressive phases (Foundations → Cutting-Edge AI)
-  - Comprehensive MDTP framework (Models, Data, Tools, Productisation)
-  - 200+ advanced topics checklist
-  - Portfolio projects and milestones
-
-- **[Setup Guide](setup.md)** - Installation & environment setup
-  - Quick start with UV (recommended)
-  - Manual installation options
-  - Troubleshooting guide
-
-- **[Comparison Matrices](docs/COMPARISON_MATRICES.md)** 🆕 - Decision guides
-  - LLM model selection (GPT-4o vs Claude vs local)
-  - Fine-tuning methods (LoRA vs QLoRA vs Full)
-  - Vector databases (ChromaDB vs Qdrant vs Milvus)
-  - Deployment options (API vs self-hosted vs edge)
-
-- **[Progress Tracking](scripts/README.md)** 🆕 - Track your learning
-  - Automated progress tracking with Python scripts
-  - Visual progress dashboard
-  - Export reports to markdown
-
-## 🧪 Hands-On Labs
-
-- **[Microsoft Labs](labs/microsoft-labs/README.md)** - 10 free courses with 100+ lessons
-  - AI for Beginners (38.8k ⭐)
-  - Machine Learning for Beginners (72.2k ⭐)
-  - Generative AI for Beginners (75.5k ⭐)
-  - LangChain for Python, JavaScript, Java
-
-- **[Video Courses](labs/videos/README.md)** - Essential tutorials from top educators
-  - Stanford CS229, CS224N, CS231N
-  - 3Blue1Brown, Andrej Karpathy
-  - DeepLearning.AI short courses
-
----
-
-## 💻 Prerequisites
-
-- **Python** - Basic programming (loops, functions, classes)
-- **Math** - High school algebra (Khan Academy for review)
-- **Time** - 10-15 hours/week for 6-12 months
-
-**No prior ML experience required!**
-
----
-
-
-## 📚 Learning Resources
-
-### Books (Integrated in Repository)
-- **Mathematics for Machine Learning** - Notebooks in [2-maths/mml-book/](2-maths/mml-book/)
-- **ISLP** - 13 interactive notebooks in [2-maths/islp-book/](2-maths/islp-book/)
-- **Stanford CS229** - Course notebooks in [2-maths/cs229-course/](2-maths/cs229-course/)
-
-### Video Courses
-- **50+ curated channels** - See [labs/videos/README.md](labs/videos/README.md)
-  - Stanford CS229, CS224N, CS231N
-  - 3Blue1Brown, Andrej Karpathy, StatQuest
-  - DeepLearning.AI, Fast.ai, MIT courses
-
-### Cloud Platforms
-- **AWS, Google Cloud, Azure** - See [labs/cloud-platforms/README.md](labs/cloud-platforms/README.md)
+**💡 Pro Tip**: Start with `00_START_HERE.ipynb` in each section for guided learning!
 
 ---
 
 ## 🤝 Contributing
 
-This is a personal learning repository, but suggestions welcome! Open an issue or PR.
+We welcome contributions from the community! Here's how you can help:
+
+### Ways to Contribute
+
+- **🐛 Report Issues**: Found a bug or error? [Open an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
+- **✨ Suggest Features**: Have an idea? Share it in [Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
+- **📝 Improve Documentation**: Fix typos, clarify explanations
+- **💻 Add Examples**: Contribute new notebooks or examples
+- **🌍 Translations**: Help translate content to other languages
+
+### Contribution Guidelines
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
-## 📄 License
+## 🙏 Acknowledgments
 
-MIT License - Free to use for learning
+This learning path is inspired by and integrates content from:
 
----
+- **Microsoft Learn** - Official AI/ML curriculum
+- **Microsoft for Beginners Series** - AI, ML, GenAI, Agents courses
+- **Stanford University** - CS229, CS224N, CS231N courses
+- **3Blue1Brown** - Visual mathematics explanations
+- **Andrej Karpathy** - Neural networks from scratch
+- **DeepLearning.AI** - Practical AI courses
+- **Fast.ai** - Practical deep learning approach
 
-## 🔗 Quick Links
-
-- **[Learning Checklist](checklist.md)** ⭐ - Your complete roadmap (start here!)
-- **[Setup Guide](setup.md)** - Installation & environment setup
-- **[Microsoft Labs](labs/microsoft-labs/README.md)** - 100+ free hands-on lessons
-- **[Video Courses](labs/videos/README.md)** - 50+ curated educational channels
-- **[Cloud Platforms](labs/cloud-platforms/README.md)** - AWS, GCP, Azure tutorials
-
----
-
-**Ready to start?** → [Learning Checklist](checklist.md)
-
-**Need help?** → [Setup Guide](setup.md)
-
-**Want practice?** → [Hands-On Labs](labs/README.md)
+**Special Thanks** to all contributors, educators, and the open-source community!
 
 ---
 
-**🚀 Happy Learning!**
+## 📜 License
 
-**Last Updated:** December 2025  
-**Repository:** [zero-to-ai](https://github.com/PavanMudigonda/zero-to-ai)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+**🚀 From Zero to AI - Your Journey Starts Here!**
+
+> "The best time to start learning AI was yesterday. The second best time is now."
+
+
+---
+
+**Questions?** Open an [issue](https://github.com/PavanMudigonda/zero-to-ai/issues) or start a [discussion](https://github.com/PavanMudigonda/zero-to-ai/discussions)!
+
+**Found this helpful?** ⭐ Star this repo and share it with others!
