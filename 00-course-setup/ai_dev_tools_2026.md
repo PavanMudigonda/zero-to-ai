@@ -1,6 +1,6 @@
 # AI Coding Tools for ML Engineers (March 2026)
 
-A practical guide to the tools that are reshaping how ML engineers write, debug, and ship code. This covers the four major AI coding assistants, a head-to-head comparison, ML-specific workflows, and AI-assisted research tools.
+A practical guide to the tools that are reshaping how ML engineers write, debug, and ship code. This covers the five major AI coding assistants, a head-to-head comparison, ML-specific workflows, and AI-assisted research tools.
 
 ---
 
@@ -9,10 +9,11 @@ A practical guide to the tools that are reshaping how ML engineers write, debug,
 1. [Cursor AI](#1-cursor-ai)
 2. [Windsurf (by Codeium, acquired by OpenAI)](#2-windsurf-by-codeium-acquired-by-openai)
 3. [Aider — Terminal-Native AI Pair Programmer](#3-aider--terminal-native-ai-pair-programmer)
-4. [GitHub Copilot 2025](#4-github-copilot-2025)
-5. [Comparison Table](#5-comparison-table)
-6. [For ML Engineers Specifically](#6-for-ml-engineers-specifically)
-7. [AI-Assisted Research Tools](#7-ai-assisted-research-tools)
+4. [Claude Code — Anthropic's Official Coding CLI + VS Code Extension](#4-claude-code--anthropics-official-coding-cli--vs-code-extension)
+5. [GitHub Copilot 2025](#5-github-copilot-2025)
+6. [Comparison Table](#6-comparison-table)
+7. [For ML Engineers Specifically](#7-for-ml-engineers-specifically)
+8. [AI-Assisted Research Tools](#8-ai-assisted-research-tools)
 
 ---
 
@@ -35,7 +36,8 @@ This quick snapshot highlights what matters most right now for working engineers
 | Autonomous feature implementation | Windsurf Cascade or Copilot Workspace |
 | CI/CD code maintenance | Aider in non-interactive mode |
 | Regulated enterprise teams | GitHub Copilot Business/Enterprise |
-| Remote SSH / terminal-first teams | Aider |
+| Remote SSH / terminal-first teams | Aider or Claude Code CLI |
+| Claude-native agentic workflows + MCP | Claude Code |
 
 ### Practical Model Routing Policy (Use in Any IDE)
 
@@ -231,7 +233,7 @@ Cascade:
 Aider is **git-native**: every change it makes is immediately committed with a descriptive commit message. This gives you a complete history of every AI-generated change, making it trivial to revert, audit, or cherry-pick.
 
 It also supports the widest model range of any tool:
-- Anthropic Claude (Opus 4, Sonnet 4, Haiku)
+- Anthropic Claude (Opus 4.6, Sonnet 4.6, Haiku 4.5)
 - OpenAI (o3, o4-mini, GPT-4o)
 - Google Gemini (2.0 Flash, 2.5 Pro)
 - DeepSeek (R1, V3)
@@ -346,7 +348,132 @@ Since Aider uses pay-per-use API pricing, the cost per task is predictable:
 
 ---
 
-## 4. GitHub Copilot 2025
+## 4. Claude Code — Anthropic's Official Coding CLI + VS Code Extension
+
+**What it is**: Anthropic's official AI coding agent, available as a terminal CLI (`claude`) and a native VS Code extension. Unlike Aider (which uses the API externally), Claude Code is built and maintained by Anthropic and is the primary way to get agentic coding with Claude models — including direct access to the latest Opus 4.6, Sonnet 4.6, and Haiku 4.5 models.
+
+**Docs**: [docs.anthropic.com/claude-code](https://docs.anthropic.com/en/docs/claude-code/overview)
+
+### Key Features
+
+#### Agentic Multi-File Editing
+Claude Code reads, edits, and creates files across your repository in a single session. It runs bash commands, executes tests, reads error output, and iterates — without requiring manual approval at every step.
+
+```bash
+# Start Claude Code in your repo
+claude
+
+# Example session:
+> Add rate limiting to all FastAPI routes in src/api/ using slowapi,
+  write tests, and make sure all existing tests still pass
+```
+
+#### MCP (Model Context Protocol) Native Support
+Claude Code has first-class MCP integration. You can connect any MCP server (databases, APIs, file systems, custom tools) directly to your coding session:
+
+```bash
+# Add an MCP server to your Claude Code config
+claude mcp add postgres-server
+
+# Now Claude can query your DB schema directly while coding
+> Refactor the user model to match the actual DB schema
+```
+
+This is the most significant differentiator for ML engineers: connect your experiment tracking (W&B MCP), vector DB, or internal APIs to Claude Code and it can reason about live data while writing code.
+
+#### CLAUDE.md — Persistent Project Instructions
+Drop a `CLAUDE.md` file in your repo root to give Claude Code project-level context that persists across every session:
+
+```markdown
+# CLAUDE.md
+
+## Project: PyTorch Training Framework
+- Use Hydra for config, WandB for experiment tracking
+- Always use torch.no_grad() in eval loops
+- Checkpoints go in checkpoints/{run_name}/
+- Run: pytest tests/ before marking any task complete
+- Never hardcode hyperparameters — put them in conf/config.yaml
+```
+
+#### Hooks — Custom Automation Triggers
+Hooks let you run shell commands in response to Claude Code events (before/after any tool use). Useful for:
+- Auto-running linters after file edits
+- Blocking dangerous commands (e.g., `rm -rf`)
+- Posting notifications when a long task completes
+- Logging all AI-generated changes to an audit trail
+
+```json
+// ~/.claude/settings.json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [{"type": "command", "command": "ruff check $CLAUDE_FILE_PATHS"}]
+      }
+    ]
+  }
+}
+```
+
+#### Plan Mode
+Before making any changes, Claude Code can enter plan mode: it explores your codebase, designs an implementation strategy, and presents it for approval — then executes once you confirm.
+
+#### VS Code Extension
+The Claude Code VS Code Extension is a **native integration** (not a plugin overlay). It gives you:
+- Claude Code sessions directly in VS Code sidebar
+- IDE selection context: highlight code and ask Claude about it
+- Clickable file references in responses (jump to line)
+- Status bar showing active model and token usage
+- Same full agentic capabilities as the CLI, inside your editor
+
+### Setup
+
+```bash
+# Install via npm
+npm install -g @anthropic-ai/claude-code
+
+# Or via the VS Code Extensions Marketplace:
+# Search "Claude Code" by Anthropic
+
+# Set API key
+export ANTHROPIC_API_KEY=your_key_here
+
+# Start in your repo
+cd my-project
+claude
+```
+
+### Cost
+
+Claude Code uses Anthropic API pricing directly — no separate subscription:
+
+| Task Type | Model | Estimated Cost |
+|---|---|---|
+| Quick fix / question | Haiku 4.5 | < $0.01 |
+| Feature implementation | Sonnet 4.6 | $0.05 - $0.30 |
+| Large codebase analysis | Opus 4.6 | $0.20 - $2.00 |
+
+Switch models per session: `/model claude-sonnet-4-6` or `/model claude-opus-4-6`.
+
+### Claude Code vs Aider
+
+| | Claude Code | Aider |
+|---|---|---|
+| **Model support** | Claude only (Opus 4.6, Sonnet 4.6, Haiku 4.5) | Any (Claude, GPT, Gemini, local) |
+| **MCP integration** | Native, first-class | No |
+| **VS Code extension** | Yes (native, built by Anthropic) | No |
+| **Git auto-commit** | No (manual) | Yes (auto-commits every change) |
+| **CI/CD headless** | Partial (`--print` non-interactive mode) | Yes (`--yes` flag) |
+| **CLAUDE.md / .aider.conf** | CLAUDE.md | .aider.conf.yml |
+| **Hooks** | Yes (pre/post tool events) | No |
+| **Best for** | MCP-connected workflows, Claude-native teams, VS Code users | CI/CD automation, multi-model flexibility, git-tracked batches |
+
+**Best for**: Teams building Claude-native agentic workflows, anyone who wants MCP tool integration while coding, VS Code users who want Claude's latest models without switching IDEs, and ML engineers who want to connect live infrastructure (DBs, experiment trackers, vector stores) to their coding sessions via MCP.
+
+---
+
+## 5. GitHub Copilot 2025
 
 **What it is**: Microsoft and GitHub's AI coding assistant, now the enterprise standard. Embedded in VS Code, JetBrains IDEs, and the GitHub web UI. Used by over 1.8 million developers.
 
@@ -413,26 +540,29 @@ Third-party tools can be added to Copilot as extensions. Current popular ones:
 
 ---
 
-## 5. Comparison Table
+## 6. Comparison Table
 
-| Feature | Cursor | Windsurf | Aider | GitHub Copilot |
-|---|---|---|---|---|
-| **Base IDE** | VS Code fork | VS Code fork | Terminal/any editor | VS Code, JetBrains, web |
-| **Autonomy level** | Medium (Composer with diffs) | High (Cascade, auto-executes) | High (with --yes flag) | Medium (Agent Mode) |
-| **Multi-file editing** | Yes (Composer) | Yes (Cascade) | Yes | Yes (Agent Mode) |
-| **Git integration** | Manual | Manual | Native (auto-commits) | Via Copilot Workspace |
-| **Codebase indexing** | Yes (full codebase) | Yes | Context window only | Yes (via @workspace) |
-| **CI/CD integration** | No | No | Yes (CLI, scriptable) | Yes (Copilot Workspace API) |
-| **Model flexibility** | Multiple (Claude, GPT-4o, etc.) | Multiple (various) | Any (widest selection) | Multiple (GPT-4o, Claude, Gemini) |
-| **Local/offline models** | No | No | Yes (via Ollama) | No |
-| **Enterprise features** | Limited | Good | None | Excellent |
-| **Pricing** | $20/month | $15/month | Pay-per-use API | $10-$39/month |
-| **Best use case** | Complex multi-file refactors | Fully autonomous tasks | CLI, CI/CD, scripted automation | Enterprise, PR-level tasks |
-| **Learning curve** | Low | Low | Medium | Very low |
+| Feature | Cursor | Windsurf | Aider | Claude Code | GitHub Copilot |
+|---|---|---|---|---|---|
+| **Base IDE** | VS Code fork | VS Code fork | Terminal/any editor | CLI + VS Code extension | VS Code, JetBrains, web |
+| **Autonomy level** | Medium (Composer with diffs) | High (Cascade, auto-executes) | High (with --yes flag) | High (agentic, plan mode) | Medium (Agent Mode) |
+| **Multi-file editing** | Yes (Composer) | Yes (Cascade) | Yes | Yes | Yes (Agent Mode) |
+| **Git integration** | Manual | Manual | Native (auto-commits) | Manual | Via Copilot Workspace |
+| **Codebase indexing** | Yes (full codebase) | Yes | Context window only | Yes (repo exploration) | Yes (via @workspace) |
+| **MCP support** | No | No | No | Yes (native, first-class) | No |
+| **CI/CD integration** | No | No | Yes (CLI, scriptable) | Partial (--print mode) | Yes (Copilot Workspace API) |
+| **Model flexibility** | Multiple (Claude, GPT-4o, etc.) | Multiple (various) | Any (widest selection) | Claude only | Multiple (GPT-4o, Claude, Gemini) |
+| **Local/offline models** | No | No | Yes (via Ollama) | No | No |
+| **Hooks / custom automation** | No | No | No | Yes (pre/post tool events) | No |
+| **CLAUDE.md / project rules** | .cursor/rules | No | .aider.conf.yml | CLAUDE.md | Copilot instructions |
+| **Enterprise features** | Limited | Good | None | Moderate | Excellent |
+| **Pricing** | $20/month | $15/month | Pay-per-use API | Pay-per-use API | $10-$39/month |
+| **Best use case** | Complex multi-file refactors | Fully autonomous tasks | CLI, CI/CD, scripted automation | MCP-connected workflows, Claude-native | Enterprise, PR-level tasks |
+| **Learning curve** | Low | Low | Medium | Low-Medium | Very low |
 
 ---
 
-## 6. For ML Engineers Specifically
+## 7. For ML Engineers Specifically
 
 ### Setting Up Cursor for Jupyter/Python ML Workflows
 
@@ -561,12 +691,14 @@ When writing code:
 | Large autonomous tasks ("implement this feature") | Windsurf Cascade |
 | Refactoring training scripts, adding type hints | Aider (batch, git-tracked) |
 | CI/CD: auto-fix failing tests | Aider (headless --yes mode) |
+| MCP-connected workflows (live DB, vector store, W&B) | Claude Code |
+| Claude-native agentic coding with VS Code | Claude Code VS Code Extension |
 | PR review and issue → code → PR | GitHub Copilot Workspace |
 | New developer onboarding | GitHub Copilot (lowest learning curve) |
 
 ---
 
-## 7. AI-Assisted Research Tools
+## 8. AI-Assisted Research Tools
 
 For ML engineers who need to stay current with research papers, three tools stand out.
 
