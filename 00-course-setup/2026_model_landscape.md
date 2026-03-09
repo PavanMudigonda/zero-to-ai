@@ -21,15 +21,18 @@ Use this guide to understand which models, tools, and techniques are worth your 
 
 These are the state-of-the-art proprietary models available via API. You cannot download or fine-tune them directly, but they set the performance ceiling that open-weight models are converging toward.
 
-### GPT-5.2 (OpenAI)
+### GPT-5.4 (OpenAI)
 
-- **Context window**: 400,000 tokens (~300 pages of text)
-- **Benchmark**: 100% on AIME 2025 math competition problems
-- **Multimodal**: text, images, code, structured data
-- **API**: `gpt-5.2` via OpenAI API
-- **Pricing**: ~$15/1M input tokens, ~$60/1M output tokens
-- **Best for**: complex reasoning, long-document analysis, highest-stakes tasks
-- **Note**: the most capable model available as of Feb 2026; use when quality matters more than cost
+- **Released**: March 5, 2026
+- **Context window**: 1,100,000 tokens (1.1M)
+- **Benchmark**: 83% match or beat industry professionals on GDPval real-world tasks; 33% fewer errors than GPT-5.2
+- **Multimodal**: text, images, code, structured data; native computer use
+- **API**: `gpt-5.4` (standard), `gpt-5.4-pro` (max performance, Responses API only)
+- **Pricing**: $2.50/1M input tokens, $15.00/1M output tokens; batch/flex at 50% off
+- **Key new feature**: **tool search** — model dynamically looks up tool definitions at inference time, reducing token use for tool-heavy workflows
+- **Variants**: GPT-5.4 (standard), GPT-5.4 Thinking (reasoning mode), GPT-5.4 Pro (max effort)
+- **Best for**: complex reasoning, agentic workflows, long-document analysis, highest-stakes tasks
+- **Intelligence Index rank**: #2 tied (score 57/57 with Gemini 3.1 Pro Preview) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 
 ### o3 / o4-mini (OpenAI — Reasoning Models)
 
@@ -37,9 +40,11 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **o3**: flagship reasoning model; best at math, science, coding competitions
 - **o4-mini**: much cheaper than o3, retains most reasoning capability
 - **Context**: 200K tokens (o3), 128K tokens (o4-mini)
+- **Pricing**: o3 at $2.00/1M input, $8.00/1M output
 - **Use case**: problems that benefit from step-by-step chain-of-thought reasoning
 - **Limitation**: slower than standard models (generates reasoning traces internally)
 - **Best for**: theorem proving, complex code debugging, multi-step planning
+- **Note**: GPT-5.4 Thinking now offers reasoning mode within the 5.4 family; o3 remains the dedicated reasoning specialist
 
 ### Claude 4.6 Family (Anthropic)
 
@@ -48,36 +53,43 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **Strengths**: coding, agent workflows, long-form analysis, enterprise safety controls
 - **Best for**: teams needing strong instruction-following and reliable coding/analysis across workloads
 - **API**: see current model IDs in Anthropic platform docs; names evolve quickly across preview/stable variants
+- **Intelligence Index rank**: Opus 4.6 (Adaptive Reasoning, Max Effort) #4 (score 53); Sonnet 4.6 #5 (score 52) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 
 ### Gemini 3.1 Pro / Gemini 2.5 Family (Google)
 
 - **Context window**: up to 1,000,000 tokens depending on model variant
 - **Core models**: Gemini 3.1 Pro Preview, Gemini 2.5 Pro, Gemini 2.5 Flash, Gemini 2.5 Flash-Lite
 - **Important deprecation note**: Gemini 3 Pro Preview is deprecated; migrate to Gemini 3.1 Pro Preview
+- **Pricing**: Gemini 3.1 Pro Preview at $2.00/1M input, $12.00/1M output
 - **Strengths**: massive context, strong multimodal and agentic tool use, broad media generation stack
 - **API**: model strings vary by stable/preview/latest aliases in Google AI Studio / Vertex AI
 - **Best for**: large-context analysis, multimodal applications, real-time and voice-enabled agents
+- **Intelligence Index rank**: #1 (score 57) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 
 ### Mistral Large 3 (Mistral AI)
 
 - **Architecture**: 675B parameter Mixture-of-Experts (MoE)
 - **Active parameters**: ~45B activated per forward pass (sparse MoE)
-- **Cost**: approximately 15% the cost of GPT-5.2 at equivalent quality for most tasks
+- **Cost**: approximately 15% the cost of GPT-5.4 at equivalent quality for most tasks
 - **Context**: 128K tokens
 - **Strengths**: European GDPR compliance, strong multilingual, cost-efficient
 - **API**: `mistral-large-latest` via Mistral AI platform (la Plateforme)
-- **Best for**: cost-sensitive production workloads where GPT-5.2 quality is not required
+- **Best for**: cost-sensitive production workloads where GPT-5.4 quality is not required
 
 ### Quick Comparison
 
-| Model | Context | Strengths | Relative Cost |
-|-------|---------|-----------|---------------|
-| GPT-5.2 (OpenAI) | 400K | All-around best, 100% AIME 2025 | Highest |
-| o3 (OpenAI) | 200K | Math, science, reasoning | Very High |
-| o4-mini (OpenAI) | 128K | Reasoning, cost-efficient | Medium |
-| Claude 4.6 Family (Anthropic) | 200K+ | Coding, agents, instruction following | High |
-| Gemini 3.1 Pro (Google) | 1M | Video, multimodal, massive context | High |
-| Mistral Large 3 (Mistral) | 128K | Cost-efficient, multilingual, GDPR | Low-Medium |
+| Model | Intelligence Index | Context | Pricing (input/output per 1M) | Strengths |
+|-------|-------------------|---------|-------------------------------|-----------|
+| Gemini 3.1 Pro Preview (Google) | **57** (#1) | 1M | $2.00 / $12.00 | Massive context, multimodal, agentic |
+| GPT-5.4 (OpenAI) | **57** (#2) | 1.1M | $2.50 / $15.00 | Computer use, tool search, all-around |
+| GPT-5.3 Codex (OpenAI) | **54** (#3) | — | — | Coding, agentic software tasks |
+| Claude Opus 4.6 (Anthropic) | **53** (#4) | 200K+ | — | Coding, agents, instruction following |
+| Claude Sonnet 4.6 (Anthropic) | **52** (#5) | 200K+ | — | Balanced quality & speed |
+| o3 (OpenAI) | — | 200K | $2.00 / $8.00 | Math, science, reasoning |
+| o4-mini (OpenAI) | — | 128K | Medium | Reasoning, cost-efficient |
+| Mistral Large 3 (Mistral) | — | 128K | Low | Cost-efficient, multilingual, GDPR |
+
+*Intelligence Index scores from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models) — composite of 10 independent benchmarks.*
 
 ---
 
@@ -85,9 +97,21 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 
 Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately. The gap with closed models has narrowed dramatically.
 
+### GLM-5 (Zhipu AI) — Top Open-Weight Model
+
+- **Intelligence Index rank**: #1 open-weight (score 50) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Key feature**: reasoning mode; strong performance closing gap with frontier closed models
+- **Best for**: production deployments where top open-weight quality is needed
+
+### Kimi K2.5 (Moonshot AI)
+
+- **Intelligence Index rank**: #2 open-weight (score 47)
+- **Key feature**: reasoning mode; strong multilingual and long-context capabilities
+- **Best for**: reasoning-heavy tasks as an open-weight alternative to o3-class models
+
 ### Llama 4 Maverick / Scout (Meta)
 
-- **Maverick**: 400B parameter MoE; flagship, matches GPT-5.2 on most benchmarks
+- **Maverick**: 400B parameter MoE; flagship, competitive with GPT-5.4 class on many benchmarks
 - **Scout**: 17B active / 109B total MoE; fastest, designed for edge deployment
 - **Context**: up to 10,000,000 tokens (10M — industry record for open-weight)
 - **Multimodal**: native image and text understanding
@@ -99,7 +123,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 
 - **Architecture**: 235B total / 22B active parameters (MoE)
 - **Key feature**: hybrid thinking/non-thinking mode — toggle chain-of-thought per request
-- **Benchmark**: best open-source model overall as of Feb 2026 on most standard benchmarks
+- **Benchmark**: strong open-source contender; Qwen 3.5 397B A17B now ranks #3 open-weight (Intelligence Index: 45)
 - **Context**: 128K tokens
 - **License**: Apache 2.0 (fully permissive commercial use)
 - **Download**: `Qwen/Qwen3-235B-A22B`
@@ -173,19 +197,22 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 
 ### Quick Comparison
 
-| Model | Params (active) | Context | License | Best For |
-|-------|----------------|---------|---------|----------|
-| Llama 4 Maverick | 400B MoE | 10M | Llama 4 | Top quality, ultra-long context |
-| Llama 4 Scout | 17B active | 10M | Llama 4 | Fast, long-context, edge |
-| Qwen 3 235B-A22B | 22B active | 128K | Apache 2.0 | Best OSS overall |
-| Qwen 3.5 family | 17B/10B/3B active (MoE tiers) | 128K+ | Apache 2.0 | Latest broad OSS lineup |
-| Qwen3-Coder-Next | 80B class | task-dependent | Apache 2.0 | Code and SWE agents |
-| DeepSeek R1 | 37B active | 128K | MIT | Reasoning, math, coding |
-| DeepSeek V3.2 | 37B active | 128K | MIT | General base model |
-| Gemma 3 27B | 27B | 128K | Gemma ToU | Single GPU, multilingual |
-| Phi-4 | 14B | 16K | MIT | STEM, math, coding |
-| Phi-4-Reasoning-Vision | 15B | task-dependent | MIT | Multimodal reasoning |
-| Phi-4-mini | 3.8B | 16K | MIT | On-device, mobile |
+| Model | Intelligence Index | Params (active) | Context | License | Best For |
+|-------|-------------------|----------------|---------|---------|----------|
+| GLM-5 (Zhipu AI) | **50** (#1 OW) | — | — | — | Top open-weight quality |
+| Kimi K2.5 (Moonshot) | **47** (#2 OW) | — | — | — | Reasoning, multilingual |
+| Qwen 3.5 397B-A17B | **45** (#3 OW) | 17B active | 128K+ | Apache 2.0 | Latest Qwen reasoning |
+| Llama 4 Maverick | — | 400B MoE | 10M | Llama 4 | Ultra-long context |
+| Llama 4 Scout | — | 17B active | 10M | Llama 4 | Fast, long-context, edge |
+| Qwen 3 235B-A22B | — | 22B active | 128K | Apache 2.0 | Production OSS deployments |
+| Qwen3-Coder-Next | — | 80B class | — | Apache 2.0 | Code and SWE agents |
+| DeepSeek R1 | — | 37B active | 128K | MIT | Reasoning, math, coding |
+| DeepSeek V3.2 | — | 37B active | 128K | MIT | General base model |
+| Gemma 3 27B | — | 27B | 128K | Gemma ToU | Single GPU, multilingual |
+| Phi-4 | — | 14B | 16K | MIT | STEM, math, coding |
+| Phi-4-mini | — | 3.8B | 16K | MIT | On-device, mobile |
+
+*Intelligence Index (OW = open-weight rank) from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models). GLM-5/Kimi K2.5 license/param details subject to provider docs.*
 
 ---
 
@@ -378,7 +405,8 @@ This section captures practical updates since the February snapshot so learners 
 - **Very-long-context workflows matured**: 1M+ token workflows are increasingly practical for repository analysis, long legal docs, and multimodal audit pipelines.
 - **Open-weight quality ceiling improved**: Qwen3, Llama 4, and DeepSeek families are now viable for many production tasks that previously required frontier APIs.
 - **License-aware model choice is now mandatory**: teams increasingly split by policy: Apache/MIT-first stacks for commercial redistribution, and restricted-license stacks for internal-only deployments.
-- **This-month additions**: Claude 4.6 family, Qwen 3.5 / Qwen3-Coder-Next, and Phi-4-Reasoning-Vision entered many teams' shortlists.
+- **This-month additions**: GPT-5.4 (March 5, 2026) with 1.1M context, native computer use, and tool search; GLM-5 and Kimi K2.5 emerged as top open-weight leaders on [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models); Claude 4.6 family, Qwen 3.5 / Qwen3-Coder-Next, and Phi-4-Reasoning-Vision also on shortlists.
+- **Intelligence leaderboard snapshot** (artificialanalysis.ai, 282 models ranked): Gemini 3.1 Pro Preview and GPT-5.4 tied at #1 (score 57); top open-weight is GLM-5 (score 50).
 
 ### Training and Alignment Updates (March 2026)
 
@@ -396,9 +424,11 @@ This section captures practical updates since the February snapshot so learners 
 
 | Layer | March 2026 Default Recommendation |
 |------|------------------------------------|
-| Fast API assistant | `o4-mini` / Claude Sonnet class |
-| Hard reasoning | `o3` / DeepSeek R1 |
-| Open-weight general | Qwen3 235B-A22B |
+| Fast API assistant | `o4-mini` / Claude Sonnet 4.6 |
+| Hard reasoning | `o3` / `gpt-5.4` (Thinking) / DeepSeek R1 |
+| Best frontier API | `gpt-5.4` / Gemini 3.1 Pro Preview |
+| Open-weight #1 (quality) | GLM-5 (Reasoning) |
+| Open-weight general | Qwen3 235B-A22B or Qwen3.5 397B-A17B |
 | Open-weight long context | Llama 4 Maverick/Scout |
 | Small local model | Phi-4-mini / Gemma 3 4B |
 | Fine-tuning starter | Qwen2.5-7B + QLoRA + RSLoRA |
@@ -417,7 +447,7 @@ A structured learning path for March 2026. Follow this order to build solid foun
 
 1. **Python for AI** — numpy, pandas, matplotlib basics; Jupyter notebooks
 2. **Prompt engineering** — zero-shot, few-shot, chain-of-thought; system prompts
-3. **OpenAI / Anthropic API** — calling GPT-5.2 and Claude 3.7; streaming; function calling
+3. **OpenAI / Anthropic API** — calling GPT-5.4 and Claude Sonnet 4.6; streaming; function calling; computer use
 4. **Tokenization** — how text becomes tokens; tiktoken; why context window size matters
 5. **RAG basics** — chunking documents, embedding models, Chroma, similarity search
 
@@ -483,7 +513,7 @@ A structured learning path for March 2026. Follow this order to build solid foun
 ```
 Layer               Tools (March 2026 Best Choices)
 ---------           ------------------------------
-Frontier APIs       GPT-5.2, Claude 3.7, Gemini 3.1 Pro
+Frontier APIs       GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro Preview
 Open Models         Qwen3 235B-A22B, Llama 4 Maverick, DeepSeek R1
 Fine-tuning Base    Qwen2.5-7B (small), Phi-4 (medium), Qwen2.5-32B (large)
 Fine-tuning Tools   Unsloth + TRL (SFT/DPO/GRPO)
