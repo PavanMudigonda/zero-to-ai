@@ -39,7 +39,7 @@ Common issues and solutions for Zero to AI learning path.
 
 ---
 
-## �📋 Table of Contents
+## 📋 Table of Contents
 
 - [Quick Fixes](#-quick-fixes-most-common-issues)
 - [Error Message Quick Reference](#-error-message-quick-reference)
@@ -117,7 +117,7 @@ Common issues and solutions for Zero to AI learning path.
 | **Windows** | [python.org](https://python.org) | pip or conda | CUDA supported |
 | **Linux** | System package manager | pip or conda | CUDA supported |
 
-**Last Updated:** January 2026
+**Last Updated:** March 2026
 
 ---
 

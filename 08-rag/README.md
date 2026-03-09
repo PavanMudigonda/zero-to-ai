@@ -38,7 +38,7 @@ Combine your skills from previous phases to build production-grade RAG systems!
 ## 🗂️ Module Structure
 
 ```
-7-rag/
+08-rag/
 ├── 00_START_HERE.ipynb           # RAG overview and quick demo
 ├── 01_basic_rag.ipynb             # Simple RAG from scratch
 ├── 02_document_processing.ipynb   # Chunking strategies
@@ -47,10 +47,10 @@ Combine your skills from previous phases to build production-grade RAG systems!
 ├── 05_advanced_retrieval.ipynb    # Hybrid search, re-ranking
 ├── 06_conversation_rag.ipynb      # Chat with memory
 ├── 07_evaluation.ipynb            # RAG evaluation metrics
-├── projects/                      # Hands-on projects
-│   ├── personal_docs_qa.py        # Chat with your documents
-│   ├── code_search.py             # Semantic code search
-│   └── research_assistant.py      # Academic paper Q&A
+├── 09_advanced_retrieval.ipynb    # Parent-child retrieval, ensemble
+├── 10_graphrag_visual_rag.ipynb   # GraphRAG and multimodal RAG
+├── assignment.md                  # Phase assignment
+├── challenges.md                  # Hands-on challenges
 └── README.md                      # This file
 ```
 
@@ -334,6 +334,6 @@ Before moving to Phase 8 (MLOps), you should be able to:
 
 **Ready to build your first RAG system?** → Start with `00_START_HERE.ipynb`
 
-**Questions?** → Check the projects/ folder for working examples
+**Questions?** → Check the `assignment.md` and `challenges.md` for practice exercises
 
 **🚀 Let's build intelligent systems that can learn from your data!**
