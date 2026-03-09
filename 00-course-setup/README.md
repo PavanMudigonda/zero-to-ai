@@ -7,7 +7,7 @@
 1. **Fork & Clone**: Click "Fork" → `git clone https://github.com/YOUR-USERNAME/zero-to-ai.git`
 2. **Install**: Run `./install_dependencies.sh` (uses UV - fastest!)
 3. **Start**: `jupyter notebook` → Open any `.ipynb` file
-4. **Begin Learning**: Start with [1-data-science/00_START_HERE.ipynb](../1-data-science/00_START_HERE.ipynb)
+4. **Begin Learning**: Start with [02-data-science/00_START_HERE.ipynb](../02-data-science/00_START_HERE.ipynb)
 
 **Not ready?** See detailed setup below.
 
@@ -21,7 +21,7 @@ Welcome to Zero to AI! This comprehensive learning path will take you from Pytho
 
 Before you begin, connect with other learners and get support:
 
-- ** Discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)
 - **🐛 Issues**: Found a bug or have a suggestion? [Create an issue](https://github.com/PavanMudigonda/zero-to-ai/issues)
 
 ## 🍴 Fork or Clone This Repository
@@ -132,7 +132,7 @@ jupyter notebook
 ### Prerequisites
 
 - **Python Knowledge**: Basic understanding of Python (loops, functions, classes)
-  - New to Python? Start with [0-python/](../0-python/) section first
+  - New to Python? Start with [01-python/](../01-python/) section first
 - **Mathematics**: High school algebra (we'll teach the rest!)
 - **Time Commitment**: 10-15 hours/week for 6-12 months
 - **Hardware**: Any modern computer (GPU helpful but not required initially)
@@ -208,16 +208,19 @@ zero-to-ai/
 ├── 🎭 13-multimodal/            Vision, Audio, Video AI
 ├── 🏠 14-local-llms/            Ollama & private AI
 ├── 🧪 15-ai-agents/             Autonomous AI systems
-├── 🔍 16-vector-search/         Advanced search & retrieval
-├── 📈 17-ml-evaluation/         Model evaluation & metrics
-├── 🔧 18-debugging/             Troubleshooting & optimization
-├── ⚡ 19-low-code-ai/           No-code AI tools
-├── 🛡️ 20-ai-safety/            AI safety & red teaming
-├── 📡 21-real-time-streaming/   Live AI applications
-├── 📝 22-quizzes/               Knowledge assessments
-├── 📖 23-references/            Research papers & resources
+├── 📈 16-model-evaluation/      Model evaluation & metrics
+├── 🔧 17-debugging-troubleshooting/ Troubleshooting & debugging
+├── ⚡ 18-low-code-ai-tools/     No-code AI tools
+├── 🛡️ 19-ai-safety-redteaming/ AI safety & red teaming
+├── 📡 20-real-time-streaming/   Live AI applications
+├── 📝 21-quizzes/               Knowledge assessments
+├── 📖 22-references/            Research papers & resources
+├── 🗂️ 23-glossary/             Terminology & definitions
 ├── 🧠 24-advanced-deep-learning/ Cutting-edge techniques
-├── 📋 25-quizzes/               Progress assessments
+├── 🎯 25-reinforcement-learning/ Reinforcement learning
+├── 📊 26-time-series-analysis/  Time series analysis
+├── 🔬 27-causal-inference/      Causal inference
+├── 🔨 28-practical-data-science/ Practical data science
 └── 📚 scripts/                  Utility scripts & tools
 ```
 
@@ -225,12 +228,12 @@ zero-to-ai/
 
 ### Phase 0: Setup & Prerequisites (You are here!)
 - ✅ Complete this setup guide
-- ✅ Review [glossary/GLOSSARY.md](../glossary/GLOSSARY.md) for terminology
-- ✅ If new to Python, start with [0-python/](../0-python/)
+- ✅ Review [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md) for terminology
+- ✅ If new to Python, start with [01-python/](../01-python/)
 
 ### Phase 1: Foundations (Weeks 1-8)
-- **Lesson 1**: [Python & Data Science](../1-data-science/README.md) - 278 notebooks
-- **Lesson 2**: [Mathematics for ML](../2-maths/README.md) - Linear algebra, calculus, stats
+- **Lesson 1**: [Python & Data Science](../02-data-science/README.md) - 278 notebooks
+- **Lesson 2**: [Mathematics for ML](../03-maths/README.md) - Linear algebra, calculus, stats
 
 ### Phase 2: Core AI (Weeks 9-20)
 - **Lesson 3-7**: Tokenization → Embeddings → Neural Networks → Vector DBs → RAG
@@ -242,8 +245,8 @@ zero-to-ai/
 
 1. ✅ **Complete Setup**: Ensure your environment is working
 2. ✅ **Read the Checklist**: Open [checklist.md](../checklist.md) - your complete roadmap
-3. ✅ **Start Learning**: Begin with [1-data-science/00_START_HERE.ipynb](../1-data-science/00_START_HERE.ipynb)
-4. ✅ **Track Progress**: Use `python scripts/view_progress.py` to monitor your journey
+3. ✅ **Start Learning**: Begin with [02-data-science/00_START_HERE.ipynb](../02-data-science/00_START_HERE.ipynb)
+4. ✅ **Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
 5. ✅ **Join Community**: Connect with other learners for support
 
 ## 🆘 Troubleshooting
@@ -276,7 +279,7 @@ Before moving to Lesson 1, ensure:
 - [ ] Jupyter Notebook launches successfully
 - [ ] Can open and run a test notebook
 - [ ] Read [checklist.md](../checklist.md) learning roadmap
-- [ ] Familiar with [glossary/GLOSSARY.md](../glossary/GLOSSARY.md) terms
+- [ ] Familiar with [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md) terms
 
 ## 🎓 Ready to Start?
 

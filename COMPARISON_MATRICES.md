@@ -1,6 +1,6 @@
 # AI/ML Decision Matrices & Comparison Guides
 
-> Quick reference for choosing the right tools, models, and approaches for your AI/ML projects (December 2025)
+> Quick reference for choosing the right tools, models, and approaches for your AI/ML projects (March 2026)
 
 ## Table of Contents
 - [LLM Model Selection](#llm-model-selection)
@@ -21,21 +21,23 @@
 |-------|----------|------|------|------------------|-------------|
 | **GPT-4o** | Production, multimodal | Best quality, 128k context, vision | Expensive | $2.50 in / $10 out | Complex tasks, multimodal, production apps |
 | **GPT-4o-mini** | Development, testing | Fast, cheap, good quality | Not as capable as GPT-4o | $0.15 in / $0.60 out | Development, high-volume tasks, chatbots |
-| **o1-preview** | Research, reasoning | Best reasoning, complex problems | Slow, expensive, no streaming | $15 in / $60 out | Math, coding, research, complex analysis |
-| **o1-mini** | Coding, math | Fast reasoning, cost-effective | Limited general knowledge | $3 in / $12 out | Code generation, STEM problems |
+| **o3** | Research, reasoning | Top reasoning, complex problems | Slow, expensive | $10 in / $40 out | Math, coding, research, complex analysis |
+| **o3-mini** | Coding, math | Fast reasoning, cost-effective | Limited general knowledge | $1.10 in / $4.40 out | Code generation, STEM problems |
 | **Claude 3.5 Sonnet** | Coding, analysis | Excellent at code, 200k context | API only | $3 in / $15 out | Code reviews, long documents, analysis |
+| **DeepSeek R1** | Reasoning, self-hosted | Open-weight, strong reasoning | Requires GPU | Free (hosting cost) | Privacy + reasoning, cost-sensitive |
+| **DeepSeek V3** | General, self-hosted | Excellent quality, MoE efficient | Requires GPU | Free (hosting cost) | Self-hosted production, general tasks |
 | **Llama 3.3 70B** | Self-hosted production | Free, good quality, customizable | Requires GPU | Free (hosting cost) | Privacy needs, cost-sensitive, customization |
 | **Qwen 2.5 (7-72B)** | Multilingual, coding | Best open-source, multilingual | Requires hosting | Free (hosting cost) | Non-English, code, self-hosting |
-| **Gemini 1.5 Pro** | Multimodal, long context | 2M context, video understanding | Limited availability | $1.25 in / $5 out | Extremely long documents, video |
+| **Gemini 2.0 Pro** | Multimodal, long context | 2M context, video understanding | API only | $1.25 in / $5 out | Extremely long documents, video |
 
 **Decision Tree:**
 ```
 Need multimodal (images/vision)? 
-├─ Yes → GPT-4o or Gemini 1.5 Pro
+├─ Yes → GPT-4o or Gemini 2.0 Pro
 └─ No → Need complex reasoning?
-    ├─ Yes → o1-preview (research) or o1-mini (coding)
+    ├─ Yes → o3 (research) or o3-mini (coding) or DeepSeek R1 (self-hosted)
     └─ No → Need self-hosting?
-        ├─ Yes → Llama 3.3 70B or Qwen 2.5
+        ├─ Yes → DeepSeek V3, Llama 3.3 70B, or Qwen 2.5
         └─ No → Budget conscious?
             ├─ Yes → GPT-4o-mini or Claude Haiku
             └─ No → GPT-4o or Claude 3.5 Sonnet
@@ -286,7 +288,7 @@ Need absolute best quality?
 
 ---
 
-**Last Updated:** December 2025  
+**Last Updated:** March 2026  
 **Repository:** [zero-to-ai](https://github.com/PavanMudigonda/zero-to-ai)
 
 For detailed tutorials on any of these topics, see the relevant phase notebooks in the repository.

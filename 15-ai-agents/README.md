@@ -65,17 +65,31 @@ By the end of this phase, you will:
    - CrewAI for multi-agent systems
    - Framework comparison
 
-5. **[05_agent_memory.ipynb](05_agent_memory.ipynb)**
-   - Short-term vs long-term memory
-   - Conversation history management
-   - Vector-based memory
-   - State persistence
-
-6. **[06_multi_agent_systems.ipynb](06_multi_agent_systems.ipynb)**
+5. **[05_multi_agent_systems.ipynb](05_multi_agent_systems.ipynb)**
    - Coordinating multiple agents
    - Agent communication protocols
    - Task delegation
    - Building an agent team
+
+6. **[06_mcp_model_context_protocol.ipynb](06_mcp_model_context_protocol.ipynb)**
+   - MCP: the emerging standard for AI tool integration (2026)
+   - Connecting LLMs to external tools and data sources
+   - Building MCP servers and clients
+
+7. **[07_openai_agents_sdk_langgraph.ipynb](07_openai_agents_sdk_langgraph.ipynb)**
+   - OpenAI Agents SDK
+   - LangGraph stateful agents
+   - Comparing agent frameworks
+
+8. **[08_reasoning_models.ipynb](08_reasoning_models.ipynb)**
+   - o1, o3, DeepSeek R1 reasoning models
+   - Using reasoning models in agents
+   - When to use reasoning vs standard models
+
+9. **[09_autonomous_agents_2026.ipynb](09_autonomous_agents_2026.ipynb)**
+   - State of the art: autonomous agents in 2026
+   - Production patterns and best practices
+   - Future directions
 
 ### Assignments & Practice
 

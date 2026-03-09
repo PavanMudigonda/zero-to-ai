@@ -186,11 +186,11 @@ zero-to-ai/
 ├── ❓ 21-quizzes/              Questions to test your knowledge
 ├── 🧪 22-references/           Resources, papers, external materials
 ├── 📖 23-glossary/             AI/ML terminology & concepts
-├── 🎓 23-advanced-mathematics/ 🆕 **16 notebooks**: PAC, Rademacher, NTK, VI, Bayesian NP
 ├── 🔬 24-advanced-deep-learning/ 🆕 **39 notebooks**: GANs, VAEs, NeRF, Diffusion, BNNs
 ├── 🎲 25-reinforcement-learning/ 🆕 **6 notebooks**: MDP, Q-Learning, Policy Gradients, Actor-Critic
 ├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
-└── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
+├── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
+├── 🔨 28-practical-data-science/ Interview prep & hands-on practice
 ├── ✅ checklist.md             Your complete learning roadmap
 ├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models
