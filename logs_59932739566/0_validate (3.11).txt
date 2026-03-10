@@ -1,0 +1,839 @@
+﻿2026-03-09T20:04:13.5027578Z Current runner version: '2.332.0'
+2026-03-09T20:04:13.5063126Z ##[group]Runner Image Provisioner
+2026-03-09T20:04:13.5064517Z Hosted Compute Agent
+2026-03-09T20:04:13.5065515Z Version: 20260213.493
+2026-03-09T20:04:13.5067142Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-03-09T20:04:13.5068503Z Build Date: 2026-02-13T00:28:41Z
+2026-03-09T20:04:13.5069561Z Worker ID: {700898ba-e339-4c04-aae8-b0d57b589f4c}
+2026-03-09T20:04:13.5071077Z Azure Region: northcentralus
+2026-03-09T20:04:13.5072261Z ##[endgroup]
+2026-03-09T20:04:13.5074472Z ##[group]Operating System
+2026-03-09T20:04:13.5075512Z Ubuntu
+2026-03-09T20:04:13.5076552Z 24.04.3
+2026-03-09T20:04:13.5077379Z LTS
+2026-03-09T20:04:13.5078090Z ##[endgroup]
+2026-03-09T20:04:13.5079043Z ##[group]Runner Image
+2026-03-09T20:04:13.5079963Z Image: ubuntu-24.04
+2026-03-09T20:04:13.5081325Z Version: 20260302.42.1
+2026-03-09T20:04:13.5083623Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260302.42/images/ubuntu/Ubuntu2404-Readme.md
+2026-03-09T20:04:13.5086311Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260302.42
+2026-03-09T20:04:13.5088054Z ##[endgroup]
+2026-03-09T20:04:13.5090040Z ##[group]GITHUB_TOKEN Permissions
+2026-03-09T20:04:13.5093309Z Contents: read
+2026-03-09T20:04:13.5094355Z Metadata: read
+2026-03-09T20:04:13.5095204Z Packages: read
+2026-03-09T20:04:13.5096192Z ##[endgroup]
+2026-03-09T20:04:13.5099292Z Secret source: Actions
+2026-03-09T20:04:13.5100782Z Prepare workflow directory
+2026-03-09T20:04:13.5583399Z Prepare all required actions
+2026-03-09T20:04:13.5640050Z Getting action download info
+2026-03-09T20:04:13.8421754Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2026-03-09T20:04:13.9679976Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-03-09T20:04:14.1731595Z Complete job name: validate (3.11)
+2026-03-09T20:04:14.2375906Z ##[group]Run actions/checkout@v4
+2026-03-09T20:04:14.2376764Z with:
+2026-03-09T20:04:14.2377183Z   repository: PavanMudigonda/zero-to-ai
+2026-03-09T20:04:14.2377877Z   token: ***
+2026-03-09T20:04:14.2378257Z   ssh-strict: true
+2026-03-09T20:04:14.2378657Z   ssh-user: git
+2026-03-09T20:04:14.2379047Z   persist-credentials: true
+2026-03-09T20:04:14.2379489Z   clean: true
+2026-03-09T20:04:14.2379886Z   sparse-checkout-cone-mode: true
+2026-03-09T20:04:14.2380587Z   fetch-depth: 1
+2026-03-09T20:04:14.2380976Z   fetch-tags: false
+2026-03-09T20:04:14.2381374Z   show-progress: true
+2026-03-09T20:04:14.2381780Z   lfs: false
+2026-03-09T20:04:14.2382144Z   submodules: false
+2026-03-09T20:04:14.2382546Z   set-safe-directory: true
+2026-03-09T20:04:14.2383236Z ##[endgroup]
+2026-03-09T20:04:14.3591447Z Syncing repository: PavanMudigonda/zero-to-ai
+2026-03-09T20:04:14.3594134Z ##[group]Getting Git version info
+2026-03-09T20:04:14.3595444Z Working directory is '/home/runner/work/zero-to-ai/zero-to-ai'
+2026-03-09T20:04:14.3597170Z [command]/usr/bin/git version
+2026-03-09T20:04:14.3644296Z git version 2.53.0
+2026-03-09T20:04:14.3671887Z ##[endgroup]
+2026-03-09T20:04:14.3692746Z Temporarily overriding HOME='/home/runner/work/_temp/367991b1-cc51-4323-b75a-4eba5b6c64e6' before making global git config changes
+2026-03-09T20:04:14.3697918Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-09T20:04:14.3699100Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-03-09T20:04:14.3738632Z Deleting the contents of '/home/runner/work/zero-to-ai/zero-to-ai'
+2026-03-09T20:04:14.3742103Z ##[group]Initializing the repository
+2026-03-09T20:04:14.3746489Z [command]/usr/bin/git init /home/runner/work/zero-to-ai/zero-to-ai
+2026-03-09T20:04:14.3839457Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-03-09T20:04:14.3841427Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-03-09T20:04:14.3843234Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-03-09T20:04:14.3844847Z hint: call:
+2026-03-09T20:04:14.3845252Z hint:
+2026-03-09T20:04:14.3846024Z hint: 	git config --global init.defaultBranch <name>
+2026-03-09T20:04:14.3846663Z hint:
+2026-03-09T20:04:14.3847251Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-03-09T20:04:14.3848239Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-03-09T20:04:14.3849158Z hint:
+2026-03-09T20:04:14.3849792Z hint: 	git branch -m <name>
+2026-03-09T20:04:14.3850632Z hint:
+2026-03-09T20:04:14.3851277Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-03-09T20:04:14.3852415Z Initialized empty Git repository in /home/runner/work/zero-to-ai/zero-to-ai/.git/
+2026-03-09T20:04:14.3855646Z [command]/usr/bin/git remote add origin https://github.com/PavanMudigonda/zero-to-ai
+2026-03-09T20:04:14.3890929Z ##[endgroup]
+2026-03-09T20:04:14.3891671Z ##[group]Disabling automatic garbage collection
+2026-03-09T20:04:14.3894893Z [command]/usr/bin/git config --local gc.auto 0
+2026-03-09T20:04:14.3924610Z ##[endgroup]
+2026-03-09T20:04:14.3925280Z ##[group]Setting up auth
+2026-03-09T20:04:14.3931363Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-09T20:04:14.3962273Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-09T20:04:14.4276455Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-03-09T20:04:14.4306411Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-03-09T20:04:14.4533739Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-03-09T20:04:14.4565222Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-03-09T20:04:14.4826159Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-03-09T20:04:14.4863504Z ##[endgroup]
+2026-03-09T20:04:14.4864766Z ##[group]Fetching the repository
+2026-03-09T20:04:14.4873803Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +4109f7e7fd7a5b4c55f6d19c20a7d6a6cba56c83:refs/remotes/origin/main
+2026-03-09T20:04:18.0197568Z From https://github.com/PavanMudigonda/zero-to-ai
+2026-03-09T20:04:18.0199978Z  * [new ref]         4109f7e7fd7a5b4c55f6d19c20a7d6a6cba56c83 -> origin/main
+2026-03-09T20:04:18.0234678Z ##[endgroup]
+2026-03-09T20:04:18.0236341Z ##[group]Determining the checkout info
+2026-03-09T20:04:18.0238150Z ##[endgroup]
+2026-03-09T20:04:18.0243835Z [command]/usr/bin/git sparse-checkout disable
+2026-03-09T20:04:18.0288124Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-03-09T20:04:18.0318483Z ##[group]Checking out the ref
+2026-03-09T20:04:18.0323402Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-03-09T20:04:18.8022970Z Switched to a new branch 'main'
+2026-03-09T20:04:18.8024603Z branch 'main' set up to track 'origin/main'.
+2026-03-09T20:04:18.8114481Z ##[endgroup]
+2026-03-09T20:04:18.8157980Z [command]/usr/bin/git log -1 --format=%H
+2026-03-09T20:04:18.8183414Z 4109f7e7fd7a5b4c55f6d19c20a7d6a6cba56c83
+2026-03-09T20:04:18.8476240Z ##[group]Run actions/setup-python@v5
+2026-03-09T20:04:18.8476642Z with:
+2026-03-09T20:04:18.8476883Z   python-version: 3.11
+2026-03-09T20:04:18.8477143Z   cache: pip
+2026-03-09T20:04:18.8477372Z   check-latest: false
+2026-03-09T20:04:18.8477784Z   token: ***
+2026-03-09T20:04:18.8478030Z   update-environment: true
+2026-03-09T20:04:18.8478301Z   allow-prereleases: false
+2026-03-09T20:04:18.8478564Z   freethreaded: false
+2026-03-09T20:04:18.8478802Z ##[endgroup]
+2026-03-09T20:04:19.0169762Z ##[group]Installed versions
+2026-03-09T20:04:19.0257706Z Successfully set up CPython (3.11.14)
+2026-03-09T20:04:19.0258615Z ##[endgroup]
+2026-03-09T20:04:19.2822253Z [command]/opt/hostedtoolcache/Python/3.11.14/x64/bin/pip cache dir
+2026-03-09T20:04:19.5657166Z /home/runner/.cache/pip
+2026-03-09T20:04:19.7287344Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.14-pip-b14d97ec5b4334f2e6a9b0b89b0336a8cb926243eff28a34bb734efb508890de
+2026-03-09T20:04:20.8438986Z Received 100663296 of 434672458 (23.2%), 95.9 MBs/sec
+2026-03-09T20:04:21.8552002Z Received 234881024 of 434672458 (54.0%), 111.3 MBs/sec
+2026-03-09T20:04:22.8548729Z Received 402653184 of 434672458 (92.6%), 127.5 MBs/sec
+2026-03-09T20:04:23.0495415Z Received 434672458 of 434672458 (100.0%), 129.3 MBs/sec
+2026-03-09T20:04:23.0496981Z Cache Size: ~415 MB (434672458 B)
+2026-03-09T20:04:23.0544429Z [command]/usr/bin/tar -xf /home/runner/work/_temp/f66133f4-cd17-45fe-a8aa-0acd1d4d439c/cache.tzst -P -C /home/runner/work/zero-to-ai/zero-to-ai --use-compress-program unzstd
+2026-03-09T20:04:23.7443825Z Cache restored successfully
+2026-03-09T20:04:23.8309977Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.11.14-pip-b14d97ec5b4334f2e6a9b0b89b0336a8cb926243eff28a34bb734efb508890de
+2026-03-09T20:04:23.8508445Z ##[group]Run python -m pip install --upgrade pip
+2026-03-09T20:04:23.8509191Z [36;1mpython -m pip install --upgrade pip[0m
+2026-03-09T20:04:23.8509629Z [36;1mpip install jupyter nbconvert nbformat ipykernel[0m
+2026-03-09T20:04:23.8510537Z [36;1m# Install core dependencies (subset for faster CI)[0m
+2026-03-09T20:04:23.8511099Z [36;1mpip install torch torchvision --index-url https://download.pytorch.org/whl/cpu[0m
+2026-03-09T20:04:23.8511712Z [36;1mpip install transformers datasets numpy pandas scikit-learn matplotlib[0m
+2026-03-09T20:04:23.8567687Z shell: /usr/bin/bash -e {0}
+2026-03-09T20:04:23.8567959Z env:
+2026-03-09T20:04:23.8568225Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:04:23.8568691Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-03-09T20:04:23.8569131Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:04:23.8569510Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:04:23.8569929Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:04:23.8570586Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-03-09T20:04:23.8570918Z ##[endgroup]
+2026-03-09T20:04:24.3390957Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (26.0.1)
+2026-03-09T20:04:24.9935300Z Collecting jupyter
+2026-03-09T20:04:24.9951775Z   Using cached jupyter-1.1.1-py2.py3-none-any.whl.metadata (2.0 kB)
+2026-03-09T20:04:25.0155640Z Collecting nbconvert
+2026-03-09T20:04:25.0170668Z   Using cached nbconvert-7.17.0-py3-none-any.whl.metadata (8.4 kB)
+2026-03-09T20:04:25.0322051Z Collecting nbformat
+2026-03-09T20:04:25.0336991Z   Using cached nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+2026-03-09T20:04:25.0600619Z Collecting ipykernel
+2026-03-09T20:04:25.0615618Z   Using cached ipykernel-7.2.0-py3-none-any.whl.metadata (4.5 kB)
+2026-03-09T20:04:25.1020706Z Collecting notebook (from jupyter)
+2026-03-09T20:04:25.1035490Z   Using cached notebook-7.5.4-py3-none-any.whl.metadata (10 kB)
+2026-03-09T20:04:25.1177277Z Collecting jupyter-console (from jupyter)
+2026-03-09T20:04:25.1191480Z   Using cached jupyter_console-6.6.3-py3-none-any.whl.metadata (5.8 kB)
+2026-03-09T20:04:25.1527916Z Collecting ipywidgets (from jupyter)
+2026-03-09T20:04:25.1542088Z   Using cached ipywidgets-8.1.8-py3-none-any.whl.metadata (2.4 kB)
+2026-03-09T20:04:25.2253563Z Collecting jupyterlab (from jupyter)
+2026-03-09T20:04:25.2268455Z   Using cached jupyterlab-4.5.5-py3-none-any.whl.metadata (16 kB)
+2026-03-09T20:04:25.2450326Z Collecting beautifulsoup4 (from nbconvert)
+2026-03-09T20:04:25.2463624Z   Using cached beautifulsoup4-4.14.3-py3-none-any.whl.metadata (3.8 kB)
+2026-03-09T20:04:25.2590077Z Collecting bleach!=5.0.0 (from bleach[css]!=5.0.0->nbconvert)
+2026-03-09T20:04:25.2603407Z   Using cached bleach-6.3.0-py3-none-any.whl.metadata (31 kB)
+2026-03-09T20:04:25.2710912Z Collecting defusedxml (from nbconvert)
+2026-03-09T20:04:25.2724309Z   Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+2026-03-09T20:04:25.2847791Z Collecting jinja2>=3.0 (from nbconvert)
+2026-03-09T20:04:25.2861299Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+2026-03-09T20:04:25.3005374Z Collecting jupyter-core>=4.7 (from nbconvert)
+2026-03-09T20:04:25.3019033Z   Using cached jupyter_core-5.9.1-py3-none-any.whl.metadata (1.5 kB)
+2026-03-09T20:04:25.3105756Z Collecting jupyterlab-pygments (from nbconvert)
+2026-03-09T20:04:25.3119485Z   Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+2026-03-09T20:04:25.3564526Z Collecting markupsafe>=2.0 (from nbconvert)
+2026-03-09T20:04:25.3578813Z   Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+2026-03-09T20:04:25.3705132Z Collecting mistune<4,>=2.0.3 (from nbconvert)
+2026-03-09T20:04:25.3718749Z   Using cached mistune-3.2.0-py3-none-any.whl.metadata (1.9 kB)
+2026-03-09T20:04:25.3843083Z Collecting nbclient>=0.5.0 (from nbconvert)
+2026-03-09T20:04:25.3856392Z   Using cached nbclient-0.10.4-py3-none-any.whl.metadata (8.3 kB)
+2026-03-09T20:04:25.4042262Z Collecting packaging (from nbconvert)
+2026-03-09T20:04:25.4055959Z   Using cached packaging-26.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-09T20:04:25.4135289Z Collecting pandocfilters>=1.4.1 (from nbconvert)
+2026-03-09T20:04:25.4149517Z   Using cached pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+2026-03-09T20:04:25.4374631Z Collecting pygments>=2.4.1 (from nbconvert)
+2026-03-09T20:04:25.4375486Z   Using cached pygments-2.19.2-py3-none-any.whl.metadata (2.5 kB)
+2026-03-09T20:04:25.4484424Z Collecting traitlets>=5.1 (from nbconvert)
+2026-03-09T20:04:25.4503049Z   Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+2026-03-09T20:04:25.4655564Z Collecting fastjsonschema>=2.15 (from nbformat)
+2026-03-09T20:04:25.4674025Z   Using cached fastjsonschema-2.21.2-py3-none-any.whl.metadata (2.3 kB)
+2026-03-09T20:04:25.4876374Z Collecting jsonschema>=2.6 (from nbformat)
+2026-03-09T20:04:25.4896886Z   Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+2026-03-09T20:04:25.5027908Z Collecting comm>=0.1.1 (from ipykernel)
+2026-03-09T20:04:25.5041111Z   Using cached comm-0.2.3-py3-none-any.whl.metadata (3.7 kB)
+2026-03-09T20:04:25.5807948Z Collecting debugpy>=1.6.5 (from ipykernel)
+2026-03-09T20:04:25.5823379Z   Using cached debugpy-1.8.20-cp311-cp311-manylinux_2_34_x86_64.whl.metadata (1.4 kB)
+2026-03-09T20:04:25.6213515Z Collecting ipython>=7.23.1 (from ipykernel)
+2026-03-09T20:04:25.6230686Z   Using cached ipython-9.10.0-py3-none-any.whl.metadata (4.6 kB)
+2026-03-09T20:04:25.6418972Z Collecting jupyter-client>=8.8.0 (from ipykernel)
+2026-03-09T20:04:25.6433520Z   Using cached jupyter_client-8.8.0-py3-none-any.whl.metadata (8.4 kB)
+2026-03-09T20:04:25.6574358Z Collecting matplotlib-inline>=0.1 (from ipykernel)
+2026-03-09T20:04:25.6587486Z   Using cached matplotlib_inline-0.2.1-py3-none-any.whl.metadata (2.3 kB)
+2026-03-09T20:04:25.6691554Z Collecting nest-asyncio>=1.4 (from ipykernel)
+2026-03-09T20:04:25.6704630Z   Using cached nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+2026-03-09T20:04:25.7328467Z Collecting psutil>=5.7 (from ipykernel)
+2026-03-09T20:04:25.7351501Z   Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+2026-03-09T20:04:25.9698927Z Collecting pyzmq>=25 (from ipykernel)
+2026-03-09T20:04:25.9714701Z   Using cached pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+2026-03-09T20:04:26.0001733Z Collecting tornado>=6.4.1 (from ipykernel)
+2026-03-09T20:04:26.0016898Z   Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.8 kB)
+2026-03-09T20:04:26.0108577Z Collecting webencodings (from bleach!=5.0.0->bleach[css]!=5.0.0->nbconvert)
+2026-03-09T20:04:26.0121852Z   Using cached webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+2026-03-09T20:04:26.0242090Z Collecting tinycss2<1.5,>=1.1.0 (from bleach[css]!=5.0.0->nbconvert)
+2026-03-09T20:04:26.0255187Z   Using cached tinycss2-1.4.0-py3-none-any.whl.metadata (3.0 kB)
+2026-03-09T20:04:26.0416590Z Collecting decorator>=4.3.2 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.0429962Z   Using cached decorator-5.2.1-py3-none-any.whl.metadata (3.9 kB)
+2026-03-09T20:04:26.0548529Z Collecting ipython-pygments-lexers>=1.0.0 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.0562011Z   Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl.metadata (1.1 kB)
+2026-03-09T20:04:26.0657894Z Collecting jedi>=0.18.1 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.0670663Z   Using cached jedi-0.19.2-py2.py3-none-any.whl.metadata (22 kB)
+2026-03-09T20:04:26.0801466Z Collecting pexpect>4.3 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.0814673Z   Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+2026-03-09T20:04:26.1012578Z Collecting prompt_toolkit<3.1.0,>=3.0.41 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.1025956Z   Using cached prompt_toolkit-3.0.52-py3-none-any.whl.metadata (6.4 kB)
+2026-03-09T20:04:26.1121134Z Collecting stack_data>=0.6.0 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.1134352Z   Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+2026-03-09T20:04:26.1279727Z Collecting typing_extensions>=4.6 (from ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.1293800Z   Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+2026-03-09T20:04:26.1412313Z Collecting wcwidth (from prompt_toolkit<3.1.0,>=3.0.41->ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.1425633Z   Using cached wcwidth-0.6.0-py3-none-any.whl.metadata (30 kB)
+2026-03-09T20:04:26.1546268Z Collecting parso<0.9.0,>=0.8.4 (from jedi>=0.18.1->ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.1559854Z   Using cached parso-0.8.6-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-09T20:04:26.1691166Z Collecting attrs>=22.2.0 (from jsonschema>=2.6->nbformat)
+2026-03-09T20:04:26.1704737Z   Using cached attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+2026-03-09T20:04:26.1822389Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=2.6->nbformat)
+2026-03-09T20:04:26.1836365Z   Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+2026-03-09T20:04:26.2003725Z Collecting referencing>=0.28.4 (from jsonschema>=2.6->nbformat)
+2026-03-09T20:04:26.2017505Z   Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+2026-03-09T20:04:26.4701717Z Collecting rpds-py>=0.25.0 (from jsonschema>=2.6->nbformat)
+2026-03-09T20:04:26.4716980Z   Using cached rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-03-09T20:04:26.4844453Z Collecting python-dateutil>=2.8.2 (from jupyter-client>=8.8.0->ipykernel)
+2026-03-09T20:04:26.4861970Z   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+2026-03-09T20:04:26.5028133Z Collecting platformdirs>=2.5 (from jupyter-core>=4.7->nbconvert)
+2026-03-09T20:04:26.5041720Z   Using cached platformdirs-4.9.4-py3-none-any.whl.metadata (4.7 kB)
+2026-03-09T20:04:26.5176387Z Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.5189223Z   Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+2026-03-09T20:04:26.5327009Z Collecting six>=1.5 (from python-dateutil>=2.8.2->jupyter-client>=8.8.0->ipykernel)
+2026-03-09T20:04:26.5344863Z   Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-03-09T20:04:26.5524347Z Collecting executing>=1.2.0 (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.5539828Z   Using cached executing-2.2.1-py2.py3-none-any.whl.metadata (8.9 kB)
+2026-03-09T20:04:26.5664188Z Collecting asttokens>=2.1.0 (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.5684458Z   Using cached asttokens-3.0.1-py3-none-any.whl.metadata (4.9 kB)
+2026-03-09T20:04:26.5799107Z Collecting pure-eval (from stack_data>=0.6.0->ipython>=7.23.1->ipykernel)
+2026-03-09T20:04:26.5819574Z   Using cached pure_eval-0.2.3-py3-none-any.whl.metadata (6.3 kB)
+2026-03-09T20:04:26.6036655Z Collecting soupsieve>=1.6.1 (from beautifulsoup4->nbconvert)
+2026-03-09T20:04:26.6054491Z   Using cached soupsieve-2.8.3-py3-none-any.whl.metadata (4.6 kB)
+2026-03-09T20:04:26.6439011Z Collecting widgetsnbextension~=4.0.14 (from ipywidgets->jupyter)
+2026-03-09T20:04:26.6455352Z   Using cached widgetsnbextension-4.0.15-py3-none-any.whl.metadata (1.6 kB)
+2026-03-09T20:04:26.6641363Z Collecting jupyterlab_widgets~=3.0.15 (from ipywidgets->jupyter)
+2026-03-09T20:04:26.6657616Z   Using cached jupyterlab_widgets-3.0.16-py3-none-any.whl.metadata (20 kB)
+2026-03-09T20:04:26.6939242Z Collecting async-lru>=1.0.0 (from jupyterlab->jupyter)
+2026-03-09T20:04:26.6955703Z   Using cached async_lru-2.2.0-py3-none-any.whl.metadata (7.2 kB)
+2026-03-09T20:04:26.7123106Z Collecting httpx<1,>=0.25.0 (from jupyterlab->jupyter)
+2026-03-09T20:04:26.7137048Z   Using cached httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+2026-03-09T20:04:26.7291187Z Collecting jupyter-lsp>=2.0.0 (from jupyterlab->jupyter)
+2026-03-09T20:04:26.7304640Z   Using cached jupyter_lsp-2.3.0-py3-none-any.whl.metadata (1.8 kB)
+2026-03-09T20:04:26.7567586Z Collecting jupyter-server<3,>=2.4.0 (from jupyterlab->jupyter)
+2026-03-09T20:04:26.7580744Z   Using cached jupyter_server-2.17.0-py3-none-any.whl.metadata (8.5 kB)
+2026-03-09T20:04:26.7782604Z Collecting jupyterlab-server<3,>=2.28.0 (from jupyterlab->jupyter)
+2026-03-09T20:04:26.7798792Z   Using cached jupyterlab_server-2.28.0-py3-none-any.whl.metadata (5.9 kB)
+2026-03-09T20:04:26.7914007Z Collecting notebook-shim>=0.2 (from jupyterlab->jupyter)
+2026-03-09T20:04:26.7927179Z   Using cached notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+2026-03-09T20:04:26.7948094Z Requirement already satisfied: setuptools>=41.1.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from jupyterlab->jupyter) (79.0.1)
+2026-03-09T20:04:26.8100750Z Collecting anyio (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.8114563Z   Using cached anyio-4.12.1-py3-none-any.whl.metadata (4.3 kB)
+2026-03-09T20:04:26.8278961Z Collecting certifi (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.8292682Z   Using cached certifi-2026.2.25-py3-none-any.whl.metadata (2.5 kB)
+2026-03-09T20:04:26.8427777Z Collecting httpcore==1.* (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.8441296Z   Using cached httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+2026-03-09T20:04:26.8634521Z Collecting idna (from httpx<1,>=0.25.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.8649035Z   Using cached idna-3.11-py3-none-any.whl.metadata (8.4 kB)
+2026-03-09T20:04:26.8770689Z Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.25.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.8783605Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+2026-03-09T20:04:26.8975782Z Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.8988478Z   Using cached argon2_cffi-25.1.0-py3-none-any.whl.metadata (4.1 kB)
+2026-03-09T20:04:26.9088291Z Collecting jupyter-events>=0.11.0 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9100976Z   Using cached jupyter_events-0.12.0-py3-none-any.whl.metadata (5.8 kB)
+2026-03-09T20:04:26.9199048Z Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9212256Z   Using cached jupyter_server_terminals-0.5.4-py3-none-any.whl.metadata (5.9 kB)
+2026-03-09T20:04:26.9369970Z Collecting overrides>=5.0 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9382975Z   Using cached overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+2026-03-09T20:04:26.9514005Z Collecting prometheus-client>=0.9 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9527634Z   Using cached prometheus_client-0.24.1-py3-none-any.whl.metadata (2.1 kB)
+2026-03-09T20:04:26.9661304Z Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9675684Z   Using cached send2trash-2.1.0-py3-none-any.whl.metadata (4.1 kB)
+2026-03-09T20:04:26.9791389Z Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9804981Z   Using cached terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+2026-03-09T20:04:26.9960593Z Collecting websocket-client>=1.7 (from jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:26.9973978Z   Using cached websocket_client-1.9.0-py3-none-any.whl.metadata (8.3 kB)
+2026-03-09T20:04:27.0098992Z Collecting babel>=2.10 (from jupyterlab-server<3,>=2.28.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.0112297Z   Using cached babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+2026-03-09T20:04:27.0249530Z Collecting json5>=0.9.0 (from jupyterlab-server<3,>=2.28.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.0262614Z   Using cached json5-0.13.0-py3-none-any.whl.metadata (36 kB)
+2026-03-09T20:04:27.0521493Z Collecting requests>=2.31 (from jupyterlab-server<3,>=2.28.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.0534147Z   Using cached requests-2.32.5-py3-none-any.whl.metadata (4.9 kB)
+2026-03-09T20:04:27.0703177Z Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.0716699Z   Using cached argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (7.4 kB)
+2026-03-09T20:04:27.0875096Z Collecting python-json-logger>=2.0.4 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.0887921Z   Using cached python_json_logger-4.0.0-py3-none-any.whl.metadata (4.0 kB)
+2026-03-09T20:04:27.1204043Z Collecting pyyaml>=5.3 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1217398Z   Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+2026-03-09T20:04:27.1300725Z Collecting rfc3339-validator (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1313294Z   Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl.metadata (1.5 kB)
+2026-03-09T20:04:27.1381852Z Collecting rfc3986-validator>=0.1.1 (from jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1394396Z   Using cached rfc3986_validator-0.1.1-py2.py3-none-any.whl.metadata (1.7 kB)
+2026-03-09T20:04:27.1644089Z Collecting fqdn (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1656285Z   Using cached fqdn-1.5.1-py3-none-any.whl.metadata (1.4 kB)
+2026-03-09T20:04:27.1730480Z Collecting isoduration (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1746296Z   Using cached isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+2026-03-09T20:04:27.1840618Z Collecting jsonpointer>1.13 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1853318Z   Using cached jsonpointer-3.0.0-py2.py3-none-any.whl.metadata (2.3 kB)
+2026-03-09T20:04:27.1936406Z Collecting rfc3987-syntax>=1.1.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.1951890Z   Using cached rfc3987_syntax-1.1.0-py3-none-any.whl.metadata (7.7 kB)
+2026-03-09T20:04:27.2038370Z Collecting uri-template (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.2051111Z   Using cached uri_template-1.3.0-py3-none-any.whl.metadata (8.8 kB)
+2026-03-09T20:04:27.2687016Z Collecting webcolors>=24.6.0 (from jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.2701475Z   Using cached webcolors-25.10.0-py3-none-any.whl.metadata (2.2 kB)
+2026-03-09T20:04:27.3651740Z Collecting charset_normalizer<4,>=2 (from requests>=2.31->jupyterlab-server<3,>=2.28.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.3666525Z   Using cached charset_normalizer-3.4.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (39 kB)
+2026-03-09T20:04:27.3883895Z Collecting urllib3<3,>=1.21.1 (from requests>=2.31->jupyterlab-server<3,>=2.28.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.3896874Z   Using cached urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+2026-03-09T20:04:27.4057708Z Collecting lark>=1.2.2 (from rfc3987-syntax>=1.1.0->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.4070919Z   Using cached lark-1.3.1-py3-none-any.whl.metadata (1.8 kB)
+2026-03-09T20:04:27.5052524Z Collecting cffi>=1.0.1 (from argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.5067739Z   Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+2026-03-09T20:04:27.5172881Z Collecting pycparser (from cffi>=1.0.1->argon2-cffi-bindings->argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.5185188Z   Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+2026-03-09T20:04:27.5319930Z Collecting arrow>=0.15.0 (from isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.5332810Z   Using cached arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+2026-03-09T20:04:27.5477399Z Collecting tzdata (from arrow>=0.15.0->isoduration->jsonschema[format-nongpl]>=4.18.0->jupyter-events>=0.11.0->jupyter-server<3,>=2.4.0->jupyterlab->jupyter)
+2026-03-09T20:04:27.5490023Z   Using cached tzdata-2025.3-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-03-09T20:04:27.5663712Z Using cached jupyter-1.1.1-py2.py3-none-any.whl (2.7 kB)
+2026-03-09T20:04:27.5675954Z Using cached nbconvert-7.17.0-py3-none-any.whl (261 kB)
+2026-03-09T20:04:27.5690390Z Using cached mistune-3.2.0-py3-none-any.whl (53 kB)
+2026-03-09T20:04:27.5704225Z Using cached nbformat-5.10.4-py3-none-any.whl (78 kB)
+2026-03-09T20:04:27.5717384Z Using cached ipykernel-7.2.0-py3-none-any.whl (118 kB)
+2026-03-09T20:04:27.5731437Z Using cached bleach-6.3.0-py3-none-any.whl (164 kB)
+2026-03-09T20:04:27.5745135Z Using cached tinycss2-1.4.0-py3-none-any.whl (26 kB)
+2026-03-09T20:04:27.5761553Z Using cached comm-0.2.3-py3-none-any.whl (7.3 kB)
+2026-03-09T20:04:27.5774568Z Using cached debugpy-1.8.20-cp311-cp311-manylinux_2_34_x86_64.whl (3.2 MB)
+2026-03-09T20:04:27.5809597Z Using cached fastjsonschema-2.21.2-py3-none-any.whl (24 kB)
+2026-03-09T20:04:27.5822905Z Using cached ipython-9.10.0-py3-none-any.whl (622 kB)
+2026-03-09T20:04:27.5840969Z Using cached prompt_toolkit-3.0.52-py3-none-any.whl (391 kB)
+2026-03-09T20:04:27.5856950Z Using cached decorator-5.2.1-py3-none-any.whl (9.2 kB)
+2026-03-09T20:04:27.5869752Z Using cached ipython_pygments_lexers-1.1.1-py3-none-any.whl (8.1 kB)
+2026-03-09T20:04:27.5883311Z Using cached jedi-0.19.2-py2.py3-none-any.whl (1.6 MB)
+2026-03-09T20:04:27.5906350Z Using cached parso-0.8.6-py2.py3-none-any.whl (106 kB)
+2026-03-09T20:04:27.5919766Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+2026-03-09T20:04:27.5933840Z Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+2026-03-09T20:04:27.5946942Z Using cached attrs-25.4.0-py3-none-any.whl (67 kB)
+2026-03-09T20:04:27.5960314Z Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+2026-03-09T20:04:27.5972960Z Using cached jupyter_client-8.8.0-py3-none-any.whl (107 kB)
+2026-03-09T20:04:27.5986514Z Using cached jupyter_core-5.9.1-py3-none-any.whl (29 kB)
+2026-03-09T20:04:27.6000073Z Using cached markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+2026-03-09T20:04:27.6012562Z Using cached matplotlib_inline-0.2.1-py3-none-any.whl (9.5 kB)
+2026-03-09T20:04:27.6026066Z Using cached nbclient-0.10.4-py3-none-any.whl (25 kB)
+2026-03-09T20:04:27.6037735Z Using cached nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+2026-03-09T20:04:27.6051110Z Using cached packaging-26.0-py3-none-any.whl (74 kB)
+2026-03-09T20:04:27.6064122Z Using cached pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+2026-03-09T20:04:27.6076866Z Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+2026-03-09T20:04:27.6089579Z Using cached platformdirs-4.9.4-py3-none-any.whl (21 kB)
+2026-03-09T20:04:27.6104391Z Using cached psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+2026-03-09T20:04:27.6116568Z Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+2026-03-09T20:04:27.6129470Z Using cached pygments-2.19.2-py3-none-any.whl (1.2 MB)
+2026-03-09T20:04:27.6151192Z Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+2026-03-09T20:04:27.6165512Z Using cached pyzmq-27.1.0-cp311-cp311-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (857 kB)
+2026-03-09T20:04:27.6184117Z Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+2026-03-09T20:04:27.6196945Z Using cached rpds_py-0.30.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (390 kB)
+2026-03-09T20:04:27.6211895Z Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+2026-03-09T20:04:27.6224708Z Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+2026-03-09T20:04:27.6237586Z Using cached asttokens-3.0.1-py3-none-any.whl (27 kB)
+2026-03-09T20:04:27.6250441Z Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
+2026-03-09T20:04:27.6264432Z Using cached tornado-6.5.4-cp39-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (445 kB)
+2026-03-09T20:04:27.6279699Z Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+2026-03-09T20:04:27.6292871Z Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+2026-03-09T20:04:27.6306198Z Using cached webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+2026-03-09T20:04:27.6318550Z Using cached beautifulsoup4-4.14.3-py3-none-any.whl (107 kB)
+2026-03-09T20:04:27.6331963Z Using cached soupsieve-2.8.3-py3-none-any.whl (37 kB)
+2026-03-09T20:04:27.6344753Z Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+2026-03-09T20:04:27.6357507Z Using cached ipywidgets-8.1.8-py3-none-any.whl (139 kB)
+2026-03-09T20:04:27.6371090Z Using cached jupyterlab_widgets-3.0.16-py3-none-any.whl (914 kB)
+2026-03-09T20:04:27.6390886Z Using cached widgetsnbextension-4.0.15-py3-none-any.whl (2.2 MB)
+2026-03-09T20:04:27.6419631Z Using cached jupyter_console-6.6.3-py3-none-any.whl (24 kB)
+2026-03-09T20:04:27.6432668Z Using cached jupyterlab-4.5.5-py3-none-any.whl (12.4 MB)
+2026-03-09T20:04:27.6531284Z Using cached httpx-0.28.1-py3-none-any.whl (73 kB)
+2026-03-09T20:04:27.6544387Z Using cached httpcore-1.0.9-py3-none-any.whl (78 kB)
+2026-03-09T20:04:27.6557800Z Using cached jupyter_server-2.17.0-py3-none-any.whl (388 kB)
+2026-03-09T20:04:27.6573269Z Using cached jupyterlab_server-2.28.0-py3-none-any.whl (59 kB)
+2026-03-09T20:04:27.6586034Z Using cached anyio-4.12.1-py3-none-any.whl (113 kB)
+2026-03-09T20:04:27.6599331Z Using cached argon2_cffi-25.1.0-py3-none-any.whl (14 kB)
+2026-03-09T20:04:27.6612227Z Using cached async_lru-2.2.0-py3-none-any.whl (7.9 kB)
+2026-03-09T20:04:27.6624996Z Using cached babel-2.18.0-py3-none-any.whl (10.2 MB)
+2026-03-09T20:04:27.6709646Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+2026-03-09T20:04:27.6723196Z Using cached idna-3.11-py3-none-any.whl (71 kB)
+2026-03-09T20:04:27.6736168Z Using cached json5-0.13.0-py3-none-any.whl (36 kB)
+2026-03-09T20:04:27.6749694Z Using cached jupyter_events-0.12.0-py3-none-any.whl (19 kB)
+2026-03-09T20:04:27.6762288Z Using cached jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+2026-03-09T20:04:27.6775220Z Using cached jupyter_lsp-2.3.0-py3-none-any.whl (76 kB)
+2026-03-09T20:04:27.6788383Z Using cached jupyter_server_terminals-0.5.4-py3-none-any.whl (13 kB)
+2026-03-09T20:04:27.6801092Z Using cached notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+2026-03-09T20:04:27.6814296Z Using cached overrides-7.7.0-py3-none-any.whl (17 kB)
+2026-03-09T20:04:27.6827330Z Using cached prometheus_client-0.24.1-py3-none-any.whl (64 kB)
+2026-03-09T20:04:27.6840570Z Using cached python_json_logger-4.0.0-py3-none-any.whl (15 kB)
+2026-03-09T20:04:27.6856817Z Using cached pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+2026-03-09T20:04:27.6873569Z Using cached requests-2.32.5-py3-none-any.whl (64 kB)
+2026-03-09T20:04:27.6888982Z Using cached charset_normalizer-3.4.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (193 kB)
+2026-03-09T20:04:27.6901642Z Using cached urllib3-2.6.3-py3-none-any.whl (131 kB)
+2026-03-09T20:04:27.6915287Z Using cached certifi-2026.2.25-py3-none-any.whl (153 kB)
+2026-03-09T20:04:27.6928936Z Using cached rfc3986_validator-0.1.1-py2.py3-none-any.whl (4.2 kB)
+2026-03-09T20:04:27.6942070Z Using cached rfc3987_syntax-1.1.0-py3-none-any.whl (8.0 kB)
+2026-03-09T20:04:27.6955159Z Using cached lark-1.3.1-py3-none-any.whl (113 kB)
+2026-03-09T20:04:27.6968331Z Using cached send2trash-2.1.0-py3-none-any.whl (17 kB)
+2026-03-09T20:04:27.6980726Z Using cached terminado-0.18.1-py3-none-any.whl (14 kB)
+2026-03-09T20:04:27.6994280Z Using cached webcolors-25.10.0-py3-none-any.whl (14 kB)
+2026-03-09T20:04:27.7006924Z Using cached websocket_client-1.9.0-py3-none-any.whl (82 kB)
+2026-03-09T20:04:27.7020707Z Using cached argon2_cffi_bindings-25.1.0-cp39-abi3-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (87 kB)
+2026-03-09T20:04:27.7034128Z Using cached cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB)
+2026-03-09T20:04:27.7047704Z Using cached fqdn-1.5.1-py3-none-any.whl (9.1 kB)
+2026-03-09T20:04:27.7060535Z Using cached isoduration-20.11.0-py3-none-any.whl (11 kB)
+2026-03-09T20:04:27.7073186Z Using cached arrow-1.4.0-py3-none-any.whl (68 kB)
+2026-03-09T20:04:27.7086536Z Using cached jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+2026-03-09T20:04:27.7099725Z Using cached notebook-7.5.4-py3-none-any.whl (14.6 MB)
+2026-03-09T20:04:27.7214794Z Using cached pure_eval-0.2.3-py3-none-any.whl (11 kB)
+2026-03-09T20:04:27.7227680Z Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+2026-03-09T20:04:27.7241246Z Using cached rfc3339_validator-0.1.4-py2.py3-none-any.whl (3.5 kB)
+2026-03-09T20:04:27.7253884Z Using cached tzdata-2025.3-py2.py3-none-any.whl (348 kB)
+2026-03-09T20:04:27.7268814Z Using cached uri_template-1.3.0-py3-none-any.whl (11 kB)
+2026-03-09T20:04:27.7281889Z Using cached wcwidth-0.6.0-py3-none-any.whl (94 kB)
+2026-03-09T20:04:27.9843337Z Installing collected packages: webencodings, pure-eval, ptyprocess, fastjsonschema, widgetsnbextension, websocket-client, webcolors, wcwidth, urllib3, uri-template, tzdata, typing_extensions, traitlets, tornado, tinycss2, soupsieve, six, send2trash, rpds-py, rfc3986-validator, pyzmq, pyyaml, python-json-logger, pygments, pycparser, psutil, prometheus-client, platformdirs, pexpect, parso, pandocfilters, packaging, overrides, nest-asyncio, mistune, markupsafe, lark, jupyterlab_widgets, jupyterlab-pygments, jsonpointer, json5, idna, h11, fqdn, executing, defusedxml, decorator, debugpy, comm, charset_normalizer, certifi, bleach, babel, attrs, async-lru, asttokens, terminado, stack_data, rfc3987-syntax, rfc3339-validator, requests, referencing, python-dateutil, prompt_toolkit, matplotlib-inline, jupyter-core, jinja2, jedi, ipython-pygments-lexers, httpcore, cffi, beautifulsoup4, anyio, jupyter-server-terminals, jupyter-client, jsonschema-specifications, ipython, httpx, arrow, argon2-cffi-bindings, jsonschema, isoduration, ipywidgets, ipykernel, argon2-cffi, nbformat, jupyter-console, nbclient, jupyter-events, nbconvert, jupyter-server, notebook-shim, jupyterlab-server, jupyter-lsp, jupyterlab, notebook, jupyter
+2026-03-09T20:04:34.3223296Z 
+2026-03-09T20:04:34.3270924Z Successfully installed anyio-4.12.1 argon2-cffi-25.1.0 argon2-cffi-bindings-25.1.0 arrow-1.4.0 asttokens-3.0.1 async-lru-2.2.0 attrs-25.4.0 babel-2.18.0 beautifulsoup4-4.14.3 bleach-6.3.0 certifi-2026.2.25 cffi-2.0.0 charset_normalizer-3.4.5 comm-0.2.3 debugpy-1.8.20 decorator-5.2.1 defusedxml-0.7.1 executing-2.2.1 fastjsonschema-2.21.2 fqdn-1.5.1 h11-0.16.0 httpcore-1.0.9 httpx-0.28.1 idna-3.11 ipykernel-7.2.0 ipython-9.10.0 ipython-pygments-lexers-1.1.1 ipywidgets-8.1.8 isoduration-20.11.0 jedi-0.19.2 jinja2-3.1.6 json5-0.13.0 jsonpointer-3.0.0 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 jupyter-1.1.1 jupyter-client-8.8.0 jupyter-console-6.6.3 jupyter-core-5.9.1 jupyter-events-0.12.0 jupyter-lsp-2.3.0 jupyter-server-2.17.0 jupyter-server-terminals-0.5.4 jupyterlab-4.5.5 jupyterlab-pygments-0.3.0 jupyterlab-server-2.28.0 jupyterlab_widgets-3.0.16 lark-1.3.1 markupsafe-3.0.3 matplotlib-inline-0.2.1 mistune-3.2.0 nbclient-0.10.4 nbconvert-7.17.0 nbformat-5.10.4 nest-asyncio-1.6.0 notebook-7.5.4 notebook-shim-0.2.4 overrides-7.7.0 packaging-26.0 pandocfilters-1.5.1 parso-0.8.6 pexpect-4.9.0 platformdirs-4.9.4 prometheus-client-0.24.1 prompt_toolkit-3.0.52 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.3 pycparser-3.0 pygments-2.19.2 python-dateutil-2.9.0.post0 python-json-logger-4.0.0 pyyaml-6.0.3 pyzmq-27.1.0 referencing-0.37.0 requests-2.32.5 rfc3339-validator-0.1.4 rfc3986-validator-0.1.1 rfc3987-syntax-1.1.0 rpds-py-0.30.0 send2trash-2.1.0 six-1.17.0 soupsieve-2.8.3 stack_data-0.6.3 terminado-0.18.1 tinycss2-1.4.0 tornado-6.5.4 traitlets-5.14.3 typing_extensions-4.15.0 tzdata-2025.3 uri-template-1.3.0 urllib3-2.6.3 wcwidth-0.6.0 webcolors-25.10.0 webencodings-0.5.1 websocket-client-1.9.0 widgetsnbextension-4.0.15
+2026-03-09T20:04:34.9383958Z Looking in indexes: https://download.pytorch.org/whl/cpu
+2026-03-09T20:04:35.2820263Z Collecting torch
+2026-03-09T20:04:35.2896102Z   Using cached https://download.pytorch.org/whl/cpu/torch-2.10.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (29 kB)
+2026-03-09T20:04:35.4318930Z Collecting torchvision
+2026-03-09T20:04:35.4385052Z   Using cached https://download.pytorch.org/whl/cpu/torchvision-0.25.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+2026-03-09T20:04:35.5026682Z Collecting filelock (from torch)
+2026-03-09T20:04:35.5042105Z   Using cached filelock-3.20.0-py3-none-any.whl.metadata (2.1 kB)
+2026-03-09T20:04:35.5058216Z Requirement already satisfied: typing-extensions>=4.10.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from torch) (4.15.0)
+2026-03-09T20:04:35.5797012Z Collecting sympy>=1.13.3 (from torch)
+2026-03-09T20:04:35.5817968Z   Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+2026-03-09T20:04:35.6711064Z Collecting networkx>=2.5.1 (from torch)
+2026-03-09T20:04:35.6725801Z   Using cached networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+2026-03-09T20:04:35.6777812Z Requirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from torch) (3.1.6)
+2026-03-09T20:04:35.7614187Z Collecting fsspec>=0.8.5 (from torch)
+2026-03-09T20:04:35.7628758Z   Using cached fsspec-2025.12.0-py3-none-any.whl.metadata (10 kB)
+2026-03-09T20:04:36.1364157Z Collecting numpy (from torchvision)
+2026-03-09T20:04:36.1379619Z   Using cached numpy-2.3.5-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-03-09T20:04:36.5771686Z Collecting pillow!=8.3.*,>=5.3.0 (from torchvision)
+2026-03-09T20:04:36.5788174Z   Using cached pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+2026-03-09T20:04:36.6902713Z Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch)
+2026-03-09T20:04:36.6919672Z   Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+2026-03-09T20:04:36.6972304Z Requirement already satisfied: MarkupSafe>=2.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from jinja2->torch) (3.0.3)
+2026-03-09T20:04:36.7091235Z Using cached https://download.pytorch.org/whl/cpu/torch-2.10.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl (188.8 MB)
+2026-03-09T20:04:36.8458447Z Using cached https://download.pytorch.org/whl/cpu/torchvision-0.25.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl (1.9 MB)
+2026-03-09T20:04:36.8485018Z Using cached fsspec-2025.12.0-py3-none-any.whl (201 kB)
+2026-03-09T20:04:36.8499001Z Using cached networkx-3.6.1-py3-none-any.whl (2.1 MB)
+2026-03-09T20:04:36.8526522Z Using cached pillow-12.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.0 MB)
+2026-03-09T20:04:36.8587027Z Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+2026-03-09T20:04:36.8643258Z Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+2026-03-09T20:04:36.8660419Z Using cached filelock-3.20.0-py3-none-any.whl (16 kB)
+2026-03-09T20:04:36.8673039Z Using cached numpy-2.3.5-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+2026-03-09T20:04:37.3151487Z Installing collected packages: mpmath, sympy, pillow, numpy, networkx, fsspec, filelock, torch, torchvision
+2026-03-09T20:04:56.1066930Z 
+2026-03-09T20:04:56.1105059Z Successfully installed filelock-3.20.0 fsspec-2025.12.0 mpmath-1.3.0 networkx-3.6.1 numpy-2.3.5 pillow-12.0.0 sympy-1.14.0 torch-2.10.0+cpu torchvision-0.25.0+cpu
+2026-03-09T20:04:56.7432675Z Collecting transformers
+2026-03-09T20:04:56.7452559Z   Using cached transformers-5.3.0-py3-none-any.whl.metadata (32 kB)
+2026-03-09T20:04:56.8601546Z Collecting datasets
+2026-03-09T20:04:56.9298850Z   Downloading datasets-4.7.0-py3-none-any.whl.metadata (19 kB)
+2026-03-09T20:04:57.7817094Z Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (2.3.5)
+2026-03-09T20:04:57.8804191Z Collecting pandas
+2026-03-09T20:04:57.8821023Z   Using cached pandas-3.0.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+2026-03-09T20:04:57.9779487Z Collecting scikit-learn
+2026-03-09T20:04:57.9797014Z   Using cached scikit_learn-1.8.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+2026-03-09T20:04:58.0986412Z Collecting matplotlib
+2026-03-09T20:04:58.1002428Z   Using cached matplotlib-3.10.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (52 kB)
+2026-03-09T20:04:58.1385821Z Collecting huggingface-hub<2.0,>=1.3.0 (from transformers)
+2026-03-09T20:04:58.1399827Z   Using cached huggingface_hub-1.6.0-py3-none-any.whl.metadata (13 kB)
+2026-03-09T20:04:58.1507282Z Requirement already satisfied: packaging>=20.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from transformers) (26.0)
+2026-03-09T20:04:58.1512004Z Requirement already satisfied: pyyaml>=5.1 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from transformers) (6.0.3)
+2026-03-09T20:04:58.4834715Z Collecting regex!=2019.12.17 (from transformers)
+2026-03-09T20:04:58.4851350Z   Using cached regex-2026.2.28-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+2026-03-09T20:04:58.6404903Z Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers)
+2026-03-09T20:04:58.6421716Z   Using cached tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+2026-03-09T20:04:58.6605508Z Collecting typer (from transformers)
+2026-03-09T20:04:58.6619708Z   Using cached typer-0.24.1-py3-none-any.whl.metadata (16 kB)
+2026-03-09T20:04:58.7673616Z Collecting safetensors>=0.4.3 (from transformers)
+2026-03-09T20:04:58.7689753Z   Using cached safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+2026-03-09T20:04:58.7977444Z Collecting tqdm>=4.27 (from transformers)
+2026-03-09T20:04:58.7991959Z   Using cached tqdm-4.67.3-py3-none-any.whl.metadata (57 kB)
+2026-03-09T20:04:58.8062858Z Requirement already satisfied: filelock>=3.10.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from huggingface-hub<2.0,>=1.3.0->transformers) (3.20.0)
+2026-03-09T20:04:58.8067397Z Requirement already satisfied: fsspec>=2023.5.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from huggingface-hub<2.0,>=1.3.0->transformers) (2025.12.0)
+2026-03-09T20:04:58.8458731Z Collecting hf-xet<2.0.0,>=1.3.2 (from huggingface-hub<2.0,>=1.3.0->transformers)
+2026-03-09T20:04:58.8474048Z   Using cached hf_xet-1.3.2-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+2026-03-09T20:04:58.8491599Z Requirement already satisfied: httpx<1,>=0.23.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from huggingface-hub<2.0,>=1.3.0->transformers) (0.28.1)
+2026-03-09T20:04:58.8538001Z Requirement already satisfied: typing-extensions>=4.1.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from huggingface-hub<2.0,>=1.3.0->transformers) (4.15.0)
+2026-03-09T20:04:58.8557603Z Requirement already satisfied: anyio in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.3.0->transformers) (4.12.1)
+2026-03-09T20:04:58.8562348Z Requirement already satisfied: certifi in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.3.0->transformers) (2026.2.25)
+2026-03-09T20:04:58.8567800Z Requirement already satisfied: httpcore==1.* in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.3.0->transformers) (1.0.9)
+2026-03-09T20:04:58.8571465Z Requirement already satisfied: idna in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.3.0->transformers) (3.11)
+2026-03-09T20:04:58.8590288Z Requirement already satisfied: h11>=0.16 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0,>=1.3.0->transformers) (0.16.0)
+2026-03-09T20:04:58.9325537Z Collecting pyarrow>=21.0.0 (from datasets)
+2026-03-09T20:04:58.9341171Z   Using cached pyarrow-23.0.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.1 kB)
+2026-03-09T20:04:58.9437721Z Collecting dill<0.4.1,>=0.3.0 (from datasets)
+2026-03-09T20:04:58.9451451Z   Using cached dill-0.4.0-py3-none-any.whl.metadata (10 kB)
+2026-03-09T20:04:58.9474116Z Requirement already satisfied: requests>=2.32.2 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from datasets) (2.32.5)
+2026-03-09T20:04:59.0137677Z Collecting xxhash (from datasets)
+2026-03-09T20:04:59.0154801Z   Using cached xxhash-3.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2026-03-09T20:04:59.0333588Z Collecting multiprocess<0.70.19 (from datasets)
+2026-03-09T20:04:59.0347408Z   Using cached multiprocess-0.70.18-py311-none-any.whl.metadata (7.5 kB)
+2026-03-09T20:04:59.5797756Z Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:04:59.5813933Z   Using cached aiohttp-3.13.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+2026-03-09T20:04:59.5891021Z Requirement already satisfied: python-dateutil>=2.8.2 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from pandas) (2.9.0.post0)
+2026-03-09T20:04:59.6952859Z Collecting scipy>=1.10.0 (from scikit-learn)
+2026-03-09T20:04:59.6968362Z   Using cached scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+2026-03-09T20:04:59.7241621Z Collecting joblib>=1.3.0 (from scikit-learn)
+2026-03-09T20:04:59.7257350Z   Using cached joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+2026-03-09T20:04:59.7343301Z Collecting threadpoolctl>=3.2.0 (from scikit-learn)
+2026-03-09T20:04:59.7358623Z   Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+2026-03-09T20:04:59.7916981Z Collecting contourpy>=1.0.1 (from matplotlib)
+2026-03-09T20:04:59.7939270Z   Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+2026-03-09T20:04:59.8030779Z Collecting cycler>=0.10 (from matplotlib)
+2026-03-09T20:04:59.8044072Z   Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+2026-03-09T20:04:59.9462061Z Collecting fonttools>=4.22.0 (from matplotlib)
+2026-03-09T20:04:59.9502454Z   Downloading fonttools-4.62.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (117 kB)
+2026-03-09T20:05:00.1115835Z Collecting kiwisolver>=1.3.1 (from matplotlib)
+2026-03-09T20:05:00.1155320Z   Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+2026-03-09T20:05:00.1200624Z Requirement already satisfied: pillow>=8 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from matplotlib) (12.0.0)
+2026-03-09T20:05:00.1374117Z Collecting pyparsing>=3 (from matplotlib)
+2026-03-09T20:05:00.1388283Z   Using cached pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+2026-03-09T20:05:00.1502849Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:05:00.1516605Z   Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+2026-03-09T20:05:00.1591377Z Collecting aiosignal>=1.4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:05:00.1604832Z   Using cached aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+2026-03-09T20:05:00.1622394Z Requirement already satisfied: attrs>=17.3.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets) (25.4.0)
+2026-03-09T20:05:00.2202744Z Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:05:00.2218401Z   Using cached frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+2026-03-09T20:05:00.4275613Z Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:05:00.4291535Z   Using cached multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+2026-03-09T20:05:00.4755428Z Collecting propcache>=0.2.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:05:00.4771613Z   Using cached propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+2026-03-09T20:05:00.7874428Z Collecting yarl<2.0,>=1.17.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<=2026.2.0,>=2023.1.0->datasets)
+2026-03-09T20:05:00.7891067Z   Using cached yarl-1.23.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+2026-03-09T20:05:00.8152888Z Requirement already satisfied: six>=1.5 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from python-dateutil>=2.8.2->pandas) (1.17.0)
+2026-03-09T20:05:00.8179930Z Requirement already satisfied: charset_normalizer<4,>=2 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from requests>=2.32.2->datasets) (3.4.5)
+2026-03-09T20:05:00.8186588Z Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from requests>=2.32.2->datasets) (2.6.3)
+2026-03-09T20:05:00.8418359Z Collecting click>=8.2.1 (from typer->transformers)
+2026-03-09T20:05:00.8432804Z   Using cached click-8.3.1-py3-none-any.whl.metadata (2.6 kB)
+2026-03-09T20:05:00.8531496Z Collecting shellingham>=1.3.0 (from typer->transformers)
+2026-03-09T20:05:00.8545454Z   Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-03-09T20:05:00.8813797Z Collecting rich>=12.3.0 (from typer->transformers)
+2026-03-09T20:05:00.8829464Z   Using cached rich-14.3.3-py3-none-any.whl.metadata (18 kB)
+2026-03-09T20:05:00.8918924Z Collecting annotated-doc>=0.0.2 (from typer->transformers)
+2026-03-09T20:05:00.8933317Z   Using cached annotated_doc-0.0.4-py3-none-any.whl.metadata (6.6 kB)
+2026-03-09T20:05:00.9063859Z Collecting markdown-it-py>=2.2.0 (from rich>=12.3.0->typer->transformers)
+2026-03-09T20:05:00.9077726Z   Using cached markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+2026-03-09T20:05:00.9116481Z Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages (from rich>=12.3.0->typer->transformers) (2.19.2)
+2026-03-09T20:05:00.9197234Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.3.0->typer->transformers)
+2026-03-09T20:05:00.9210822Z   Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+2026-03-09T20:05:00.9268521Z Using cached transformers-5.3.0-py3-none-any.whl (10.7 MB)
+2026-03-09T20:05:00.9359349Z Using cached huggingface_hub-1.6.0-py3-none-any.whl (612 kB)
+2026-03-09T20:05:00.9375640Z Using cached hf_xet-1.3.2-cp37-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+2026-03-09T20:05:00.9418531Z Using cached tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+2026-03-09T20:05:00.9476549Z Downloading datasets-4.7.0-py3-none-any.whl (527 kB)
+2026-03-09T20:05:00.9582836Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 527.5/527.5 kB 58.5 MB/s  0:00:00
+2026-03-09T20:05:00.9600863Z Using cached dill-0.4.0-py3-none-any.whl (119 kB)
+2026-03-09T20:05:00.9616667Z Using cached multiprocess-0.70.18-py311-none-any.whl (144 kB)
+2026-03-09T20:05:00.9629980Z Using cached pandas-3.0.1-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+2026-03-09T20:05:00.9738733Z Using cached scikit_learn-1.8.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+2026-03-09T20:05:00.9802176Z Using cached matplotlib-3.10.8-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.7 MB)
+2026-03-09T20:05:00.9878085Z Using cached aiohttp-3.13.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+2026-03-09T20:05:00.9903501Z Using cached multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+2026-03-09T20:05:00.9918076Z Using cached yarl-1.23.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (102 kB)
+2026-03-09T20:05:00.9931789Z Using cached aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+2026-03-09T20:05:00.9944660Z Using cached aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+2026-03-09T20:05:00.9957927Z Using cached contourpy-1.3.3-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (355 kB)
+2026-03-09T20:05:00.9972969Z Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+2026-03-09T20:05:01.0011679Z Downloading fonttools-4.62.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.1 MB)
+2026-03-09T20:05:01.0325786Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.1/5.1 MB 167.3 MB/s  0:00:00
+2026-03-09T20:05:01.0340414Z Using cached frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+2026-03-09T20:05:01.0354794Z Using cached joblib-1.5.3-py3-none-any.whl (309 kB)
+2026-03-09T20:05:01.0400016Z Downloading kiwisolver-1.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+2026-03-09T20:05:01.0496958Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 165.0 MB/s  0:00:00
+2026-03-09T20:05:01.0510580Z Using cached propcache-0.4.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (210 kB)
+2026-03-09T20:05:01.0525540Z Using cached pyarrow-23.0.1-cp311-cp311-manylinux_2_28_x86_64.whl (47.6 MB)
+2026-03-09T20:05:01.0868236Z Using cached pyparsing-3.3.2-py3-none-any.whl (122 kB)
+2026-03-09T20:05:01.0882037Z Using cached regex-2026.2.28-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+2026-03-09T20:05:01.0901070Z Using cached safetensors-0.7.0-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (507 kB)
+2026-03-09T20:05:01.0917473Z Using cached scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+2026-03-09T20:05:01.1174002Z Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+2026-03-09T20:05:01.1186286Z Using cached tqdm-4.67.3-py3-none-any.whl (78 kB)
+2026-03-09T20:05:01.1199710Z Using cached typer-0.24.1-py3-none-any.whl (56 kB)
+2026-03-09T20:05:01.1213217Z Using cached annotated_doc-0.0.4-py3-none-any.whl (5.3 kB)
+2026-03-09T20:05:01.1226129Z Using cached click-8.3.1-py3-none-any.whl (108 kB)
+2026-03-09T20:05:01.1240560Z Using cached rich-14.3.3-py3-none-any.whl (310 kB)
+2026-03-09T20:05:01.1256148Z Using cached markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+2026-03-09T20:05:01.1270830Z Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+2026-03-09T20:05:01.1284006Z Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+2026-03-09T20:05:01.1297720Z Using cached xxhash-3.6.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (193 kB)
+2026-03-09T20:05:01.4831771Z Installing collected packages: xxhash, tqdm, threadpoolctl, shellingham, scipy, safetensors, regex, pyparsing, pyarrow, propcache, multidict, mdurl, kiwisolver, joblib, hf-xet, frozenlist, fonttools, dill, cycler, contourpy, click, annotated-doc, aiohappyeyeballs, yarl, scikit-learn, pandas, multiprocess, matplotlib, markdown-it-py, aiosignal, rich, aiohttp, typer, huggingface-hub, tokenizers, datasets, transformers
+2026-03-09T20:05:21.4114566Z 
+2026-03-09T20:05:21.4170457Z Successfully installed aiohappyeyeballs-2.6.1 aiohttp-3.13.3 aiosignal-1.4.0 annotated-doc-0.0.4 click-8.3.1 contourpy-1.3.3 cycler-0.12.1 datasets-4.7.0 dill-0.4.0 fonttools-4.62.0 frozenlist-1.8.0 hf-xet-1.3.2 huggingface-hub-1.6.0 joblib-1.5.3 kiwisolver-1.5.0 markdown-it-py-4.0.0 matplotlib-3.10.8 mdurl-0.1.2 multidict-6.7.1 multiprocess-0.70.18 pandas-3.0.1 propcache-0.4.1 pyarrow-23.0.1 pyparsing-3.3.2 regex-2026.2.28 rich-14.3.3 safetensors-0.7.0 scikit-learn-1.8.0 scipy-1.17.1 shellingham-1.5.4 threadpoolctl-3.6.0 tokenizers-0.22.2 tqdm-4.67.3 transformers-5.3.0 typer-0.24.1 xxhash-3.6.0 yarl-1.23.0
+2026-03-09T20:05:22.0444574Z ##[group]Run python -c "
+2026-03-09T20:05:22.0444882Z [36;1mpython -c "[0m
+2026-03-09T20:05:22.0445096Z [36;1mimport os[0m
+2026-03-09T20:05:22.0445360Z [36;1mimport nbformat[0m
+2026-03-09T20:05:22.0445605Z [36;1mfrom pathlib import Path[0m
+2026-03-09T20:05:22.0445855Z [36;1m[0m
+2026-03-09T20:05:22.0446037Z [36;1merrors = [][0m
+2026-03-09T20:05:22.0446291Z [36;1mnotebooks = list(Path('.').rglob('*.ipynb'))[0m
+2026-03-09T20:05:22.0446639Z [36;1mprint(f'Found {len(notebooks)} notebooks')[0m
+2026-03-09T20:05:22.0446925Z [36;1m[0m
+2026-03-09T20:05:22.0447189Z [36;1mfor nb_path in notebooks[:20]:  # Validate first 20 notebooks[0m
+2026-03-09T20:05:22.0447591Z [36;1m    if '.ipynb_checkpoints' in str(nb_path):[0m
+2026-03-09T20:05:22.0447883Z [36;1m        continue[0m
+2026-03-09T20:05:22.0448089Z [36;1m    try:[0m
+2026-03-09T20:05:22.0448296Z [36;1m        with open(nb_path) as f:[0m
+2026-03-09T20:05:22.0448630Z [36;1m            nb = nbformat.read(f, as_version=4)[0m
+2026-03-09T20:05:22.0448948Z [36;1m        print(f'✓ {nb_path}')[0m
+2026-03-09T20:05:22.0449228Z [36;1m    except Exception as e:[0m
+2026-03-09T20:05:22.0449511Z [36;1m        errors.append(f'{nb_path}: {e}')[0m
+2026-03-09T20:05:22.0449813Z [36;1m        print(f'✗ {nb_path}: {e}')[0m
+2026-03-09T20:05:22.0450065Z [36;1m[0m
+2026-03-09T20:05:22.0450484Z [36;1mif errors:[0m
+2026-03-09T20:05:22.0450839Z [36;1m    print(f'\n❌ {len(errors)} notebooks have structural errors')[0m
+2026-03-09T20:05:22.0451210Z [36;1m    for err in errors:[0m
+2026-03-09T20:05:22.0451462Z [36;1m        print(f'  - {err}')[0m
+2026-03-09T20:05:22.0451706Z [36;1m    exit(1)[0m
+2026-03-09T20:05:22.0451894Z [36;1melse:[0m
+2026-03-09T20:05:22.0452180Z [36;1m    print(f'\n✅ All validated notebooks are structurally sound')[0m
+2026-03-09T20:05:22.0452517Z [36;1m"[0m
+2026-03-09T20:05:22.0504551Z shell: /usr/bin/bash -e {0}
+2026-03-09T20:05:22.0504798Z env:
+2026-03-09T20:05:22.0505070Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:22.0505528Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-03-09T20:05:22.0505960Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:22.0506516Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:22.0506885Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:22.0507265Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-03-09T20:05:22.0507584Z ##[endgroup]
+2026-03-09T20:05:23.3156642Z Found 937 notebooks
+2026-03-09T20:05:23.3157400Z ✓ 05-embeddings/00_START_HERE.ipynb
+2026-03-09T20:05:23.3157935Z ✓ 05-embeddings/openai_embeddings.ipynb
+2026-03-09T20:05:23.3158457Z ✓ 05-embeddings/vector_database_demo.ipynb
+2026-03-09T20:05:23.3158981Z ✓ 05-embeddings/semantic_search_intro.ipynb
+2026-03-09T20:05:23.3159515Z ✓ 05-embeddings/huggingface_embeddings.ipynb
+2026-03-09T20:05:23.3160405Z ✓ 05-embeddings/semantic_textual_similarity_intro.ipynb
+2026-03-09T20:05:23.3161085Z ✓ 05-embeddings/sentence_transformer_intro.ipynb
+2026-03-09T20:05:23.3161646Z ✓ 05-embeddings/sparse_encoder_intro.ipynb
+2026-03-09T20:05:23.3162154Z ✓ 05-embeddings/semantic_similarity.ipynb
+2026-03-09T20:05:23.3162692Z ✓ 05-embeddings/paraphrase_mining_intro.ipynb
+2026-03-09T20:05:23.3163220Z ✓ 05-embeddings/embeddings_intro.ipynb
+2026-03-09T20:05:23.3163717Z ✓ 18-low-code-ai-tools/00_START_HERE.ipynb
+2026-03-09T20:05:23.3164267Z ✓ 18-low-code-ai-tools/03_huggingface_spaces.ipynb
+2026-03-09T20:05:23.3164859Z ✓ 18-low-code-ai-tools/02_streamlit_apps.ipynb
+2026-03-09T20:05:23.3165455Z ✓ 18-low-code-ai-tools/05_end_to_end_project.ipynb
+2026-03-09T20:05:23.3166042Z ✓ 18-low-code-ai-tools/04_automl_platforms.ipynb
+2026-03-09T20:05:23.3166598Z ✓ 18-low-code-ai-tools/01_gradio_basics.ipynb
+2026-03-09T20:05:23.3167166Z ✓ 17-debugging-troubleshooting/00_START_HERE.ipynb
+2026-03-09T20:05:23.3167786Z ✓ 17-debugging-troubleshooting/02_data_issues.ipynb
+2026-03-09T20:05:23.3168908Z ✓ 17-debugging-troubleshooting/01_debugging_workflow.ipynb
+2026-03-09T20:05:23.3169316Z 
+2026-03-09T20:05:23.3169578Z ✅ All validated notebooks are structurally sound
+2026-03-09T20:05:23.3998835Z ##[group]Run # Test a few key notebooks to ensure they execute
+2026-03-09T20:05:23.3999298Z [36;1m# Test a few key notebooks to ensure they execute[0m
+2026-03-09T20:05:23.3999735Z [36;1mif [ -f "10-prompt-engineering/01_basic_prompting.ipynb" ]; then[0m
+2026-03-09T20:05:23.4000376Z [36;1m  echo "Testing prompt engineering notebook..."[0m
+2026-03-09T20:05:23.4000757Z [36;1m  # Skip execution for notebooks requiring API keys[0m
+2026-03-09T20:05:23.4001139Z [36;1m  echo "⚠️  Skipping execution (requires API key)"[0m
+2026-03-09T20:05:23.4001463Z [36;1mfi[0m
+2026-03-09T20:05:23.4001643Z [36;1m[0m
+2026-03-09T20:05:23.4001977Z [36;1mif [ -f "03-maths/foundational/01_linear_algebra_fundamentals.ipynb" ]; then[0m
+2026-03-09T20:05:23.4002452Z [36;1m  echo "Testing math fundamentals notebook..."[0m
+2026-03-09T20:05:23.4002814Z [36;1m  jupyter nbconvert --to notebook --execute \[0m
+2026-03-09T20:05:23.4003258Z [36;1m    03-maths/foundational/01_linear_algebra_fundamentals.ipynb \[0m
+2026-03-09T20:05:23.4003786Z [36;1m    --output temp_test.ipynb 2>&1 || echo "⚠️  Execution requires full environment"[0m
+2026-03-09T20:05:23.4004191Z [36;1mfi[0m
+2026-03-09T20:05:23.4054481Z shell: /usr/bin/bash -e {0}
+2026-03-09T20:05:23.4054737Z env:
+2026-03-09T20:05:23.4055007Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:23.4055460Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-03-09T20:05:23.4055911Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:23.4056318Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:23.4056726Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:23.4057137Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-03-09T20:05:23.4057474Z ##[endgroup]
+2026-03-09T20:05:23.4131241Z Testing math fundamentals notebook...
+2026-03-09T20:05:25.6656930Z [NbConvertApp] Converting notebook 03-maths/foundational/01_linear_algebra_fundamentals.ipynb to notebook
+2026-03-09T20:05:29.4529010Z Traceback (most recent call last):
+2026-03-09T20:05:29.4539748Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/bin/jupyter-nbconvert", line 6, in <module>
+2026-03-09T20:05:29.4541510Z     sys.exit(main())
+2026-03-09T20:05:29.4541876Z              ^^^^^^
+2026-03-09T20:05:29.4543780Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/jupyter_core/application.py", line 284, in launch_instance
+2026-03-09T20:05:29.4544900Z     super().launch_instance(argv=argv, **kwargs)
+2026-03-09T20:05:29.4546126Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/traitlets/config/application.py", line 1075, in launch_instance
+2026-03-09T20:05:29.4573966Z     app.start()
+2026-03-09T20:05:29.4575767Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 420, in start
+2026-03-09T20:05:29.4577077Z     self.convert_notebooks()
+2026-03-09T20:05:29.4578174Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 597, in convert_notebooks
+2026-03-09T20:05:29.4579293Z     self.convert_single_notebook(notebook_filename)
+2026-03-09T20:05:29.4580655Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 563, in convert_single_notebook
+2026-03-09T20:05:29.4581354Z     output, resources = self.export_single_notebook(
+2026-03-09T20:05:29.4581670Z                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4582316Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/nbconvertapp.py", line 487, in export_single_notebook
+2026-03-09T20:05:29.4583033Z     output, resources = self.exporter.from_filename(
+2026-03-09T20:05:29.4583331Z                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4584633Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 201, in from_filename
+2026-03-09T20:05:29.4585783Z     return self.from_file(f, resources=resources, **kw)
+2026-03-09T20:05:29.4586133Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4586821Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 220, in from_file
+2026-03-09T20:05:29.4587458Z     return self.from_notebook_node(
+2026-03-09T20:05:29.4587713Z            ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4588718Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/exporters/notebook.py", line 36, in from_notebook_node
+2026-03-09T20:05:29.4589454Z     nb_copy, resources = super().from_notebook_node(nb, resources, **kw)
+2026-03-09T20:05:29.4589839Z                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4590982Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 154, in from_notebook_node
+2026-03-09T20:05:29.4591741Z     nb_copy, resources = self._preprocess(nb_copy, resources)
+2026-03-09T20:05:29.4592098Z                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4592767Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/exporters/exporter.py", line 353, in _preprocess
+2026-03-09T20:05:29.4593390Z     nbc, resc = preprocessor(nbc, resc)
+2026-03-09T20:05:29.4594125Z                 ^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4594772Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/preprocessors/base.py", line 48, in __call__
+2026-03-09T20:05:29.4596089Z     return self.preprocess(nb, resources)
+2026-03-09T20:05:29.4596370Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4597019Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 103, in preprocess
+2026-03-09T20:05:29.4597681Z     self.preprocess_cell(cell, resources, index)
+2026-03-09T20:05:29.4598915Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbconvert/preprocessors/execute.py", line 124, in preprocess_cell
+2026-03-09T20:05:29.4599646Z     cell = self.execute_cell(cell, index, store_history=True)
+2026-03-09T20:05:29.4599991Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4600860Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+2026-03-09T20:05:29.4601442Z     return loop.run_until_complete(inner)
+2026-03-09T20:05:29.4601698Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4602216Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+2026-03-09T20:05:29.4764750Z     return future.result()
+2026-03-09T20:05:29.4765330Z            ^^^^^^^^^^^^^^^
+2026-03-09T20:05:29.4766288Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+2026-03-09T20:05:29.4767761Z     await self._check_raise_for_error(cell, cell_index, exec_reply)
+2026-03-09T20:05:29.4769459Z   File "/opt/hostedtoolcache/Python/3.11.14/x64/lib/python3.11/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+2026-03-09T20:05:29.4772015Z     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+2026-03-09T20:05:29.4773328Z nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+2026-03-09T20:05:29.4774519Z ------------------
+2026-03-09T20:05:29.4775085Z # Import required libraries
+2026-03-09T20:05:29.4775413Z import numpy as np
+2026-03-09T20:05:29.4775714Z import matplotlib.pyplot as plt
+2026-03-09T20:05:29.4776079Z from mpl_toolkits.mplot3d import Axes3D
+2026-03-09T20:05:29.4776453Z import seaborn as sns
+2026-03-09T20:05:29.4776634Z 
+2026-03-09T20:05:29.4776779Z # Set style for better visualizations
+2026-03-09T20:05:29.4777476Z plt.style.use('seaborn-v0_8-darkgrid')
+2026-03-09T20:05:29.4777864Z sns.set_palette("husl")
+2026-03-09T20:05:29.4778151Z ------------------
+2026-03-09T20:05:29.4778315Z 
+2026-03-09T20:05:29.4778320Z 
+2026-03-09T20:05:29.4778848Z [31m---------------------------------------------------------------------------[39m
+2026-03-09T20:05:29.4779590Z [31mModuleNotFoundError[39m                       Traceback (most recent call last)
+2026-03-09T20:05:29.4781127Z [36mCell[39m[36m [39m[32mIn[1][39m[32m, line 5[39m
+2026-03-09T20:05:29.4782001Z [32m      3[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mplt[39;00m
+2026-03-09T20:05:29.4783123Z [32m      4[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mmpl_toolkits[39;00m[34;01m.[39;00m[34;01mmplot3d[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m Axes3D
+2026-03-09T20:05:29.4784867Z [32m----> [39m[32m5[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mseaborn[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01msns[39;00m
+2026-03-09T20:05:29.4785658Z [32m      7[39m [38;5;66;03m# Set style for better visualizations[39;00m
+2026-03-09T20:05:29.4786200Z [32m      8[39m plt.style.use([33m'[39m[33mseaborn-v0_8-darkgrid[39m[33m'[39m)
+2026-03-09T20:05:29.4786503Z 
+2026-03-09T20:05:29.4786703Z [31mModuleNotFoundError[39m: No module named 'seaborn'
+2026-03-09T20:05:29.4786937Z 
+2026-03-09T20:05:29.7366384Z ⚠️  Execution requires full environment
+2026-03-09T20:05:29.7398156Z ##[group]Run python -c "
+2026-03-09T20:05:29.7398466Z [36;1mpython -c "[0m
+2026-03-09T20:05:29.7398682Z [36;1mimport os[0m
+2026-03-09T20:05:29.7398894Z [36;1mfrom pathlib import Path[0m
+2026-03-09T20:05:29.7399143Z [36;1m[0m
+2026-03-09T20:05:29.7399367Z [36;1mprint('Checking for common issues...')[0m
+2026-03-09T20:05:29.7399647Z [36;1m[0m
+2026-03-09T20:05:29.7399865Z [36;1m# Check for notebooks with large outputs[0m
+2026-03-09T20:05:29.7400503Z [36;1mlarge_nbs = [][0m
+2026-03-09T20:05:29.7400757Z [36;1mfor nb_path in Path('.').rglob('*.ipynb'):[0m
+2026-03-09T20:05:29.7401087Z [36;1m    if '.ipynb_checkpoints' in str(nb_path):[0m
+2026-03-09T20:05:29.7401371Z [36;1m        continue[0m
+2026-03-09T20:05:29.7401636Z [36;1m    size_mb = nb_path.stat().st_size / 1024 / 1024[0m
+2026-03-09T20:05:29.7401939Z [36;1m    if size_mb > 10:[0m
+2026-03-09T20:05:29.7402256Z [36;1m        large_nbs.append((str(nb_path), f'{size_mb:.1f}MB'))[0m
+2026-03-09T20:05:29.7402606Z [36;1m[0m
+2026-03-09T20:05:29.7402786Z [36;1mif large_nbs:[0m
+2026-03-09T20:05:29.7403153Z [36;1m    print(f'\n⚠️  {len(large_nbs)} notebooks are large (>10MB):')[0m
+2026-03-09T20:05:29.7403553Z [36;1m    for path, size in large_nbs[:5]:[0m
+2026-03-09T20:05:29.7403852Z [36;1m        print(f'  - {path}: {size}')[0m
+2026-03-09T20:05:29.7404218Z [36;1m    print('  Consider clearing outputs before committing')[0m
+2026-03-09T20:05:29.7404547Z [36;1m[0m
+2026-03-09T20:05:29.7404744Z [36;1m# Check for absolute paths[0m
+2026-03-09T20:05:29.7405108Z [36;1mprint('\n✅ Validation complete')[0m
+2026-03-09T20:05:29.7405566Z [36;1m"[0m
+2026-03-09T20:05:29.7456045Z shell: /usr/bin/bash -e {0}
+2026-03-09T20:05:29.7456293Z env:
+2026-03-09T20:05:29.7456567Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.7457040Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-03-09T20:05:29.7457492Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.7457908Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.7458311Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.7458716Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-03-09T20:05:29.7459046Z ##[endgroup]
+2026-03-09T20:05:29.7913201Z Checking for common issues...
+2026-03-09T20:05:29.7913659Z 
+2026-03-09T20:05:29.7914369Z ✅ Validation complete
+2026-03-09T20:05:29.7999329Z ##[group]Run echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
+2026-03-09T20:05:29.8000045Z [36;1mecho "## Validation Summary" >> $GITHUB_STEP_SUMMARY[0m
+2026-03-09T20:05:29.8000703Z [36;1mecho "- Python version: 3.11" >> $GITHUB_STEP_SUMMARY[0m
+2026-03-09T20:05:29.8001135Z [36;1mecho "- Repository contains 732+ notebooks" >> $GITHUB_STEP_SUMMARY[0m
+2026-03-09T20:05:29.8001808Z [36;1mecho "- Basic structural validation: ✅" >> $GITHUB_STEP_SUMMARY[0m
+2026-03-09T20:05:29.8002874Z [36;1mecho "" >> $GITHUB_STEP_SUMMARY[0m
+2026-03-09T20:05:29.8003356Z [36;1mecho "Note: Full execution testing requires API keys and GPU resources." >> $GITHUB_STEP_SUMMARY[0m
+2026-03-09T20:05:29.8056142Z shell: /usr/bin/bash -e {0}
+2026-03-09T20:05:29.8056391Z env:
+2026-03-09T20:05:29.8056661Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.8057147Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib/pkgconfig
+2026-03-09T20:05:29.8057645Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.8058060Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.8058471Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.14/x64
+2026-03-09T20:05:29.8058896Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.14/x64/lib
+2026-03-09T20:05:29.8059246Z ##[endgroup]
+2026-03-09T20:05:29.8203351Z Post job cleanup.
+2026-03-09T20:05:29.9753792Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.11.14-pip-b14d97ec5b4334f2e6a9b0b89b0336a8cb926243eff28a34bb734efb508890de, not saving cache.
+2026-03-09T20:05:29.9904076Z Post job cleanup.
+2026-03-09T20:05:30.1037654Z [command]/usr/bin/git version
+2026-03-09T20:05:30.1079659Z git version 2.53.0
+2026-03-09T20:05:30.1125253Z Temporarily overriding HOME='/home/runner/work/_temp/e45ab116-fd63-4552-9a8f-fb936c8e3ea4' before making global git config changes
+2026-03-09T20:05:30.1126675Z Adding repository directory to the temporary git global config as a safe directory
+2026-03-09T20:05:30.1132340Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-03-09T20:05:30.1173771Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-03-09T20:05:30.1209979Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-03-09T20:05:30.1464169Z fatal: No url found for submodule path '02-data-science/1-numpy-examples/05-ml-applications/numpy-ml' in .gitmodules
+2026-03-09T20:05:30.1518186Z ##[warning]The process '/usr/bin/git' failed with exit code 128
+2026-03-09T20:05:30.1616419Z Cleaning up orphan processes
