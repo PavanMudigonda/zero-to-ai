@@ -30,7 +30,7 @@ jobs:
         pip install jupyter nbconvert nbformat ipykernel
         # Install core dependencies (subset for faster CI)
         pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-        pip install transformers datasets numpy pandas scikit-learn matplotlib
+        pip install transformers datasets numpy pandas scikit-learn matplotlib seaborn
         
     - name: Validate notebook structure
       run: |
