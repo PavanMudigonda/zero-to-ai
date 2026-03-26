@@ -42,15 +42,7 @@ By the end of this module:
 
 ### Cloud-Based (Managed)
 
-| Database | Best For | Pricing | Open Source? | Scalability |
-|----------|----------|---------|--------------|-------------|
-| **Pinecone** ⭐ | Production RAG, easy setup | Free tier: 1 index, paid from $70/mo | ❌ Proprietary | Excellent |
-| **MongoDB Atlas** ⭐ | Existing MongoDB users | Free tier: 512MB, paid from $57/mo | ✅ Core is OSS | Excellent |
-| **Google Vertex AI** ⭐ | Google Cloud ecosystem | Pay-as-you-go, ~$100+/mo | ❌ Proprietary | Excellent |
-| **Azure AI Search** ⭐ | Azure ecosystem | Free tier, paid from $75/mo | ❌ Proprietary | Excellent |
-| **AWS OpenSearch** ⭐ | AWS ecosystem | Pay-as-you-go, ~$100+/mo | ✅ Fork of ES | Excellent |
-| **Elasticsearch** ⭐ | Search + vectors | Elastic Cloud from $95/mo | ✅ Apache 2.0 | Excellent |
-| **Redis Cloud** | Caching + vectors | Free tier, paid from $5/mo | ✅ Open Source | Good |
+Note: removed paid databases. getting too many sales calls.
 
 ### Self-Hosted (Open Source)
 
@@ -70,60 +62,7 @@ By the end of this module:
 
 ## 🚀 Quick Start Examples
 
-### 1. Pinecone (Cloud)
-
-```python
-# Install: pip install pinecone-client openai
-
-import pinecone
-from openai import OpenAI
-
-# Initialize
-pinecone.init(api_key='your-api-key', environment='us-west1-gcp')
-client = OpenAI(api_key='your-openai-key')
-
-# Create index
-index_name = 'semantic-search'
-if index_name not in pinecone.list_indexes():
-    pinecone.create_index(
-        name=index_name,
-        dimension=1536,  # OpenAI embedding size
-        metric='cosine'
-    )
-
-index = pinecone.Index(index_name)
-
-# Generate and store embeddings
-texts = [
-    "Machine learning is a subset of AI",
-    "Deep learning uses neural networks",
-    "Natural language processing handles text"
-]
-
-for i, text in enumerate(texts):
-    # Get embedding from OpenAI
-    response = client.embeddings.create(
-        input=text,
-        model="text-embedding-ada-002"
-    )
-    embedding = response.data[0].embedding
-    
-    # Store in Pinecone
-    index.upsert(vectors=[(f"doc_{i}", embedding, {"text": text})])
-
-# Search
-query = "What is deep learning?"
-query_embedding = client.embeddings.create(
-    input=query,
-    model="text-embedding-ada-002"
-).data[0].embedding
-
-results = index.query(vector=query_embedding, top_k=3, include_metadata=True)
-for match in results.matches:
-    print(f"Score: {match.score:.4f} - {match.metadata['text']}")
-```
-
-### 2. Chroma (Local)
+### 1. Chroma (Local)
 
 ```python
 # Install: pip install chromadb
@@ -167,75 +106,8 @@ results = collection.query(
 print(results)
 ```
 
-### 3. MongoDB Atlas Vector Search
 
-```python
-# Install: pip install pymongo
-
-from pymongo import MongoClient
-from pymongo.operations import SearchIndexModel
-import os
-
-# Connect to MongoDB Atlas using environment variable
-# Set your connection string: export MONGODB_URI="mongodb+srv://username:password@cluster.mongodb.net/"
-client = MongoClient(os.getenv("MONGODB_URI"))
-db = client['vector_db']
-collection = db['documents']
-
-# Create vector search index (do this once via Atlas UI or API)
-# Index definition:
-# {
-#   "fields": [{
-#     "type": "vector",
-#     "path": "embedding",
-#     "numDimensions": 1536,
-#     "similarity": "cosine"
-#   }]
-# }
-
-# Insert documents with embeddings
-documents = [
-    {
-        "text": "Machine learning is a subset of AI",
-        "embedding": [0.1] * 1536,  # Your actual embedding
-        "category": "ML"
-    },
-    {
-        "text": "Deep learning uses neural networks",
-        "embedding": [0.2] * 1536,
-        "category": "DL"
-    }
-]
-collection.insert_many(documents)
-
-# Vector search using aggregation pipeline
-query_embedding = [0.15] * 1536
-
-results = collection.aggregate([
-    {
-        "$vectorSearch": {
-            "index": "vector_index",
-            "path": "embedding",
-            "queryVector": query_embedding,
-            "numCandidates": 100,
-            "limit": 3
-        }
-    },
-    {
-        "$project": {
-            "_id": 0,
-            "text": 1,
-            "category": 1,
-            "score": {"$meta": "vectorSearchScore"}
-        }
-    }
-])
-
-for doc in results:
-    print(f"Score: {doc['score']:.4f} - {doc['text']}")
-```
-
-### 4. Qdrant (Self-Hosted or Cloud)
+### 2. Qdrant (Self-Hosted or Cloud)
 
 ```python
 # Install: pip install qdrant-client
@@ -356,7 +228,7 @@ client.delete(
 )
 ```
 
-### 5. Weaviate (Self-Hosted or Cloud)
+### 3. Weaviate (Self-Hosted )
 
 ```python
 # Install: pip install weaviate-client
@@ -489,7 +361,7 @@ with client.batch.dynamic() as batch:
 client.close()
 ```
 
-### 6. Milvus (Self-Hosted or Zilliz Cloud)
+### 4. Milvus (Self-Hosted or Zilliz Cloud)
 
 ```python
 # Install: pip install pymilvus
@@ -648,7 +520,7 @@ utility.drop_collection(collection_name)
 connections.disconnect("default")
 ```
 
-### 7. FAISS (Research/Benchmarking)
+### 5. FAISS (Research/Benchmarking)
 
 ```python
 # Install: pip install faiss-cpu (or faiss-gpu)
@@ -675,295 +547,11 @@ for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
     print(f"  {i+1}. Index: {idx}, Distance: {dist:.4f}")
 ```
 
-### 8. Redis with Vector Similarity
-
-```python
-# Install: pip install redis
-
-import redis
-import numpy as np
-
-# Connect to Redis
-r = redis.Redis(host='localhost', port=6379, decode_responses=True)
-
-# Create index with vector field
-from redis.commands.search.field import VectorField, TextField
-from redis.commands.search.indexDefinition import IndexDefinition, IndexType
-
-schema = (
-    TextField("text"),
-    VectorField("embedding",
-        "FLAT", {
-            "TYPE": "FLOAT32",
-            "DIM": 1536,
-            "DISTANCE_METRIC": "COSINE"
-        }
-    )
-)
-
-r.ft("idx:documents").create_index(
-    schema,
-    definition=IndexDefinition(prefix=["doc:"], index_type=IndexType.HASH)
-)
-
-# Add documents
-embedding = np.array([0.1] * 1536, dtype=np.float32).tobytes()
-r.hset("doc:1", mapping={
-    "text": "Machine learning is a subset of AI",
-    "embedding": embedding
-})
-
-# Vector search (KNN)
-query_embedding = np.array([0.1] * 1536, dtype=np.float32).tobytes()
-results = r.ft("idx:documents").search(
-    f"*=>[KNN 3 @embedding $vec AS score]",
-    query_params={"vec": query_embedding}
-)
-
-for doc in results.docs:
-    print(f"Score: {doc.score} - {doc.text}")
-```
-
-### 9. Elasticsearch with Vector Search
-
-```python
-# Install: pip install elasticsearch
-
-from elasticsearch import Elasticsearch
-
-# Connect
-es = Elasticsearch(["http://localhost:9200"])
-
-# Create index with vector mapping
-index_name = "documents"
-es.indices.create(
-    index=index_name,
-    body={
-        "mappings": {
-            "properties": {
-                "text": {"type": "text"},
-                "embedding": {
-                    "type": "dense_vector",
-                    "dims": 1536,
-                    "index": True,
-                    "similarity": "cosine"
-                }
-            }
-        }
-    }
-)
-
-# Index document
-es.index(
-    index=index_name,
-    document={
-        "text": "Machine learning is a subset of AI",
-        "embedding": [0.1] * 1536
-    }
-)
-
-# Vector search
-query_embedding = [0.1] * 1536
-results = es.search(
-    index=index_name,
-    body={
-        "knn": {
-            "field": "embedding",
-            "query_vector": query_embedding,
-            "k": 3,
-            "num_candidates": 100
-        },
-        "_source": ["text"]
-    }
-)
-
-for hit in results["hits"]["hits"]:
-    print(f"Score: {hit['_score']:.4f} - {hit['_source']['text']}")
-```
-
-### 10. Google Vertex AI Vector Search
-
-```python
-# Install: pip install google-cloud-aiplatform
-
-from google.cloud import aiplatform
-from google.cloud.aiplatform import MatchingEngineIndex, MatchingEngineIndexEndpoint
-
-# Initialize
-aiplatform.init(project='your-project-id', location='us-central1')
-
-# Create index (one-time setup)
-index = MatchingEngineIndex.create_tree_ah_index(
-    display_name="semantic-search-index",
-    dimensions=1536,
-    approximate_neighbors_count=10,
-    distance_measure_type="COSINE_DISTANCE",
-)
-
-# Deploy index to endpoint
-endpoint = MatchingEngineIndexEndpoint.create(
-    display_name="semantic-search-endpoint",
-    public_endpoint_enabled=True
-)
-
-endpoint.deploy_index(
-    index=index,
-    deployed_index_id="deployed_index_id",
-    machine_type="n1-standard-2"
-)
-
-# Add vectors
-embeddings = [[0.1] * 1536, [0.2] * 1536]  # Your embeddings
-embedding_ids = ["doc_1", "doc_2"]
-
-index.upsert_datapoints(
-    datapoints=[
-        {"datapoint_id": id, "feature_vector": emb}
-        for id, emb in zip(embedding_ids, embeddings)
-    ]
-)
-
-# Query
-query_embedding = [0.15] * 1536
-response = endpoint.find_neighbors(
-    deployed_index_id="deployed_index_id",
-    queries=[query_embedding],
-    num_neighbors=3
-)
-
-for neighbor in response[0]:
-    print(f"ID: {neighbor.id}, Distance: {neighbor.distance}")
-```
-
-### 11. Azure AI Search (formerly Azure Cognitive Search)
-
-```python
-# Install: pip install azure-search-documents azure-identity
-
-from azure.search.documents import SearchClient
-from azure.search.documents.indexes import SearchIndexClient
-from azure.search.documents.indexes.models import (
-    SearchIndex,
-    SearchField,
-    SearchFieldDataType,
-    VectorSearch,
-    VectorSearchAlgorithmConfiguration,
-)
-from azure.core.credentials import AzureKeyCredential
-
-# Initialize
-endpoint = "https://your-service.search.windows.net"
-key = "your-admin-key"
-index_name = "semantic-search"
-
-credential = AzureKeyCredential(key)
-index_client = SearchIndexClient(endpoint, credential)
-
-# Create index with vector field
-index = SearchIndex(
-    name=index_name,
-    fields=[
-        SearchField(name="id", type=SearchFieldDataType.String, key=True),
-        SearchField(name="text", type=SearchFieldDataType.String, searchable=True),
-        SearchField(
-            name="embedding",
-            type=SearchFieldDataType.Collection(SearchFieldDataType.Single),
-            searchable=True,
-            vector_search_dimensions=1536,
-            vector_search_configuration="vector-config"
-        )
-    ],
-    vector_search=VectorSearch(
-        algorithm_configurations=[
-            VectorSearchAlgorithmConfiguration(
-                name="vector-config",
-                kind="hnsw",
-                hnsw_parameters={"metric": "cosine"}
-            )
-        ]
-    )
-)
-
-index_client.create_or_update_index(index)
-
-# Add documents
-search_client = SearchClient(endpoint, index_name, credential)
-
-documents = [
-    {
-        "id": "1",
-        "text": "Machine learning is a subset of AI",
-        "embedding": [0.1] * 1536
-    }
-]
-
-search_client.upload_documents(documents)
-
-# Vector search
-query_embedding = [0.1] * 1536
-
-results = search_client.search(
-    search_text=None,
-    vector=query_embedding,
-    top_k=3,
-    vector_fields="embedding"
-)
-
-for result in results:
-    print(f"Score: {result['@search.score']:.4f} - {result['text']}")
-```
-
 ---
 
 ## 🔍 Comparison Guide
 
 ### 🌟 World-Famous Products
-
-#### Proprietary (Paid/Freemium)
-
-**Pinecone** ⭐⭐⭐⭐⭐
-- **Status**: Proprietary, VC-backed
-- **Fame**: Most popular managed vector DB
-- **Used by**: Major AI companies, startups
-- **Pricing**: Free tier, then $70-400+/month
-- **Best for**: Production RAG, easy setup
-
-**MongoDB Atlas Vector Search** ⭐⭐⭐⭐⭐
-- **Status**: Core is open-source (SSPL), Atlas is managed
-- **Fame**: 35M+ downloads/month, Fortune 500 companies
-- **Used by**: Google, Adobe, Cisco, Toyota
-- **Pricing**: Free tier (512MB), then $57+/month
-- **Best for**: Existing MongoDB users, hybrid queries
-
-**AWS OpenSearch Serverless** ⭐⭐⭐⭐⭐
-- **Status**: Open-source fork of Elasticsearch
-- **Fame**: Part of AWS, massive enterprise adoption
-- **Used by**: Thousands of AWS customers
-- **Pricing**: Pay-as-you-go, ~$100+/month
-- **Best for**: AWS-native apps, full-text + vector search
-
-**Elasticsearch** ⭐⭐⭐⭐⭐
-- **Status**: Open source (Apache 2.0) + Elastic Cloud (paid)
-- **Fame**: 400M+ downloads, industry standard for search
-- **Used by**: Netflix, Uber, Microsoft, GitHub
-- **Pricing**: Self-hosted free, Elastic Cloud from $95/month
-- **Best for**: Full-text search + vector capabilities
-
-**Google Vertex AI Vector Search** ⭐⭐⭐⭐⭐
-- **Status**: Proprietary, Google Cloud Platform
-- **Fame**: Part of Google Cloud AI, enterprise-grade
-- **Used by**: Google Cloud customers, Fortune 500
-- **Pricing**: Pay-as-you-go, ~$100+/month
-- **Best for**: Google Cloud ecosystem, scalable vector search
-- **Features**: Matching Engine, billions of vectors, <100ms latency
-
-**Azure AI Search** ⭐⭐⭐⭐⭐
-- **Status**: Proprietary, Microsoft Azure
-- **Fame**: Part of Azure AI, used by Microsoft customers
-- **Used by**: Azure customers, Fortune 500
-- **Pricing**: Free tier, paid from $75/month
-- **Best for**: Azure ecosystem, hybrid search (vector + keyword + semantic)
-- **Features**: Built-in AI enrichment, 50+ languages
 
 #### Open Source (Free)
 
@@ -1314,13 +902,10 @@ pip install transformers torch
 - [Milvus Docs](https://milvus.io/docs)
 - [pgvector Docs](https://github.com/pgvector/pgvector)
 - [FAISS Wiki](https://github.com/facebookresearch/faiss/wiki)
-- [Redis Vector Search](https://redis.io/docs/stack/search/reference/vectors/)
-- [Elasticsearch Vector Search](https://www.elastic.co/guide/en/elasticsearch/reference/current/knn-search.html)
 
 ### Tutorials
 - [LangChain Vector Stores](https://python.langchain.com/docs/modules/data_connection/vectorstores/)
 - [OpenAI Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
-- [Pinecone Learning Center](https://www.pinecone.io/learn/)
 
 ---
 
@@ -1329,7 +914,6 @@ pip install transformers torch
 | Module | Time | Difficulty |
 |--------|------|------------|
 | Vector DB Basics | 2 hours | Beginner |
-| Pinecone Guide | 1.5 hours | Beginner |
 | Chroma Guide | 1 hour | Beginner |
 | Qdrant Guide | 1.5 hours | Intermediate |
 | Weaviate Guide | 1.5 hours | Intermediate |
