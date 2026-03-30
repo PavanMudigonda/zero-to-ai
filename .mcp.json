@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "zero-to-ai-rag": {
+      "command": "/Users/nagapavankumar.mudigonda/code/zero-to-ai/.venv/bin/python",
+      "args": ["/Users/nagapavankumar.mudigonda/code/zero-to-ai/scripts/rag_mcp_server.py"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}
