@@ -55,6 +55,7 @@ This comprehensive AI/ML curriculum has **27 progressive phases** covering every
 | **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
 | **Production** | Deployment, Monitoring, Optimization |
 | **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
+| **Hardware** 🆕 | AI Silicon Validation, Kernel Testing, Distributed Training, Datacenter |
 
 ### 🎓 Who Is This For?
 
@@ -191,6 +192,7 @@ zero-to-ai/
 ├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
 ├── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
 ├── 🔨 28-practical-data-science/ Interview prep & hands-on practice
+├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, Annapurna
 ├── ✅ checklist.md             Your complete learning roadmap
 ├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models

@@ -18,11 +18,19 @@ sentence-transformers>=3.3.0
 # API Clients
 openai>=1.58.0
 anthropic>=0.39.0
+cohere>=5.0.0
+litellm>=1.50.0
 
 # RAG & LLM Frameworks
 langchain>=0.3.0
 langchain-openai>=0.2.0
 langchain-community>=0.3.0
+langchain-core>=0.3.0
+llama-index>=0.12.0
+
+# AI Agents
+langgraph>=0.2.0
+mcp>=1.0.0
 
 # Vector Databases (lightweight)
 chromadb>=0.5.23
@@ -32,6 +40,7 @@ faiss-cpu>=1.9.0
 peft>=0.13.0
 accelerate>=1.2.0
 safetensors>=0.4.0
+evaluate>=0.4.0
 
 # MLOps
 mlflow>=2.17.0
@@ -41,9 +50,31 @@ pydantic>=2.10.0
 
 # NLP
 nltk>=3.9.0
+gensim>=4.3.0
+
+# Time Series
+prophet>=1.1.0
+pmdarima>=2.0.0
+
+# Model Interpretability
+shap>=0.46.0
+
+# Low-code UI
+gradio>=5.0.0
+streamlit>=1.40.0
+
+# Gradient Boosting
+xgboost>=2.1.0
+lightgbm>=4.5.0
+
+# Data Science extras
+imbalanced-learn>=0.12.0
+networkx>=3.4.0
+scikit-image>=0.24.0
 
 # Utilities
 python-dotenv>=1.0.0
 huggingface-hub>=0.27.0
 tqdm>=4.67.0
 requests>=2.32.0
+httpx>=0.27.0

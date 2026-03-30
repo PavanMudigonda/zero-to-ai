@@ -61,6 +61,9 @@ logs/
 # UV/uv
 uv.lock
 
+# Vector database
+.vectordb/
+
 # Misc
 .cache/
 .pytest_cache/
