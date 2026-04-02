@@ -18,13 +18,14 @@ sentencepiece>=0.2.0
 sentence-transformers>=3.3.0
 openai>=1.58.0
 anthropic>=0.40.0
+cohere>=5.0.0
 
 # Vector databases - Cloud
 chromadb>=0.5.23
 qdrant-client>=1.12.0
 weaviate-client>=4.9.3
 pymilvus>=2.4.9
-pinecone-client>=5.0.0
+pinecone>=5.0.0
 
 # Vector databases - Self-hosted/Traditional
 faiss-cpu>=1.9.0  # Use faiss-gpu for GPU support
@@ -39,21 +40,42 @@ google-cloud-aiplatform>=1.73.0
 azure-search-documents>=11.6.0
 azure-identity>=1.19.0
 opensearch-py>=2.7.0
+azureml-core>=1.56.0
 
 # Data science essentials
 numpy>=2.1.0
 pandas>=2.2.0
 scikit-learn>=1.6.0
 scipy>=1.14.0
+sympy>=1.13.0
+networkx>=3.4.0
 
 # Statistical analysis
 statsmodels>=0.14.0
 lifelines>=0.30.0
+pymc>=5.10.0
+arviz>=0.19.0
+pmdarima>=2.0.0
+
+# Time series forecasting
+prophet>=1.1.0
+
+# Gradient boosting
+xgboost>=2.1.0
+lightgbm>=4.5.0
+
+# Imbalanced data
+imbalanced-learn>=0.12.0
+
+# Model interpretability
+shap>=0.46.0
+lime>=0.2.0
 
 # Visualization
 matplotlib>=3.10.0
 seaborn>=0.13.0
 plotly>=5.24.0
+wordcloud>=1.9.0
 
 # Jupyter
 jupyter>=1.1.0
@@ -67,31 +89,92 @@ nbformat>=5.10.0
 langchain>=0.3.0
 langchain-openai>=0.2.0
 langchain-community>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-core>=0.3.0
+langchain-experimental>=0.3.0
+langchain-ollama>=0.3.0
 llama-index>=0.12.0
+
+# RAG extended tools
+# ragatouille>=0.0.8  # Voyager dependency has no Python 3.14 wheels; install in Python <=3.12 env
+rank-bm25>=0.2.2
+pypdf>=5.1.0
+PyMuPDF>=1.24.0
+pdf2image>=1.17.0
+colpali-engine>=0.3.0
+graphrag>=1.0.0
+
+# AI Agents
+langgraph>=0.2.0
+langgraph-supervisor>=0.0.1
+openai-agents>=0.1.0
+crewai>=0.80.0
+pyautogen>=0.4.0
+mcp>=1.0.0
+fastmcp>=0.1.0
+langmem>=0.0.6
 
 # Fine-tuning libraries
 peft>=0.13.0
-bitsandbytes>=0.45.0
+# bitsandbytes>=0.45.0  # Best support on Linux with CUDA; install separately when needed
 accelerate>=1.2.0
 trl>=0.12.0
 safetensors>=0.4.0
+evaluate>=0.4.0
+bert-score>=0.3.0
+# unsloth>=2024.8  # Install separately in a Linux/CUDA env with matching torch version
+# autoawq>=0.2.0  # CUDA-only quantization package; install separately on Linux/CUDA
 
 # Local LLMs
 ollama>=0.4.0
-vllm>=0.6.0  # For high-performance inference
+# vllm>=0.6.0  # High-performance inference, Linux only
+litellm>=1.50.0
+llama-cpp-python>=0.3.0
 
 # Multimodal AI
 diffusers>=0.32.0
 pillow>=11.0.0
 opencv-python>=4.10.0
 timm>=1.0.0  # PyTorch Image Models
+controlnet-aux>=0.0.9
+
+# Multimodal - Audio
+openai-whisper>=20240930
+faster-whisper>=1.0.0
+# TTS>=0.22.0  # Requires pandas<2 and extra system packages; install separately when needed
+gTTS>=2.5.0
+pydub>=0.25.0
 
 # NLP Tools
 spacy>=3.8.0
 nltk>=3.9.0
+# gensim>=4.3.0  # Fails on Python 3.14 due removed CPython internals; use Python <=3.12 env
 seqeval>=1.2.0  # Sequence labeling evaluation
 sacrebleu>=2.4.0  # BLEU score for translation
 rouge-score>=0.1.2  # ROUGE score for summarization
+detoxify>=0.5.0
+
+# Fairness and safety
+fairlearn>=0.11.0
+presidio-analyzer>=2.2.0
+presidio-anonymizer>=2.2.0
+faker>=30.0.0
+
+# AutoML
+flaml>=2.3.0
+# pycaret>=3.4.0  # Dependency constraints conflict with this default stack; use a separate env
+optuna>=4.1.0
+
+# Low-code UI frameworks
+gradio>=5.0.0
+streamlit>=1.40.0
+
+# Graph Neural Networks
+torch-geometric>=2.6.0
+# dgl>=2.4.0  # Install separately if you need the DGL-specific notebooks
+
+# Reinforcement Learning
+gymnasium>=1.0.0
 
 # MLOps - Experiment tracking
 mlflow>=2.17.0
@@ -103,9 +186,22 @@ uvicorn>=0.32.0
 pydantic>=2.10.0
 joblib>=1.4.0
 
-# MLOps - Monitoring
+# MLOps - Monitoring & drift detection
 prometheus-client>=0.21.0
 psutil>=6.1.0
+evidently>=0.4.0
+
+# MLOps - Data engineering
+pyspark>=3.5.0
+kafka-python>=2.0.0
+prefect>=3.1.0
+feast>=0.40.0
+duckdb>=1.1.0
+
+# Web / HTTP
+httpx>=0.27.0
+websockets>=13.0.0
+sse-starlette>=2.0.0
 
 # Utilities
 python-dotenv>=1.0.0
@@ -114,6 +210,9 @@ requests>=2.32.0
 huggingface-hub>=0.27.0
 click>=8.1.0
 pyyaml>=6.0.0
+tabulate>=0.9.0
+scikit-image>=0.24.0
+pandas-datareader>=0.10.0
 
 # AWS tools
 boto3>=1.35.0
@@ -130,3 +229,8 @@ mypy>=1.5.0
 # - faiss-gpu requires CUDA
 # - Some vector DBs require Docker for local development
 # - spacy requires language models: python -m spacy download en_core_web_sm
+# - flash-attn requires CUDA and is Linux-only
+# - apache-airflow is heavy; install separately if needed
+# - vllm, bitsandbytes: Linux-only (no macOS wheels)
+# - unsloth: may require specific torch/CUDA versions
+# - TTS: requires espeak-ng system package on Linux

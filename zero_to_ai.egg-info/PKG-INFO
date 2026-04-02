@@ -3,11 +3,12 @@ Name: zero-to-ai
 Version: 0.1.0
 Summary: Comprehensive AI/ML learning path from zero to production
 Author-email: mnpawan <mnpawan@gmail.com>
-Requires-Python: <3.14,>=3.11
+Requires-Python: <3.15,>=3.11
 Description-Content-Type: text/markdown
 License-File: LICENSE.md
 Requires-Dist: torch>=2.5.0
 Requires-Dist: torchvision>=0.20.0
+Requires-Dist: torchaudio>=2.5.0
 Requires-Dist: transformers>=4.47.0
 Requires-Dist: datasets>=3.2.0
 Requires-Dist: tiktoken>=0.8.0
@@ -15,11 +16,12 @@ Requires-Dist: tokenizers>=0.20.0
 Requires-Dist: sentencepiece>=0.2.0
 Requires-Dist: sentence-transformers>=3.3.0
 Requires-Dist: openai>=1.58.0
+Requires-Dist: cohere>=5.0.0
 Requires-Dist: chromadb>=0.5.23
 Requires-Dist: qdrant-client>=1.12.0
 Requires-Dist: weaviate-client>=4.9.3
 Requires-Dist: pymilvus>=2.4.9
-Requires-Dist: pinecone-client>=5.0.0
+Requires-Dist: pinecone>=5.0.0
 Requires-Dist: faiss-cpu>=1.9.0
 Requires-Dist: redis>=5.2.0
 Requires-Dist: elasticsearch>=8.16.0
@@ -30,33 +32,87 @@ Requires-Dist: numpy>=2.1.0
 Requires-Dist: pandas>=2.2.0
 Requires-Dist: scikit-learn>=1.6.0
 Requires-Dist: scipy>=1.14.0
+Requires-Dist: sympy>=1.13.0
+Requires-Dist: networkx>=3.4.0
+Requires-Dist: xgboost>=2.1.0
+Requires-Dist: lightgbm>=4.5.0
+Requires-Dist: imbalanced-learn>=0.12.0
+Requires-Dist: shap>=0.46.0
+Requires-Dist: lime>=0.2.0
 Requires-Dist: matplotlib>=3.10.0
 Requires-Dist: seaborn>=0.13.0
 Requires-Dist: plotly>=5.24.0
+Requires-Dist: wordcloud>=1.9.0
 Requires-Dist: jupyter>=1.1.0
+Requires-Dist: jupyterlab>=4.3.0
 Requires-Dist: ipykernel>=6.29.0
 Requires-Dist: ipywidgets>=8.1.0
+Requires-Dist: nbconvert>=7.16.0
+Requires-Dist: nbformat>=5.10.0
 Requires-Dist: langchain>=0.3.0
 Requires-Dist: langchain-openai>=0.2.0
+Requires-Dist: langchain-community>=0.3.0
+Requires-Dist: langchain-anthropic>=0.3.0
+Requires-Dist: langchain-core>=0.3.0
+Requires-Dist: langchain-experimental>=0.3.0
+Requires-Dist: langchain-ollama>=0.3.0
 Requires-Dist: llama-index>=0.12.0
 Requires-Dist: anthropic>=0.40.0
+Requires-Dist: rank-bm25>=0.2.2
+Requires-Dist: pypdf>=5.1.0
+Requires-Dist: pymupdf>=1.24.0
+Requires-Dist: pdf2image>=1.17.0
+Requires-Dist: colpali-engine>=0.3.0
+Requires-Dist: graphrag>=1.0.0
+Requires-Dist: langgraph>=0.2.0
+Requires-Dist: langgraph-supervisor>=0.0.1
+Requires-Dist: openai-agents>=0.1.0
+Requires-Dist: crewai>=0.80.0
+Requires-Dist: pyautogen>=0.4.0
+Requires-Dist: mcp>=1.0.0
+Requires-Dist: fastmcp>=0.1.0
+Requires-Dist: langmem>=0.0.6
 Requires-Dist: peft>=0.13.0
 Requires-Dist: accelerate>=1.2.0
 Requires-Dist: trl>=0.12.0
+Requires-Dist: safetensors>=0.4.0
+Requires-Dist: evaluate>=0.4.0
+Requires-Dist: bert-score>=0.3.0
 Requires-Dist: ollama>=0.4.0
+Requires-Dist: litellm>=1.50.0
+Requires-Dist: llama-cpp-python>=0.3.0
 Requires-Dist: diffusers>=0.32.0
 Requires-Dist: pillow>=11.0.0
 Requires-Dist: opencv-python>=4.10.0
 Requires-Dist: timm>=1.0.0
+Requires-Dist: controlnet-aux>=0.0.9
+Requires-Dist: openai-whisper>=20240930
+Requires-Dist: faster-whisper>=1.0.0
+Requires-Dist: gtts>=2.5.0
+Requires-Dist: pydub>=0.25.0
 Requires-Dist: spacy>=3.8.0
 Requires-Dist: nltk>=3.9.0
 Requires-Dist: seqeval>=1.2.0
 Requires-Dist: sacrebleu>=2.4.0
 Requires-Dist: rouge-score>=0.1.2
+Requires-Dist: detoxify>=0.5.0
+Requires-Dist: fairlearn>=0.11.0
+Requires-Dist: presidio-analyzer>=2.2.0
+Requires-Dist: presidio-anonymizer>=2.2.0
+Requires-Dist: faker>=30.0.0
+Requires-Dist: flaml>=2.3.0
+Requires-Dist: optuna>=4.1.0
+Requires-Dist: gradio>=5.0.0
+Requires-Dist: streamlit>=1.40.0
+Requires-Dist: prophet>=1.1.0
+Requires-Dist: pmdarima>=2.0.0
+Requires-Dist: torch-geometric>=2.6.0
+Requires-Dist: gymnasium>=1.0.0
 Requires-Dist: google-cloud-aiplatform>=1.73.0
 Requires-Dist: azure-search-documents>=11.6.0
 Requires-Dist: azure-identity>=1.19.0
 Requires-Dist: opensearch-py>=2.7.0
+Requires-Dist: azureml-core>=1.56.0
 Requires-Dist: fastapi>=0.115.0
 Requires-Dist: uvicorn>=0.32.0
 Requires-Dist: pydantic>=2.10.0
@@ -65,26 +121,47 @@ Requires-Dist: wandb>=0.18.0
 Requires-Dist: prometheus-client>=0.21.0
 Requires-Dist: psutil>=6.1.0
 Requires-Dist: joblib>=1.4.0
+Requires-Dist: evidently>=0.4.0
+Requires-Dist: pyspark>=3.5.0
+Requires-Dist: kafka-python>=2.0.0
+Requires-Dist: prefect>=3.1.0
+Requires-Dist: feast>=0.40.0
+Requires-Dist: duckdb>=1.1.0
 Requires-Dist: statsmodels>=0.14.0
 Requires-Dist: lifelines>=0.30.0
+Requires-Dist: pymc>=5.10.0
+Requires-Dist: arviz>=0.19.0
+Requires-Dist: httpx>=0.27.0
+Requires-Dist: websockets>=13.0.0
+Requires-Dist: sse-starlette>=2.0.0
 Requires-Dist: python-dotenv>=1.0.0
 Requires-Dist: tqdm>=4.67.0
 Requires-Dist: requests>=2.32.0
 Requires-Dist: huggingface-hub>=0.27.0
 Requires-Dist: click>=8.1.0
 Requires-Dist: pyyaml>=6.0.0
-Requires-Dist: boto3>=1.28.0
-Requires-Dist: awscli>=1.29.0
+Requires-Dist: tabulate>=0.9.0
+Requires-Dist: scikit-image>=0.24.0
+Requires-Dist: pandas-datareader>=0.10.0
+Requires-Dist: boto3>=1.35.0
+Requires-Dist: awscli>=1.35.0
+Requires-Dist: pytest>=7.4.0
+Requires-Dist: pytest-cov>=4.1.0
+Requires-Dist: black>=23.7.0
+Requires-Dist: flake8>=6.1.0
+Requires-Dist: mypy>=1.5.0
 Provides-Extra: gpu
 Requires-Dist: bitsandbytes>=0.45.0; sys_platform != "darwin" and extra == "gpu"
 Provides-Extra: dev
 Requires-Dist: pytest>=7.4.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.1.0; extra == "dev"
 Requires-Dist: black>=23.7.0; extra == "dev"
 Requires-Dist: flake8>=6.1.0; extra == "dev"
 Requires-Dist: mypy>=1.5.0; extra == "dev"
 Provides-Extra: all
 Requires-Dist: bitsandbytes>=0.45.0; sys_platform != "darwin" and extra == "all"
 Requires-Dist: pytest>=7.4.0; extra == "all"
+Requires-Dist: pytest-cov>=4.1.0; extra == "all"
 Requires-Dist: black>=23.7.0; extra == "all"
 Requires-Dist: flake8>=6.1.0; extra == "all"
 Requires-Dist: mypy>=1.5.0; extra == "all"
@@ -147,6 +224,7 @@ This comprehensive AI/ML curriculum has **27 progressive phases** covering every
 | **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
 | **Production** | Deployment, Monitoring, Optimization |
 | **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
+| **Hardware** 🆕 | AI Silicon Validation, Kernel Testing, Distributed Training, Datacenter |
 
 ### 🎓 Who Is This For?
 
@@ -278,11 +356,12 @@ zero-to-ai/
 ├── ❓ 21-quizzes/              Questions to test your knowledge
 ├── 🧪 22-references/           Resources, papers, external materials
 ├── 📖 23-glossary/             AI/ML terminology & concepts
-├── 🎓 23-advanced-mathematics/ 🆕 **16 notebooks**: PAC, Rademacher, NTK, VI, Bayesian NP
 ├── 🔬 24-advanced-deep-learning/ 🆕 **39 notebooks**: GANs, VAEs, NeRF, Diffusion, BNNs
 ├── 🎲 25-reinforcement-learning/ 🆕 **6 notebooks**: MDP, Q-Learning, Policy Gradients, Actor-Critic
 ├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
-└── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
+├── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
+├── 🔨 28-practical-data-science/ Interview prep & hands-on practice
+├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, Annapurna
 ├── ✅ checklist.md             Your complete learning roadmap
 ├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models
