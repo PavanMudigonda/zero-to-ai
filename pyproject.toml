@@ -6,91 +6,155 @@ authors = [
     {name = "mnpawan", email = "mnpawan@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.11,<3.14"
+requires-python = ">=3.11,<3.15"
 dependencies = [
     # Core ML/DL
     "torch>=2.5.0",
     "torchvision>=0.20.0",
+    "torchaudio>=2.5.0",
     "transformers>=4.47.0",
     "datasets>=3.2.0",
-    
     # Tokenization
     "tiktoken>=0.8.0",
     "tokenizers>=0.20.0",
     "sentencepiece>=0.2.0",
-    
     # Embeddings
     "sentence-transformers>=3.3.0",
     "openai>=1.58.0",
-    
+    "cohere>=5.0.0",
     # Vector Databases - Cloud
     "chromadb>=0.5.23",
     "qdrant-client>=1.12.0",
     "weaviate-client>=4.9.3",
     "pymilvus>=2.4.9",
     "pinecone>=5.0.0",  # formerly pinecone-client
-    
     # Vector Databases - Self-hosted
     "faiss-cpu>=1.9.0",
     "redis>=5.2.0",
     "elasticsearch>=8.16.0",
     "pymongo>=4.10.0",
-    
     # PostgreSQL with vector support
     "psycopg2-binary>=2.9.10",
     "pgvector>=0.3.6",
-    
     # Data Science
     "numpy>=2.1.0",
     "pandas>=2.2.0",
     "scikit-learn>=1.6.0",
     "scipy>=1.14.0",
-    
+    "sympy>=1.13.0",
+    "networkx>=3.4.0",
+    # Gradient Boosting
+    "xgboost>=2.1.0",
+    "lightgbm>=4.5.0",
+    # Imbalanced Data
+    "imbalanced-learn>=0.12.0",
+    # Model Interpretability
+    "shap>=0.46.0",
+    "lime>=0.2.0",
     # Visualization
     "matplotlib>=3.10.0",
     "seaborn>=0.13.0",
     "plotly>=5.24.0",
-    
+    "wordcloud>=1.9.0",
     # Jupyter
     "jupyter>=1.1.0",
+    "jupyterlab>=4.3.0",
     "ipykernel>=6.29.0",
     "ipywidgets>=8.1.0",
-    
+    "nbconvert>=7.16.0",
+    "nbformat>=5.10.0",
     # RAG and LLM Frameworks
     "langchain>=0.3.0",
     "langchain-openai>=0.2.0",
+    "langchain-community>=0.3.0",
+    "langchain-anthropic>=0.3.0",
+    "langchain-core>=0.3.0",
+    "langchain-experimental>=0.3.0",
+    "langchain-ollama>=0.3.0",
     "llama-index>=0.12.0",
     "anthropic>=0.40.0",
-    
+    # RAG Extended Tools
+    # ragatouille>=0.0.8: depends on voyager which has no Python 3.14 wheels (max cp312).
+    # Install in Python <=3.12 env: pip install ragatouille
+    "rank-bm25>=0.2.2",
+    "pypdf>=5.1.0",
+    "pymupdf>=1.24.0",
+    "pdf2image>=1.17.0",
+    "colpali-engine>=0.3.0",
+    "graphrag>=1.0.0",
+    # AI Agents
+    "langgraph>=0.2.0",
+    "langgraph-supervisor>=0.0.1",
+    "openai-agents>=0.1.0",
+    "crewai>=0.80.0",
+    "pyautogen>=0.4.0",
+    "mcp>=1.0.0",
+    "fastmcp>=0.1.0",
+    "langmem>=0.0.6",
     # Fine-tuning
     "peft>=0.13.0",
     "accelerate>=1.2.0",
     "trl>=0.12.0",
-    
+    "safetensors>=0.4.0",
+    "evaluate>=0.4.0",
+    "bert-score>=0.3.0",
+    # unsloth: install separately in a Linux/CUDA env with a matching torch/CUDA stack.
+    # autoawq: CUDA-only quantization, fails to build on macOS (requires torch at build time).
+    # Install on Linux/CUDA: pip install autoawq
     # Local LLMs
     "ollama>=0.4.0",
+    "litellm>=1.50.0",
+    "llama-cpp-python>=0.3.0",
     # vllm: Linux-only, no macOS wheels available
     # "vllm>=0.6.0",
-    
     # Multimodal
     "diffusers>=0.32.0",
     "pillow>=11.0.0",
     "opencv-python>=4.10.0",
     "timm>=1.0.0",
-    
+    "controlnet-aux>=0.0.9",
+    # Multimodal - Audio
+    "openai-whisper>=20240930",
+    "faster-whisper>=1.0.0",
+    # TTS (Coqui) requires pandas<2.0 which conflicts with pandas>=2.2.0 here.
+    # Install separately when needed: pip install TTS==0.22.0 "pandas>=1.4,<2.0"
+    "gtts>=2.5.0",
+    "pydub>=0.25.0",
     # NLP Tools
     "spacy>=3.8.0",
     "nltk>=3.9.0",
+    # gensim>=4.3.0: Cython extension uses removed CPython internal (ma_version_tag), fails on Python 3.14.
+    # Install in Python <=3.12 env: pip install gensim
     "seqeval>=1.2.0",
     "sacrebleu>=2.4.0",
     "rouge-score>=0.1.2",
-    
+    "detoxify>=0.5.0",
+    # Fairness & Safety
+    "fairlearn>=0.11.0",
+    "presidio-analyzer>=2.2.0",
+    "presidio-anonymizer>=2.2.0",
+    "faker>=30.0.0",
+    # AutoML & Optimization
+    "flaml>=2.3.0",
+    # pycaret requires matplotlib<3.8 and older deps — incompatible with this stack.
+    # Install in a separate env: pip install pycaret==3.3.2
+    "optuna>=4.1.0",
+    # Low-code UI
+    "gradio>=5.0.0",
+    "streamlit>=1.40.0",
+    # Time Series
+    "prophet>=1.1.0",
+    "pmdarima>=2.0.0",
+    # Graph Neural Networks
+    "torch-geometric>=2.6.0",
+    # Reinforcement Learning
+    "gymnasium>=1.0.0",
     # Cloud Platforms
     "google-cloud-aiplatform>=1.73.0",
     "azure-search-documents>=11.6.0",
     "azure-identity>=1.19.0",
     "opensearch-py>=2.7.0",
-    
+    "azureml-core>=1.56.0",
     # MLOps
     "fastapi>=0.115.0",
     "uvicorn>=0.32.0",
@@ -100,11 +164,22 @@ dependencies = [
     "prometheus-client>=0.21.0",
     "psutil>=6.1.0",
     "joblib>=1.4.0",
-    
+    "evidently>=0.4.0",
+    # Data Engineering
+    "pyspark>=3.5.0",
+    "kafka-python>=2.0.0",
+    "prefect>=3.1.0",
+    "feast>=0.40.0",
+    "duckdb>=1.1.0",
     # Statistical Analysis
     "statsmodels>=0.14.0",
     "lifelines>=0.30.0",
-    
+    "pymc>=5.10.0",
+    "arviz>=0.19.0",
+    # Web / HTTP
+    "httpx>=0.27.0",
+    "websockets>=13.0.0",
+    "sse-starlette>=2.0.0",
     # Utilities
     "python-dotenv>=1.0.0",
     "tqdm>=4.67.0",
@@ -112,10 +187,17 @@ dependencies = [
     "huggingface-hub>=0.27.0",
     "click>=8.1.0",
     "pyyaml>=6.0.0",
-    
+    "tabulate>=0.9.0",
+    "scikit-image>=0.24.0",
+    "pandas-datareader>=0.10.0",
     # AWS
-    "boto3>=1.28.0",
-    "awscli>=1.29.0",
+    "boto3>=1.35.0",
+    "awscli>=1.35.0",
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
 ]
 
 [project.optional-dependencies]
@@ -127,6 +209,7 @@ gpu = [
 # Development tools
 dev = [
     "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
     "black>=23.7.0",
     "flake8>=6.1.0",
     "mypy>=1.5.0",
@@ -136,6 +219,7 @@ dev = [
 all = [
     "bitsandbytes>=0.45.0; sys_platform != 'darwin'",
     "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
     "black>=23.7.0",
     "flake8>=6.1.0",
     "mypy>=1.5.0",
@@ -152,6 +236,7 @@ py-modules = []
 [dependency-groups]
 dev = [
     "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
     "black>=23.7.0",
     "flake8>=6.1.0",
     "mypy>=1.5.0",

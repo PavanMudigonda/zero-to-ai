@@ -2,7 +2,8 @@
 # Google Colab Requirements
 # Only packages NOT pre-installed in Colab (as of 2025)
 # Pre-installed in Colab: torch, torchvision, numpy, pandas, matplotlib,
-#   scipy, scikit-learn, PIL, requests, tqdm, ipywidgets, ipykernel
+#   scipy, scikit-learn, PIL, requests, tqdm, ipywidgets, ipykernel,
+#   seaborn, xgboost, sympy
 # ============================================================================
 
 # Transformers & NLP
@@ -18,11 +19,34 @@ sentence-transformers>=3.3.0
 # API Clients
 openai>=1.58.0
 anthropic>=0.39.0
+cohere>=5.0.0
+litellm>=1.50.0
 
 # RAG & LLM Frameworks
 langchain>=0.3.0
 langchain-openai>=0.2.0
 langchain-community>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-core>=0.3.0
+langchain-experimental>=0.3.0
+langchain-ollama>=0.3.0
+llama-index>=0.12.0
+
+# RAG Extended Tools
+ragatouille>=0.0.8
+rank-bm25>=0.2.2
+pypdf>=5.1.0
+PyMuPDF>=1.24.0
+colpali-engine>=0.3.0
+graphrag>=1.0.0
+
+# AI Agents
+langgraph>=0.2.0
+openai-agents>=0.1.0
+crewai>=0.80.0
+pyautogen>=0.4.0
+mcp>=1.0.0
+fastmcp>=0.1.0
 
 # Vector Databases
 chromadb>=0.5.23
@@ -35,19 +59,61 @@ accelerate>=1.2.0
 bitsandbytes>=0.45.0
 trl>=0.12.0
 safetensors>=0.4.0
+evaluate>=0.4.0
+bert-score>=0.3.0
+unsloth>=2024.8
+autoawq>=0.2.0
 
 # MLOps
 mlflow>=2.17.0
 wandb>=0.18.0
 fastapi>=0.115.0
 uvicorn>=0.32.0
+evidently>=0.4.0
 
 # NLP Evaluation
 seqeval>=1.2.0
 sacrebleu>=2.4.0
 rouge-score>=0.1.2
+detoxify>=0.5.0
+
+# Fairness & Safety
+fairlearn>=0.11.0
+presidio-analyzer>=2.2.0
+presidio-anonymizer>=2.2.0
+
+# AutoML
+flaml>=2.3.0
+optuna>=4.1.0
+
+# Low-code UI
+gradio>=5.0.0
+streamlit>=1.40.0
+
+# Time Series
+prophet>=1.1.0
+pmdarima>=2.0.0
+
+# Model Interpretability
+shap>=0.46.0
+lime>=0.2.0
+
+# Gradient Boosting (extras)
+lightgbm>=4.5.0
+
+# Multimodal Audio
+openai-whisper>=20240930
+gTTS>=2.5.0
+
+# Reinforcement Learning
+gymnasium>=1.0.0
 
 # Utilities
 python-dotenv>=1.0.0
 huggingface-hub>=0.27.0
 plotly>=5.24.0
+networkx>=3.4.0
+wordcloud>=1.9.0
+gensim>=4.3.0
+imbalanced-learn>=0.12.0
+httpx>=0.27.0
