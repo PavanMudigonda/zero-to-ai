@@ -1,8 +1,0 @@
-2026-04-03T15:21:58.9270000Z Evaluating test.if
-2026-04-03T15:21:58.9270000Z Evaluating: success()
-2026-04-03T15:21:58.9270000Z Result: true
-2026-04-03T15:21:58.9330000Z Requested labels: ubuntu-latest
-2026-04-03T15:21:58.9330000Z Job defined at: PavanMudigonda/abcd.guru/.github/workflows/deploy.yaml@refs/heads/main
-2026-04-03T15:21:58.9330000Z Waiting for a runner to pick up this job...
-2026-04-03T15:21:59.4980000Z Job is about to start running on the hosted runner: GitHub Actions 1000003425
-2026-04-03T15:21:59.4980000Z Job is waiting for a hosted runner to come online.
