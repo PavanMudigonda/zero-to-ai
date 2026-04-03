@@ -1,5 +1,5 @@
 #!/bin/bash
-# Copy phase READMEs into docs/curriculum/ for MkDocs build
+# Copy phase READMEs and notebooks into docs/curriculum/ for MkDocs build
 set -e
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -8,14 +8,30 @@ CURRICULUM_DIR="$REPO_ROOT/docs/curriculum"
 rm -rf "$CURRICULUM_DIR"
 mkdir -p "$CURRICULUM_DIR"
 
-count=0
+md_count=0
+nb_count=0
 
 copy_phase() {
   local src="$1" target="$2"
-  if [ -f "$REPO_ROOT/$src/README.md" ]; then
-    cp "$REPO_ROOT/$src/README.md" "$CURRICULUM_DIR/$target.md"
-    count=$((count + 1))
+  local src_dir="$REPO_ROOT/$src"
+  local target_dir="$CURRICULUM_DIR/$target"
+
+  if [ ! -d "$src_dir" ]; then return; fi
+
+  mkdir -p "$target_dir"
+
+  # Copy README
+  if [ -f "$src_dir/README.md" ]; then
+    cp "$src_dir/README.md" "$target_dir/index.md"
+    md_count=$((md_count + 1))
   fi
+
+  # Copy notebooks
+  for nb in "$src_dir"/*.ipynb; do
+    [ -f "$nb" ] || continue
+    cp "$nb" "$target_dir/"
+    nb_count=$((nb_count + 1))
+  done
 }
 
 copy_phase "00-course-setup"              "00-course-setup"
@@ -50,4 +66,4 @@ copy_phase "28-practical-data-science"    "28-practical-ds"
 copy_phase "29-ai-hardware-llm-validation" "29-ai-hardware"
 copy_phase "30-inference-optimization"    "30-inference-opt"
 
-echo "Copied $count phase READMEs to docs/curriculum/"
+echo "Copied $md_count READMEs and $nb_count notebooks to docs/curriculum/"
