@@ -61,7 +61,7 @@ LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications 
 
 **Key phases:** Embeddings, RAG, Prompt Engineering, Agents, MLOps
 
-[:octicons-arrow-right-24: View track](MASTER_STUDY_GUIDE.md#track-a-ai-engineer-4-6-months)
+[:octicons-arrow-right-24: View track](generated/MASTER_STUDY_GUIDE.md#track-a-ai-engineer-4-6-months)
 
 </div>
 
@@ -75,7 +75,7 @@ Full foundation plus advanced topics. Deep understanding of models, math, and in
 
 **Key phases:** Math, Neural Networks, Fine-tuning, MLOps, Evaluation
 
-[:octicons-arrow-right-24: View track](MASTER_STUDY_GUIDE.md#track-b-ml-engineer-8-10-months)
+[:octicons-arrow-right-24: View track](generated/MASTER_STUDY_GUIDE.md#track-b-ml-engineer-8-10-months)
 
 </div>
 
@@ -89,7 +89,7 @@ Statistics, experimentation, classical ML. Strong analytical foundation.
 
 **Key phases:** Statistics, Causal Inference, Time Series, Evaluation
 
-[:octicons-arrow-right-24: View track](MASTER_STUDY_GUIDE.md#track-c-data-scientist-6-8-months)
+[:octicons-arrow-right-24: View track](generated/MASTER_STUDY_GUIDE.md#track-c-data-scientist-6-8-months)
 
 </div>
 
@@ -177,7 +177,7 @@ Statistics, experimentation, classical ML. Strong analytical foundation.
 
 Month-by-month learning plans for all three tracks.
 
-[:octicons-arrow-right-24: Open guide](MASTER_STUDY_GUIDE.md)
+[:octicons-arrow-right-24: Open guide](generated/MASTER_STUDY_GUIDE.md)
 
 </div>
 
@@ -187,7 +187,7 @@ Month-by-month learning plans for all three tracks.
 
 15 core ML questions, coding problems, and system design walkthroughs.
 
-[:octicons-arrow-right-24: Start prepping](INTERVIEW_PREP.md)
+[:octicons-arrow-right-24: Start prepping](generated/INTERVIEW_PREP.md)
 
 </div>
 
@@ -197,7 +197,7 @@ Month-by-month learning plans for all three tracks.
 
 Side-by-side comparisons of LLMs, embedding models, and tools.
 
-[:octicons-arrow-right-24: Compare models](COMPARISON_MATRICES.md)
+[:octicons-arrow-right-24: Compare models](generated/COMPARISON_MATRICES.md)
 
 </div>
 
