@@ -1,46 +1,38 @@
-# Vector Databases for Embeddings
+# Phase 6: Vector Databases
 
-## Phase 3: Storing and Querying Embeddings
+This module turns embeddings into something operational. Once you can generate vectors, the next practical problem is storing them, filtering them, and retrieving them fast enough to support real systems.
 
-After learning **tokenization** (Phase 1) and **embeddings** (Phase 2), you're ready to store and efficiently query those embeddings using vector databases.
+## Actual Module Contents
 
----
+1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
+2. [01_vector_db_basics.ipynb](01_vector_db_basics.ipynb)
+3. [02_chroma_guide.ipynb](02_chroma_guide.ipynb)
+4. [03_qdrant_guide.ipynb](03_qdrant_guide.ipynb)
+5. [04_weaviate_guide.ipynb](04_weaviate_guide.ipynb)
+6. [05_milvus_guide.ipynb](05_milvus_guide.ipynb)
+7. [06_aurora_pgvector_guide.ipynb](06_aurora_pgvector_guide.ipynb)
 
-## 📚 What You'll Learn
+## What To Learn Here
 
-This module covers:
-- Why vector databases are needed
-- Popular vector database options
-- How to store embeddings
-- Semantic search and similarity queries
-- Production deployment patterns
-- Hybrid search (vectors + keywords)
+- Why ANN search exists
+- The difference between local prototype tooling and production vector infrastructure
+- When metadata filtering matters as much as vector similarity
+- How vector databases connect directly to RAG quality
 
----
+## Recommended Order
 
-## 🎯 Learning Path
+- Start with the basics notebook
+- Use Chroma first for local intuition
+- Compare Qdrant, Weaviate, Milvus, and pgvector-style workflows after that
+- Move to Phase 7 RAG once you understand indexing, retrieval, and filtering trade-offs
 
-### Prerequisites
+## Study Advice
 
-Before this module, you should understand:
-- ✅ **Tokenization** - How to convert text to tokens
-- ✅ **Embeddings** - How to convert tokens to dense vectors
-- 📍 **You are here** - Storing and querying embeddings
+- Learn one local-first stack deeply before comparing every database.
+- Focus on retrieval behavior, persistence, and filtering, not vendor feature lists.
+- Benchmark with your own document shapes if possible.
 
-### What You'll Build
-
-By the end of this module:
-- Store embeddings in vector databases
-- Perform semantic similarity search
-- Build RAG (Retrieval-Augmented Generation) systems
-- Deploy production vector search
-- Combine vector + keyword search
-
----
-
-## 🗄️ Vector Database Options
-
-### Cloud-Based (Managed)
+## Good Follow-On Projects
 
 Note: removed paid databases. getting too many sales calls.
 
@@ -961,6 +953,6 @@ After completing this module, you will:
 
 ---
 
-**Ready to store and search embeddings at scale!** 🚀
-
-Built with ❤️ for the AI/ML learning journey
+- A semantic document search service
+- A metadata-filtered retrieval API
+- A retrieval benchmark comparing two vector backends on the same corpus

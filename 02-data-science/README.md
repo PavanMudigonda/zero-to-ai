@@ -1,200 +1,53 @@
+# Phase 1: Data Science Foundations
 
-# 🐍 Python for Data Science & ML
+This folder is the practical base layer for the rest of the repo. If you are not yet comfortable with arrays, DataFrames, plots, train/test splits, and the `fit/predict/transform` workflow, later LLM and deep learning phases will feel harder than they need to.
 
-### Specialized Resources
+## What This Phase Covers
 
-**[Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/)** by Jake VanderPlas
+- NumPy for numerical thinking
+- pandas for messy real-world data
+- matplotlib for basic visualization
+- scikit-learn for classical ML workflows
+- broader data science examples for exploratory and applied practice
 
-- Free online book
-- NumPy, Pandas, Matplotlib, Scikit-Learn
-- Essential for ML practitioners
+## Folder Map
 
-**[Python for Data Analysis](https://wesmckinney.com/book/)** by Wes McKinney (Pandas creator)
+- `1-numpy-examples/`: array operations, broadcasting, indexing, exercises
+- `2-pandas-examples/`: cleaning, joins, grouping, time-series handling, projects
+- `3-data-science-examples/`: broader learning material and reference notebooks
+- `4-matplotlib/`: plotting fundamentals
+- `5-scikit-learn/`: a very large example library across major model families
 
-- Data wrangling with Pandas
-- Data cleaning and preparation
-- Time series analysis
+## Recommended First Pass
 
-**[Hands-On Machine Learning with Scikit-Learn, Keras & TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/)** by Aurélien Géron
+1. Work through `1-numpy-examples/`
+2. Move to `2-pandas-examples/`
+3. Use `4-matplotlib/` for core plotting habits
+4. In `5-scikit-learn/`, focus first on:
+   - `linear_model/`
+   - `model_selection/`
+   - `preprocessing/`
+   - `ensemble/`
+   - `cluster/`
+5. Use `3-data-science-examples/` as breadth and reinforcement, not as a strict sequential course
 
-- Practical ML with Python
-- Theory + implementation
-- Industry best practices
+## Study Advice
 
----
+- Do not try to complete every scikit-learn notebook on the first pass.
+- Prefer one full workflow over broad shallow browsing:
+  data loading -> cleaning -> feature work -> split -> train -> evaluate -> explain results.
+- Keep notes on leakage, validation mistakes, and metric choice. Those habits matter more than memorizing APIs.
 
-## 🛠️ Essential Python Libraries for ML
+## Suggested Projects
 
-### Must-Know Libraries
+- Iris or wine classification with proper validation
+- Housing-price regression with feature engineering
+- Customer segmentation with clustering and a short business write-up
 
-**Core Scientific Computing:**
+## What Comes Next
 
-- **NumPy** - Numerical computing, arrays, linear algebra
-- **Pandas** - Data manipulation and analysis
-- **Matplotlib** - Plotting and visualization
-- **Seaborn** - Statistical data visualization
+After this phase, move to:
 
-**Machine Learning:**
-
-- **Scikit-learn** - Classical ML algorithms
-- **TensorFlow** / **PyTorch** - Deep learning frameworks
-- **Keras** - High-level neural networks API
-
-**Additional Tools:**
-
-- **Jupyter** - Interactive notebooks
-- **SciPy** - Scientific computing
-- **Plotly** - Interactive visualizations
-
----
-
-## 🎯 Recommended Learning Path
-
-### Phase 1: Python Fundamentals (2-4 weeks)
-
-1. **Start with [Python Bro Code](https://github.com/PavanMudigonda/python-bro-code)**
-   - Work through all examples
-   - Complete exercises
-   - Build small projects
-
-2. **Supplement with video tutorials**
-   - Bro Code YouTube course
-   - Programming with Mosh
-
-3. **Practice daily**
-   - LeetCode Easy problems
-   - HackerRank Python challenges
-
----
-
-## 💡 Study Tips
-
-### Best Practices for Learning Python
-
-**1. Code every day** 🔥
-
-- Consistency beats intensity
-- Even 30 minutes daily makes a difference
-- Build the habit early
-
-**2. Build projects** 🚀
-
-- Apply what you learn immediately
-- Start small, gradually increase complexity
-- Portfolio pieces for job applications
-
-**3. Read others' code** 📖
-
-- Study open-source projects
-- Learn from experienced developers
-- Understand different approaches
-
-**4. Debug intentionally** 🐛
-
-- Don't fear errors - they teach you
-- Use debuggers (pdb, IDE debuggers)
-- Understand error messages
-
-**5. Join communities** 👥
-
-- r/learnpython on Reddit
-- Python Discord servers
-- Stack Overflow for questions
-
-### Common Pitfalls to Avoid
-
-❌ **Tutorial hell** - Don't just watch, code along!  
-❌ **Perfectionism** - Write working code first, optimize later  
-❌ **Skipping fundamentals** - Master basics before advanced topics  
-❌ **Not using version control** - Learn Git early  
-
----
-
-## 🔗 Additional Resources
-
-### Documentation & References
-
-- **[Python Official Documentation](https://docs.python.org/3/)**
-- **[PEP 8 Style Guide](https://pep8.org/)** - Python coding standards
-- **[Python Package Index (PyPI)](https://pypi.org/)** - Find packages
-
-### Community & Help
-
-- **[r/learnpython](https://www.reddit.com/r/learnpython/)** - Beginner-friendly subreddit
-- **[Python Discord](https://pythondiscord.com/)** - Active help community
-- **[Stack Overflow](https://stackoverflow.com/questions/tagged/python)** - Q&A platform
-
-### Blogs & Newsletters
-
-- **[Real Python Newsletter](https://realpython.com/newsletter/)**
-- **[Python Weekly](https://www.pythonweekly.com/)**
-- **[PyCoder's Weekly](https://pycoders.com/)**
-
----
-
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-# Check Python version (3.8+ recommended)
-python --version
-
-# Install virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-venv\Scripts\activate
-
-# Install essential packages
-pip install numpy pandas matplotlib seaborn scikit-learn jupyter
-```
-
-### Your First Python Program
-
-```python
-# hello_ml.py
-import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Create some data
-x = np.linspace(0, 10, 100)
-y = np.sin(x)
-
-# Plot it
-plt.figure(figsize=(10, 6))
-plt.plot(x, y, linewidth=2)
-plt.xlabel('x')
-plt.ylabel('sin(x)')
-plt.title('My First Python Plot for ML')
-plt.grid(True, alpha=0.3)
-plt.show()
-
-print("Welcome to Python for Machine Learning! 🚀")
-```
-
----
-
-## 📝 Next Steps
-
-After mastering Python fundamentals:
-
-1. **Move to Mathematics for ML** (`../2-maths/`)
-   - Linear algebra, calculus, probability
-   - Mathematical foundations
-
-2. **Study Tokenization** (`../3-token/`)
-   - Text processing fundamentals
-   - NLP foundations
-
-3. **Learn Embeddings** (`../4-embeddings/`)
-   - Vector representations
-   - Semantic understanding
-
-**Remember**: Python is a tool. Focus on understanding concepts, not just syntax. The goal is to use Python to implement ML algorithms and solve real problems!
-
-Happy coding! 🐍✨
+1. [03-maths/README.md](../03-maths/README.md)
+2. [04-token/](../04-token/)
+3. [05-embeddings/](../05-embeddings/)

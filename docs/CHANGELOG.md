@@ -27,8 +27,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 - Initial release of Zero to AI curriculum
-- 28 learning phases (00-course-setup through 28-practical-data-science)
-- 939 Jupyter notebooks across all phases
+- Numbered learning modules spanning setup, foundations, core AI, production topics, and advanced subjects
+- 900+ Jupyter notebooks across the repository
 - `MASTER_STUDY_GUIDE.md` with 3 learning tracks (AI Engineer, ML Engineer, Data Scientist)
 - `checklist.md` with comprehensive progress tracking (790+ items)
 - `COMPARISON_MATRICES.md` with decision guides for LLMs, vector DBs, embeddings, fine-tuning, deployment
