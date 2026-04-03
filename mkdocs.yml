@@ -97,7 +97,7 @@ extra_css:
 nav:
   - Home: index.md
   - Getting Started:
-      - Course Setup: curriculum/00-course-setup/index.md
+      - Course Setup: curriculum/00-course-setup/README.md
       - Installation: setup.md
       - Checklist: checklist.md
   - Learning Tracks:
@@ -106,44 +106,44 @@ nav:
       - Interview Prep: INTERVIEW_PREP.md
   - Curriculum:
       - Foundations:
-          - "Phase 0: Course Setup": curriculum/00-course-setup/index.md
-          - "Phase 1: Python": curriculum/01-python/index.md
-          - "Phase 2: Data Science": curriculum/02-data-science/index.md
-          - "Phase 3: Mathematics": curriculum/03-maths/index.md
+          - "Phase 0: Course Setup": curriculum/00-course-setup/README.md
+          - "Phase 1: Python": curriculum/01-python/README.md
+          - "Phase 2: Data Science": curriculum/02-data-science/README.md
+          - "Phase 3: Mathematics": curriculum/03-maths/README.md
       - Core AI:
-          - "Phase 4: Tokenization": curriculum/04-token/index.md
-          - "Phase 5: Embeddings": curriculum/05-embeddings/index.md
-          - "Phase 6: Neural Networks": curriculum/06-neural-networks/index.md
+          - "Phase 4: Tokenization": curriculum/04-token/README.md
+          - "Phase 5: Embeddings": curriculum/05-embeddings/README.md
+          - "Phase 6: Neural Networks": curriculum/06-neural-networks/README.md
       - Applied AI:
-          - "Phase 7: Vector Databases": curriculum/07-vector-databases/index.md
-          - "Phase 8: RAG Systems": curriculum/08-rag/index.md
-          - "Phase 9: MLOps": curriculum/09-mlops/index.md
-          - "Phase 10: Specializations": curriculum/10-specializations/index.md
+          - "Phase 7: Vector Databases": curriculum/07-vector-databases/README.md
+          - "Phase 8: RAG Systems": curriculum/08-rag/README.md
+          - "Phase 9: MLOps": curriculum/09-mlops/README.md
+          - "Phase 10: Specializations": curriculum/10-specializations/README.md
       - Advanced:
-          - "Phase 11: Prompt Engineering": curriculum/11-prompt-engineering/index.md
-          - "Phase 12: LLM Fine-tuning": curriculum/12-llm-finetuning/index.md
-          - "Phase 13: Multimodal AI": curriculum/13-multimodal/index.md
-          - "Phase 14: Local LLMs": curriculum/14-local-llms/index.md
-          - "Phase 15: AI Agents": curriculum/15-ai-agents/index.md
+          - "Phase 11: Prompt Engineering": curriculum/11-prompt-engineering/README.md
+          - "Phase 12: LLM Fine-tuning": curriculum/12-llm-finetuning/README.md
+          - "Phase 13: Multimodal AI": curriculum/13-multimodal/README.md
+          - "Phase 14: Local LLMs": curriculum/14-local-llms/README.md
+          - "Phase 15: AI Agents": curriculum/15-ai-agents/README.md
       - Supplementary:
-          - "Phase 16: Model Evaluation": curriculum/16-model-evaluation/index.md
-          - "Phase 17: Debugging": curriculum/17-debugging/index.md
-          - "Phase 18: Low-Code AI Tools": curriculum/18-low-code/index.md
-          - "Phase 19: AI Safety": curriculum/19-ai-safety/index.md
-          - "Phase 20: Real-Time Streaming": curriculum/20-streaming/index.md
+          - "Phase 16: Model Evaluation": curriculum/16-model-evaluation/README.md
+          - "Phase 17: Debugging": curriculum/17-debugging/README.md
+          - "Phase 18: Low-Code AI Tools": curriculum/18-low-code/README.md
+          - "Phase 19: AI Safety": curriculum/19-ai-safety/README.md
+          - "Phase 20: Real-Time Streaming": curriculum/20-streaming/README.md
       - Reference:
-          - "Phase 21: Quizzes": curriculum/21-quizzes/index.md
-          - "Phase 22: References": curriculum/22-references/index.md
-          - "Phase 23: Glossary": curriculum/23-glossary/index.md
+          - "Phase 21: Quizzes": curriculum/21-quizzes/README.md
+          - "Phase 22: References": curriculum/22-references/README.md
+          - "Phase 23: Glossary": curriculum/23-glossary/README.md
       - Research:
-          - "Phase 24: Advanced Deep Learning": curriculum/24-advanced-dl/index.md
-          - "Phase 25: Reinforcement Learning": curriculum/25-rl/index.md
-          - "Phase 26: Time Series": curriculum/26-time-series/index.md
-          - "Phase 27: Causal Inference": curriculum/27-causal-inference/index.md
+          - "Phase 24: Advanced Deep Learning": curriculum/24-advanced-dl/README.md
+          - "Phase 25: Reinforcement Learning": curriculum/25-rl/README.md
+          - "Phase 26: Time Series": curriculum/26-time-series/README.md
+          - "Phase 27: Causal Inference": curriculum/27-causal-inference/README.md
       - Production:
-          - "Phase 28: Practical Data Science": curriculum/28-practical-ds/index.md
-          - "Phase 29: AI Hardware": curriculum/29-ai-hardware/index.md
-          - "Phase 30: Inference Optimization": curriculum/30-inference-opt/index.md
+          - "Phase 28: Practical Data Science": curriculum/28-practical-ds/README.md
+          - "Phase 29: AI Hardware": curriculum/29-ai-hardware/README.md
+          - "Phase 30: Inference Optimization": curriculum/30-inference-opt/README.md
   - Guides:
       - Model Comparisons: COMPARISON_MATRICES.md
       - References & Resources: REFERENCES.md
