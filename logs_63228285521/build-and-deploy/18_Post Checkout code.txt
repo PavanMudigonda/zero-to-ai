@@ -1,0 +1,10 @@
+﻿2026-04-03T14:23:47.3029039Z Post job cleanup.
+2026-04-03T14:23:47.3922424Z [command]/usr/bin/git version
+2026-04-03T14:23:47.3957551Z git version 2.53.0
+2026-04-03T14:23:47.3998326Z Temporarily overriding HOME='/home/runner/work/_temp/ff2e29ca-d7c3-48c6-9589-1ccb4df6265b' before making global git config changes
+2026-04-03T14:23:47.3999251Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-03T14:23:47.4005574Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-03T14:23:47.4039370Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-03T14:23:47.4069307Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-03T14:23:47.4276251Z fatal: No url found for submodule path '02-data-science/2-pandas-examples/03-exercises/topic-based-exercises' in .gitmodules
+2026-04-03T14:23:47.4328131Z ##[warning]The process '/usr/bin/git' failed with exit code 128

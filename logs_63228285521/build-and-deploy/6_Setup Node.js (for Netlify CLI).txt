@@ -1,0 +1,21 @@
+﻿2026-04-03T14:23:08.3482960Z ##[group]Run actions/setup-node@v4
+2026-04-03T14:23:08.3483251Z with:
+2026-04-03T14:23:08.3483455Z   node-version: lts/*
+2026-04-03T14:23:08.3483660Z   always-auth: false
+2026-04-03T14:23:08.3483866Z   check-latest: false
+2026-04-03T14:23:08.3484187Z   token: ***
+2026-04-03T14:23:08.3484365Z env:
+2026-04-03T14:23:08.3484607Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-03T14:23:08.3485027Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-04-03T14:23:08.3485446Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-03T14:23:08.3485816Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-03T14:23:08.3486187Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-03T14:23:08.3486552Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-04-03T14:23:08.3486829Z ##[endgroup]
+2026-04-03T14:23:08.5102598Z Attempt to resolve LTS alias from manifest...
+2026-04-03T14:23:09.3253069Z Found in cache @ /opt/hostedtoolcache/node/24.14.0/x64
+2026-04-03T14:23:09.3258499Z ##[group]Environment details
+2026-04-03T14:23:12.2901511Z node: v24.14.0
+2026-04-03T14:23:12.2901984Z npm: 11.9.0
+2026-04-03T14:23:12.2902267Z yarn: 1.22.22
+2026-04-03T14:23:12.2903454Z ##[endgroup]
