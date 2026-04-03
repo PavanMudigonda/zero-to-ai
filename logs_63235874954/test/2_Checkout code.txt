@@ -1,0 +1,79 @@
+﻿2026-04-03T15:22:03.0231609Z ##[group]Run actions/checkout@v6.0.1
+2026-04-03T15:22:03.0232607Z with:
+2026-04-03T15:22:03.0233099Z   repository: PavanMudigonda/abcd.guru
+2026-04-03T15:22:03.0233882Z   token: ***
+2026-04-03T15:22:03.0234532Z   ssh-strict: true
+2026-04-03T15:22:03.0235000Z   ssh-user: git
+2026-04-03T15:22:03.0235481Z   persist-credentials: true
+2026-04-03T15:22:03.0235985Z   clean: true
+2026-04-03T15:22:03.0236450Z   sparse-checkout-cone-mode: true
+2026-04-03T15:22:03.0236974Z   fetch-depth: 1
+2026-04-03T15:22:03.0237421Z   fetch-tags: false
+2026-04-03T15:22:03.0237870Z   show-progress: true
+2026-04-03T15:22:03.0238332Z   lfs: false
+2026-04-03T15:22:03.0238769Z   submodules: false
+2026-04-03T15:22:03.0239229Z   set-safe-directory: true
+2026-04-03T15:22:03.0239994Z ##[endgroup]
+2026-04-03T15:22:03.1352671Z Syncing repository: PavanMudigonda/abcd.guru
+2026-04-03T15:22:03.1355399Z ##[group]Getting Git version info
+2026-04-03T15:22:03.1356261Z Working directory is '/home/runner/work/abcd.guru/abcd.guru'
+2026-04-03T15:22:03.1357487Z [command]/usr/bin/git version
+2026-04-03T15:22:03.1398415Z git version 2.53.0
+2026-04-03T15:22:03.1428960Z ##[endgroup]
+2026-04-03T15:22:03.1444685Z Temporarily overriding HOME='/home/runner/work/_temp/1af5c229-a071-402d-8a93-e2e8931bf188' before making global git config changes
+2026-04-03T15:22:03.1450213Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-03T15:22:03.1455174Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/abcd.guru/abcd.guru
+2026-04-03T15:22:03.1493149Z Deleting the contents of '/home/runner/work/abcd.guru/abcd.guru'
+2026-04-03T15:22:03.1498669Z ##[group]Initializing the repository
+2026-04-03T15:22:03.1504306Z [command]/usr/bin/git init /home/runner/work/abcd.guru/abcd.guru
+2026-04-03T15:22:03.1617314Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-03T15:22:03.1620922Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-03T15:22:03.1623166Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-03T15:22:03.1626510Z hint: call:
+2026-04-03T15:22:03.1627314Z hint:
+2026-04-03T15:22:03.1628277Z hint: 	git config --global init.defaultBranch <name>
+2026-04-03T15:22:03.1629347Z hint:
+2026-04-03T15:22:03.1630347Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-03T15:22:03.1633728Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-03T15:22:03.1635412Z hint:
+2026-04-03T15:22:03.1636173Z hint: 	git branch -m <name>
+2026-04-03T15:22:03.1636990Z hint:
+2026-04-03T15:22:03.1638046Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-03T15:22:03.1639724Z Initialized empty Git repository in /home/runner/work/abcd.guru/abcd.guru/.git/
+2026-04-03T15:22:03.1643616Z [command]/usr/bin/git remote add origin https://github.com/PavanMudigonda/abcd.guru
+2026-04-03T15:22:03.1677261Z ##[endgroup]
+2026-04-03T15:22:03.1680689Z ##[group]Disabling automatic garbage collection
+2026-04-03T15:22:03.1682792Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-03T15:22:03.1716202Z ##[endgroup]
+2026-04-03T15:22:03.1719701Z ##[group]Setting up auth
+2026-04-03T15:22:03.1720684Z Removing SSH command configuration
+2026-04-03T15:22:03.1723719Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-03T15:22:03.1756848Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-03T15:22:03.2073205Z Removing HTTP extra header
+2026-04-03T15:22:03.2078480Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-03T15:22:03.2113482Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-03T15:22:03.2342626Z Removing includeIf entries pointing to credentials config files
+2026-04-03T15:22:03.2347325Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-03T15:22:03.2385705Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-03T15:22:03.2622575Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-4b950f86-ba64-4bb5-af3d-d4c432bbf1e9.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-03T15:22:03.2663438Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/abcd.guru/abcd.guru/.git.path /home/runner/work/_temp/git-credentials-4b950f86-ba64-4bb5-af3d-d4c432bbf1e9.config
+2026-04-03T15:22:03.2697478Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/abcd.guru/abcd.guru/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-4b950f86-ba64-4bb5-af3d-d4c432bbf1e9.config
+2026-04-03T15:22:03.2729632Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-4b950f86-ba64-4bb5-af3d-d4c432bbf1e9.config
+2026-04-03T15:22:03.2761934Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-4b950f86-ba64-4bb5-af3d-d4c432bbf1e9.config
+2026-04-03T15:22:03.2791166Z ##[endgroup]
+2026-04-03T15:22:03.2792590Z ##[group]Fetching the repository
+2026-04-03T15:22:03.2800784Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +118dc78d1a8dd17070e61d07045e1fef7c9ffe39:refs/remotes/origin/main
+2026-04-03T15:22:04.6579090Z From https://github.com/PavanMudigonda/abcd.guru
+2026-04-03T15:22:04.6582553Z  * [new ref]         118dc78d1a8dd17070e61d07045e1fef7c9ffe39 -> origin/main
+2026-04-03T15:22:04.6613733Z ##[endgroup]
+2026-04-03T15:22:04.6618088Z ##[group]Determining the checkout info
+2026-04-03T15:22:04.6619373Z ##[endgroup]
+2026-04-03T15:22:04.6626546Z [command]/usr/bin/git sparse-checkout disable
+2026-04-03T15:22:04.6681500Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-03T15:22:04.6713623Z ##[group]Checking out the ref
+2026-04-03T15:22:04.6718540Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-04-03T15:22:04.9155907Z Switched to a new branch 'main'
+2026-04-03T15:22:04.9158386Z branch 'main' set up to track 'origin/main'.
+2026-04-03T15:22:04.9181510Z ##[endgroup]
+2026-04-03T15:22:04.9238692Z [command]/usr/bin/git log -1 --format=%H
+2026-04-03T15:22:04.9273617Z 118dc78d1a8dd17070e61d07045e1fef7c9ffe39

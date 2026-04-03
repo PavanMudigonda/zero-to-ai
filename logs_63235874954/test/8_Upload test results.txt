@@ -1,0 +1,21 @@
+﻿2026-04-03T15:23:20.4778941Z ##[group]Run actions/upload-artifact@v4
+2026-04-03T15:23:20.4779256Z with:
+2026-04-03T15:23:20.4779455Z   name: playwright-report
+2026-04-03T15:23:20.4779699Z   path: playwright-report/
+2026-04-03T15:23:20.4779937Z   retention-days: 30
+2026-04-03T15:23:20.4780147Z   if-no-files-found: warn
+2026-04-03T15:23:20.4780356Z   compression-level: 6
+2026-04-03T15:23:20.4780551Z   overwrite: false
+2026-04-03T15:23:20.4780741Z   include-hidden-files: false
+2026-04-03T15:23:20.4780961Z ##[endgroup]
+2026-04-03T15:23:20.7075366Z With the provided path, there will be 1 file uploaded
+2026-04-03T15:23:20.7095307Z Artifact name is valid!
+2026-04-03T15:23:20.7106382Z Root directory input is valid!
+2026-04-03T15:23:20.8106669Z Beginning upload of artifact content to blob storage
+2026-04-03T15:23:20.9245791Z Uploaded bytes 194721
+2026-04-03T15:23:20.9451728Z Finished uploading artifact content to blob storage!
+2026-04-03T15:23:20.9459466Z SHA256 digest of uploaded artifact zip is 37632f940a867c5317c22018a6a2e3df4127261d3d55492b19ea608f271b7b9a
+2026-04-03T15:23:20.9465267Z Finalizing artifact upload
+2026-04-03T15:23:21.0969469Z Artifact playwright-report.zip successfully finalized. Artifact ID 6261343252
+2026-04-03T15:23:21.0972964Z Artifact playwright-report has been successfully uploaded! Final size is 194721 bytes. Artifact ID is 6261343252
+2026-04-03T15:23:21.0982208Z Artifact download URL: https://github.com/PavanMudigonda/abcd.guru/actions/runs/23951388509/artifacts/6261343252
