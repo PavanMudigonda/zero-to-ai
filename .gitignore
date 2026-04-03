@@ -77,3 +77,4 @@ source/
 # MkDocs
 site/
 docs/curriculum/
+docs/generated/
