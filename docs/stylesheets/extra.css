@@ -184,3 +184,74 @@
 [data-md-color-scheme="slate"] .phase-card {
   border-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Notebook launcher bar */
+.notebook-launchers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(0, 105, 92, 0.18);
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(26, 35, 126, 0.06), rgba(0, 105, 92, 0.08));
+}
+
+.notebook-launchers__label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--md-default-fg-color);
+}
+
+.notebook-launchers__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.notebook-launchers__link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  opacity: 0.95;
+}
+
+.notebook-launchers__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+}
+
+.notebook-launchers__icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: currentColor;
+}
+
+.notebook-launchers__link--colab {
+  background: #f9ab00;
+  color: #202124 !important;
+}
+
+.notebook-launchers__link--kaggle {
+  background: #20beff;
+  color: #06263a !important;
+}
+
+[data-md-color-scheme="slate"] .notebook-launchers {
+  border-color: rgba(32, 190, 255, 0.22);
+  background: linear-gradient(135deg, rgba(15, 27, 74, 0.55), rgba(0, 77, 64, 0.35));
+}
+
+[data-md-color-scheme="slate"] .notebook-launchers__label {
+  color: rgba(255, 255, 255, 0.92);
+}
