@@ -40,12 +40,15 @@ jobs:
         from pathlib import Path
         
         errors = []
-        notebooks = list(Path('.').rglob('*.ipynb'))
+        notebooks = sorted(
+            nb for nb in Path('.').rglob('*.ipynb')
+            if '.ipynb_checkpoints' not in str(nb)
+            and '.venv' not in str(nb)
+            and 'docs/curriculum' not in str(nb)
+        )
         print(f'Found {len(notebooks)} notebooks')
         
-        for nb_path in notebooks[:20]:  # Validate first 20 notebooks
-            if '.ipynb_checkpoints' in str(nb_path):
-                continue
+        for nb_path in notebooks:
             try:
                 with open(nb_path) as f:
                     nb = nbformat.read(f, as_version=4)
@@ -66,7 +69,7 @@ jobs:
     - name: Test sample notebook execution
       run: |
         # Test a few key notebooks to ensure they execute
-        if [ -f "10-prompt-engineering/01_basic_prompting.ipynb" ]; then
+        if [ -f "11-prompt-engineering/01_basic_prompting.ipynb" ]; then
           echo "Testing prompt engineering notebook..."
           # Skip execution for notebooks requiring API keys
           echo "⚠️  Skipping execution (requires API key)"
@@ -109,9 +112,10 @@ jobs:
     - name: Summary
       if: always()
       run: |
+        NOTEBOOK_COUNT=$(find . -path './.git' -prune -o -path './.venv' -prune -o -path './docs/curriculum' -prune -o -name '*.ipynb' -print | wc -l | tr -d ' ')
         echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
         echo "- Python version: ${{ matrix.python-version }}" >> $GITHUB_STEP_SUMMARY
-        echo "- Repository contains 732+ notebooks" >> $GITHUB_STEP_SUMMARY
+        echo "- Repository contains ${NOTEBOOK_COUNT} notebooks" >> $GITHUB_STEP_SUMMARY
         echo "- Basic structural validation: ✅" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "Note: Full execution testing requires API keys and GPU resources." >> $GITHUB_STEP_SUMMARY

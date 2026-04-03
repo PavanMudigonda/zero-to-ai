@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      JUPYTER_PLATFORM_DIRS: "1"
     steps:
       - uses: actions/checkout@v6
         with:
@@ -26,9 +28,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-docs.txt
 
       - name: Install dependencies
-        run: pip install mkdocs-material mkdocs-minify-plugin mkdocs-jupyter
+        run: pip install -r requirements-docs.txt
 
       - name: Copy curriculum content
         run: bash scripts/build_site.sh
