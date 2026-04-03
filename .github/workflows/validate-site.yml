@@ -24,6 +24,14 @@ jobs:
           cache: pip
           cache-dependency-path: requirements-docs.txt
 
+      - name: Restore MkDocs notebook cache
+        uses: actions/cache@v4
+        with:
+          path: .cache/mkdocs-jupyter
+          key: ${{ runner.os }}-mkdocs-jupyter-${{ hashFiles('requirements-docs.txt', 'mkdocs.yml', 'scripts/build_site.sh') }}
+          restore-keys: |
+            ${{ runner.os }}-mkdocs-jupyter-
+
       - name: Install docs dependencies
         run: |
           python -m pip install --upgrade pip
