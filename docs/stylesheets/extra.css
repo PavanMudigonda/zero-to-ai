@@ -1,25 +1,25 @@
 /* Hero section */
 .md-container .hero {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem 1.5rem;
   text-align: center;
   background: linear-gradient(135deg, #1a237e 0%, #283593 30%, #00695c 100%);
   color: white;
   border-radius: 12px;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   letter-spacing: -0.02em;
 }
 
 .hero p {
-  font-size: 1.2rem;
+  font-size: 0.95rem;
   opacity: 0.9;
-  max-width: 600px;
-  margin: 0 auto 1.5rem;
+  max-width: 550px;
+  margin: 0 auto 0.8rem;
 }
 
 .hero .hero-badges {
@@ -27,7 +27,7 @@
   gap: 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 0.8rem;
 }
 
 .hero .hero-badges a img {

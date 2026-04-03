@@ -22,7 +22,7 @@ Master machine learning, deep learning, LLMs, RAG, agents, and MLOps through han
 
 </div>
 
-<div class="stats-bar" markdown>
+<div class="stats-bar">
 <div class="stat">
   <span class="number">31</span>
   <span class="label">Phases</span>
@@ -105,178 +105,60 @@ Statistics, experimentation, classical ML. Strong analytical foundation.
 
 ### Foundations
 
-<div class="phase-grid" markdown>
-
-<a class="phase-card" href="curriculum/00-course-setup/">
-  <div class="phase-number">Phase 0</div>
-  <div class="phase-title">Course Setup</div>
-</a>
-
-<a class="phase-card" href="curriculum/01-python/">
-  <div class="phase-number">Phase 1</div>
-  <div class="phase-title">Python</div>
-</a>
-
-<a class="phase-card" href="curriculum/02-data-science/">
-  <div class="phase-number">Phase 2</div>
-  <div class="phase-title">Data Science</div>
-</a>
-
-<a class="phase-card" href="curriculum/03-maths/">
-  <div class="phase-number">Phase 3</div>
-  <div class="phase-title">Mathematics for ML</div>
-</a>
-
+<div class="phase-grid">
+<a class="phase-card" href="curriculum/00-course-setup/"><div class="phase-number">Phase 0</div><div class="phase-title">Course Setup</div></a>
+<a class="phase-card" href="curriculum/01-python/"><div class="phase-number">Phase 1</div><div class="phase-title">Python</div></a>
+<a class="phase-card" href="curriculum/02-data-science/"><div class="phase-number">Phase 2</div><div class="phase-title">Data Science</div></a>
+<a class="phase-card" href="curriculum/03-maths/"><div class="phase-number">Phase 3</div><div class="phase-title">Mathematics for ML</div></a>
 </div>
 
 ### Core AI
 
-<div class="phase-grid" markdown>
-
-<a class="phase-card" href="curriculum/04-token/">
-  <div class="phase-number">Phase 4</div>
-  <div class="phase-title">Tokenization</div>
-</a>
-
-<a class="phase-card" href="curriculum/05-embeddings/">
-  <div class="phase-number">Phase 5</div>
-  <div class="phase-title">Embeddings</div>
-</a>
-
-<a class="phase-card" href="curriculum/06-neural-networks/">
-  <div class="phase-number">Phase 6</div>
-  <div class="phase-title">Neural Networks</div>
-</a>
-
+<div class="phase-grid">
+<a class="phase-card" href="curriculum/04-token/"><div class="phase-number">Phase 4</div><div class="phase-title">Tokenization</div></a>
+<a class="phase-card" href="curriculum/05-embeddings/"><div class="phase-number">Phase 5</div><div class="phase-title">Embeddings</div></a>
+<a class="phase-card" href="curriculum/06-neural-networks/"><div class="phase-number">Phase 6</div><div class="phase-title">Neural Networks</div></a>
 </div>
 
 ### Applied AI
 
-<div class="phase-grid" markdown>
-
-<a class="phase-card" href="curriculum/07-vector-databases/">
-  <div class="phase-number">Phase 7</div>
-  <div class="phase-title">Vector Databases</div>
-</a>
-
-<a class="phase-card" href="curriculum/08-rag/">
-  <div class="phase-number">Phase 8</div>
-  <div class="phase-title">RAG Systems</div>
-</a>
-
-<a class="phase-card" href="curriculum/09-mlops/">
-  <div class="phase-number">Phase 9</div>
-  <div class="phase-title">MLOps</div>
-</a>
-
-<a class="phase-card" href="curriculum/10-specializations/">
-  <div class="phase-number">Phase 10</div>
-  <div class="phase-title">Specializations</div>
-</a>
-
+<div class="phase-grid">
+<a class="phase-card" href="curriculum/07-vector-databases/"><div class="phase-number">Phase 7</div><div class="phase-title">Vector Databases</div></a>
+<a class="phase-card" href="curriculum/08-rag/"><div class="phase-number">Phase 8</div><div class="phase-title">RAG Systems</div></a>
+<a class="phase-card" href="curriculum/09-mlops/"><div class="phase-number">Phase 9</div><div class="phase-title">MLOps</div></a>
+<a class="phase-card" href="curriculum/10-specializations/"><div class="phase-number">Phase 10</div><div class="phase-title">Specializations</div></a>
 </div>
 
 ### Advanced
 
-<div class="phase-grid" markdown>
-
-<a class="phase-card" href="curriculum/11-prompt-engineering/">
-  <div class="phase-number">Phase 11</div>
-  <div class="phase-title">Prompt Engineering</div>
-</a>
-
-<a class="phase-card" href="curriculum/12-llm-finetuning/">
-  <div class="phase-number">Phase 12</div>
-  <div class="phase-title">LLM Fine-tuning</div>
-</a>
-
-<a class="phase-card" href="curriculum/13-multimodal/">
-  <div class="phase-number">Phase 13</div>
-  <div class="phase-title">Multimodal AI</div>
-</a>
-
-<a class="phase-card" href="curriculum/14-local-llms/">
-  <div class="phase-number">Phase 14</div>
-  <div class="phase-title">Local LLMs</div>
-</a>
-
-<a class="phase-card" href="curriculum/15-ai-agents/">
-  <div class="phase-number">Phase 15</div>
-  <div class="phase-title">AI Agents</div>
-</a>
-
+<div class="phase-grid">
+<a class="phase-card" href="curriculum/11-prompt-engineering/"><div class="phase-number">Phase 11</div><div class="phase-title">Prompt Engineering</div></a>
+<a class="phase-card" href="curriculum/12-llm-finetuning/"><div class="phase-number">Phase 12</div><div class="phase-title">LLM Fine-tuning</div></a>
+<a class="phase-card" href="curriculum/13-multimodal/"><div class="phase-number">Phase 13</div><div class="phase-title">Multimodal AI</div></a>
+<a class="phase-card" href="curriculum/14-local-llms/"><div class="phase-number">Phase 14</div><div class="phase-title">Local LLMs</div></a>
+<a class="phase-card" href="curriculum/15-ai-agents/"><div class="phase-number">Phase 15</div><div class="phase-title">AI Agents</div></a>
 </div>
 
 ### Supplementary
 
-<div class="phase-grid" markdown>
-
-<a class="phase-card" href="curriculum/16-model-evaluation/">
-  <div class="phase-number">Phase 16</div>
-  <div class="phase-title">Model Evaluation</div>
-</a>
-
-<a class="phase-card" href="curriculum/17-debugging/">
-  <div class="phase-number">Phase 17</div>
-  <div class="phase-title">Debugging</div>
-</a>
-
-<a class="phase-card" href="curriculum/18-low-code/">
-  <div class="phase-number">Phase 18</div>
-  <div class="phase-title">Low-Code AI Tools</div>
-</a>
-
-<a class="phase-card" href="curriculum/19-ai-safety/">
-  <div class="phase-number">Phase 19</div>
-  <div class="phase-title">AI Safety</div>
-</a>
-
-<a class="phase-card" href="curriculum/20-streaming/">
-  <div class="phase-number">Phase 20</div>
-  <div class="phase-title">Real-Time Streaming</div>
-</a>
-
+<div class="phase-grid">
+<a class="phase-card" href="curriculum/16-model-evaluation/"><div class="phase-number">Phase 16</div><div class="phase-title">Model Evaluation</div></a>
+<a class="phase-card" href="curriculum/17-debugging/"><div class="phase-number">Phase 17</div><div class="phase-title">Debugging</div></a>
+<a class="phase-card" href="curriculum/18-low-code/"><div class="phase-number">Phase 18</div><div class="phase-title">Low-Code AI Tools</div></a>
+<a class="phase-card" href="curriculum/19-ai-safety/"><div class="phase-number">Phase 19</div><div class="phase-title">AI Safety</div></a>
+<a class="phase-card" href="curriculum/20-streaming/"><div class="phase-number">Phase 20</div><div class="phase-title">Real-Time Streaming</div></a>
 </div>
 
 ### Research & Production
 
-<div class="phase-grid" markdown>
-
-<a class="phase-card" href="curriculum/24-advanced-dl/">
-  <div class="phase-number">Phase 24</div>
-  <div class="phase-title">Advanced Deep Learning</div>
-</a>
-
-<a class="phase-card" href="curriculum/25-rl/">
-  <div class="phase-number">Phase 25</div>
-  <div class="phase-title">Reinforcement Learning</div>
-</a>
-
-<a class="phase-card" href="curriculum/26-time-series/">
-  <div class="phase-number">Phase 26</div>
-  <div class="phase-title">Time Series</div>
-</a>
-
-<a class="phase-card" href="curriculum/27-causal-inference/">
-  <div class="phase-number">Phase 27</div>
-  <div class="phase-title">Causal Inference</div>
-</a>
-
-<a class="phase-card" href="curriculum/28-practical-ds/">
-  <div class="phase-number">Phase 28</div>
-  <div class="phase-title">Practical Data Science</div>
-</a>
-
-<a class="phase-card" href="curriculum/29-ai-hardware/">
-  <div class="phase-number">Phase 29</div>
-  <div class="phase-title">AI Hardware</div>
-</a>
-
-<a class="phase-card" href="curriculum/30-inference-opt/">
-  <div class="phase-number">Phase 30</div>
-  <div class="phase-title">Inference Optimization</div>
-</a>
-
+<div class="phase-grid">
+<a class="phase-card" href="curriculum/24-advanced-dl/"><div class="phase-number">Phase 24</div><div class="phase-title">Advanced Deep Learning</div></a>
+<a class="phase-card" href="curriculum/25-rl/"><div class="phase-number">Phase 25</div><div class="phase-title">Reinforcement Learning</div></a>
+<a class="phase-card" href="curriculum/26-time-series/"><div class="phase-number">Phase 26</div><div class="phase-title">Time Series</div></a>
+<a class="phase-card" href="curriculum/27-causal-inference/"><div class="phase-number">Phase 27</div><div class="phase-title">Causal Inference</div></a>
+<a class="phase-card" href="curriculum/28-practical-ds/"><div class="phase-number">Phase 28</div><div class="phase-title">Practical Data Science</div></a>
+<a class="phase-card" href="curriculum/29-ai-hardware/"><div class="phase-number">Phase 29</div><div class="phase-title">AI Hardware</div></a>
+<a class="phase-card" href="curriculum/30-inference-opt/"><div class="phase-number">Phase 30</div><div class="phase-title">Inference Optimization</div></a>
 </div>
 
 ---
