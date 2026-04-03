@@ -262,16 +262,16 @@ def estimate_complexity(prompt):
 
 ```
 Simple tasks (FAQ, classification):
-└─ GPT-3.5-turbo or local 7B model
+└─ GPT-4.1-mini, Claude Haiku 4.5, or local Qwen 3 4B
 
 Medium tasks (summarization, extraction):
-└─ GPT-4o-mini or local 13B model
+└─ GPT-4.1-mini, Gemini Flash, or local Qwen 3 8B
 
 Complex tasks (reasoning, analysis):
-└─ GPT-4o or Claude 3.5 Sonnet
+└─ Claude Sonnet 4.6, GPT-5.4, or Gemini 3.1 Pro
 
 Very complex (code, math, research):
-└─ o1-mini or o1-preview
+└─ Claude Opus 4.6, o3, or o4-mini
 ```
 
 ### Caching Strategy

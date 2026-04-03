@@ -18,10 +18,10 @@
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| ** 3Blue1Brown: Essence of Linear Algebra | Best visual explanation of linear algebra | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab |
-| ** 3Blue1Brown: Essence of Calculus | Intuitive calculus from scratch | https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr |
-| ** 3Blue1Brown: Neural Networks | 4-part series, best visual intro to neural networks | https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi |
-| ** StatQuest with Josh Starmer | Every ML concept explained simply with cartoons | https://www.youtube.com/@statquest |
+| **3Blue1Brown: Essence of Linear Algebra** | Best visual explanation of linear algebra | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab |
+| **3Blue1Brown: Essence of Calculus** | Intuitive calculus from scratch | https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr |
+| **3Blue1Brown: Neural Networks** | 4-part series, best visual intro to neural networks | https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi |
+| **StatQuest with Josh Starmer** | Every ML concept explained simply with cartoons | https://www.youtube.com/@statquest |
 | MIT 18.065 (Gilbert Strang) | Full MIT linear algebra course (more rigorous) | https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k |
 | Stanford CS229 (Andrew Ng) | Classic ML course, full lectures | https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU |
 
@@ -29,8 +29,8 @@
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| ** Andrej Karpathy: Neural Networks Zero to Hero | Build GPT from scratch, best hands-on series | https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ |
-| ** Andrej Karpathy: makemore series | Build character-level LM from scratch | https://www.youtube.com/watch?v=PaCmpygFfXo |
+| **Andrej Karpathy: Neural Networks Zero to Hero** | Build GPT from scratch, best hands-on series | https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ |
+| **Andrej Karpathy: makemore series** | Build character-level LM from scratch | https://www.youtube.com/watch?v=PaCmpygFfXo |
 | MIT 6.S191: Intro to Deep Learning | Annual MIT deep learning course | https://www.youtube.com/@AAmini |
 | fast.ai Practical Deep Learning | Top-down approach, very practical | https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU |
 | Stanford CS231N: CNNs for Visual Recognition | Best course on computer vision | https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv |
@@ -40,8 +40,8 @@
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| ** Andrej Karpathy: Let's build GPT | Build GPT-2 from scratch in 2 hours | https://www.youtube.com/watch?v=kCc8FmEb1nY |
-| ** Andrej Karpathy: Let's build the GPT Tokenizer | Hands-on tokenization | https://www.youtube.com/watch?v=zduSFxRajkE |
+| **Andrej Karpathy: Let's build GPT** | Build GPT-2 from scratch in 2 hours | https://www.youtube.com/watch?v=kCc8FmEb1nY |
+| **Andrej Karpathy: Let's build the GPT Tokenizer** | Hands-on tokenization | https://www.youtube.com/watch?v=zduSFxRajkE |
 | Yannic Kilcher: Paper Explanations | Deep research paper walkthroughs | https://www.youtube.com/@YannicKilcher |
 | The AI Epiphany | Clear explanations of recent AI papers | https://www.youtube.com/@TheAiEpiphany |
 | Umar Jamil: Transformers from scratch | Code implementations of major transformer papers | https://www.youtube.com/@umarjamilai |
@@ -51,8 +51,8 @@
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| ** Sam Witteveen (Red Dragon AI) | RAG, LangChain, agents hands-on | https://www.youtube.com/@samwitteveenai |
-| ** James Briggs | LangChain, RAG, Pinecone tutorials | https://www.youtube.com/@jamesbriggs |
+| **Sam Witteveen (Red Dragon AI)** | RAG, LangChain, agents hands-on | https://www.youtube.com/@samwitteveenai |
+| **James Briggs** | LangChain, RAG, Pinecone tutorials | https://www.youtube.com/@jamesbriggs |
 | Data Independent | LangChain + OpenAI practical tutorials | https://www.youtube.com/@DataIndependent |
 | LangChain Official | Official LangChain tutorials and walkthroughs | https://www.youtube.com/@LangChain |
 | Matt Williams (Ollama) | Local LLMs with Ollama | https://www.youtube.com/@technovangelist |
@@ -61,7 +61,7 @@
 
 | Resource | Description | Link |
 |----------|-------------|------|
-| ** Trelis Research | LLM fine-tuning, quantization, deployment | https://www.youtube.com/@TrelisResearch |
+| **Trelis Research** | LLM fine-tuning, quantization, deployment | https://www.youtube.com/@TrelisResearch |
 | Weights & Biases (W&B) | MLOps, experiment tracking tutorials | https://www.youtube.com/@WeightsBiases |
 | Made With ML | Full MLOps course (free) | https://www.youtube.com/@madewithml |
 | Patrick Loeber | PyTorch tutorials from scratch | https://www.youtube.com/@patloeber |
@@ -75,10 +75,10 @@
 
 | Course | Platform | Duration | Cost |
 |--------|----------|----------|------|
-| ** Hugging Face NLP Course | HuggingFace | 4-6 weeks | FREE |
-| ** fast.ai Practical Deep Learning | fast.ai | 8 weeks | FREE |
-| ** DeepLearning.AI: ChatGPT Prompt Engineering | Coursera | 1 week | FREE audit |
-| ** Made With ML | madewithml.com | 6-8 weeks | FREE |
+| **Hugging Face NLP Course** | HuggingFace | 4-6 weeks | FREE |
+| **fast.ai Practical Deep Learning** | fast.ai | 8 weeks | FREE |
+| **DeepLearning.AI: ChatGPT Prompt Engineering** | Coursera | 1 week | FREE audit |
+| **Made With ML** | madewithml.com | 6-8 weeks | FREE |
 | Stanford CS229 Machine Learning | Stanford | 12 weeks | FREE |
 | Stanford CS224N NLP with Deep Learning | Stanford | 10 weeks | FREE |
 | MIT OpenCourseWare 6.036 | MIT | 12 weeks | FREE |
@@ -92,9 +92,9 @@
 
 | Course | Platform | Duration | Cost |
 |--------|----------|----------|------|
-| ** Deep Learning Specialization (Andrew Ng) | Coursera | 3-4 months | $49/mo |
-| ** LLM Fine-tuning with Hugging Face | Coursera/DL.AI | 2 weeks | $49/mo |
-| ** LangChain for LLM Applications | Coursera/DL.AI | 1 week | $49/mo |
+| **Deep Learning Specialization (Andrew Ng)** | Coursera | 3-4 months | $49/mo |
+| **LLM Fine-tuning with Hugging Face** | Coursera/DL.AI | 2 weeks | $49/mo |
+| **LangChain for LLM Applications** | Coursera/DL.AI | 1 week | $49/mo |
 | Building AI Agents (DeepLearning.AI) | Coursera | 1-2 weeks | $49/mo |
 | MLOps Specialization | Coursera | 4 months | $49/mo |
 | Full Stack LLM Bootcamp | FSDL | Self-paced | $200 |
@@ -192,9 +192,9 @@
 
 | Blog | Why Read It | Link |
 |------|-------------|------|
-| ** Lilian Weng (OpenAI) | Deeply researched posts on transformer internals, RL, agents | https://lilianweng.github.io |
-| ** Sebastian Ruder | NLP research trends and summaries | https://ruder.io |
-| ** Jay Alammar | Visual explanations of transformer and BERT | https://jalammar.github.io |
+| **Lilian Weng (OpenAI)** | Deeply researched posts on transformer internals, RL, agents | https://lilianweng.github.io |
+| **Sebastian Ruder** | NLP research trends and summaries | https://ruder.io |
+| **Jay Alammar** | Visual explanations of transformer and BERT | https://jalammar.github.io |
 | Andrej Karpathy | Occasional deep-dive blog posts | https://karpathy.github.io |
 | The Gradient | Long-form ML research coverage | https://thegradient.pub |
 | Import AI (Jack Clark) | Weekly AI news for practitioners | https://jack-clark.net |

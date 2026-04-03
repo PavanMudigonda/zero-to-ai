@@ -1,38 +1,23 @@
 # AI/ML Learning Checklist ✅
 
-Complete this checklist as you progress through the repository. Check off items as you complete them!
 
----
 
 ## START HERE — Essential Reading (Do This First)
 
-> These three documents are your master guides. Read them before diving into any notebooks.
 
 - [ ] Done  **[MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)** — Phase-by-phase learning notes, text explanations, and study schedule. Start here.
 - [ ] Done  **[CAREER_ROADMAP.md](CAREER_ROADMAP.md)** — Target roles, interview prep, portfolio strategy, and 30-60-90 day plan.
 - [ ] Done  **[REFERENCES.md](REFERENCES.md)** — All videos, GitHub repos, courses, papers, and tools organized by phase.
 - [ ] Done  **[INTERVIEW_PREP.md](INTERVIEW_PREP.md)** — 15 ML Q&A with answers, specific coding problems, 3 system design walkthroughs.
 
-Choose your learning track before starting:
-- **AI Engineer (4-6 months)**: Phases 0→4→5→6→7→10→13→14→8→11 + Portfolio
-- **ML Engineer (8-10 months)**: Phases 0→1→2→3→4→5→6→7→8→9→10→11→13→14 + Portfolio
-- **Data Scientist (6-8 months)**: Phases 0→1→2→27→26→7→10→ModelEval + Portfolio
 
----
 
 ## 📋 How to Use This Checklist
 
-1. Pick your learning track above — do NOT work through all phases sequentially
-2. For file-linked items, use `Done` when you finish once and `Reviewed` after a later revision pass
-3. Track your progress through notebooks, labs, and projects
-4. Phases 0-15 are the core track; Phases 24-27 are advanced/research level
-5. See [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) for month-by-month schedules per track
 
----
 
 ## Phase 0: Glossary & Foundations
 
-**Goal**: Understand core AI/ML terminology and the current AI landscape
 
 - [ ] Done  [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md)
 - [ ] Done  [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md) — frontier models, open-weight models, benchmarks as of 2026
@@ -41,11 +26,9 @@ Choose your learning track before starting:
 - [ ] Understand the difference between supervised/unsupervised learning
 - [ ] Done  [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) — choose your learning track (AI Engineer / ML Engineer / Data Scientist)
 
----
 
 ## Phase 1: Python & Machine Learning (278 notebooks)
 
-**Goal**: Master Python, NumPy, pandas, and scikit-learn
 
 ### Python Foundations
 - [ ] Done  NumPy tutorials in [02-data-science/1-numpy-examples/](02-data-science/1-numpy-examples/)
@@ -68,30 +51,28 @@ Choose your learning track before starting:
 - [ ] Build a regression model (e.g., housing prices)
 - [ ] Build a clustering project (e.g., customer segmentation)
 
----
 
 ## Phase 2: Mathematics for ML
 
-**Goal**: Build mathematical foundations
 
 ### Linear Algebra
-- [ ] Done  [03-maths/mml-book/01_linear_algebra.ipynb](03-maths/mml-book/01_linear_algebra.ipynb)
+- [ ] Done  [03-maths/mml-book/course/01_linear_algebra.ipynb](03-maths/mml-book/course/01_linear_algebra.ipynb)
 - [ ] Done  [03-maths/foundational/01_linear_algebra_fundamentals.ipynb](03-maths/foundational/01_linear_algebra_fundamentals.ipynb)
 - [ ] Done  3Blue1Brown - Essence of Linear Algebra (see [REFERENCES.md](REFERENCES.md))
 
 ### Calculus & Derivatives
 - [ ] Done  [03-maths/foundational/02_calculus_derivatives.ipynb](03-maths/foundational/02_calculus_derivatives.ipynb)
-- [ ] Done  [03-maths/mml-book/04_vector_calculus.ipynb](03-maths/mml-book/04_vector_calculus.ipynb)
+- [ ] Done  [03-maths/mml-book/course/04_vector_calculus.ipynb](03-maths/mml-book/course/04_vector_calculus.ipynb)
 - [ ] Watch 3Blue1Brown - Essence of Calculus
 
 ### Probability & Statistics
 - [ ] Done  [03-maths/foundational/03_probability_statistics.ipynb](03-maths/foundational/03_probability_statistics.ipynb)
-- [ ] Done  [03-maths/mml-book/05_probability.ipynb](03-maths/mml-book/05_probability.ipynb)
+- [ ] Done  [03-maths/mml-book/course/05_probability.ipynb](03-maths/mml-book/course/05_probability.ipynb)
 - [ ] Done  [03-maths/foundational/06_statistical_inference.ipynb](03-maths/foundational/06_statistical_inference.ipynb)
 
 ### Optimization & Gradient Descent
 - [ ] Done  [03-maths/foundational/04_gradient_descent.ipynb](03-maths/foundational/04_gradient_descent.ipynb)
-- [ ] Done  [03-maths/mml-book/06_optimization.ipynb](03-maths/mml-book/06_optimization.ipynb)
+- [ ] Done  [03-maths/mml-book/course/06_optimization.ipynb](03-maths/mml-book/course/06_optimization.ipynb)
 
 ### ISLP Book (13 notebooks)
 - [ ] Done  [01_introduction.ipynb](03-maths/islp-book/01_introduction.ipynb)
@@ -109,21 +90,19 @@ Choose your learning track before starting:
 - [ ] Done  [13_multiple_testing.ipynb](03-maths/islp-book/13_multiple_testing.ipynb)
 
 ### CS229 Course Notebooks
-- [ ] Done  [01_linear_regression.ipynb](03-maths/cs229-course/01_linear_regression.ipynb)
-- [ ] Done  [02_logistic_regression.ipynb](03-maths/cs229-course/02_logistic_regression.ipynb)
-- [ ] Done  [03_regularization.ipynb](03-maths/cs229-course/03_regularization.ipynb)
-- [ ] Done  [05_svm.ipynb](03-maths/cs229-course/05_svm.ipynb)
-- [ ] Done  [06_neural_networks_basics.ipynb](03-maths/cs229-course/06_neural_networks_basics.ipynb)
+- [ ] Done  [01_linear_regression.ipynb](03-maths/cs229-course/course/01_linear_regression.ipynb)
+- [ ] Done  [04_logistic_regression.ipynb](03-maths/cs229-course/course/04_logistic_regression.ipynb)
+- [ ] Done  [07_regularization.ipynb](03-maths/cs229-course/course/07_regularization.ipynb)
+- [ ] Done  [06_svm.ipynb](03-maths/cs229-course/course/06_svm.ipynb)
+- [ ] Done  [10_neural_networks_basics.ipynb](03-maths/cs229-course/course/10_neural_networks_basics.ipynb)
 
 ### Video Courses
 - [ ] Done  Stanford CS229 (first 10 lectures) - see [22-references/videos/](22-references/videos/)
 - [ ] Watch StatQuest ML fundamentals
 
----
 
 ## Phase 3: Tokenization (8 notebooks)
 
-**Goal**: Master text tokenization and encoding
 
 ### Tokenizer Notebooks
 - [ ] Done  [01_tokenizers_quickstart.ipynb](04-token/01_tokenizers_quickstart.ipynb)
@@ -140,11 +119,9 @@ Choose your learning track before starting:
 - [ ] Done  [README_TIKTOKEN.md](04-token/README_TIKTOKEN.md)
 - [ ] Done  [huggingface_tokenizers_guide.md](04-token/huggingface_tokenizers_guide.md)
 
----
 
 ## Phase 4: Embeddings (10 notebooks)
 
-**Goal**: Understand vector representations of text
 
 ### Core Embedding Notebooks
 - [ ] Done  [embeddings_intro.ipynb](05-embeddings/embeddings_intro.ipynb)
@@ -166,11 +143,9 @@ Choose your learning track before starting:
 - [ ] Done  [README.md](05-embeddings/README.md)
 - [ ] Done  [QUICKSTART.md](05-embeddings/QUICKSTART.md)
 
----
 
 ## Phase 5: Neural Networks
 
-**Goal**: Build and train neural networks from scratch
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](06-neural-networks/00_START_HERE.ipynb) - Overview and learning path
@@ -196,11 +171,9 @@ Choose your learning track before starting:
 - [ ] Implement backpropagation by hand for a 2-layer network
 - [ ] Train a transformer on a character-level language modeling task
 
----
 
 ## Phase 6: Vector Databases (7 notebooks)
 
-**Goal**: Store and query high-dimensional vectors
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](07-vector-databases/00_START_HERE.ipynb)
@@ -209,6 +182,7 @@ Choose your learning track before starting:
 - [ ] Done  [03_qdrant_guide.ipynb](07-vector-databases/03_qdrant_guide.ipynb)
 - [ ] Done  [04_weaviate_guide.ipynb](07-vector-databases/04_weaviate_guide.ipynb)
 - [ ] Done  [05_milvus_guide.ipynb](07-vector-databases/05_milvus_guide.ipynb)
+- [ ] Done  [06_aurora_pgvector_guide.ipynb](07-vector-databases/06_aurora_pgvector_guide.ipynb)
 
 ### Documentation
 - [ ] Done  [README.md](07-vector-databases/README.md)
@@ -218,11 +192,9 @@ Choose your learning track before starting:
 - [ ] Deploy a vector database locally
 - [ ] Benchmark different vector databases
 
----
 
 ## Phase 7: RAG Systems
 
-**Goal**: Build Retrieval-Augmented Generation systems
 
 ### Core RAG Notebooks
 - [ ] Done  [00_START_HERE.ipynb](08-rag/00_START_HERE.ipynb) - RAG overview and pipeline architecture
@@ -249,11 +221,9 @@ Choose your learning track before starting:
 - [ ] Implement RAG with RAGAS evaluation metrics
 - [ ] Build a fully local RAG (Ollama + ChromaDB, no cloud APIs)
 
----
 
 ## Phase 8: MLOps
 
-**Goal**: Deploy and monitor ML models in production
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](09-mlops/00_START_HERE.ipynb) - MLOps lifecycle overview
@@ -278,11 +248,9 @@ Choose your learning track before starting:
 - [ ] Set up MLflow experiment tracking for any training run
 - [ ] Deploy a local LLM server with vLLM (OpenAI-compatible endpoint)
 
----
 
 ## Phase 9: Specializations
 
-**Goal**: Go deep in one domain. Pick ONE path based on your target role. Do not try all three.
 
 - [ ] Done  [10-specializations/README.md](10-specializations/README.md) for guidance on choosing your path
 
@@ -314,11 +282,9 @@ Choose your learning track before starting:
 ### Microsoft Labs
 - [ ] Done  [AI Agents for Beginners](https://github.com/microsoft/ai-agents-for-beginners)
 
----
 
-## Phase 10: Prompt Engineering (4 notebooks) 🔥
+## Phase 10: Prompt Engineering (6 notebooks) 🔥
 
-**Goal**: Master LLM prompting techniques
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](11-prompt-engineering/00_START_HERE.ipynb)
@@ -326,6 +292,7 @@ Choose your learning track before starting:
 - [ ] Done  [02_chain_of_thought.ipynb](11-prompt-engineering/02_chain_of_thought.ipynb)
 - [ ] Done  [03_react_prompting.ipynb](11-prompt-engineering/03_react_prompting.ipynb)
 - [ ] Done  [05_structured_outputs_dspy.ipynb](11-prompt-engineering/05_structured_outputs_dspy.ipynb) - DSPy: programmatic prompt optimization and structured outputs
+- [ ] Done  [06_long_context_strategies.ipynb](11-prompt-engineering/06_long_context_strategies.ipynb) - long-context prompting, chunking, and retrieval-aware strategies
 
 ### Documentation
 - [ ] Done  [README.md](11-prompt-engineering/README.md)
@@ -339,11 +306,9 @@ Choose your learning track before starting:
 - [ ] Create a prompt optimization system
 - [ ] Build a multi-step reasoning chain
 
----
 
-## Phase 11: LLM Fine-tuning (8 notebooks) 🔥
+## Phase 11: LLM Fine-tuning (12 notebooks) 🔥
 
-**Goal**: Fine-tune large language models from data prep to production deployment
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](12-llm-finetuning/00_START_HERE.ipynb) - Overview, decision framework, hardware guide
@@ -356,6 +321,8 @@ Choose your learning track before starting:
 - [ ] Done  [07_deployment.ipynb](12-llm-finetuning/07_deployment.ipynb) - vLLM, Ollama, Docker, production serving
 - [ ] Done  [08_grpo_reasoning_training.ipynb](12-llm-finetuning/08_grpo_reasoning_training.ipynb) - GRPO: training reasoning models (DeepSeek-style)
 - [ ] Done  [09_unsloth_fast_finetuning.ipynb](12-llm-finetuning/09_unsloth_fast_finetuning.ipynb) - 2-4x faster fine-tuning with Unsloth
+- [ ] Done  [10_quantization_gptq_awq.ipynb](12-llm-finetuning/10_quantization_gptq_awq.ipynb) - quantization for deployment efficiency
+- [ ] Done  [11_rlhf_constitutional_ai.ipynb](12-llm-finetuning/11_rlhf_constitutional_ai.ipynb) - RLHF, constitutional AI, and alignment framing
 
 ### Documentation
 - [ ] Done  [README.md](12-llm-finetuning/README.md)
@@ -370,11 +337,9 @@ Choose your learning track before starting:
 - [ ] Deploy a fine-tuned model with vLLM
 - [ ] Compare QLoRA vs DoRA quality vs memory tradeoffs
 
----
 
 ## Phase 12: Multimodal AI 🔥
 
-**Goal**: Work with vision, audio, and video models
 
 ### Vision-Language Models
 - [ ] Done  [vision-language/01_clip_basics.ipynb](13-multimodal/vision-language/01_clip_basics.ipynb) - CLIP: aligning image and text embeddings, zero-shot classification
@@ -385,24 +350,23 @@ Choose your learning track before starting:
 ### Documentation
 - [ ] Done  [README.md](13-multimodal/README.md)
 
-> Note: For deeper multimodal coverage, also see Path A in Phase 9 (Computer Vision) which includes CLIP embeddings, Stable Diffusion, and multimodal RAG.
 
 ### Projects
 - [ ] Build an image search engine: embed images with CLIP, query by text
 - [ ] Create a text-to-image generator with custom prompts and negative prompts
-- [ ] Build a multimodal chatbot that can describe and discuss images (use GPT-4o or LLaVA locally)
+- [ ] Build a multimodal chatbot that can describe and discuss images (use GPT-5.4, Gemini 3.1, or Qwen2.5-VL locally)
 
----
 
-## Phase 13: Local LLMs (4 notebooks) 🔥
+## Phase 13: Local LLMs (6 notebooks) 🔥
 
-**Goal**: Run LLMs locally without cloud dependencies
 
 ### Core Notebooks
+- [ ] Done  [00_START_HERE.ipynb](14-local-llms/00_START_HERE.ipynb) - local LLM setup overview and learning path
 - [ ] Done  [01_ollama_quickstart.ipynb](14-local-llms/01_ollama_quickstart.ipynb) - Ollama setup and first models
 - [ ] Done  [02_open_source_models_overview.ipynb](14-local-llms/02_open_source_models_overview.ipynb) - Model landscape comparison
 - [ ] Done  [03_local_rag_with_ollama.ipynb](14-local-llms/03_local_rag_with_ollama.ipynb) - Fully local RAG (Ollama + ChromaDB)
 - [ ] Done  [04_llm_server_and_api.ipynb](14-local-llms/04_llm_server_and_api.ipynb) - vLLM, llama.cpp, OpenAI-compatible servers
+- [ ] Done  [05_speculative_decoding.ipynb](14-local-llms/05_speculative_decoding.ipynb) - latency reduction and local inference optimization concepts
 
 ### Documentation
 - [ ] Done  [README.md](14-local-llms/README.md)
@@ -411,15 +375,13 @@ Choose your learning track before starting:
 - [ ] Matthew Berman - Local LLMs
 
 ### Projects
-- [ ] Set up Ollama and run Qwen2.5 / Llama 3.3 locally
+- [ ] Set up Ollama and run Qwen 3 / Llama 4 locally
 - [ ] Build a fully local private RAG system over your documents
 - [ ] Deploy a local LLM server with OpenAI-compatible API
 
 ## Phase 14: AI Agents (9 notebooks) 🔥 HOT TOPIC
 
-**Goal**: Build autonomous AI systems that plan, use tools, and complete multi-step tasks
 
-> AI Agents are the #1 most in-demand AI skill in 2026. Employers want engineers who can build reliable, production-grade agents.
 
 ### Core Notebooks
 - [ ] Done  [01_intro_to_agents.ipynb](15-ai-agents/01_intro_to_agents.ipynb) - What agents are, ReAct loop, agent anatomy
@@ -445,11 +407,9 @@ Choose your learning track before starting:
 - [ ] Build an MCP-powered agent connected to your own data sources
 - [ ] Create a LangGraph stateful agent with persistent memory
 
----
 
 ## Phase 15: Real-Time Streaming AI (4 notebooks) 🔥
 
-**Goal**: Build production-grade streaming and real-time AI applications
 
 ### Core Notebooks
 - [ ] Done  [01_streaming_responses.ipynb](20-real-time-streaming/01_streaming_responses.ipynb) - SSE, OpenAI/Anthropic streaming, TTFT/TPS metrics
@@ -465,15 +425,12 @@ Choose your learning track before starting:
 - [ ] Create a real-time RAG system that streams sources then answers
 - [ ] Deploy a production streaming server with monitoring dashboards
 
----
 
 ## Supplementary Phases (Do These Alongside or After Core Track)
 
-> These modules enhance every other phase. Model Evaluation pairs with Phase 7 (RAG). Low-Code Tools accelerate portfolio project demos. Debugging applies to all projects. AI Safety applies before any production deployment.
 
 ### Model Evaluation — [16-model-evaluation/](16-model-evaluation/)
 
-**Goal**: Rigorously evaluate model quality, fairness, and LLM outputs
 
 - [ ] Done  [01_classification_metrics.ipynb](16-model-evaluation/01_classification_metrics.ipynb) - Precision, recall, F1, ROC-AUC, confusion matrices
 - [ ] Done  [02_regression_metrics.ipynb](16-model-evaluation/02_regression_metrics.ipynb) - RMSE, MAE, R², residual analysis
@@ -483,11 +440,9 @@ Choose your learning track before starting:
 - [ ] Done  [16-model-evaluation/README.md](16-model-evaluation/README.md)
 - [ ] Done  [16-model-evaluation/assignment.md](16-model-evaluation/assignment.md)
 
----
 
 ### Debugging & Troubleshooting — [17-debugging-troubleshooting/](17-debugging-troubleshooting/)
 
-**Goal**: Diagnose and fix the most common failures in ML systems
 
 - [ ] Done  [01_debugging_workflow.ipynb](17-debugging-troubleshooting/01_debugging_workflow.ipynb) - Systematic debugging: data → model → serving
 - [ ] Done  [02_data_issues.ipynb](17-debugging-troubleshooting/02_data_issues.ipynb) - Missing values, class imbalance, label noise, distribution shift
@@ -496,13 +451,10 @@ Choose your learning track before starting:
 - [ ] Done  [05_error_analysis.ipynb](17-debugging-troubleshooting/05_error_analysis.ipynb) - Confusion matrix deep dive, error slicing, failure mode analysis
 - [ ] Done  [17-debugging-troubleshooting/README.md](17-debugging-troubleshooting/README.md)
 
----
 
 ### Low-Code AI Tools — [18-low-code-ai-tools/](18-low-code-ai-tools/)
 
-**Goal**: Build and deploy AI demos quickly — essential for portfolio projects
 
-> Do Phase 18 EARLY (after Phase 7 RAG). Gradio/Streamlit turns your notebooks into shareable demos that impress employers.
 
 - [ ] Done  [01_gradio_basics.ipynb](18-low-code-ai-tools/01_gradio_basics.ipynb) - Build ML demos in minutes with Gradio
 - [ ] Done  [02_streamlit_apps.ipynb](18-low-code-ai-tools/02_streamlit_apps.ipynb) - Data apps with Streamlit
@@ -511,15 +463,11 @@ Choose your learning track before starting:
 - [ ] Done  [05_end_to_end_project.ipynb](18-low-code-ai-tools/05_end_to_end_project.ipynb) - Full project: model → Gradio → HF Spaces deployment
 - [ ] Done  [18-low-code-ai-tools/README.md](18-low-code-ai-tools/README.md)
 
-**Project**: Deploy your RAG chatbot on HuggingFace Spaces with a Gradio UI — link this in your resume.
 
----
 
 ### AI Safety & Red Teaming — [19-ai-safety-redteaming/](19-ai-safety-redteaming/)
 
-**Goal**: Build AI systems that are secure, private, and resistant to misuse
 
-> Required reading before deploying any LLM application publicly. Employers increasingly ask about AI safety in interviews.
 
 - [ ] Done  [01_prompt_security.ipynb](19-ai-safety-redteaming/01_prompt_security.ipynb) - Prompt injection attacks and defenses
 - [ ] Done  [02_content_moderation.ipynb](19-ai-safety-redteaming/02_content_moderation.ipynb) - Filtering harmful content with classifiers and LLM guards
@@ -529,7 +477,6 @@ Choose your learning track before starting:
 - [ ] Done  [19-ai-safety-redteaming/README.md](19-ai-safety-redteaming/README.md)
 - [ ] Done  [19-ai-safety-redteaming/quiz.md](19-ai-safety-redteaming/quiz.md)
 
----
 
 ## 🧪 Hands-On Labs
 
@@ -550,11 +497,9 @@ Choose your learning track before starting:
 - [ ] Try Google Cloud AI Studio
 - [ ] Deploy a model on cloud
 
----
 
 ## 🎓 MDTP Framework - Comprehensive Knowledge Map
 
-This advanced framework covers the full breadth of AI/ML from theoretical foundations to production systems. Use this as a comprehensive checklist to ensure you've covered all critical areas.
 
 ### M - Models
 
@@ -775,14 +720,12 @@ This advanced framework covers the full breadth of AI/ML from theoretical founda
 - [ ] **AI watermarking and detection**
 - [ ] **Copyright and IP issues** with generative AI
 
----
 
 ## 📚 Documentation & Resources
 
 - [ ] Done  [22-references/README.md](22-references/README.md) - All hands-on labs
 - [ ] Done  [REFERENCES.md](REFERENCES.md) - Full curated video, repo, and paper list
 
----
 
 ## 🎯 Final Projects (Build Your Portfolio)
 
@@ -806,11 +749,9 @@ This advanced framework covers the full breadth of AI/ML from theoretical founda
 - [ ] Build CI/CD pipeline for ML
 - [ ] Create monitoring dashboard for ML models
 
----
 
 ## ⭐ Completion Milestones
 
-Track your major achievements:
 
 - [ ] **Foundation Complete** - Phases 0-2 done (Python, Math, ML basics)
 - [ ] **Modern AI Stack** - Phases 3-6 done (Tokenization, Embeddings, Neural Nets, Vector DBs)
@@ -820,13 +761,10 @@ Track your major achievements:
 - [ ] **Portfolio Built** - 5+ projects deployed and documented
 - [ ] **Certified** - At least 1 ML certification (AWS, Google, Azure, or DeepLearning.AI)
 
----
 
 ## Phase 24: Advanced Deep Learning (RESEARCH LEVEL) 🔬
 
-**Goal**: Master cutting-edge deep learning research topics
 
-**Prerequisites**: Complete Phase 6 (Neural Networks) and Phase 3 (Advanced Mathematics)
 
 ### Generative Models - Advanced
 - [ ] Done  [01_gan_mathematics.ipynb](24-advanced-deep-learning/01_gan_mathematics.ipynb) - GAN theory and vanilla implementation
@@ -842,63 +780,56 @@ Track your major achievements:
 - [ ] Vision Transformers (ViT)
 - [ ] Advanced Transformer architectures
 
-**See**: [24-advanced-deep-learning/README.md](24-advanced-deep-learning/README.md) for full roadmap
 
----
 
-## Phase 25: Reinforcement Learning (6 notebooks)
+## Phase 25: Reinforcement Learning (7 notebooks)
 
-**Goal**: Master reinforcement learning from fundamentals to advanced algorithms
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](25-reinforcement-learning/00_START_HERE.ipynb) - RL fundamentals and overview
 - [ ] Done  [01_markov_decision_processes.ipynb](25-reinforcement-learning/01_markov_decision_processes.ipynb) - MDP theory and Bellman equations
-- [ ] Done  [02_dynamic_programming.ipynb](25-reinforcement-learning/02_dynamic_programming.ipynb) - Value iteration and policy iteration
-- [ ] Done  [03_monte_carlo_methods.ipynb](25-reinforcement-learning/03_monte_carlo_methods.ipynb) - MC prediction and control
-- [ ] Done  [04_temporal_difference_learning.ipynb](25-reinforcement-learning/04_temporal_difference_learning.ipynb) - TD learning, Q-learning, SARSA
-- [ ] Done  [05_function_approximation.ipynb](25-reinforcement-learning/05_function_approximation.ipynb) - Linear function approximation
+- [ ] Done  [02_q_learning.ipynb](25-reinforcement-learning/02_q_learning.ipynb) - tabular RL and temporal-difference learning
+- [ ] Done  [03_deep_q_networks.ipynb](25-reinforcement-learning/03_deep_q_networks.ipynb) - function approximation with deep networks
+- [ ] Done  [04_policy_based_methods.ipynb](25-reinforcement-learning/04_policy_based_methods.ipynb) - policy gradients and actor-critic ideas
+- [ ] Done  [05_advanced_topics_applications.ipynb](25-reinforcement-learning/05_advanced_topics_applications.ipynb) - broader RL applications and advanced concepts
+- [ ] Done  [06_practical_exercises.ipynb](25-reinforcement-learning/06_practical_exercises.ipynb) - hands-on RL practice
 
 ### Advanced Topics
 - [ ] Policy gradients and actor-critic methods (planned)
 - [ ] Deep reinforcement learning (planned)
 - [ ] Multi-agent reinforcement learning (planned)
 
-**See**: [25-reinforcement-learning/README.md](25-reinforcement-learning/README.md) for full roadmap
 
----
 
-## Phase 26: Time Series Analysis & Forecasting (6 notebooks)
+## Phase 26: Time Series Analysis & Forecasting (7 notebooks)
 
-**Goal**: Master time series analysis, forecasting, and temporal pattern recognition
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](26-time-series-analysis/00_START_HERE.ipynb) - Time series fundamentals
-- [ ] Done  [01_stationarity_unit_roots.ipynb](26-time-series-analysis/01_stationarity_unit_roots.ipynb) - Stationarity tests and unit root problems
-- [ ] Done  [02_arima_models.ipynb](26-time-series-analysis/02_arima_models.ipynb) - ARIMA, SARIMA, and seasonal models
-- [ ] Done  [03_exponential_smoothing.ipynb](26-time-series-analysis/03_exponential_smoothing.ipynb) - ETS models and Holt-Winters
-- [ ] Done  [04_prophet_forecasting.ipynb](26-time-series-analysis/04_prophet_forecasting.ipynb) - Facebook Prophet for business forecasting
-- [ ] Done  [05_neural_forecasting.ipynb](26-time-series-analysis/05_neural_forecasting.ipynb) - LSTM and Transformer forecasting
+- [ ] Done  [01_time_series_fundamentals.ipynb](26-time-series-analysis/01_time_series_fundamentals.ipynb) - decomposition, autocorrelation, and forecasting basics
+- [ ] Done  [02_classical_statistical_methods.ipynb](26-time-series-analysis/02_classical_statistical_methods.ipynb) - ARIMA-style and statistical forecasting methods
+- [ ] Done  [03_facebook_prophet.ipynb](26-time-series-analysis/03_facebook_prophet.ipynb) - Prophet for business forecasting workflows
+- [ ] Done  [04_deep_learning_time_series.ipynb](26-time-series-analysis/04_deep_learning_time_series.ipynb) - deep learning approaches for forecasting
+- [ ] Done  [05_advanced_techniques_applications.ipynb](26-time-series-analysis/05_advanced_techniques_applications.ipynb) - advanced forecasting and applied scenarios
+- [ ] Done  [06_practical_applications_exercises.ipynb](26-time-series-analysis/06_practical_applications_exercises.ipynb) - hands-on forecasting exercises
 
 ### Advanced Topics
 - [ ] GARCH models for volatility (planned)
 - [ ] State space models (planned)
 - [ ] Bayesian time series (planned)
 
-**See**: [26-time-series-analysis/README.md](26-time-series-analysis/README.md) for full roadmap
 
----
 
-## Phase 27: Causal Inference & Experimental Design (6 notebooks)
+## Phase 27: Causal Inference & Experimental Design (7 notebooks)
 
-**Goal**: Master causal inference methods and experimental design principles
 
 ### Core Notebooks
 - [ ] Done  [00_START_HERE.ipynb](27-causal-inference/00_START_HERE.ipynb) - Causal inference overview
-- [ ] Done  [01_potential_outcomes.ipynb](27-causal-inference/01_potential_outcomes.ipynb) - Rubin causal model
+- [ ] Done  [01_causal_fundamentals.ipynb](27-causal-inference/01_causal_fundamentals.ipynb) - causal questions, estimands, and foundational ideas
 - [ ] Done  [02_causal_graphs_dags.ipynb](27-causal-inference/02_causal_graphs_dags.ipynb) - DAGs and causal graphs
 - [ ] Done  [03_experimental_design.ipynb](27-causal-inference/03_experimental_design.ipynb) - RCT design and analysis
 - [ ] Done  [04_observational_methods.ipynb](27-causal-inference/04_observational_methods.ipynb) - Propensity scores, matching
-- [ ] Done  [05_confounding_bias.ipynb](27-causal-inference/05_confounding_bias.ipynb) - Simpson's paradox, collider bias
+- [ ] Done  [05_advanced_topics_applications.ipynb](27-causal-inference/05_advanced_topics_applications.ipynb) - advanced topics, confounding, and applied causal analysis
 - [ ] Done  [06_quasi_experimental_designs.ipynb](27-causal-inference/06_quasi_experimental_designs.ipynb) - RDD, DiD, IV methods
 
 ### Advanced Topics
@@ -906,9 +837,7 @@ Track your major achievements:
 - [ ] Causal discovery (planned)
 - [ ] Difference-in-differences with multiple periods (planned)
 
-**See**: [27-causal-inference/README.md](27-causal-inference/README.md) for full roadmap
 
----
 
 ## 🏆 Completion Milestones
 
@@ -920,7 +849,6 @@ Track your major achievements:
 - [ ] **Portfolio Built** - 5+ projects deployed and documented
 - [ ] **Certified** - At least 1 ML certification (AWS, Google, Azure, or DeepLearning.AI)
 
----
 
 ## 🎓 Next Steps After Completion
 
@@ -933,11 +861,9 @@ Track your major achievements:
 - [ ] Read and implement papers from top conferences (NeurIPS, ICML, ICLR)
 - [ ] Contribute to ML research
 
----
 
 ## Career Readiness Milestones
 
-Track job-readiness separately from learning completion:
 
 - [ ] **Resume Updated** — AI/ML skills section added, projects listed
 - [ ] **LinkedIn Updated** — Headline reflects AI/ML focus, summary updated
@@ -951,25 +877,10 @@ Track job-readiness separately from learning completion:
 - [ ] **Networking** — Connected with 10+ AI engineers on LinkedIn
 - [ ] **Applications Sent** — Applied to 20+ positions
 
----
 
 ## Key Resources Quick Links
 
-| Need | Go To |
-|------|--------|
-| Understanding a phase conceptually | [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) |
-| Finding videos or repos for a phase | [REFERENCES.md](REFERENCES.md) |
-| Preparing for interviews | [CAREER_ROADMAP.md](CAREER_ROADMAP.md) |
-| Interview Q&A, coding problems, system design | [INTERVIEW_PREP.md](INTERVIEW_PREP.md) |
-| AI/ML terminology | [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md) |
-| Model comparisons | [COMPARISON_MATRICES.md](COMPARISON_MATRICES.md) |
-| Setup problems | [00-course-setup/troubleshooting.md](00-course-setup/troubleshooting.md) |
 
----
 
-**Total Progress**: `___/790+` notebooks completed (732 foundational + 58+ advanced)
 
----
 
-*Last Updated: March 2026*
-*Repository: <https://github.com/PavanMudigonda/zero-to-ai>*

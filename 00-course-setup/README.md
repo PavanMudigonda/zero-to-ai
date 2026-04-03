@@ -7,7 +7,7 @@
 1. **Fork & Clone**: Click "Fork" → `git clone https://github.com/YOUR-USERNAME/zero-to-ai.git`
 2. **Install**: Run `./install_dependencies.sh` (uses UV - fastest!)
 3. **Start**: `jupyter notebook` → Open any `.ipynb` file
-4. **Begin Learning**: Start with [02-data-science/00_START_HERE.ipynb](../02-data-science/00_START_HERE.ipynb)
+4. **Begin Learning**: Read [../MASTER_STUDY_GUIDE.md](../MASTER_STUDY_GUIDE.md), then choose the first phase for your track
 
 **Not ready?** See detailed setup below.
 
@@ -63,7 +63,7 @@ git clone --depth 1 --filter=blob:none --sparse https://github.com/YOUR-USERNAME
 cd zero-to-ai
 
 # Choose specific sections
-git sparse-checkout set 1-data-science 5-neural-networks 10-prompt-engineering
+git sparse-checkout set 02-data-science 06-neural-networks 11-prompt-engineering
 ```
 
 ## 🚀 Environment Setup
@@ -245,7 +245,7 @@ zero-to-ai/
 
 1. ✅ **Complete Setup**: Ensure your environment is working
 2. ✅ **Read the Checklist**: Open [checklist.md](../checklist.md) - your complete roadmap
-3. ✅ **Start Learning**: Begin with [02-data-science/00_START_HERE.ipynb](../02-data-science/00_START_HERE.ipynb)
+3. ✅ **Start Learning**: Begin with [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md), then move to the first phase for your track
 4. ✅ **Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
 5. ✅ **Join Community**: Connect with other learners for support
 
@@ -285,7 +285,7 @@ Before moving to Lesson 1, ensure:
 
 **Congratulations!** 🎉 You're all set up and ready to begin your AI journey!
 
-**Next Stop**: [Lesson 1: Python & Data Science →](../1-data-science/README.md)
+**Next Stop**: [Lesson 1: Python & Data Science →](../02-data-science/README.md)
 
 ---
 

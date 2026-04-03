@@ -71,7 +71,10 @@ from your_vector_db import VectorDB  # Chroma, Qdrant, etc.
 from openai import OpenAI
 
 # 1. Index your documents
-model = SentenceTransformer('all-MiniLM-L6-v2')
+# Use any embedding model - see 05-embeddings/embedding_comparison.md for options
+# API: Gemini Embedding (cheapest + best), Voyage 3.5, or OpenAI
+# Local: Qwen3-Embedding, BGE-M3, or all-MiniLM-L6-v2
+model = SentenceTransformer('all-MiniLM-L6-v2')  # local, fast
 docs = ["Your documents here..."]
 embeddings = model.encode(docs)
 db.add(documents=docs, embeddings=embeddings)
@@ -81,7 +84,7 @@ query = "What is RAG?"
 query_embedding = model.encode(query)
 results = db.search(query_embedding, top_k=3)
 
-# 3. Generate answer with LLM
+# 3. Generate answer with LLM (Claude, GPT, Gemini, or local)
 context = "\n".join(results)
 prompt = f"Context: {context}\n\nQuestion: {query}\n\nAnswer:"
 response = llm.generate(prompt)
@@ -126,9 +129,10 @@ response = llm.generate(prompt)
 - Haystack - Production-focused
 
 **LLM Providers:**
-- OpenAI (GPT-3.5, GPT-4)
-- Anthropic (Claude)
-- Local models (Llama, Mistral via Ollama)
+- OpenAI (GPT-5.4, GPT-4.1, GPT-4.1-mini)
+- Anthropic (Claude Sonnet 4.6, Haiku 4.5)
+- Google (Gemini 3.1 Pro, Flash)
+- Local models (Qwen 3, Llama 4, DeepSeek R1 via Ollama)
 
 **Vector Databases:**
 - Use what you learned in Phase 6!
