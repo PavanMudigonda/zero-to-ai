@@ -58,7 +58,7 @@ plugins:
       execute: false
       allow_errors: true
   - minify:
-      minify_html: true
+      minify_html: false
 
 markdown_extensions:
   - admonition
