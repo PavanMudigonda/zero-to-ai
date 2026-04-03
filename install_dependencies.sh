@@ -54,11 +54,9 @@ echo "📦 UV version:"
 uv --version
 echo ""
 
-# Create virtual environment with UV
-echo "🔧 Creating virtual environment..."
-uv venv .venv --python 3.11
-echo "✅ Virtual environment created at .venv/"
-echo ""
+# Manage dependencies entirely using uv sync (Handles venv creation and locking)
+echo "🔧 Syncing workspace dependencies with uv sync (this is FAST!)..."
+uv sync --python 3.11
 
 # Activate virtual environment
 echo "🔌 Activating virtual environment..."
@@ -66,15 +64,7 @@ source .venv/bin/activate
 echo "✅ Virtual environment activated"
 echo ""
 
-# Install dependencies using UV
-echo "📥 Installing dependencies with UV (this is FAST!)..."
-echo ""
-
-# Install main dependencies from pyproject.toml
-uv pip install -e .
-
-echo ""
-echo "✅ All dependencies installed successfully!"
+echo "✅ All dependencies installed successfully and uv.lock updated!"
 echo ""
 
 # Print installed packages
@@ -89,9 +79,9 @@ echo "To activate the environment in the future, run:"
 echo "  source .venv/bin/activate"
 echo ""
 echo "To install optional dev dependencies:"
-echo "  uv pip install -e '.[dev]'    # pytest, black, flake8, mypy"
+echo "  uv sync --all-extras    # Includes pytest, black, flake8, mypy"
 echo ""
 echo "To start Jupyter:"
-echo "  jupyter notebook"
+echo "  uv run jupyter notebook"
 echo ""
 echo "Happy learning! 🚀"

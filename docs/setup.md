@@ -1,5 +1,4 @@
-# setup
-# Setup Guide - AIML Learning Repository
+# Setup Guide - Zero to AI
 
 ## Quick Start with UV (Recommended)
 
@@ -30,7 +29,7 @@ source .venv/bin/activate
 jupyter notebook
 
 # Or open a specific notebook
-jupyter notebook 1-token/tiktoken_example.ipynb
+jupyter notebook 04-token/tiktoken_example.ipynb
 ```
 
 ---
@@ -59,13 +58,7 @@ source .venv/bin/activate  # On macOS/Linux
 # Core dependencies
 uv pip install -r requirements.txt
 
-# With development tools
-uv pip install -r requirements-dev.txt
-
-# With AWS tools
-uv pip install -r requirements-aws.txt
-
-# Or install specific extras from pyproject.toml
+# Or install specific packages from the curriculum stack
 uv pip install torch transformers tiktoken sentence-transformers jupyter
 ```
 
@@ -83,9 +76,6 @@ source .venv/bin/activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Or with dev/AWS tools
-pip install -r requirements-dev.txt
-pip install -r requirements-aws.txt
 ```
 
 ---
@@ -142,12 +132,11 @@ jupyter notebook
 
 Once setup is complete, follow this path:
 
-1. **23-glossary/** - AI/ML terminology
-2. **04-token/** - Tokenization (tiktoken, sentencepiece)
-3. **05-embeddings/** - Word/sentence embeddings
-4. **07-vector-databases/** - Chroma, Qdrant, Weaviate, Milvus, pgvector
-5. **06-neural-networks/** - From scratch to Transformers
-6. Start with `00_START_HERE.ipynb` in each section!
+1. [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md)
+2. [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)
+3. [checklist.md](checklist.md)
+4. Start with the first phase for your chosen track
+5. Use `00_START_HERE.ipynb` inside each module when available
 
 ---
 
