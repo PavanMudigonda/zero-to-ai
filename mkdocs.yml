@@ -103,9 +103,9 @@ nav:
       - Installation: generated/setup.md
       - Checklist: generated/checklist.md
   - Learning Tracks:
-      - Study Guide: MASTER_STUDY_GUIDE.md
-      - Career Roadmap: CAREER_ROADMAP.md
-      - Interview Prep: INTERVIEW_PREP.md
+      - Study Guide: generated/MASTER_STUDY_GUIDE.md
+      - Career Roadmap: generated/CAREER_ROADMAP.md
+      - Interview Prep: generated/INTERVIEW_PREP.md
   - Curriculum:
       - Foundations:
           - "Phase 0: Course Setup": curriculum/00-course-setup/README.md
@@ -147,10 +147,10 @@ nav:
           - "Phase 29: AI Hardware": curriculum/29-ai-hardware/README.md
           - "Phase 30: Inference Optimization": curriculum/30-inference-opt/README.md
   - Guides:
-      - Model Comparisons: COMPARISON_MATRICES.md
-      - References & Resources: REFERENCES.md
-      - Changelog: CHANGELOG.md
+      - Model Comparisons: generated/COMPARISON_MATRICES.md
+      - References & Resources: generated/REFERENCES.md
+      - Changelog: generated/CHANGELOG.md
   - Contributing:
-      - How to Contribute: CONTRIBUTING.md
-      - Code of Conduct: CODE_OF_CONDUCT.md
-      - Support: SUPPORT.md
+      - How to Contribute: generated/CONTRIBUTING.md
+      - Code of Conduct: generated/CODE_OF_CONDUCT.md
+      - Support: generated/SUPPORT.md
