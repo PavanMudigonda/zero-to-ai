@@ -104,6 +104,8 @@ python - <<'PY'
 from pathlib import Path
 import os
 import re
+from typing import Optional
+from urllib.parse import urlsplit
 
 repo_root = Path(os.environ["REPO_ROOT"])
 docs_dir = Path(os.environ["DOCS_DIR"])
@@ -123,90 +125,129 @@ source_to_target = {
     "30-inference-optimization": "30-inference-opt",
 }
 
-phase_prefixes = {
-    *(f"{i:02d}-{name}" for i, name in []),
-}
-phase_roots = {
-    "00-course-setup", "01-python", "02-data-science", "03-maths", "04-token",
-    "05-embeddings", "06-neural-networks", "07-vector-databases", "08-rag",
-    "09-mlops", "10-specializations", "11-prompt-engineering",
-    "12-llm-finetuning", "13-multimodal", "14-local-llms", "15-ai-agents",
-    "16-model-evaluation", "17-debugging", "17-debugging-troubleshooting",
-    "18-low-code", "18-low-code-ai-tools", "19-ai-safety",
-    "19-ai-safety-redteaming", "20-streaming", "20-real-time-streaming",
-    "21-quizzes", "22-references", "23-glossary", "24-advanced-dl",
-    "24-advanced-deep-learning", "25-rl", "25-reinforcement-learning",
-    "26-time-series", "26-time-series-analysis", "27-causal-inference",
-    "28-practical-ds", "28-practical-data-science", "29-ai-hardware",
-    "29-ai-hardware-llm-validation", "30-inference-opt",
-    "30-inference-optimization",
+target_to_source = {target: source for source, target in source_to_target.items()}
+phase_output_dirs = {
+    "00-course-setup": "00-course-setup",
+    "01-python": "01-python",
+    "02-data-science": "02-data-science",
+    "03-maths": "03-maths",
+    "04-token": "04-token",
+    "05-embeddings": "05-embeddings",
+    "06-neural-networks": "06-neural-networks",
+    "07-vector-databases": "07-vector-databases",
+    "08-rag": "08-rag",
+    "09-mlops": "09-mlops",
+    "10-specializations": "10-specializations",
+    "11-prompt-engineering": "11-prompt-engineering",
+    "12-llm-finetuning": "12-llm-finetuning",
+    "13-multimodal": "13-multimodal",
+    "14-local-llms": "14-local-llms",
+    "15-ai-agents": "15-ai-agents",
+    "16-model-evaluation": "16-model-evaluation",
+    "17-debugging-troubleshooting": "17-debugging",
+    "18-low-code-ai-tools": "18-low-code",
+    "19-ai-safety-redteaming": "19-ai-safety",
+    "20-real-time-streaming": "20-streaming",
+    "21-quizzes": "21-quizzes",
+    "22-references": "22-references",
+    "23-glossary": "23-glossary",
+    "24-advanced-deep-learning": "24-advanced-dl",
+    "25-reinforcement-learning": "25-rl",
+    "26-time-series-analysis": "26-time-series",
+    "27-causal-inference": "27-causal-inference",
+    "28-practical-data-science": "28-practical-ds",
+    "29-ai-hardware-llm-validation": "29-ai-hardware",
+    "30-inference-optimization": "30-inference-opt",
 }
 
 site_doc_outputs = {
-    "setup.md": "generated/setup.md",
+    "CAREER_ROADMAP.md": "generated/CAREER_ROADMAP.md",
+    "CHANGELOG.md": "generated/CHANGELOG.md",
+    "CODE_OF_CONDUCT.md": "generated/CODE_OF_CONDUCT.md",
+    "COMPARISON_MATRICES.md": "generated/COMPARISON_MATRICES.md",
+    "CONTRIBUTING.md": "generated/CONTRIBUTING.md",
+    "INTERVIEW_PREP.md": "generated/INTERVIEW_PREP.md",
+    "LICENSE.md": "generated/LICENSE.md",
+    "MASTER_STUDY_GUIDE.md": "generated/MASTER_STUDY_GUIDE.md",
+    "REFERENCES.md": "generated/REFERENCES.md",
+    "SUPPORT.md": "generated/SUPPORT.md",
+    "WORKSPACE_LEARNING_REVIEW.md": "generated/WORKSPACE_LEARNING_REVIEW.md",
     "checklist.md": "generated/checklist.md",
-}
-
-root_doc_targets = {
-    "README.md": "../../index.md",
-    "setup.md": "../../generated/setup.md",
-    "checklist.md": "../../generated/checklist.md",
-    "MASTER_STUDY_GUIDE.md": "../../MASTER_STUDY_GUIDE.md",
-    "CAREER_ROADMAP.md": "../../CAREER_ROADMAP.md",
-    "INTERVIEW_PREP.md": "../../INTERVIEW_PREP.md",
-    "REFERENCES.md": "../../REFERENCES.md",
-    "CHANGELOG.md": "../../CHANGELOG.md",
-    "CONTRIBUTING.md": "../../CONTRIBUTING.md",
-    "CODE_OF_CONDUCT.md": "../../CODE_OF_CONDUCT.md",
-    "SUPPORT.md": "../../SUPPORT.md",
-    "COMPARISON_MATRICES.md": "../../COMPARISON_MATRICES.md",
-    "LICENSE.md": "../../LICENSE.md",
-    "WORKSPACE_LEARNING_REVIEW.md": "../../WORKSPACE_LEARNING_REVIEW.md",
+    "setup.md": "generated/setup.md",
 }
 
 link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 
-def map_phase_prefix(path: str) -> str:
-    for source, target in source_to_target.items():
-        if path.startswith(source + "/"):
-            return target + path[len(source):]
-        if path == source:
-            return target
-    return path
+def map_source_rel_to_site(rel_path: Path) -> Optional[Path]:
+    if rel_path == Path("README.md"):
+        return Path("index.md")
+    if rel_path == Path("docs/README.md") or rel_path == Path("docs/index.md"):
+        return Path("index.md")
+    if rel_path.parts and rel_path.parts[0] == "docs":
+        name = rel_path.name
+        if name in site_doc_outputs:
+            return Path(site_doc_outputs[name])
+        return rel_path.relative_to("docs")
+    if rel_path.parts and rel_path.parts[0] in phase_output_dirs:
+        mapped_first = phase_output_dirs[rel_path.parts[0]]
+        rest = rel_path.parts[1:]
+        return Path("curriculum", mapped_first, *rest)
+    return None
 
-def rewrite_site_root_target(target: str) -> str:
-    if "://" in target or target.startswith(("#", "mailto:", "tel:")):
-        return target
-    if target.startswith("curriculum/"):
-        return map_phase_prefix(target)
-    if target in site_doc_outputs:
-        return site_doc_outputs[target]
-    head = target.split("/", 1)[0]
-    if head in phase_roots:
-        return "curriculum/" + map_phase_prefix(target)
-    return target
+def original_path_for_curriculum_output(md_file: Path) -> Path:
+    rel = md_file.relative_to(curriculum_dir)
+    parts = list(rel.parts)
+    parts[0] = target_to_source.get(parts[0], parts[0])
+    return repo_root / Path(*parts)
 
-def rewrite_curriculum_target(target: str) -> str:
-    if "://" in target or target.startswith(("#", "mailto:", "tel:")):
-        return target
+def make_relative_link(current_output_rel: Path, destination_rel: Path) -> str:
+    return Path(os.path.relpath(destination_rel, start=current_output_rel.parent)).as_posix()
 
-    for root_doc, replacement in root_doc_targets.items():
-        if target == f"../{root_doc}":
-            return replacement
-
-    if target.startswith("../"):
-        sibling = target[3:]
-        sibling = map_phase_prefix(sibling)
-        if sibling.endswith("/"):
-            return "../" + sibling + "README.md"
-        return "../" + sibling
-
-    return map_phase_prefix(target)
-
-def rewrite_links(text: str, target_rewriter) -> str:
+def rewrite_links(text: str, current_source_path: Path, current_output_rel: Path) -> str:
     def repl(match):
         label, target = match.groups()
-        return f"[{label}]({target_rewriter(target)})"
+        if target.startswith(("#", "mailto:", "tel:", "javascript:")):
+            return match.group(0)
+
+        parts = urlsplit(target)
+        if parts.scheme or parts.netloc:
+            return match.group(0)
+
+        fragment = f"#{parts.fragment}" if parts.fragment else ""
+        target_path = parts.path
+        if not target_path:
+            return match.group(0)
+
+        resolved = (current_source_path.parent / target_path).resolve(strict=False)
+        try:
+            rel_to_repo = resolved.relative_to(repo_root)
+        except ValueError:
+            if current_source_path.parent == repo_root and target_path.startswith("../"):
+                normalized_target = target_path
+                while normalized_target.startswith("../"):
+                    normalized_target = normalized_target[3:]
+                resolved = (repo_root / normalized_target).resolve(strict=False)
+                try:
+                    rel_to_repo = resolved.relative_to(repo_root)
+                except ValueError:
+                    return match.group(0)
+            else:
+                return match.group(0)
+
+        destination_rel = map_source_rel_to_site(rel_to_repo)
+        if destination_rel is None:
+            basename = Path(target_path).name
+            if basename in site_doc_outputs:
+                destination_rel = Path(site_doc_outputs[basename])
+            else:
+                return match.group(0)
+
+        if target_path.endswith("/") and destination_rel.suffix == "":
+            destination_rel = destination_rel / "README.md"
+
+        rewritten_target = make_relative_link(current_output_rel, destination_rel) + fragment
+        return f"[{label}]({rewritten_target})"
+
     return link_pattern.sub(repl, text)
 
 def write_phase_catalog(phase_dir: Path):
@@ -280,8 +321,10 @@ def write_phase_catalog(phase_dir: Path):
             readme_path.write_text(readme.rstrip() + block + "\n", encoding="utf-8")
 
 for md_file in curriculum_dir.rglob("*.md"):
+    current_output_rel = md_file.relative_to(docs_dir)
+    current_source_path = original_path_for_curriculum_output(md_file)
     text = md_file.read_text(encoding="utf-8")
-    rewritten = rewrite_links(text, rewrite_curriculum_target)
+    rewritten = rewrite_links(text, current_source_path, current_output_rel)
     md_file.write_text(rewritten, encoding="utf-8")
 
 for phase_dir in sorted(p for p in curriculum_dir.iterdir() if p.is_dir()):
@@ -289,9 +332,11 @@ for phase_dir in sorted(p for p in curriculum_dir.iterdir() if p.is_dir()):
 
 for source_name, output_rel in site_doc_outputs.items():
     source_path = docs_dir / source_name
+    current_source_path = repo_root / source_name
     output_path = docs_dir / output_rel
+    current_output_rel = Path(output_rel)
     text = source_path.read_text(encoding="utf-8")
-    rewritten = rewrite_links(text, rewrite_site_root_target)
+    rewritten = rewrite_links(text, current_source_path, current_output_rel)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(rewritten, encoding="utf-8")
 PY
