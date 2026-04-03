@@ -73,3 +73,7 @@ uv.lock
 
 
 source/
+
+# MkDocs
+site/
+docs/curriculum/
