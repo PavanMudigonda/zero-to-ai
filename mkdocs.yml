@@ -52,6 +52,8 @@ theme:
 plugins:
   - search
   - mkdocs-jupyter:
+      include:
+        - "*.ipynb"
       include_source: true
       execute: false
       allow_errors: true
@@ -98,8 +100,8 @@ nav:
   - Home: index.md
   - Getting Started:
       - Course Setup: curriculum/00-course-setup/README.md
-      - Installation: setup.md
-      - Checklist: checklist.md
+      - Installation: generated/setup.md
+      - Checklist: generated/checklist.md
   - Learning Tracks:
       - Study Guide: MASTER_STUDY_GUIDE.md
       - Career Roadmap: CAREER_ROADMAP.md

@@ -1,0 +1,50 @@
+{% include "partials/tags.html" %}
+{% include "partials/actions.html" %}
+{% if "\u003ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{% if page.file and page.file.src_path.endswith(".ipynb") %}
+  {% set launch = namespace(repo_path=page.file.src_path) %}
+  {% if launch.repo_path.startswith("curriculum/") %}
+    {% set launch.repo_path = launch.repo_path[11:] %}
+  {% endif %}
+  {% set phase_aliases = {
+    "17-debugging/": "17-debugging-troubleshooting/",
+    "18-low-code/": "18-low-code-ai-tools/",
+    "19-ai-safety/": "19-ai-safety-redteaming/",
+    "20-streaming/": "20-real-time-streaming/",
+    "24-advanced-dl/": "24-advanced-deep-learning/",
+    "25-rl/": "25-reinforcement-learning/",
+    "26-time-series/": "26-time-series-analysis/",
+    "28-practical-ds/": "28-practical-data-science/",
+    "29-ai-hardware/": "29-ai-hardware-llm-validation/",
+    "30-inference-opt/": "30-inference-optimization/"
+  } %}
+  {% for generated_prefix, source_prefix in phase_aliases.items() %}
+    {% if launch.repo_path.startswith(generated_prefix) %}
+      {% set launch.repo_path = launch.repo_path | replace(generated_prefix, source_prefix, 1) %}
+    {% endif %}
+  {% endfor %}
+  {% set github_blob_url = config.repo_url ~ "/blob/main/" ~ launch.repo_path %}
+  {% set colab_url = "https://colab.research.google.com/github/" ~ config.repo_name ~ "/blob/main/" ~ launch.repo_path %}
+  {% set kaggle_url = "https://kaggle.com/kernels/welcome?src=" ~ github_blob_url %}
+  <div class="notebook-launchers" role="group" aria-label="Notebook launch options">
+    <span class="notebook-launchers__label">Run this notebook:</span>
+    <a class="notebook-launchers__link notebook-launchers__link--colab" href="{{ colab_url }}" target="_blank" rel="noopener">
+      <span class="notebook-launchers__icon" aria-hidden="true">
+        {% include ".icons/simple/googlecolab.svg" %}
+      </span>
+      Open in Colab
+    </a>
+    <a class="notebook-launchers__link notebook-launchers__link--kaggle" href="{{ kaggle_url }}" target="_blank" rel="noopener">
+      <span class="notebook-launchers__icon" aria-hidden="true">
+        {% include ".icons/simple/kaggle.svg" %}
+      </span>
+      Open in Kaggle
+    </a>
+  </div>
+{% endif %}
+{{ page.content }}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}
