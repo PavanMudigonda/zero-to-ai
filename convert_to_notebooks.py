@@ -91,10 +91,11 @@ def create_notebook(cells: List[Tuple[str, str]]) -> dict:
     }
     
     for cell_type, content in cells:
+        # Keep line endings so notebook renderers preserve formatting consistently.
         cell = {
             "cell_type": cell_type,
             "metadata": {},
-            "source": content.split('\n')
+            "source": content.splitlines(keepends=True)
         }
         
         if cell_type == "code":
