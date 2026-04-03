@@ -12,7 +12,7 @@ Before asking for help, please check these resources:
 - **[Course Setup Guide](00-course-setup/README.md)** - Installation and environment setup
 - **[Main README](README.md)** - Repository overview and getting started
 - **[Learning Checklist](checklist.md)** - Complete curriculum roadmap
-- **[Glossary](glossary/GLOSSARY.md)** - AI/ML terminology
+- **[Glossary](23-glossary/GLOSSARY.md)** - AI/ML terminology
 - **[Setup Guide](setup.md)** - Detailed installation instructions
 
 ### Common Issues
@@ -88,7 +88,7 @@ Want to help improve the course?
 - [Stack Overflow](https://stackoverflow.com/questions/tagged/machine-learning) - Technical Q&A
 
 ### Video Resources
-- See [labs/videos/README.md](labs/videos/README.md) for curated video courses
+- See [REFERENCES.md](REFERENCES.md) for curated video courses, repos, papers, and learning resources
 
 ## 📧 Contact
 

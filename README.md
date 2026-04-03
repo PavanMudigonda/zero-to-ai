@@ -39,7 +39,7 @@
 
 ## 🌱 Getting Started
 
-This comprehensive AI/ML curriculum has **27 progressive phases** covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each phase includes hands-on notebooks, projects, and practical applications.
+This comprehensive AI/ML curriculum uses progressive numbered modules covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each module includes hands-on notebooks, projects, and practical applications.
 
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
@@ -60,7 +60,7 @@ This comprehensive AI/ML curriculum has **27 progressive phases** covering every
 ### 🎓 Who Is This For?
 
 - **Beginners**: Start from Python basics, no ML experience required
-- **Self-Learners**: Structured path with 732 hands-on notebooks
+- **Self-Learners**: Structured path with 900+ hands-on notebooks
 - **Career Switchers**: Complete curriculum from fundamentals to job-ready skills
 - **Professionals**: Deep dive into specific topics (RAG, Fine-tuning, MLOps)
 
@@ -132,10 +132,11 @@ jupyter notebook
 
 ### Your First Steps
 
-1. **📖 Course Setup**: Read [00-course-setup/README.md](00-course-setup/README.md) for detailed setup
-2. **✅ Learning Checklist**: Review [checklist.md](checklist.md) - your complete roadmap
-3. **📚 Start Learning**: Begin with [02-data-science/00_START_HERE.ipynb](02-data-science/00_START_HERE.ipynb)
-4. **📊 Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
+1. **📖 Course Setup**: Read [00-course-setup/README.md](00-course-setup/README.md) and get your environment working
+2. **🧭 Pick a Track**: Use [MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose AI Engineer, ML Engineer, or Data Scientist
+3. **✅ Plan Your Work**: Review [checklist.md](docs/checklist.md) so you know which phases to skip and which to complete
+4. **📚 Start with Foundations**: Begin with [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md), then move into the first phase for your track
+5. **📊 Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
 
 ---
 
@@ -143,12 +144,12 @@ jupyter notebook
 
 | Guide | Description |
 |-------|-------------|
-| [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) | Learning paths for AI Engineer, ML Engineer, Data Scientist tracks |
-| [checklist.md](checklist.md) | Phase-by-phase completion checklist with checkboxes |
-| [REFERENCES.md](REFERENCES.md) | Curated videos, papers, and courses organized by phase |
-| [COMPARISON_MATRICES.md](COMPARISON_MATRICES.md) | Side-by-side comparisons of models, tools, and frameworks |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute notebooks and fixes |
-| [SUPPORT.md](SUPPORT.md) | Getting help, community links |
+| [MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) | Learning paths for AI Engineer, ML Engineer, Data Scientist tracks |
+| [checklist.md](docs/checklist.md) | Phase-by-phase completion checklist with checkboxes |
+| [REFERENCES.md](docs/REFERENCES.md) | Curated videos, papers, and courses organized by phase |
+| [COMPARISON_MATRICES.md](docs/COMPARISON_MATRICES.md) | Side-by-side comparisons of models, tools, and frameworks |
+| [CONTRIBUTING.md](docs/CONTRIBUTING.md) | How to contribute notebooks and fixes |
+| [SUPPORT.md](docs/SUPPORT.md) | Getting help, community links |
 | [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md) | Current AI model landscape (updated March 2026) |
 | [00-course-setup/troubleshooting.md](00-course-setup/troubleshooting.md) | Comprehensive troubleshooting guide |
 
@@ -222,7 +223,7 @@ We welcome contributions from the community! Here's how you can help:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
@@ -244,7 +245,7 @@ This learning path is inspired by and integrates content from:
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](docs/LICENSE.md) file for details.
 
 ---
 
