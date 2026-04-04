@@ -1,8 +1,0 @@
-2026-04-04T19:22:27.6900000Z Requested labels: ubuntu-latest
-2026-04-04T19:22:27.6900000Z Job defined at: PavanMudigonda/zero-to-ai/.github/workflows/deploy-netlify.yml@refs/heads/main
-2026-04-04T19:22:27.6900000Z Waiting for a runner to pick up this job...
-2026-04-04T19:22:27.6890000Z Evaluating build-and-deploy.if
-2026-04-04T19:22:27.6890000Z Evaluating: success()
-2026-04-04T19:22:27.6890000Z Result: true
-2026-04-04T19:22:27.6980000Z Job is about to start running on the hosted runner: GitHub Actions 1000003518
-2026-04-04T19:22:27.6970000Z Job is waiting for a hosted runner to come online.
