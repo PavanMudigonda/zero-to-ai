@@ -1,5 +1,8 @@
-mkdocs==1.6.1
-mkdocs-material
-mkdocs-minify-plugin
-mkdocs-jupyter
+sphinx>=7.4.0
+furo>=2024.8.6
+myst-nb>=1.1.0
+sphinx-copybutton>=0.5.2
+sphinx-design>=0.6.0
+sphinxcontrib-mermaid>=1.0.0
+linkify-it-py>=2.0.0
 jupyterlab

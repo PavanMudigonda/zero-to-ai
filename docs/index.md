@@ -1,25 +1,18 @@
 ---
-template: home.html
-title: Zero to AI - Complete Learning Path
-hide:
-  - navigation
-  - toc
+sd_hide_title: true
 ---
-
-<div class="hero" markdown>
 
 # Zero to AI
 
-**A comprehensive curriculum from Python fundamentals to production-ready AI systems**
-
-Master machine learning, deep learning, LLMs, RAG, agents, and MLOps through hands-on notebooks and real projects.
-
+<div class="hero">
+<h1>Zero to AI</h1>
+<p><strong>A comprehensive curriculum from Python fundamentals to production-ready AI systems</strong></p>
+<p>Master machine learning, deep learning, LLMs, RAG, agents, and MLOps through hands-on notebooks and real projects.</p>
 <div class="hero-badges">
   <a href="https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
   <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github" alt="Open in Codespaces"></a>
   <a href="https://github.com/PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/github/stars/PavanMudigonda/zero-to-ai?style=social" alt="GitHub Stars"></a>
 </div>
-
 </div>
 
 <div class="stats-bar">
@@ -41,164 +34,222 @@ Master machine learning, deep learning, LLMs, RAG, agents, and MLOps through han
 </div>
 </div>
 
-<div class="section-header" markdown>
-
-## Choose Your Track
-
-Pick the path that matches your goals and timeline.
-
+<div class="section-header">
+<h2>Choose Your Track</h2>
+<p>Pick the path that matches your goals and timeline.</p>
 </div>
 
-<div class="track-grid" markdown>
+<div class="track-grid">
 
-<div class="track-card" markdown>
-
+<div class="track-card">
 <span class="duration">4-6 months</span>
-
-### AI Engineer
-
-LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications fast.
-
-**Key phases:** Embeddings, RAG, Prompt Engineering, Agents, MLOps
-
-[:octicons-arrow-right-24: View track](generated/MASTER_STUDY_GUIDE.md#track-a-ai-engineer-4-6-months)
-
+<h3>AI Engineer</h3>
+<p>LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications fast.</p>
+<p><strong>Key phases:</strong> Embeddings, RAG, Prompt Engineering, Agents, MLOps</p>
+<p><a href="generated/MASTER_STUDY_GUIDE.html#track-a-ai-engineer-4-6-months">View track &rarr;</a></p>
 </div>
 
-<div class="track-card" markdown>
-
+<div class="track-card">
 <span class="duration">8-10 months</span>
-
-### ML Engineer
-
-Full foundation plus advanced topics. Deep understanding of models, math, and infrastructure.
-
-**Key phases:** Math, Neural Networks, Fine-tuning, MLOps, Evaluation
-
-[:octicons-arrow-right-24: View track](generated/MASTER_STUDY_GUIDE.md#track-b-ml-engineer-8-10-months)
-
+<h3>ML Engineer</h3>
+<p>Full foundation plus advanced topics. Deep understanding of models, math, and infrastructure.</p>
+<p><strong>Key phases:</strong> Math, Neural Networks, Fine-tuning, MLOps, Evaluation</p>
+<p><a href="generated/MASTER_STUDY_GUIDE.html#track-b-ml-engineer-8-10-months">View track &rarr;</a></p>
 </div>
 
-<div class="track-card" markdown>
-
+<div class="track-card">
 <span class="duration">6-8 months</span>
-
-### Data Scientist
-
-Statistics, experimentation, classical ML. Strong analytical foundation.
-
-**Key phases:** Statistics, Causal Inference, Time Series, Evaluation
-
-[:octicons-arrow-right-24: View track](generated/MASTER_STUDY_GUIDE.md#track-c-data-scientist-6-8-months)
-
+<h3>Data Scientist</h3>
+<p>Statistics, experimentation, classical ML. Strong analytical foundation.</p>
+<p><strong>Key phases:</strong> Statistics, Causal Inference, Time Series, Evaluation</p>
+<p><a href="generated/MASTER_STUDY_GUIDE.html#track-c-data-scientist-6-8-months">View track &rarr;</a></p>
 </div>
 
 </div>
 
-<div class="section-header" markdown>
-
-## Curriculum
-
-31 phases organized from fundamentals to cutting-edge research.
-
+<div class="section-header">
+<h2>Curriculum</h2>
+<p>31 phases organized from fundamentals to cutting-edge research.</p>
 </div>
 
 ### Foundations
 
 <div class="phase-grid">
-<a class="phase-card" href="curriculum/00-course-setup/"><div class="phase-number">Phase 0</div><div class="phase-title">Course Setup</div></a>
-<a class="phase-card" href="curriculum/01-python/"><div class="phase-number">Phase 1</div><div class="phase-title">Python</div></a>
-<a class="phase-card" href="curriculum/02-data-science/"><div class="phase-number">Phase 2</div><div class="phase-title">Data Science</div></a>
-<a class="phase-card" href="curriculum/03-maths/"><div class="phase-number">Phase 3</div><div class="phase-title">Mathematics for ML</div></a>
+<a class="phase-card" href="curriculum/00-course-setup/README.html"><div class="phase-number">Phase 0</div><div class="phase-title">Course Setup</div></a>
+<a class="phase-card" href="curriculum/01-python/README.html"><div class="phase-number">Phase 1</div><div class="phase-title">Python</div></a>
+<a class="phase-card" href="curriculum/02-data-science/README.html"><div class="phase-number">Phase 2</div><div class="phase-title">Data Science</div></a>
+<a class="phase-card" href="curriculum/03-maths/README.html"><div class="phase-number">Phase 3</div><div class="phase-title">Mathematics for ML</div></a>
 </div>
 
 ### Core AI
 
 <div class="phase-grid">
-<a class="phase-card" href="curriculum/04-token/"><div class="phase-number">Phase 4</div><div class="phase-title">Tokenization</div></a>
-<a class="phase-card" href="curriculum/05-embeddings/"><div class="phase-number">Phase 5</div><div class="phase-title">Embeddings</div></a>
-<a class="phase-card" href="curriculum/06-neural-networks/"><div class="phase-number">Phase 6</div><div class="phase-title">Neural Networks</div></a>
+<a class="phase-card" href="curriculum/04-token/README.html"><div class="phase-number">Phase 4</div><div class="phase-title">Tokenization</div></a>
+<a class="phase-card" href="curriculum/05-embeddings/README.html"><div class="phase-number">Phase 5</div><div class="phase-title">Embeddings</div></a>
+<a class="phase-card" href="curriculum/06-neural-networks/README.html"><div class="phase-number">Phase 6</div><div class="phase-title">Neural Networks</div></a>
 </div>
 
 ### Applied AI
 
 <div class="phase-grid">
-<a class="phase-card" href="curriculum/07-vector-databases/"><div class="phase-number">Phase 7</div><div class="phase-title">Vector Databases</div></a>
-<a class="phase-card" href="curriculum/08-rag/"><div class="phase-number">Phase 8</div><div class="phase-title">RAG Systems</div></a>
-<a class="phase-card" href="curriculum/09-mlops/"><div class="phase-number">Phase 9</div><div class="phase-title">MLOps</div></a>
-<a class="phase-card" href="curriculum/10-specializations/"><div class="phase-number">Phase 10</div><div class="phase-title">Specializations</div></a>
+<a class="phase-card" href="curriculum/07-vector-databases/README.html"><div class="phase-number">Phase 7</div><div class="phase-title">Vector Databases</div></a>
+<a class="phase-card" href="curriculum/08-rag/README.html"><div class="phase-number">Phase 8</div><div class="phase-title">RAG Systems</div></a>
+<a class="phase-card" href="curriculum/09-mlops/README.html"><div class="phase-number">Phase 9</div><div class="phase-title">MLOps</div></a>
+<a class="phase-card" href="curriculum/10-specializations/README.html"><div class="phase-number">Phase 10</div><div class="phase-title">Specializations</div></a>
 </div>
 
 ### Advanced
 
 <div class="phase-grid">
-<a class="phase-card" href="curriculum/11-prompt-engineering/"><div class="phase-number">Phase 11</div><div class="phase-title">Prompt Engineering</div></a>
-<a class="phase-card" href="curriculum/12-llm-finetuning/"><div class="phase-number">Phase 12</div><div class="phase-title">LLM Fine-tuning</div></a>
-<a class="phase-card" href="curriculum/13-multimodal/"><div class="phase-number">Phase 13</div><div class="phase-title">Multimodal AI</div></a>
-<a class="phase-card" href="curriculum/14-local-llms/"><div class="phase-number">Phase 14</div><div class="phase-title">Local LLMs</div></a>
-<a class="phase-card" href="curriculum/15-ai-agents/"><div class="phase-number">Phase 15</div><div class="phase-title">AI Agents</div></a>
+<a class="phase-card" href="curriculum/11-prompt-engineering/README.html"><div class="phase-number">Phase 11</div><div class="phase-title">Prompt Engineering</div></a>
+<a class="phase-card" href="curriculum/12-llm-finetuning/README.html"><div class="phase-number">Phase 12</div><div class="phase-title">LLM Fine-tuning</div></a>
+<a class="phase-card" href="curriculum/13-multimodal/README.html"><div class="phase-number">Phase 13</div><div class="phase-title">Multimodal AI</div></a>
+<a class="phase-card" href="curriculum/14-local-llms/README.html"><div class="phase-number">Phase 14</div><div class="phase-title">Local LLMs</div></a>
+<a class="phase-card" href="curriculum/15-ai-agents/README.html"><div class="phase-number">Phase 15</div><div class="phase-title">AI Agents</div></a>
 </div>
 
 ### Supplementary
 
 <div class="phase-grid">
-<a class="phase-card" href="curriculum/16-model-evaluation/"><div class="phase-number">Phase 16</div><div class="phase-title">Model Evaluation</div></a>
-<a class="phase-card" href="curriculum/17-debugging/"><div class="phase-number">Phase 17</div><div class="phase-title">Debugging</div></a>
-<a class="phase-card" href="curriculum/18-low-code/"><div class="phase-number">Phase 18</div><div class="phase-title">Low-Code AI Tools</div></a>
-<a class="phase-card" href="curriculum/19-ai-safety/"><div class="phase-number">Phase 19</div><div class="phase-title">AI Safety</div></a>
-<a class="phase-card" href="curriculum/20-streaming/"><div class="phase-number">Phase 20</div><div class="phase-title">Real-Time Streaming</div></a>
+<a class="phase-card" href="curriculum/16-model-evaluation/README.html"><div class="phase-number">Phase 16</div><div class="phase-title">Model Evaluation</div></a>
+<a class="phase-card" href="curriculum/17-debugging/README.html"><div class="phase-number">Phase 17</div><div class="phase-title">Debugging</div></a>
+<a class="phase-card" href="curriculum/18-low-code/README.html"><div class="phase-number">Phase 18</div><div class="phase-title">Low-Code AI Tools</div></a>
+<a class="phase-card" href="curriculum/19-ai-safety/README.html"><div class="phase-number">Phase 19</div><div class="phase-title">AI Safety</div></a>
+<a class="phase-card" href="curriculum/20-streaming/README.html"><div class="phase-number">Phase 20</div><div class="phase-title">Real-Time Streaming</div></a>
 </div>
 
 ### Research & Production
 
 <div class="phase-grid">
-<a class="phase-card" href="curriculum/24-advanced-dl/"><div class="phase-number">Phase 24</div><div class="phase-title">Advanced Deep Learning</div></a>
-<a class="phase-card" href="curriculum/25-rl/"><div class="phase-number">Phase 25</div><div class="phase-title">Reinforcement Learning</div></a>
-<a class="phase-card" href="curriculum/26-time-series/"><div class="phase-number">Phase 26</div><div class="phase-title">Time Series</div></a>
-<a class="phase-card" href="curriculum/27-causal-inference/"><div class="phase-number">Phase 27</div><div class="phase-title">Causal Inference</div></a>
-<a class="phase-card" href="curriculum/28-practical-ds/"><div class="phase-number">Phase 28</div><div class="phase-title">Practical Data Science</div></a>
-<a class="phase-card" href="curriculum/29-ai-hardware/"><div class="phase-number">Phase 29</div><div class="phase-title">AI Hardware</div></a>
-<a class="phase-card" href="curriculum/30-inference-opt/"><div class="phase-number">Phase 30</div><div class="phase-title">Inference Optimization</div></a>
+<a class="phase-card" href="curriculum/24-advanced-dl/README.html"><div class="phase-number">Phase 24</div><div class="phase-title">Advanced Deep Learning</div></a>
+<a class="phase-card" href="curriculum/25-rl/README.html"><div class="phase-number">Phase 25</div><div class="phase-title">Reinforcement Learning</div></a>
+<a class="phase-card" href="curriculum/26-time-series/README.html"><div class="phase-number">Phase 26</div><div class="phase-title">Time Series</div></a>
+<a class="phase-card" href="curriculum/27-causal-inference/README.html"><div class="phase-number">Phase 27</div><div class="phase-title">Causal Inference</div></a>
+<a class="phase-card" href="curriculum/28-practical-ds/README.html"><div class="phase-number">Phase 28</div><div class="phase-title">Practical Data Science</div></a>
+<a class="phase-card" href="curriculum/29-ai-hardware/README.html"><div class="phase-number">Phase 29</div><div class="phase-title">AI Hardware</div></a>
+<a class="phase-card" href="curriculum/30-inference-opt/README.html"><div class="phase-number">Phase 30</div><div class="phase-title">Inference Optimization</div></a>
 </div>
 
 ---
 
-<div class="section-header" markdown>
-
-## Quick Links
-
+<div class="section-header">
+<h2>Quick Links</h2>
 </div>
 
-<div class="track-grid" markdown>
+<div class="track-grid">
 
-<div class="track-card" markdown>
-
-### :material-book-open-variant: Study Guide
-
-Month-by-month learning plans for all three tracks.
-
-[:octicons-arrow-right-24: Open guide](generated/MASTER_STUDY_GUIDE.md)
-
+<div class="track-card">
+<h3>📖 Study Guide</h3>
+<p>Month-by-month learning plans for all three tracks.</p>
+<p><a href="generated/MASTER_STUDY_GUIDE.html">Open guide &rarr;</a></p>
 </div>
 
-<div class="track-card" markdown>
-
-### :material-briefcase-outline: Interview Prep
-
-15 core ML questions, coding problems, and system design walkthroughs.
-
-[:octicons-arrow-right-24: Start prepping](generated/INTERVIEW_PREP.md)
-
+<div class="track-card">
+<h3>💼 Interview Prep</h3>
+<p>15 core ML questions, coding problems, and system design walkthroughs.</p>
+<p><a href="generated/INTERVIEW_PREP.html">Start prepping &rarr;</a></p>
 </div>
 
-<div class="track-card" markdown>
-
-### :material-scale-balance: Model Comparisons
-
-Side-by-side comparisons of LLMs, embedding models, and tools.
-
-[:octicons-arrow-right-24: Compare models](generated/COMPARISON_MATRICES.md)
-
+<div class="track-card">
+<h3>⚖️ Model Comparisons</h3>
+<p>Side-by-side comparisons of LLMs, embedding models, and tools.</p>
+<p><a href="generated/COMPARISON_MATRICES.html">Compare models &rarr;</a></p>
 </div>
 
 </div>
+
+```{toctree}
+:hidden:
+:caption: Getting Started
+
+curriculum/00-course-setup/README
+generated/setup
+generated/checklist
+```
+
+```{toctree}
+:hidden:
+:caption: Learning Tracks
+
+generated/MASTER_STUDY_GUIDE
+generated/CAREER_ROADMAP
+generated/INTERVIEW_PREP
+```
+
+```{toctree}
+:hidden:
+:caption: Foundations
+
+curriculum/00-course-setup/README
+curriculum/01-python/README
+curriculum/02-data-science/README
+curriculum/03-maths/README
+```
+
+```{toctree}
+:hidden:
+:caption: Core AI
+
+curriculum/04-token/README
+curriculum/05-embeddings/README
+curriculum/06-neural-networks/README
+```
+
+```{toctree}
+:hidden:
+:caption: Applied AI
+
+curriculum/07-vector-databases/README
+curriculum/08-rag/README
+curriculum/09-mlops/README
+curriculum/10-specializations/README
+```
+
+```{toctree}
+:hidden:
+:caption: Advanced
+
+curriculum/11-prompt-engineering/README
+curriculum/12-llm-finetuning/README
+curriculum/13-multimodal/README
+curriculum/14-local-llms/README
+curriculum/15-ai-agents/README
+```
+
+```{toctree}
+:hidden:
+:caption: Supplementary
+
+curriculum/16-model-evaluation/README
+curriculum/17-debugging/README
+curriculum/18-low-code/README
+curriculum/19-ai-safety/README
+curriculum/20-streaming/README
+```
+
+```{toctree}
+:hidden:
+:caption: Reference
+
+curriculum/21-quizzes/README
+curriculum/22-references/README
+curriculum/23-glossary/README
+```
+
+```{toctree}
+:hidden:
+:caption: Research
+
+curriculum/24-advanced-dl/README
+curriculum/25-rl/README
+curriculum/26-time-series/README
+curriculum/27-causal-inference/README
+```
+
+```{toctree}
+:hidden:
+:caption: Production
+
+curriculum/28-practical-ds/README
+curriculum/29-ai-hardware/README
+```
