@@ -1,4 +1,4 @@
-name: Deploy MkDocs to Netlify
+name: Deploy Sphinx to Netlify
 
 on:
   push:
@@ -15,12 +15,12 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.12'
           cache: pip
@@ -29,15 +29,15 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements-docs.txt
 
-      - name: Generate MkDocs site
+      - name: Generate Sphinx site
         run: |
           bash scripts/build_site.sh
-          mkdocs build
+          sphinx-build -b html docs site
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
       - name: Setup Node.js (for Netlify CLI)
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: lts/*
 
