@@ -106,11 +106,12 @@ html_theme_options = {
     ],
 }
 
-# Google Analytics (read from environment)
+# Google Analytics — inject via Furo's analytics slot (no extra extension needed)
 _ga_id = os.environ.get("GOOGLE_ANALYTICS_ID", "")
 if _ga_id:
-    extensions.append("sphinxcontrib.googleanalytics")
-    googleanalytics_id = _ga_id
+    html_context = {
+        "analytics_id": _ga_id,
+    }
 
 # -- Intersphinx mapping -----------------------------------------------------
 intersphinx_mapping = {
