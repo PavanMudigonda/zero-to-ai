@@ -18,19 +18,11 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: requirements-docs.txt
-
-      - name: Restore MkDocs notebook cache
-        uses: actions/cache@v4
-        with:
-          path: .cache/mkdocs-jupyter
-          key: ${{ runner.os }}-mkdocs-jupyter-${{ hashFiles('requirements-docs.txt', 'mkdocs.yml', 'scripts/build_site.sh') }}
-          restore-keys: |
-            ${{ runner.os }}-mkdocs-jupyter-
 
       - name: Install docs dependencies
         run: |
@@ -40,5 +32,5 @@ jobs:
       - name: Build curriculum tree
         run: bash scripts/build_site.sh
 
-      - name: MkDocs build
-        run: mkdocs build
+      - name: Sphinx build
+        run: sphinx-build -b html docs site

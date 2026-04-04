@@ -1,0 +1,24 @@
+{% extends "furo/page.html" %}
+
+{% block content %}
+{% if notebook_launchers %}
+<div class="notebook-launchers" role="group" aria-label="Notebook launch options">
+  <span class="notebook-launchers__label">Run this notebook:</span>
+  <a class="notebook-launchers__link notebook-launchers__link--colab"
+     href="{{ notebook_launchers.colab_url }}" target="_blank" rel="noopener">
+    <svg class="notebook-launchers__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M16.9414 4.9757a7.033 7.033 0 0 0-9.8728 1.7054 7.033 7.033 0 0 0-.745 2.9753 7.033 7.033 0 0 0-2.9753.745A7.033 7.033 0 0 0 1.643 20.274a7.033 7.033 0 0 0 9.8728-1.7054 7.033 7.033 0 0 0 .745-2.9753 7.033 7.033 0 0 0 2.9753-.7449 7.033 7.033 0 0 0 1.7054-9.8728z" fill="currentColor"/>
+    </svg>
+    Open in Colab
+  </a>
+  <a class="notebook-launchers__link notebook-launchers__link--kaggle"
+     href="{{ notebook_launchers.kaggle_url }}" target="_blank" rel="noopener">
+    <svg class="notebook-launchers__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18.825 23.859c-.022.092-.117.141-.281.141H14.47c-.164 0-.31-.062-.436-.185l-4.99-6.107-1.378 1.266v4.884c0 .164-.082.246-.246.246H4.91c-.164 0-.246-.082-.246-.246V.246C4.664.082 4.746 0 4.91 0h2.51c.164 0 .246.082.246.246v14.254l6.154-6.425c.164-.164.328-.246.492-.246h3.144c.117 0 .2.044.246.133.047.088.04.175-.021.261l-6.561 6.599 6.834 8.645c.071.117.092.211.062.282z" fill="currentColor"/>
+    </svg>
+    Open in Kaggle
+  </a>
+</div>
+{% endif %}
+{{ super() }}
+{% endblock %}
