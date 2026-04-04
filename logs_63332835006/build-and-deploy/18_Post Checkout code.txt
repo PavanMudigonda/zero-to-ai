@@ -1,0 +1,32 @@
+﻿2026-04-04T19:23:05.3575535Z Post job cleanup.
+2026-04-04T19:23:05.4368753Z [command]/usr/bin/git version
+2026-04-04T19:23:05.4403852Z git version 2.53.0
+2026-04-04T19:23:05.4446628Z Temporarily overriding HOME='/home/runner/work/_temp/295e68f5-f5ac-4219-84da-75d15b92914d' before making global git config changes
+2026-04-04T19:23:05.4447964Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-04T19:23:05.4452749Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-04T19:23:05.4482130Z Removing SSH command configuration
+2026-04-04T19:23:05.4488332Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-04T19:23:05.4521705Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-04T19:23:05.4740570Z Removing HTTP extra header
+2026-04-04T19:23:05.4744814Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-04T19:23:05.4776289Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-04T19:23:05.4991455Z Removing includeIf entries pointing to credentials config files
+2026-04-04T19:23:05.4997654Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-04T19:23:05.5019039Z includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path
+2026-04-04T19:23:05.5019936Z includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path
+2026-04-04T19:23:05.5020678Z includeif.gitdir:/github/workspace/.git.path
+2026-04-04T19:23:05.5021284Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-04T19:23:05.5029423Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path
+2026-04-04T19:23:05.5049919Z /home/runner/work/_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5060751Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path /home/runner/work/_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5092432Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path
+2026-04-04T19:23:05.5113331Z /home/runner/work/_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5122777Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5153807Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-04-04T19:23:05.5174062Z /github/runner_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5181835Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5210912Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-04T19:23:05.5230687Z /github/runner_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5239094Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config
+2026-04-04T19:23:05.5269275Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-04T19:23:05.5485092Z Removing credentials config '/home/runner/work/_temp/git-credentials-35dfa518-afb1-4335-abfe-6481263d6ce8.config'
