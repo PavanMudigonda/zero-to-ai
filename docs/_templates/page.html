@@ -1,5 +1,10 @@
 {% extends "furo/page.html" %}
 
+{% block extrahead %}
+{{ super() }}
+{% include "analytics.html" %}
+{% endblock %}
+
 {% block content %}
 {% if notebook_launchers %}
 <div class="notebook-launchers" role="group" aria-label="Notebook launch options">
