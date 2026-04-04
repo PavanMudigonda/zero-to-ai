@@ -74,7 +74,8 @@ uv.lock
 
 source/
 
-# MkDocs
+# Sphinx
 site/
+jupyter_execute/
 docs/curriculum/
 docs/generated/
