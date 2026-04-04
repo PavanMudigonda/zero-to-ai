@@ -1,5 +1,5 @@
 #!/bin/bash
-# Build the MkDocs curriculum tree and site-specific support pages.
+# Build the Sphinx curriculum tree and site-specific support pages.
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
