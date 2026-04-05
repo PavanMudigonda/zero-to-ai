@@ -1,4 +1,4 @@
-# Phase 16: Debugging & Troubleshooting AI/ML Models
+# Phase 17: Debugging & Troubleshooting
 
 Learn systematic approaches to debug, diagnose, and optimize machine learning models and pipelines.
 

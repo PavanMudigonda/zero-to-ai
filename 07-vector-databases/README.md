@@ -1,4 +1,4 @@
-# Phase 6: Vector Databases
+# Phase 7: Vector Databases
 
 This module turns embeddings into something operational. Once you can generate vectors, the next practical problem is storing them, filtering them, and retrieving them fast enough to support real systems.
 

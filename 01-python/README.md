@@ -1,4 +1,4 @@
-# Phase 0: Python Programming Prerequisites
+# Phase 1: Python Fundamentals
 
 **Note**: This directory is a lightweight bridge into the main curriculum. If you already know basic Python, skip ahead to [02-data-science/](../02-data-science/). If you do not, use the external resources here first.
 

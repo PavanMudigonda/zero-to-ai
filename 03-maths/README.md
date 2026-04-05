@@ -1,4 +1,4 @@
-# Phase 2: Mathematics for ML
+# Phase 3: Mathematics for ML
 
 This folder provides the mathematical intuition behind the rest of the curriculum. The goal is not to turn this repo into a pure math degree. The goal is to give you enough fluency to understand optimization, probability, embeddings, attention, and evaluation without treating them as magic.
 
