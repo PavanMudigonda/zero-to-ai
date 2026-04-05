@@ -103,7 +103,7 @@ html_theme = "furo"
 html_title = "Zero to AI"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
-html_js_files = ["sidebar-scroll.js"]
+html_js_files = ["sidebar-scroll.js", "sidebar-toggle.js"]
 html_favicon = "assets/favicon.svg"
 html_logo = "assets/logo.svg"
 
