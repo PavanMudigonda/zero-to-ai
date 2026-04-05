@@ -252,4 +252,19 @@ curriculum/27-causal-inference/README
 
 curriculum/28-practical-ds/README
 curriculum/29-ai-hardware/README
+curriculum/30-inference-opt/README
+```
+
+```{toctree}
+:hidden:
+:caption: About
+
+generated/CHANGELOG
+generated/CODE_OF_CONDUCT
+generated/COMPARISON_MATRICES
+generated/CONTRIBUTING
+generated/LICENSE
+generated/REFERENCES
+generated/SUPPORT
+generated/WORKSPACE_LEARNING_REVIEW
 ```
