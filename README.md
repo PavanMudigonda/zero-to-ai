@@ -14,9 +14,7 @@
 
 ---
 
-
-### 🚀 Launch Instantly - Zero Setup Required!
-
+[![Open in Browser](https://img.shields.io/badge/Open%20in-Browser-00C7B7?style=flat&logo=netlify)](https://zero-to-ai.netlify.app/)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
 [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai)
 [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://www.kaggle.com/code)
@@ -79,6 +77,11 @@ This comprehensive AI/ML curriculum uses progressive numbered modules covering e
 - Basic Python knowledge (or start with [01-python/](01-python/))
 - High school mathematics
 - A computer (GPU helpful but not required initially)
+- If you are buying new device for the course i suggest below
+  - MacBook Neo (8 GB) - cheaper option
+  - MacBook Air (16 GB) - sufficient for most users
+  - MacBook Pro (16 GB min) - if you are heavy user choose
+- Use Google Colab account or Kaggle Account in addition to your device as per program you are working with
 - 10-15 hours/week
 
 ### Installation (Choose One)
