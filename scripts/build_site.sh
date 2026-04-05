@@ -337,27 +337,33 @@ for phase_dir in sorted(p for p in curriculum_dir.iterdir() if p.is_dir()):
 
 def _collect_toctree_entries(directory: Path):
     """Return a list of toctree entry strings for documents inside *directory*."""
+    seen = set()
     entries = []
+
+    def _add(entry: str):
+        if entry not in seen:
+            seen.add(entry)
+            entries.append(entry)
 
     # Include the auto-generated CATALOG if it exists
     if (directory / "CATALOG.md").exists():
-        entries.append("CATALOG")
+        _add("CATALOG")
 
     # Root-level markdown files (skip README and CATALOG, they're structural)
     for md in sorted(directory.glob("*.md")):
         if md.name in ("README.md", "CATALOG.md"):
             continue
-        entries.append(md.stem)
+        _add(md.stem)
 
-    # Root-level notebooks
+    # Root-level notebooks (deduplicated against .md stems above)
     for nb in sorted(directory.glob("*.ipynb")):
-        entries.append(nb.stem)
+        _add(nb.stem)
 
     # Sub-directories
     for subdir in sorted(p for p in directory.iterdir() if p.is_dir()):
         sub_readme = subdir / "README.md"
         if sub_readme.exists():
-            entries.append(f"{subdir.name}/README")
+            _add(f"{subdir.name}/README")
         else:
             # Pick the first discoverable document as the entry point
             first = (
@@ -365,7 +371,7 @@ def _collect_toctree_entries(directory: Path):
                 or next(iter(sorted(subdir.glob("*.md"))), None)
             )
             if first:
-                entries.append(f"{subdir.name}/{first.stem}")
+                _add(f"{subdir.name}/{first.stem}")
 
     return entries
 
