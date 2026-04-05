@@ -160,24 +160,6 @@ sd_hide_title: true
 
 ```{toctree}
 :hidden:
-:caption: Getting Started
-
-curriculum/00-course-setup/README
-generated/setup
-generated/checklist
-```
-
-```{toctree}
-:hidden:
-:caption: Learning Tracks
-
-generated/MASTER_STUDY_GUIDE
-generated/CAREER_ROADMAP
-generated/INTERVIEW_PREP
-```
-
-```{toctree}
-:hidden:
 :caption: Foundations
 
 curriculum/00-course-setup/README
@@ -238,6 +220,18 @@ curriculum/23-glossary/README
 
 ```{toctree}
 :hidden:
+:caption: Resources
+
+generated/MASTER_STUDY_GUIDE
+generated/CAREER_ROADMAP
+generated/INTERVIEW_PREP
+generated/COMPARISON_MATRICES
+generated/setup
+generated/checklist
+```
+
+```{toctree}
+:hidden:
 :caption: Research
 
 curriculum/24-advanced-dl/README
@@ -259,12 +253,11 @@ curriculum/30-inference-opt/README
 :hidden:
 :caption: About
 
+generated/CONTRIBUTING
 generated/CHANGELOG
 generated/CODE_OF_CONDUCT
-generated/COMPARISON_MATRICES
-generated/CONTRIBUTING
-generated/LICENSE
 generated/REFERENCES
-generated/SUPPORT
 generated/WORKSPACE_LEARNING_REVIEW
+generated/LICENSE
+generated/SUPPORT
 ```
