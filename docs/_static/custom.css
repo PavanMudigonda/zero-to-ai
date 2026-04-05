@@ -201,6 +201,12 @@
   color: #202124 !important;
 }
 
+.notebook-launchers__icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+}
+
 .notebook-launchers__link--kaggle {
   background: #20beff;
   color: #06263a !important;
@@ -242,4 +248,127 @@ body[data-theme="dark"] .notebook-launchers {
 
 body[data-theme="dark"] .notebook-launchers__label {
   color: rgba(255, 255, 255, 0.92);
+}
+
+/* ================================================================
+   Datadog-style draggable sidebar resize handles
+   ================================================================ */
+
+/* The thin drag handle bar */
+.sidebar-resize-handle {
+  display: none;               /* shown only at desktop widths */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  cursor: col-resize;
+  z-index: 36;
+  background: transparent;
+  transition: background 0.15s;
+}
+
+.sidebar-resize-handle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--color-background-border, #e0e0e0);
+  transition: width 0.15s, background 0.15s;
+}
+
+.sidebar-resize-handle:hover::after,
+.sidebar-resizing .sidebar-resize-handle::after {
+  width: 3px;
+  background: var(--color-brand-primary, #3f51b5);
+}
+
+/* Left handle: sits on the right edge of .sidebar-drawer */
+.sidebar-resize-handle--left {
+  right: -3px;
+}
+.sidebar-resize-handle--left::after {
+  right: 0;
+}
+
+/* Right handle: sits on the left edge of .toc-drawer */
+.sidebar-resize-handle--right {
+  left: -3px;
+}
+.sidebar-resize-handle--right::after {
+  left: 0;
+}
+
+/* Prevent text selection & pointer events while dragging */
+body.sidebar-resizing {
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: col-resize !important;
+}
+body.sidebar-resizing * {
+  cursor: col-resize !important;
+}
+
+/* Desktop only: enable handles & collapse behaviour */
+@media (min-width: 63em) {
+  .sidebar-resize-handle {
+    display: block;
+  }
+
+  /* Allow the drawers to receive custom widths from JS */
+  .sidebar-drawer {
+    position: relative;          /* anchor for the handle */
+    transition: min-width 0.2s ease, width 0.2s ease, opacity 0.15s ease;
+    overflow: hidden;
+  }
+
+  .toc-drawer {
+    position: relative;
+    transition: width 0.2s ease, opacity 0.15s ease, padding 0.2s ease;
+    overflow: hidden;
+  }
+
+  /* Disable transitions while dragging (instant feedback) */
+  body.sidebar-resizing .sidebar-drawer,
+  body.sidebar-resizing .toc-drawer {
+    transition: none !important;
+  }
+
+  /* Left sidebar collapsed */
+  body.sidebar-left-collapsed .sidebar-drawer {
+    min-width: 0 !important;
+    width: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+  /* Keep the resize handle visible even when collapsed so user can drag to re-expand */
+  body.sidebar-left-collapsed .sidebar-resize-handle--left {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  /* Right sidebar collapsed */
+  body.sidebar-right-collapsed .toc-drawer {
+    width: 0 !important;
+    padding: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+  }
+  body.sidebar-right-collapsed .sidebar-resize-handle--right {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  /* Widen content when sidebars are collapsed */
+  body.sidebar-left-collapsed .content,
+  body.sidebar-right-collapsed .content {
+    max-width: none;
+  }
+}
+
+/* Hide handles on mobile — Furo handles mobile sidebars */
+@media (max-width: 63em) {
+  .sidebar-resize-handle {
+    display: none !important;
+  }
 }
