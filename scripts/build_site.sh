@@ -330,6 +330,91 @@ for md_file in curriculum_dir.rglob("*.md"):
 for phase_dir in sorted(p for p in curriculum_dir.iterdir() if p.is_dir()):
     write_phase_catalog(phase_dir)
 
+
+# ---------------------------------------------------------------------------
+# Inject toctree directives so Sphinx discovers sub-sections in the sidebar.
+# ---------------------------------------------------------------------------
+
+def _collect_toctree_entries(directory: Path):
+    """Return a list of toctree entry strings for documents inside *directory*."""
+    entries = []
+
+    # Include the auto-generated CATALOG if it exists
+    if (directory / "CATALOG.md").exists():
+        entries.append("CATALOG")
+
+    # Root-level markdown files (skip README and CATALOG, they're structural)
+    for md in sorted(directory.glob("*.md")):
+        if md.name in ("README.md", "CATALOG.md"):
+            continue
+        entries.append(md.stem)
+
+    # Root-level notebooks
+    for nb in sorted(directory.glob("*.ipynb")):
+        entries.append(nb.stem)
+
+    # Sub-directories
+    for subdir in sorted(p for p in directory.iterdir() if p.is_dir()):
+        sub_readme = subdir / "README.md"
+        if sub_readme.exists():
+            entries.append(f"{subdir.name}/README")
+        else:
+            # Pick the first discoverable document as the entry point
+            first = (
+                next(iter(sorted(subdir.glob("*.ipynb"))), None)
+                or next(iter(sorted(subdir.glob("*.md"))), None)
+            )
+            if first:
+                entries.append(f"{subdir.name}/{first.stem}")
+
+    return entries
+
+
+def inject_toctree(directory: Path):
+    """Append a hidden toctree to the README.md in *directory* (if any docs exist)."""
+    readme = directory / "README.md"
+    entries = _collect_toctree_entries(directory)
+    if not entries:
+        return
+
+    toctree_block = "\n```{toctree}\n:hidden:\n\n"
+    for entry in entries:
+        toctree_block += entry + "\n"
+    toctree_block += "```\n"
+
+    if readme.exists():
+        text = readme.read_text(encoding="utf-8")
+        if "```{toctree}" in text:
+            return  # already has a toctree
+        readme.write_text(text.rstrip() + "\n" + toctree_block, encoding="utf-8")
+    else:
+        # Look-up table for directory names that don't title-case well
+        _title_overrides = {
+            "mml-book": "Mathematics for Machine Learning (MML)",
+            "cs229-course": "Stanford CS229 Machine Learning",
+            "islp-book": "Introduction to Statistical Learning (ISLP)",
+            "mlpp-book": "ML: A Probabilistic Perspective (MLPP)",
+            "3blue1brown": "3Blue1Brown Visual Mathematics",
+        }
+        title = _title_overrides.get(
+            directory.name,
+            directory.name.replace("_", " ").replace("-", " ").title(),
+        )
+        # Create a minimal README so Sphinx has a document to attach children to
+        readme.write_text(f"# {title}\n{toctree_block}", encoding="utf-8")
+
+
+def inject_toctrees_recursive(directory: Path):
+    """Walk *directory* depth-first, injecting toctrees at every level."""
+    for subdir in sorted(p for p in directory.iterdir() if p.is_dir()):
+        inject_toctrees_recursive(subdir)
+    inject_toctree(directory)
+
+
+for phase_dir in sorted(p for p in curriculum_dir.iterdir() if p.is_dir()):
+    inject_toctrees_recursive(phase_dir)
+
+
 for source_name, output_rel in site_doc_outputs.items():
     source_path = docs_dir / source_name
     current_source_path = repo_root / source_name

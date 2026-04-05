@@ -65,6 +65,28 @@ exclude_patterns = [
     ".DS_Store",
     "**/.ipynb_checkpoints",
     "**/__pycache__",
+    # Title-less documents that generate thousands of warnings
+    "**/_sidebar.md",
+    "**/Untitled.ipynb",
+    "**/Test.ipynb",
+    # Duplicate .md/.ipynb pairs — keep the notebook, drop the markdown
+    "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/assignment.md",
+    "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/assignment.md",
+    "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/assignment.md",
+    # Source markdown files that are copied into generated/ by build_site.sh
+    "CAREER_ROADMAP.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "COMPARISON_MATRICES.md",
+    "CONTRIBUTING.md",
+    "INTERVIEW_PREP.md",
+    "LICENSE.md",
+    "MASTER_STUDY_GUIDE.md",
+    "REFERENCES.md",
+    "SUPPORT.md",
+    "WORKSPACE_LEARNING_REVIEW.md",
+    "checklist.md",
+    "setup.md",
 ]
 
 # -- Options for HTML output -------------------------------------------------
