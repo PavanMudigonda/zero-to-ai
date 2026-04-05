@@ -96,7 +96,7 @@ Reference specific parts of your codebase in any prompt:
 
 **1. Create a `.cursorignore` file** to exclude large binary files and unnecessary directories from indexing:
 
-```gitignore
+```text
 # .cursorignore
 data/
 datasets/

@@ -42,10 +42,17 @@ nb_execution_mode = "off"
 nb_execution_allow_errors = True
 suppress_warnings = [
     "mystnb.unknown_mime_type",
+    "mystnb.lexer",
+    "myst-nb.lexer",
     "myst.header",
     "myst.xref_missing",
     "toc.not_readable",
+    "image.not_readable",
+    "misc.highlighting_failure",
 ]
+
+# Treat unknown Pygments lexer names as plain text instead of warning
+highlight_language = "python3"
 
 # Source suffix configuration
 source_suffix = {
@@ -73,6 +80,8 @@ exclude_patterns = [
     "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/assignment.md",
     "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/assignment.md",
     "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/assignment.md",
+    # Translation directories — non-English content with broken relative image paths
+    "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
     "CAREER_ROADMAP.md",
     "CHANGELOG.md",
