@@ -1,4 +1,4 @@
-# Phase 8: MLOps — Deploying and Operating ML in Production
+# Phase 9: MLOps
 
 > **Goal**: Learn to deploy, monitor, and maintain ML models as production systems. This is what separates a data scientist from a machine learning engineer.
 
