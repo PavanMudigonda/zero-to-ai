@@ -1,4 +1,4 @@
-# Phase 0: Glossary & Foundations
+# Phase 23: Glossary & Foundations
 
 This folder is the vocabulary layer for the rest of the curriculum. Use it to remove ambiguity early, especially when multiple modules reuse terms like embedding, fine-tuning, evaluation, retrieval, alignment, and quantization in different contexts.
 

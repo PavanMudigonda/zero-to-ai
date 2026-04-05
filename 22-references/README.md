@@ -1,4 +1,4 @@
-# Hands-On Labs 🧪
+# Phase 22: References & Hands-On Labs
 
 Welcome to the labs section! Here you'll find curated hands-on exercises and projects to practice your AI/ML skills.
 
