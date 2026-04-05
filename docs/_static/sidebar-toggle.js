@@ -125,17 +125,73 @@
     return h;
   }
 
+  /* --- Create expand tab (visible when collapsed) ----------------- */
+  function makeExpandTab(side) {
+    var tab = document.createElement("div");
+    tab.className = "sidebar-expand-tab sidebar-expand-tab--" + side;
+    tab.setAttribute("role", "button");
+    tab.setAttribute("aria-label", "Expand " + side + " sidebar");
+    tab.setAttribute("title", "Drag or click to expand");
+    // Chevron pointing inward: right-pointing for left tab, left-pointing for right tab
+    tab.textContent = side === "left" ? "\u203A" : "\u2039"; // › / ‹
+    return tab;
+  }
+
   /* --- Main init -------------------------------------------------- */
   function init() {
     var leftDrawer  = getLeftDrawer();
     var rightDrawer = getRightDrawer();
 
-    /* Left handle */
+    /* Left handle + expand tab */
     if (leftDrawer) {
       var lh = makeHandle("left");
       leftDrawer.appendChild(lh);
 
+      var leftTab = makeExpandTab("left");
+      document.body.appendChild(leftTab);
+
       var lastLeftW = parseInt(localStorage.getItem(LEFT_W_KEY), 10) || emToPx(DEFAULT_LEFT);
+
+      /* Click expand tab to restore */
+      leftTab.addEventListener("click", function () {
+        expandLeft(lastLeftW || emToPx(DEFAULT_LEFT));
+        removeStoredStyle();
+      });
+
+      /* Drag from expand tab to resize open */
+      leftTab.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+        document.body.classList.add("sidebar-resizing");
+        expandLeft(0);
+        var startX = e.clientX;
+
+        function onMove(ev) {
+          var newW = Math.max(0, ev.clientX - startX);
+          if (newW < SNAP_THRESHOLD) {
+            document.body.classList.add("sidebar-left-collapsed");
+            setLeftWidth(0);
+          } else {
+            document.body.classList.remove("sidebar-left-collapsed");
+            setLeftWidth(newW);
+          }
+        }
+        function onUp() {
+          document.removeEventListener("mousemove", onMove);
+          document.removeEventListener("mouseup", onUp);
+          document.body.classList.remove("sidebar-resizing");
+          var finalW = leftDrawer.getBoundingClientRect().width;
+          if (finalW < SNAP_THRESHOLD) {
+            collapseLeft();
+          } else {
+            localStorage.setItem(LEFT_COL_KEY, "0");
+            localStorage.setItem(LEFT_W_KEY, Math.round(finalW));
+            lastLeftW = Math.round(finalW);
+          }
+          removeStoredStyle();
+        }
+        document.addEventListener("mousemove", onMove);
+        document.addEventListener("mouseup", onUp);
+      });
 
       lh.addEventListener("mousedown", function (e) {
         e.preventDefault();
@@ -192,12 +248,56 @@
       });
     }
 
-    /* Right handle */
+    /* Right handle + expand tab */
     if (rightDrawer) {
       var rh = makeHandle("right");
       rightDrawer.insertBefore(rh, rightDrawer.firstChild);
 
+      var rightTab = makeExpandTab("right");
+      document.body.appendChild(rightTab);
+
       var lastRightW = parseInt(localStorage.getItem(RIGHT_W_KEY), 10) || emToPx(DEFAULT_RIGHT);
+
+      /* Click expand tab to restore */
+      rightTab.addEventListener("click", function () {
+        expandRight(lastRightW || emToPx(DEFAULT_RIGHT));
+        removeStoredStyle();
+      });
+
+      /* Drag from expand tab to resize open */
+      rightTab.addEventListener("mousedown", function (e) {
+        e.preventDefault();
+        document.body.classList.add("sidebar-resizing");
+        expandRight(0);
+        var startX = e.clientX;
+
+        function onMove(ev) {
+          var newW = Math.max(0, startX - ev.clientX);
+          if (newW < SNAP_THRESHOLD) {
+            document.body.classList.add("sidebar-right-collapsed");
+            setRightWidth(0);
+          } else {
+            document.body.classList.remove("sidebar-right-collapsed");
+            setRightWidth(newW);
+          }
+        }
+        function onUp() {
+          document.removeEventListener("mousemove", onMove);
+          document.removeEventListener("mouseup", onUp);
+          document.body.classList.remove("sidebar-resizing");
+          var finalW = rightDrawer.getBoundingClientRect().width;
+          if (finalW < SNAP_THRESHOLD) {
+            collapseRight();
+          } else {
+            localStorage.setItem(RIGHT_COL_KEY, "0");
+            localStorage.setItem(RIGHT_W_KEY, Math.round(finalW));
+            lastRightW = Math.round(finalW);
+          }
+          removeStoredStyle();
+        }
+        document.addEventListener("mousemove", onMove);
+        document.addEventListener("mouseup", onUp);
+      });
 
       rh.addEventListener("mousedown", function (e) {
         e.preventDefault();

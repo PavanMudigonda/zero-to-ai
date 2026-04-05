@@ -341,11 +341,6 @@ body.sidebar-resizing * {
     opacity: 0;
     pointer-events: none;
   }
-  /* Keep the resize handle visible even when collapsed so user can drag to re-expand */
-  body.sidebar-left-collapsed .sidebar-resize-handle--left {
-    pointer-events: auto;
-    opacity: 1;
-  }
 
   /* Right sidebar collapsed */
   body.sidebar-right-collapsed .toc-drawer {
@@ -354,15 +349,77 @@ body.sidebar-resizing * {
     opacity: 0;
     pointer-events: none;
   }
-  body.sidebar-right-collapsed .sidebar-resize-handle--right {
-    pointer-events: auto;
-    opacity: 1;
-  }
 
   /* Widen content when sidebars are collapsed */
   body.sidebar-left-collapsed .content,
   body.sidebar-right-collapsed .content {
     max-width: none;
+  }
+
+  /* --- Expand tabs: visible only when the sidebar is collapsed --- */
+  .sidebar-expand-tab {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 38;
+    width: 20px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid var(--color-background-border, #e0e0e0);
+    background: var(--color-background-secondary, #f8f9fb);
+    color: var(--color-foreground-muted, #6b6f76);
+    font-size: 13px;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, background 0.15s, color 0.15s;
+  }
+  .sidebar-expand-tab:hover {
+    background: var(--color-background-hover, #efeff4);
+    color: var(--color-brand-primary, #3f51b5);
+  }
+
+  .sidebar-expand-tab--left {
+    left: 0;
+    border-left: none;
+    border-radius: 0 6px 6px 0;
+  }
+  .sidebar-expand-tab--right {
+    right: 0;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+  }
+
+  /* Show expand tab only when corresponding sidebar is collapsed */
+  body.sidebar-left-collapsed .sidebar-expand-tab--left {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  body.sidebar-right-collapsed .sidebar-expand-tab--right {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Let the main content area grow to fill space freed by resized sidebars */
+  .main {
+    display: flex;
+  }
+
+  .content {
+    flex: 1 1 auto;
+    width: auto;
+    max-width: none;
+  }
+
+  /* Keep the sidebar-drawer from being forced wide by flex */
+  .sidebar-drawer {
+    flex-shrink: 0;
+  }
+  .toc-drawer {
+    flex-shrink: 0;
   }
 }
 
