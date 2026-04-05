@@ -1,4 +1,4 @@
-# Course Setup - Zero to AI
+# Phase 0: Course Setup
 
 ## ⏱️ Quick Setup (5 minutes)
 

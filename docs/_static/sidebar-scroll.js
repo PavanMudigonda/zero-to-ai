@@ -1,55 +1,66 @@
 /**
  * Preserve the left sidebar scroll position across page navigations.
  *
- * Furo's own JS calls scrollIntoView on the current toctree item after
- * DOMContentLoaded, which resets any scrollTop we set earlier.  We fight
- * back by:
- *   1. Saving scrollTop on every sidebar link click (before navigation).
- *   2. Restoring it *after* Furo has finished (requestAnimationFrame loop
- *      that re-applies the position until the browser has settled).
- *   3. Then locking the position for a short window by temporarily
- *      suppressing the scroll via CSS overflow:hidden.
+ * Strategy: if a saved position exists, we immediately inject CSS that
+ * hides the sidebar (visibility:hidden keeps layout stable). Then on
+ * DOMContentLoaded we set scrollTop, intercept Furo's scrollIntoView,
+ * and reveal — all before the user sees anything.
  */
 (function () {
   "use strict";
 
   var STORAGE_KEY = "ztai-sidebar-scroll";
-  var LOCK_MS = 400;            // ms to hold scroll position after restore
+  var hasSaved = sessionStorage.getItem(STORAGE_KEY) !== null;
 
-  function getSidebar() {
-    return document.querySelector(".sidebar-scroll");
+  /* ---- Phase 1: run immediately at parse time ---- */
+  // If we have a saved position, hide sidebar content to prevent flash
+  if (hasSaved) {
+    var hideStyle = document.createElement("style");
+    hideStyle.id = "ztai-sidebar-hide";
+    hideStyle.textContent = ".sidebar-scroll{visibility:hidden!important}";
+    document.head.appendChild(hideStyle);
   }
 
-  /* ---- Restore ---- */
+  /* ---- Phase 2: intercept scrollIntoView at parse time ---- */
+  var nativeScrollIntoView = Element.prototype.scrollIntoView;
+
+  if (hasSaved) {
+    Element.prototype.scrollIntoView = function () {
+      // Skip calls targeting sidebar children
+      var sidebar = document.querySelector(".sidebar-scroll");
+      if (sidebar && sidebar.contains(this)) return;
+      return nativeScrollIntoView.apply(this, arguments);
+    };
+  }
+
+  /* ---- Phase 3: restore position on DOMContentLoaded ---- */
   function restore() {
-    var sidebar = getSidebar();
-    if (!sidebar) return;
+    var sidebar = document.querySelector(".sidebar-scroll");
+    if (!sidebar) { cleanup(); return; }
 
     var raw = sessionStorage.getItem(STORAGE_KEY);
-    if (raw === null) return;          // first visit — let Furo do its thing
     sessionStorage.removeItem(STORAGE_KEY);
 
-    var target = parseInt(raw, 10);
-    if (isNaN(target)) return;
-
-    // Apply position repeatedly to beat Furo's own scrollIntoView
-    var attempts = 0;
-    function apply() {
-      sidebar.scrollTop = target;
-      if (++attempts < 6) {
-        requestAnimationFrame(apply);
-      } else {
-        // After settling, briefly lock so no late scripts can override
-        sidebar.style.overflow = "hidden";
-        setTimeout(function () { sidebar.style.overflow = ""; }, LOCK_MS);
+    if (raw !== null) {
+      var target = parseInt(raw, 10);
+      if (!isNaN(target)) {
+        sidebar.scrollTop = target;
       }
     }
-    apply();
+
+    // Reveal: remove the hide style and restore native scrollIntoView
+    cleanup();
+  }
+
+  function cleanup() {
+    var s = document.getElementById("ztai-sidebar-hide");
+    if (s) s.remove();
+    Element.prototype.scrollIntoView = nativeScrollIntoView;
   }
 
   /* ---- Save on click ---- */
   function listen() {
-    var sidebar = getSidebar();
+    var sidebar = document.querySelector(".sidebar-scroll");
     if (!sidebar) return;
     sidebar.addEventListener("click", function (e) {
       if (e.target.closest("a")) {

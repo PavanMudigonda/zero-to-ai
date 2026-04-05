@@ -1,4 +1,4 @@
-# Phase 1: Data Science Foundations
+# Phase 2: Data Science Foundations
 
 This folder is the practical base layer for the rest of the repo. If you are not yet comfortable with arrays, DataFrames, plots, train/test splits, and the `fit/predict/transform` workflow, later LLM and deep learning phases will feel harder than they need to.
 

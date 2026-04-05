@@ -1,4 +1,4 @@
-# Phase 7: RAG (Retrieval-Augmented Generation)
+# Phase 8: RAG
 
 ## 🎯 Overview
 
