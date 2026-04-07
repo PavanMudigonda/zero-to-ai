@@ -267,7 +267,7 @@ body[data-theme="dark"] .notebook-launchers__label {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 5px;
+  width: 8px;
   cursor: col-resize;
   z-index: 36;
   background: transparent;
@@ -326,12 +326,21 @@ body.sidebar-resizing * {
   .sidebar-drawer {
     position: relative;          /* anchor for the handle */
     transition: min-width 0.2s ease, width 0.2s ease, opacity 0.15s ease;
+    /* overflow NOT set here — set only when collapsed/resizing so the
+       absolutely-positioned drag handle isn't clipped */
+  }
+
+  /* Clip sidebar content so it doesn't spill when drawer shrinks */
+  .sidebar-drawer .sidebar-container {
     overflow: hidden;
   }
 
   .toc-drawer {
     position: relative;
     transition: width 0.2s ease, opacity 0.15s ease, padding 0.2s ease;
+  }
+
+  .toc-drawer .toc-sticky {
     overflow: hidden;
   }
 
@@ -339,6 +348,7 @@ body.sidebar-resizing * {
   body.sidebar-resizing .sidebar-drawer,
   body.sidebar-resizing .toc-drawer {
     transition: none !important;
+    overflow: hidden;            /* clip during active drag */
   }
 
   /* Left sidebar collapsed */
@@ -347,6 +357,7 @@ body.sidebar-resizing * {
     width: 0 !important;
     opacity: 0;
     pointer-events: none;
+    overflow: hidden;            /* clip when collapsed */
   }
 
   /* Right sidebar collapsed */
@@ -355,6 +366,7 @@ body.sidebar-resizing * {
     padding: 0 !important;
     opacity: 0;
     pointer-events: none;
+    overflow: hidden;            /* clip when collapsed */
   }
 
   /* Widen content when sidebars are collapsed */
@@ -408,6 +420,39 @@ body.sidebar-resizing * {
   body.sidebar-right-collapsed .sidebar-expand-tab--right {
     opacity: 1;
     pointer-events: auto;
+  }
+
+  /* --- Collapse button: small circular chevron on drag handle --- */
+  .sidebar-collapse-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--color-background-secondary, #f8f9fb);
+    border: 1px solid var(--color-background-border, #e0e0e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--color-foreground-muted, #6b6f76);
+    z-index: 37;
+    transition: background 0.15s, color 0.15s, transform 0.2s;
+    line-height: 1;
+  }
+  .sidebar-collapse-btn:hover {
+    background: var(--color-brand-primary, #3f51b5);
+    color: white;
+    transform: translateY(-50%) scale(1.15);
+  }
+  .sidebar-collapse-btn--left {
+    right: -11px;  /* center on the handle's right edge */
+  }
+  .sidebar-collapse-btn--right {
+    left: -11px;   /* center on the handle's left edge */
   }
 
   /* Let the main content area grow to fill space freed by resized sidebars */

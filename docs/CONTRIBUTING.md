@@ -2,6 +2,8 @@
 
 Thank you for contributing to this repository. The goal of this project is to make AI/ML learning structured, practical, and maintainable for self-learners.
 
+**Live site:** [https://zero-to-ai.dev](https://zero-to-ai.dev)
+
 ## What Contributions Help Most
 
 - Fix broken links, stale APIs, and outdated instructions

@@ -1,5 +1,7 @@
 # Phase 0: Course Setup
 
+> **Browse the full curriculum online at [zero-to-ai.dev](https://zero-to-ai.dev)**
+
 ## ⏱️ Quick Setup (5 minutes)
 
 **Ready to start coding immediately?** Here's the fastest way:
