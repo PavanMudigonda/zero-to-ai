@@ -1,6 +1,0 @@
-[build]
-  publish = "site"
-  command = "pip install -r requirements-docs.txt && bash scripts/build_site.sh && sphinx-build -b html docs site"
-
-[build.environment]
-  PYTHON_VERSION = "3.12"

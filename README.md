@@ -14,7 +14,7 @@
 
 ---
 
-[![Open in Browser](https://img.shields.io/badge/Open%20in-Browser-00C7B7?style=flat&logo=netlify)](https://zero-to-ai.netlify.app/)
+[![Open in Browser](https://img.shields.io/badge/Open%20in-Browser-F38020?style=flat&logo=cloudflare)](https://zero-to-ai.dev/)
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
 [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai)
 [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://www.kaggle.com/code)

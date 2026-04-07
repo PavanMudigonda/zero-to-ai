@@ -125,6 +125,18 @@
     return h;
   }
 
+  /* --- Create collapse button (circular chevron on drag handle) --- */
+  function makeCollapseBtn(side) {
+    var btn = document.createElement("div");
+    btn.className = "sidebar-collapse-btn sidebar-collapse-btn--" + side;
+    btn.setAttribute("role", "button");
+    btn.setAttribute("aria-label", "Collapse " + side + " sidebar");
+    btn.setAttribute("title", "Collapse sidebar");
+    // ‹ to collapse left, › to collapse right
+    btn.textContent = side === "left" ? "\u2039" : "\u203A";
+    return btn;
+  }
+
   /* --- Create expand tab (visible when collapsed) ----------------- */
   function makeExpandTab(side) {
     var tab = document.createElement("div");
@@ -142,10 +154,24 @@
     var leftDrawer  = getLeftDrawer();
     var rightDrawer = getRightDrawer();
 
-    /* Left handle + expand tab */
+    /* Left handle + collapse button + expand tab */
     if (leftDrawer) {
       var lh = makeHandle("left");
       leftDrawer.appendChild(lh);
+
+      /* Collapse button on the drag handle */
+      var leftCollapseBtn = makeCollapseBtn("left");
+      lh.appendChild(leftCollapseBtn);
+      leftCollapseBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (document.body.classList.contains("sidebar-left-collapsed")) {
+          expandLeft(lastLeftW || emToPx(DEFAULT_LEFT));
+        } else {
+          lastLeftW = leftDrawer.getBoundingClientRect().width;
+          collapseLeft();
+        }
+        removeStoredStyle();
+      });
 
       var leftTab = makeExpandTab("left");
       document.body.appendChild(leftTab);
@@ -248,10 +274,24 @@
       });
     }
 
-    /* Right handle + expand tab */
+    /* Right handle + collapse button + expand tab */
     if (rightDrawer) {
       var rh = makeHandle("right");
       rightDrawer.insertBefore(rh, rightDrawer.firstChild);
+
+      /* Collapse button on the drag handle */
+      var rightCollapseBtn = makeCollapseBtn("right");
+      rh.appendChild(rightCollapseBtn);
+      rightCollapseBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (document.body.classList.contains("sidebar-right-collapsed")) {
+          expandRight(lastRightW || emToPx(DEFAULT_RIGHT));
+        } else {
+          lastRightW = rightDrawer.getBoundingClientRect().width;
+          collapseRight();
+        }
+        removeStoredStyle();
+      });
 
       var rightTab = makeExpandTab("right");
       document.body.appendChild(rightTab);

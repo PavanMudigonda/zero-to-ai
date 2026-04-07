@@ -8,6 +8,8 @@ copyright = "2024, Pavan Mudigonda"
 author = "Pavan Mudigonda"
 release = "0.1.0"
 
+html_baseurl = "https://zero-to-ai.dev/"
+
 # -- General configuration ---------------------------------------------------
 extensions = [
     "myst_nb",
