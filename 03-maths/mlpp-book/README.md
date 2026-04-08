@@ -78,7 +78,7 @@ pip install numpy scipy matplotlib scikit-learn pandas seaborn
 
 Murphy, Kevin P. "Machine Learning: A Probabilistic Perspective." MIT Press, 2012.
 
-The PDF is available in: `../resources/ML Machine Learning-A Probabilistic Perspective.pdf`
+The PDF is available in: [ML-Machine-Learning-A-Probabilistic-Perspective.pdf](ML-Machine-Learning-A-Probabilistic-Perspective.pdf)
 
 ## 🔗 Related Sections
 

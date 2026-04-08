@@ -656,68 +656,47 @@ for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
 ## 🎓 Learning Modules
 
 ### Module 1: Basics (2 hours)
-**[01_vector_db_basics.py](./01_vector_db_basics.py)**
+**[01_vector_db_basics.ipynb](01_vector_db_basics.ipynb)**
 - What are vector databases
 - Similarity metrics (cosine, L2, dot product)
 - CRUD operations
 - Basic search
 
-### Module 2: Pinecone (1.5 hours)
-**[02_pinecone_guide.py](./02_pinecone_guide.py)**
-- Pinecone setup
-- Indexing strategies
-- Metadata filtering
-- Production patterns
-
-### Module 3: Chroma (1 hour)
-**[03_chroma_guide.py](./03_chroma_guide.py)**
+### Module 2: Chroma (1 hour)
+**[02_chroma_guide.ipynb](02_chroma_guide.ipynb)**
 - Local development
 - Auto-embedding
 - Collections
 - Persistence
 
-### Module 4: Qdrant (1.5 hours)
-**[04_qdrant_guide.py](./04_qdrant_guide.py)**
+### Module 3: Qdrant (1.5 hours)
+**[03_qdrant_guide.ipynb](03_qdrant_guide.ipynb)**
 - Qdrant setup (Docker/Cloud)
 - Advanced filtering
 - Batch operations
 - Performance tuning
 
-### Module 5: Weaviate (1.5 hours)
-**[05_weaviate_guide.py](./05_weaviate_guide.py)**
+### Module 4: Weaviate (1.5 hours)
+**[04_weaviate_guide.ipynb](04_weaviate_guide.ipynb)**
 - Weaviate setup (Docker/Cloud)
 - GraphQL queries
 - Hybrid search (vector + keyword)
 - Schema design and modules
 
-### Module 6: Milvus (2 hours)
-**[06_milvus_guide.py](./06_milvus_guide.py)**
+### Module 5: Milvus (2 hours)
+**[05_milvus_guide.ipynb](05_milvus_guide.ipynb)**
 - Milvus/Zilliz Cloud setup
 - Collection schema design
 - Index types (IVF, HNSW)
 - Partitioning and sharding
 - Large-scale deployments
 
-### Module 7: pgvector (1 hour)
-**[07_pgvector_guide.py](./07_pgvector_guide.py)**
+### Module 6: Aurora pgvector (1 hour)
+**[06_aurora_pgvector_guide.ipynb](06_aurora_pgvector_guide.ipynb)**
 - PostgreSQL integration
 - SQL + vectors
 - Indexes (IVFFlat, HNSW)
 - Hybrid queries
-
-### Module 8: Production RAG (2 hours)
-**[08_production_rag.py](./08_production_rag.py)**
-- Building RAG systems
-- Document chunking
-- Retrieval strategies
-- LLM integration
-
-### Module 9: Advanced Topics (2 hours)
-**[09_advanced_patterns.py](./09_advanced_patterns.py)**
-- Hybrid search
-- Reranking
-- Multi-vector search
-- Sharding strategies
 
 ---
 

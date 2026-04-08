@@ -62,23 +62,9 @@ ai-agents/
 ├── 01_function_calling.ipynb          # Tool use basics
 ├── 02_react_pattern.ipynb             # ReAct reasoning loop
 ├── 03_langgraph_agents.ipynb          # LangGraph framework
-├── 04_microsoft_agents.ipynb          # Microsoft Agent Framework
-├── 05_autogen_multiagent.ipynb        # Multi-agent systems
-├── 06_crewai.ipynb                    # Role-based collaboration
-├── 07_memory_state.ipynb              # Long-term memory
-├── 08_evaluation.ipynb                # Testing agents
-├── 09_production.ipynb                # Deployment patterns
-├── projects/
-│   ├── research_assistant/            # Web research agent
-│   ├── code_reviewer/                 # GitHub PR agent
-│   ├── data_analyst/                  # SQL + Python agent
-│   ├── customer_support/              # Multi-turn support
-│   └── workflow_automation/           # Complex workflows
-├── tools/
-│   ├── web_search.py
-│   ├── code_execution.py
-│   ├── database_query.py
-│   └── file_operations.py
+├── 04_multi_agent_systems.ipynb       # Multi-agent collaboration
+├── 05_memory_state.ipynb              # Long-term memory
+├── 06_production.ipynb                # Deployment patterns
 └── README.md
 ```
 
@@ -200,22 +186,15 @@ user.initiate_chat(
 ### Week 2: Agent Frameworks
 
 - [ ] LangGraph in `03_langgraph_agents.ipynb`
-- [ ] Microsoft framework in `04_microsoft_agents.ipynb`
+- [ ] Multi-agent systems in `04_multi_agent_systems.ipynb`
 - [ ] Try different frameworks
 - [ ] **Project:** Research assistant
 
-### Week 3: Multi-Agent Systems
+### Week 3: Memory & Production
 
-- [ ] AutoGen in `05_autogen_multiagent.ipynb`
-- [ ] CrewAI in `06_crewai.ipynb`
+- [ ] Memory in `05_memory_state.ipynb`
+- [ ] Production in `06_production.ipynb`
 - [ ] Agent collaboration patterns
-- [ ] **Project:** Multi-agent workflow
-
-### Week 4: Production
-
-- [ ] Memory in `07_memory_state.ipynb`
-- [ ] Evaluation in `08_evaluation.ipynb`
-- [ ] Production in `09_production.ipynb`
 - [ ] **Capstone:** Production agent system
 
 ---
