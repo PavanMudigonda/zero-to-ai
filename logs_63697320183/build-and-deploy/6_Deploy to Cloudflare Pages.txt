@@ -1,0 +1,49 @@
+﻿2026-04-07T23:50:17.9944156Z ##[group]Run cloudflare/wrangler-action@v3
+2026-04-07T23:50:17.9944467Z with:
+2026-04-07T23:50:17.9944869Z   apiToken: ***
+2026-04-07T23:50:17.9945101Z   accountId: ***
+2026-04-07T23:50:17.9945355Z   command: pages deploy site --project-name=zero-to-ai
+2026-04-07T23:50:17.9945657Z   quiet: false
+2026-04-07T23:50:17.9945832Z env:
+2026-04-07T23:50:17.9946074Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-07T23:50:17.9946489Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-04-07T23:50:17.9946897Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-07T23:50:17.9947264Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-07T23:50:17.9947958Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-07T23:50:17.9948344Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-04-07T23:50:17.9948651Z ##[endgroup]
+2026-04-07T23:50:18.0870422Z ##[group]🔍 Checking for existing Wrangler installation
+2026-04-07T23:50:18.0910073Z [command]/usr/local/bin/npx --no-install wrangler --version
+2026-04-07T23:50:22.3655962Z npm error npx canceled due to missing packages and no YES option: ["wrangler@4.81.0"]
+2026-04-07T23:50:22.3663916Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-04-07T23_50_18_272Z-debug-0.log
+2026-04-07T23:50:22.3804510Z ⚠️ Wrangler not found or version is incompatible. Installing...
+2026-04-07T23:50:22.3805459Z ##[endgroup]
+2026-04-07T23:50:22.3806464Z ##[group]📥 Installing Wrangler
+2026-04-07T23:50:22.3832524Z [command]/usr/local/bin/npm i wrangler@3.90.0
+2026-04-07T23:50:25.8403967Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2026-04-07T23:50:25.8779912Z npm warn deprecated rollup-plugin-inject@3.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-inject.
+2026-04-07T23:50:28.6661501Z 
+2026-04-07T23:50:28.6662129Z added 69 packages in 6s
+2026-04-07T23:50:28.6664505Z 
+2026-04-07T23:50:28.6665231Z 11 packages are looking for funding
+2026-04-07T23:50:28.6665853Z   run `npm fund` for details
+2026-04-07T23:50:28.6842973Z ✅ Wrangler installed
+2026-04-07T23:50:28.6845726Z ##[endgroup]
+2026-04-07T23:50:28.6848875Z ##[group]🚀 Running Wrangler Commands
+2026-04-07T23:50:28.6873805Z [command]/usr/local/bin/npx wrangler pages deploy site --project-name=zero-to-ai
+2026-04-07T23:50:30.2691505Z [33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+2026-04-07T23:50:30.2692194Z 
+2026-04-07T23:50:30.2692376Z   To silence this warning, pass in --commit-dirty=true
+2026-04-07T23:50:30.2692621Z 
+2026-04-07T23:50:30.2692626Z 
+2026-04-07T23:50:30.3630763Z 
+2026-04-07T23:50:30.3639828Z [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mA request to the Cloudflare API (/accounts/***/pages/projects/zero-to-ai) failed.[0m
+2026-04-07T23:50:30.3640827Z 
+2026-04-07T23:50:30.3641485Z   Project not found. The specified project name does not match any of your existing projects. [code: 8000007]
+2026-04-07T23:50:30.3642508Z   
+2026-04-07T23:50:30.3643599Z   If you think this is a bug, please open an issue at: [4mhttps://github.com/cloudflare/workers-sdk/issues/new/choose[0m
+2026-04-07T23:50:30.3644299Z 
+2026-04-07T23:50:30.3644310Z 
+2026-04-07T23:50:30.3865885Z ##[endgroup]
+2026-04-07T23:50:30.3888498Z ##[error]The process '/usr/local/bin/npx' failed with exit code 1
+2026-04-07T23:50:30.3897263Z ##[error]🚨 Action failed

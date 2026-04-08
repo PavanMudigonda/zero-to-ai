@@ -437,4 +437,30 @@ readme_count=$(find "$CURRICULUM_DIR" -type f -name 'README.md' | wc -l | tr -d 
 nb_count=$(find "$CURRICULUM_DIR" -type f -name '*.ipynb' | wc -l | tr -d ' ')
 catalog_count=$(find "$CURRICULUM_DIR" -type f -name 'CATALOG.md' | wc -l | tr -d ' ')
 
+# ---------------------------------------------------------------------------
+# Normalize notebooks: add missing cell IDs (required by nbformat >= 5.5)
+# ---------------------------------------------------------------------------
+python3 -c "
+import json, glob, uuid, sys
+
+fixed = 0
+for path in glob.glob('$CURRICULUM_DIR/**/*.ipynb', recursive=True):
+    try:
+        with open(path) as f:
+            nb = json.load(f)
+    except Exception:
+        continue
+    changed = False
+    for cell in nb.get('cells', []):
+        if 'id' not in cell:
+            cell['id'] = uuid.uuid4().hex[:8]
+            changed = True
+    if changed:
+        with open(path, 'w') as f:
+            json.dump(nb, f, indent=1, ensure_ascii=False)
+            f.write('\n')
+        fixed += 1
+print(f'Normalized {fixed} notebooks (added missing cell IDs).')
+"
+
 echo "Published $phase_count phases, $readme_count README files, $catalog_count catalogs, and $nb_count notebooks."

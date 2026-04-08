@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6.2.0
         with:
           python-version: "3.12"
           cache: pip
@@ -25,6 +25,11 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements-docs.txt
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6.3.0
+        with:
+          node-version: "lts/*"
 
       - name: Generate Sphinx site
         run: |
@@ -38,4 +43,4 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site --project-name=zero-to-ai
+          command: pages deploy site --project-name=zero-to-ai --commit-dirty=true
