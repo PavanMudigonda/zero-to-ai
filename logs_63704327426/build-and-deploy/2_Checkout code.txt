@@ -1,0 +1,83 @@
+﻿2026-04-08T00:48:20.5616787Z ##[group]Run actions/checkout@v6.0.2
+2026-04-08T00:48:20.5618156Z with:
+2026-04-08T00:48:20.5618972Z   repository: PavanMudigonda/zero-to-ai
+2026-04-08T00:48:20.5620337Z   token: ***
+2026-04-08T00:48:20.5621439Z   ssh-strict: true
+2026-04-08T00:48:20.5622277Z   ssh-user: git
+2026-04-08T00:48:20.5623084Z   persist-credentials: true
+2026-04-08T00:48:20.5623981Z   clean: true
+2026-04-08T00:48:20.5624796Z   sparse-checkout-cone-mode: true
+2026-04-08T00:48:20.5625759Z   fetch-depth: 1
+2026-04-08T00:48:20.5626571Z   fetch-tags: false
+2026-04-08T00:48:20.5627367Z   show-progress: true
+2026-04-08T00:48:20.5628181Z   lfs: false
+2026-04-08T00:48:20.5628927Z   submodules: false
+2026-04-08T00:48:20.5629749Z   set-safe-directory: true
+2026-04-08T00:48:20.5630963Z ##[endgroup]
+2026-04-08T00:48:20.6610297Z Syncing repository: PavanMudigonda/zero-to-ai
+2026-04-08T00:48:20.6613548Z ##[group]Getting Git version info
+2026-04-08T00:48:20.6614902Z Working directory is '/home/runner/work/zero-to-ai/zero-to-ai'
+2026-04-08T00:48:20.6616891Z [command]/usr/bin/git version
+2026-04-08T00:48:20.6623930Z git version 2.53.0
+2026-04-08T00:48:20.6649836Z ##[endgroup]
+2026-04-08T00:48:20.6665716Z Temporarily overriding HOME='/home/runner/work/_temp/2ac905f6-70f2-4ed9-afb7-96535c05234b' before making global git config changes
+2026-04-08T00:48:20.6669961Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-08T00:48:20.6673649Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-08T00:48:20.6706993Z Deleting the contents of '/home/runner/work/zero-to-ai/zero-to-ai'
+2026-04-08T00:48:20.6711539Z ##[group]Initializing the repository
+2026-04-08T00:48:20.6716498Z [command]/usr/bin/git init /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-08T00:48:20.6776396Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-08T00:48:20.6779973Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-08T00:48:20.6782227Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-08T00:48:20.6783634Z hint: call:
+2026-04-08T00:48:20.6784356Z hint:
+2026-04-08T00:48:20.6785399Z hint: 	git config --global init.defaultBranch <name>
+2026-04-08T00:48:20.6786807Z hint:
+2026-04-08T00:48:20.6787883Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-08T00:48:20.6789661Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-08T00:48:20.6791236Z hint:
+2026-04-08T00:48:20.6791983Z hint: 	git branch -m <name>
+2026-04-08T00:48:20.6792854Z hint:
+2026-04-08T00:48:20.6794063Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-08T00:48:20.6796131Z Initialized empty Git repository in /home/runner/work/zero-to-ai/zero-to-ai/.git/
+2026-04-08T00:48:20.6799277Z [command]/usr/bin/git remote add origin https://github.com/PavanMudigonda/zero-to-ai
+2026-04-08T00:48:20.6822108Z ##[endgroup]
+2026-04-08T00:48:20.6825906Z ##[group]Disabling automatic garbage collection
+2026-04-08T00:48:20.6827806Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-08T00:48:20.6858032Z ##[endgroup]
+2026-04-08T00:48:20.6859941Z ##[group]Setting up auth
+2026-04-08T00:48:20.6861400Z Removing SSH command configuration
+2026-04-08T00:48:20.6864006Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-08T00:48:20.6895617Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-08T00:48:20.7179999Z Removing HTTP extra header
+2026-04-08T00:48:20.7185672Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-08T00:48:20.7218675Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-08T00:48:20.7448686Z Removing includeIf entries pointing to credentials config files
+2026-04-08T00:48:20.7455946Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-08T00:48:20.7491124Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-08T00:48:20.7723596Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-ae8c3454-37e3-4660-a387-f13ebd9c303d.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-08T00:48:20.7761924Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path /home/runner/work/_temp/git-credentials-ae8c3454-37e3-4660-a387-f13ebd9c303d.config
+2026-04-08T00:48:20.7792256Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-ae8c3454-37e3-4660-a387-f13ebd9c303d.config
+2026-04-08T00:48:20.7823598Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-ae8c3454-37e3-4660-a387-f13ebd9c303d.config
+2026-04-08T00:48:20.7856653Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-ae8c3454-37e3-4660-a387-f13ebd9c303d.config
+2026-04-08T00:48:20.7885811Z ##[endgroup]
+2026-04-08T00:48:20.7887858Z ##[group]Fetching the repository
+2026-04-08T00:48:20.7897449Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9dbaacfa0f794170094ee0fbf028c4b6e81ef9f7:refs/remotes/origin/main
+2026-04-08T00:48:24.4810538Z From https://github.com/PavanMudigonda/zero-to-ai
+2026-04-08T00:48:24.4814152Z  * [new ref]         9dbaacfa0f794170094ee0fbf028c4b6e81ef9f7 -> origin/main
+2026-04-08T00:48:24.4848466Z [command]/usr/bin/git branch --list --remote origin/main
+2026-04-08T00:48:24.4883517Z   origin/main
+2026-04-08T00:48:24.4892268Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-04-08T00:48:24.4915370Z 9dbaacfa0f794170094ee0fbf028c4b6e81ef9f7
+2026-04-08T00:48:24.4919413Z ##[endgroup]
+2026-04-08T00:48:24.4920104Z ##[group]Determining the checkout info
+2026-04-08T00:48:24.4922484Z ##[endgroup]
+2026-04-08T00:48:24.4926339Z [command]/usr/bin/git sparse-checkout disable
+2026-04-08T00:48:24.6157503Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-08T00:48:24.6189332Z ##[group]Checking out the ref
+2026-04-08T00:48:24.6192887Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-04-08T00:48:25.3081472Z Switched to a new branch 'main'
+2026-04-08T00:48:25.3082199Z branch 'main' set up to track 'origin/main'.
+2026-04-08T00:48:25.3181768Z ##[endgroup]
+2026-04-08T00:48:25.3186916Z [command]/usr/bin/git log -1 --format=%H
+2026-04-08T00:48:25.3213651Z 9dbaacfa0f794170094ee0fbf028c4b6e81ef9f7
