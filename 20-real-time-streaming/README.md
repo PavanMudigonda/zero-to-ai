@@ -3,14 +3,13 @@
 ## Overview
 Learn how to build real-time AI applications with streaming responses, WebSocket connections, and progressive loading.
 
-**Duration:** 8 hours (5 notebooks + materials)
+**Duration:** 8 hours (4 notebooks + materials)
 
 **Topics Covered:**
 1. Streaming LLM Responses
 2. WebSocket Connections  
-3. Chunked Generation
-4. Real-Time RAG
-5. Production Streaming Systems
+3. Real-Time RAG
+4. Production Streaming Systems
 
 ## Learning Objectives
 
@@ -98,25 +97,8 @@ async with websockets.connect("ws://localhost:8000/ws") as ws:
     response = await ws.recv()
 ```
 
-### 3. Chunked Generation (75 minutes)
-**File:** `03_chunked_generation.ipynb`
-
-**Topics:**
-- Progressive rendering
-- Chunk size optimization
-- Buffering strategies
-- Token accumulation
-- UI update patterns
-- Performance optimization
-
-**Key Techniques:**
-- Sentence-level chunking
-- Token buffering
-- Delta updates
-- Smooth rendering
-
-### 4. Real-Time RAG (90 minutes)
-**File:** `04_real_time_rag.ipynb`
+### 3. Real-Time RAG (90 minutes)
+**File:** `03_real_time_rag.ipynb`
 
 **Topics:**
 - Streaming search results
@@ -137,8 +119,8 @@ User Query → Vector Search (stream) → Document Retrieval (progressive)
         Response (real-time)
 ```
 
-### 5. Production Streaming (120 minutes)
-**File:** `05_production_streaming.ipynb`
+### 4. Production Streaming (120 minutes)
+**File:** `04_production_streaming.ipynb`
 
 **Topics:**
 - Load balancing streaming connections
@@ -155,73 +137,6 @@ User Query → Vector Search (stream) → Document Retrieval (progressive)
 - Memory management
 - Graceful degradation
 - Observability
-
-## Assessment
-
-### Pre-Quiz (10 questions)
-**File:** `pre-quiz.md`
-
-Test your baseline knowledge of:
-- Streaming protocols
-- Async programming
-- Real-time systems
-- Performance concepts
-
-### Post-Quiz (18 questions + 3 bonus)
-**File:** `post-quiz.md`
-
-Comprehensive assessment covering:
-- SSE vs WebSocket trade-offs
-- Streaming implementation patterns
-- Production deployment
-- Performance optimization
-- Error handling strategies
-
-### Assignment (100 points)
-**File:** `assignment.md`
-
-**Project:** Build a Production Streaming RAG Chatbot
-
-**Requirements:**
-1. **Streaming Backend (30 points)**
-   - FastAPI with SSE or WebSocket
-   - OpenAI streaming integration
-   - Vector database connection
-   - Error handling
-
-2. **Real-Time Frontend (25 points)**
-   - React or vanilla JS
-   - Smooth typing animation
-   - Progress indicators
-   - Reconnection logic
-
-3. **RAG Pipeline (25 points)**
-   - Document indexing
-   - Streaming search
-   - Progressive context loading
-   - Citation tracking
-
-4. **Production Features (20 points)**
-   - Rate limiting
-   - Monitoring
-   - Load testing
-   - Documentation
-
-**Bonus (10 points):**
-- Multi-user support
-- Advanced caching
-- WebSocket fallback
-
-### Challenges (7 progressive tasks)
-**File:** `challenges.md`
-
-1. **Basic Streaming** - Implement OpenAI streaming (30 min)
-2. **SSE Endpoint** - Create FastAPI SSE endpoint (45 min)
-3. **WebSocket Chat** - Build bi-directional chat (60 min)
-4. **Chunked UI** - Progressive rendering (45 min)
-5. **Streaming RAG** - Real-time document search (90 min)
-6. **Load Testing** - Handle 100 concurrent connections (60 min)
-7. **Production Deploy** - Deploy with monitoring (120 min)
 
 ## Technical Stack
 

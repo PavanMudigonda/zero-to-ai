@@ -26,7 +26,7 @@ Real examples, explanations, and insights from the original lectures integrated 
 ### Part I: Supervised Learning
 
 #### Lecture 1: Linear Regression
-**File**: `01_linear_regression.ipynb`  
+**File**: [01_linear_regression.ipynb](01_linear_regression.ipynb)  
 **Source**: Lecture 2 Transcript (Linear Regression lecture)
 
 **Topics**:
@@ -99,7 +99,7 @@ Normal Equation: θ = (XᵀX)⁻¹Xᵀy
 ---
 
 #### Lecture 2 & 4: Logistic Regression (Classification)  
-**File**: `02_logistic_regression.ipynb` **[ENHANCED!]**  
+**File**: [04_logistic_regression.ipynb](04_logistic_regression.ipynb) **[ENHANCED!]**  
 **Source**: Lectures 3-4 Transcripts (Logistic Regression, Newton's Method)
 
 **Topics**:
@@ -149,7 +149,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ---
 
 #### Lecture 8: Regularization and Bias-Variance  
-**File**: [04_regularization.ipynb](04_regularization.ipynb) **[ENHANCED!]**
+**File**: [07_regularization.ipynb](07_regularization.ipynb) **[ENHANCED!]**
 
 **Topics**:
 - Overfitting and underfitting
@@ -251,7 +251,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ---
 
 #### Lecture 8: Regularization and Bias-Variance  
-**File**: [04_regularization.ipynb](04_regularization.ipynb) **[ENHANCED!]**  
+**File**: [07_regularization.ipynb](07_regularization.ipynb) **[ENHANCED!]**  
 **Source**: Lecture 8 Transcript (Bias-Variance Tradeoff)
 
 **Topics**:
@@ -291,7 +291,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ---
 
 #### Lecture 11: Neural Networks - Basics
-**File**: [08_neural_networks_basics.ipynb](08_neural_networks_basics.ipynb)
+**File**: [10_neural_networks_basics.ipynb](10_neural_networks_basics.ipynb)
 
 **Topics**:
 - Biological motivation
@@ -317,7 +317,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ---
 
 #### Lecture 12: Neural Networks - Advanced
-**File**: [09_neural_networks_advanced.ipynb](09_neural_networks_advanced.ipynb)
+**File**: [11_neural_networks_advanced.ipynb](11_neural_networks_advanced.ipynb)
 
 **Topics**:
 - Convolutional Neural Networks (CNNs)
@@ -337,7 +337,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ### Part II: Unsupervised Learning
 
 #### Lecture 14: Clustering
-**File**: [12_clustering.ipynb](12_clustering.ipynb)
+**File**: [13_clustering.ipynb](13_clustering.ipynb)
 
 **Topics**:
 - K-Means algorithm
@@ -357,7 +357,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ---
 
 #### Lecture 15-17: Dimensionality Reduction
-**File**: [13_dimensionality_reduction.ipynb](13_dimensionality_reduction.ipynb)
+**File**: [14_dimensionality_reduction.ipynb](14_dimensionality_reduction.ipynb)
 
 **Topics**:
 - Principal Component Analysis (PCA)
@@ -377,7 +377,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ---
 
 #### Anomaly Detection
-**File**: [14_anomaly_detection.ipynb](14_anomaly_detection.ipynb)
+**File**: [X01_anomaly_detection.ipynb](X01_anomaly_detection.ipynb)
 
 **Topics**:
 - Gaussian distribution
@@ -397,7 +397,7 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 ### Part III: Learning Theory
 
 #### Lecture 9: Learning Theory  
-**File**: [10_learning_theory.ipynb](10_learning_theory.ipynb) **[ENHANCED!]**  
+**File**: [08_learning_theory.ipynb](08_learning_theory.ipynb) **[ENHANCED!]**  
 **Source**: Lecture 9 Transcript (Friday Section - Learning Theory)
 
 **Topics**:
@@ -457,7 +457,7 @@ S (random variable) → Algorithm A (deterministic) → θ̂ (random variable)
 ---
 
 #### Lecture 10: Decision Trees and Ensembles  
-**File**: [07_decision_trees.ipynb](07_decision_trees.ipynb) **[NEW!]**  
+**File**: [09_decision_trees.ipynb](09_decision_trees.ipynb) **[NEW!]**  
 **Source**: Lecture 10 Transcript (Decision Trees, Bagging, Boosting)
 
 **Topics**:
@@ -545,7 +545,7 @@ L = 1 - Σ p̂_c²
 ---
 
 #### Lecture 13: ML Strategy
-**File**: [11_ml_strategy.ipynb](11_ml_strategy.ipynb)
+**File**: [12_ml_strategy.ipynb](12_ml_strategy.ipynb)
 
 **Topics**:
 - Orthogonalization
@@ -568,7 +568,7 @@ L = 1 - Σ p̂_c²
 ### Part IV: Special Topics
 
 #### Recommender Systems
-**File**: [15_recommender_systems.ipynb](15_recommender_systems.ipynb)
+**File**: [X02_recommender_systems.ipynb](X02_recommender_systems.ipynb)
 
 **Topics**:
 - Content-based filtering
@@ -585,7 +585,7 @@ L = 1 - Σ p̂_c²
 ---
 
 #### Lecture 18-20: Reinforcement Learning
-**File**: [16_reinforcement_learning.ipynb](16_reinforcement_learning.ipynb)
+**File**: [15_reinforcement_learning.ipynb](15_reinforcement_learning.ipynb)
 
 **Topics**:
 - Markov Decision Processes
@@ -798,7 +798,7 @@ Each lecture includes:
 - **1-2 projects**: Apply to real datasets
 
 ### Additional Resources
-See [CS229_PRACTICE.md](CS229_PRACTICE.md) for:
+See [CS229_PRACTICE.ipynb](CS229_PRACTICE.ipynb) for:
 - 140+ additional exercises
 - 10 comprehensive projects
 - 5 challenge problems

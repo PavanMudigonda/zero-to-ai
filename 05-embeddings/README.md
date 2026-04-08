@@ -59,5 +59,4 @@ By the end of this phase, you should be able to:
 ## Companion Files
 
 - [QUICKSTART.md](QUICKSTART.md): fast setup and notebook entry points
-- [WHATS_NEW.md](WHATS_NEW.md): recent additions in this module
 - [embedding_comparison.md](embedding_comparison.md): decision support for local vs hosted embedding stacks
