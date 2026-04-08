@@ -62,43 +62,19 @@ Go beyond text! Learn to work with Vision-Language Models, Audio AI, and multimo
 ## 🗂️ Module Structure
 
 ```
-12-multimodal/
-├── 00_START_HERE.ipynb                # Overview & capabilities
+13-multimodal/
+├── 00_START_HERE.ipynb                    # Overview & capabilities
 ├── vision-language/
-│   ├── 01_clip_basics.ipynb           # CLIP fundamentals
-│   ├── 02_llava.ipynb                 # Open-source VLM
-│   ├── 03_gpt4v.ipynb                 # GPT-4 Vision
-│   ├── 04_image_captioning.ipynb      # Generate descriptions
-│   ├── 05_visual_qa.ipynb             # Answer image questions
-│   └── 06_zero_shot_classification.ipynb
+│   ├── 01_clip_basics.ipynb               # CLIP fundamentals
+│   ├── 02_vision_language_models.ipynb    # VLMs (LLaVA, GPT-4V)
+│   └── 03_multimodal_rag.ipynb            # Multimodal retrieval
 ├── image-generation/
-│   ├── 01_stable_diffusion_basics.ipynb
-│   ├── 02_prompt_engineering.ipynb    # Image prompts
-│   ├── 03_controlnet.ipynb            # Guided generation
-│   ├── 04_lora_training.ipynb         # Custom styles
-│   ├── 05_dalle3_api.ipynb            # OpenAI API
-│   └── 06_image_editing.ipynb         # Inpainting, etc.
+│   ├── 01_stable_diffusion.ipynb          # Stable Diffusion basics
+│   └── 02_controlnet.ipynb               # Guided generation
 ├── audio/
-│   ├── 01_whisper_speech_to_text.ipynb
-│   ├── 02_text_to_speech.ipynb
-│   ├── 03_audio_classification.ipynb
-│   ├── 04_music_generation.ipynb
-│   └── 05_voice_cloning.ipynb
-├── video/
-│   ├── 01_video_understanding.ipynb
-│   ├── 02_action_recognition.ipynb
-│   └── 03_video_captioning.ipynb
-├── multimodal-rag/
-│   ├── 01_image_text_search.ipynb
-│   ├── 02_document_understanding.ipynb
-│   ├── 03_multimodal_embeddings.ipynb
-│   └── 04_cross_modal_retrieval.ipynb
-└── projects/
-    ├── image_analyzer.py              # Analyze and caption images
-    ├── visual_chatbot.py              # Chat about images
-    ├── audio_transcriber.py           # Full transcription system
-    ├── image_generator.py             # Custom image generation
-    └── multimodal_search.py           # Search images by text
+│   ├── 01_whisper_speech_recognition.ipynb # Speech-to-text
+│   └── 02_text_to_speech.ipynb            # TTS models
+└── README.md
 ```
 
 ---
@@ -213,29 +189,21 @@ image.save("output.png")
 
 - [ ] Complete `00_START_HERE.ipynb`
 - [ ] CLIP fundamentals in `vision-language/01_clip_basics.ipynb`
-- [ ] Try GPT-4V in `vision-language/03_gpt4v.ipynb`
+- [ ] Vision-language models in `vision-language/02_vision_language_models.ipynb`
 - [ ] **Project:** Build image classifier
 
-### Week 2: Image Generation
+### Week 2: Image Generation & Multimodal RAG
 
-- [ ] Stable Diffusion in `image-generation/01_stable_diffusion_basics.ipynb`
-- [ ] Prompt engineering in `image-generation/02_prompt_engineering.ipynb`
-- [ ] ControlNet in `image-generation/03_controlnet.ipynb`
+- [ ] Stable Diffusion in `image-generation/01_stable_diffusion.ipynb`
+- [ ] ControlNet in `image-generation/02_controlnet.ipynb`
+- [ ] Multimodal RAG in `vision-language/03_multimodal_rag.ipynb`
 - [ ] **Project:** Custom image generator
 
-### Week 3: Audio & Video
+### Week 3: Audio
 
-- [ ] Whisper in `audio/01_whisper_speech_to_text.ipynb`
+- [ ] Whisper in `audio/01_whisper_speech_recognition.ipynb`
 - [ ] TTS in `audio/02_text_to_speech.ipynb`
-- [ ] Video understanding in `video/`
 - [ ] **Project:** Audio transcription system
-
-### Week 4: Multimodal RAG
-
-- [ ] Image+text search in `multimodal-rag/01_image_text_search.ipynb`
-- [ ] Document understanding in `multimodal-rag/02_document_understanding.ipynb`
-- [ ] Build complete system
-- [ ] **Capstone:** Multimodal search engine
 
 ---
 
@@ -470,6 +438,6 @@ Before moving forward, you should be able to:
 
 **Ready to go multimodal?** → Start with `00_START_HERE.ipynb`
 
-**Questions?** → Check the projects/ folder for complete examples
+**Questions?** → Check the notebooks for complete examples
 
 **🎨 Remember: A picture is worth a thousand tokens!**

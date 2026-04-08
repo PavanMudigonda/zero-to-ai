@@ -11,7 +11,7 @@ This series provides hands-on implementations of statistical learning methods wi
 - **Real datasets**: Practical examples using classic ML datasets
 - **Visualizations**: Professional plots for understanding concepts
 - **Exercises**: Practice problems for each chapter
-- **100+ additional exercises**: See [PRACTICE_EXERCISES.md](PRACTICE_EXERCISES.md)
+- **100+ additional exercises**: See [PRACTICE_EXERCISES.ipynb](PRACTICE_EXERCISES.ipynb)
 
 ## 🗂️ Chapter Guide
 
@@ -160,7 +160,7 @@ Elastic Net: minimize RSS + λ₁Σ|βj| + λ₂Σβj²
 ---
 
 ### Chapter 7: Moving Beyond Linearity
-**File**: `07_beyond_linearity.ipynb` (35KB)
+**File**: `07_nonlinearity.ipynb` (35KB)
 
 **Topics**:
 - Polynomial regression
@@ -184,7 +184,7 @@ Elastic Net: minimize RSS + λ₁Σ|βj| + λ₂Σβj²
 ---
 
 ### Chapter 8: Tree-Based Methods
-**File**: `08_tree_based_methods.ipynb` (40-45KB)
+**File**: `08_tree_methods.ipynb` (40-45KB)
 
 **Topics**:
 - Decision trees (CART)
@@ -605,7 +605,7 @@ Each chapter includes 5-8 practice exercises covering:
 - **Analysis**: Interpreting results
 
 ### Additional Practice
-**[PRACTICE_EXERCISES.md](PRACTICE_EXERCISES.md)** includes 100+ extra problems:
+**[PRACTICE_EXERCISES.ipynb](PRACTICE_EXERCISES.ipynb)** includes 100+ extra problems:
 - 3 additional problems per chapter (39 total)
 - 8 comprehensive projects
 - 5 challenge problems
@@ -619,7 +619,7 @@ Each chapter includes 5-8 practice exercises covering:
 
 **Recommended Approach**:
 1. Complete in-chapter exercises first
-2. Attempt additional exercises in [PRACTICE_EXERCISES.md](PRACTICE_EXERCISES.md)
+2. Attempt additional exercises in [PRACTICE_EXERCISES.ipynb](PRACTICE_EXERCISES.ipynb)
 3. Work on 2-3 projects
 4. Try 1 challenge problem
 5. Participate in Kaggle competition
@@ -713,7 +713,7 @@ Track your learning progress:
 
 ### Additional Practice
 - [ ] Complete all in-chapter exercises (60+ problems)
-- [ ] Complete additional exercises from [PRACTICE_EXERCISES.md](PRACTICE_EXERCISES.md) (39 problems)
+- [ ] Complete additional exercises from [PRACTICE_EXERCISES.ipynb](PRACTICE_EXERCISES.ipynb) (39 problems)
 - [ ] Complete 2-3 projects (8 available)
 - [ ] Complete 1+ challenge problem (5 available)
 - [ ] Participate in Kaggle competition
