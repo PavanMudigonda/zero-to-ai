@@ -19,6 +19,16 @@ This module is most useful when treated as systems design for model interaction,
 - How ReAct changes model behavior when tools are involved
 - Why structured outputs are better than post-hoc parsing
 - How to handle long contexts without blindly stuffing documents into prompts
+- How reasoning models change prompting strategy and output expectations
+- When prompt caching, context compression, and schema-first design matter more than clever wording
+
+## Recent 2026 Prompting Topics
+
+- Reasoning-model prompting for deliberate models that think longer before answering
+- Context engineering: prompt layering, retrieval packing, and instruction hierarchy
+- Prompt caching and prefix reuse to reduce cost and latency
+- Structured generation with JSON schema constraints and tool-first interfaces
+- Eval-driven prompt iteration instead of subjective prompt tweaking
 
 ## Recommended Study Order
 

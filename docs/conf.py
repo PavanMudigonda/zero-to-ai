@@ -4,7 +4,7 @@ import os
 
 # -- Project information -----------------------------------------------------
 project = "Zero to AI"
-copyright = "2024, Pavan Mudigonda"
+copyright = "MIT License 2026, Pavan Mudigonda"
 author = "Pavan Mudigonda"
 release = "0.1.0"
 

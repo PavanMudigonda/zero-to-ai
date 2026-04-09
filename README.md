@@ -29,9 +29,12 @@
 
 > **From Zero to AI Mastery** WORK IN PROGRESS. OPEN FOR FEEDBACK.
 
-**Latest updates (March 6, 2026):**
+**Latest updates (April 9, 2026):**
 - Model landscape snapshot: [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md)
 - AI dev tools snapshot: [00-course-setup/ai_dev_tools_2026.md](00-course-setup/ai_dev_tools_2026.md)
+- Agent ecosystem refresh: MCP, managed agent APIs, OpenAI Agents SDK, LangGraph, Google ADK
+- Inference optimization refresh: vLLM, TensorRT-LLM, SGLang, speculative decoding, KV cache tuning
+- Hardware validation refresh: Apple MLX, AI PCs / NPUs, TPU and accelerator validation context
 
 ---
 
@@ -52,6 +55,7 @@ This comprehensive AI/ML curriculum uses progressive numbered modules covering e
 | **Advanced ML** | RAG Systems, Vector Databases, MLOps |
 | **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
 | **Production** | Deployment, Monitoring, Optimization |
+| **2026 Systems** 🆕 | MCP, reasoning models, realtime multimodal, agent evaluation, inference serving |
 | **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
 | **Hardware** 🆕 | AI Silicon Validation, Kernel Testing, Distributed Training, Datacenter |
 
@@ -172,22 +176,22 @@ zero-to-ai/
 │   ├── cs229-course/          Stanford ML course
 │   └── advanced/ 🆕           Learning theory, advanced optimization, Bayesian non-parametrics
 ├── 🔤 04-token/                 Tokenization (tiktoken, sentencepiece, HF)
-├── 🎯 05-embeddings/            Word & sentence embeddings
+├── 🎯 05-embeddings/            Text, multimodal, and retrieval embeddings
 ├── 🧠 06-neural-networks/       Deep learning from scratch to Transformers
 ├── 💾 07-vector-databases/      Chroma, Qdrant, Weaviate, Milvus, pgvector
 ├── 🔍 08-rag/                   Retrieval-Augmented Generation
 ├── 🚀 09-mlops/                 Deployment, monitoring, optimization
 ├── 🎨 10-specializations/       AI Agents, Computer Vision, NLP
-├── 💬 11-prompt-engineering/   Advanced prompting techniques
+├── 💬 11-prompt-engineering/   Advanced prompting, context engineering, reasoning patterns
 ├── ⚙️ 12-llm-finetuning/      LoRA, QLoRA, PEFT fine-tuning
-├── 🎭 13-multimodal/           Vision, audio, video AI
-├── 🏠 14-local-llms/           Ollama, privacy-first AI
-├── 🤖 15-ai-agents/            Function calling, ReAct, Multi-agent
-├── 📊 16-model-evaluation/     Metrics, fairness, LLM evaluation
+├── 🎭 13-multimodal/           Vision, audio, video, realtime multimodal AI
+├── 🏠 14-local-llms/           Ollama, llama.cpp, MLX, local serving
+├── 🤖 15-ai-agents/            Function calling, MCP, OpenAI Agents SDK, LangGraph
+├── 📊 16-model-evaluation/     Metrics, fairness, LLM-as-judge, agent evaluation
 ├── 🐛 17-debugging-troubleshooting/ Profiling, data issues, debugging
-├── 🎨 18-low-code-ai-tools/    Gradio, Streamlit, AutoML
+├── 🎨 18-low-code-ai-tools/    Gradio, Streamlit, Flowise, Langflow, Dify, AutoML
 ├── 🔒 19-ai-safety-redteaming/ Security, bias, red teaming
-├── ⚡ 20-real-time-streaming/  Streaming AI, WebSockets
+├── ⚡ 20-real-time-streaming/  Streaming AI, WebSockets, WebRTC, realtime voice
 ├── ❓ 21-quizzes/              Questions to test your knowledge
 ├── 🧪 22-references/           Resources, papers, external materials
 ├── 📖 23-glossary/             AI/ML terminology & concepts
@@ -196,7 +200,8 @@ zero-to-ai/
 ├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
 ├── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
 ├── 🔨 28-practical-data-science/ Interview prep & hands-on practice
-├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, Annapurna
+├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, TPU, Apple Silicon
+├── 🚄 30-inference-optimization/ 🆕 KV cache, vLLM, TensorRT-LLM, quantization, speculative decoding
 ├── ✅ checklist.md             Your complete learning roadmap
 ├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models

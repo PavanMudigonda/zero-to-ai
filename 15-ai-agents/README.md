@@ -11,7 +11,10 @@ By the end of this phase, you will:
 - ✅ Build agents that can use multiple tools to accomplish tasks
 - ✅ Implement the ReAct (Reasoning + Acting) pattern
 - ✅ Create multi-step agents with memory and state management
-- ✅ Use agent frameworks (LangChain, LangGraph, CrewAI)
+- ✅ Use agent frameworks (LangChain, LangGraph, OpenAI Agents SDK, CrewAI)
+- ✅ Understand MCP and modern agent interoperability patterns
+- ✅ Compare managed vs self-hosted agent stacks
+- ✅ Evaluate and observe agents in production
 - ✅ Deploy production-ready AI agents
 
 ---
@@ -62,8 +65,9 @@ By the end of this phase, you will:
 4. **[04_agent_frameworks.ipynb](04_agent_frameworks.ipynb)**
    - LangChain agents
    - LangGraph for workflows
-   - CrewAI for multi-agent systems
-   - Framework comparison
+   - Managed vs self-hosted agent APIs
+   - Open-source framework comparison
+   - Interop protocols (MCP, A2A)
 
 5. **[05_multi_agent_systems.ipynb](05_multi_agent_systems.ipynb)**
    - Coordinating multiple agents
@@ -82,19 +86,26 @@ By the end of this phase, you will:
    - Comparing agent frameworks
 
 8. **[08_reasoning_models.ipynb](08_reasoning_models.ipynb)**
-   - o1, o3, DeepSeek R1 reasoning models
-   - Using reasoning models in agents
-   - When to use reasoning vs standard models
+   - Reasoning-capable models for agent workflows
+   - Deliberate planning vs fast-response models
+   - When longer thinking improves tool use
 
 9. **[09_autonomous_agents_2026.ipynb](09_autonomous_agents_2026.ipynb)**
    - State of the art: autonomous agents in 2026
    - Production patterns and best practices
    - Future directions
 
+10. **[10_agent_evaluation.ipynb](10_agent_evaluation.ipynb)**
+    - Why agent evaluation is hard (non-determinism, side-effects)
+    - Four dimensions: task success, trajectory quality, tool correctness, safety
+    - Offline eval with LLM-as-Judge scoring
+    - Online eval: observability, tracing, cost tracking
+    - Frameworks: promptfoo, LangSmith, Braintrust, Arize Phoenix
+
 ### Assignments & Practice
 
-- **[assignment.md](assignment.md)** - Build a production-ready AI agent
-- **[challenges.md](challenges.md)** - 6 hands-on challenges (⭐⭐ to ⭐⭐⭐⭐⭐)
+- **[assignment.md](assignment.md)** - Build a production-ready AI agent (6 bonus options incl. MCP & eval)
+- **[challenges.md](challenges.md)** - 9 hands-on challenges (⭐⭐ to ⭐⭐⭐⭐⭐)
 
 ### Quizzes
 
@@ -108,9 +119,18 @@ By the end of this phase, you will:
 - **OpenAI Function Calling** - Native tool use
 - **LangChain** - Agent framework
 - **LangGraph** - Workflow orchestration
-- **CrewAI** - Multi-agent coordination
-- **AutoGPT** - Autonomous agent
-- **BabyAGI** - Task-driven agent
+- **OpenAI Agents SDK** - Lightweight multi-agent handoffs and tracing
+- **CrewAI** - Role-based multi-agent coordination
+- **Google ADK / Semantic Kernel** - Additional framework families to be aware of
+- **MCP** - Standard tool connectivity across agent runtimes
+
+## 2026 Agent Topics To Know
+
+- Managed agent APIs vs self-hosted frameworks
+- MCP for tool integration and A2A for agent delegation
+- Agent observability: tracing, tool-call inspection, latency and cost tracking
+- Agent evaluation: task success, trajectory quality, tool correctness, and safety gates
+- Long-running and proactive agents rather than single-request assistants
 
 ---
 
@@ -217,15 +237,17 @@ Week 1: Fundamentals
 ├── Day 3-4: Function calling (Notebook 2)
 └── Day 5-7: ReAct pattern (Notebook 3)
 
-Week 2: Frameworks & Production
-├── Day 1-3: Agent frameworks (Notebook 4)
-├── Day 4-5: Memory systems (Notebook 5)
-└── Day 6-7: Multi-agent (Notebook 6)
+Week 2: Frameworks & Protocols
+├── Day 1-2: Agent frameworks & no-code builders (Notebook 4)
+├── Day 3-4: Multi-agent systems & A2A (Notebook 5)
+├── Day 5:   MCP deep-dive (Notebook 6)
+└── Day 6-7: OpenAI Agents SDK & LangGraph (Notebook 7)
 
-Week 3: Project
-├── Day 1-2: Design your agent
-├── Day 3-5: Build & test
-├── Day 6-7: Optimize & deploy
+Week 3: Advanced & Evaluation
+├── Day 1-2: Reasoning models in agent loops (Notebook 8)
+├── Day 3-4: Autonomous agents 2026 (Notebook 9)
+├── Day 5:   Agent evaluation & safety (Notebook 10)
+└── Day 6-7: Assignment — build, evaluate & deploy
 ```
 
 ---
@@ -264,6 +286,7 @@ By the end of this phase, you should be able to:
 - ✅ Build a ReAct agent from scratch
 - ✅ Use LangChain/LangGraph for complex workflows
 - ✅ Implement agent memory and state
+- ✅ Evaluate agents with LLM-as-Judge and trajectory scoring
 - ✅ Deploy a production agent
 - ✅ Debug common agent issues
 

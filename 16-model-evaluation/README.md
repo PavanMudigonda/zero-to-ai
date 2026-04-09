@@ -11,6 +11,8 @@ By the end of this phase, you will be able to:
 - ✅ Choose appropriate metrics for different ML tasks
 - ✅ Evaluate classification and regression models
 - ✅ Measure LLM and generative model performance
+- ✅ Use LLM-as-judge and rubric-based evaluation responsibly
+- ✅ Evaluate multi-step agent behavior, tool use, and task success
 - ✅ Detect and mitigate model bias
 - ✅ Conduct A/B tests and experiments
 - ✅ Compare models effectively
@@ -41,6 +43,8 @@ By the end of this phase, you will be able to:
    - BERTScore and semantic similarity
    - Human evaluation frameworks
    - Prompt quality assessment
+   - LLM-as-judge patterns and pitfalls
+   - Pairwise preference evaluation
 
 4. **[Bias & Fairness](04_bias_fairness.ipynb)** (90 min)
    - Fairness metrics (demographic parity, equalized odds)
@@ -53,6 +57,7 @@ By the end of this phase, you will be able to:
    - Cross-validation strategies
    - Learning curves
    - A/B testing for ML
+   - Offline vs online evaluation loops for LLM apps and agents
 
 ---
 
@@ -64,6 +69,10 @@ pip install scikit-learn numpy pandas matplotlib seaborn
 pip install scipy statsmodels
 pip install nltk rouge-score bert-score
 pip install fairlearn aif360
+pip install ragas deepeval
+
+# promptfoo is a Node.js CLI
+npx promptfoo@latest --help
 ```
 
 **Key Libraries:**
@@ -71,6 +80,8 @@ pip install fairlearn aif360
 - **NLTK, Rouge-Score** - NLP metrics
 - **Fairlearn, AIF360** - Bias detection
 - **SciPy, Statsmodels** - Statistical testing
+- **Ragas, DeepEval** - Python-first LLM evaluation workflows
+- **Promptfoo** - CLI-based evaluation and prompt regression testing
 
 ---
 
@@ -132,6 +143,7 @@ Build an evaluation framework that:
 3. **LLM Evaluation** (⭐⭐⭐⭐) - Compare GPT outputs with BLEU/ROUGE
 4. **Bias Detection** (⭐⭐⭐⭐) - Find and fix gender bias in hiring model
 5. **A/B Test Analysis** (⭐⭐⭐⭐⭐) - Design experiment, calculate sample size
+6. **Agent Evaluation** (⭐⭐⭐⭐⭐) - Measure task completion, tool correctness, and recovery behavior
 
 ---
 

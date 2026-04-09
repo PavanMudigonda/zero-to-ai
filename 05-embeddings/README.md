@@ -38,6 +38,16 @@ By the end of this phase, you should be able to:
 - Build a minimal semantic search flow
 - Choose an embedding approach based on quality, latency, and cost constraints
 
+## Recent 2026 Topics To Keep In View
+
+This phase is centered on text embeddings, but production retrieval systems in 2026 also depend on:
+
+- Multimodal embeddings such as CLIP and SigLIP for image-text retrieval
+- Dense + sparse + reranker pipelines instead of dense-only retrieval
+- Late-interaction retrieval patterns such as ColBERT-style reranking
+- Local embedding stacks for privacy-sensitive workflows alongside hosted APIs
+- Embedding versioning, drift tracking, and compression for large-scale vector systems
+
 ## Prerequisites
 
 - Tokenization fundamentals from [04-token/](../04-token/)
@@ -55,6 +65,8 @@ By the end of this phase, you should be able to:
 - A semantic FAQ search system
 - A duplicate-detection tool for documents
 - A chunk-and-retrieve pipeline that feeds Phase 7 RAG work
+- An image-text search prototype using multimodal embeddings
+- A hybrid retrieval stack with a reranker on top of dense retrieval
 
 ## Companion Files
 

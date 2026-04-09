@@ -10,16 +10,19 @@ Learn how to build real-time AI applications with streaming responses, WebSocket
 2. WebSocket Connections  
 3. Real-Time RAG
 4. Production Streaming Systems
+5. Realtime voice and multimodal interactions
 
 ## Learning Objectives
 
 By the end of this phase, you will be able to:
 - Implement Server-Sent Events (SSE) for streaming
 - Build WebSocket-based real-time chat applications
+- Understand when WebRTC is a better fit than SSE/WebSockets
 - Handle progressive loading and chunked responses
 - Create streaming RAG pipelines
 - Deploy production-ready streaming systems
 - Optimize for latency and throughput
+- Design interruption-safe realtime voice loops
 
 ## Prerequisites
 
@@ -157,6 +160,14 @@ User Query → Vector Search (stream) → Document Retrieval (progressive)
 - Redis (connection management)
 - Prometheus (monitoring)
 - Docker
+- WebRTC / LiveKit style realtime media transport
+
+## 2026 Realtime Topics To Know
+
+- Realtime APIs for voice and multimodal assistants
+- Turn-taking, interruption, and low-latency audio streaming
+- WebRTC for browser-to-browser media and live copilot experiences
+- Disaggregated retrieval + generation pipelines to keep end-to-end latency low
 
 ## Best Practices
 

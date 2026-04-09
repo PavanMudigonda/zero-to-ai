@@ -12,6 +12,7 @@ Master the end-to-end validation stack for AI accelerators — from bare-metal h
 - ML Performance Engineer
 - AI Infra / Platform Validation Engineer
 - AI Compiler & Runtime QA Engineer
+- AI PC / Edge Inference Validation Engineer
 
 ---
 
@@ -28,6 +29,7 @@ By the end of this phase, you will be able to:
 - ✅ Validate AI workloads in datacenter environments (Kubernetes, scheduling, observability)
 - ✅ Build regression suites, golden baselines, and cross-version release validation
 - ✅ Understand industry benchmarks (AA-SLT, AA-AgentPerf, MLPerf, LMSys Arena) and how internal validation feeds them
+- ✅ Compare datacenter GPUs with edge NPUs and laptop-class accelerators
 
 ---
 
@@ -148,6 +150,13 @@ pip install prometheus-client              # Metrics export
 - `rocprof`, `omniperf`, `omnitrace` — AMD profilers
 - `stress-ng`, `memtester` — Hardware stress testing
 - `docker`, `kubectl`, `helm` — Container orchestration
+
+## 2026 Hardware Topics To Keep In Scope
+
+- AI PCs and laptop NPUs (Qualcomm Hexagon, Intel NPU, AMD XDNA)
+- Apple Silicon workflows with Core ML and MLX
+- TPU and custom accelerator validation beyond CUDA-first assumptions
+- OpenAI-compatible local runtimes that sit on top of diverse hardware backends
 
 ## Notebook Quality Checks
 

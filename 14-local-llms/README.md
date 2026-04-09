@@ -26,6 +26,14 @@ This module should help you answer a practical question: when does running model
 - How to expose a local model behind an API
 - Why latency and throughput tuning matter once a prototype works
 
+## Current Local LLM Stack To Know In 2026
+
+- Ollama for the simplest developer experience
+- llama.cpp and GGUF for broad hardware compatibility
+- MLX for Apple Silicon-native training and inference
+- vLLM and SGLang for higher-throughput serving on stronger local GPUs
+- OpenAI-compatible local gateways for app portability across hosted and self-hosted backends
+
 ## Study Advice
 
 - Keep the first pass practical: install one tool, run one model, ship one API.
@@ -37,3 +45,5 @@ This module should help you answer a practical question: when does running model
 - A private document assistant
 - A local coding helper with retrieval
 - A lightweight OpenAI-compatible local serving layer
+- A Mac-first MLX workflow for Apple Silicon laptops
+- A benchmark that compares Ollama, llama.cpp, and vLLM on the same model

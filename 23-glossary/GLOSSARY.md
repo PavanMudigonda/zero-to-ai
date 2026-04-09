@@ -40,6 +40,14 @@ Adversarial testing involves systematically probing AI systems with challenging 
 
 AI agents are systems that autonomously perceive environments, make decisions, and take actions to achieve goals, often using LLMs for reasoning.
 
+**A2A (Agent-to-Agent)**
+
+A2A is an interoperability pattern and emerging protocol family for letting one agent discover, delegate to, and exchange structured work with another agent, reducing tight coupling between agent runtimes.
+
+**Agentic Loop**
+
+An agentic loop is the repeated cycle of planning, tool use, observation, reflection, and next-step selection that lets an AI agent work through a multi-step task instead of responding in a single turn.
+
 **AI Skill**
 
 An AI skill is a specific capability that an AI system possesses, such as image recognition, natural language processing, decision‑making, or summarization. AI skills are typically developed using machine learning and are designed to automate, augment, or mimic human tasks.
@@ -594,6 +602,10 @@ LangChain is a framework for building applications powered by LLMs, providing ab
 
 LLMs are foundation models trained on massive text datasets with billions of parameters (e.g., GPT-4, Claude, LLaMA) capable of understanding and generating human-like text.
 
+**LLM-as-Judge**
+
+LLM-as-judge is an evaluation pattern where one model grades or ranks the outputs of another model using a rubric, often for response quality, relevance, factuality, or pairwise preference comparisons.
+
 **LightGBM**
 
 LightGBM is a gradient boosting framework by Microsoft that uses histogram-based algorithms and leaf-wise tree growth, offering faster training and lower memory usage than traditional GBDT methods.
@@ -680,6 +692,14 @@ Mixture of Experts is a neural network architecture that uses multiple specializ
 
 MLflow is an open-source platform for managing the ML lifecycle, including experiment tracking, model packaging, versioning, and deployment, with support for various frameworks.
 
+**MCP (Model Context Protocol)**
+
+MCP is an open protocol for connecting AI models and agents to tools, resources, and prompts through a standard client-server interface, reducing custom integration work across models and applications.
+
+**MLX**
+
+MLX is Apple's machine learning framework for Apple Silicon, designed to make training and inference efficient on unified-memory Macs using the CPU, GPU, and Neural Engine.
+
 **Model Compression**
 
 Model compression reduces model size and computational requirements through techniques like quantization, pruning, knowledge distillation, and low-rank factorization, enabling deployment on resource-constrained devices.
@@ -691,6 +711,10 @@ Model deployment is the process of making a trained machine learning model avail
 **Model Monitoring**
 
 Model monitoring involves tracking ML model performance in production, detecting issues like data drift, concept drift, performance degradation, and ensuring models continue to meet business requirements.
+
+**Model Merging**
+
+Model merging combines the weights or adapters of multiple trained models into a single model, often to blend capabilities without running a full retraining job.
 
 **Model Registry**
 
@@ -814,6 +838,10 @@ Pandas is a Python library offering data structures and tools for data manipulat
 
 Perplexity measures how well a language model predicts text, with lower values indicating better performance (exponential of average cross-entropy loss).
 
+**PagedAttention**
+
+PagedAttention is a memory-management technique for LLM inference that stores attention key-value cache blocks in paged memory rather than contiguous allocations, improving utilization and serving throughput.
+
 **Pipeline (ML Pipeline)**
 
 A machine learning pipeline is a structured workflow that chains data processing, feature extraction, model training, and evaluation steps into a reproducible process.
@@ -841,6 +869,10 @@ Productisation (or Productization) in ML refers to the process of transforming m
 **Prompt Engineering**
 
 Prompt engineering is the practice of crafting effective input prompts to guide LLM outputs, including techniques like few-shot prompting, chain-of-thought, and system instructions.
+
+**Prompt Caching**
+
+Prompt caching reuses a previously processed prompt prefix so repeated requests with the same leading context avoid recomputing all tokens, reducing latency and cost.
 
 **Prompt Injection**
 
@@ -886,6 +918,10 @@ RNNs are neural networks with cyclic connections that allow information to persi
 
 Red teaming is a security testing practice where experts attempt to break AI systems by finding vulnerabilities, adversarial inputs, or ways to elicit unsafe outputs, helping improve model robustness and safety.
 
+**Reasoning Model**
+
+A reasoning model is a model optimized for deliberate multi-step thinking, longer internal computation, or explicit problem-solving before producing an answer, often trading latency for better reliability on hard tasks.
+
 **Redis**
 
 Redis is an open-source, in-memory key-value data store known for extremely fast performance, used for caching, session management, real-time analytics, and message queuing.
@@ -914,6 +950,10 @@ Rekognition is a cloud‑based service for image and video analysis, providing c
 
 Representation learning is a set of techniques allowing models to automatically learn useful feature representations from raw data.
 
+**Reranker**
+
+A reranker is a model used after an initial retrieval step to reorder candidate documents, chunks, or responses using a more precise but typically slower relevance signal.
+
 **RLHF (Reinforcement Learning from Human Feedback)**
 
 RLHF trains models using human preferences as rewards, aligning model behavior with human values and improving response quality.
@@ -927,8 +967,6 @@ ROUGE is a set of metrics for evaluating automatic summarization and machine tra
 Rule‑based systems rely on hand‑crafted rules and logic to make decisions, instead of learned parameters from data.
 
 ## S
-
-**S**
 
 **S3 (Simple Storage Service)**
 
@@ -954,6 +992,10 @@ SciPy is a Python ecosystem and library for scientific and technical computing, 
 
 Self-attention computes relationships between all positions in a sequence simultaneously, enabling each token to attend to all other tokens.
 
+**SGLang**
+
+SGLang is a high-performance inference and serving framework for large language models focused on fast scheduling, structured generation, and efficient multi-request execution.
+
 **Semi‑Supervised Machine Learning**
 
 Semi‑supervised learning uses both labeled and unlabeled data during training, typically a small labeled set with a much larger unlabeled set.
@@ -974,6 +1016,10 @@ Seq2Seq models map input sequences (e.g., sentences) to output sequences (e.g., 
 
 Serverless computing is a cloud execution model where the cloud provider dynamically manages server allocation, allowing developers to run code without provisioning or managing servers, paying only for actual compute time used.
 
+**SigLIP**
+
+SigLIP is a contrastive vision-language model family that replaces the standard softmax contrastive loss with a sigmoid loss, often improving image-text alignment and retrieval performance.
+
 **Shot (Few-Shot, One-Shot, Zero-Shot)**
 
 "Shot" refers to the number of examples provided: zero-shot (no examples), one-shot (1 example), few-shot (2-10 examples) for task demonstration.
@@ -985,6 +1031,10 @@ Snowflake is a cloud-based data warehousing platform that separates storage and 
 **Sora**
 
 Sora is OpenAI's text-to-video generation model capable of creating realistic and imaginative video scenes from text instructions, demonstrating understanding of physics, motion, and temporal consistency.
+
+**Speculative Decoding**
+
+Speculative decoding speeds up generation by having a smaller draft model propose tokens that a larger target model verifies in batches, reducing latency without changing the final model's output distribution too much.
 
 **Spark (Apache Spark)**
 
@@ -1039,6 +1089,10 @@ TensorFlow is an open‑source platform for building and deploying machine learn
 **TensorFlow Lite**
 
 TensorFlow Lite is a lightweight framework for deploying TensorFlow models on mobile, embedded, and IoT devices with optimizations for low latency and small binary size.
+
+**TensorRT-LLM**
+
+TensorRT-LLM is NVIDIA's optimized inference stack for large language models, combining TensorRT kernels, graph optimizations, and serving components to maximize throughput and minimize latency on NVIDIA hardware.
 
 **Term Frequency (TF)**
 
@@ -1125,6 +1179,10 @@ A VM is an emulated computer system that runs on physical hardware, providing an
 **Weights & Biases (W&B)**
 
 Weights & Biases is an MLOps platform for experiment tracking, model versioning, dataset management, and model monitoring, providing visualization tools and collaboration features for ML teams.
+
+**WebRTC**
+
+WebRTC is a realtime communication standard for streaming audio, video, and data directly between browsers or clients with very low latency, commonly used in live voice and multimodal AI applications.
 
 **Word2Vec**
 

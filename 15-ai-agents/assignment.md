@@ -9,7 +9,7 @@
 **Objective:** Build a fully functional AI agent that can autonomously accomplish complex tasks using multiple tools and reasoning.
 
 **Estimated Time:** 10-15 hours  
-**Weight:** 100 points + 20 bonus points  
+**Weight:** 100 points + 30 bonus points  
 **Due:** End of Week 3  
 
 ---
@@ -142,6 +142,31 @@ Agent:
 ```
 
 **Bonus:** Smart scheduling (avoid lunch hours, respect time zones), meeting prep
+
+---
+
+#### Option E: Agent Evaluation Pipeline (NEW — see Notebook 10)
+**Purpose:** Build → Evaluate → Improve an agent using structured eval methods
+
+**Required Tools:**
+- `run_agent(task)` - Execute agent on a test case
+- `score_trajectory(trace)` - LLM-as-Judge trajectory scoring
+- `compare_runs(run_a, run_b)` - A/B comparison of agent variants
+- `generate_report(results)` - Eval dashboard with pass-rates and cost
+
+**Example Interaction:**
+```
+User: "Evaluate my research agent on 20 test cases"
+
+Pipeline:
+1. Loads test suite from eval_cases.json
+2. Runs agent on each case, records trajectory + tool calls
+3. LLM-as-Judge scores each trajectory (0-5)
+4. Computes pass@1 rate, avg tool calls, avg cost
+5. Generates markdown report with failure analysis
+```
+
+**Bonus:** Regression detection (compare to previous run), safety red-team suite
 
 ---
 
@@ -378,6 +403,17 @@ Final Answer: Revenue grew by 26.8% from $4.1M to $5.2M
 - Monitoring dashboard
 - Docker containerization
 
+### Bonus 5: MCP Integration (+5 points)
+- Expose your agent's tools via MCP server
+- Connect to your agent from an MCP-compatible client (Claude Desktop, Cursor)
+- Demonstrate cross-runtime tool sharing
+
+### Bonus 6: Agent Evaluation Pipeline (+5 points)
+- Build an LLM-as-Judge scorer for trajectory quality
+- Run eval suite of ≥10 test cases with pass/fail tracking
+- Generate a markdown report with failure analysis
+- See **Notebook 10: Agent Evaluation** for patterns
+
 ---
 
 ## 📊 Grading Rubric
@@ -410,11 +446,13 @@ Final Answer: Revenue grew by 26.8% from $4.1M to $5.2M
 | **Code Docs** | 5 | Docstrings, type hints, comments |
 | **Demo** | 7 | Shows key features, explains decisions |
 
-### Bonus (up to +20 points)
+### Bonus (up to +30 points)
 - ReAct pattern: +5
 - Parallel execution: +5
 - Optimization: +5
 - Deployment: +5
+- MCP integration: +5
+- Agent evaluation: +5
 
 ---
 

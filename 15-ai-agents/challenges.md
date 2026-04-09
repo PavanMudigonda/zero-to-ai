@@ -579,7 +579,50 @@ class AlertLevel:
 
 ---
 
-## 🏆 Completion Checklist
+## � Challenge 9: Agent Evaluation Pipeline
+
+**Difficulty:** ⭐⭐⭐⭐ (Advanced)  
+**Time:** 3-5 hours
+
+### Objective
+Build an evaluation pipeline that systematically measures agent quality across task success, trajectory efficiency, tool correctness, and safety.
+
+### Requirements
+Create an evaluation framework with:
+- `EvalCase` — dataclass with `task`, `expected_outcome`, `required_tools`
+- `AgentRunner` — runs the agent and captures the full trajectory
+- `LLMJudge` — scores each trajectory on a 0-5 rubric via a judge prompt
+- `ReportGenerator` — computes pass@1, avg tool calls, avg cost, and failure analysis
+
+### Test Cases
+```python
+eval_cases = [
+    EvalCase(task="What is the capital of France?", expected="Paris", required_tools=[]),
+    EvalCase(task="Search for recent AI papers on RAG", expected="list of papers", required_tools=["web_search"]),
+    EvalCase(task="Calculate compound interest on $10k at 5% for 10 years", expected="~$16,288.95", required_tools=["calculator"]),
+    EvalCase(task="Summarize this 3-page document", expected="concise summary", required_tools=["summarize"]),
+]
+```
+
+### Success Criteria
+- ✅ Runs ≥10 test cases end-to-end
+- ✅ LLM-as-Judge scoring with structured rubric
+- ✅ Generates markdown report with per-case results
+- ✅ Computes aggregate metrics (pass rate, avg cost, avg latency)
+- ✅ Identifies failure patterns (which tool / step fails most?)
+
+### Bonus
+- Regression detection: compare two agent versions
+- Red-team safety suite: test for prompt injection, data leakage
+- Cost-accuracy Pareto analysis across different models
+- Integration with promptfoo or LangSmith for tracing
+
+### Reference
+See **Notebook 10: Agent Evaluation** for implementation patterns and the `TrajectoryEvaluator` class.
+
+---
+
+## �🏆 Completion Checklist
 
 Track your progress:
 
@@ -591,6 +634,7 @@ Track your progress:
 - [ ] Challenge 6: Multi-Agent System ⭐⭐⭐⭐⭐
 - [ ] Challenge 7: Task Scheduler ⭐⭐⭐⭐⭐
 - [ ] Challenge 8: Monitoring Agent ⭐⭐⭐⭐
+- [ ] Challenge 9: Agent Evaluation Pipeline ⭐⭐⭐⭐
 
 ---
 

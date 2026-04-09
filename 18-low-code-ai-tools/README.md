@@ -23,6 +23,7 @@ By the end of this phase, you will:
 3. **Deploy to Cloud** - Host ML demos on Hugging Face Spaces
 4. **Use AutoML** - Leverage automated ML platforms for rapid prototyping
 5. **Share Applications** - Deploy and share ML applications with users
+6. **Use Visual AI Builders** - Understand modern flow-based agent builders and low-code orchestration tools
 
 ---
 
@@ -146,6 +147,14 @@ pip install gradio streamlit
 pip install huggingface-hub
 pip install pycaret h2o auto-sklearn flaml
 ```
+
+### Modern Low-Code / Visual Agent Builders To Know
+
+- **Flowise** - visual LangChain/LangGraph-style orchestration
+- **Langflow** - drag-and-drop LLM chains and agents
+- **Dify** - app builder for prompts, workflows, and RAG
+- **n8n** - general workflow automation with AI steps
+- **Vercel AI SDK** - not low-code, but increasingly the standard fast path for shipping AI product UIs
 
 ### Utilities
 ```bash

@@ -48,7 +48,9 @@ Go beyond text! Learn to work with Vision-Language Models, Audio AI, and multimo
 - [ ] Video captioning
 - [ ] Action recognition
 - [ ] Temporal understanding
-- [ ] Video generation (emerging)
+- [ ] Video generation and editing workflows
+- [ ] Realtime multimodal interaction and live camera/audio agents
+- [ ] Video-language reasoning over long clips
 
 ### Multimodal RAG
 
@@ -56,6 +58,14 @@ Go beyond text! Learn to work with Vision-Language Models, Audio AI, and multimo
 - [ ] Document understanding (OCR + LLM)
 - [ ] Multimodal embeddings
 - [ ] Cross-modal retrieval
+- [ ] Vision-language reranking and grounded citations
+
+### 2026 Topics To Add To Your Radar
+
+- Omnimodal models that combine text, image, audio, and video in one runtime
+- Video generation systems and edit models for storyboard, marketing, and simulation tasks
+- Realtime voice + vision assistants for screen, webcam, and mobile workflows
+- Open multimodal stacks such as CLIP, SigLIP, LLaVA-class models, and Flux-style image generators
 
 ---
 
@@ -205,12 +215,19 @@ image.save("output.png")
 - [ ] TTS in `audio/02_text_to_speech.ipynb`
 - [ ] **Project:** Audio transcription system
 
+### Week 4: Realtime Multimodal and Video
+
+- [ ] Study video understanding and generation patterns
+- [ ] Compare image-first, audio-first, and omni-model workflows
+- [ ] **Project:** Build a multimodal assistant that can interpret image + speech input
+
 ---
 
 ## 🛠️ Technologies You'll Use
 
 **Vision-Language Models:**
 - CLIP (OpenAI)
+- SigLIP / SigLIP 2
 - LLaVA (open-source)
 - GPT-4V (OpenAI)
 - Gemini Pro Vision (Google)
@@ -218,6 +235,7 @@ image.save("output.png")
 
 **Image Generation:**
 - Stable Diffusion (open-source)
+- FLUX and ControlNet-style guided pipelines
 - DALL-E 3 (OpenAI)
 - Midjourney (via API)
 - ControlNet, T2I-Adapter
