@@ -172,49 +172,12 @@ pip install Pillow opencv-python
 
 ## 🎨 Low-Code Workflow
 
-```
-┌─────────────────────────────────────────────────┐
-│           LOW-CODE ML DEVELOPMENT               │
-└─────────────────────────────────────────────────┘
-                      │
-                      ▼
-         ┌────────────────────────┐
-         │   1. Data Preparation  │
-         │   - Load datasets      │
-         │   - Basic cleaning     │
-         └────────────────────────┘
-                      │
-                      ▼
-         ┌────────────────────────┐
-         │   2. Model Training    │
-         │   - Use AutoML         │
-         │   - Compare models     │
-         │   - Select best        │
-         └────────────────────────┘
-                      │
-                      ▼
-         ┌────────────────────────┐
-         │   3. Build Interface   │
-         │   - Gradio for demos   │
-         │   - Streamlit for apps │
-         │   - Test locally       │
-         └────────────────────────┘
-                      │
-                      ▼
-         ┌────────────────────────┐
-         │   4. Deploy to Cloud   │
-         │   - Hugging Face Space │
-         │   - Streamlit Cloud    │
-         │   - Share with users   │
-         └────────────────────────┘
-                      │
-                      ▼
-         ┌────────────────────────┐
-         │   5. Monitor & Update  │
-         │   - Gather feedback    │
-         │   - Improve model      │
-         │   - Update deployment  │
-         └────────────────────────┘
+```{mermaid}
+flowchart TD
+    A["1. Data Preparation<br/>Load datasets · Basic cleaning"] --> B["2. Model Training<br/>Use AutoML · Compare models · Select best"]
+    B --> C["3. Build Interface<br/>Gradio for demos · Streamlit for apps"]
+    C --> D["4. Deploy to Cloud<br/>HF Spaces · Streamlit Cloud · Share"]
+    D --> E["5. Monitor & Update<br/>Gather feedback · Improve model · Update"]
 ```
 
 ---

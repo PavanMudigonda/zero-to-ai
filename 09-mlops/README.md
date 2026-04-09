@@ -37,12 +37,19 @@ MLOps is consistently one of the top hiring criteria for ML Engineer roles.
 
 ### The ML Lifecycle (What MLOps Manages)
 
-```
-Data Collection → Data Validation → Feature Engineering
-      ↓
-  Model Training → Experiment Tracking → Model Evaluation
-      ↓
-  Model Registry → CI/CD → Deployment → Monitoring → Retraining
+```{mermaid}
+flowchart TD
+    A[Data Collection] --> B[Data Validation]
+    B --> C[Feature Engineering]
+    C --> D[Model Training]
+    D --> E[Experiment Tracking]
+    E --> F[Model Evaluation]
+    F --> G[Model Registry]
+    G --> H[CI/CD]
+    H --> I[Deployment]
+    I --> J[Monitoring]
+    J --> K[Retraining]
+    K --> A
 ```
 
 ### Experiment Tracking (MLflow)

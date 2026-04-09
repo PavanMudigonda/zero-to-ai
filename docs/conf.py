@@ -21,6 +21,10 @@ extensions = [
     "sphinxcontrib.mermaid",
 ]
 
+# Mermaid diagram settings — render client-side via CDN (no mmdc binary needed)
+mermaid_version = "11"
+mermaid_init_js = "mermaid.initialize({startOnLoad:true});"
+
 # MyST parser settings
 myst_enable_extensions = [
     "amsmath",
@@ -87,6 +91,7 @@ exclude_patterns = [
     "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
     "CAREER_ROADMAP.md",
+    "VISUAL_ROADMAP.md",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
     "COMPARISON_MATRICES.md",

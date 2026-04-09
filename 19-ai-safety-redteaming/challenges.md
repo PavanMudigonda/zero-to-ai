@@ -325,40 +325,14 @@ Build a production-ready AI security system with all features.
 - Security tests
 
 ### Architecture
-```
-┌─────────────┐
-│   Request   │
-└──────┬──────┘
-       │
-       ▼
-┌─────────────────┐
-│ Input Validator │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│   Moderator     │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  PII Protector  │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│      LLM        │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│ Output Filter   │
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│    Response     │
-└─────────────────┘
+```{mermaid}
+flowchart TD
+    A[Request] --> B[Input Validator]
+    B --> C[Moderator]
+    C --> D[PII Protector]
+    D --> E[LLM]
+    E --> F[Output Filter]
+    F --> G[Response]
 ```
 
 ### Success Criteria

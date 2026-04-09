@@ -171,6 +171,7 @@ site_doc_outputs = {
     "MASTER_STUDY_GUIDE.md": "generated/MASTER_STUDY_GUIDE.md",
     "REFERENCES.md": "generated/REFERENCES.md",
     "SUPPORT.md": "generated/SUPPORT.md",
+    "VISUAL_ROADMAP.md": "generated/VISUAL_ROADMAP.md",
     "WORKSPACE_LEARNING_REVIEW.md": "generated/WORKSPACE_LEARNING_REVIEW.md",
     "checklist.md": "generated/checklist.md",
     "setup.md": "generated/setup.md",
@@ -426,8 +427,18 @@ for source_name, output_rel in site_doc_outputs.items():
     current_source_path = repo_root / source_name
     output_path = docs_dir / output_rel
     current_output_rel = Path(output_rel)
-    text = source_path.read_text(encoding="utf-8")
-    rewritten = rewrite_links(text, current_source_path, current_output_rel)
+
+    if current_source_path.exists():
+        actual_source_path = current_source_path
+    elif source_path.exists():
+        actual_source_path = source_path
+    else:
+        raise FileNotFoundError(
+            f"Missing source document: checked {current_source_path} and {source_path}"
+        )
+
+    text = actual_source_path.read_text(encoding="utf-8")
+    rewritten = rewrite_links(text, actual_source_path, current_output_rel)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(rewritten, encoding="utf-8")
 PY

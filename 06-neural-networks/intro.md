@@ -75,14 +75,14 @@ A mathematical approximation:
 3. **Bias** (b) represents neuron's threshold
 4. **Activation function** determines output
 
-```
-         inputs
-           ↓
-    [x₁]──w₁──┐
-    [x₂]──w₂──┤
-    [x₃]──w₃──├──→ Σ(wᵢxᵢ + b) ──→ activation ──→ output
-       ...    │
-    [xₙ]──wₙ──┘
+```{mermaid}
+flowchart LR
+    x1["x₁"] -- w₁ --> S["Σ(wᵢxᵢ + b)"]
+    x2["x₂"] -- w₂ --> S
+    x3["x₃"] -- w₃ --> S
+    xn["xₙ"] -- wₙ --> S
+    S --> Act[Activation]
+    Act --> Out[Output]
 ```
 
 ### Mathematical Formula
@@ -586,10 +586,11 @@ for epoch in range(num_epochs):
 
 #### 1. Train/Validation/Test Split
 
-```
-Dataset → 70% Training (optimize weights)
-       → 15% Validation (tune hyperparameters)
-       → 15% Test (final evaluation)
+```{mermaid}
+flowchart LR
+    A[Dataset] --> B["70% Training<br/>(optimize weights)"]
+    A --> C["15% Validation<br/>(tune hyperparameters)"]
+    A --> D["15% Test<br/>(final evaluation)"]
 ```
 
 #### 2. Normalization
@@ -656,16 +657,18 @@ optimizer = optim.Adam(model.parameters(), lr=0.001, weight_decay=0.01)
 
 ### 1. Feedforward Neural Network (FNN)
 
-```
-Input → Dense → ReLU → Dense → ReLU → Dense → Output
+```{mermaid}
+flowchart LR
+    A[Input] --> B[Dense] --> C[ReLU] --> D[Dense] --> E[ReLU] --> F[Dense] --> G[Output]
 ```
 
 **Use cases:** Tabular data, simple classification
 
 ### 2. Convolutional Neural Network (CNN)
 
-```
-Image → Conv → ReLU → Pool → Conv → ReLU → Pool → Flatten → Dense → Output
+```{mermaid}
+flowchart LR
+    A[Image] --> B[Conv] --> C[ReLU] --> D[Pool] --> E[Conv] --> F[ReLU] --> G[Pool] --> H[Flatten] --> I[Dense] --> J[Output]
 ```
 
 **Use cases:** Image classification, object detection, computer vision
@@ -674,11 +677,15 @@ Image → Conv → ReLU → Pool → Conv → ReLU → Pool → Flatten → Dens
 
 ### 3. Recurrent Neural Network (RNN)
 
-```
-Word₁ → [RNN] → Hidden State → Word₂ → [RNN] → ...
-           ↓                      ↓
-        Output₁                Output₂
-```
+```{mermaid}
+flowchart LR
+    W1["Word₁"] --> R1[RNN]
+    R1 --> H1[Hidden State]
+    R1 --> O1["Output₁"]
+    H1 --> R2[RNN]
+    W2["Word₂"] --> R2
+    R2 --> O2["Output₂"]
+    R2 --> H2["..."]
 
 **Use cases:** Time series, text, sequential data
 

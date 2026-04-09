@@ -112,14 +112,13 @@ async with websockets.connect("ws://localhost:8000/ws") as ws:
 - Hybrid search streaming
 
 **Architecture:**
-```
-User Query → Vector Search (stream) → Document Retrieval (progressive)
-            ↓
-        Context Assembly (incremental)
-            ↓
-        LLM Generation (streaming)
-            ↓
-        Response (real-time)
+```{mermaid}
+flowchart TD
+    A[User Query] --> B[Vector Search - stream]
+    B --> C[Document Retrieval - progressive]
+    C --> D[Context Assembly - incremental]
+    D --> E[LLM Generation - streaming]
+    E --> F[Response - real-time]
 ```
 
 ### 4. Production Streaming (120 minutes)

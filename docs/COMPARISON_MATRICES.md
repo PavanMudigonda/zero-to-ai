@@ -35,16 +35,16 @@
 | **Phi-4** | Small/edge, reasoning | Tiny but powerful (14B) | Limited vs larger models | Free (hosting cost) | Edge deployment, limited hardware |
 
 **Decision Tree:**
-```
-Need multimodal (images/vision/audio)? 
-├─ Yes → GPT-5.4, Gemini 3.1 Pro, or Claude Sonnet 4.6
-└─ No → Need complex reasoning?
-    ├─ Yes → o3 (research) or o4-mini (coding) or DeepSeek R1 (self-hosted)
-    └─ No → Need self-hosting?
-        ├─ Yes → Qwen 3, Llama 4, or DeepSeek V3.2
-        └─ No → Budget conscious?
-            ├─ Yes → GPT-4.1-mini, Claude Haiku 4.5, or Gemini 3.1 Flash
-            └─ No → Claude Sonnet 4.6, GPT-5.4, or Gemini 3.1 Pro
+```{mermaid}
+flowchart TD
+    A{Need multimodal?} -->|Yes| B[GPT-5.4 / Gemini 3.1 Pro / Claude Sonnet 4.6]
+    A -->|No| C{Need complex reasoning?}
+    C -->|Yes| D[o3 / o4-mini / DeepSeek R1]
+    C -->|No| E{Need self-hosting?}
+    E -->|Yes| F[Qwen 3 / Llama 4 / DeepSeek V3.2]
+    E -->|No| G{Budget conscious?}
+    G -->|Yes| H[GPT-4.1-mini / Claude Haiku 4.5 / Gemini Flash]
+    G -->|No| I[Claude Sonnet 4.6 / GPT-5.4 / Gemini 3.1 Pro]
 ```
 
 ---
@@ -87,18 +87,17 @@ Need multimodal (images/vision/audio)?
 | **Prompt Tuning** | <0.1% | Minimal | Minutes | Fair | Extremely limited resources |
 
 **Decision Matrix:**
-```
-GPU VRAM Available:
-├─ >40GB → Full fine-tuning (best quality)
-├─ 16-40GB → LoRA r=64 or DoRA (recommended)
-├─ 8-16GB → LoRA r=32 or QLoRA
-└─ <8GB → QLoRA (4-bit) or Prompt Tuning
+```{mermaid}
+flowchart TD
+    A{GPU VRAM?} -->|">40GB"| B[Full fine-tuning]
+    A -->|"16-40GB"| C[LoRA r=64 or DoRA]
+    A -->|"8-16GB"| D[LoRA r=32 or QLoRA]
+    A -->|"<8GB"| E["QLoRA (4-bit) or Prompt Tuning"]
 
-Quality Requirements:
-├─ Critical → Full fine-tuning or DoRA
-├─ High → LoRA r=64 or DoRA  
-├─ Medium → LoRA r=32 or QLoRA
-└─ Basic → Adapters or Prompt Tuning
+    F{Quality needed?} -->|Critical| G[Full fine-tuning or DoRA]
+    F -->|High| H[LoRA r=64 or DoRA]
+    F -->|Medium| I[LoRA r=32 or QLoRA]
+    F -->|Basic| J[Adapters or Prompt Tuning]
 ```
 
 **2026 Best Practices:**
@@ -194,15 +193,15 @@ Quality Requirements:
 | **SDXL Turbo** | Very good | Very fast | Free (GPU cost) | High | Fast iteration, prototyping |
 
 **Decision Tree:**
-```
-Need absolute best quality?
-├─ Yes, willing to pay → Midjourney v7 or FLUX 1.1 Pro
-├─ Yes, self-hosted → FLUX 1.1 dev
-└─ No → Need very fast generation?
-    ├─ Yes → SDXL Turbo or DALL-E 3
-    └─ No → Have GPU?
-        ├─ Yes → SD 3.5 or FLUX
-        └─ No → DALL-E 3 or Ideogram 3 (API)
+```{mermaid}
+flowchart TD
+    A{Need absolute best quality?} -->|"Yes, willing to pay"| B[Midjourney v7 or FLUX 1.1 Pro]
+    A -->|"Yes, self-hosted"| C[FLUX 1.1 dev]
+    A -->|No| D{Need very fast generation?}
+    D -->|Yes| E[SDXL Turbo or DALL-E 3]
+    D -->|No| F{Have GPU?}
+    F -->|Yes| G[SD 3.5 or FLUX]
+    F -->|No| H["DALL-E 3 or Ideogram 3 (API)"]
 ```
 
 **By Use Case:**

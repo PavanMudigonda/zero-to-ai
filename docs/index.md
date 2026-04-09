@@ -226,6 +226,7 @@ generated/MASTER_STUDY_GUIDE
 generated/CAREER_ROADMAP
 generated/INTERVIEW_PREP
 generated/COMPARISON_MATRICES
+generated/VISUAL_ROADMAP
 generated/setup
 generated/checklist
 ```

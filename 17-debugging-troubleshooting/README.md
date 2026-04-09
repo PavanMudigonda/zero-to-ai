@@ -231,59 +231,15 @@ pip install jupyter-resource-usage
 
 ## 📊 Debugging Workflow Diagram
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    PROBLEM DETECTED                          │
-│          (Poor performance, errors, slow speed)              │
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  1. REPRODUCE BUG                            │
-│   • Create minimal reproducible example                      │
-│   • Isolate the problem                                      │
-│   • Document symptoms                                        │
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  2. GATHER DATA                              │
-│   • Check logs and error messages                            │
-│   • Profile performance                                      │
-│   • Inspect intermediate outputs                             │
-│   • Visualize data and predictions                           │
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  3. HYPOTHESIZE CAUSE                        │
-│   • Review checklist of common issues                        │
-│   • Form testable hypothesis                                 │
-│   • Prioritize most likely causes                            │
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                        ▼
-┌─────────────────────────────────────────────────────────────┐
-│                  4. TEST HYPOTHESIS                          │
-│   • Make targeted change                                     │
-│   • Re-run experiment                                        │
-│   • Compare before/after                                     │
-└───────────────────────┬─────────────────────────────────────┘
-                        │
-                ┌───────┴────────┐
-                │                │
-        Fixed? YES              NO
-                │                │
-                ▼                ▼
-    ┌───────────────┐   ┌──────────────┐
-    │   5. VERIFY    │   │  Try Next    │
-    │   • Test edge  │   │  Hypothesis  │
-    │     cases      │   └──────┬───────┘
-    │   • Document   │          │
-    │     solution   │          │
-    └───────────────┘          │
-                               │
-                               └──────► Back to Step 3
+```{mermaid}
+flowchart TD
+    A["PROBLEM DETECTED<br/>Poor performance, errors, slow speed"] --> B["1. REPRODUCE BUG<br/>Minimal example · Isolate problem · Document symptoms"]
+    B --> C["2. GATHER DATA<br/>Check logs · Profile performance · Inspect outputs · Visualize"]
+    C --> D["3. HYPOTHESIZE CAUSE<br/>Review common issues · Form testable hypothesis · Prioritize"]
+    D --> E["4. TEST HYPOTHESIS<br/>Make targeted change · Re-run experiment · Compare before/after"]
+    E -->|Fixed? YES| F["5. VERIFY<br/>Test edge cases · Document solution"]
+    E -->|Fixed? NO| G[Try Next Hypothesis]
+    G --> D
 ```
 
 ---

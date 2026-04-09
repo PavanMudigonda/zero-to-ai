@@ -24,11 +24,12 @@ Sentence: "The cat that ate the mouse that lived in the barn ran away"
 
 Problem: By the time model gets to "ran", information about "cat" 
 has been compressed through many timesteps and starts to fade.
+```
 
-Information flow:
-  cat → that → ate → the → mouse → ... → ran
-  ↓                                       ↓
-[compressed in hidden state, fading...]
+```{mermaid}
+flowchart LR
+    cat --> that --> ate --> the --> mouse --> dots["..."] --> ran
+    cat -.->|"fading hidden state"| ran
 ```
 
 **RNN limitations:**

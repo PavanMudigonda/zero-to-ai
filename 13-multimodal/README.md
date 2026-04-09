@@ -277,12 +277,13 @@ Training: Maximize similarity of matching pairs,
 
 ### Stable Diffusion Pipeline
 
-```
-Text → CLIP → Text Embedding
-         ↓
-    U-Net (denoising)
-         ↓
-    VAE Decoder → Image
+```{mermaid}
+flowchart TD
+    A[Text] --> B[CLIP Encoder]
+    B --> C[Text Embedding]
+    C --> D[U-Net - denoising]
+    D --> E[VAE Decoder]
+    E --> F[Image]
 ```
 
 **Key Parameters:**

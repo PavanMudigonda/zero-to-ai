@@ -93,71 +93,16 @@ By the end of this phase, you will:
 
 ## 🛡️ Security Layers
 
-```
-┌─────────────────────────────────────────┐
-│     User Input                           │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 1: Input Validation               │
-│  • Length checks                         │
-│  • Format validation                     │
-│  • Rate limiting                         │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 2: Prompt Injection Detection     │
-│  • Pattern matching                      │
-│  • Instruction detection                 │
-│  • Context analysis                      │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 3: Content Moderation             │
-│  • Toxicity check                        │
-│  • Hate speech detection                 │
-│  • Violence/sexual content filter        │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 4: PII Detection                  │
-│  • Email/phone/SSN detection             │
-│  • Named entity recognition              │
-│  • Anonymization                         │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 5: LLM Processing                 │
-│  • Safe system prompt                    │
-│  • Output constraints                    │
-│  • Temperature limits                    │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 6: Output Validation              │
-│  • Content filtering                     │
-│  • Fact checking                         │
-│  • Bias detection                        │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│  Layer 7: Monitoring & Logging           │
-│  • Audit trail                           │
-│  • Anomaly detection                     │
-│  • Alert system                          │
-└─────────────┬───────────────────────────┘
-              │
-              ▼
-┌─────────────────────────────────────────┐
-│     User Response                        │
-└─────────────────────────────────────────┘
+```{mermaid}
+flowchart TD
+    A[User Input] --> B["Layer 1: Input Validation<br/>Length checks · Format validation · Rate limiting"]
+    B --> C["Layer 2: Prompt Injection Detection<br/>Pattern matching · Instruction detection · Context analysis"]
+    C --> D["Layer 3: Content Moderation<br/>Toxicity check · Hate speech · Violence/sexual filter"]
+    D --> E["Layer 4: PII Detection<br/>Email/phone/SSN detection · NER · Anonymization"]
+    E --> F["Layer 5: LLM Processing<br/>Safe system prompt · Output constraints · Temperature limits"]
+    F --> G["Layer 6: Output Validation<br/>Content filtering · Fact checking · Bias detection"]
+    G --> H["Layer 7: Monitoring & Logging<br/>Audit trail · Anomaly detection · Alert system"]
+    H --> I[User Response]
 ```
 
 ---

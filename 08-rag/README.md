@@ -149,12 +149,18 @@ response = llm.generate(prompt)
 
 ### 1. RAG Pipeline
 
-```
-Documents → Split → Embed → Store in Vector DB
-                                    ↓
-User Query → Embed → Search → Retrieve Top-K
-                                    ↓
-Retrieved Docs + Query → LLM Prompt → Answer
+```{mermaid}
+flowchart TD
+    A[Documents] --> B[Split into Chunks]
+    B --> C[Embed]
+    C --> D[Store in Vector DB]
+    E[User Query] --> F[Embed Query]
+    F --> G[Similarity Search]
+    D --> G
+    G --> H[Retrieve Top-K]
+    H --> I[Retrieved Docs + Query]
+    I --> J[LLM Prompt]
+    J --> K[Answer]
 ```
 
 ### 2. Chunking Strategies

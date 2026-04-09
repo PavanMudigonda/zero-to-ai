@@ -41,35 +41,28 @@ After (Transformer):
 
 ### Original Transformer (Encoder-Decoder)
 
-```
-Input Sequence → [ENCODER] → Context → [DECODER] → Output Sequence
-   "Hello"         ↓                       ↓           "Bonjour"
-                6x layers              6x layers
-                   ↓                       ↓
-              Representation          Generation
+```{mermaid}
+flowchart LR
+    A["Input Sequence<br/>'Hello'"] --> B["ENCODER<br/>6× layers"]
+    B --> C[Context Representation]
+    C --> D["DECODER<br/>6× layers"]
+    D --> E["Output Sequence<br/>'Bonjour'"]
 ```
 
 ### Architecture Diagram
 
-```
-                    OUTPUT
-                      ↑
-                [Linear + Softmax]
-                      ↑
-                [Decoder Stack]
-                 (N x Decoder)
-              /      ↑      \
-    [Multi-Head  [Feed     [Add &
-     Attention]  Forward]   Norm]
-         ↑          ↑          ↑
-    [Encoder Stack Output]    |
-         ↓                     |
-    [Encoder Stack]            |
-     (N x Encoder)             |
-         ↑                     |
-    [Input Embedding + Positional Encoding]
-         ↑
-      INPUT
+```{mermaid}
+flowchart BT
+    INPUT[INPUT] --> EMB["Input Embedding +<br/>Positional Encoding"]
+    EMB --> ENC["Encoder Stack<br/>(N × Encoder)"]
+    ENC --> ENC_OUT[Encoder Output]
+    ENC_OUT --> MHA[Multi-Head Attention]
+    ENC_OUT --> FF[Feed Forward]
+    MHA --> AN1[Add & Norm]
+    FF --> AN1
+    AN1 --> DEC["Decoder Stack<br/>(N × Decoder)"]
+    DEC --> LS[Linear + Softmax]
+    LS --> OUTPUT[OUTPUT]
 ```
 
 ---
@@ -195,20 +188,14 @@ class EncoderBlock(nn.Module):
 
 #### Multi-Head Self-Attention
 
-```
-Input (seq_len, d_model)
-    ↓
-[Linear projections to Q, K, V]
-    ↓
-[Split into num_heads]
-    ↓
-[Scaled dot-product attention per head]
-    ↓
-[Concatenate heads]
-    ↓
-[Linear projection]
-    ↓
-Output (seq_len, d_model)
+```{mermaid}
+flowchart TD
+    A["Input (seq_len, d_model)"] --> B[Linear projections to Q, K, V]
+    B --> C[Split into num_heads]
+    C --> D[Scaled dot-product attention per head]
+    D --> E[Concatenate heads]
+    E --> F[Linear projection]
+    F --> G["Output (seq_len, d_model)"]
 ```
 
 **Parameters:**
@@ -248,16 +235,12 @@ FFN(x) = max(0, x @ W1 + b1) @ W2 + b2
 ```
 
 **Architecture:**
-```
-Input (seq_len, d_model=512)
-    ↓
-[Linear Layer: 512 → 2048]
-    ↓
-[ReLU Activation]
-    ↓
-[Linear Layer: 2048 → 512]
-    ↓
-Output (seq_len, d_model=512)
+```{mermaid}
+flowchart TD
+    A["Input (seq_len, d_model=512)"] --> B["Linear Layer: 512 → 2048"]
+    B --> C[ReLU Activation]
+    C --> D["Linear Layer: 2048 → 512"]
+    D --> E["Output (seq_len, d_model=512)"]
 ```
 
 **Why?**

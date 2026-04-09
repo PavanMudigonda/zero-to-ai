@@ -245,18 +245,13 @@ By the end of this module, you will be able to:
 
 ### Tokenization Pipeline
 
-```text
-Input Text
-    ↓
-[Normalization]      # Clean, lowercase, remove accents
-    ↓
-[Pre-Tokenization]   # Split into words
-    ↓
-[Model]              # Apply algorithm (BPE/WordPiece/Unigram)
-    ↓
-[Post-Processing]    # Add special tokens
-    ↓
-Output (Encoding)
+```{mermaid}
+flowchart TD
+    A[Input Text] --> B[Normalization]
+    B --> C[Pre-Tokenization]
+    C --> D["Model (BPE / WordPiece / Unigram)"]
+    D --> E[Post-Processing]
+    E --> F["Output (Encoding)"]
 ```
 
 ### Why HuggingFace Tokenizers?
