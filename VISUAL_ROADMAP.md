@@ -490,20 +490,20 @@ flowchart TD
 
 ```{mermaid}
 flowchart LR
-    subgraph Phase 1 — Learn
+    subgraph "Phase 1 - Learn"
         P[Python] --> DS[Data Science]
         DS --> MATH[Math & Stats]
         MATH --> NN[Neural Networks]
     end
 
-    subgraph Phase 2 — Build
+    subgraph "Phase 2 - Build"
         NN --> TOK[Tokenization]
         TOK --> EMB_P[Embeddings]
         EMB_P --> VDB[Vector DB]
         VDB --> RAG_P[RAG System]
     end
 
-    subgraph Phase 3 — Ship
+    subgraph "Phase 3 - Ship"
         RAG_P --> AGENT_P[AI Agent]
         AGENT_P --> EVAL[Evaluation]
         EVAL --> OPT[Optimization]

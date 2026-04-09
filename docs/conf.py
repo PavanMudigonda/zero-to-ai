@@ -70,6 +70,7 @@ source_suffix = {
 
 # Templates and exclusions
 templates_path = ["_templates"]
+html_extra_path = ["_extras"]
 
 # Suppress "document not in any toctree" for curriculum notebooks/sub-pages
 # that are reachable via links but not explicitly listed in toctrees.
