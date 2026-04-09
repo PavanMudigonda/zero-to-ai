@@ -455,12 +455,18 @@ for path in glob.glob('$CURRICULUM_DIR/**/*.ipynb', recursive=True):
         if 'id' not in cell:
             cell['id'] = uuid.uuid4().hex[:8]
             changed = True
+    # Ensure nbformat_minor >= 5 when cells have id fields (required by schema)
+    if nb.get('nbformat') == 4 and nb.get('nbformat_minor', 0) < 5:
+        has_ids = any('id' in cell for cell in nb.get('cells', []))
+        if has_ids:
+            nb['nbformat_minor'] = 5
+            changed = True
     if changed:
         with open(path, 'w') as f:
             json.dump(nb, f, indent=1, ensure_ascii=False)
             f.write('\n')
         fixed += 1
-print(f'Normalized {fixed} notebooks (added missing cell IDs).')
+print(f'Normalized {fixed} notebooks (added missing cell IDs, ensured nbformat_minor >= 5).')
 "
 
 echo "Published $phase_count phases, $readme_count README files, $catalog_count catalogs, and $nb_count notebooks."

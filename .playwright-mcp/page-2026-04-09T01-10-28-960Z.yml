@@ -1,0 +1,746 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../curriculum/00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../curriculum/01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../curriculum/02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../curriculum/03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+              - text: e x A x = b
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../curriculum/04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../curriculum/05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../curriculum/06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../curriculum/07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../curriculum/08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: ../curriculum/09-mlops/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - 'link "Phase 10: Specializations" [ref=e82] [cursor=pointer]':
+                - /url: ../curriculum/10-specializations/README.html
+              - img [ref=e85] [cursor=pointer]
+          - heading "Advanced" [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e90] [cursor=pointer]':
+                - /url: ../curriculum/11-prompt-engineering/README.html
+              - img [ref=e93] [cursor=pointer]
+            - listitem [ref=e95]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e96] [cursor=pointer]':
+                - /url: ../curriculum/12-llm-finetuning/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - 'link "Phase 13: Multimodal AI" [ref=e102] [cursor=pointer]':
+                - /url: ../curriculum/13-multimodal/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - 'link "Phase 14: Local LLMs" [ref=e108] [cursor=pointer]':
+                - /url: ../curriculum/14-local-llms/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - 'link "Phase 15: AI Agents" [ref=e114] [cursor=pointer]':
+                - /url: ../curriculum/15-ai-agents/README.html
+              - img [ref=e117] [cursor=pointer]
+          - heading "Supplementary" [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - 'link "Phase 16: Model Evaluation" [ref=e122] [cursor=pointer]':
+                - /url: ../curriculum/16-model-evaluation/README.html
+              - img [ref=e125] [cursor=pointer]
+            - listitem [ref=e127]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e128] [cursor=pointer]':
+                - /url: ../curriculum/17-debugging/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e134] [cursor=pointer]':
+                - /url: ../curriculum/18-low-code/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e140] [cursor=pointer]':
+                - /url: ../curriculum/19-ai-safety/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e146] [cursor=pointer]':
+                - /url: ../curriculum/20-streaming/README.html
+              - img [ref=e149] [cursor=pointer]
+          - heading "Reference" [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - 'link "Phase 21: Quizzes" [ref=e154] [cursor=pointer]':
+                - /url: ../curriculum/21-quizzes/README.html
+              - img [ref=e157] [cursor=pointer]
+            - listitem [ref=e159]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e160] [cursor=pointer]':
+                - /url: ../curriculum/22-references/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e166] [cursor=pointer]':
+                - /url: ../curriculum/23-glossary/README.html
+              - img [ref=e169] [cursor=pointer]
+          - heading "Resources" [ref=e171]
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - link "Master Study Guide" [ref=e174] [cursor=pointer]:
+                - /url: MASTER_STUDY_GUIDE.html
+            - listitem [ref=e175]:
+              - link "Career Roadmap" [ref=e176] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e177]:
+              - link "Interview Preparation" [ref=e178] [cursor=pointer]:
+                - /url: INTERVIEW_PREP.html
+            - listitem [ref=e179]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e180] [cursor=pointer]:
+                - /url: COMPARISON_MATRICES.html
+            - listitem [ref=e181]:
+              - link "Setup Guide - Zero to AI" [ref=e182] [cursor=pointer]:
+                - /url: setup.html
+            - listitem [ref=e183]:
+              - link "AI/ML Learning Checklist ✅" [ref=e184] [cursor=pointer]:
+                - /url: checklist.html
+          - heading "Research" [ref=e185]
+          - list [ref=e186]:
+            - listitem [ref=e187]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e188] [cursor=pointer]':
+                - /url: ../curriculum/24-advanced-dl/README.html
+              - img [ref=e191] [cursor=pointer]
+            - listitem [ref=e193]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e194] [cursor=pointer]':
+                - /url: ../curriculum/25-rl/README.html
+              - img [ref=e197] [cursor=pointer]
+            - listitem [ref=e199]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e200] [cursor=pointer]':
+                - /url: ../curriculum/26-time-series/README.html
+              - img [ref=e203] [cursor=pointer]
+            - listitem [ref=e205]:
+              - 'link "Phase 27: Causal Inference" [ref=e206] [cursor=pointer]':
+                - /url: ../curriculum/27-causal-inference/README.html
+              - img [ref=e209] [cursor=pointer]
+          - heading "Production" [ref=e211]
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - 'link "Phase 28: Practical Data Science" [ref=e214] [cursor=pointer]':
+                - /url: ../curriculum/28-practical-ds/README.html
+              - img [ref=e217] [cursor=pointer]
+            - listitem [ref=e219]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e220] [cursor=pointer]':
+                - /url: ../curriculum/29-ai-hardware/README.html
+              - img [ref=e223] [cursor=pointer]
+            - listitem [ref=e225]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e226] [cursor=pointer]':
+                - /url: ../curriculum/30-inference-opt/README.html
+              - img [ref=e229] [cursor=pointer]
+          - heading "About" [ref=e231]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - link "Contributing to Zero to AI" [ref=e234] [cursor=pointer]:
+                - /url: CONTRIBUTING.html
+            - listitem [ref=e235]:
+              - link "Changelog" [ref=e236] [cursor=pointer]:
+                - /url: CHANGELOG.html
+            - listitem [ref=e237]:
+              - link "Contributor Covenant Code of Conduct" [ref=e238] [cursor=pointer]:
+                - /url: CODE_OF_CONDUCT.html
+            - listitem [ref=e239]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e240] [cursor=pointer]:
+                - /url: REFERENCES.html
+            - listitem [ref=e241]:
+              - link "Workspace Learning Review" [ref=e242] [cursor=pointer]:
+                - /url: WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e243]:
+              - link "License" [ref=e244] [cursor=pointer]:
+                - /url: LICENSE.html
+            - listitem [ref=e245]:
+              - link "Support" [ref=e246] [cursor=pointer]:
+                - /url: SUPPORT.html
+      - separator "Resize left sidebar" [ref=e247]:
+        - button "Collapse left sidebar" [ref=e248] [cursor=pointer]: ‹
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - link "View this page" [ref=e254] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/generated/CAREER_ROADMAP.md?plain=true
+              - img [ref=e255]
+              - generic [ref=e257]: View this page
+            - link "Edit this page" [ref=e259] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/generated/CAREER_ROADMAP.md
+              - img [ref=e260]
+              - generic [ref=e262]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e264] [cursor=pointer]:
+              - img [ref=e265]
+            - img [ref=e269] [cursor=pointer]
+          - main [ref=e271]:
+            - generic [ref=e272]:
+              - heading "Career Roadmap" [level=1] [ref=e273]
+              - generic [ref=e274]:
+                - heading "Target Roles" [level=2] [ref=e275]
+                - generic [ref=e276]:
+                  - heading "AI Engineer / LLM Engineer ( 280k)" [level=3] [ref=e277]:
+                    - text: AI Engineer / LLM Engineer (
+                    - generic [ref=e279]:
+                      - generic [ref=e280]:
+                        - generic [ref=e281]:
+                          - generic [ref=e282]: "1"
+                          - generic [ref=e283]: "4"
+                          - generic [ref=e284]: "0"
+                        - generic [ref=e286]: k
+                        - generic [ref=e288]: −
+                      - math [ref=e290]:
+                        - generic [ref=e291]: "140"
+                        - generic [ref=e292]: k
+                        - generic [ref=e293]: −
+                    - text: 280k)
+                  - paragraph [ref=e294]: "Build production AI applications: RAG systems, agents, prompt pipelines, fine-tuned models."
+                  - paragraph [ref=e295]:
+                    - strong [ref=e296]: Must-have
+                    - text: ": RAG, prompt engineering, LLM APIs (OpenAI/Anthropic/local), vector databases, Python, FastAPI, Docker"
+                    - strong [ref=e297]: Nice-to-have
+                    - text: ": LoRA/QLoRA fine-tuning, AI agents, MCP, LangChain/LlamaIndex, MLOps"
+                - generic [ref=e298]:
+                  - heading "ML Engineer ( 250k)" [level=3] [ref=e299]:
+                    - text: ML Engineer (
+                    - generic [ref=e301]:
+                      - generic [ref=e302]:
+                        - generic [ref=e303]:
+                          - generic [ref=e304]: "1"
+                          - generic [ref=e305]: "3"
+                          - generic [ref=e306]: "0"
+                        - generic [ref=e308]: k
+                        - generic [ref=e310]: −
+                      - math [ref=e312]:
+                        - generic [ref=e313]: "130"
+                        - generic [ref=e314]: k
+                        - generic [ref=e315]: −
+                    - text: 250k)
+                  - paragraph [ref=e316]: Build, train, deploy, and maintain ML models at scale.
+                  - paragraph [ref=e317]:
+                    - strong [ref=e318]: Must-have
+                    - text: ": PyTorch, scikit-learn, model training/eval, Docker, CI/CD, cloud (AWS/GCP/Azure), SQL"
+                    - strong [ref=e319]: Nice-to-have
+                    - text: ": Distributed training, MLOps (MLflow, W&B), Spark, LLM serving (vLLM)"
+                - generic [ref=e320]:
+                  - heading "Data Scientist ( 200k)" [level=3] [ref=e321]:
+                    - text: Data Scientist (
+                    - generic [ref=e323]:
+                      - generic [ref=e324]:
+                        - generic [ref=e325]:
+                          - generic [ref=e326]: "1"
+                          - generic [ref=e327]: "1"
+                          - generic [ref=e328]: "0"
+                        - generic [ref=e330]: k
+                        - generic [ref=e332]: −
+                      - math [ref=e334]:
+                        - generic [ref=e335]: "110"
+                        - generic [ref=e336]: k
+                        - generic [ref=e337]: −
+                    - text: 200k)
+                  - paragraph [ref=e338]: Analyze data, build models, run experiments, communicate insights.
+                  - paragraph [ref=e339]:
+                    - strong [ref=e340]: Must-have
+                    - text: ": Python (pandas, NumPy, scikit-learn), statistics, SQL, visualization, communication"
+                    - strong [ref=e341]: Nice-to-have
+                    - text: ": Causal inference, time series, deep learning, GenAI literacy"
+                - generic [ref=e342]:
+                  - heading "MLOps / AI Platform Engineer ( 230k)" [level=3] [ref=e343]:
+                    - text: MLOps / AI Platform Engineer (
+                    - generic [ref=e345]:
+                      - generic [ref=e346]:
+                        - generic [ref=e347]:
+                          - generic [ref=e348]: "1"
+                          - generic [ref=e349]: "3"
+                          - generic [ref=e350]: "0"
+                        - generic [ref=e352]: k
+                        - generic [ref=e354]: −
+                      - math [ref=e356]:
+                        - generic [ref=e357]: "130"
+                        - generic [ref=e358]: k
+                        - generic [ref=e359]: −
+                    - text: 230k)
+                  - paragraph [ref=e360]: Build infrastructure for ML/AI teams.
+                  - paragraph [ref=e361]:
+                    - strong [ref=e362]: Must-have
+                    - text: ": Docker, Kubernetes, CI/CD, cloud ML platforms, MLflow/W&B, monitoring, IaC (Terraform)"
+              - generic [ref=e363]:
+                - heading "Skills Matrix" [level=2] [ref=e364]
+                - table [ref=e366]:
+                  - rowgroup [ref=e367]:
+                    - row "Skill AI Eng ML Eng Data Sci MLOps" [ref=e368]:
+                      - columnheader "Skill" [ref=e369]:
+                        - paragraph [ref=e370]: Skill
+                      - columnheader "AI Eng" [ref=e371]:
+                        - paragraph [ref=e372]: AI Eng
+                      - columnheader "ML Eng" [ref=e373]:
+                        - paragraph [ref=e374]: ML Eng
+                      - columnheader "Data Sci" [ref=e375]:
+                        - paragraph [ref=e376]: Data Sci
+                      - columnheader "MLOps" [ref=e377]:
+                        - paragraph [ref=e378]: MLOps
+                  - rowgroup [ref=e379]:
+                    - row "Python Y Y Y Y" [ref=e380]:
+                      - cell "Python" [ref=e381]:
+                        - paragraph [ref=e382]: Python
+                      - cell "Y" [ref=e383]:
+                        - paragraph [ref=e384]: "Y"
+                      - cell "Y" [ref=e385]:
+                        - paragraph [ref=e386]: "Y"
+                      - cell "Y" [ref=e387]:
+                        - paragraph [ref=e388]: "Y"
+                      - cell "Y" [ref=e389]:
+                        - paragraph [ref=e390]: "Y"
+                    - row "SQL - Y Y -" [ref=e391]:
+                      - cell "SQL" [ref=e392]:
+                        - paragraph [ref=e393]: SQL
+                      - cell "-" [ref=e394]:
+                        - paragraph [ref=e395]: "-"
+                      - cell "Y" [ref=e396]:
+                        - paragraph [ref=e397]: "Y"
+                      - cell "Y" [ref=e398]:
+                        - paragraph [ref=e399]: "Y"
+                      - cell "-" [ref=e400]:
+                        - paragraph [ref=e401]: "-"
+                    - row "Statistics - Y Y -" [ref=e402]:
+                      - cell "Statistics" [ref=e403]:
+                        - paragraph [ref=e404]: Statistics
+                      - cell "-" [ref=e405]:
+                        - paragraph [ref=e406]: "-"
+                      - cell "Y" [ref=e407]:
+                        - paragraph [ref=e408]: "Y"
+                      - cell "Y" [ref=e409]:
+                        - paragraph [ref=e410]: "Y"
+                      - cell "-" [ref=e411]:
+                        - paragraph [ref=e412]: "-"
+                    - row "PyTorch - Y - -" [ref=e413]:
+                      - cell "PyTorch" [ref=e414]:
+                        - paragraph [ref=e415]: PyTorch
+                      - cell "-" [ref=e416]:
+                        - paragraph [ref=e417]: "-"
+                      - cell "Y" [ref=e418]:
+                        - paragraph [ref=e419]: "Y"
+                      - cell "-" [ref=e420]:
+                        - paragraph [ref=e421]: "-"
+                      - cell "-" [ref=e422]:
+                        - paragraph [ref=e423]: "-"
+                    - row "LLM APIs + RAG Y - - -" [ref=e424]:
+                      - cell "LLM APIs + RAG" [ref=e425]:
+                        - paragraph [ref=e426]: LLM APIs + RAG
+                      - cell "Y" [ref=e427]:
+                        - paragraph [ref=e428]: "Y"
+                      - cell "-" [ref=e429]:
+                        - paragraph [ref=e430]: "-"
+                      - cell "-" [ref=e431]:
+                        - paragraph [ref=e432]: "-"
+                      - cell "-" [ref=e433]:
+                        - paragraph [ref=e434]: "-"
+                    - row "Prompt engineering Y - - -" [ref=e435]:
+                      - cell "Prompt engineering" [ref=e436]:
+                        - paragraph [ref=e437]: Prompt engineering
+                      - cell "Y" [ref=e438]:
+                        - paragraph [ref=e439]: "Y"
+                      - cell "-" [ref=e440]:
+                        - paragraph [ref=e441]: "-"
+                      - cell "-" [ref=e442]:
+                        - paragraph [ref=e443]: "-"
+                      - cell "-" [ref=e444]:
+                        - paragraph [ref=e445]: "-"
+                    - row "Fine-tuning Y Y - -" [ref=e446]:
+                      - cell "Fine-tuning" [ref=e447]:
+                        - paragraph [ref=e448]: Fine-tuning
+                      - cell "Y" [ref=e449]:
+                        - paragraph [ref=e450]: "Y"
+                      - cell "Y" [ref=e451]:
+                        - paragraph [ref=e452]: "Y"
+                      - cell "-" [ref=e453]:
+                        - paragraph [ref=e454]: "-"
+                      - cell "-" [ref=e455]:
+                        - paragraph [ref=e456]: "-"
+                    - row "AI agents Y - - -" [ref=e457]:
+                      - cell "AI agents" [ref=e458]:
+                        - paragraph [ref=e459]: AI agents
+                      - cell "Y" [ref=e460]:
+                        - paragraph [ref=e461]: "Y"
+                      - cell "-" [ref=e462]:
+                        - paragraph [ref=e463]: "-"
+                      - cell "-" [ref=e464]:
+                        - paragraph [ref=e465]: "-"
+                      - cell "-" [ref=e466]:
+                        - paragraph [ref=e467]: "-"
+                    - row "Docker / CI/CD Y Y - Y" [ref=e468]:
+                      - cell "Docker / CI/CD" [ref=e469]:
+                        - paragraph [ref=e470]: Docker / CI/CD
+                      - cell "Y" [ref=e471]:
+                        - paragraph [ref=e472]: "Y"
+                      - cell "Y" [ref=e473]:
+                        - paragraph [ref=e474]: "Y"
+                      - cell "-" [ref=e475]:
+                        - paragraph [ref=e476]: "-"
+                      - cell "Y" [ref=e477]:
+                        - paragraph [ref=e478]: "Y"
+                    - row "Cloud (AWS/GCP) - Y - Y" [ref=e479]:
+                      - cell "Cloud (AWS/GCP)" [ref=e480]:
+                        - paragraph [ref=e481]: Cloud (AWS/GCP)
+                      - cell "-" [ref=e482]:
+                        - paragraph [ref=e483]: "-"
+                      - cell "Y" [ref=e484]:
+                        - paragraph [ref=e485]: "Y"
+                      - cell "-" [ref=e486]:
+                        - paragraph [ref=e487]: "-"
+                      - cell "Y" [ref=e488]:
+                        - paragraph [ref=e489]: "Y"
+                    - row "Kubernetes - - - Y" [ref=e490]:
+                      - cell "Kubernetes" [ref=e491]:
+                        - paragraph [ref=e492]: Kubernetes
+                      - cell "-" [ref=e493]:
+                        - paragraph [ref=e494]: "-"
+                      - cell "-" [ref=e495]:
+                        - paragraph [ref=e496]: "-"
+                      - cell "-" [ref=e497]:
+                        - paragraph [ref=e498]: "-"
+                      - cell "Y" [ref=e499]:
+                        - paragraph [ref=e500]: "Y"
+              - generic [ref=e501]:
+                - heading "90-Day Plan" [level=2] [ref=e502]
+                - paragraph [ref=e503]:
+                  - strong [ref=e504]: "Days 1-30: Foundation"
+                - list [ref=e505]:
+                  - listitem [ref=e506]:
+                    - paragraph [ref=e507]: Set up environment, choose learning track
+                  - listitem [ref=e508]:
+                    - paragraph [ref=e509]: Complete Phase 0-1 (foundations, Python/data science basics)
+                  - listitem [ref=e510]:
+                    - paragraph [ref=e511]: First small project on GitHub
+                - paragraph [ref=e512]:
+                  - strong [ref=e513]: "Days 31-60: Core Skills"
+                - list [ref=e514]:
+                  - listitem [ref=e515]:
+                    - paragraph [ref=e516]: "AI Engineer: Embeddings, vector DBs, basic RAG → deploy RAG chatbot"
+                  - listitem [ref=e517]:
+                    - paragraph [ref=e518]: "ML Engineer: Math, neural networks, PyTorch → deploy ML pipeline with MLflow"
+                  - listitem [ref=e519]:
+                    - paragraph [ref=e520]: "Data Scientist: Statistics, causal inference → EDA + predictive model, write a blog post"
+                - paragraph [ref=e521]:
+                  - strong [ref=e522]: "Days 61-90: Advanced + Job Prep"
+                - list [ref=e523]:
+                  - listitem [ref=e524]:
+                    - paragraph [ref=e525]: Complete advanced topics for your track
+                  - listitem [ref=e526]:
+                    - paragraph [ref=e527]: Build second portfolio project
+                  - listitem [ref=e528]:
+                    - paragraph [ref=e529]: Polish portfolio, update resume/LinkedIn, start applying
+                  - listitem [ref=e530]:
+                    - paragraph [ref=e531]:
+                      - text: Practice with
+                      - link "INTERVIEW_PREP.md" [ref=e532] [cursor=pointer]:
+                        - /url: INTERVIEW_PREP.html
+              - generic [ref=e533]:
+                - heading "Portfolio (Minimum 3 Projects)" [level=2] [ref=e534]
+                - table [ref=e536]:
+                  - rowgroup [ref=e537]:
+                    - row "Project Shows Tech" [ref=e538]:
+                      - columnheader "Project" [ref=e539]:
+                        - paragraph [ref=e540]: Project
+                      - columnheader "Shows" [ref=e541]:
+                        - paragraph [ref=e542]: Shows
+                      - columnheader "Tech" [ref=e543]:
+                        - paragraph [ref=e544]: Tech
+                  - rowgroup [ref=e545]:
+                    - row "RAG Chatbot You can build AI apps LangChain, ChromaDB, OpenAI/Ollama, FastAPI" [ref=e546]:
+                      - cell "RAG Chatbot" [ref=e547]:
+                        - paragraph [ref=e548]: RAG Chatbot
+                      - cell "You can build AI apps" [ref=e549]:
+                        - paragraph [ref=e550]: You can build AI apps
+                      - cell "LangChain, ChromaDB, OpenAI/Ollama, FastAPI" [ref=e551]:
+                        - paragraph [ref=e552]: LangChain, ChromaDB, OpenAI/Ollama, FastAPI
+                    - row "Fine-tuned Model You understand training QLoRA, Hugging Face, eval metrics" [ref=e553]:
+                      - cell "Fine-tuned Model" [ref=e554]:
+                        - paragraph [ref=e555]: Fine-tuned Model
+                      - cell "You understand training" [ref=e556]:
+                        - paragraph [ref=e557]: You understand training
+                      - cell "QLoRA, Hugging Face, eval metrics" [ref=e558]:
+                        - paragraph [ref=e559]: QLoRA, Hugging Face, eval metrics
+                    - row "MLOps Pipeline You can ship to production MLflow, Docker, GitHub Actions, FastAPI" [ref=e560]:
+                      - cell "MLOps Pipeline" [ref=e561]:
+                        - paragraph [ref=e562]: MLOps Pipeline
+                      - cell "You can ship to production" [ref=e563]:
+                        - paragraph [ref=e564]: You can ship to production
+                      - cell "MLflow, Docker, GitHub Actions, FastAPI" [ref=e565]:
+                        - paragraph [ref=e566]: MLflow, Docker, GitHub Actions, FastAPI
+                - paragraph [ref=e567]:
+                  - strong [ref=e568]: What makes a good project README
+                  - text: ": What it does, architecture diagram, how to run it, key design decisions, results/metrics, what you learned."
+                - paragraph [ref=e569]:
+                  - strong [ref=e570]: Free deployment
+                  - text: ": HuggingFace Spaces, Render, Railway, Vercel, GitHub Pages"
+              - generic [ref=e571]:
+                - heading "Where to Apply" [level=2] [ref=e572]
+                - paragraph [ref=e573]:
+                  - strong [ref=e574]: AI/ML job boards
+                  - text: ":"
+                  - link "ai-jobs.net" [ref=e575] [cursor=pointer]:
+                    - /url: http://ai-jobs.net
+                  - text: ", MLOps.jobs, HuggingFace Jobs, LinkedIn, Wellfound, Levels.fyi"
+                - paragraph [ref=e576]:
+                  - strong [ref=e577]: Best for first role
+                  - text: ": AI-native startups, mid-size tech companies, consulting firms"
+                - paragraph [ref=e578]:
+                  - strong [ref=e579]: Strategy
+                  - text: ": 5-10 applications/week, customize for top choices, follow up after 1 week"
+              - generic [ref=e580]:
+                - heading "Networking" [level=2] [ref=e581]
+                - list [ref=e582]:
+                  - listitem [ref=e583]:
+                    - paragraph [ref=e584]: Contribute to open source (even docs/tests on LangChain, HF)
+                  - listitem [ref=e585]:
+                    - paragraph [ref=e586]: Write blog posts (1 per project, share on LinkedIn/X)
+                  - listitem [ref=e587]:
+                    - paragraph [ref=e588]: "Join communities: HuggingFace Discord, r/MachineLearning, r/LocalLLaMA"
+                  - listitem [ref=e589]:
+                    - paragraph [ref=e590]: Attend local AI/ML meetups
+              - generic [ref=e591]:
+                - heading "Certifications (Optional)" [level=2] [ref=e592]
+                - table [ref=e594]:
+                  - rowgroup [ref=e595]:
+                    - row "Certification Provider Value" [ref=e596]:
+                      - columnheader "Certification" [ref=e597]:
+                        - paragraph [ref=e598]: Certification
+                      - columnheader "Provider" [ref=e599]:
+                        - paragraph [ref=e600]: Provider
+                      - columnheader "Value" [ref=e601]:
+                        - paragraph [ref=e602]: Value
+                  - rowgroup [ref=e603]:
+                    - row "AWS ML Specialty AWS ($300) High" [ref=e604]:
+                      - cell "AWS ML Specialty" [ref=e605]:
+                        - paragraph [ref=e606]: AWS ML Specialty
+                      - cell "AWS ($300)" [ref=e607]:
+                        - paragraph [ref=e608]: AWS ($300)
+                      - cell "High" [ref=e609]:
+                        - paragraph [ref=e610]: High
+                    - row "Google Professional ML Engineer GCP ($200) High" [ref=e611]:
+                      - cell "Google Professional ML Engineer" [ref=e612]:
+                        - paragraph [ref=e613]: Google Professional ML Engineer
+                      - cell "GCP ($200)" [ref=e614]:
+                        - paragraph [ref=e615]: GCP ($200)
+                      - cell "High" [ref=e616]:
+                        - paragraph [ref=e617]: High
+                    - row "HuggingFace NLP Course HF (Free) Medium" [ref=e618]:
+                      - cell "HuggingFace NLP Course" [ref=e619]:
+                        - paragraph [ref=e620]: HuggingFace NLP Course
+                      - cell "HF (Free)" [ref=e621]:
+                        - paragraph [ref=e622]: HF (Free)
+                      - cell "Medium" [ref=e623]:
+                        - paragraph [ref=e624]: Medium
+                - paragraph [ref=e625]: Skip generic “AI fundamentals” certificates from non-technical platforms.
+              - generic [ref=e626]:
+                - heading "Related Files" [level=2] [ref=e627]
+                - table [ref=e629]:
+                  - rowgroup [ref=e630]:
+                    - row "Need File" [ref=e631]:
+                      - columnheader "Need" [ref=e632]:
+                        - paragraph [ref=e633]: Need
+                      - columnheader "File" [ref=e634]:
+                        - paragraph [ref=e635]: File
+                  - rowgroup [ref=e636]:
+                    - row "Learning plan MASTER_STUDY_GUIDE.md" [ref=e637]:
+                      - cell "Learning plan" [ref=e638]:
+                        - paragraph [ref=e639]: Learning plan
+                      - cell "MASTER_STUDY_GUIDE.md" [ref=e640]:
+                        - paragraph [ref=e641]:
+                          - link "MASTER_STUDY_GUIDE.md" [ref=e642] [cursor=pointer]:
+                            - /url: MASTER_STUDY_GUIDE.html
+                    - row "Interview prep INTERVIEW_PREP.md" [ref=e643]:
+                      - cell "Interview prep" [ref=e644]:
+                        - paragraph [ref=e645]: Interview prep
+                      - cell "INTERVIEW_PREP.md" [ref=e646]:
+                        - paragraph [ref=e647]:
+                          - link "INTERVIEW_PREP.md" [ref=e648] [cursor=pointer]:
+                            - /url: INTERVIEW_PREP.html
+                    - row "Tool comparisons COMPARISON_MATRICES.md" [ref=e649]:
+                      - cell "Tool comparisons" [ref=e650]:
+                        - paragraph [ref=e651]: Tool comparisons
+                      - cell "COMPARISON_MATRICES.md" [ref=e652]:
+                        - paragraph [ref=e653]:
+                          - link "COMPARISON_MATRICES.md" [ref=e654] [cursor=pointer]:
+                            - /url: COMPARISON_MATRICES.html
+                    - row "Progress tracking checklist.md" [ref=e655]:
+                      - cell "Progress tracking" [ref=e656]:
+                        - paragraph [ref=e657]: Progress tracking
+                      - cell "checklist.md" [ref=e658]:
+                        - paragraph [ref=e659]:
+                          - link "checklist.md" [ref=e660] [cursor=pointer]:
+                            - /url: checklist.html
+                - paragraph [ref=e661]:
+                  - emphasis [ref=e662]: "Last Updated: April 2026"
+        - contentinfo [ref=e663]:
+          - generic [ref=e664]:
+            - link "Next Interview Preparation" [ref=e665] [cursor=pointer]:
+              - /url: INTERVIEW_PREP.html
+              - generic [ref=e666]:
+                - generic [ref=e668]: Next
+                - generic [ref=e669]: Interview Preparation
+              - img [ref=e670]
+            - link "Previous Master Study Guide" [ref=e672] [cursor=pointer]:
+              - /url: MASTER_STUDY_GUIDE.html
+              - img [ref=e673]
+              - generic [ref=e675]:
+                - generic [ref=e677]: Previous
+                - generic [ref=e678]: Master Study Guide
+          - generic [ref=e679]:
+            - generic [ref=e680]:
+              - generic [ref=e681]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e682] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e683] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e684] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e687] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e688]
+      - complementary [ref=e690]:
+        - separator "Resize right sidebar" [ref=e691]:
+          - button "Collapse right sidebar" [ref=e692] [cursor=pointer]: ›
+        - generic [ref=e693]:
+          - generic [ref=e694]: On this page
+          - list [ref=e697]:
+            - listitem [ref=e698]:
+              - list [ref=e699]:
+                - listitem [ref=e700]:
+                  - link "Target Roles" [ref=e701] [cursor=pointer]:
+                    - /url: "#target-roles"
+                  - list [ref=e702]:
+                    - listitem [ref=e703]:
+                      - link "AI Engineer / LLM Engineer ( 280k)" [ref=e704] [cursor=pointer]:
+                        - /url: "#ai-engineer-llm-engineer-140k-280k"
+                        - text: AI Engineer / LLM Engineer (
+                        - generic [ref=e706]:
+                          - generic [ref=e707]:
+                            - generic [ref=e708]:
+                              - generic [ref=e709]: "1"
+                              - generic [ref=e710]: "4"
+                              - generic [ref=e711]: "0"
+                            - generic [ref=e713]: k
+                            - generic [ref=e715]: −
+                          - math [ref=e717]:
+                            - generic [ref=e718]: "140"
+                            - generic [ref=e719]: k
+                            - generic [ref=e720]: −
+                        - text: 280k)
+                    - listitem [ref=e721]:
+                      - link "ML Engineer ( 250k)" [ref=e722] [cursor=pointer]:
+                        - /url: "#ml-engineer-130k-250k"
+                        - text: ML Engineer (
+                        - generic [ref=e724]:
+                          - generic [ref=e725]:
+                            - generic [ref=e726]:
+                              - generic [ref=e727]: "1"
+                              - generic [ref=e728]: "3"
+                              - generic [ref=e729]: "0"
+                            - generic [ref=e731]: k
+                            - generic [ref=e733]: −
+                          - math [ref=e735]:
+                            - generic [ref=e736]: "130"
+                            - generic [ref=e737]: k
+                            - generic [ref=e738]: −
+                        - text: 250k)
+                    - listitem [ref=e739]:
+                      - link "Data Scientist ( 200k)" [ref=e740] [cursor=pointer]:
+                        - /url: "#data-scientist-110k-200k"
+                        - text: Data Scientist (
+                        - generic [ref=e742]:
+                          - generic [ref=e743]:
+                            - generic [ref=e744]:
+                              - generic [ref=e745]: "1"
+                              - generic [ref=e746]: "1"
+                              - generic [ref=e747]: "0"
+                            - generic [ref=e749]: k
+                            - generic [ref=e751]: −
+                          - math [ref=e753]:
+                            - generic [ref=e754]: "110"
+                            - generic [ref=e755]: k
+                            - generic [ref=e756]: −
+                        - text: 200k)
+                    - listitem [ref=e757]:
+                      - link "MLOps / AI Platform Engineer ( 230k)" [ref=e758] [cursor=pointer]:
+                        - /url: "#mlops-ai-platform-engineer-130k-230k"
+                        - text: MLOps / AI Platform Engineer (
+                        - generic [ref=e760]:
+                          - generic [ref=e761]:
+                            - generic [ref=e762]:
+                              - generic [ref=e763]: "1"
+                              - generic [ref=e764]: "3"
+                              - generic [ref=e765]: "0"
+                            - generic [ref=e767]: k
+                            - generic [ref=e769]: −
+                          - math [ref=e771]:
+                            - generic [ref=e772]: "130"
+                            - generic [ref=e773]: k
+                            - generic [ref=e774]: −
+                        - text: 230k)
+                - listitem [ref=e775]:
+                  - link "Skills Matrix" [ref=e776] [cursor=pointer]:
+                    - /url: "#skills-matrix"
+                - listitem [ref=e777]:
+                  - link "90-Day Plan" [ref=e778] [cursor=pointer]:
+                    - /url: "#day-plan"
+                - listitem [ref=e779]:
+                  - link "Portfolio (Minimum 3 Projects)" [ref=e780] [cursor=pointer]:
+                    - /url: "#portfolio-minimum-3-projects"
+                - listitem [ref=e781]:
+                  - link "Where to Apply" [ref=e782] [cursor=pointer]:
+                    - /url: "#where-to-apply"
+                - listitem [ref=e783]:
+                  - link "Networking" [ref=e784] [cursor=pointer]:
+                    - /url: "#networking"
+                - listitem [ref=e785]:
+                  - link "Certifications (Optional)" [ref=e786] [cursor=pointer]:
+                    - /url: "#certifications-optional"
+                - listitem [ref=e787]:
+                  - link "Related Files" [ref=e788] [cursor=pointer]:
+                    - /url: "#related-files"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

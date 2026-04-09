@@ -1,0 +1,2072 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../curriculum/00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../curriculum/01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../curriculum/02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../curriculum/03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../curriculum/04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../curriculum/05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../curriculum/06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../curriculum/07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../curriculum/08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: ../curriculum/09-mlops/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - 'link "Phase 10: Specializations" [ref=e82] [cursor=pointer]':
+                - /url: ../curriculum/10-specializations/README.html
+              - img [ref=e85] [cursor=pointer]
+          - heading "Advanced" [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e90] [cursor=pointer]':
+                - /url: ../curriculum/11-prompt-engineering/README.html
+              - img [ref=e93] [cursor=pointer]
+            - listitem [ref=e95]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e96] [cursor=pointer]':
+                - /url: ../curriculum/12-llm-finetuning/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - 'link "Phase 13: Multimodal AI" [ref=e102] [cursor=pointer]':
+                - /url: ../curriculum/13-multimodal/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - 'link "Phase 14: Local LLMs" [ref=e108] [cursor=pointer]':
+                - /url: ../curriculum/14-local-llms/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - 'link "Phase 15: AI Agents" [ref=e114] [cursor=pointer]':
+                - /url: ../curriculum/15-ai-agents/README.html
+              - img [ref=e117] [cursor=pointer]
+          - heading "Supplementary" [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - 'link "Phase 16: Model Evaluation" [ref=e122] [cursor=pointer]':
+                - /url: ../curriculum/16-model-evaluation/README.html
+              - img [ref=e125] [cursor=pointer]
+            - listitem [ref=e127]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e128] [cursor=pointer]':
+                - /url: ../curriculum/17-debugging/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e134] [cursor=pointer]':
+                - /url: ../curriculum/18-low-code/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e140] [cursor=pointer]':
+                - /url: ../curriculum/19-ai-safety/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e146] [cursor=pointer]':
+                - /url: ../curriculum/20-streaming/README.html
+              - img [ref=e149] [cursor=pointer]
+          - heading "Reference" [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - 'link "Phase 21: Quizzes" [ref=e154] [cursor=pointer]':
+                - /url: ../curriculum/21-quizzes/README.html
+              - img [ref=e157] [cursor=pointer]
+            - listitem [ref=e159]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e160] [cursor=pointer]':
+                - /url: ../curriculum/22-references/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e166] [cursor=pointer]':
+                - /url: ../curriculum/23-glossary/README.html
+              - img [ref=e169] [cursor=pointer]
+          - heading "Resources" [ref=e171]
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - link "Master Study Guide" [ref=e174] [cursor=pointer]:
+                - /url: MASTER_STUDY_GUIDE.html
+            - listitem [ref=e175]:
+              - link "Career Roadmap" [ref=e176] [cursor=pointer]:
+                - /url: CAREER_ROADMAP.html
+            - listitem [ref=e177]:
+              - link "Interview Preparation" [ref=e178] [cursor=pointer]:
+                - /url: INTERVIEW_PREP.html
+            - listitem [ref=e179]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e180] [cursor=pointer]:
+                - /url: COMPARISON_MATRICES.html
+            - listitem [ref=e181]:
+              - link "Setup Guide - Zero to AI" [ref=e182] [cursor=pointer]:
+                - /url: setup.html
+            - listitem [ref=e183]:
+              - link "AI/ML Learning Checklist ✅" [ref=e184] [cursor=pointer]:
+                - /url: checklist.html
+          - heading "Research" [ref=e185]
+          - list [ref=e186]:
+            - listitem [ref=e187]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e188] [cursor=pointer]':
+                - /url: ../curriculum/24-advanced-dl/README.html
+              - img [ref=e191] [cursor=pointer]
+            - listitem [ref=e193]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e194] [cursor=pointer]':
+                - /url: ../curriculum/25-rl/README.html
+              - img [ref=e197] [cursor=pointer]
+            - listitem [ref=e199]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e200] [cursor=pointer]':
+                - /url: ../curriculum/26-time-series/README.html
+              - img [ref=e203] [cursor=pointer]
+            - listitem [ref=e205]:
+              - 'link "Phase 27: Causal Inference" [ref=e206] [cursor=pointer]':
+                - /url: ../curriculum/27-causal-inference/README.html
+              - img [ref=e209] [cursor=pointer]
+          - heading "Production" [ref=e211]
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - 'link "Phase 28: Practical Data Science" [ref=e214] [cursor=pointer]':
+                - /url: ../curriculum/28-practical-ds/README.html
+              - img [ref=e217] [cursor=pointer]
+            - listitem [ref=e219]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e220] [cursor=pointer]':
+                - /url: ../curriculum/29-ai-hardware/README.html
+              - img [ref=e223] [cursor=pointer]
+            - listitem [ref=e225]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e226] [cursor=pointer]':
+                - /url: ../curriculum/30-inference-opt/README.html
+              - img [ref=e229] [cursor=pointer]
+          - heading "About" [ref=e231]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - link "Contributing to Zero to AI" [ref=e234] [cursor=pointer]:
+                - /url: CONTRIBUTING.html
+            - listitem [ref=e235]:
+              - link "Changelog" [ref=e236] [cursor=pointer]:
+                - /url: CHANGELOG.html
+            - listitem [ref=e237]:
+              - link "Contributor Covenant Code of Conduct" [ref=e238] [cursor=pointer]:
+                - /url: CODE_OF_CONDUCT.html
+            - listitem [ref=e239]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e240] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e241]:
+              - link "Workspace Learning Review" [ref=e242] [cursor=pointer]:
+                - /url: WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e243]:
+              - link "License" [ref=e244] [cursor=pointer]:
+                - /url: LICENSE.html
+            - listitem [ref=e245]:
+              - link "Support" [ref=e246] [cursor=pointer]:
+                - /url: SUPPORT.html
+      - separator "Resize left sidebar" [ref=e247]:
+        - button "Collapse left sidebar" [ref=e248] [cursor=pointer]: ‹
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - link "View this page" [ref=e254] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/generated/REFERENCES.md?plain=true
+              - img [ref=e255]
+              - generic [ref=e257]: View this page
+            - link "Edit this page" [ref=e259] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/generated/REFERENCES.md
+              - img [ref=e260]
+              - generic [ref=e262]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e264] [cursor=pointer]:
+              - img [ref=e265]
+            - img [ref=e269] [cursor=pointer]
+          - main [ref=e271]:
+            - generic [ref=e272]:
+              - heading "Complete Reference Materials — Videos, Repos, Courses, Papers" [level=1] [ref=e273]
+              - blockquote [ref=e274]:
+                - paragraph [ref=e276]: Curated resources aligned to each learning phase. Free resources are marked with (FREE).
+              - generic [ref=e277]:
+                - heading "How to Use This File" [level=2] [ref=e278]
+                - list [ref=e279]:
+                  - listitem [ref=e280]:
+                    - paragraph [ref=e281]: Don’t try to consume all of these — use them as a menu
+                  - listitem [ref=e282]:
+                    - paragraph [ref=e283]: For each phase, pick 1-2 video resources and 1-2 repos to study
+                  - listitem [ref=e284]:
+                    - paragraph [ref=e285]: “Must-watch” items are marked with ⭐
+              - generic [ref=e286]:
+                - heading "Video Courses & YouTube Channels" [level=2] [ref=e287]
+                - generic [ref=e288]:
+                  - heading "Mathematics & Foundations" [level=3] [ref=e289]
+                  - table [ref=e291]:
+                    - rowgroup [ref=e292]:
+                      - row "Resource Description Link" [ref=e293]:
+                        - columnheader "Resource" [ref=e294]:
+                          - paragraph [ref=e295]: Resource
+                        - columnheader "Description" [ref=e296]:
+                          - paragraph [ref=e297]: Description
+                        - columnheader "Link" [ref=e298]:
+                          - paragraph [ref=e299]: Link
+                    - rowgroup [ref=e300]:
+                      - 'row "3Blue1Brown: Essence of Linear Algebra Best visual explanation of linear algebra https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" [ref=e301]':
+                        - 'cell "3Blue1Brown: Essence of Linear Algebra" [ref=e302]':
+                          - paragraph [ref=e303]:
+                            - strong [ref=e304]: "3Blue1Brown: Essence of Linear Algebra"
+                        - cell "Best visual explanation of linear algebra" [ref=e305]:
+                          - paragraph [ref=e306]: Best visual explanation of linear algebra
+                        - cell "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" [ref=e307]:
+                          - paragraph [ref=e308]:
+                            - link "https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab" [ref=e309] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab
+                      - 'row "3Blue1Brown: Essence of Calculus Intuitive calculus from scratch https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" [ref=e310]':
+                        - 'cell "3Blue1Brown: Essence of Calculus" [ref=e311]':
+                          - paragraph [ref=e312]:
+                            - strong [ref=e313]: "3Blue1Brown: Essence of Calculus"
+                        - cell "Intuitive calculus from scratch" [ref=e314]:
+                          - paragraph [ref=e315]: Intuitive calculus from scratch
+                        - cell "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" [ref=e316]:
+                          - paragraph [ref=e317]:
+                            - link "https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr" [ref=e318] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr
+                      - 'row "3Blue1Brown: Neural Networks 4-part series, best visual intro to neural networks https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" [ref=e319]':
+                        - 'cell "3Blue1Brown: Neural Networks" [ref=e320]':
+                          - paragraph [ref=e321]:
+                            - strong [ref=e322]: "3Blue1Brown: Neural Networks"
+                        - cell "4-part series, best visual intro to neural networks" [ref=e323]:
+                          - paragraph [ref=e324]: 4-part series, best visual intro to neural networks
+                        - cell "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" [ref=e325]:
+                          - paragraph [ref=e326]:
+                            - link "https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" [ref=e327] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi
+                      - row "StatQuest with Josh Starmer Every ML concept explained simply with cartoons https://www.youtube.com/@statquest" [ref=e328]:
+                        - cell "StatQuest with Josh Starmer" [ref=e329]:
+                          - paragraph [ref=e330]:
+                            - strong [ref=e331]: StatQuest with Josh Starmer
+                        - cell "Every ML concept explained simply with cartoons" [ref=e332]:
+                          - paragraph [ref=e333]: Every ML concept explained simply with cartoons
+                        - cell "https://www.youtube.com/@statquest" [ref=e334]:
+                          - paragraph [ref=e335]:
+                            - link "https://www.youtube.com/@statquest" [ref=e336] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@statquest
+                      - row "MIT 18.065 (Gilbert Strang) Full MIT linear algebra course (more rigorous) https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k" [ref=e337]:
+                        - cell "MIT 18.065 (Gilbert Strang)" [ref=e338]:
+                          - paragraph [ref=e339]: MIT 18.065 (Gilbert Strang)
+                        - cell "Full MIT linear algebra course (more rigorous)" [ref=e340]:
+                          - paragraph [ref=e341]: Full MIT linear algebra course (more rigorous)
+                        - cell "https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k" [ref=e342]:
+                          - paragraph [ref=e343]:
+                            - link "https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k" [ref=e344] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k
+                      - row "Stanford CS229 (Andrew Ng) Classic ML course, full lectures https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU" [ref=e345]:
+                        - cell "Stanford CS229 (Andrew Ng)" [ref=e346]:
+                          - paragraph [ref=e347]: Stanford CS229 (Andrew Ng)
+                        - cell "Classic ML course, full lectures" [ref=e348]:
+                          - paragraph [ref=e349]: Classic ML course, full lectures
+                        - cell "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU" [ref=e350]:
+                          - paragraph [ref=e351]:
+                            - link "https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU" [ref=e352] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU
+                - generic [ref=e353]:
+                  - heading "Deep Learning & Neural Networks" [level=3] [ref=e354]
+                  - table [ref=e356]:
+                    - rowgroup [ref=e357]:
+                      - row "Resource Description Link" [ref=e358]:
+                        - columnheader "Resource" [ref=e359]:
+                          - paragraph [ref=e360]: Resource
+                        - columnheader "Description" [ref=e361]:
+                          - paragraph [ref=e362]: Description
+                        - columnheader "Link" [ref=e363]:
+                          - paragraph [ref=e364]: Link
+                    - rowgroup [ref=e365]:
+                      - 'row "Andrej Karpathy: Neural Networks Zero to Hero Build GPT from scratch, best hands-on series https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" [ref=e366]':
+                        - 'cell "Andrej Karpathy: Neural Networks Zero to Hero" [ref=e367]':
+                          - paragraph [ref=e368]:
+                            - strong [ref=e369]: "Andrej Karpathy: Neural Networks Zero to Hero"
+                        - cell "Build GPT from scratch, best hands-on series" [ref=e370]:
+                          - paragraph [ref=e371]: Build GPT from scratch, best hands-on series
+                        - cell "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" [ref=e372]:
+                          - paragraph [ref=e373]:
+                            - link "https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ" [ref=e374] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLAqhIrjkxbuWI23v9cThsA9GvCAUhRvKZ
+                      - 'row "Andrej Karpathy: makemore series Build character-level LM from scratch https://www.youtube.com/watch?v=PaCmpygFfXo" [ref=e375]':
+                        - 'cell "Andrej Karpathy: makemore series" [ref=e376]':
+                          - paragraph [ref=e377]:
+                            - strong [ref=e378]: "Andrej Karpathy: makemore series"
+                        - cell "Build character-level LM from scratch" [ref=e379]:
+                          - paragraph [ref=e380]: Build character-level LM from scratch
+                        - cell "https://www.youtube.com/watch?v=PaCmpygFfXo" [ref=e381]:
+                          - paragraph [ref=e382]:
+                            - link "https://www.youtube.com/watch?v=PaCmpygFfXo" [ref=e383] [cursor=pointer]:
+                              - /url: https://www.youtube.com/watch?v=PaCmpygFfXo
+                      - 'row "MIT 6.S191: Intro to Deep Learning Annual MIT deep learning course https://www.youtube.com/@AAmini" [ref=e384]':
+                        - 'cell "MIT 6.S191: Intro to Deep Learning" [ref=e385]':
+                          - paragraph [ref=e386]: "MIT 6.S191: Intro to Deep Learning"
+                        - cell "Annual MIT deep learning course" [ref=e387]:
+                          - paragraph [ref=e388]: Annual MIT deep learning course
+                        - cell "https://www.youtube.com/@AAmini" [ref=e389]:
+                          - paragraph [ref=e390]:
+                            - link "https://www.youtube.com/@AAmini" [ref=e391] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@AAmini
+                      - row "fast.ai Practical Deep Learning Top-down approach, very practical https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU" [ref=e392]:
+                        - cell "fast.ai Practical Deep Learning" [ref=e393]:
+                          - paragraph [ref=e394]:
+                            - link "fast.ai" [ref=e395] [cursor=pointer]:
+                              - /url: http://fast.ai
+                            - text: Practical Deep Learning
+                        - cell "Top-down approach, very practical" [ref=e396]:
+                          - paragraph [ref=e397]: Top-down approach, very practical
+                        - cell "https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU" [ref=e398]:
+                          - paragraph [ref=e399]:
+                            - link "https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU" [ref=e400] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLfYUBJiXbdtSvpQjSnJJ_PmDQB_VyT5iU
+                      - 'row "Stanford CS231N: CNNs for Visual Recognition Best course on computer vision https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" [ref=e401]':
+                        - 'cell "Stanford CS231N: CNNs for Visual Recognition" [ref=e402]':
+                          - paragraph [ref=e403]: "Stanford CS231N: CNNs for Visual Recognition"
+                        - cell "Best course on computer vision" [ref=e404]:
+                          - paragraph [ref=e405]: Best course on computer vision
+                        - cell "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" [ref=e406]:
+                          - paragraph [ref=e407]:
+                            - link "https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv" [ref=e408] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv
+                      - 'row "Stanford CS224N: NLP with Deep Learning Best course on NLP/transformers https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ" [ref=e409]':
+                        - 'cell "Stanford CS224N: NLP with Deep Learning" [ref=e410]':
+                          - paragraph [ref=e411]: "Stanford CS224N: NLP with Deep Learning"
+                        - cell "Best course on NLP/transformers" [ref=e412]:
+                          - paragraph [ref=e413]: Best course on NLP/transformers
+                        - cell "https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ" [ref=e414]:
+                          - paragraph [ref=e415]:
+                            - link "https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ" [ref=e416] [cursor=pointer]:
+                              - /url: https://www.youtube.com/playlist?list=PLoROMvodv4rOSH4v6133s9LFPRHjEmbmJ
+                - generic [ref=e417]:
+                  - heading "LLMs, Transformers, and Generative AI" [level=3] [ref=e418]
+                  - table [ref=e420]:
+                    - rowgroup [ref=e421]:
+                      - row "Resource Description Link" [ref=e422]:
+                        - columnheader "Resource" [ref=e423]:
+                          - paragraph [ref=e424]: Resource
+                        - columnheader "Description" [ref=e425]:
+                          - paragraph [ref=e426]: Description
+                        - columnheader "Link" [ref=e427]:
+                          - paragraph [ref=e428]: Link
+                    - rowgroup [ref=e429]:
+                      - 'row "Andrej Karpathy: Let’s build GPT Build GPT-2 from scratch in 2 hours https://www.youtube.com/watch?v=kCc8FmEb1nY" [ref=e430]':
+                        - 'cell "Andrej Karpathy: Let’s build GPT" [ref=e431]':
+                          - paragraph [ref=e432]:
+                            - strong [ref=e433]: "Andrej Karpathy: Let’s build GPT"
+                        - cell "Build GPT-2 from scratch in 2 hours" [ref=e434]:
+                          - paragraph [ref=e435]: Build GPT-2 from scratch in 2 hours
+                        - cell "https://www.youtube.com/watch?v=kCc8FmEb1nY" [ref=e436]:
+                          - paragraph [ref=e437]:
+                            - link "https://www.youtube.com/watch?v=kCc8FmEb1nY" [ref=e438] [cursor=pointer]:
+                              - /url: https://www.youtube.com/watch?v=kCc8FmEb1nY
+                      - 'row "Andrej Karpathy: Let’s build the GPT Tokenizer Hands-on tokenization https://www.youtube.com/watch?v=zduSFxRajkE" [ref=e439]':
+                        - 'cell "Andrej Karpathy: Let’s build the GPT Tokenizer" [ref=e440]':
+                          - paragraph [ref=e441]:
+                            - strong [ref=e442]: "Andrej Karpathy: Let’s build the GPT Tokenizer"
+                        - cell "Hands-on tokenization" [ref=e443]:
+                          - paragraph [ref=e444]: Hands-on tokenization
+                        - cell "https://www.youtube.com/watch?v=zduSFxRajkE" [ref=e445]:
+                          - paragraph [ref=e446]:
+                            - link "https://www.youtube.com/watch?v=zduSFxRajkE" [ref=e447] [cursor=pointer]:
+                              - /url: https://www.youtube.com/watch?v=zduSFxRajkE
+                      - 'row "Yannic Kilcher: Paper Explanations Deep research paper walkthroughs https://www.youtube.com/@YannicKilcher" [ref=e448]':
+                        - 'cell "Yannic Kilcher: Paper Explanations" [ref=e449]':
+                          - paragraph [ref=e450]: "Yannic Kilcher: Paper Explanations"
+                        - cell "Deep research paper walkthroughs" [ref=e451]:
+                          - paragraph [ref=e452]: Deep research paper walkthroughs
+                        - cell "https://www.youtube.com/@YannicKilcher" [ref=e453]:
+                          - paragraph [ref=e454]:
+                            - link "https://www.youtube.com/@YannicKilcher" [ref=e455] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@YannicKilcher
+                      - row "The AI Epiphany Clear explanations of recent AI papers https://www.youtube.com/@TheAiEpiphany" [ref=e456]:
+                        - cell "The AI Epiphany" [ref=e457]:
+                          - paragraph [ref=e458]: The AI Epiphany
+                        - cell "Clear explanations of recent AI papers" [ref=e459]:
+                          - paragraph [ref=e460]: Clear explanations of recent AI papers
+                        - cell "https://www.youtube.com/@TheAiEpiphany" [ref=e461]:
+                          - paragraph [ref=e462]:
+                            - link "https://www.youtube.com/@TheAiEpiphany" [ref=e463] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@TheAiEpiphany
+                      - 'row "Umar Jamil: Transformers from scratch Code implementations of major transformer papers https://www.youtube.com/@umarjamilai" [ref=e464]':
+                        - 'cell "Umar Jamil: Transformers from scratch" [ref=e465]':
+                          - paragraph [ref=e466]: "Umar Jamil: Transformers from scratch"
+                        - cell "Code implementations of major transformer papers" [ref=e467]:
+                          - paragraph [ref=e468]: Code implementations of major transformer papers
+                        - cell "https://www.youtube.com/@umarjamilai" [ref=e469]:
+                          - paragraph [ref=e470]:
+                            - link "https://www.youtube.com/@umarjamilai" [ref=e471] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@umarjamilai
+                      - row "Two Minute Papers 3-5 min summaries of top AI research https://www.youtube.com/@TwoMinutePapers" [ref=e472]:
+                        - cell "Two Minute Papers" [ref=e473]:
+                          - paragraph [ref=e474]: Two Minute Papers
+                        - cell "3-5 min summaries of top AI research" [ref=e475]:
+                          - paragraph [ref=e476]: 3-5 min summaries of top AI research
+                        - cell "https://www.youtube.com/@TwoMinutePapers" [ref=e477]:
+                          - paragraph [ref=e478]:
+                            - link "https://www.youtube.com/@TwoMinutePapers" [ref=e479] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@TwoMinutePapers
+                - generic [ref=e480]:
+                  - heading "RAG, Agents, and Applied LLMs" [level=3] [ref=e481]
+                  - table [ref=e483]:
+                    - rowgroup [ref=e484]:
+                      - row "Resource Description Link" [ref=e485]:
+                        - columnheader "Resource" [ref=e486]:
+                          - paragraph [ref=e487]: Resource
+                        - columnheader "Description" [ref=e488]:
+                          - paragraph [ref=e489]: Description
+                        - columnheader "Link" [ref=e490]:
+                          - paragraph [ref=e491]: Link
+                    - rowgroup [ref=e492]:
+                      - row "Sam Witteveen (Red Dragon AI) RAG, LangChain, agents hands-on https://www.youtube.com/@samwitteveenai" [ref=e493]:
+                        - cell "Sam Witteveen (Red Dragon AI)" [ref=e494]:
+                          - paragraph [ref=e495]:
+                            - strong [ref=e496]: Sam Witteveen (Red Dragon AI)
+                        - cell "RAG, LangChain, agents hands-on" [ref=e497]:
+                          - paragraph [ref=e498]: RAG, LangChain, agents hands-on
+                        - cell "https://www.youtube.com/@samwitteveenai" [ref=e499]:
+                          - paragraph [ref=e500]:
+                            - link "https://www.youtube.com/@samwitteveenai" [ref=e501] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@samwitteveenai
+                      - row "James Briggs LangChain, RAG, Pinecone tutorials https://www.youtube.com/@jamesbriggs" [ref=e502]:
+                        - cell "James Briggs" [ref=e503]:
+                          - paragraph [ref=e504]:
+                            - strong [ref=e505]: James Briggs
+                        - cell "LangChain, RAG, Pinecone tutorials" [ref=e506]:
+                          - paragraph [ref=e507]: LangChain, RAG, Pinecone tutorials
+                        - cell "https://www.youtube.com/@jamesbriggs" [ref=e508]:
+                          - paragraph [ref=e509]:
+                            - link "https://www.youtube.com/@jamesbriggs" [ref=e510] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@jamesbriggs
+                      - row "Data Independent LangChain + OpenAI practical tutorials https://www.youtube.com/@DataIndependent" [ref=e511]:
+                        - cell "Data Independent" [ref=e512]:
+                          - paragraph [ref=e513]: Data Independent
+                        - cell "LangChain + OpenAI practical tutorials" [ref=e514]:
+                          - paragraph [ref=e515]: LangChain + OpenAI practical tutorials
+                        - cell "https://www.youtube.com/@DataIndependent" [ref=e516]:
+                          - paragraph [ref=e517]:
+                            - link "https://www.youtube.com/@DataIndependent" [ref=e518] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@DataIndependent
+                      - row "LangChain Official Official LangChain tutorials and walkthroughs https://www.youtube.com/@LangChain" [ref=e519]:
+                        - cell "LangChain Official" [ref=e520]:
+                          - paragraph [ref=e521]: LangChain Official
+                        - cell "Official LangChain tutorials and walkthroughs" [ref=e522]:
+                          - paragraph [ref=e523]: Official LangChain tutorials and walkthroughs
+                        - cell "https://www.youtube.com/@LangChain" [ref=e524]:
+                          - paragraph [ref=e525]:
+                            - link "https://www.youtube.com/@LangChain" [ref=e526] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@LangChain
+                      - row "Matt Williams (Ollama) Local LLMs with Ollama https://www.youtube.com/@technovangelist" [ref=e527]:
+                        - cell "Matt Williams (Ollama)" [ref=e528]:
+                          - paragraph [ref=e529]: Matt Williams (Ollama)
+                        - cell "Local LLMs with Ollama" [ref=e530]:
+                          - paragraph [ref=e531]: Local LLMs with Ollama
+                        - cell "https://www.youtube.com/@technovangelist" [ref=e532]:
+                          - paragraph [ref=e533]:
+                            - link "https://www.youtube.com/@technovangelist" [ref=e534] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@technovangelist
+                - generic [ref=e535]:
+                  - heading "Fine-tuning and MLOps" [level=3] [ref=e536]
+                  - table [ref=e538]:
+                    - rowgroup [ref=e539]:
+                      - row "Resource Description Link" [ref=e540]:
+                        - columnheader "Resource" [ref=e541]:
+                          - paragraph [ref=e542]: Resource
+                        - columnheader "Description" [ref=e543]:
+                          - paragraph [ref=e544]: Description
+                        - columnheader "Link" [ref=e545]:
+                          - paragraph [ref=e546]: Link
+                    - rowgroup [ref=e547]:
+                      - row "Trelis Research LLM fine-tuning, quantization, deployment https://www.youtube.com/@TrelisResearch" [ref=e548]:
+                        - cell "Trelis Research" [ref=e549]:
+                          - paragraph [ref=e550]:
+                            - strong [ref=e551]: Trelis Research
+                        - cell "LLM fine-tuning, quantization, deployment" [ref=e552]:
+                          - paragraph [ref=e553]: LLM fine-tuning, quantization, deployment
+                        - cell "https://www.youtube.com/@TrelisResearch" [ref=e554]:
+                          - paragraph [ref=e555]:
+                            - link "https://www.youtube.com/@TrelisResearch" [ref=e556] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@TrelisResearch
+                      - row "Weights & Biases (W&B) MLOps, experiment tracking tutorials https://www.youtube.com/@WeightsBiases" [ref=e557]:
+                        - cell "Weights & Biases (W&B)" [ref=e558]:
+                          - paragraph [ref=e559]: Weights & Biases (W&B)
+                        - cell "MLOps, experiment tracking tutorials" [ref=e560]:
+                          - paragraph [ref=e561]: MLOps, experiment tracking tutorials
+                        - cell "https://www.youtube.com/@WeightsBiases" [ref=e562]:
+                          - paragraph [ref=e563]:
+                            - link "https://www.youtube.com/@WeightsBiases" [ref=e564] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@WeightsBiases
+                      - row "Made With ML Full MLOps course (free) https://www.youtube.com/@madewithml" [ref=e565]:
+                        - cell "Made With ML" [ref=e566]:
+                          - paragraph [ref=e567]: Made With ML
+                        - cell "Full MLOps course (free)" [ref=e568]:
+                          - paragraph [ref=e569]: Full MLOps course (free)
+                        - cell "https://www.youtube.com/@madewithml" [ref=e570]:
+                          - paragraph [ref=e571]:
+                            - link "https://www.youtube.com/@madewithml" [ref=e572] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@madewithml
+                      - row "Patrick Loeber PyTorch tutorials from scratch https://www.youtube.com/@patloeber" [ref=e573]:
+                        - cell "Patrick Loeber" [ref=e574]:
+                          - paragraph [ref=e575]: Patrick Loeber
+                        - cell "PyTorch tutorials from scratch" [ref=e576]:
+                          - paragraph [ref=e577]: PyTorch tutorials from scratch
+                        - cell "https://www.youtube.com/@patloeber" [ref=e578]:
+                          - paragraph [ref=e579]:
+                            - link "https://www.youtube.com/@patloeber" [ref=e580] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@patloeber
+                      - row "Sentdex Python, ML, reinforcement learning https://www.youtube.com/@sentdex" [ref=e581]:
+                        - cell "Sentdex" [ref=e582]:
+                          - paragraph [ref=e583]: Sentdex
+                        - cell "Python, ML, reinforcement learning" [ref=e584]:
+                          - paragraph [ref=e585]: Python, ML, reinforcement learning
+                        - cell "https://www.youtube.com/@sentdex" [ref=e586]:
+                          - paragraph [ref=e587]:
+                            - link "https://www.youtube.com/@sentdex" [ref=e588] [cursor=pointer]:
+                              - /url: https://www.youtube.com/@sentdex
+              - generic [ref=e589]:
+                - heading "Free Online Courses" [level=2] [ref=e590]
+                - generic [ref=e591]:
+                  - heading "Must-Complete (Curated for Job Readiness)" [level=3] [ref=e592]
+                  - table [ref=e594]:
+                    - rowgroup [ref=e595]:
+                      - row "Course Platform Duration Cost" [ref=e596]:
+                        - columnheader "Course" [ref=e597]:
+                          - paragraph [ref=e598]: Course
+                        - columnheader "Platform" [ref=e599]:
+                          - paragraph [ref=e600]: Platform
+                        - columnheader "Duration" [ref=e601]:
+                          - paragraph [ref=e602]: Duration
+                        - columnheader "Cost" [ref=e603]:
+                          - paragraph [ref=e604]: Cost
+                    - rowgroup [ref=e605]:
+                      - row "Hugging Face NLP Course HuggingFace 4-6 weeks FREE" [ref=e606]:
+                        - cell "Hugging Face NLP Course" [ref=e607]:
+                          - paragraph [ref=e608]:
+                            - strong [ref=e609]: Hugging Face NLP Course
+                        - cell "HuggingFace" [ref=e610]:
+                          - paragraph [ref=e611]: HuggingFace
+                        - cell "4-6 weeks" [ref=e612]:
+                          - paragraph [ref=e613]: 4-6 weeks
+                        - cell "FREE" [ref=e614]:
+                          - paragraph [ref=e615]: FREE
+                      - row "fast.ai Practical Deep Learning fast.ai 8 weeks FREE" [ref=e616]:
+                        - cell "fast.ai Practical Deep Learning" [ref=e617]:
+                          - paragraph [ref=e618]:
+                            - strong [ref=e619]:
+                              - link "fast.ai" [ref=e620] [cursor=pointer]:
+                                - /url: http://fast.ai
+                              - text: Practical Deep Learning
+                        - cell "fast.ai" [ref=e621]:
+                          - paragraph [ref=e622]:
+                            - link "fast.ai" [ref=e623] [cursor=pointer]:
+                              - /url: http://fast.ai
+                        - cell "8 weeks" [ref=e624]:
+                          - paragraph [ref=e625]: 8 weeks
+                        - cell "FREE" [ref=e626]:
+                          - paragraph [ref=e627]: FREE
+                      - 'row "DeepLearning.AI: ChatGPT Prompt Engineering Coursera 1 week FREE audit" [ref=e628]':
+                        - 'cell "DeepLearning.AI: ChatGPT Prompt Engineering" [ref=e629]':
+                          - paragraph [ref=e630]:
+                            - strong [ref=e631]:
+                              - link "DeepLearning.AI" [ref=e632] [cursor=pointer]:
+                                - /url: http://DeepLearning.AI
+                              - text: ": ChatGPT Prompt Engineering"
+                        - cell "Coursera" [ref=e633]:
+                          - paragraph [ref=e634]: Coursera
+                        - cell "1 week" [ref=e635]:
+                          - paragraph [ref=e636]: 1 week
+                        - cell "FREE audit" [ref=e637]:
+                          - paragraph [ref=e638]: FREE audit
+                      - row "Made With ML madewithml.com 6-8 weeks FREE" [ref=e639]:
+                        - cell "Made With ML" [ref=e640]:
+                          - paragraph [ref=e641]:
+                            - strong [ref=e642]: Made With ML
+                        - cell "madewithml.com" [ref=e643]:
+                          - paragraph [ref=e644]:
+                            - link "madewithml.com" [ref=e645] [cursor=pointer]:
+                              - /url: http://madewithml.com
+                        - cell "6-8 weeks" [ref=e646]:
+                          - paragraph [ref=e647]: 6-8 weeks
+                        - cell "FREE" [ref=e648]:
+                          - paragraph [ref=e649]: FREE
+                      - row "Stanford CS229 Machine Learning Stanford 12 weeks FREE" [ref=e650]:
+                        - cell "Stanford CS229 Machine Learning" [ref=e651]:
+                          - paragraph [ref=e652]: Stanford CS229 Machine Learning
+                        - cell "Stanford" [ref=e653]:
+                          - paragraph [ref=e654]: Stanford
+                        - cell "12 weeks" [ref=e655]:
+                          - paragraph [ref=e656]: 12 weeks
+                        - cell "FREE" [ref=e657]:
+                          - paragraph [ref=e658]: FREE
+                      - row "Stanford CS224N NLP with Deep Learning Stanford 10 weeks FREE" [ref=e659]:
+                        - cell "Stanford CS224N NLP with Deep Learning" [ref=e660]:
+                          - paragraph [ref=e661]: Stanford CS224N NLP with Deep Learning
+                        - cell "Stanford" [ref=e662]:
+                          - paragraph [ref=e663]: Stanford
+                        - cell "10 weeks" [ref=e664]:
+                          - paragraph [ref=e665]: 10 weeks
+                        - cell "FREE" [ref=e666]:
+                          - paragraph [ref=e667]: FREE
+                      - row "MIT OpenCourseWare 6.036 MIT 12 weeks FREE" [ref=e668]:
+                        - cell "MIT OpenCourseWare 6.036" [ref=e669]:
+                          - paragraph [ref=e670]: MIT OpenCourseWare 6.036
+                        - cell "MIT" [ref=e671]:
+                          - paragraph [ref=e672]: MIT
+                        - cell "12 weeks" [ref=e673]:
+                          - paragraph [ref=e674]: 12 weeks
+                        - cell "FREE" [ref=e675]:
+                          - paragraph [ref=e676]: FREE
+                      - row "Google Machine Learning Crash Course Google 3-4 weeks FREE" [ref=e677]:
+                        - cell "Google Machine Learning Crash Course" [ref=e678]:
+                          - paragraph [ref=e679]: Google Machine Learning Crash Course
+                        - cell "Google" [ref=e680]:
+                          - paragraph [ref=e681]: Google
+                        - cell "3-4 weeks" [ref=e682]:
+                          - paragraph [ref=e683]: 3-4 weeks
+                        - cell "FREE" [ref=e684]:
+                          - paragraph [ref=e685]: FREE
+                      - row "Microsoft AI for Beginners GitHub 24 lessons FREE" [ref=e686]:
+                        - cell "Microsoft AI for Beginners" [ref=e687]:
+                          - paragraph [ref=e688]: Microsoft AI for Beginners
+                        - cell "GitHub" [ref=e689]:
+                          - paragraph [ref=e690]: GitHub
+                        - cell "24 lessons" [ref=e691]:
+                          - paragraph [ref=e692]: 24 lessons
+                        - cell "FREE" [ref=e693]:
+                          - paragraph [ref=e694]: FREE
+                      - row "Microsoft ML for Beginners GitHub 26 lessons FREE" [ref=e695]:
+                        - cell "Microsoft ML for Beginners" [ref=e696]:
+                          - paragraph [ref=e697]: Microsoft ML for Beginners
+                        - cell "GitHub" [ref=e698]:
+                          - paragraph [ref=e699]: GitHub
+                        - cell "26 lessons" [ref=e700]:
+                          - paragraph [ref=e701]: 26 lessons
+                        - cell "FREE" [ref=e702]:
+                          - paragraph [ref=e703]: FREE
+                      - row "Microsoft Generative AI for Beginners GitHub 18 lessons FREE" [ref=e704]:
+                        - cell "Microsoft Generative AI for Beginners" [ref=e705]:
+                          - paragraph [ref=e706]: Microsoft Generative AI for Beginners
+                        - cell "GitHub" [ref=e707]:
+                          - paragraph [ref=e708]: GitHub
+                        - cell "18 lessons" [ref=e709]:
+                          - paragraph [ref=e710]: 18 lessons
+                        - cell "FREE" [ref=e711]:
+                          - paragraph [ref=e712]: FREE
+                      - row "Microsoft AI Agents for Beginners GitHub Self-paced FREE" [ref=e713]:
+                        - cell "Microsoft AI Agents for Beginners" [ref=e714]:
+                          - paragraph [ref=e715]: Microsoft AI Agents for Beginners
+                        - cell "GitHub" [ref=e716]:
+                          - paragraph [ref=e717]: GitHub
+                        - cell "Self-paced" [ref=e718]:
+                          - paragraph [ref=e719]: Self-paced
+                        - cell "FREE" [ref=e720]:
+                          - paragraph [ref=e721]: FREE
+                - generic [ref=e722]:
+                  - heading "Paid (Worth the Investment)" [level=3] [ref=e723]
+                  - table [ref=e725]:
+                    - rowgroup [ref=e726]:
+                      - row "Course Platform Duration Cost" [ref=e727]:
+                        - columnheader "Course" [ref=e728]:
+                          - paragraph [ref=e729]: Course
+                        - columnheader "Platform" [ref=e730]:
+                          - paragraph [ref=e731]: Platform
+                        - columnheader "Duration" [ref=e732]:
+                          - paragraph [ref=e733]: Duration
+                        - columnheader "Cost" [ref=e734]:
+                          - paragraph [ref=e735]: Cost
+                    - rowgroup [ref=e736]:
+                      - row "Deep Learning Specialization (Andrew Ng) Coursera 3-4 months $49/mo" [ref=e737]:
+                        - cell "Deep Learning Specialization (Andrew Ng)" [ref=e738]:
+                          - paragraph [ref=e739]:
+                            - strong [ref=e740]: Deep Learning Specialization (Andrew Ng)
+                        - cell "Coursera" [ref=e741]:
+                          - paragraph [ref=e742]: Coursera
+                        - cell "3-4 months" [ref=e743]:
+                          - paragraph [ref=e744]: 3-4 months
+                        - cell "$49/mo" [ref=e745]:
+                          - paragraph [ref=e746]: $49/mo
+                      - row "LLM Fine-tuning with Hugging Face Coursera/DL.AI 2 weeks $49/mo" [ref=e747]:
+                        - cell "LLM Fine-tuning with Hugging Face" [ref=e748]:
+                          - paragraph [ref=e749]:
+                            - strong [ref=e750]: LLM Fine-tuning with Hugging Face
+                        - cell "Coursera/DL.AI" [ref=e751]:
+                          - paragraph [ref=e752]: Coursera/DL.AI
+                        - cell "2 weeks" [ref=e753]:
+                          - paragraph [ref=e754]: 2 weeks
+                        - cell "$49/mo" [ref=e755]:
+                          - paragraph [ref=e756]: $49/mo
+                      - row "LangChain for LLM Applications Coursera/DL.AI 1 week $49/mo" [ref=e757]:
+                        - cell "LangChain for LLM Applications" [ref=e758]:
+                          - paragraph [ref=e759]:
+                            - strong [ref=e760]: LangChain for LLM Applications
+                        - cell "Coursera/DL.AI" [ref=e761]:
+                          - paragraph [ref=e762]: Coursera/DL.AI
+                        - cell "1 week" [ref=e763]:
+                          - paragraph [ref=e764]: 1 week
+                        - cell "$49/mo" [ref=e765]:
+                          - paragraph [ref=e766]: $49/mo
+                      - row "Building AI Agents (DeepLearning.AI) Coursera 1-2 weeks $49/mo" [ref=e767]:
+                        - cell "Building AI Agents (DeepLearning.AI)" [ref=e768]:
+                          - paragraph [ref=e769]:
+                            - text: Building AI Agents (
+                            - link "DeepLearning.AI" [ref=e770] [cursor=pointer]:
+                              - /url: http://DeepLearning.AI
+                            - text: )
+                        - cell "Coursera" [ref=e771]:
+                          - paragraph [ref=e772]: Coursera
+                        - cell "1-2 weeks" [ref=e773]:
+                          - paragraph [ref=e774]: 1-2 weeks
+                        - cell "$49/mo" [ref=e775]:
+                          - paragraph [ref=e776]: $49/mo
+                      - row "MLOps Specialization Coursera 4 months $49/mo" [ref=e777]:
+                        - cell "MLOps Specialization" [ref=e778]:
+                          - paragraph [ref=e779]: MLOps Specialization
+                        - cell "Coursera" [ref=e780]:
+                          - paragraph [ref=e781]: Coursera
+                        - cell "4 months" [ref=e782]:
+                          - paragraph [ref=e783]: 4 months
+                        - cell "$49/mo" [ref=e784]:
+                          - paragraph [ref=e785]: $49/mo
+                      - row "Full Stack LLM Bootcamp FSDL Self-paced $200" [ref=e786]:
+                        - cell "Full Stack LLM Bootcamp" [ref=e787]:
+                          - paragraph [ref=e788]: Full Stack LLM Bootcamp
+                        - cell "FSDL" [ref=e789]:
+                          - paragraph [ref=e790]: FSDL
+                        - cell "Self-paced" [ref=e791]:
+                          - paragraph [ref=e792]: Self-paced
+                        - cell "$200" [ref=e793]:
+                          - paragraph [ref=e794]: $200
+              - generic [ref=e795]:
+                - heading "GitHub Repositories to Study" [level=2] [ref=e796]
+                - generic [ref=e797]:
+                  - heading "Foundational ML" [level=3] [ref=e798]
+                  - table [ref=e800]:
+                    - rowgroup [ref=e801]:
+                      - row "Repo Stars Why Study It" [ref=e802]:
+                        - columnheader "Repo" [ref=e803]:
+                          - paragraph [ref=e804]: Repo
+                        - columnheader "Stars" [ref=e805]:
+                          - paragraph [ref=e806]: Stars
+                        - columnheader "Why Study It" [ref=e807]:
+                          - paragraph [ref=e808]: Why Study It
+                    - rowgroup [ref=e809]:
+                      - row "scikit-learn/scikit-learn 60k+ Industry-standard ML library; study examples folder" [ref=e810]:
+                        - cell "scikit-learn/scikit-learn" [ref=e811]:
+                          - paragraph [ref=e812]:
+                            - link "scikit-learn/scikit-learn" [ref=e813] [cursor=pointer]:
+                              - /url: https://github.com/scikit-learn/scikit-learn
+                        - cell "60k+" [ref=e814]:
+                          - paragraph [ref=e815]: 60k+
+                        - cell "Industry-standard ML library; study examples folder" [ref=e816]:
+                          - paragraph [ref=e817]: Industry-standard ML library; study examples folder
+                      - row "ageron/handson-ml3 28k+ Hands-On ML book notebooks (excellent quality)" [ref=e818]:
+                        - cell "ageron/handson-ml3" [ref=e819]:
+                          - paragraph [ref=e820]:
+                            - link "ageron/handson-ml3" [ref=e821] [cursor=pointer]:
+                              - /url: https://github.com/ageron/handson-ml3
+                        - cell "28k+" [ref=e822]:
+                          - paragraph [ref=e823]: 28k+
+                        - cell "Hands-On ML book notebooks (excellent quality)" [ref=e824]:
+                          - paragraph [ref=e825]: Hands-On ML book notebooks (excellent quality)
+                      - row "rasbt/machine-learning-book 5k+ ML with scikit-learn, Keras, TensorFlow book code" [ref=e826]:
+                        - cell "rasbt/machine-learning-book" [ref=e827]:
+                          - paragraph [ref=e828]:
+                            - link "rasbt/machine-learning-book" [ref=e829] [cursor=pointer]:
+                              - /url: https://github.com/rasbt/machine-learning-book
+                        - cell "5k+" [ref=e830]:
+                          - paragraph [ref=e831]: 5k+
+                        - cell "ML with scikit-learn, Keras, TensorFlow book code" [ref=e832]:
+                          - paragraph [ref=e833]: ML with scikit-learn, Keras, TensorFlow book code
+                      - row "microsoft/ML-For-Beginners 70k+ 26 lessons, curriculum-style" [ref=e834]:
+                        - cell "microsoft/ML-For-Beginners" [ref=e835]:
+                          - paragraph [ref=e836]:
+                            - link "microsoft/ML-For-Beginners" [ref=e837] [cursor=pointer]:
+                              - /url: https://github.com/microsoft/ML-For-Beginners
+                        - cell "70k+" [ref=e838]:
+                          - paragraph [ref=e839]: 70k+
+                        - cell "26 lessons, curriculum-style" [ref=e840]:
+                          - paragraph [ref=e841]: 26 lessons, curriculum-style
+                - generic [ref=e842]:
+                  - heading "Deep Learning & PyTorch" [level=3] [ref=e843]
+                  - table [ref=e845]:
+                    - rowgroup [ref=e846]:
+                      - row "Repo Stars Why Study It" [ref=e847]:
+                        - columnheader "Repo" [ref=e848]:
+                          - paragraph [ref=e849]: Repo
+                        - columnheader "Stars" [ref=e850]:
+                          - paragraph [ref=e851]: Stars
+                        - columnheader "Why Study It" [ref=e852]:
+                          - paragraph [ref=e853]: Why Study It
+                    - rowgroup [ref=e854]:
+                      - row "karpathy/nanoGPT 38k+ Minimal, readable GPT-2 implementation — must read" [ref=e855]:
+                        - cell "karpathy/nanoGPT" [ref=e856]:
+                          - paragraph [ref=e857]:
+                            - link "karpathy/nanoGPT" [ref=e858] [cursor=pointer]:
+                              - /url: https://github.com/karpathy/nanoGPT
+                        - cell "38k+" [ref=e859]:
+                          - paragraph [ref=e860]: 38k+
+                        - cell "Minimal, readable GPT-2 implementation — must read" [ref=e861]:
+                          - paragraph [ref=e862]: Minimal, readable GPT-2 implementation — must read
+                      - row "karpathy/minbpe 10k+ Minimal BPE tokenizer implementation" [ref=e863]:
+                        - cell "karpathy/minbpe" [ref=e864]:
+                          - paragraph [ref=e865]:
+                            - link "karpathy/minbpe" [ref=e866] [cursor=pointer]:
+                              - /url: https://github.com/karpathy/minbpe
+                        - cell "10k+" [ref=e867]:
+                          - paragraph [ref=e868]: 10k+
+                        - cell "Minimal BPE tokenizer implementation" [ref=e869]:
+                          - paragraph [ref=e870]: Minimal BPE tokenizer implementation
+                      - row "pytorch/tutorials 8k+ Official PyTorch tutorials" [ref=e871]:
+                        - cell "pytorch/tutorials" [ref=e872]:
+                          - paragraph [ref=e873]:
+                            - link "pytorch/tutorials" [ref=e874] [cursor=pointer]:
+                              - /url: https://github.com/pytorch/tutorials
+                        - cell "8k+" [ref=e875]:
+                          - paragraph [ref=e876]: 8k+
+                        - cell "Official PyTorch tutorials" [ref=e877]:
+                          - paragraph [ref=e878]: Official PyTorch tutorials
+                      - row "fastai/fastai 26k+ high-level DL library, great for learning patterns" [ref=e879]:
+                        - cell "fastai/fastai" [ref=e880]:
+                          - paragraph [ref=e881]:
+                            - link "fastai/fastai" [ref=e882] [cursor=pointer]:
+                              - /url: https://github.com/fastai/fastai
+                        - cell "26k+" [ref=e883]:
+                          - paragraph [ref=e884]: 26k+
+                        - cell "high-level DL library, great for learning patterns" [ref=e885]:
+                          - paragraph [ref=e886]: high-level DL library, great for learning patterns
+                      - row "lucidrains/x-transformers 4k+ Clean transformer implementations" [ref=e887]:
+                        - cell "lucidrains/x-transformers" [ref=e888]:
+                          - paragraph [ref=e889]:
+                            - link "lucidrains/x-transformers" [ref=e890] [cursor=pointer]:
+                              - /url: https://github.com/lucidrains/x-transformers
+                        - cell "4k+" [ref=e891]:
+                          - paragraph [ref=e892]: 4k+
+                        - cell "Clean transformer implementations" [ref=e893]:
+                          - paragraph [ref=e894]: Clean transformer implementations
+                - generic [ref=e895]:
+                  - heading "LLMs and NLP" [level=3] [ref=e896]
+                  - table [ref=e898]:
+                    - rowgroup [ref=e899]:
+                      - row "Repo Stars Why Study It" [ref=e900]:
+                        - columnheader "Repo" [ref=e901]:
+                          - paragraph [ref=e902]: Repo
+                        - columnheader "Stars" [ref=e903]:
+                          - paragraph [ref=e904]: Stars
+                        - columnheader "Why Study It" [ref=e905]:
+                          - paragraph [ref=e906]: Why Study It
+                    - rowgroup [ref=e907]:
+                      - row "huggingface/transformers 140k+ Industry standard; study examples and model cards" [ref=e908]:
+                        - cell "huggingface/transformers" [ref=e909]:
+                          - paragraph [ref=e910]:
+                            - link "huggingface/transformers" [ref=e911] [cursor=pointer]:
+                              - /url: https://github.com/huggingface/transformers
+                        - cell "140k+" [ref=e912]:
+                          - paragraph [ref=e913]: 140k+
+                        - cell "Industry standard; study examples and model cards" [ref=e914]:
+                          - paragraph [ref=e915]: Industry standard; study examples and model cards
+                      - row "huggingface/peft 17k+ LoRA/QLoRA fine-tuning library" [ref=e916]:
+                        - cell "huggingface/peft" [ref=e917]:
+                          - paragraph [ref=e918]:
+                            - link "huggingface/peft" [ref=e919] [cursor=pointer]:
+                              - /url: https://github.com/huggingface/peft
+                        - cell "17k+" [ref=e920]:
+                          - paragraph [ref=e921]: 17k+
+                        - cell "LoRA/QLoRA fine-tuning library" [ref=e922]:
+                          - paragraph [ref=e923]: LoRA/QLoRA fine-tuning library
+                      - row "huggingface/trl 12k+ SFT, DPO, RLHF training" [ref=e924]:
+                        - cell "huggingface/trl" [ref=e925]:
+                          - paragraph [ref=e926]:
+                            - link "huggingface/trl" [ref=e927] [cursor=pointer]:
+                              - /url: https://github.com/huggingface/trl
+                        - cell "12k+" [ref=e928]:
+                          - paragraph [ref=e929]: 12k+
+                        - cell "SFT, DPO, RLHF training" [ref=e930]:
+                          - paragraph [ref=e931]: SFT, DPO, RLHF training
+                      - row "openai/openai-cookbook 62k+ Official OpenAI examples and best practices" [ref=e932]:
+                        - cell "openai/openai-cookbook" [ref=e933]:
+                          - paragraph [ref=e934]:
+                            - link "openai/openai-cookbook" [ref=e935] [cursor=pointer]:
+                              - /url: https://github.com/openai/openai-cookbook
+                        - cell "62k+" [ref=e936]:
+                          - paragraph [ref=e937]: 62k+
+                        - cell "Official OpenAI examples and best practices" [ref=e938]:
+                          - paragraph [ref=e939]: Official OpenAI examples and best practices
+                      - row "anthropics/anthropic-cookbook 8k+ Official Claude/Anthropic examples" [ref=e940]:
+                        - cell "anthropics/anthropic-cookbook" [ref=e941]:
+                          - paragraph [ref=e942]:
+                            - link "anthropics/anthropic-cookbook" [ref=e943] [cursor=pointer]:
+                              - /url: https://github.com/anthropics/anthropic-cookbook
+                        - cell "8k+" [ref=e944]:
+                          - paragraph [ref=e945]: 8k+
+                        - cell "Official Claude/Anthropic examples" [ref=e946]:
+                          - paragraph [ref=e947]: Official Claude/Anthropic examples
+                      - row "mlabonne/llm-course 42k+ Excellent LLM engineering course with notebooks" [ref=e948]:
+                        - cell "mlabonne/llm-course" [ref=e949]:
+                          - paragraph [ref=e950]:
+                            - link "mlabonne/llm-course" [ref=e951] [cursor=pointer]:
+                              - /url: https://github.com/mlabonne/llm-course
+                        - cell "42k+" [ref=e952]:
+                          - paragraph [ref=e953]: 42k+
+                        - cell "Excellent LLM engineering course with notebooks" [ref=e954]:
+                          - paragraph [ref=e955]: Excellent LLM engineering course with notebooks
+                - generic [ref=e956]:
+                  - heading "RAG and Vector Search" [level=3] [ref=e957]
+                  - table [ref=e959]:
+                    - rowgroup [ref=e960]:
+                      - row "Repo Stars Why Study It" [ref=e961]:
+                        - columnheader "Repo" [ref=e962]:
+                          - paragraph [ref=e963]: Repo
+                        - columnheader "Stars" [ref=e964]:
+                          - paragraph [ref=e965]: Stars
+                        - columnheader "Why Study It" [ref=e966]:
+                          - paragraph [ref=e967]: Why Study It
+                    - rowgroup [ref=e968]:
+                      - row "langchain-ai/langchain 97k+ Most popular LLM orchestration framework" [ref=e969]:
+                        - cell "langchain-ai/langchain" [ref=e970]:
+                          - paragraph [ref=e971]:
+                            - link "langchain-ai/langchain" [ref=e972] [cursor=pointer]:
+                              - /url: https://github.com/langchain-ai/langchain
+                        - cell "97k+" [ref=e973]:
+                          - paragraph [ref=e974]: 97k+
+                        - cell "Most popular LLM orchestration framework" [ref=e975]:
+                          - paragraph [ref=e976]: Most popular LLM orchestration framework
+                      - row "run-llama/llama_index 38k+ Alternative to LangChain, strong for RAG" [ref=e977]:
+                        - cell "run-llama/llama_index" [ref=e978]:
+                          - paragraph [ref=e979]:
+                            - link "run-llama/llama_index" [ref=e980] [cursor=pointer]:
+                              - /url: https://github.com/run-llama/llama_index
+                        - cell "38k+" [ref=e981]:
+                          - paragraph [ref=e982]: 38k+
+                        - cell "Alternative to LangChain, strong for RAG" [ref=e983]:
+                          - paragraph [ref=e984]: Alternative to LangChain, strong for RAG
+                      - row "chroma-core/chroma 16k+ Most popular local vector database" [ref=e985]:
+                        - cell "chroma-core/chroma" [ref=e986]:
+                          - paragraph [ref=e987]:
+                            - link "chroma-core/chroma" [ref=e988] [cursor=pointer]:
+                              - /url: https://github.com/chroma-core/chroma
+                        - cell "16k+" [ref=e989]:
+                          - paragraph [ref=e990]: 16k+
+                        - cell "Most popular local vector database" [ref=e991]:
+                          - paragraph [ref=e992]: Most popular local vector database
+                      - row "qdrant/qdrant 21k+ High-performance vector DB for production" [ref=e993]:
+                        - cell "qdrant/qdrant" [ref=e994]:
+                          - paragraph [ref=e995]:
+                            - link "qdrant/qdrant" [ref=e996] [cursor=pointer]:
+                              - /url: https://github.com/qdrant/qdrant
+                        - cell "21k+" [ref=e997]:
+                          - paragraph [ref=e998]: 21k+
+                        - cell "High-performance vector DB for production" [ref=e999]:
+                          - paragraph [ref=e1000]: High-performance vector DB for production
+                      - row "pgvector/pgvector 13k+ Vector search in PostgreSQL" [ref=e1001]:
+                        - cell "pgvector/pgvector" [ref=e1002]:
+                          - paragraph [ref=e1003]:
+                            - link "pgvector/pgvector" [ref=e1004] [cursor=pointer]:
+                              - /url: https://github.com/pgvector/pgvector
+                        - cell "13k+" [ref=e1005]:
+                          - paragraph [ref=e1006]: 13k+
+                        - cell "Vector search in PostgreSQL" [ref=e1007]:
+                          - paragraph [ref=e1008]: Vector search in PostgreSQL
+                      - row "BerriAI/litellm 16k+ Unified interface to 100+ LLM APIs" [ref=e1009]:
+                        - cell "BerriAI/litellm" [ref=e1010]:
+                          - paragraph [ref=e1011]:
+                            - link "BerriAI/litellm" [ref=e1012] [cursor=pointer]:
+                              - /url: https://github.com/BerriAI/litellm
+                        - cell "16k+" [ref=e1013]:
+                          - paragraph [ref=e1014]: 16k+
+                        - cell "Unified interface to 100+ LLM APIs" [ref=e1015]:
+                          - paragraph [ref=e1016]: Unified interface to 100+ LLM APIs
+                - generic [ref=e1017]:
+                  - heading "Agents and Tool Use" [level=3] [ref=e1018]
+                  - table [ref=e1020]:
+                    - rowgroup [ref=e1021]:
+                      - row "Repo Stars Why Study It" [ref=e1022]:
+                        - columnheader "Repo" [ref=e1023]:
+                          - paragraph [ref=e1024]: Repo
+                        - columnheader "Stars" [ref=e1025]:
+                          - paragraph [ref=e1026]: Stars
+                        - columnheader "Why Study It" [ref=e1027]:
+                          - paragraph [ref=e1028]: Why Study It
+                    - rowgroup [ref=e1029]:
+                      - row "langchain-ai/langgraph 10k+ Graph-based stateful agent framework" [ref=e1030]:
+                        - cell "langchain-ai/langgraph" [ref=e1031]:
+                          - paragraph [ref=e1032]:
+                            - link "langchain-ai/langgraph" [ref=e1033] [cursor=pointer]:
+                              - /url: https://github.com/langchain-ai/langgraph
+                        - cell "10k+" [ref=e1034]:
+                          - paragraph [ref=e1035]: 10k+
+                        - cell "Graph-based stateful agent framework" [ref=e1036]:
+                          - paragraph [ref=e1037]: Graph-based stateful agent framework
+                      - row "openai/swarm 18k+ OpenAI’s lightweight multi-agent framework" [ref=e1038]:
+                        - cell "openai/swarm" [ref=e1039]:
+                          - paragraph [ref=e1040]:
+                            - link "openai/swarm" [ref=e1041] [cursor=pointer]:
+                              - /url: https://github.com/openai/swarm
+                        - cell "18k+" [ref=e1042]:
+                          - paragraph [ref=e1043]: 18k+
+                        - cell "OpenAI’s lightweight multi-agent framework" [ref=e1044]:
+                          - paragraph [ref=e1045]: OpenAI’s lightweight multi-agent framework
+                      - row "microsoft/autogen 37k+ Multi-agent conversation framework" [ref=e1046]:
+                        - cell "microsoft/autogen" [ref=e1047]:
+                          - paragraph [ref=e1048]:
+                            - link "microsoft/autogen" [ref=e1049] [cursor=pointer]:
+                              - /url: https://github.com/microsoft/autogen
+                        - cell "37k+" [ref=e1050]:
+                          - paragraph [ref=e1051]: 37k+
+                        - cell "Multi-agent conversation framework" [ref=e1052]:
+                          - paragraph [ref=e1053]: Multi-agent conversation framework
+                      - row "crewAIInc/crewAI 26k+ Role-based multi-agent framework" [ref=e1054]:
+                        - cell "crewAIInc/crewAI" [ref=e1055]:
+                          - paragraph [ref=e1056]:
+                            - link "crewAIInc/crewAI" [ref=e1057] [cursor=pointer]:
+                              - /url: https://github.com/crewAIInc/crewAI
+                        - cell "26k+" [ref=e1058]:
+                          - paragraph [ref=e1059]: 26k+
+                        - cell "Role-based multi-agent framework" [ref=e1060]:
+                          - paragraph [ref=e1061]: Role-based multi-agent framework
+                      - row "anthropics/model-context-protocol Growing MCP standard for tool integration" [ref=e1062]:
+                        - cell "anthropics/model-context-protocol" [ref=e1063]:
+                          - paragraph [ref=e1064]:
+                            - link "anthropics/model-context-protocol" [ref=e1065] [cursor=pointer]:
+                              - /url: https://github.com/anthropics/model-context-protocol
+                        - cell "Growing" [ref=e1066]:
+                          - paragraph [ref=e1067]: Growing
+                        - cell "MCP standard for tool integration" [ref=e1068]:
+                          - paragraph [ref=e1069]: MCP standard for tool integration
+                - generic [ref=e1070]:
+                  - heading "Fine-tuning" [level=3] [ref=e1071]
+                  - table [ref=e1073]:
+                    - rowgroup [ref=e1074]:
+                      - row "Repo Stars Why Study It" [ref=e1075]:
+                        - columnheader "Repo" [ref=e1076]:
+                          - paragraph [ref=e1077]: Repo
+                        - columnheader "Stars" [ref=e1078]:
+                          - paragraph [ref=e1079]: Stars
+                        - columnheader "Why Study It" [ref=e1080]:
+                          - paragraph [ref=e1081]: Why Study It
+                    - rowgroup [ref=e1082]:
+                      - row "unslothai/unsloth 22k+ 2-4x faster fine-tuning with less memory" [ref=e1083]:
+                        - cell "unslothai/unsloth" [ref=e1084]:
+                          - paragraph [ref=e1085]:
+                            - link "unslothai/unsloth" [ref=e1086] [cursor=pointer]:
+                              - /url: https://github.com/unslothai/unsloth
+                        - cell "22k+" [ref=e1087]:
+                          - paragraph [ref=e1088]: 22k+
+                        - cell "2-4x faster fine-tuning with less memory" [ref=e1089]:
+                          - paragraph [ref=e1090]: 2-4x faster fine-tuning with less memory
+                      - row "axolotl-ai-cloud/axolotl 9k+ Powerful fine-tuning config framework" [ref=e1091]:
+                        - cell "axolotl-ai-cloud/axolotl" [ref=e1092]:
+                          - paragraph [ref=e1093]:
+                            - link "axolotl-ai-cloud/axolotl" [ref=e1094] [cursor=pointer]:
+                              - /url: https://github.com/axolotl-ai-cloud/axolotl
+                        - cell "9k+" [ref=e1095]:
+                          - paragraph [ref=e1096]: 9k+
+                        - cell "Powerful fine-tuning config framework" [ref=e1097]:
+                          - paragraph [ref=e1098]: Powerful fine-tuning config framework
+                      - row "huggingface/alignment-handbook 5k+ Official HF recipes for SFT and DPO" [ref=e1099]:
+                        - cell "huggingface/alignment-handbook" [ref=e1100]:
+                          - paragraph [ref=e1101]:
+                            - link "huggingface/alignment-handbook" [ref=e1102] [cursor=pointer]:
+                              - /url: https://github.com/huggingface/alignment-handbook
+                        - cell "5k+" [ref=e1103]:
+                          - paragraph [ref=e1104]: 5k+
+                        - cell "Official HF recipes for SFT and DPO" [ref=e1105]:
+                          - paragraph [ref=e1106]: Official HF recipes for SFT and DPO
+                      - row "hiyouga/LLaMA-Factory 40k+ Easy fine-tuning for many models" [ref=e1107]:
+                        - cell "hiyouga/LLaMA-Factory" [ref=e1108]:
+                          - paragraph [ref=e1109]:
+                            - link "hiyouga/LLaMA-Factory" [ref=e1110] [cursor=pointer]:
+                              - /url: https://github.com/hiyouga/LLaMA-Factory
+                        - cell "40k+" [ref=e1111]:
+                          - paragraph [ref=e1112]: 40k+
+                        - cell "Easy fine-tuning for many models" [ref=e1113]:
+                          - paragraph [ref=e1114]: Easy fine-tuning for many models
+                      - row "mlabonne/llm-datasets 2k+ Curated LLM fine-tuning datasets" [ref=e1115]:
+                        - cell "mlabonne/llm-datasets" [ref=e1116]:
+                          - paragraph [ref=e1117]:
+                            - link "mlabonne/llm-datasets" [ref=e1118] [cursor=pointer]:
+                              - /url: https://github.com/mlabonne/llm-datasets
+                        - cell "2k+" [ref=e1119]:
+                          - paragraph [ref=e1120]: 2k+
+                        - cell "Curated LLM fine-tuning datasets" [ref=e1121]:
+                          - paragraph [ref=e1122]: Curated LLM fine-tuning datasets
+                - generic [ref=e1123]:
+                  - heading "MLOps and Deployment" [level=3] [ref=e1124]
+                  - table [ref=e1126]:
+                    - rowgroup [ref=e1127]:
+                      - row "Repo Stars Why Study It" [ref=e1128]:
+                        - columnheader "Repo" [ref=e1129]:
+                          - paragraph [ref=e1130]: Repo
+                        - columnheader "Stars" [ref=e1131]:
+                          - paragraph [ref=e1132]: Stars
+                        - columnheader "Why Study It" [ref=e1133]:
+                          - paragraph [ref=e1134]: Why Study It
+                    - rowgroup [ref=e1135]:
+                      - row "mlflow/mlflow 19k+ Experiment tracking and model registry" [ref=e1136]:
+                        - cell "mlflow/mlflow" [ref=e1137]:
+                          - paragraph [ref=e1138]:
+                            - link "mlflow/mlflow" [ref=e1139] [cursor=pointer]:
+                              - /url: https://github.com/mlflow/mlflow
+                        - cell "19k+" [ref=e1140]:
+                          - paragraph [ref=e1141]: 19k+
+                        - cell "Experiment tracking and model registry" [ref=e1142]:
+                          - paragraph [ref=e1143]: Experiment tracking and model registry
+                      - row "wandb/wandb 9k+ Weights & Biases experiment tracking" [ref=e1144]:
+                        - cell "wandb/wandb" [ref=e1145]:
+                          - paragraph [ref=e1146]:
+                            - link "wandb/wandb" [ref=e1147] [cursor=pointer]:
+                              - /url: https://github.com/wandb/wandb
+                        - cell "9k+" [ref=e1148]:
+                          - paragraph [ref=e1149]: 9k+
+                        - cell "Weights & Biases experiment tracking" [ref=e1150]:
+                          - paragraph [ref=e1151]: Weights & Biases experiment tracking
+                      - row "vllm-project/vllm 44k+ Fast LLM inference and serving" [ref=e1152]:
+                        - cell "vllm-project/vllm" [ref=e1153]:
+                          - paragraph [ref=e1154]:
+                            - link "vllm-project/vllm" [ref=e1155] [cursor=pointer]:
+                              - /url: https://github.com/vllm-project/vllm
+                        - cell "44k+" [ref=e1156]:
+                          - paragraph [ref=e1157]: 44k+
+                        - cell "Fast LLM inference and serving" [ref=e1158]:
+                          - paragraph [ref=e1159]: Fast LLM inference and serving
+                      - row "tiangolo/fastapi 80k+ Fast API framework for ML serving" [ref=e1160]:
+                        - cell "tiangolo/fastapi" [ref=e1161]:
+                          - paragraph [ref=e1162]:
+                            - link "tiangolo/fastapi" [ref=e1163] [cursor=pointer]:
+                              - /url: https://github.com/tiangolo/fastapi
+                        - cell "80k+" [ref=e1164]:
+                          - paragraph [ref=e1165]: 80k+
+                        - cell "Fast API framework for ML serving" [ref=e1166]:
+                          - paragraph [ref=e1167]: Fast API framework for ML serving
+                      - row "gradio-app/gradio 34k+ Build ML demos in minutes" [ref=e1168]:
+                        - cell "gradio-app/gradio" [ref=e1169]:
+                          - paragraph [ref=e1170]:
+                            - link "gradio-app/gradio" [ref=e1171] [cursor=pointer]:
+                              - /url: https://github.com/gradio-app/gradio
+                        - cell "34k+" [ref=e1172]:
+                          - paragraph [ref=e1173]: 34k+
+                        - cell "Build ML demos in minutes" [ref=e1174]:
+                          - paragraph [ref=e1175]: Build ML demos in minutes
+                      - row "streamlit/streamlit 36k+ Data apps with pure Python" [ref=e1176]:
+                        - cell "streamlit/streamlit" [ref=e1177]:
+                          - paragraph [ref=e1178]:
+                            - link "streamlit/streamlit" [ref=e1179] [cursor=pointer]:
+                              - /url: https://github.com/streamlit/streamlit
+                        - cell "36k+" [ref=e1180]:
+                          - paragraph [ref=e1181]: 36k+
+                        - cell "Data apps with pure Python" [ref=e1182]:
+                          - paragraph [ref=e1183]: Data apps with pure Python
+                - generic [ref=e1184]:
+                  - heading "Evaluation" [level=3] [ref=e1185]
+                  - table [ref=e1187]:
+                    - rowgroup [ref=e1188]:
+                      - row "Repo Stars Why Study It" [ref=e1189]:
+                        - columnheader "Repo" [ref=e1190]:
+                          - paragraph [ref=e1191]: Repo
+                        - columnheader "Stars" [ref=e1192]:
+                          - paragraph [ref=e1193]: Stars
+                        - columnheader "Why Study It" [ref=e1194]:
+                          - paragraph [ref=e1195]: Why Study It
+                    - rowgroup [ref=e1196]:
+                      - row "explodinggradients/ragas 7k+ RAG evaluation framework" [ref=e1197]:
+                        - cell "explodinggradients/ragas" [ref=e1198]:
+                          - paragraph [ref=e1199]:
+                            - link "explodinggradients/ragas" [ref=e1200] [cursor=pointer]:
+                              - /url: https://github.com/explodinggradients/ragas
+                        - cell "7k+" [ref=e1201]:
+                          - paragraph [ref=e1202]: 7k+
+                        - cell "RAG evaluation framework" [ref=e1203]:
+                          - paragraph [ref=e1204]: RAG evaluation framework
+                      - row "openai/evals 14k+ OpenAI’s evaluation framework" [ref=e1205]:
+                        - cell "openai/evals" [ref=e1206]:
+                          - paragraph [ref=e1207]:
+                            - link "openai/evals" [ref=e1208] [cursor=pointer]:
+                              - /url: https://github.com/openai/evals
+                        - cell "14k+" [ref=e1209]:
+                          - paragraph [ref=e1210]: 14k+
+                        - cell "OpenAI’s evaluation framework" [ref=e1211]:
+                          - paragraph [ref=e1212]: OpenAI’s evaluation framework
+                      - row "EleutherAI/lm-evaluation-harness 7k+ Industry standard LLM benchmarking" [ref=e1213]:
+                        - cell "EleutherAI/lm-evaluation-harness" [ref=e1214]:
+                          - paragraph [ref=e1215]:
+                            - link "EleutherAI/lm-evaluation-harness" [ref=e1216] [cursor=pointer]:
+                              - /url: https://github.com/EleutherAI/lm-evaluation-harness
+                        - cell "7k+" [ref=e1217]:
+                          - paragraph [ref=e1218]: 7k+
+                        - cell "Industry standard LLM benchmarking" [ref=e1219]:
+                          - paragraph [ref=e1220]: Industry standard LLM benchmarking
+                      - row "huggingface/evaluate 2k+ Metrics for ML models" [ref=e1221]:
+                        - cell "huggingface/evaluate" [ref=e1222]:
+                          - paragraph [ref=e1223]:
+                            - link "huggingface/evaluate" [ref=e1224] [cursor=pointer]:
+                              - /url: https://github.com/huggingface/evaluate
+                        - cell "2k+" [ref=e1225]:
+                          - paragraph [ref=e1226]: 2k+
+                        - cell "Metrics for ML models" [ref=e1227]:
+                          - paragraph [ref=e1228]: Metrics for ML models
+              - generic [ref=e1229]:
+                - heading "Blogs and Reading" [level=2] [ref=e1230]
+                - generic [ref=e1231]:
+                  - heading "Must-Read Blogs" [level=3] [ref=e1232]
+                  - table [ref=e1234]:
+                    - rowgroup [ref=e1235]:
+                      - row "Blog Why Read It Link" [ref=e1236]:
+                        - columnheader "Blog" [ref=e1237]:
+                          - paragraph [ref=e1238]: Blog
+                        - columnheader "Why Read It" [ref=e1239]:
+                          - paragraph [ref=e1240]: Why Read It
+                        - columnheader "Link" [ref=e1241]:
+                          - paragraph [ref=e1242]: Link
+                    - rowgroup [ref=e1243]:
+                      - row "Lilian Weng (OpenAI) Deeply researched posts on transformer internals, RL, agents https://lilianweng.github.io" [ref=e1244]:
+                        - cell "Lilian Weng (OpenAI)" [ref=e1245]:
+                          - paragraph [ref=e1246]:
+                            - strong [ref=e1247]: Lilian Weng (OpenAI)
+                        - cell "Deeply researched posts on transformer internals, RL, agents" [ref=e1248]:
+                          - paragraph [ref=e1249]: Deeply researched posts on transformer internals, RL, agents
+                        - cell "https://lilianweng.github.io" [ref=e1250]:
+                          - paragraph [ref=e1251]:
+                            - link "https://lilianweng.github.io" [ref=e1252] [cursor=pointer]:
+                              - /url: https://lilianweng.github.io
+                      - row "Sebastian Ruder NLP research trends and summaries https://ruder.io" [ref=e1253]:
+                        - cell "Sebastian Ruder" [ref=e1254]:
+                          - paragraph [ref=e1255]:
+                            - strong [ref=e1256]: Sebastian Ruder
+                        - cell "NLP research trends and summaries" [ref=e1257]:
+                          - paragraph [ref=e1258]: NLP research trends and summaries
+                        - cell "https://ruder.io" [ref=e1259]:
+                          - paragraph [ref=e1260]:
+                            - link "https://ruder.io" [ref=e1261] [cursor=pointer]:
+                              - /url: https://ruder.io
+                      - row "Jay Alammar Visual explanations of transformer and BERT https://jalammar.github.io" [ref=e1262]:
+                        - cell "Jay Alammar" [ref=e1263]:
+                          - paragraph [ref=e1264]:
+                            - strong [ref=e1265]: Jay Alammar
+                        - cell "Visual explanations of transformer and BERT" [ref=e1266]:
+                          - paragraph [ref=e1267]: Visual explanations of transformer and BERT
+                        - cell "https://jalammar.github.io" [ref=e1268]:
+                          - paragraph [ref=e1269]:
+                            - link "https://jalammar.github.io" [ref=e1270] [cursor=pointer]:
+                              - /url: https://jalammar.github.io
+                      - row "Andrej Karpathy Occasional deep-dive blog posts https://karpathy.github.io" [ref=e1271]:
+                        - cell "Andrej Karpathy" [ref=e1272]:
+                          - paragraph [ref=e1273]: Andrej Karpathy
+                        - cell "Occasional deep-dive blog posts" [ref=e1274]:
+                          - paragraph [ref=e1275]: Occasional deep-dive blog posts
+                        - cell "https://karpathy.github.io" [ref=e1276]:
+                          - paragraph [ref=e1277]:
+                            - link "https://karpathy.github.io" [ref=e1278] [cursor=pointer]:
+                              - /url: https://karpathy.github.io
+                      - row "The Gradient Long-form ML research coverage https://thegradient.pub" [ref=e1279]:
+                        - cell "The Gradient" [ref=e1280]:
+                          - paragraph [ref=e1281]: The Gradient
+                        - cell "Long-form ML research coverage" [ref=e1282]:
+                          - paragraph [ref=e1283]: Long-form ML research coverage
+                        - cell "https://thegradient.pub" [ref=e1284]:
+                          - paragraph [ref=e1285]:
+                            - link "https://thegradient.pub" [ref=e1286] [cursor=pointer]:
+                              - /url: https://thegradient.pub
+                      - row "Import AI (Jack Clark) Weekly AI news for practitioners https://jack-clark.net" [ref=e1287]:
+                        - cell "Import AI (Jack Clark)" [ref=e1288]:
+                          - paragraph [ref=e1289]: Import AI (Jack Clark)
+                        - cell "Weekly AI news for practitioners" [ref=e1290]:
+                          - paragraph [ref=e1291]: Weekly AI news for practitioners
+                        - cell "https://jack-clark.net" [ref=e1292]:
+                          - paragraph [ref=e1293]:
+                            - link "https://jack-clark.net" [ref=e1294] [cursor=pointer]:
+                              - /url: https://jack-clark.net
+                      - row "Simon Willison Practical LLM and tool use https://simonwillison.net" [ref=e1295]:
+                        - cell "Simon Willison" [ref=e1296]:
+                          - paragraph [ref=e1297]: Simon Willison
+                        - cell "Practical LLM and tool use" [ref=e1298]:
+                          - paragraph [ref=e1299]: Practical LLM and tool use
+                        - cell "https://simonwillison.net" [ref=e1300]:
+                          - paragraph [ref=e1301]:
+                            - link "https://simonwillison.net" [ref=e1302] [cursor=pointer]:
+                              - /url: https://simonwillison.net
+                      - row "Eugene Yan Applied ML in production https://eugeneyan.com" [ref=e1303]:
+                        - cell "Eugene Yan" [ref=e1304]:
+                          - paragraph [ref=e1305]: Eugene Yan
+                        - cell "Applied ML in production" [ref=e1306]:
+                          - paragraph [ref=e1307]: Applied ML in production
+                        - cell "https://eugeneyan.com" [ref=e1308]:
+                          - paragraph [ref=e1309]:
+                            - link "https://eugeneyan.com" [ref=e1310] [cursor=pointer]:
+                              - /url: https://eugeneyan.com
+                - generic [ref=e1311]:
+                  - heading "Research Papers (Required Reading for Senior Roles)" [level=3] [ref=e1312]
+                  - paragraph [ref=e1313]: Start with the abstracts and conclusions, read fully for the ones most relevant to your role.
+                  - paragraph [ref=e1314]:
+                    - strong [ref=e1315]: "Foundation papers:"
+                  - list [ref=e1316]:
+                    - listitem [ref=e1317]:
+                      - paragraph [ref=e1318]:
+                        - link "Attention Is All You Need (2017)" [ref=e1319] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/1706.03762
+                        - text: — the Transformer
+                    - listitem [ref=e1320]:
+                      - paragraph [ref=e1321]:
+                        - link "BERT (2018)" [ref=e1322] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/1810.04805
+                        - text: — bidirectional pre-training
+                    - listitem [ref=e1323]:
+                      - paragraph [ref=e1324]:
+                        - link "Language Models are Few-Shot Learners / GPT-3 (2020)" [ref=e1325] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2005.14165
+                        - text: — scaling + prompting
+                    - listitem [ref=e1326]:
+                      - paragraph [ref=e1327]:
+                        - link "An Image is Worth 16x16 Words / ViT (2020)" [ref=e1328] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2010.11929
+                        - text: — Vision Transformers
+                  - paragraph [ref=e1329]:
+                    - strong [ref=e1330]: "RAG and retrieval:"
+                  - list [ref=e1331]:
+                    - listitem [ref=e1332]:
+                      - paragraph [ref=e1333]:
+                        - link "Retrieval-Augmented Generation (2020)" [ref=e1334] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2005.11401
+                        - text: — original RAG paper
+                    - listitem [ref=e1335]:
+                      - paragraph [ref=e1336]:
+                        - link "Precise Zero-Shot Dense Retrieval / HyDE (2022)" [ref=e1337] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2212.10496
+                        - text: — HyDE technique
+                  - paragraph [ref=e1338]:
+                    - strong [ref=e1339]: "Fine-tuning and alignment:"
+                  - list [ref=e1340]:
+                    - listitem [ref=e1341]:
+                      - paragraph [ref=e1342]:
+                        - link "LoRA (2021)" [ref=e1343] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2106.09685
+                        - text: — low-rank adaptation
+                    - listitem [ref=e1344]:
+                      - paragraph [ref=e1345]:
+                        - link "QLoRA (2023)" [ref=e1346] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2305.14314
+                        - text: — quantized LoRA on consumer hardware
+                    - listitem [ref=e1347]:
+                      - paragraph [ref=e1348]:
+                        - link "InstructGPT / RLHF (2022)" [ref=e1349] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2203.02155
+                        - text: — training with human feedback
+                    - listitem [ref=e1350]:
+                      - paragraph [ref=e1351]:
+                        - link "Direct Preference Optimization / DPO (2023)" [ref=e1352] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2305.18290
+                        - text: — alignment without RL
+                  - paragraph [ref=e1353]:
+                    - strong [ref=e1354]: "Agents and tools:"
+                  - list [ref=e1355]:
+                    - listitem [ref=e1356]:
+                      - paragraph [ref=e1357]:
+                        - 'link "ReAct: Synergizing Reasoning and Acting (2022)" [ref=e1358] [cursor=pointer]':
+                          - /url: https://arxiv.org/abs/2210.03629
+                        - text: — ReAct agents
+                    - listitem [ref=e1359]:
+                      - paragraph [ref=e1360]:
+                        - link "Toolformer (2023)" [ref=e1361] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2302.04761
+                        - text: — teaching LLMs to use tools
+                  - paragraph [ref=e1362]:
+                    - strong [ref=e1363]: "Prompting:"
+                  - list [ref=e1364]:
+                    - listitem [ref=e1365]:
+                      - paragraph [ref=e1366]:
+                        - link "Chain-of-Thought Prompting (2022)" [ref=e1367] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2201.11903
+                        - text: — step-by-step reasoning
+                    - listitem [ref=e1368]:
+                      - paragraph [ref=e1369]:
+                        - link "Large Language Models are Zero-Shot Reasoners (2022)" [ref=e1370] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2205.11916
+                        - text: — “Let’s think step by step”
+              - generic [ref=e1371]:
+                - heading "Datasets for Practice Projects" [level=2] [ref=e1372]
+                - table [ref=e1374]:
+                  - rowgroup [ref=e1375]:
+                    - row "Dataset Use Case Where to Find" [ref=e1376]:
+                      - columnheader "Dataset" [ref=e1377]:
+                        - paragraph [ref=e1378]: Dataset
+                      - columnheader "Use Case" [ref=e1379]:
+                        - paragraph [ref=e1380]: Use Case
+                      - columnheader "Where to Find" [ref=e1381]:
+                        - paragraph [ref=e1382]: Where to Find
+                  - rowgroup [ref=e1383]:
+                    - row "HuggingFace Datasets Hub Everything — 100k+ datasets https://huggingface.co/datasets" [ref=e1384]:
+                      - cell "HuggingFace Datasets Hub" [ref=e1385]:
+                        - paragraph [ref=e1386]: HuggingFace Datasets Hub
+                      - cell "Everything — 100k+ datasets" [ref=e1387]:
+                        - paragraph [ref=e1388]: Everything — 100k+ datasets
+                      - cell "https://huggingface.co/datasets" [ref=e1389]:
+                        - paragraph [ref=e1390]:
+                          - link "https://huggingface.co/datasets" [ref=e1391] [cursor=pointer]:
+                            - /url: https://huggingface.co/datasets
+                    - row "Kaggle Datasets Competition-grade structured data https://kaggle.com/datasets" [ref=e1392]:
+                      - cell "Kaggle Datasets" [ref=e1393]:
+                        - paragraph [ref=e1394]: Kaggle Datasets
+                      - cell "Competition-grade structured data" [ref=e1395]:
+                        - paragraph [ref=e1396]: Competition-grade structured data
+                      - cell "https://kaggle.com/datasets" [ref=e1397]:
+                        - paragraph [ref=e1398]:
+                          - link "https://kaggle.com/datasets" [ref=e1399] [cursor=pointer]:
+                            - /url: https://kaggle.com/datasets
+                    - row "Common Crawl Web text for LLM training https://commoncrawl.org" [ref=e1400]:
+                      - cell "Common Crawl" [ref=e1401]:
+                        - paragraph [ref=e1402]: Common Crawl
+                      - cell "Web text for LLM training" [ref=e1403]:
+                        - paragraph [ref=e1404]: Web text for LLM training
+                      - cell "https://commoncrawl.org" [ref=e1405]:
+                        - paragraph [ref=e1406]:
+                          - link "https://commoncrawl.org" [ref=e1407] [cursor=pointer]:
+                            - /url: https://commoncrawl.org
+                    - row "The Pile Diverse text dataset https://huggingface.co/datasets/EleutherAI/the_pile" [ref=e1408]:
+                      - cell "The Pile" [ref=e1409]:
+                        - paragraph [ref=e1410]: The Pile
+                      - cell "Diverse text dataset" [ref=e1411]:
+                        - paragraph [ref=e1412]: Diverse text dataset
+                      - cell "https://huggingface.co/datasets/EleutherAI/the_pile" [ref=e1413]:
+                        - paragraph [ref=e1414]:
+                          - link "https://huggingface.co/datasets/EleutherAI/the_pile" [ref=e1415] [cursor=pointer]:
+                            - /url: https://huggingface.co/datasets/EleutherAI/the_pile
+                    - row "OpenAssistant OASST2 Conversation data for fine-tuning https://huggingface.co/datasets/OpenAssistant/oasst2" [ref=e1416]:
+                      - cell "OpenAssistant OASST2" [ref=e1417]:
+                        - paragraph [ref=e1418]: OpenAssistant OASST2
+                      - cell "Conversation data for fine-tuning" [ref=e1419]:
+                        - paragraph [ref=e1420]: Conversation data for fine-tuning
+                      - cell "https://huggingface.co/datasets/OpenAssistant/oasst2" [ref=e1421]:
+                        - paragraph [ref=e1422]:
+                          - link "https://huggingface.co/datasets/OpenAssistant/oasst2" [ref=e1423] [cursor=pointer]:
+                            - /url: https://huggingface.co/datasets/OpenAssistant/oasst2
+                    - row "Alpaca dataset Instruction-following data https://huggingface.co/datasets/tatsu-lab/alpaca" [ref=e1424]:
+                      - cell "Alpaca dataset" [ref=e1425]:
+                        - paragraph [ref=e1426]: Alpaca dataset
+                      - cell "Instruction-following data" [ref=e1427]:
+                        - paragraph [ref=e1428]: Instruction-following data
+                      - cell "https://huggingface.co/datasets/tatsu-lab/alpaca" [ref=e1429]:
+                        - paragraph [ref=e1430]:
+                          - link "https://huggingface.co/datasets/tatsu-lab/alpaca" [ref=e1431] [cursor=pointer]:
+                            - /url: https://huggingface.co/datasets/tatsu-lab/alpaca
+                    - row "SQUAD v2 Question answering https://huggingface.co/datasets/rajpurkar/squad_v2" [ref=e1432]:
+                      - cell "SQUAD v2" [ref=e1433]:
+                        - paragraph [ref=e1434]: SQUAD v2
+                      - cell "Question answering" [ref=e1435]:
+                        - paragraph [ref=e1436]: Question answering
+                      - cell "https://huggingface.co/datasets/rajpurkar/squad_v2" [ref=e1437]:
+                        - paragraph [ref=e1438]:
+                          - link "https://huggingface.co/datasets/rajpurkar/squad_v2" [ref=e1439] [cursor=pointer]:
+                            - /url: https://huggingface.co/datasets/rajpurkar/squad_v2
+                    - row "MS MARCO Information retrieval https://microsoft.github.io/msmarco/" [ref=e1440]:
+                      - cell "MS MARCO" [ref=e1441]:
+                        - paragraph [ref=e1442]: MS MARCO
+                      - cell "Information retrieval" [ref=e1443]:
+                        - paragraph [ref=e1444]: Information retrieval
+                      - cell "https://microsoft.github.io/msmarco/" [ref=e1445]:
+                        - paragraph [ref=e1446]:
+                          - link "https://microsoft.github.io/msmarco/" [ref=e1447] [cursor=pointer]:
+                            - /url: https://microsoft.github.io/msmarco/
+                    - row "BEIR benchmark RAG/retrieval evaluation https://github.com/beir-cellar/beir" [ref=e1448]:
+                      - cell "BEIR benchmark" [ref=e1449]:
+                        - paragraph [ref=e1450]: BEIR benchmark
+                      - cell "RAG/retrieval evaluation" [ref=e1451]:
+                        - paragraph [ref=e1452]: RAG/retrieval evaluation
+                      - cell "https://github.com/beir-cellar/beir" [ref=e1453]:
+                        - paragraph [ref=e1454]:
+                          - link "https://github.com/beir-cellar/beir" [ref=e1455] [cursor=pointer]:
+                            - /url: https://github.com/beir-cellar/beir
+              - generic [ref=e1456]:
+                - heading "Developer Tools to Know" [level=2] [ref=e1457]
+                - generic [ref=e1458]:
+                  - heading "APIs and Platforms" [level=3] [ref=e1459]
+                  - table [ref=e1461]:
+                    - rowgroup [ref=e1462]:
+                      - row "Tool What It Does Why Learn It" [ref=e1463]:
+                        - columnheader "Tool" [ref=e1464]:
+                          - paragraph [ref=e1465]: Tool
+                        - columnheader "What It Does" [ref=e1466]:
+                          - paragraph [ref=e1467]: What It Does
+                        - columnheader "Why Learn It" [ref=e1468]:
+                          - paragraph [ref=e1469]: Why Learn It
+                    - rowgroup [ref=e1470]:
+                      - row "OpenAI API GPT-4, embeddings, DALL-E Most common LLM API in production" [ref=e1471]:
+                        - cell "OpenAI API" [ref=e1472]:
+                          - paragraph [ref=e1473]: OpenAI API
+                        - cell "GPT-4, embeddings, DALL-E" [ref=e1474]:
+                          - paragraph [ref=e1475]: GPT-4, embeddings, DALL-E
+                        - cell "Most common LLM API in production" [ref=e1476]:
+                          - paragraph [ref=e1477]: Most common LLM API in production
+                      - row "Anthropic API Claude models Strong at reasoning, long context" [ref=e1478]:
+                        - cell "Anthropic API" [ref=e1479]:
+                          - paragraph [ref=e1480]: Anthropic API
+                        - cell "Claude models" [ref=e1481]:
+                          - paragraph [ref=e1482]: Claude models
+                        - cell "Strong at reasoning, long context" [ref=e1483]:
+                          - paragraph [ref=e1484]: Strong at reasoning, long context
+                      - row "Hugging Face Hub Model hosting and sharing Industry standard for open-source models" [ref=e1485]:
+                        - cell "Hugging Face Hub" [ref=e1486]:
+                          - paragraph [ref=e1487]: Hugging Face Hub
+                        - cell "Model hosting and sharing" [ref=e1488]:
+                          - paragraph [ref=e1489]: Model hosting and sharing
+                        - cell "Industry standard for open-source models" [ref=e1490]:
+                          - paragraph [ref=e1491]: Industry standard for open-source models
+                      - row "Ollama Local LLM serving Dev/testing without cloud costs" [ref=e1492]:
+                        - cell "Ollama" [ref=e1493]:
+                          - paragraph [ref=e1494]: Ollama
+                        - cell "Local LLM serving" [ref=e1495]:
+                          - paragraph [ref=e1496]: Local LLM serving
+                        - cell "Dev/testing without cloud costs" [ref=e1497]:
+                          - paragraph [ref=e1498]: Dev/testing without cloud costs
+                      - row "Replicate Run models via API Easy access to open-source models" [ref=e1499]:
+                        - cell "Replicate" [ref=e1500]:
+                          - paragraph [ref=e1501]: Replicate
+                        - cell "Run models via API" [ref=e1502]:
+                          - paragraph [ref=e1503]: Run models via API
+                        - cell "Easy access to open-source models" [ref=e1504]:
+                          - paragraph [ref=e1505]: Easy access to open-source models
+                      - row "Modal Serverless GPU computing Run GPU workloads without managing servers" [ref=e1506]:
+                        - cell "Modal" [ref=e1507]:
+                          - paragraph [ref=e1508]: Modal
+                        - cell "Serverless GPU computing" [ref=e1509]:
+                          - paragraph [ref=e1510]: Serverless GPU computing
+                        - cell "Run GPU workloads without managing servers" [ref=e1511]:
+                          - paragraph [ref=e1512]: Run GPU workloads without managing servers
+                      - row "Together AI Fast inference for open models Good OpenAI-compatible API alternative" [ref=e1513]:
+                        - cell "Together AI" [ref=e1514]:
+                          - paragraph [ref=e1515]: Together AI
+                        - cell "Fast inference for open models" [ref=e1516]:
+                          - paragraph [ref=e1517]: Fast inference for open models
+                        - cell "Good OpenAI-compatible API alternative" [ref=e1518]:
+                          - paragraph [ref=e1519]: Good OpenAI-compatible API alternative
+                - generic [ref=e1520]:
+                  - heading "Development Tools" [level=3] [ref=e1521]
+                  - table [ref=e1523]:
+                    - rowgroup [ref=e1524]:
+                      - row "Tool Use Link" [ref=e1525]:
+                        - columnheader "Tool" [ref=e1526]:
+                          - paragraph [ref=e1527]: Tool
+                        - columnheader "Use" [ref=e1528]:
+                          - paragraph [ref=e1529]: Use
+                        - columnheader "Link" [ref=e1530]:
+                          - paragraph [ref=e1531]: Link
+                    - rowgroup [ref=e1532]:
+                      - row "LangSmith LangChain observability and tracing https://smith.langchain.com" [ref=e1533]:
+                        - cell "LangSmith" [ref=e1534]:
+                          - paragraph [ref=e1535]: LangSmith
+                        - cell "LangChain observability and tracing" [ref=e1536]:
+                          - paragraph [ref=e1537]: LangChain observability and tracing
+                        - cell "https://smith.langchain.com" [ref=e1538]:
+                          - paragraph [ref=e1539]:
+                            - link "https://smith.langchain.com" [ref=e1540] [cursor=pointer]:
+                              - /url: https://smith.langchain.com
+                      - row "Weights & Biases Experiment tracking, visualizations https://wandb.ai" [ref=e1541]:
+                        - cell "Weights & Biases" [ref=e1542]:
+                          - paragraph [ref=e1543]: Weights & Biases
+                        - cell "Experiment tracking, visualizations" [ref=e1544]:
+                          - paragraph [ref=e1545]: Experiment tracking, visualizations
+                        - cell "https://wandb.ai" [ref=e1546]:
+                          - paragraph [ref=e1547]:
+                            - link "https://wandb.ai" [ref=e1548] [cursor=pointer]:
+                              - /url: https://wandb.ai
+                      - row "MLflow Open-source experiment tracking https://mlflow.org" [ref=e1549]:
+                        - cell "MLflow" [ref=e1550]:
+                          - paragraph [ref=e1551]: MLflow
+                        - cell "Open-source experiment tracking" [ref=e1552]:
+                          - paragraph [ref=e1553]: Open-source experiment tracking
+                        - cell "https://mlflow.org" [ref=e1554]:
+                          - paragraph [ref=e1555]:
+                            - link "https://mlflow.org" [ref=e1556] [cursor=pointer]:
+                              - /url: https://mlflow.org
+                      - row "LabelStudio Data labeling for fine-tuning https://labelstud.io" [ref=e1557]:
+                        - cell "LabelStudio" [ref=e1558]:
+                          - paragraph [ref=e1559]: LabelStudio
+                        - cell "Data labeling for fine-tuning" [ref=e1560]:
+                          - paragraph [ref=e1561]: Data labeling for fine-tuning
+                        - cell "https://labelstud.io" [ref=e1562]:
+                          - paragraph [ref=e1563]:
+                            - link "https://labelstud.io" [ref=e1564] [cursor=pointer]:
+                              - /url: https://labelstud.io
+                      - row "Chainlit Build chat UIs for LLM apps https://chainlit.io" [ref=e1565]:
+                        - cell "Chainlit" [ref=e1566]:
+                          - paragraph [ref=e1567]: Chainlit
+                        - cell "Build chat UIs for LLM apps" [ref=e1568]:
+                          - paragraph [ref=e1569]: Build chat UIs for LLM apps
+                        - cell "https://chainlit.io" [ref=e1570]:
+                          - paragraph [ref=e1571]:
+                            - link "https://chainlit.io" [ref=e1572] [cursor=pointer]:
+                              - /url: https://chainlit.io
+                      - row "Gradio Quick ML demos https://gradio.app" [ref=e1573]:
+                        - cell "Gradio" [ref=e1574]:
+                          - paragraph [ref=e1575]: Gradio
+                        - cell "Quick ML demos" [ref=e1576]:
+                          - paragraph [ref=e1577]: Quick ML demos
+                        - cell "https://gradio.app" [ref=e1578]:
+                          - paragraph [ref=e1579]:
+                            - link "https://gradio.app" [ref=e1580] [cursor=pointer]:
+                              - /url: https://gradio.app
+              - generic [ref=e1581]:
+                - heading "Learning Communities" [level=2] [ref=e1582]
+                - table [ref=e1584]:
+                  - rowgroup [ref=e1585]:
+                    - row "Community Platform Value" [ref=e1586]:
+                      - columnheader "Community" [ref=e1587]:
+                        - paragraph [ref=e1588]: Community
+                      - columnheader "Platform" [ref=e1589]:
+                        - paragraph [ref=e1590]: Platform
+                      - columnheader "Value" [ref=e1591]:
+                        - paragraph [ref=e1592]: Value
+                  - rowgroup [ref=e1593]:
+                    - row "Hugging Face Forums HuggingFace Best for transformers/fine-tuning questions" [ref=e1594]:
+                      - cell "Hugging Face Forums" [ref=e1595]:
+                        - paragraph [ref=e1596]: Hugging Face Forums
+                      - cell "HuggingFace" [ref=e1597]:
+                        - paragraph [ref=e1598]: HuggingFace
+                      - cell "Best for transformers/fine-tuning questions" [ref=e1599]:
+                        - paragraph [ref=e1600]: Best for transformers/fine-tuning questions
+                    - row "r/MachineLearning Reddit Research and industry news" [ref=e1601]:
+                      - cell "r/MachineLearning" [ref=e1602]:
+                        - paragraph [ref=e1603]: r/MachineLearning
+                      - cell "Reddit" [ref=e1604]:
+                        - paragraph [ref=e1605]: Reddit
+                      - cell "Research and industry news" [ref=e1606]:
+                        - paragraph [ref=e1607]: Research and industry news
+                    - row "r/LocalLLaMA Reddit Local LLM community, very active" [ref=e1608]:
+                      - cell "r/LocalLLaMA" [ref=e1609]:
+                        - paragraph [ref=e1610]: r/LocalLLaMA
+                      - cell "Reddit" [ref=e1611]:
+                        - paragraph [ref=e1612]: Reddit
+                      - cell "Local LLM community, very active" [ref=e1613]:
+                        - paragraph [ref=e1614]: Local LLM community, very active
+                    - row "ML Twitter/X Twitter Follow researchers and engineers for news" [ref=e1615]:
+                      - cell "ML Twitter/X" [ref=e1616]:
+                        - paragraph [ref=e1617]: ML Twitter/X
+                      - cell "Twitter" [ref=e1618]:
+                        - paragraph [ref=e1619]: Twitter
+                      - cell "Follow researchers and engineers for news" [ref=e1620]:
+                        - paragraph [ref=e1621]: Follow researchers and engineers for news
+                    - 'row "Discord: Eleuther AI Discord Open-source LLM research community" [ref=e1622]':
+                      - 'cell "Discord: Eleuther AI" [ref=e1623]':
+                        - paragraph [ref=e1624]: "Discord: Eleuther AI"
+                      - cell "Discord" [ref=e1625]:
+                        - paragraph [ref=e1626]: Discord
+                      - cell "Open-source LLM research community" [ref=e1627]:
+                        - paragraph [ref=e1628]: Open-source LLM research community
+                    - 'row "Discord: fast.ai Discord Practical DL community" [ref=e1629]':
+                      - 'cell "Discord: fast.ai" [ref=e1630]':
+                        - paragraph [ref=e1631]:
+                          - text: "Discord:"
+                          - link "fast.ai" [ref=e1632] [cursor=pointer]:
+                            - /url: http://fast.ai
+                      - cell "Discord" [ref=e1633]:
+                        - paragraph [ref=e1634]: Discord
+                      - cell "Practical DL community" [ref=e1635]:
+                        - paragraph [ref=e1636]: Practical DL community
+                    - 'row "Discord: LangChain Discord LangChain help and announcements" [ref=e1637]':
+                      - 'cell "Discord: LangChain" [ref=e1638]':
+                        - paragraph [ref=e1639]: "Discord: LangChain"
+                      - cell "Discord" [ref=e1640]:
+                        - paragraph [ref=e1641]: Discord
+                      - cell "LangChain help and announcements" [ref=e1642]:
+                        - paragraph [ref=e1643]: LangChain help and announcements
+                    - row "Kaggle forums Kaggle Competition strategies and feedback" [ref=e1644]:
+                      - cell "Kaggle forums" [ref=e1645]:
+                        - paragraph [ref=e1646]: Kaggle forums
+                      - cell "Kaggle" [ref=e1647]:
+                        - paragraph [ref=e1648]: Kaggle
+                      - cell "Competition strategies and feedback" [ref=e1649]:
+                        - paragraph [ref=e1650]: Competition strategies and feedback
+              - generic [ref=e1651]:
+                - heading "Phase-to-Resource Mapping" [level=2] [ref=e1652]
+                - paragraph [ref=e1653]: "Quick reference — what to use for each phase:"
+                - table [ref=e1655]:
+                  - rowgroup [ref=e1656]:
+                    - row "Phase Video GitHub Repo Blog/Other" [ref=e1657]:
+                      - columnheader "Phase" [ref=e1658]:
+                        - paragraph [ref=e1659]: Phase
+                      - columnheader "Video" [ref=e1660]:
+                        - paragraph [ref=e1661]: Video
+                      - columnheader "GitHub Repo" [ref=e1662]:
+                        - paragraph [ref=e1663]: GitHub Repo
+                      - columnheader "Blog/Other" [ref=e1664]:
+                        - paragraph [ref=e1665]: Blog/Other
+                  - rowgroup [ref=e1666]:
+                    - 'row "0: Foundations StatQuest channel microsoft/ML-For-Beginners GLOSSARY.md" [ref=e1667]':
+                      - 'cell "0: Foundations" [ref=e1668]':
+                        - paragraph [ref=e1669]: "0: Foundations"
+                      - cell "StatQuest channel" [ref=e1670]:
+                        - paragraph [ref=e1671]: StatQuest channel
+                      - cell "microsoft/ML-For-Beginners" [ref=e1672]:
+                        - paragraph [ref=e1673]: microsoft/ML-For-Beginners
+                      - cell "GLOSSARY.md" [ref=e1674]:
+                        - paragraph [ref=e1675]:
+                          - link "GLOSSARY.md" [ref=e1676] [cursor=pointer]:
+                            - /url: http://GLOSSARY.md
+                    - 'row "1: Python/Data Science StatQuest scikit-learn/scikit-learn examples ageron/handson-ml3" [ref=e1677]':
+                      - 'cell "1: Python/Data Science" [ref=e1678]':
+                        - paragraph [ref=e1679]: "1: Python/Data Science"
+                      - cell "StatQuest" [ref=e1680]:
+                        - paragraph [ref=e1681]: StatQuest
+                      - cell "scikit-learn/scikit-learn examples" [ref=e1682]:
+                        - paragraph [ref=e1683]: scikit-learn/scikit-learn examples
+                      - cell "ageron/handson-ml3" [ref=e1684]:
+                        - paragraph [ref=e1685]: ageron/handson-ml3
+                    - 'row "2: Mathematics 3Blue1Brown Linear Algebra + Calculus karpathy/nanoGPT (for context) Jay Alammar blog" [ref=e1686]':
+                      - 'cell "2: Mathematics" [ref=e1687]':
+                        - paragraph [ref=e1688]: "2: Mathematics"
+                      - cell "3Blue1Brown Linear Algebra + Calculus" [ref=e1689]:
+                        - paragraph [ref=e1690]: 3Blue1Brown Linear Algebra + Calculus
+                      - cell "karpathy/nanoGPT (for context)" [ref=e1691]:
+                        - paragraph [ref=e1692]: karpathy/nanoGPT (for context)
+                      - cell "Jay Alammar blog" [ref=e1693]:
+                        - paragraph [ref=e1694]: Jay Alammar blog
+                    - 'row "3: Tokenization Karpathy: GPT Tokenizer karpathy/minbpe HF tokenizers docs" [ref=e1695]':
+                      - 'cell "3: Tokenization" [ref=e1696]':
+                        - paragraph [ref=e1697]: "3: Tokenization"
+                      - 'cell "Karpathy: GPT Tokenizer" [ref=e1698]':
+                        - paragraph [ref=e1699]: "Karpathy: GPT Tokenizer"
+                      - cell "karpathy/minbpe" [ref=e1700]:
+                        - paragraph [ref=e1701]: karpathy/minbpe
+                      - cell "HF tokenizers docs" [ref=e1702]:
+                        - paragraph [ref=e1703]: HF tokenizers docs
+                    - 'row "4: Embeddings Sam Witteveen sentence-transformers repo Jay Alammar: Illustrated Word2Vec" [ref=e1704]':
+                      - 'cell "4: Embeddings" [ref=e1705]':
+                        - paragraph [ref=e1706]: "4: Embeddings"
+                      - cell "Sam Witteveen" [ref=e1707]:
+                        - paragraph [ref=e1708]: Sam Witteveen
+                      - cell "sentence-transformers repo" [ref=e1709]:
+                        - paragraph [ref=e1710]: sentence-transformers repo
+                      - 'cell "Jay Alammar: Illustrated Word2Vec" [ref=e1711]':
+                        - paragraph [ref=e1712]: "Jay Alammar: Illustrated Word2Vec"
+                    - 'row "5: Neural Networks 3Blue1Brown NN series + Karpathy Zero to Hero karpathy/nanoGPT Lilian Weng blog" [ref=e1713]':
+                      - 'cell "5: Neural Networks" [ref=e1714]':
+                        - paragraph [ref=e1715]: "5: Neural Networks"
+                      - cell "3Blue1Brown NN series + Karpathy Zero to Hero" [ref=e1716]:
+                        - paragraph [ref=e1717]: 3Blue1Brown NN series + Karpathy Zero to Hero
+                      - cell "karpathy/nanoGPT" [ref=e1718]:
+                        - paragraph [ref=e1719]: karpathy/nanoGPT
+                      - cell "Lilian Weng blog" [ref=e1720]:
+                        - paragraph [ref=e1721]: Lilian Weng blog
+                    - 'row "6: Vector Databases James Briggs chroma-core/chroma Pinecone docs" [ref=e1722]':
+                      - 'cell "6: Vector Databases" [ref=e1723]':
+                        - paragraph [ref=e1724]: "6: Vector Databases"
+                      - cell "James Briggs" [ref=e1725]:
+                        - paragraph [ref=e1726]: James Briggs
+                      - cell "chroma-core/chroma" [ref=e1727]:
+                        - paragraph [ref=e1728]: chroma-core/chroma
+                      - cell "Pinecone docs" [ref=e1729]:
+                        - paragraph [ref=e1730]: Pinecone docs
+                    - 'row "7: RAG Sam Witteveen, James Briggs openai/openai-cookbook Lilian Weng RAG post" [ref=e1731]':
+                      - 'cell "7: RAG" [ref=e1732]':
+                        - paragraph [ref=e1733]: "7: RAG"
+                      - cell "Sam Witteveen, James Briggs" [ref=e1734]:
+                        - paragraph [ref=e1735]: Sam Witteveen, James Briggs
+                      - cell "openai/openai-cookbook" [ref=e1736]:
+                        - paragraph [ref=e1737]: openai/openai-cookbook
+                      - cell "Lilian Weng RAG post" [ref=e1738]:
+                        - paragraph [ref=e1739]: Lilian Weng RAG post
+                    - 'row "8: MLOps Made With ML, W&B mlflow/mlflow Eugene Yan blog" [ref=e1740]':
+                      - 'cell "8: MLOps" [ref=e1741]':
+                        - paragraph [ref=e1742]: "8: MLOps"
+                      - cell "Made With ML, W&B" [ref=e1743]:
+                        - paragraph [ref=e1744]: Made With ML, W&B
+                      - cell "mlflow/mlflow" [ref=e1745]:
+                        - paragraph [ref=e1746]: mlflow/mlflow
+                      - cell "Eugene Yan blog" [ref=e1747]:
+                        - paragraph [ref=e1748]: Eugene Yan blog
+                    - 'row "9: Specializations Fast.ai (for CV), Stanford CS224N (for NLP) langchain-ai/langgraph 10-specializations/README.md" [ref=e1749]':
+                      - 'cell "9: Specializations" [ref=e1750]':
+                        - paragraph [ref=e1751]: "9: Specializations"
+                      - cell "Fast.ai (for CV), Stanford CS224N (for NLP)" [ref=e1752]:
+                        - paragraph [ref=e1753]:
+                          - link "Fast.ai" [ref=e1754] [cursor=pointer]:
+                            - /url: http://Fast.ai
+                          - text: (for CV), Stanford CS224N (for NLP)
+                      - cell "langchain-ai/langgraph" [ref=e1755]:
+                        - paragraph [ref=e1756]: langchain-ai/langgraph
+                      - cell "10-specializations/README.md" [ref=e1757]:
+                        - paragraph [ref=e1758]: 10-specializations/README.md
+                    - 'row "10: Prompt Engineering DeepLearning.AI course openai/openai-cookbook Lilian Weng prompting" [ref=e1759]':
+                      - 'cell "10: Prompt Engineering" [ref=e1760]':
+                        - paragraph [ref=e1761]: "10: Prompt Engineering"
+                      - cell "DeepLearning.AI course" [ref=e1762]:
+                        - paragraph [ref=e1763]:
+                          - link "DeepLearning.AI" [ref=e1764] [cursor=pointer]:
+                            - /url: http://DeepLearning.AI
+                          - text: course
+                      - cell "openai/openai-cookbook" [ref=e1765]:
+                        - paragraph [ref=e1766]: openai/openai-cookbook
+                      - cell "Lilian Weng prompting" [ref=e1767]:
+                        - paragraph [ref=e1768]: Lilian Weng prompting
+                    - 'row "11: Fine-tuning Trelis Research unslothai/unsloth LoRA + QLoRA papers" [ref=e1769]':
+                      - 'cell "11: Fine-tuning" [ref=e1770]':
+                        - paragraph [ref=e1771]: "11: Fine-tuning"
+                      - cell "Trelis Research" [ref=e1772]:
+                        - paragraph [ref=e1773]: Trelis Research
+                      - cell "unslothai/unsloth" [ref=e1774]:
+                        - paragraph [ref=e1775]: unslothai/unsloth
+                      - cell "LoRA + QLoRA papers" [ref=e1776]:
+                        - paragraph [ref=e1777]: LoRA + QLoRA papers
+                    - 'row "12: Multimodal Two Minute Papers huggingface/transformers ViT paper, CLIP paper" [ref=e1778]':
+                      - 'cell "12: Multimodal" [ref=e1779]':
+                        - paragraph [ref=e1780]: "12: Multimodal"
+                      - cell "Two Minute Papers" [ref=e1781]:
+                        - paragraph [ref=e1782]: Two Minute Papers
+                      - cell "huggingface/transformers" [ref=e1783]:
+                        - paragraph [ref=e1784]: huggingface/transformers
+                      - cell "ViT paper, CLIP paper" [ref=e1785]:
+                        - paragraph [ref=e1786]: ViT paper, CLIP paper
+                    - 'row "13: Local LLMs Matt Williams (Ollama) ollama/ollama r/LocalLLaMA" [ref=e1787]':
+                      - 'cell "13: Local LLMs" [ref=e1788]':
+                        - paragraph [ref=e1789]: "13: Local LLMs"
+                      - cell "Matt Williams (Ollama)" [ref=e1790]:
+                        - paragraph [ref=e1791]: Matt Williams (Ollama)
+                      - cell "ollama/ollama" [ref=e1792]:
+                        - paragraph [ref=e1793]: ollama/ollama
+                      - cell "r/LocalLLaMA" [ref=e1794]:
+                        - paragraph [ref=e1795]: r/LocalLLaMA
+                    - 'row "14: AI Agents LangChain official langchain-ai/langgraph ReAct + Toolformer papers" [ref=e1796]':
+                      - 'cell "14: AI Agents" [ref=e1797]':
+                        - paragraph [ref=e1798]: "14: AI Agents"
+                      - cell "LangChain official" [ref=e1799]:
+                        - paragraph [ref=e1800]: LangChain official
+                      - cell "langchain-ai/langgraph" [ref=e1801]:
+                        - paragraph [ref=e1802]: langchain-ai/langgraph
+                      - cell "ReAct + Toolformer papers" [ref=e1803]:
+                        - paragraph [ref=e1804]: ReAct + Toolformer papers
+                    - 'row "15: Streaming FastAPI docs tiangolo/fastapi SSE spec, WebSocket MDN" [ref=e1805]':
+                      - 'cell "15: Streaming" [ref=e1806]':
+                        - paragraph [ref=e1807]: "15: Streaming"
+                      - cell "FastAPI docs" [ref=e1808]:
+                        - paragraph [ref=e1809]: FastAPI docs
+                      - cell "tiangolo/fastapi" [ref=e1810]:
+                        - paragraph [ref=e1811]: tiangolo/fastapi
+                      - cell "SSE spec, WebSocket MDN" [ref=e1812]:
+                        - paragraph [ref=e1813]: SSE spec, WebSocket MDN
+                    - 'row "16: Model Evaluation StatQuest: ROC/AUC explodinggradients/ragas Hugging Face evaluate docs" [ref=e1814]':
+                      - 'cell "16: Model Evaluation" [ref=e1815]':
+                        - paragraph [ref=e1816]: "16: Model Evaluation"
+                      - 'cell "StatQuest: ROC/AUC" [ref=e1817]':
+                        - paragraph [ref=e1818]: "StatQuest: ROC/AUC"
+                      - cell "explodinggradients/ragas" [ref=e1819]:
+                        - paragraph [ref=e1820]: explodinggradients/ragas
+                      - cell "Hugging Face evaluate docs" [ref=e1821]:
+                        - paragraph [ref=e1822]: Hugging Face evaluate docs
+                    - 'row "17: Debugging Made With ML whylogs, evidently Eugene Yan debugging post" [ref=e1823]':
+                      - 'cell "17: Debugging" [ref=e1824]':
+                        - paragraph [ref=e1825]: "17: Debugging"
+                      - cell "Made With ML" [ref=e1826]:
+                        - paragraph [ref=e1827]: Made With ML
+                      - cell "whylogs, evidently" [ref=e1828]:
+                        - paragraph [ref=e1829]: whylogs, evidently
+                      - cell "Eugene Yan debugging post" [ref=e1830]:
+                        - paragraph [ref=e1831]: Eugene Yan debugging post
+                    - 'row "18: Low-Code Tools Gradio official channel gradio-app/gradio Hugging Face Spaces docs" [ref=e1832]':
+                      - 'cell "18: Low-Code Tools" [ref=e1833]':
+                        - paragraph [ref=e1834]: "18: Low-Code Tools"
+                      - cell "Gradio official channel" [ref=e1835]:
+                        - paragraph [ref=e1836]: Gradio official channel
+                      - cell "gradio-app/gradio" [ref=e1837]:
+                        - paragraph [ref=e1838]: gradio-app/gradio
+                      - cell "Hugging Face Spaces docs" [ref=e1839]:
+                        - paragraph [ref=e1840]: Hugging Face Spaces docs
+                    - 'row "19: AI Safety Anthropic research blog microsoft/promptbench Lilian Weng adversarial post" [ref=e1841]':
+                      - 'cell "19: AI Safety" [ref=e1842]':
+                        - paragraph [ref=e1843]: "19: AI Safety"
+                      - cell "Anthropic research blog" [ref=e1844]:
+                        - paragraph [ref=e1845]: Anthropic research blog
+                      - cell "microsoft/promptbench" [ref=e1846]:
+                        - paragraph [ref=e1847]: microsoft/promptbench
+                      - cell "Lilian Weng adversarial post" [ref=e1848]:
+                        - paragraph [ref=e1849]: Lilian Weng adversarial post
+                    - 'row "24: Advanced DL Yannic Kilcher lucidrains/x-transformers Lilian Weng GAN/VAE posts" [ref=e1850]':
+                      - 'cell "24: Advanced DL" [ref=e1851]':
+                        - paragraph [ref=e1852]: "24: Advanced DL"
+                      - cell "Yannic Kilcher" [ref=e1853]:
+                        - paragraph [ref=e1854]: Yannic Kilcher
+                      - cell "lucidrains/x-transformers" [ref=e1855]:
+                        - paragraph [ref=e1856]: lucidrains/x-transformers
+                      - cell "Lilian Weng GAN/VAE posts" [ref=e1857]:
+                        - paragraph [ref=e1858]: Lilian Weng GAN/VAE posts
+                    - 'row "25: Reinforcement Learning DeepMind YouTube openai/gym (now Gymnasium) Lilian Weng RL post" [ref=e1859]':
+                      - 'cell "25: Reinforcement Learning" [ref=e1860]':
+                        - paragraph [ref=e1861]: "25: Reinforcement Learning"
+                      - cell "DeepMind YouTube" [ref=e1862]:
+                        - paragraph [ref=e1863]: DeepMind YouTube
+                      - cell "openai/gym (now Gymnasium)" [ref=e1864]:
+                        - paragraph [ref=e1865]: openai/gym (now Gymnasium)
+                      - cell "Lilian Weng RL post" [ref=e1866]:
+                        - paragraph [ref=e1867]: Lilian Weng RL post
+                    - 'row "26: Time Series StatQuest time series facebook/prophet Rob Hyndman blog" [ref=e1868]':
+                      - 'cell "26: Time Series" [ref=e1869]':
+                        - paragraph [ref=e1870]: "26: Time Series"
+                      - cell "StatQuest time series" [ref=e1871]:
+                        - paragraph [ref=e1872]: StatQuest time series
+                      - cell "facebook/prophet" [ref=e1873]:
+                        - paragraph [ref=e1874]: facebook/prophet
+                      - cell "Rob Hyndman blog" [ref=e1875]:
+                        - paragraph [ref=e1876]: Rob Hyndman blog
+                    - 'row "27: Causal Inference Brady Neal causal course microsoft/EconML Judea Pearl writings" [ref=e1877]':
+                      - 'cell "27: Causal Inference" [ref=e1878]':
+                        - paragraph [ref=e1879]: "27: Causal Inference"
+                      - cell "Brady Neal causal course" [ref=e1880]:
+                        - paragraph [ref=e1881]: Brady Neal causal course
+                      - cell "microsoft/EconML" [ref=e1882]:
+                        - paragraph [ref=e1883]: microsoft/EconML
+                      - cell "Judea Pearl writings" [ref=e1884]:
+                        - paragraph [ref=e1885]: Judea Pearl writings
+        - contentinfo [ref=e1886]:
+          - generic [ref=e1887]:
+            - link "Next Workspace Learning Review" [ref=e1888] [cursor=pointer]:
+              - /url: WORKSPACE_LEARNING_REVIEW.html
+              - generic [ref=e1889]:
+                - generic [ref=e1891]: Next
+                - generic [ref=e1892]: Workspace Learning Review
+              - img [ref=e1893]
+            - link "Previous Contributor Covenant Code of Conduct" [ref=e1895] [cursor=pointer]:
+              - /url: CODE_OF_CONDUCT.html
+              - img [ref=e1896]
+              - generic [ref=e1898]:
+                - generic [ref=e1900]: Previous
+                - generic [ref=e1901]: Contributor Covenant Code of Conduct
+          - generic [ref=e1902]:
+            - generic [ref=e1903]:
+              - generic [ref=e1904]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e1905] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e1906] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e1907] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e1910] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e1911]
+      - complementary [ref=e1913]:
+        - separator "Resize right sidebar" [ref=e1914]:
+          - button "Collapse right sidebar" [ref=e1915] [cursor=pointer]: ›
+        - generic [ref=e1916]:
+          - generic [ref=e1917]: On this page
+          - list [ref=e1920]:
+            - listitem [ref=e1921]:
+              - list [ref=e1922]:
+                - listitem [ref=e1923]:
+                  - link "How to Use This File" [ref=e1924] [cursor=pointer]:
+                    - /url: "#how-to-use-this-file"
+                - listitem [ref=e1925]:
+                  - link "Video Courses & YouTube Channels" [ref=e1926] [cursor=pointer]:
+                    - /url: "#video-courses-youtube-channels"
+                  - list [ref=e1927]:
+                    - listitem [ref=e1928]:
+                      - link "Mathematics & Foundations" [ref=e1929] [cursor=pointer]:
+                        - /url: "#mathematics-foundations"
+                    - listitem [ref=e1930]:
+                      - link "Deep Learning & Neural Networks" [ref=e1931] [cursor=pointer]:
+                        - /url: "#deep-learning-neural-networks"
+                    - listitem [ref=e1932]:
+                      - link "LLMs, Transformers, and Generative AI" [ref=e1933] [cursor=pointer]:
+                        - /url: "#llms-transformers-and-generative-ai"
+                    - listitem [ref=e1934]:
+                      - link "RAG, Agents, and Applied LLMs" [ref=e1935] [cursor=pointer]:
+                        - /url: "#rag-agents-and-applied-llms"
+                    - listitem [ref=e1936]:
+                      - link "Fine-tuning and MLOps" [ref=e1937] [cursor=pointer]:
+                        - /url: "#fine-tuning-and-mlops"
+                - listitem [ref=e1938]:
+                  - link "Free Online Courses" [ref=e1939] [cursor=pointer]:
+                    - /url: "#free-online-courses"
+                  - list [ref=e1940]:
+                    - listitem [ref=e1941]:
+                      - link "Must-Complete (Curated for Job Readiness)" [ref=e1942] [cursor=pointer]:
+                        - /url: "#must-complete-curated-for-job-readiness"
+                    - listitem [ref=e1943]:
+                      - link "Paid (Worth the Investment)" [ref=e1944] [cursor=pointer]:
+                        - /url: "#paid-worth-the-investment"
+                - listitem [ref=e1945]:
+                  - link "GitHub Repositories to Study" [ref=e1946] [cursor=pointer]:
+                    - /url: "#github-repositories-to-study"
+                  - list [ref=e1947]:
+                    - listitem [ref=e1948]:
+                      - link "Foundational ML" [ref=e1949] [cursor=pointer]:
+                        - /url: "#foundational-ml"
+                    - listitem [ref=e1950]:
+                      - link "Deep Learning & PyTorch" [ref=e1951] [cursor=pointer]:
+                        - /url: "#deep-learning-pytorch"
+                    - listitem [ref=e1952]:
+                      - link "LLMs and NLP" [ref=e1953] [cursor=pointer]:
+                        - /url: "#llms-and-nlp"
+                    - listitem [ref=e1954]:
+                      - link "RAG and Vector Search" [ref=e1955] [cursor=pointer]:
+                        - /url: "#rag-and-vector-search"
+                    - listitem [ref=e1956]:
+                      - link "Agents and Tool Use" [ref=e1957] [cursor=pointer]:
+                        - /url: "#agents-and-tool-use"
+                    - listitem [ref=e1958]:
+                      - link "Fine-tuning" [ref=e1959] [cursor=pointer]:
+                        - /url: "#fine-tuning"
+                    - listitem [ref=e1960]:
+                      - link "MLOps and Deployment" [ref=e1961] [cursor=pointer]:
+                        - /url: "#mlops-and-deployment"
+                    - listitem [ref=e1962]:
+                      - link "Evaluation" [ref=e1963] [cursor=pointer]:
+                        - /url: "#evaluation"
+                - listitem [ref=e1964]:
+                  - link "Blogs and Reading" [ref=e1965] [cursor=pointer]:
+                    - /url: "#blogs-and-reading"
+                  - list [ref=e1966]:
+                    - listitem [ref=e1967]:
+                      - link "Must-Read Blogs" [ref=e1968] [cursor=pointer]:
+                        - /url: "#must-read-blogs"
+                    - listitem [ref=e1969]:
+                      - link "Research Papers (Required Reading for Senior Roles)" [ref=e1970] [cursor=pointer]:
+                        - /url: "#research-papers-required-reading-for-senior-roles"
+                - listitem [ref=e1971]:
+                  - link "Datasets for Practice Projects" [ref=e1972] [cursor=pointer]:
+                    - /url: "#datasets-for-practice-projects"
+                - listitem [ref=e1973]:
+                  - link "Developer Tools to Know" [ref=e1974] [cursor=pointer]:
+                    - /url: "#developer-tools-to-know"
+                  - list [ref=e1975]:
+                    - listitem [ref=e1976]:
+                      - link "APIs and Platforms" [ref=e1977] [cursor=pointer]:
+                        - /url: "#apis-and-platforms"
+                    - listitem [ref=e1978]:
+                      - link "Development Tools" [ref=e1979] [cursor=pointer]:
+                        - /url: "#development-tools"
+                - listitem [ref=e1980]:
+                  - link "Learning Communities" [ref=e1981] [cursor=pointer]:
+                    - /url: "#learning-communities"
+                - listitem [ref=e1982]:
+                  - link "Phase-to-Resource Mapping" [ref=e1983] [cursor=pointer]:
+                    - /url: "#phase-to-resource-mapping"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

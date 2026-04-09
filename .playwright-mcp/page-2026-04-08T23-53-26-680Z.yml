@@ -1,0 +1,996 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: "#"
+              - img [ref=e73] [cursor=pointer]
+              - list [ref=e75]:
+                - listitem [ref=e76]:
+                  - 'link "Phase 8: RAG Catalog" [ref=e77] [cursor=pointer]':
+                    - /url: CATALOG.html
+                - listitem [ref=e78]:
+                  - 'link "Assignment: Build a Production-Ready RAG System" [ref=e79] [cursor=pointer]':
+                    - /url: assignment.html
+                - listitem [ref=e80]:
+                  - 'link "Challenges: RAG Systems" [ref=e81] [cursor=pointer]':
+                    - /url: challenges.html
+                - listitem [ref=e82]:
+                  - 'link "RAG: Retrieval-Augmented Generation - START HERE" [ref=e83] [cursor=pointer]':
+                    - /url: 00_START_HERE.html
+                - listitem [ref=e84]:
+                  - link "Basic RAG from Scratch" [ref=e85] [cursor=pointer]:
+                    - /url: 01_basic_rag.html
+                - listitem [ref=e86]:
+                  - link "Document Processing and Chunking" [ref=e87] [cursor=pointer]:
+                    - /url: 02_document_processing.html
+                - listitem [ref=e88]:
+                  - link "LangChain RAG" [ref=e89] [cursor=pointer]:
+                    - /url: 03_langchain_rag.html
+                - listitem [ref=e90]:
+                  - link "LlamaIndex RAG" [ref=e91] [cursor=pointer]:
+                    - /url: 04_llamaindex_rag.html
+                - listitem [ref=e92]:
+                  - link "Advanced Retrieval" [ref=e93] [cursor=pointer]:
+                    - /url: 05_advanced_retrieval.html
+                - listitem [ref=e94]:
+                  - link "Conversational RAG" [ref=e95] [cursor=pointer]:
+                    - /url: 06_conversation_rag.html
+                - listitem [ref=e96]:
+                  - link "RAG Evaluation" [ref=e97] [cursor=pointer]:
+                    - /url: 07_evaluation.html
+                - listitem [ref=e98]:
+                  - link "Advanced RAG Techniques (2025-2026 State of the Art)" [ref=e99] [cursor=pointer]:
+                    - /url: 09_advanced_retrieval.html
+                - listitem [ref=e100]:
+                  - link "GraphRAG and Visual RAG (Microsoft GraphRAG + ColPali)" [ref=e101] [cursor=pointer]:
+                    - /url: 10_graphrag_visual_rag.html
+                - listitem [ref=e102]:
+                  - 'link "Section A: Microsoft GraphRAG" [ref=e103] [cursor=pointer]':
+                    - /url: 10_graphrag_visual_rag.html#section-a-microsoft-graphrag
+                - listitem [ref=e104]:
+                  - 'link "Section B: ColPali Visual Document RAG" [ref=e105] [cursor=pointer]':
+                    - /url: 10_graphrag_visual_rag.html#section-b-colpali-visual-document-rag
+            - listitem [ref=e106]:
+              - 'link "Phase 9: MLOps" [ref=e107] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e110] [cursor=pointer]
+            - listitem [ref=e112]:
+              - 'link "Phase 10: Specializations" [ref=e113] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e116] [cursor=pointer]
+          - heading "Advanced" [ref=e118]
+          - list [ref=e119]:
+            - listitem [ref=e120]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e121] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e124] [cursor=pointer]
+            - listitem [ref=e126]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e127] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e130] [cursor=pointer]
+            - listitem [ref=e132]:
+              - 'link "Phase 13: Multimodal AI" [ref=e133] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e136] [cursor=pointer]
+            - listitem [ref=e138]:
+              - 'link "Phase 14: Local LLMs" [ref=e139] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e142] [cursor=pointer]
+            - listitem [ref=e144]:
+              - 'link "Phase 15: AI Agents" [ref=e145] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e148] [cursor=pointer]
+          - heading "Supplementary" [ref=e150]
+          - list [ref=e151]:
+            - listitem [ref=e152]:
+              - 'link "Phase 16: Model Evaluation" [ref=e153] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e156] [cursor=pointer]
+            - listitem [ref=e158]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e159] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e162] [cursor=pointer]
+            - listitem [ref=e164]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e165] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e168] [cursor=pointer]
+            - listitem [ref=e170]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e171] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e174] [cursor=pointer]
+            - listitem [ref=e176]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e177] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e180] [cursor=pointer]
+          - heading "Reference" [ref=e182]
+          - list [ref=e183]:
+            - listitem [ref=e184]:
+              - 'link "Phase 21: Quizzes" [ref=e185] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e188] [cursor=pointer]
+            - listitem [ref=e190]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e191] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e194] [cursor=pointer]
+            - listitem [ref=e196]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e197] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e200] [cursor=pointer]
+          - heading "Resources" [ref=e202]
+          - list [ref=e203]:
+            - listitem [ref=e204]:
+              - link "Master Study Guide" [ref=e205] [cursor=pointer]:
+                - /url: ../../generated/MASTER_STUDY_GUIDE.html
+            - listitem [ref=e206]:
+              - link "Career Roadmap" [ref=e207] [cursor=pointer]:
+                - /url: ../../generated/CAREER_ROADMAP.html
+            - listitem [ref=e208]:
+              - link "Interview Preparation" [ref=e209] [cursor=pointer]:
+                - /url: ../../generated/INTERVIEW_PREP.html
+            - listitem [ref=e210]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e211] [cursor=pointer]:
+                - /url: ../../generated/COMPARISON_MATRICES.html
+            - listitem [ref=e212]:
+              - link "Setup Guide - Zero to AI" [ref=e213] [cursor=pointer]:
+                - /url: ../../generated/setup.html
+            - listitem [ref=e214]:
+              - link "AI/ML Learning Checklist ✅" [ref=e215] [cursor=pointer]:
+                - /url: ../../generated/checklist.html
+          - heading "Research" [ref=e216]
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e219] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e222] [cursor=pointer]
+            - listitem [ref=e224]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e225] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e228] [cursor=pointer]
+            - listitem [ref=e230]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e231] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e234] [cursor=pointer]
+            - listitem [ref=e236]:
+              - 'link "Phase 27: Causal Inference" [ref=e237] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e240] [cursor=pointer]
+          - heading "Production" [ref=e242]
+          - list [ref=e243]:
+            - listitem [ref=e244]:
+              - 'link "Phase 28: Practical Data Science" [ref=e245] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e248] [cursor=pointer]
+            - listitem [ref=e250]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e251] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e254] [cursor=pointer]
+            - listitem [ref=e256]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e257] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e260] [cursor=pointer]
+          - heading "About" [ref=e262]
+          - list [ref=e263]:
+            - listitem [ref=e264]:
+              - link "Contributing to Zero to AI" [ref=e265] [cursor=pointer]:
+                - /url: ../../generated/CONTRIBUTING.html
+            - listitem [ref=e266]:
+              - link "Changelog" [ref=e267] [cursor=pointer]:
+                - /url: ../../generated/CHANGELOG.html
+            - listitem [ref=e268]:
+              - link "Contributor Covenant Code of Conduct" [ref=e269] [cursor=pointer]:
+                - /url: ../../generated/CODE_OF_CONDUCT.html
+            - listitem [ref=e270]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e271] [cursor=pointer]:
+                - /url: ../../generated/REFERENCES.html
+            - listitem [ref=e272]:
+              - link "Workspace Learning Review" [ref=e273] [cursor=pointer]:
+                - /url: ../../generated/WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e274]:
+              - link "License" [ref=e275] [cursor=pointer]:
+                - /url: ../../generated/LICENSE.html
+            - listitem [ref=e276]:
+              - link "Support" [ref=e277] [cursor=pointer]:
+                - /url: ../../generated/SUPPORT.html
+      - separator "Resize left sidebar" [ref=e278]:
+        - button "Collapse left sidebar" [ref=e279] [cursor=pointer]: ‹
+    - generic [ref=e280]:
+      - generic [ref=e281]:
+        - generic [ref=e282]:
+          - generic [ref=e283]:
+            - link "View this page" [ref=e285] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/08-rag/README.md?plain=true
+              - img [ref=e286]
+              - generic [ref=e288]: View this page
+            - link "Edit this page" [ref=e290] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/08-rag/README.md
+              - img [ref=e291]
+              - generic [ref=e293]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e295] [cursor=pointer]:
+              - img [ref=e296]
+            - img [ref=e300] [cursor=pointer]
+          - main [ref=e302]:
+            - generic [ref=e303]:
+              - 'heading "Phase 8: RAG" [level=1] [ref=e304]'
+              - generic [ref=e305]:
+                - heading "🎯 Overview" [level=2] [ref=e306]
+                - paragraph [ref=e307]: Combine your skills from previous phases to build production-grade RAG systems!
+                - paragraph [ref=e308]:
+                  - strong [ref=e309]: "Prerequisites:"
+                - list [ref=e310]:
+                  - listitem [ref=e311]:
+                    - paragraph [ref=e312]: ✅ Tokenization (Phase 3)
+                  - listitem [ref=e313]:
+                    - paragraph [ref=e314]: ✅ Embeddings (Phase 4)
+                  - listitem [ref=e315]:
+                    - paragraph [ref=e316]: ✅ Neural Networks (Phase 5)
+                  - listitem [ref=e317]:
+                    - paragraph [ref=e318]: ✅ Vector Databases (Phase 6)
+                - paragraph [ref=e319]:
+                  - strong [ref=e320]: "Time:"
+                  - text: 3-4 weeks | 60-80 hours
+                  - strong [ref=e321]: "Outcome:"
+                  - text: Build AI applications that can query your knowledge base
+              - generic [ref=e322]:
+                - heading "📚 What You’ll Learn" [level=2] [ref=e323]
+                - generic [ref=e324]:
+                  - heading "Core RAG Concepts" [level=3] [ref=e325]
+                  - list [ref=e326]:
+                    - listitem [ref=e327]:
+                      - paragraph [ref=e328]:
+                        - checkbox [disabled] [ref=e329]
+                        - text: RAG architecture and pipeline
+                    - listitem [ref=e330]:
+                      - paragraph [ref=e331]:
+                        - checkbox [disabled] [ref=e332]
+                        - text: Document processing and chunking strategies
+                    - listitem [ref=e333]:
+                      - paragraph [ref=e334]:
+                        - checkbox [disabled] [ref=e335]
+                        - text: Retrieval methods (dense, sparse, hybrid)
+                    - listitem [ref=e336]:
+                      - paragraph [ref=e337]:
+                        - checkbox [disabled] [ref=e338]
+                        - text: Context management and prompt construction
+                    - listitem [ref=e339]:
+                      - paragraph [ref=e340]:
+                        - checkbox [disabled] [ref=e341]
+                        - text: Re-ranking and result filtering
+                    - listitem [ref=e342]:
+                      - paragraph [ref=e343]:
+                        - checkbox [disabled] [ref=e344]
+                        - text: LLM integration (OpenAI, Anthropic, local models)
+                - generic [ref=e345]:
+                  - heading "Advanced RAG Techniques" [level=3] [ref=e346]
+                  - list [ref=e347]:
+                    - listitem [ref=e348]:
+                      - paragraph [ref=e349]:
+                        - checkbox [disabled] [ref=e350]
+                        - text: Hybrid search (vector + keyword)
+                    - listitem [ref=e351]:
+                      - paragraph [ref=e352]:
+                        - checkbox [disabled] [ref=e353]
+                        - text: Query transformation and expansion
+                    - listitem [ref=e354]:
+                      - paragraph [ref=e355]:
+                        - checkbox [disabled] [ref=e356]
+                        - text: Multi-query retrieval
+                    - listitem [ref=e357]:
+                      - paragraph [ref=e358]:
+                        - checkbox [disabled] [ref=e359]
+                        - text: Parent-document retrieval
+                    - listitem [ref=e360]:
+                      - paragraph [ref=e361]:
+                        - checkbox [disabled] [ref=e362]
+                        - text: Self-query and metadata filtering
+                    - listitem [ref=e363]:
+                      - paragraph [ref=e364]:
+                        - checkbox [disabled] [ref=e365]
+                        - text: Conversation memory and context
+              - generic [ref=e366]:
+                - heading "🗂️ Module Structure" [level=2] [ref=e367]
+                - generic [ref=e369]:
+                  - generic [ref=e370]: "08-rag/ ├── 00_START_HERE.ipynb # RAG overview and quick demo ├── 01_basic_rag.ipynb # Simple RAG from scratch ├── 02_document_processing.ipynb # Chunking strategies ├── 03_langchain_rag.ipynb # Using LangChain framework ├── 04_llamaindex_rag.ipynb # Using LlamaIndex framework ├── 05_advanced_retrieval.ipynb # Hybrid search, re-ranking ├── 06_conversation_rag.ipynb # Chat with memory ├── 07_evaluation.ipynb # RAG evaluation metrics ├── 09_advanced_retrieval.ipynb # Parent-child retrieval, ensemble ├── 10_graphrag_visual_rag.ipynb # GraphRAG and multimodal RAG ├── assignment.md # Phase assignment ├── challenges.md # Hands-on challenges └── README.md # This file"
+                  - button "Copy to clipboard" [ref=e371] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e372]
+              - generic [ref=e376]:
+                - heading "🚀 Quick Start" [level=2] [ref=e377]
+                - generic [ref=e378]:
+                  - heading "1. Basic RAG Pipeline" [level=3] [ref=e379]
+                  - generic [ref=e381]:
+                    - generic [ref=e382]: "# The fundamental RAG flow: # 1. Index documents → embeddings → vector DB # 2. User query → embedding → similarity search # 3. Retrieved docs + query → LLM → answer from sentence_transformers import SentenceTransformer from your_vector_db import VectorDB # Chroma, Qdrant, etc. from openai import OpenAI # 1. Index your documents # Use any embedding model - see 05-embeddings/embedding_comparison.md for options # API: Gemini Embedding (cheapest + best), Voyage 3.5, or OpenAI # Local: Qwen3-Embedding, BGE-M3, or all-MiniLM-L6-v2 model = SentenceTransformer('all-MiniLM-L6-v2') # local, fast docs = [\"Your documents here...\"] embeddings = model.encode(docs) db.add(documents=docs, embeddings=embeddings) # 2. Retrieve relevant context query = \"What is RAG?\" query_embedding = model.encode(query) results = db.search(query_embedding, top_k=3) # 3. Generate answer with LLM (Claude, GPT, Gemini, or local) context = \"\\n\".join(results) prompt = f\"Context: {context}\\n\\nQuestion: {query}\\n\\nAnswer:\" response = llm.generate(prompt)"
+                    - button "Copy to clipboard" [ref=e383] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e384]
+              - generic [ref=e388]:
+                - heading "📋 Learning Path" [level=2] [ref=e389]
+                - generic [ref=e390]:
+                  - 'heading "Week 1: RAG Fundamentals" [level=3] [ref=e391]'
+                  - list [ref=e392]:
+                    - listitem [ref=e393]:
+                      - paragraph [ref=e394]:
+                        - checkbox [disabled] [ref=e395]
+                        - text: Complete
+                        - code [ref=e396]: 00_START_HERE.ipynb
+                    - listitem [ref=e397]:
+                      - paragraph [ref=e398]:
+                        - checkbox [disabled] [ref=e399]
+                        - text: Build basic RAG in
+                        - code [ref=e400]: 01_basic_rag.ipynb
+                    - listitem [ref=e401]:
+                      - paragraph [ref=e402]:
+                        - checkbox [disabled] [ref=e403]
+                        - text: Learn chunking strategies in
+                        - code [ref=e404]: 02_document_processing.ipynb
+                    - listitem [ref=e405]:
+                      - paragraph [ref=e406]:
+                        - checkbox [disabled] [ref=e407]
+                        - strong [ref=e408]: "Project:"
+                        - text: Simple Q&A on your documents
+                - generic [ref=e409]:
+                  - 'heading "Week 2: RAG Frameworks" [level=3] [ref=e410]'
+                  - list [ref=e411]:
+                    - listitem [ref=e412]:
+                      - paragraph [ref=e413]:
+                        - checkbox [disabled] [ref=e414]
+                        - text: Learn LangChain in
+                        - code [ref=e415]: 03_langchain_rag.ipynb
+                    - listitem [ref=e416]:
+                      - paragraph [ref=e417]:
+                        - checkbox [disabled] [ref=e418]
+                        - text: Explore LlamaIndex in
+                        - code [ref=e419]: 04_llamaindex_rag.ipynb
+                    - listitem [ref=e420]:
+                      - paragraph [ref=e421]:
+                        - checkbox [disabled] [ref=e422]
+                        - text: Compare frameworks and choose your favorite
+                    - listitem [ref=e423]:
+                      - paragraph [ref=e424]:
+                        - checkbox [disabled] [ref=e425]
+                        - strong [ref=e426]: "Project:"
+                        - text: Build a research paper assistant
+                - generic [ref=e427]:
+                  - 'heading "Week 3: Advanced Techniques" [level=3] [ref=e428]'
+                  - list [ref=e429]:
+                    - listitem [ref=e430]:
+                      - paragraph [ref=e431]:
+                        - checkbox [disabled] [ref=e432]
+                        - text: Implement hybrid search in
+                        - code [ref=e433]: 05_advanced_retrieval.ipynb
+                    - listitem [ref=e434]:
+                      - paragraph [ref=e435]:
+                        - checkbox [disabled] [ref=e436]
+                        - text: Add conversation memory in
+                        - code [ref=e437]: 06_conversation_rag.ipynb
+                    - listitem [ref=e438]:
+                      - paragraph [ref=e439]:
+                        - checkbox [disabled] [ref=e440]
+                        - text: Learn evaluation in
+                        - code [ref=e441]: 07_evaluation.ipynb
+                    - listitem [ref=e442]:
+                      - paragraph [ref=e443]:
+                        - checkbox [disabled] [ref=e444]
+                        - strong [ref=e445]: "Project:"
+                        - text: Code search system for your repos
+                - generic [ref=e446]:
+                  - 'heading "Week 4: Production Project" [level=3] [ref=e447]'
+                  - list [ref=e448]:
+                    - listitem [ref=e449]:
+                      - paragraph [ref=e450]:
+                        - checkbox [disabled] [ref=e451]
+                        - text: Build end-to-end RAG application
+                    - listitem [ref=e452]:
+                      - paragraph [ref=e453]:
+                        - checkbox [disabled] [ref=e454]
+                        - text: Add proper error handling
+                    - listitem [ref=e455]:
+                      - paragraph [ref=e456]:
+                        - checkbox [disabled] [ref=e457]
+                        - text: Implement caching and optimization
+                    - listitem [ref=e458]:
+                      - paragraph [ref=e459]:
+                        - checkbox [disabled] [ref=e460]
+                        - text: Deploy as API (preview of Phase 8)
+                    - listitem [ref=e461]:
+                      - paragraph [ref=e462]:
+                        - checkbox [disabled] [ref=e463]
+                        - strong [ref=e464]: "Capstone:"
+                        - text: Personal knowledge assistant
+              - generic [ref=e465]:
+                - heading "🛠️ Technologies You’ll Use" [level=2] [ref=e466]
+                - paragraph [ref=e467]:
+                  - strong [ref=e468]: "LLM Frameworks:"
+                - list [ref=e469]:
+                  - listitem [ref=e470]:
+                    - paragraph [ref=e471]: LangChain - Most popular, extensive ecosystem
+                  - listitem [ref=e472]:
+                    - paragraph [ref=e473]: LlamaIndex - Best for document indexing
+                  - listitem [ref=e474]:
+                    - paragraph [ref=e475]: Haystack - Production-focused
+                - paragraph [ref=e476]:
+                  - strong [ref=e477]: "LLM Providers:"
+                - list [ref=e478]:
+                  - listitem [ref=e479]:
+                    - paragraph [ref=e480]: OpenAI (GPT-5.4, GPT-4.1, GPT-4.1-mini)
+                  - listitem [ref=e481]:
+                    - paragraph [ref=e482]: Anthropic (Claude Sonnet 4.6, Haiku 4.5)
+                  - listitem [ref=e483]:
+                    - paragraph [ref=e484]: Google (Gemini 3.1 Pro, Flash)
+                  - listitem [ref=e485]:
+                    - paragraph [ref=e486]: Local models (Qwen 3, Llama 4, DeepSeek R1 via Ollama)
+                - paragraph [ref=e487]:
+                  - strong [ref=e488]: "Vector Databases:"
+                - list [ref=e489]:
+                  - listitem [ref=e490]:
+                    - paragraph [ref=e491]: Use what you learned in Phase 6!
+                  - listitem [ref=e492]:
+                    - paragraph [ref=e493]: Chroma, Qdrant, Weaviate, Milvus
+                - paragraph [ref=e494]:
+                  - strong [ref=e495]: "Embeddings:"
+                - list [ref=e496]:
+                  - listitem [ref=e497]:
+                    - paragraph [ref=e498]: OpenAI embeddings (text-embedding-3-small/large)
+                  - listitem [ref=e499]:
+                    - paragraph [ref=e500]: Sentence Transformers (all-MiniLM-L6-v2, all-mpnet-base-v2)
+                  - listitem [ref=e501]:
+                    - paragraph [ref=e502]: Cohere embeddings
+              - generic [ref=e503]:
+                - heading "📊 Key Concepts Explained" [level=2] [ref=e504]
+                - generic [ref=e505]:
+                  - heading "1. RAG Pipeline" [level=3] [ref=e506]
+                  - generic [ref=e508]:
+                    - generic [ref=e509]: Documents → Split → Embed → Store in Vector DB ↓ User Query → Embed → Search → Retrieve Top-K ↓ Retrieved Docs + Query → LLM Prompt → Answer
+                    - button "Copy to clipboard" [ref=e510] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e511]
+                - generic [ref=e515]:
+                  - heading "2. Chunking Strategies" [level=3] [ref=e516]
+                  - paragraph [ref=e517]:
+                    - strong [ref=e518]: "Fixed-size chunks:"
+                  - generic [ref=e520]:
+                    - generic [ref=e521]: "chunk_size = 512 # tokens or characters overlap = 50 # overlap between chunks"
+                    - button "Copy to clipboard" [ref=e522] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e523]
+                  - paragraph [ref=e527]:
+                    - strong [ref=e528]: "Semantic chunks:"
+                  - list [ref=e529]:
+                    - listitem [ref=e530]:
+                      - paragraph [ref=e531]: Split by paragraphs, sentences
+                    - listitem [ref=e532]:
+                      - paragraph [ref=e533]: Preserve document structure
+                    - listitem [ref=e534]:
+                      - paragraph [ref=e535]: Maintain context boundaries
+                  - paragraph [ref=e536]:
+                    - strong [ref=e537]: "Recursive splitting:"
+                  - list [ref=e538]:
+                    - listitem [ref=e539]:
+                      - paragraph [ref=e540]: Try different separators (\n\n, \n, ., space)
+                    - listitem [ref=e541]:
+                      - paragraph [ref=e542]: Preserve hierarchy
+                - generic [ref=e543]:
+                  - heading "3. Retrieval Methods" [level=3] [ref=e544]
+                  - paragraph [ref=e545]:
+                    - strong [ref=e546]: "Dense (Vector Search):"
+                  - list [ref=e547]:
+                    - listitem [ref=e548]:
+                      - paragraph [ref=e549]: Semantic similarity
+                    - listitem [ref=e550]:
+                      - paragraph [ref=e551]: Works for paraphrased queries
+                    - listitem [ref=e552]:
+                      - paragraph [ref=e553]: Requires embeddings
+                  - paragraph [ref=e554]:
+                    - strong [ref=e555]: "Sparse (Keyword Search):"
+                  - list [ref=e556]:
+                    - listitem [ref=e557]:
+                      - paragraph [ref=e558]: BM25, TF-IDF
+                    - listitem [ref=e559]:
+                      - paragraph [ref=e560]: Exact keyword matching
+                    - listitem [ref=e561]:
+                      - paragraph [ref=e562]: Fast and interpretable
+                  - paragraph [ref=e563]:
+                    - strong [ref=e564]: "Hybrid:"
+                  - list [ref=e565]:
+                    - listitem [ref=e566]:
+                      - paragraph [ref=e567]: Combine both approaches
+                    - listitem [ref=e568]:
+                      - paragraph [ref=e569]: Re-rank with RRF (Reciprocal Rank Fusion)
+                    - listitem [ref=e570]:
+                      - paragraph [ref=e571]: Best of both worlds
+              - generic [ref=e572]:
+                - heading "🎯 Projects" [level=2] [ref=e573]
+                - generic [ref=e574]:
+                  - 'heading "Project 1: Personal Documentation Q&A" [level=3] [ref=e575]'
+                  - paragraph [ref=e576]: Build a chatbot that answers questions about your personal notes, docs, PDFs.
+                  - paragraph [ref=e577]:
+                    - strong [ref=e578]: "Features:"
+                  - list [ref=e579]:
+                    - listitem [ref=e580]:
+                      - paragraph [ref=e581]: Upload PDFs, TXTs, Markdown files
+                    - listitem [ref=e582]:
+                      - paragraph [ref=e583]: Chunk and embed documents
+                    - listitem [ref=e584]:
+                      - paragraph [ref=e585]: Conversational interface
+                    - listitem [ref=e586]:
+                      - paragraph [ref=e587]: Source citation
+                - generic [ref=e588]:
+                  - 'heading "Project 2: Code Search Engine" [level=3] [ref=e589]'
+                  - paragraph [ref=e590]: Semantic search across your GitHub repositories.
+                  - paragraph [ref=e591]:
+                    - strong [ref=e592]: "Features:"
+                  - list [ref=e593]:
+                    - listitem [ref=e594]:
+                      - paragraph [ref=e595]: Index code files (Python, JavaScript, etc.)
+                    - listitem [ref=e596]:
+                      - paragraph [ref=e597]: Search by intent (“how to connect to database?”)
+                    - listitem [ref=e598]:
+                      - paragraph [ref=e599]: Show relevant code snippets
+                    - listitem [ref=e600]:
+                      - paragraph [ref=e601]: Explain code functionality
+                - generic [ref=e602]:
+                  - 'heading "Project 3: Research Assistant" [level=3] [ref=e603]'
+                  - paragraph [ref=e604]: Query academic papers and scientific literature.
+                  - paragraph [ref=e605]:
+                    - strong [ref=e606]: "Features:"
+                  - list [ref=e607]:
+                    - listitem [ref=e608]:
+                      - paragraph [ref=e609]: Process research papers (PDFs)
+                    - listitem [ref=e610]:
+                      - paragraph [ref=e611]: Extract citations and references
+                    - listitem [ref=e612]:
+                      - paragraph [ref=e613]: Summarize papers
+                    - listitem [ref=e614]:
+                      - paragraph [ref=e615]: Compare multiple papers
+                - generic [ref=e616]:
+                  - 'heading "Project 4: Customer Support Bot" [level=3] [ref=e617]'
+                  - paragraph [ref=e618]: RAG-powered FAQ system.
+                  - paragraph [ref=e619]:
+                    - strong [ref=e620]: "Features:"
+                  - list [ref=e621]:
+                    - listitem [ref=e622]:
+                      - paragraph [ref=e623]: Index support documentation
+                    - listitem [ref=e624]:
+                      - paragraph [ref=e625]: Handle common questions
+                    - listitem [ref=e626]:
+                      - paragraph [ref=e627]: Escalate to human when needed
+                    - listitem [ref=e628]:
+                      - paragraph [ref=e629]: Track conversation context
+              - generic [ref=e630]:
+                - heading "📈 Evaluation Metrics" [level=2] [ref=e631]
+                - generic [ref=e632]:
+                  - heading "Retrieval Quality" [level=3] [ref=e633]
+                  - list [ref=e634]:
+                    - listitem [ref=e635]:
+                      - paragraph [ref=e636]:
+                        - strong [ref=e637]: "Precision@K:"
+                        - text: Relevant docs in top K results
+                    - listitem [ref=e638]:
+                      - paragraph [ref=e639]:
+                        - strong [ref=e640]: "Recall@K:"
+                        - text: "% of relevant docs retrieved"
+                    - listitem [ref=e641]:
+                      - paragraph [ref=e642]:
+                        - strong [ref=e643]: "MRR (Mean Reciprocal Rank):"
+                        - text: Position of first relevant result
+                    - listitem [ref=e644]:
+                      - paragraph [ref=e645]:
+                        - strong [ref=e646]: "NDCG:"
+                        - text: Normalized Discounted Cumulative Gain
+                - generic [ref=e647]:
+                  - heading "Generation Quality" [level=3] [ref=e648]
+                  - list [ref=e649]:
+                    - listitem [ref=e650]:
+                      - paragraph [ref=e651]:
+                        - strong [ref=e652]: "Faithfulness:"
+                        - text: Answer grounded in context
+                    - listitem [ref=e653]:
+                      - paragraph [ref=e654]:
+                        - strong [ref=e655]: "Relevance:"
+                        - text: Answer addresses the question
+                    - listitem [ref=e656]:
+                      - paragraph [ref=e657]:
+                        - strong [ref=e658]: "Correctness:"
+                        - text: Factually accurate
+                    - listitem [ref=e659]:
+                      - paragraph [ref=e660]:
+                        - strong [ref=e661]: "Human evaluation:"
+                        - text: User satisfaction
+                - generic [ref=e662]:
+                  - heading "System Metrics" [level=3] [ref=e663]
+                  - list [ref=e664]:
+                    - listitem [ref=e665]:
+                      - paragraph [ref=e666]:
+                        - strong [ref=e667]: "Latency:"
+                        - text: Response time
+                    - listitem [ref=e668]:
+                      - paragraph [ref=e669]:
+                        - strong [ref=e670]: "Cost:"
+                        - text: API costs per query
+                    - listitem [ref=e671]:
+                      - paragraph [ref=e672]:
+                        - strong [ref=e673]: "Cache hit rate:"
+                        - text: Efficiency
+              - generic [ref=e674]:
+                - heading "💡 Best Practices" [level=2] [ref=e675]
+                - generic [ref=e676]:
+                  - heading "Document Processing" [level=3] [ref=e677]
+                  - paragraph [ref=e678]:
+                    - text: "✅ Chunk size: 256-1024 tokens (experiment!)"
+                    - text: "✅ Overlap: 10-20% of chunk size"
+                    - text: ✅ Preserve metadata (source, date, author)
+                    - text: ✅ Clean text (remove headers, footers)
+                - generic [ref=e679]:
+                  - heading "Retrieval" [level=3] [ref=e680]
+                  - paragraph [ref=e681]:
+                    - text: ✅ Retrieve 3-10 documents (balance context vs noise)
+                    - text: ✅ Use hybrid search when possible
+                    - text: ✅ Re-rank results for better quality
+                    - text: ✅ Filter by metadata when relevant
+                - generic [ref=e682]:
+                  - heading "Prompting" [level=3] [ref=e683]
+                  - paragraph [ref=e684]:
+                    - text: ✅ Provide clear instructions
+                    - text: ✅ Include relevant context only
+                    - text: ✅ Ask LLM to cite sources
+                    - text: ✅ Handle “I don’t know” cases
+                - generic [ref=e685]:
+                  - heading "Production" [level=3] [ref=e686]
+                  - paragraph [ref=e687]:
+                    - text: ✅ Cache embeddings and results
+                    - text: ✅ Monitor LLM costs
+                    - text: ✅ Implement rate limiting
+                    - text: ✅ Add error handling and retries
+              - generic [ref=e688]:
+                - heading "🔗 Resources" [level=2] [ref=e689]
+                - generic [ref=e690]:
+                  - heading "Documentation" [level=3] [ref=e691]
+                  - list [ref=e692]:
+                    - listitem [ref=e693]:
+                      - paragraph [ref=e694]:
+                        - link "LangChain RAG Tutorial" [ref=e695] [cursor=pointer]:
+                          - /url: https://python.langchain.com/docs/use_cases/question_answering/
+                    - listitem [ref=e696]:
+                      - paragraph [ref=e697]:
+                        - link "LlamaIndex Docs" [ref=e698] [cursor=pointer]:
+                          - /url: https://docs.llamaindex.ai/
+                    - listitem [ref=e699]:
+                      - paragraph [ref=e700]:
+                        - link "OpenAI Embeddings Guide" [ref=e701] [cursor=pointer]:
+                          - /url: https://platform.openai.com/docs/guides/embeddings
+                - generic [ref=e702]:
+                  - heading "Papers" [level=3] [ref=e703]
+                  - list [ref=e704]:
+                    - listitem [ref=e705]:
+                      - paragraph [ref=e706]:
+                        - 'link "RAG: Retrieval-Augmented Generation" [ref=e707] [cursor=pointer]':
+                          - /url: https://arxiv.org/abs/2005.11401
+                    - listitem [ref=e708]:
+                      - paragraph [ref=e709]:
+                        - link "Improving RAG with Hybrid Search" [ref=e710] [cursor=pointer]:
+                          - /url: https://arxiv.org/abs/2210.11416
+                - generic [ref=e711]:
+                  - heading "Courses" [level=3] [ref=e712]
+                  - list [ref=e713]:
+                    - listitem [ref=e714]:
+                      - paragraph [ref=e715]:
+                        - link "DeepLearning.AI - Building RAG Applications" [ref=e716] [cursor=pointer]:
+                          - /url: https://www.deeplearning.ai/short-courses/
+                    - listitem [ref=e717]:
+                      - paragraph [ref=e718]:
+                        - link "LangChain Academy" [ref=e719] [cursor=pointer]:
+                          - /url: https://academy.langchain.com/
+                - generic [ref=e720]:
+                  - heading "Tools" [level=3] [ref=e721]
+                  - list [ref=e722]:
+                    - listitem [ref=e723]:
+                      - paragraph [ref=e724]:
+                        - link "Ollama" [ref=e725] [cursor=pointer]:
+                          - /url: https://ollama.ai/
+                        - text: "- Run local LLMs"
+                    - listitem [ref=e726]:
+                      - paragraph [ref=e727]:
+                        - link "Chroma" [ref=e728] [cursor=pointer]:
+                          - /url: https://www.trychroma.com/
+                        - text: "- Vector database"
+                    - listitem [ref=e729]:
+                      - paragraph [ref=e730]:
+                        - link "LangSmith" [ref=e731] [cursor=pointer]:
+                          - /url: https://www.langchain.com/langsmith
+                        - text: "- RAG evaluation"
+              - generic [ref=e732]:
+                - heading "✅ Completion Checklist" [level=2] [ref=e733]
+                - paragraph [ref=e734]: "Before moving to Phase 8 (MLOps), you should be able to:"
+                - list [ref=e735]:
+                  - listitem [ref=e736]:
+                    - paragraph [ref=e737]:
+                      - checkbox [disabled] [ref=e738]
+                      - text: Explain RAG architecture and benefits
+                  - listitem [ref=e739]:
+                    - paragraph [ref=e740]:
+                      - checkbox [disabled] [ref=e741]
+                      - text: Process and chunk documents effectively
+                  - listitem [ref=e742]:
+                    - paragraph [ref=e743]:
+                      - checkbox [disabled] [ref=e744]
+                      - text: Build basic RAG pipeline from scratch
+                  - listitem [ref=e745]:
+                    - paragraph [ref=e746]:
+                      - checkbox [disabled] [ref=e747]
+                      - text: Use LangChain or LlamaIndex
+                  - listitem [ref=e748]:
+                    - paragraph [ref=e749]:
+                      - checkbox [disabled] [ref=e750]
+                      - text: Implement hybrid search (dense + sparse)
+                  - listitem [ref=e751]:
+                    - paragraph [ref=e752]:
+                      - checkbox [disabled] [ref=e753]
+                      - text: Add conversation memory to chatbots
+                  - listitem [ref=e754]:
+                    - paragraph [ref=e755]:
+                      - checkbox [disabled] [ref=e756]
+                      - text: Evaluate RAG system quality
+                  - listitem [ref=e757]:
+                    - paragraph [ref=e758]:
+                      - checkbox [disabled] [ref=e759]
+                      - text: Deploy a working RAG application
+                  - listitem [ref=e760]:
+                    - paragraph [ref=e761]:
+                      - checkbox [disabled] [ref=e762]
+                      - text: Understand cost/latency tradeoffs
+                  - listitem [ref=e763]:
+                    - paragraph [ref=e764]:
+                      - checkbox [disabled] [ref=e765]
+                      - text: Handle edge cases and errors
+              - generic [ref=e766]:
+                - heading "🎓 What’s Next?" [level=2] [ref=e767]
+                - paragraph [ref=e768]:
+                  - strong [ref=e769]: "Phase 8: MLOps & Production"
+                  - text: →
+                - list [ref=e770]:
+                  - listitem [ref=e771]:
+                    - paragraph [ref=e772]: Deploy RAG as scalable API
+                  - listitem [ref=e773]:
+                    - paragraph [ref=e774]: Monitor performance and costs
+                  - listitem [ref=e775]:
+                    - paragraph [ref=e776]: CI/CD for ML systems
+                  - listitem [ref=e777]:
+                    - paragraph [ref=e778]: Cloud deployment (AWS, Azure, GCP)
+                - paragraph [ref=e779]:
+                  - strong [ref=e780]: "Phase 9: Specializations"
+                  - text: →
+                - list [ref=e781]:
+                  - listitem [ref=e782]:
+                    - paragraph [ref=e783]: Multimodal RAG (images + text)
+                  - listitem [ref=e784]:
+                    - paragraph [ref=e785]: Agent systems with RAG
+                  - listitem [ref=e786]:
+                    - paragraph [ref=e787]: Advanced prompt engineering
+                - paragraph [ref=e788]:
+                  - strong [ref=e789]: Ready to build your first RAG system?
+                  - text: → Start with
+                  - code [ref=e790]: 00_START_HERE.ipynb
+                - paragraph [ref=e791]:
+                  - strong [ref=e792]: Questions?
+                  - text: → Check the
+                  - code [ref=e793]: assignment.md
+                  - text: and
+                  - code [ref=e794]: challenges.md
+                  - text: for practice exercises
+                - paragraph [ref=e795]:
+                  - strong [ref=e796]: 🚀 Let’s build intelligent systems that can learn from your data!
+              - generic [ref=e797]:
+                - heading "Site Navigation" [level=2] [ref=e798]
+                - list [ref=e799]:
+                  - listitem [ref=e800]:
+                    - paragraph [ref=e801]:
+                      - link "Browse the phase catalog" [ref=e802] [cursor=pointer]:
+                        - /url: CATALOG.html
+        - contentinfo [ref=e803]:
+          - generic [ref=e804]:
+            - 'link "Next Phase 8: RAG Catalog" [ref=e805] [cursor=pointer]':
+              - /url: CATALOG.html
+              - generic [ref=e806]:
+                - generic [ref=e808]: Next
+                - generic [ref=e809]: "Phase 8: RAG Catalog"
+              - img [ref=e810]
+            - link "Previous 1. Connection Setup" [ref=e812] [cursor=pointer]:
+              - /url: ../07-vector-databases/06_aurora_pgvector_guide.html
+              - img [ref=e813]
+              - generic [ref=e815]:
+                - generic [ref=e817]: Previous
+                - generic [ref=e818]: 1. Connection Setup
+          - generic [ref=e819]:
+            - generic [ref=e820]:
+              - generic [ref=e821]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e822] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e823] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e824] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e827] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e828]
+      - complementary [ref=e830]:
+        - separator "Resize right sidebar" [ref=e831]:
+          - button "Collapse right sidebar" [ref=e832] [cursor=pointer]: ›
+        - generic [ref=e833]:
+          - generic [ref=e834]: On this page
+          - list [ref=e837]:
+            - listitem [ref=e838]:
+              - list [ref=e839]:
+                - listitem [ref=e840]:
+                  - link "🎯 Overview" [ref=e841] [cursor=pointer]:
+                    - /url: "#overview"
+                - listitem [ref=e842]:
+                  - link "📚 What You’ll Learn" [ref=e843] [cursor=pointer]:
+                    - /url: "#what-youll-learn"
+                  - list [ref=e844]:
+                    - listitem [ref=e845]:
+                      - link "Core RAG Concepts" [ref=e846] [cursor=pointer]:
+                        - /url: "#core-rag-concepts"
+                    - listitem [ref=e847]:
+                      - link "Advanced RAG Techniques" [ref=e848] [cursor=pointer]:
+                        - /url: "#advanced-rag-techniques"
+                - listitem [ref=e849]:
+                  - link "🗂️ Module Structure" [ref=e850] [cursor=pointer]:
+                    - /url: "#module-structure"
+                - listitem [ref=e851]:
+                  - link "🚀 Quick Start" [ref=e852] [cursor=pointer]:
+                    - /url: "#quick-start"
+                  - list [ref=e853]:
+                    - listitem [ref=e854]:
+                      - link "1. Basic RAG Pipeline" [ref=e855] [cursor=pointer]:
+                        - /url: "#basic-rag-pipeline"
+                - listitem [ref=e856]:
+                  - link "📋 Learning Path" [ref=e857] [cursor=pointer]:
+                    - /url: "#learning-path"
+                  - list [ref=e858]:
+                    - listitem [ref=e859]:
+                      - 'link "Week 1: RAG Fundamentals" [ref=e860] [cursor=pointer]':
+                        - /url: "#week-1-rag-fundamentals"
+                    - listitem [ref=e861]:
+                      - 'link "Week 2: RAG Frameworks" [ref=e862] [cursor=pointer]':
+                        - /url: "#week-2-rag-frameworks"
+                    - listitem [ref=e863]:
+                      - 'link "Week 3: Advanced Techniques" [ref=e864] [cursor=pointer]':
+                        - /url: "#week-3-advanced-techniques"
+                    - listitem [ref=e865]:
+                      - 'link "Week 4: Production Project" [ref=e866] [cursor=pointer]':
+                        - /url: "#week-4-production-project"
+                - listitem [ref=e867]:
+                  - link "🛠️ Technologies You’ll Use" [ref=e868] [cursor=pointer]:
+                    - /url: "#technologies-youll-use"
+                - listitem [ref=e869]:
+                  - link "📊 Key Concepts Explained" [ref=e870] [cursor=pointer]:
+                    - /url: "#key-concepts-explained"
+                  - list [ref=e871]:
+                    - listitem [ref=e872]:
+                      - link "1. RAG Pipeline" [ref=e873] [cursor=pointer]:
+                        - /url: "#rag-pipeline"
+                    - listitem [ref=e874]:
+                      - link "2. Chunking Strategies" [ref=e875] [cursor=pointer]:
+                        - /url: "#chunking-strategies"
+                    - listitem [ref=e876]:
+                      - link "3. Retrieval Methods" [ref=e877] [cursor=pointer]:
+                        - /url: "#retrieval-methods"
+                - listitem [ref=e878]:
+                  - link "🎯 Projects" [ref=e879] [cursor=pointer]:
+                    - /url: "#projects"
+                  - list [ref=e880]:
+                    - listitem [ref=e881]:
+                      - 'link "Project 1: Personal Documentation Q&A" [ref=e882] [cursor=pointer]':
+                        - /url: "#project-1-personal-documentation-q-a"
+                    - listitem [ref=e883]:
+                      - 'link "Project 2: Code Search Engine" [ref=e884] [cursor=pointer]':
+                        - /url: "#project-2-code-search-engine"
+                    - listitem [ref=e885]:
+                      - 'link "Project 3: Research Assistant" [ref=e886] [cursor=pointer]':
+                        - /url: "#project-3-research-assistant"
+                    - listitem [ref=e887]:
+                      - 'link "Project 4: Customer Support Bot" [ref=e888] [cursor=pointer]':
+                        - /url: "#project-4-customer-support-bot"
+                - listitem [ref=e889]:
+                  - link "📈 Evaluation Metrics" [ref=e890] [cursor=pointer]:
+                    - /url: "#evaluation-metrics"
+                  - list [ref=e891]:
+                    - listitem [ref=e892]:
+                      - link "Retrieval Quality" [ref=e893] [cursor=pointer]:
+                        - /url: "#retrieval-quality"
+                    - listitem [ref=e894]:
+                      - link "Generation Quality" [ref=e895] [cursor=pointer]:
+                        - /url: "#generation-quality"
+                    - listitem [ref=e896]:
+                      - link "System Metrics" [ref=e897] [cursor=pointer]:
+                        - /url: "#system-metrics"
+                - listitem [ref=e898]:
+                  - link "💡 Best Practices" [ref=e899] [cursor=pointer]:
+                    - /url: "#best-practices"
+                  - list [ref=e900]:
+                    - listitem [ref=e901]:
+                      - link "Document Processing" [ref=e902] [cursor=pointer]:
+                        - /url: "#document-processing"
+                    - listitem [ref=e903]:
+                      - link "Retrieval" [ref=e904] [cursor=pointer]:
+                        - /url: "#retrieval"
+                    - listitem [ref=e905]:
+                      - link "Prompting" [ref=e906] [cursor=pointer]:
+                        - /url: "#prompting"
+                    - listitem [ref=e907]:
+                      - link "Production" [ref=e908] [cursor=pointer]:
+                        - /url: "#production"
+                - listitem [ref=e909]:
+                  - link "🔗 Resources" [ref=e910] [cursor=pointer]:
+                    - /url: "#resources"
+                  - list [ref=e911]:
+                    - listitem [ref=e912]:
+                      - link "Documentation" [ref=e913] [cursor=pointer]:
+                        - /url: "#documentation"
+                    - listitem [ref=e914]:
+                      - link "Papers" [ref=e915] [cursor=pointer]:
+                        - /url: "#papers"
+                    - listitem [ref=e916]:
+                      - link "Courses" [ref=e917] [cursor=pointer]:
+                        - /url: "#courses"
+                    - listitem [ref=e918]:
+                      - link "Tools" [ref=e919] [cursor=pointer]:
+                        - /url: "#tools"
+                - listitem [ref=e920]:
+                  - link "✅ Completion Checklist" [ref=e921] [cursor=pointer]:
+                    - /url: "#completion-checklist"
+                - listitem [ref=e922]:
+                  - link "🎓 What’s Next?" [ref=e923] [cursor=pointer]:
+                    - /url: "#whats-next"
+                - listitem [ref=e924]:
+                  - link "Site Navigation" [ref=e925] [cursor=pointer]:
+                    - /url: "#site-navigation"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

@@ -1,0 +1,499 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - 'link "Phase 10: Specializations" [ref=e82] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e85] [cursor=pointer]
+          - heading "Advanced" [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e90] [cursor=pointer]':
+                - /url: "#"
+              - img [ref=e93] [cursor=pointer]
+              - list [ref=e95]:
+                - listitem [ref=e96]:
+                  - 'link "Phase 11: Prompt Engineering Catalog" [ref=e97] [cursor=pointer]':
+                    - /url: CATALOG.html
+                - listitem [ref=e98]:
+                  - 'link "Assignment: Build an Advanced Prompt Engineering System" [ref=e99] [cursor=pointer]':
+                    - /url: assignment.html
+                - listitem [ref=e100]:
+                  - link "Setup" [ref=e101] [cursor=pointer]:
+                    - /url: 00_START_HERE.html
+                - listitem [ref=e102]:
+                  - 'link "Example 1: Basic vs. Improved Prompt" [ref=e103] [cursor=pointer]':
+                    - /url: 00_START_HERE.html#example-1-basic-vs-improved-prompt
+                - listitem [ref=e104]:
+                  - 'link "Example 2: Few-Shot Learning" [ref=e105] [cursor=pointer]':
+                    - /url: 00_START_HERE.html#example-2-few-shot-learning
+                - listitem [ref=e106]:
+                  - 'link "Example 3: Chain-of-Thought Reasoning" [ref=e107] [cursor=pointer]':
+                    - /url: 00_START_HERE.html#example-3-chain-of-thought-reasoning
+                - listitem [ref=e108]:
+                  - 'link "Example 4: System Prompts" [ref=e109] [cursor=pointer]':
+                    - /url: 00_START_HERE.html#example-4-system-prompts
+                - listitem [ref=e110]:
+                  - 'link "Example 5: Structured Output" [ref=e111] [cursor=pointer]':
+                    - /url: 00_START_HERE.html#example-5-structured-output
+                - listitem [ref=e112]:
+                  - link "Key Takeaways" [ref=e113] [cursor=pointer]:
+                    - /url: 00_START_HERE.html#key-takeaways
+                - listitem [ref=e114]:
+                  - link "Next Steps" [ref=e115] [cursor=pointer]:
+                    - /url: 00_START_HERE.html#next-steps
+                - listitem [ref=e116]:
+                  - link "1. Zero-Shot Prompting" [ref=e117] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html
+                - listitem [ref=e118]:
+                  - link "2. One-Shot Prompting" [ref=e119] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#one-shot-prompting
+                - listitem [ref=e120]:
+                  - link "3. Few-Shot Prompting" [ref=e121] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#few-shot-prompting
+                - listitem [ref=e122]:
+                  - link "4. Dynamic Few-Shot Selection" [ref=e123] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#dynamic-few-shot-selection
+                - listitem [ref=e124]:
+                  - link "5. Best Practices" [ref=e125] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#best-practices
+                - listitem [ref=e126]:
+                  - link "Key Takeaways" [ref=e127] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#key-takeaways
+                - listitem [ref=e128]:
+                  - link "Model Selection (December 2025)" [ref=e129] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#model-selection-december-2025
+                - listitem [ref=e130]:
+                  - link "Next Steps" [ref=e131] [cursor=pointer]:
+                    - /url: 01_basic_prompting.html#next-steps
+                - listitem [ref=e132]:
+                  - link "1. The Classic Example" [ref=e133] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html
+                - listitem [ref=e134]:
+                  - link "2. Zero-Shot CoT" [ref=e135] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#zero-shot-cot
+                - listitem [ref=e136]:
+                  - link "3. Few-Shot CoT" [ref=e137] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#few-shot-cot
+                - listitem [ref=e138]:
+                  - link "4. Self-Consistency" [ref=e139] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#self-consistency
+                - listitem [ref=e140]:
+                  - link "5. Structured CoT" [ref=e141] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#structured-cot
+                - listitem [ref=e142]:
+                  - link "6. CoT for Code Debugging" [ref=e143] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#cot-for-code-debugging
+                - listitem [ref=e144]:
+                  - link "7. Least-to-Most Prompting" [ref=e145] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#least-to-most-prompting
+                - listitem [ref=e146]:
+                  - link "Best Practices" [ref=e147] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#best-practices
+                - listitem [ref=e148]:
+                  - link "Key Takeaways" [ref=e149] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#key-takeaways
+                - listitem [ref=e150]:
+                  - link "Next Steps" [ref=e151] [cursor=pointer]:
+                    - /url: 02_chain_of_thought.html#next-steps
+                - listitem [ref=e152]:
+                  - link "Setup" [ref=e153] [cursor=pointer]:
+                    - /url: 03_react_prompting.html
+                - listitem [ref=e154]:
+                  - link "1. Simple ReAct Example" [ref=e155] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#simple-react-example
+                - listitem [ref=e156]:
+                  - link "2. ReAct Agent" [ref=e157] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#react-agent
+                - listitem [ref=e158]:
+                  - link "3. Real Tools – Wikipedia Search" [ref=e159] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#real-tools-wikipedia-search
+                - listitem [ref=e160]:
+                  - link "4. More Complex Example" [ref=e161] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#more-complex-example
+                - listitem [ref=e162]:
+                  - link "5. Custom Tools" [ref=e163] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#custom-tools
+                - listitem [ref=e164]:
+                  - link "6. Error Handling and Self-Correction" [ref=e165] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#error-handling-and-self-correction
+                - listitem [ref=e166]:
+                  - link "Best Practices" [ref=e167] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#best-practices
+                - listitem [ref=e168]:
+                  - link "Key Takeaways" [ref=e169] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#key-takeaways
+                - listitem [ref=e170]:
+                  - link "Limitations" [ref=e171] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#limitations
+                - listitem [ref=e172]:
+                  - link "Next Steps" [ref=e173] [cursor=pointer]:
+                    - /url: 03_react_prompting.html#next-steps
+                - listitem [ref=e174]:
+                  - link "Structured LLM Outputs & Programmatic Prompting (2025-2026)" [ref=e175] [cursor=pointer]:
+                    - /url: 05_structured_outputs_dspy.html
+                - listitem [ref=e176]:
+                  - 'link "Long-Context Strategies: Working with 128K–1M Token Windows" [ref=e177] [cursor=pointer]':
+                    - /url: 06_long_context_strategies.html
+            - listitem [ref=e178]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e179] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e182] [cursor=pointer]
+            - listitem [ref=e184]:
+              - 'link "Phase 13: Multimodal AI" [ref=e185] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e188] [cursor=pointer]
+            - listitem [ref=e190]:
+              - 'link "Phase 14: Local LLMs" [ref=e191] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e194] [cursor=pointer]
+            - listitem [ref=e196]:
+              - 'link "Phase 15: AI Agents" [ref=e197] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e200] [cursor=pointer]
+          - heading "Supplementary" [ref=e202]
+          - list [ref=e203]:
+            - listitem [ref=e204]:
+              - 'link "Phase 16: Model Evaluation" [ref=e205] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e208] [cursor=pointer]
+            - listitem [ref=e210]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e211] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e214] [cursor=pointer]
+            - listitem [ref=e216]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e217] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e220] [cursor=pointer]
+            - listitem [ref=e222]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e223] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e226] [cursor=pointer]
+            - listitem [ref=e228]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e229] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e232] [cursor=pointer]
+          - heading "Reference" [ref=e234]
+          - list [ref=e235]:
+            - listitem [ref=e236]:
+              - 'link "Phase 21: Quizzes" [ref=e237] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e240] [cursor=pointer]
+            - listitem [ref=e242]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e243] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e246] [cursor=pointer]
+            - listitem [ref=e248]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e249] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e252] [cursor=pointer]
+          - heading "Resources" [ref=e254]
+          - list [ref=e255]:
+            - listitem [ref=e256]:
+              - link "Master Study Guide" [ref=e257] [cursor=pointer]:
+                - /url: ../../generated/MASTER_STUDY_GUIDE.html
+            - listitem [ref=e258]:
+              - link "Career Roadmap" [ref=e259] [cursor=pointer]:
+                - /url: ../../generated/CAREER_ROADMAP.html
+            - listitem [ref=e260]:
+              - link "Interview Preparation" [ref=e261] [cursor=pointer]:
+                - /url: ../../generated/INTERVIEW_PREP.html
+            - listitem [ref=e262]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e263] [cursor=pointer]:
+                - /url: ../../generated/COMPARISON_MATRICES.html
+            - listitem [ref=e264]:
+              - link "Setup Guide - Zero to AI" [ref=e265] [cursor=pointer]:
+                - /url: ../../generated/setup.html
+            - listitem [ref=e266]:
+              - link "AI/ML Learning Checklist ✅" [ref=e267] [cursor=pointer]:
+                - /url: ../../generated/checklist.html
+          - heading "Research" [ref=e268]
+          - list [ref=e269]:
+            - listitem [ref=e270]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e271] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e274] [cursor=pointer]
+            - listitem [ref=e276]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e277] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e280] [cursor=pointer]
+            - listitem [ref=e282]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e283] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e286] [cursor=pointer]
+            - listitem [ref=e288]:
+              - 'link "Phase 27: Causal Inference" [ref=e289] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e292] [cursor=pointer]
+          - heading "Production" [ref=e294]
+          - list [ref=e295]:
+            - listitem [ref=e296]:
+              - 'link "Phase 28: Practical Data Science" [ref=e297] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e300] [cursor=pointer]
+            - listitem [ref=e302]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e303] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e306] [cursor=pointer]
+            - listitem [ref=e308]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e309] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e312] [cursor=pointer]
+          - heading "About" [ref=e314]
+          - list [ref=e315]:
+            - listitem [ref=e316]:
+              - link "Contributing to Zero to AI" [ref=e317] [cursor=pointer]:
+                - /url: ../../generated/CONTRIBUTING.html
+            - listitem [ref=e318]:
+              - link "Changelog" [ref=e319] [cursor=pointer]:
+                - /url: ../../generated/CHANGELOG.html
+            - listitem [ref=e320]:
+              - link "Contributor Covenant Code of Conduct" [ref=e321] [cursor=pointer]:
+                - /url: ../../generated/CODE_OF_CONDUCT.html
+            - listitem [ref=e322]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e323] [cursor=pointer]:
+                - /url: ../../generated/REFERENCES.html
+            - listitem [ref=e324]:
+              - link "Workspace Learning Review" [ref=e325] [cursor=pointer]:
+                - /url: ../../generated/WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e326]:
+              - link "License" [ref=e327] [cursor=pointer]:
+                - /url: ../../generated/LICENSE.html
+            - listitem [ref=e328]:
+              - link "Support" [ref=e329] [cursor=pointer]:
+                - /url: ../../generated/SUPPORT.html
+      - separator "Resize left sidebar" [ref=e330]:
+        - button "Collapse left sidebar" [ref=e331] [cursor=pointer]: ‹
+    - generic [ref=e332]:
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - generic [ref=e335]:
+            - link "View this page" [ref=e337] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/11-prompt-engineering/README.md?plain=true
+              - img [ref=e338]
+              - generic [ref=e340]: View this page
+            - link "Edit this page" [ref=e342] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/11-prompt-engineering/README.md
+              - img [ref=e343]
+              - generic [ref=e345]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e347] [cursor=pointer]:
+              - img [ref=e348]
+            - img [ref=e352] [cursor=pointer]
+          - main [ref=e354]:
+            - generic [ref=e355]:
+              - 'heading "Phase 11: Prompt Engineering" [level=1] [ref=e356]'
+              - paragraph [ref=e357]: This module is most useful when treated as systems design for model interaction, not as a bag of prompt hacks. The repo currently focuses on the practical subset you can actually apply in production workflows.
+              - generic [ref=e358]:
+                - heading "Actual Module Contents" [level=2] [ref=e359]
+                - list [ref=e360]:
+                  - listitem [ref=e361]:
+                    - paragraph [ref=e362]:
+                      - link "00_START_HERE.ipynb" [ref=e363] [cursor=pointer]:
+                        - /url: 00_START_HERE.html
+                  - listitem [ref=e364]:
+                    - paragraph [ref=e365]:
+                      - link "01_basic_prompting.ipynb" [ref=e366] [cursor=pointer]:
+                        - /url: 01_basic_prompting.html
+                  - listitem [ref=e367]:
+                    - paragraph [ref=e368]:
+                      - link "02_chain_of_thought.ipynb" [ref=e369] [cursor=pointer]:
+                        - /url: 02_chain_of_thought.html
+                  - listitem [ref=e370]:
+                    - paragraph [ref=e371]:
+                      - link "03_react_prompting.ipynb" [ref=e372] [cursor=pointer]:
+                        - /url: 03_react_prompting.html
+                  - listitem [ref=e373]:
+                    - paragraph [ref=e374]:
+                      - link "05_structured_outputs_dspy.ipynb" [ref=e375] [cursor=pointer]:
+                        - /url: 05_structured_outputs_dspy.html
+                  - listitem [ref=e376]:
+                    - paragraph [ref=e377]:
+                      - link "06_long_context_strategies.ipynb" [ref=e378] [cursor=pointer]:
+                        - /url: 06_long_context_strategies.html
+                  - listitem [ref=e379]:
+                    - paragraph [ref=e380]:
+                      - link "assignment.md" [ref=e381] [cursor=pointer]:
+                        - /url: assignment.html
+              - generic [ref=e382]:
+                - heading "What To Learn Here" [level=2] [ref=e383]
+                - list [ref=e384]:
+                  - listitem [ref=e385]:
+                    - paragraph [ref=e386]: How prompt quality changes task reliability
+                  - listitem [ref=e387]:
+                    - paragraph [ref=e388]: When few-shot examples are worth the extra tokens
+                  - listitem [ref=e389]:
+                    - paragraph [ref=e390]: How ReAct changes model behavior when tools are involved
+                  - listitem [ref=e391]:
+                    - paragraph [ref=e392]: Why structured outputs are better than post-hoc parsing
+                  - listitem [ref=e393]:
+                    - paragraph [ref=e394]: How to handle long contexts without blindly stuffing documents into prompts
+              - generic [ref=e395]:
+                - heading "Recommended Study Order" [level=2] [ref=e396]
+                - list [ref=e397]:
+                  - listitem [ref=e398]:
+                    - paragraph [ref=e399]:
+                      - text: Start with
+                      - link "01_basic_prompting.ipynb" [ref=e400] [cursor=pointer]:
+                        - /url: 01_basic_prompting.html
+                  - listitem [ref=e401]:
+                    - paragraph [ref=e402]:
+                      - text: Move to
+                      - link "02_chain_of_thought.ipynb" [ref=e403] [cursor=pointer]:
+                        - /url: 02_chain_of_thought.html
+                      - text: for reasoning patterns
+                  - listitem [ref=e404]:
+                    - paragraph [ref=e405]:
+                      - text: Study
+                      - link "03_react_prompting.ipynb" [ref=e406] [cursor=pointer]:
+                        - /url: 03_react_prompting.html
+                      - text: before Phase 15 agents
+                  - listitem [ref=e407]:
+                    - paragraph [ref=e408]:
+                      - text: Use
+                      - link "05_structured_outputs_dspy.ipynb" [ref=e409] [cursor=pointer]:
+                        - /url: 05_structured_outputs_dspy.html
+                      - text: to connect prompting with reliability
+                  - listitem [ref=e410]:
+                    - paragraph [ref=e411]:
+                      - text: Finish with
+                      - link "06_long_context_strategies.ipynb" [ref=e412] [cursor=pointer]:
+                        - /url: 06_long_context_strategies.html
+                      - text: before deeper RAG and agent work
+              - generic [ref=e413]:
+                - heading "Learning Advice" [level=2] [ref=e414]
+                - list [ref=e415]:
+                  - listitem [ref=e416]:
+                    - paragraph [ref=e417]: Prompting is not a substitute for retrieval, fine-tuning, or evaluation.
+                  - listitem [ref=e418]:
+                    - paragraph [ref=e419]: If a task fails, ask whether the real issue is missing context, poor tools, or missing schema constraints.
+                  - listitem [ref=e420]:
+                    - paragraph [ref=e421]: Keep examples and output formats explicit; ambiguity is expensive.
+              - generic [ref=e422]:
+                - heading "Good Follow-On Projects" [level=2] [ref=e423]
+                - list [ref=e424]:
+                  - listitem [ref=e425]:
+                    - paragraph [ref=e426]: A structured extraction pipeline with validation
+                  - listitem [ref=e427]:
+                    - paragraph [ref=e428]: A multi-step research assistant using ReAct
+                  - listitem [ref=e429]:
+                    - paragraph [ref=e430]: A long-context summarizer that compares chunk-then-summarize vs direct prompting
+              - generic [ref=e431]:
+                - heading "Site Navigation" [level=2] [ref=e432]
+                - list [ref=e433]:
+                  - listitem [ref=e434]:
+                    - paragraph [ref=e435]:
+                      - link "Browse the phase catalog" [ref=e436] [cursor=pointer]:
+                        - /url: CATALOG.html
+        - contentinfo [ref=e437]:
+          - generic [ref=e438]:
+            - 'link "Next Phase 11: Prompt Engineering Catalog" [ref=e439] [cursor=pointer]':
+              - /url: CATALOG.html
+              - generic [ref=e440]:
+                - generic [ref=e442]: Next
+                - generic [ref=e443]: "Phase 11: Prompt Engineering Catalog"
+              - img [ref=e444]
+            - link "Previous Information Extraction from Documents" [ref=e446] [cursor=pointer]:
+              - /url: ../10-specializations/nlp/05_information_extraction.html
+              - img [ref=e447]
+              - generic [ref=e449]:
+                - generic [ref=e451]: Previous
+                - generic [ref=e452]: Information Extraction from Documents
+          - generic [ref=e453]:
+            - generic [ref=e454]:
+              - generic [ref=e455]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e456] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e457] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e458] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e461] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e462]
+      - complementary [ref=e464]:
+        - separator "Resize right sidebar" [ref=e465]:
+          - button "Collapse right sidebar" [ref=e466] [cursor=pointer]: ›
+        - generic [ref=e467]:
+          - generic [ref=e468]: On this page
+          - list [ref=e471]:
+            - listitem [ref=e472]:
+              - list [ref=e473]:
+                - listitem [ref=e474]:
+                  - link "Actual Module Contents" [ref=e475] [cursor=pointer]:
+                    - /url: "#actual-module-contents"
+                - listitem [ref=e476]:
+                  - link "What To Learn Here" [ref=e477] [cursor=pointer]:
+                    - /url: "#what-to-learn-here"
+                - listitem [ref=e478]:
+                  - link "Recommended Study Order" [ref=e479] [cursor=pointer]:
+                    - /url: "#recommended-study-order"
+                - listitem [ref=e480]:
+                  - link "Learning Advice" [ref=e481] [cursor=pointer]:
+                    - /url: "#learning-advice"
+                - listitem [ref=e482]:
+                  - link "Good Follow-On Projects" [ref=e483] [cursor=pointer]:
+                    - /url: "#good-follow-on-projects"
+                - listitem [ref=e484]:
+                  - link "Site Navigation" [ref=e485] [cursor=pointer]:
+                    - /url: "#site-navigation"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

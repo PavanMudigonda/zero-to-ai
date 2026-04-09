@@ -1,0 +1,785 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - 'link "Phase 10: Specializations" [ref=e82] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e85] [cursor=pointer]
+          - heading "Advanced" [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e90] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e93] [cursor=pointer]
+            - listitem [ref=e95]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e96] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - 'link "Phase 13: Multimodal AI" [ref=e102] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - 'link "Phase 14: Local LLMs" [ref=e108] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - 'link "Phase 15: AI Agents" [ref=e114] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e117] [cursor=pointer]
+          - heading "Supplementary" [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - 'link "Phase 16: Model Evaluation" [ref=e122] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e125] [cursor=pointer]
+            - listitem [ref=e127]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e128] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e134] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e140] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e146] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e149] [cursor=pointer]
+          - heading "Reference" [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - 'link "Phase 21: Quizzes" [ref=e154] [cursor=pointer]':
+                - /url: "#"
+              - img [ref=e157] [cursor=pointer]
+              - list [ref=e159]:
+                - listitem [ref=e160]:
+                  - 'link "Phase 21: Quizzes Catalog" [ref=e161] [cursor=pointer]':
+                    - /url: CATALOG.html
+                - listitem [ref=e162]:
+                  - 'link "Phase 5: Neural Networks - Post-Quiz" [ref=e163] [cursor=pointer]':
+                    - /url: phase-5-neural-networks-post-quiz.html
+                - listitem [ref=e164]:
+                  - 'link "Phase 5: Neural Networks - Pre-Quiz" [ref=e165] [cursor=pointer]':
+                    - /url: phase-5-neural-networks-pre-quiz.html
+                - listitem [ref=e166]:
+                  - 'link "Phase 7: Retrieval-Augmented Generation (RAG) - Pre-Quiz" [ref=e167] [cursor=pointer]':
+                    - /url: phase-7-rag-pre-quiz.html
+            - listitem [ref=e168]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e169] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e172] [cursor=pointer]
+            - listitem [ref=e174]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e175] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e178] [cursor=pointer]
+          - heading "Resources" [ref=e180]
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - link "Master Study Guide" [ref=e183] [cursor=pointer]:
+                - /url: ../../generated/MASTER_STUDY_GUIDE.html
+            - listitem [ref=e184]:
+              - link "Career Roadmap" [ref=e185] [cursor=pointer]:
+                - /url: ../../generated/CAREER_ROADMAP.html
+            - listitem [ref=e186]:
+              - link "Interview Preparation" [ref=e187] [cursor=pointer]:
+                - /url: ../../generated/INTERVIEW_PREP.html
+            - listitem [ref=e188]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e189] [cursor=pointer]:
+                - /url: ../../generated/COMPARISON_MATRICES.html
+            - listitem [ref=e190]:
+              - link "Setup Guide - Zero to AI" [ref=e191] [cursor=pointer]:
+                - /url: ../../generated/setup.html
+            - listitem [ref=e192]:
+              - link "AI/ML Learning Checklist ✅" [ref=e193] [cursor=pointer]:
+                - /url: ../../generated/checklist.html
+          - heading "Research" [ref=e194]
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e197] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e200] [cursor=pointer]
+            - listitem [ref=e202]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e203] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e206] [cursor=pointer]
+            - listitem [ref=e208]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e209] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e212] [cursor=pointer]
+            - listitem [ref=e214]:
+              - 'link "Phase 27: Causal Inference" [ref=e215] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e218] [cursor=pointer]
+          - heading "Production" [ref=e220]
+          - list [ref=e221]:
+            - listitem [ref=e222]:
+              - 'link "Phase 28: Practical Data Science" [ref=e223] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e226] [cursor=pointer]
+            - listitem [ref=e228]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e229] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e232] [cursor=pointer]
+            - listitem [ref=e234]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e235] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e238] [cursor=pointer]
+          - heading "About" [ref=e240]
+          - list [ref=e241]:
+            - listitem [ref=e242]:
+              - link "Contributing to Zero to AI" [ref=e243] [cursor=pointer]:
+                - /url: ../../generated/CONTRIBUTING.html
+            - listitem [ref=e244]:
+              - link "Changelog" [ref=e245] [cursor=pointer]:
+                - /url: ../../generated/CHANGELOG.html
+            - listitem [ref=e246]:
+              - link "Contributor Covenant Code of Conduct" [ref=e247] [cursor=pointer]:
+                - /url: ../../generated/CODE_OF_CONDUCT.html
+            - listitem [ref=e248]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e249] [cursor=pointer]:
+                - /url: ../../generated/REFERENCES.html
+            - listitem [ref=e250]:
+              - link "Workspace Learning Review" [ref=e251] [cursor=pointer]:
+                - /url: ../../generated/WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e252]:
+              - link "License" [ref=e253] [cursor=pointer]:
+                - /url: ../../generated/LICENSE.html
+            - listitem [ref=e254]:
+              - link "Support" [ref=e255] [cursor=pointer]:
+                - /url: ../../generated/SUPPORT.html
+      - separator "Resize left sidebar" [ref=e256]:
+        - button "Collapse left sidebar" [ref=e257] [cursor=pointer]: ‹
+    - generic [ref=e258]:
+      - generic [ref=e259]:
+        - generic [ref=e260]:
+          - generic [ref=e261]:
+            - link "View this page" [ref=e263] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/21-quizzes/README.md?plain=true
+              - img [ref=e264]
+              - generic [ref=e266]: View this page
+            - link "Edit this page" [ref=e268] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/21-quizzes/README.md
+              - img [ref=e269]
+              - generic [ref=e271]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e273] [cursor=pointer]:
+              - img [ref=e274]
+            - img [ref=e278] [cursor=pointer]
+          - main [ref=e280]:
+            - generic [ref=e281]:
+              - 'heading "Phase 21: Quizzes" [level=1] [ref=e282]'
+              - generic [ref=e283]:
+                - heading "Overview" [level=2] [ref=e284]
+                - paragraph [ref=e285]: "This directory contains pre- and post-quizzes for each phase of the Zero-to-AI course. Quizzes help learners:"
+                - list [ref=e286]:
+                  - listitem [ref=e287]:
+                    - paragraph [ref=e288]:
+                      - strong [ref=e289]: Assess prior knowledge
+                      - text: before starting a phase (pre-quiz)
+                  - listitem [ref=e290]:
+                    - paragraph [ref=e291]:
+                      - strong [ref=e292]: Validate learning outcomes
+                      - text: after completing a phase (post-quiz)
+                  - listitem [ref=e293]:
+                    - paragraph [ref=e294]:
+                      - strong [ref=e295]: Identify knowledge gaps
+                      - text: for focused review
+                  - listitem [ref=e296]:
+                    - paragraph [ref=e297]:
+                      - strong [ref=e298]: Track progress
+                      - text: throughout the course
+              - generic [ref=e299]:
+                - heading "Quiz Format" [level=2] [ref=e300]
+                - paragraph [ref=e301]: "Each quiz contains:"
+                - list [ref=e302]:
+                  - listitem [ref=e303]:
+                    - paragraph [ref=e304]:
+                      - strong [ref=e305]: 10 questions
+                      - text: (mix of multiple choice and code-based)
+                  - listitem [ref=e306]:
+                    - paragraph [ref=e307]:
+                      - strong [ref=e308]: "Time limit:"
+                      - text: 15-20 minutes
+                  - listitem [ref=e309]:
+                    - paragraph [ref=e310]:
+                      - strong [ref=e311]: "Passing score:"
+                      - text: 70% (7/10 correct)
+                  - listitem [ref=e312]:
+                    - paragraph [ref=e313]:
+                      - strong [ref=e314]: Immediate feedback
+                      - text: with explanations
+              - generic [ref=e315]:
+                - heading "Available Quizzes" [level=2] [ref=e316]
+                - table [ref=e318]:
+                  - rowgroup [ref=e319]:
+                    - row "Phase Topic Pre-Quiz Post-Quiz" [ref=e320]:
+                      - columnheader "Phase" [ref=e321]:
+                        - paragraph [ref=e322]: Phase
+                      - columnheader "Topic" [ref=e323]:
+                        - paragraph [ref=e324]: Topic
+                      - columnheader "Pre-Quiz" [ref=e325]:
+                        - paragraph [ref=e326]: Pre-Quiz
+                      - columnheader "Post-Quiz" [ref=e327]:
+                        - paragraph [ref=e328]: Post-Quiz
+                  - rowgroup [ref=e329]:
+                    - row "0 Prerequisites ✅ ✅" [ref=e330]:
+                      - cell "0" [ref=e331]:
+                        - paragraph [ref=e332]: "0"
+                      - cell "Prerequisites" [ref=e333]:
+                        - paragraph [ref=e334]: Prerequisites
+                      - cell "✅" [ref=e335]:
+                        - paragraph [ref=e336]: ✅
+                      - cell "✅" [ref=e337]:
+                        - paragraph [ref=e338]: ✅
+                    - row "1 Python Foundations ✅ ✅" [ref=e339]:
+                      - cell "1" [ref=e340]:
+                        - paragraph [ref=e341]: "1"
+                      - cell "Python Foundations" [ref=e342]:
+                        - paragraph [ref=e343]: Python Foundations
+                      - cell "✅" [ref=e344]:
+                        - paragraph [ref=e345]: ✅
+                      - cell "✅" [ref=e346]:
+                        - paragraph [ref=e347]: ✅
+                    - row "2 Math for ML ✅ ✅" [ref=e348]:
+                      - cell "2" [ref=e349]:
+                        - paragraph [ref=e350]: "2"
+                      - cell "Math for ML" [ref=e351]:
+                        - paragraph [ref=e352]: Math for ML
+                      - cell "✅" [ref=e353]:
+                        - paragraph [ref=e354]: ✅
+                      - cell "✅" [ref=e355]:
+                        - paragraph [ref=e356]: ✅
+                    - row "3 NumPy & Pandas ✅ ✅" [ref=e357]:
+                      - cell "3" [ref=e358]:
+                        - paragraph [ref=e359]: "3"
+                      - cell "NumPy & Pandas" [ref=e360]:
+                        - paragraph [ref=e361]: NumPy & Pandas
+                      - cell "✅" [ref=e362]:
+                        - paragraph [ref=e363]: ✅
+                      - cell "✅" [ref=e364]:
+                        - paragraph [ref=e365]: ✅
+                    - row "4 Data Visualization ✅ ✅" [ref=e366]:
+                      - cell "4" [ref=e367]:
+                        - paragraph [ref=e368]: "4"
+                      - cell "Data Visualization" [ref=e369]:
+                        - paragraph [ref=e370]: Data Visualization
+                      - cell "✅" [ref=e371]:
+                        - paragraph [ref=e372]: ✅
+                      - cell "✅" [ref=e373]:
+                        - paragraph [ref=e374]: ✅
+                    - row "5 Neural Networks ✅ ✅" [ref=e375]:
+                      - cell "5" [ref=e376]:
+                        - paragraph [ref=e377]: "5"
+                      - cell "Neural Networks" [ref=e378]:
+                        - paragraph [ref=e379]: Neural Networks
+                      - cell "✅" [ref=e380]:
+                        - paragraph [ref=e381]: ✅
+                      - cell "✅" [ref=e382]:
+                        - paragraph [ref=e383]: ✅
+                    - row "6 Activation Functions ✅ ✅" [ref=e384]:
+                      - cell "6" [ref=e385]:
+                        - paragraph [ref=e386]: "6"
+                      - cell "Activation Functions" [ref=e387]:
+                        - paragraph [ref=e388]: Activation Functions
+                      - cell "✅" [ref=e389]:
+                        - paragraph [ref=e390]: ✅
+                      - cell "✅" [ref=e391]:
+                        - paragraph [ref=e392]: ✅
+                    - row "7 RAG Systems ✅ ✅" [ref=e393]:
+                      - cell "7" [ref=e394]:
+                        - paragraph [ref=e395]: "7"
+                      - cell "RAG Systems" [ref=e396]:
+                        - paragraph [ref=e397]: RAG Systems
+                      - cell "✅" [ref=e398]:
+                        - paragraph [ref=e399]: ✅
+                      - cell "✅" [ref=e400]:
+                        - paragraph [ref=e401]: ✅
+                    - row "8 LangChain ✅ ✅" [ref=e402]:
+                      - cell "8" [ref=e403]:
+                        - paragraph [ref=e404]: "8"
+                      - cell "LangChain" [ref=e405]:
+                        - paragraph [ref=e406]: LangChain
+                      - cell "✅" [ref=e407]:
+                        - paragraph [ref=e408]: ✅
+                      - cell "✅" [ref=e409]:
+                        - paragraph [ref=e410]: ✅
+                    - row "9 Vector Databases ✅ ✅" [ref=e411]:
+                      - cell "9" [ref=e412]:
+                        - paragraph [ref=e413]: "9"
+                      - cell "Vector Databases" [ref=e414]:
+                        - paragraph [ref=e415]: Vector Databases
+                      - cell "✅" [ref=e416]:
+                        - paragraph [ref=e417]: ✅
+                      - cell "✅" [ref=e418]:
+                        - paragraph [ref=e419]: ✅
+                    - row "10 Prompt Engineering ✅ ✅" [ref=e420]:
+                      - cell "10" [ref=e421]:
+                        - paragraph [ref=e422]: "10"
+                      - cell "Prompt Engineering" [ref=e423]:
+                        - paragraph [ref=e424]: Prompt Engineering
+                      - cell "✅" [ref=e425]:
+                        - paragraph [ref=e426]: ✅
+                      - cell "✅" [ref=e427]:
+                        - paragraph [ref=e428]: ✅
+                    - row "11 Fine-tuning ✅ ✅" [ref=e429]:
+                      - cell "11" [ref=e430]:
+                        - paragraph [ref=e431]: "11"
+                      - cell "Fine-tuning" [ref=e432]:
+                        - paragraph [ref=e433]: Fine-tuning
+                      - cell "✅" [ref=e434]:
+                        - paragraph [ref=e435]: ✅
+                      - cell "✅" [ref=e436]:
+                        - paragraph [ref=e437]: ✅
+                    - row "12 Deployment ✅ ✅" [ref=e438]:
+                      - cell "12" [ref=e439]:
+                        - paragraph [ref=e440]: "12"
+                      - cell "Deployment" [ref=e441]:
+                        - paragraph [ref=e442]: Deployment
+                      - cell "✅" [ref=e443]:
+                        - paragraph [ref=e444]: ✅
+                      - cell "✅" [ref=e445]:
+                        - paragraph [ref=e446]: ✅
+                    - row "13 Evaluation ✅ ✅" [ref=e447]:
+                      - cell "13" [ref=e448]:
+                        - paragraph [ref=e449]: "13"
+                      - cell "Evaluation" [ref=e450]:
+                        - paragraph [ref=e451]: Evaluation
+                      - cell "✅" [ref=e452]:
+                        - paragraph [ref=e453]: ✅
+                      - cell "✅" [ref=e454]:
+                        - paragraph [ref=e455]: ✅
+              - generic [ref=e456]:
+                - heading "How to Use" [level=2] [ref=e457]
+                - generic [ref=e458]:
+                  - heading "For Learners" [level=3] [ref=e459]
+                  - list [ref=e460]:
+                    - listitem [ref=e461]:
+                      - paragraph [ref=e462]:
+                        - strong [ref=e463]: "Before starting a phase:"
+                      - list [ref=e464]:
+                        - listitem [ref=e465]:
+                          - paragraph [ref=e466]:
+                            - text: Take the
+                            - strong [ref=e467]: pre-quiz
+                            - text: to assess your baseline knowledge
+                        - listitem [ref=e468]:
+                          - paragraph [ref=e469]: Review your results to identify what to focus on
+                        - listitem [ref=e470]:
+                          - paragraph [ref=e471]: Don’t worry if you score low - that’s expected!
+                    - listitem [ref=e472]:
+                      - paragraph [ref=e473]:
+                        - strong [ref=e474]: "After completing a phase:"
+                      - list [ref=e475]:
+                        - listitem [ref=e476]:
+                          - paragraph [ref=e477]:
+                            - text: Take the
+                            - strong [ref=e478]: post-quiz
+                            - text: to validate your learning
+                        - listitem [ref=e479]:
+                          - paragraph [ref=e480]: Compare pre/post scores to measure progress
+                        - listitem [ref=e481]:
+                          - paragraph [ref=e482]: Review incorrect answers for deeper understanding
+                    - listitem [ref=e483]:
+                      - paragraph [ref=e484]:
+                        - strong [ref=e485]: "During review:"
+                      - list [ref=e486]:
+                        - listitem [ref=e487]:
+                          - paragraph [ref=e488]: Retake quizzes after revisiting content
+                        - listitem [ref=e489]:
+                          - paragraph [ref=e490]: Aim for 90%+ on post-quizzes before moving forward
+                - generic [ref=e491]:
+                  - heading "For Instructors" [level=3] [ref=e492]
+                  - list [ref=e493]:
+                    - listitem [ref=e494]:
+                      - paragraph [ref=e495]: Use pre-quiz scores to adapt teaching to class needs
+                    - listitem [ref=e496]:
+                      - paragraph [ref=e497]: Track post-quiz scores to measure learning effectiveness
+                    - listitem [ref=e498]:
+                      - paragraph [ref=e499]: Identify common misconceptions from wrong answers
+                    - listitem [ref=e500]:
+                      - paragraph [ref=e501]: Update content based on quiz performance patterns
+              - generic [ref=e502]:
+                - heading "Quiz Platforms" [level=2] [ref=e503]
+                - paragraph [ref=e504]: "Quizzes are available in multiple formats:"
+                - generic [ref=e505]:
+                  - heading "1. Google Forms (Recommended)" [level=3] [ref=e506]
+                  - list [ref=e507]:
+                    - listitem [ref=e508]:
+                      - paragraph [ref=e509]:
+                        - strong [ref=e510]: "Pros:"
+                        - text: Easy to use, automatic grading, analytics
+                    - listitem [ref=e511]:
+                      - paragraph [ref=e512]:
+                        - strong [ref=e513]: "Access:"
+                        - text: Links in each phase’s README
+                - generic [ref=e514]:
+                  - heading "2. Markdown Files" [level=3] [ref=e515]
+                  - list [ref=e516]:
+                    - listitem [ref=e517]:
+                      - paragraph [ref=e518]:
+                        - strong [ref=e519]: "Pros:"
+                        - text: Self-paced, offline access
+                    - listitem [ref=e520]:
+                      - paragraph [ref=e521]:
+                        - strong [ref=e522]: "Access:"
+                        - text: This directory (
+                        - code [ref=e523]: "*.md"
+                        - text: files)
+                - generic [ref=e524]:
+                  - heading "3. Jupyter Notebooks" [level=3] [ref=e525]
+                  - list [ref=e526]:
+                    - listitem [ref=e527]:
+                      - paragraph [ref=e528]:
+                        - strong [ref=e529]: "Pros:"
+                        - text: Interactive, code execution
+                    - listitem [ref=e530]:
+                      - paragraph [ref=e531]:
+                        - strong [ref=e532]: "Access:"
+                        - text: This directory (
+                        - code [ref=e533]: "*.ipynb"
+                        - text: files)
+                - generic [ref=e534]:
+                  - heading "4. Quiz Apps" [level=3] [ref=e535]
+                  - list [ref=e536]:
+                    - listitem [ref=e537]:
+                      - paragraph [ref=e538]:
+                        - strong [ref=e539]: "Kahoot:"
+                        - text: Classroom game mode
+                    - listitem [ref=e540]:
+                      - paragraph [ref=e541]:
+                        - strong [ref=e542]: "Quizlet:"
+                        - text: Flashcard study mode
+                    - listitem [ref=e543]:
+                      - paragraph [ref=e544]:
+                        - strong [ref=e545]: "Moodle:"
+                        - text: LMS integration
+              - generic [ref=e546]:
+                - heading "Quiz Guidelines" [level=2] [ref=e547]
+                - generic [ref=e548]:
+                  - heading "Question Types" [level=3] [ref=e549]
+                  - list [ref=e550]:
+                    - listitem [ref=e551]:
+                      - paragraph [ref=e552]:
+                        - strong [ref=e553]: Multiple Choice (60%)
+                      - generic [ref=e555]:
+                        - generic [ref=e556]: "What is the output of `len([1, 2, 3])`? A) 1 B) 2 C) 3 ✓ D) Error"
+                        - button "Copy to clipboard" [ref=e557] [cursor=pointer]:
+                          - img "Copy to clipboard" [ref=e558]
+                    - listitem [ref=e562]:
+                      - paragraph [ref=e563]:
+                        - strong [ref=e564]: Code Output (20%)
+                      - generic [ref=e566]:
+                        - generic [ref=e567]: "x = [1, 2, 3] print(x[0] + x[-1]) # What is printed?"
+                        - button "Copy to clipboard" [ref=e568] [cursor=pointer]:
+                          - img "Copy to clipboard" [ref=e569]
+                    - listitem [ref=e573]:
+                      - paragraph [ref=e574]:
+                        - strong [ref=e575]: Conceptual (20%)
+                      - generic [ref=e577]:
+                        - generic [ref=e578]: Which statement about neural networks is FALSE?
+                        - button "Copy to clipboard" [ref=e579] [cursor=pointer]:
+                          - img "Copy to clipboard" [ref=e580]
+                - generic [ref=e584]:
+                  - heading "Difficulty Levels" [level=3] [ref=e585]
+                  - list [ref=e586]:
+                    - listitem [ref=e587]:
+                      - paragraph [ref=e588]:
+                        - strong [ref=e589]: "Pre-Quiz:"
+                        - text: Mixed difficulty (30% easy, 50% medium, 20% hard)
+                    - listitem [ref=e590]:
+                      - paragraph [ref=e591]:
+                        - strong [ref=e592]: "Post-Quiz:"
+                        - text: Slightly harder (20% easy, 50% medium, 30% hard)
+                - generic [ref=e593]:
+                  - heading "Scoring" [level=3] [ref=e594]
+                  - list [ref=e595]:
+                    - listitem [ref=e596]:
+                      - paragraph [ref=e597]: "Each question: 1 point"
+                    - listitem [ref=e598]:
+                      - paragraph [ref=e599]: "Total: 10 points"
+                    - listitem [ref=e600]:
+                      - paragraph [ref=e601]: "Passing: 7+ points (70%)"
+                    - listitem [ref=e602]:
+                      - paragraph [ref=e603]: "Excellent: 9+ points (90%)"
+              - generic [ref=e604]:
+                - heading "Quiz Creation Template" [level=2] [ref=e605]
+                - paragraph [ref=e606]: "For instructors creating new quizzes:"
+                - generic [ref=e608]:
+                  - generic [ref=e609]: "# Phase X: [Topic] - [Pre/Post] Quiz **Time:** 15 minutes **Questions:** 10 **Passing Score:** 70% --- ## Question 1 (Easy) [Question text] A) [Option A] B) [Option B] C) [Option C] ✓ D) [Option D] <details> <summary>Explanation</summary> [Why C is correct and others are wrong] **Reference:** [Link to relevant content] </details> --- [Repeat for questions 2-10]"
+                  - button "Copy to clipboard" [ref=e610] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e611]
+              - generic [ref=e615]:
+                - heading "Analytics & Insights" [level=2] [ref=e616]
+                - paragraph [ref=e617]: "Track these metrics:"
+                - list [ref=e618]:
+                  - listitem [ref=e619]:
+                    - paragraph [ref=e620]:
+                      - strong [ref=e621]: "Average pre-quiz score:"
+                      - text: Baseline knowledge
+                  - listitem [ref=e622]:
+                    - paragraph [ref=e623]:
+                      - strong [ref=e624]: "Average post-quiz score:"
+                      - text: Learning effectiveness
+                  - listitem [ref=e625]:
+                    - paragraph [ref=e626]:
+                      - strong [ref=e627]: "Score improvement:"
+                      - text: Delta between pre and post
+                  - listitem [ref=e628]:
+                    - paragraph [ref=e629]:
+                      - strong [ref=e630]: "Question difficulty:"
+                      - text: "% correct per question"
+                  - listitem [ref=e631]:
+                    - paragraph [ref=e632]:
+                      - strong [ref=e633]: "Common mistakes:"
+                      - text: Frequently wrong answers
+              - generic [ref=e634]:
+                - heading "Example Results" [level=2] [ref=e635]
+                - generic [ref=e637]:
+                  - generic [ref=e638]: "Phase 5: Neural Networks ├── Pre-Quiz Average: 42% (challenging content) ├── Post-Quiz Average: 81% (strong learning) ├── Improvement: +39 points (excellent progress) └── Hardest Question: #7 (Backpropagation math)"
+                  - button "Copy to clipboard" [ref=e639] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e640]
+              - generic [ref=e644]:
+                - heading "Contributing" [level=2] [ref=e645]
+                - paragraph [ref=e646]: "To add/improve quizzes:"
+                - list [ref=e647]:
+                  - listitem [ref=e648]:
+                    - paragraph [ref=e649]: Fork the repository
+                  - listitem [ref=e650]:
+                    - paragraph [ref=e651]: Create quiz following the template
+                  - listitem [ref=e652]:
+                    - paragraph [ref=e653]: Test with 3+ reviewers
+                  - listitem [ref=e654]:
+                    - paragraph [ref=e655]: "Submit pull request with:"
+                    - list [ref=e656]:
+                      - listitem [ref=e657]:
+                        - paragraph [ref=e658]: Quiz markdown file
+                      - listitem [ref=e659]:
+                        - paragraph [ref=e660]: Answer key
+                      - listitem [ref=e661]:
+                        - paragraph [ref=e662]: Google Form link
+                      - listitem [ref=e663]:
+                        - paragraph [ref=e664]: Sample analytics
+              - generic [ref=e665]:
+                - heading "Best Practices" [level=2] [ref=e666]
+                - paragraph [ref=e667]:
+                  - text: ✅
+                  - strong [ref=e668]: "DO:"
+                - list [ref=e669]:
+                  - listitem [ref=e670]:
+                    - paragraph [ref=e671]: Cover key learning objectives
+                  - listitem [ref=e672]:
+                    - paragraph [ref=e673]: Mix difficulty levels
+                  - listitem [ref=e674]:
+                    - paragraph [ref=e675]: Provide detailed explanations
+                  - listitem [ref=e676]:
+                    - paragraph [ref=e677]: Reference course materials
+                  - listitem [ref=e678]:
+                    - paragraph [ref=e679]: Include code examples
+                  - listitem [ref=e680]:
+                    - paragraph [ref=e681]: Test thoroughly before deploying
+                - paragraph [ref=e682]:
+                  - text: ❌
+                  - strong [ref=e683]: "DON’T:"
+                - list [ref=e684]:
+                  - listitem [ref=e685]:
+                    - paragraph [ref=e686]: Use trick questions
+                  - listitem [ref=e687]:
+                    - paragraph [ref=e688]: Test obscure edge cases
+                  - listitem [ref=e689]:
+                    - paragraph [ref=e690]: Make questions ambiguous
+                  - listitem [ref=e691]:
+                    - paragraph [ref=e692]: Reuse identical questions in pre/post
+                  - listitem [ref=e693]:
+                    - paragraph [ref=e694]: Exceed 20-minute time limit
+              - generic [ref=e695]:
+                - heading "Resources" [level=2] [ref=e696]
+                - list [ref=e697]:
+                  - listitem [ref=e698]:
+                    - paragraph [ref=e699]:
+                      - link "Creating Effective Quizzes" [ref=e700] [cursor=pointer]:
+                        - /url: https://cft.vanderbilt.edu/guides-sub-pages/writing-good-multiple-choice-test-questions/
+                  - listitem [ref=e701]:
+                    - paragraph [ref=e702]:
+                      - link "Bloom’s Taxonomy" [ref=e703] [cursor=pointer]:
+                        - /url: https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
+                  - listitem [ref=e704]:
+                    - paragraph [ref=e705]:
+                      - link "Quiz Design Principles" [ref=e706] [cursor=pointer]:
+                        - /url: https://www.edutopia.org/article/designing-better-assessments
+                - paragraph [ref=e707]:
+                  - strong [ref=e708]: "Remember:"
+                  - text: Quizzes are learning tools, not gatekeepers. Use them to guide improvement, not discourage learners! 📝✨
+              - generic [ref=e709]:
+                - heading "Site Navigation" [level=2] [ref=e710]
+                - list [ref=e711]:
+                  - listitem [ref=e712]:
+                    - paragraph [ref=e713]:
+                      - link "Browse the phase catalog" [ref=e714] [cursor=pointer]:
+                        - /url: CATALOG.html
+        - contentinfo [ref=e715]:
+          - generic [ref=e716]:
+            - 'link "Next Phase 21: Quizzes Catalog" [ref=e717] [cursor=pointer]':
+              - /url: CATALOG.html
+              - generic [ref=e718]:
+                - generic [ref=e720]: Next
+                - generic [ref=e721]: "Phase 21: Quizzes Catalog"
+              - img [ref=e722]
+            - link "Previous Production-Grade Streaming Systems" [ref=e724] [cursor=pointer]:
+              - /url: ../20-streaming/04_production_streaming.html
+              - img [ref=e725]
+              - generic [ref=e727]:
+                - generic [ref=e729]: Previous
+                - generic [ref=e730]: Production-Grade Streaming Systems
+          - generic [ref=e731]:
+            - generic [ref=e732]:
+              - generic [ref=e733]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e734] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e735] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e736] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e739] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e740]
+      - complementary [ref=e742]:
+        - separator "Resize right sidebar" [ref=e743]:
+          - button "Collapse right sidebar" [ref=e744] [cursor=pointer]: ›
+        - generic [ref=e745]:
+          - generic [ref=e746]: On this page
+          - list [ref=e749]:
+            - listitem [ref=e750]:
+              - list [ref=e751]:
+                - listitem [ref=e752]:
+                  - link "Overview" [ref=e753] [cursor=pointer]:
+                    - /url: "#overview"
+                - listitem [ref=e754]:
+                  - link "Quiz Format" [ref=e755] [cursor=pointer]:
+                    - /url: "#quiz-format"
+                - listitem [ref=e756]:
+                  - link "Available Quizzes" [ref=e757] [cursor=pointer]:
+                    - /url: "#available-quizzes"
+                - listitem [ref=e758]:
+                  - link "How to Use" [ref=e759] [cursor=pointer]:
+                    - /url: "#how-to-use"
+                  - list [ref=e760]:
+                    - listitem [ref=e761]:
+                      - link "For Learners" [ref=e762] [cursor=pointer]:
+                        - /url: "#for-learners"
+                    - listitem [ref=e763]:
+                      - link "For Instructors" [ref=e764] [cursor=pointer]:
+                        - /url: "#for-instructors"
+                - listitem [ref=e765]:
+                  - link "Quiz Platforms" [ref=e766] [cursor=pointer]:
+                    - /url: "#quiz-platforms"
+                  - list [ref=e767]:
+                    - listitem [ref=e768]:
+                      - link "1. Google Forms (Recommended)" [ref=e769] [cursor=pointer]:
+                        - /url: "#google-forms-recommended"
+                    - listitem [ref=e770]:
+                      - link "2. Markdown Files" [ref=e771] [cursor=pointer]:
+                        - /url: "#markdown-files"
+                    - listitem [ref=e772]:
+                      - link "3. Jupyter Notebooks" [ref=e773] [cursor=pointer]:
+                        - /url: "#jupyter-notebooks"
+                    - listitem [ref=e774]:
+                      - link "4. Quiz Apps" [ref=e775] [cursor=pointer]:
+                        - /url: "#quiz-apps"
+                - listitem [ref=e776]:
+                  - link "Quiz Guidelines" [ref=e777] [cursor=pointer]:
+                    - /url: "#quiz-guidelines"
+                  - list [ref=e778]:
+                    - listitem [ref=e779]:
+                      - link "Question Types" [ref=e780] [cursor=pointer]:
+                        - /url: "#question-types"
+                    - listitem [ref=e781]:
+                      - link "Difficulty Levels" [ref=e782] [cursor=pointer]:
+                        - /url: "#difficulty-levels"
+                    - listitem [ref=e783]:
+                      - link "Scoring" [ref=e784] [cursor=pointer]:
+                        - /url: "#scoring"
+                - listitem [ref=e785]:
+                  - link "Quiz Creation Template" [ref=e786] [cursor=pointer]:
+                    - /url: "#quiz-creation-template"
+                - listitem [ref=e787]:
+                  - link "Analytics & Insights" [ref=e788] [cursor=pointer]:
+                    - /url: "#analytics-insights"
+                - listitem [ref=e789]:
+                  - link "Example Results" [ref=e790] [cursor=pointer]:
+                    - /url: "#example-results"
+                - listitem [ref=e791]:
+                  - link "Contributing" [ref=e792] [cursor=pointer]:
+                    - /url: "#contributing"
+                - listitem [ref=e793]:
+                  - link "Best Practices" [ref=e794] [cursor=pointer]:
+                    - /url: "#best-practices"
+                - listitem [ref=e795]:
+                  - link "Resources" [ref=e796] [cursor=pointer]:
+                    - /url: "#resources"
+                - listitem [ref=e797]:
+                  - link "Site Navigation" [ref=e798] [cursor=pointer]:
+                    - /url: "#site-navigation"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

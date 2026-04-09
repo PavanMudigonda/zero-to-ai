@@ -1,0 +1,410 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../curriculum/00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../curriculum/01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../curriculum/02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../curriculum/03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../curriculum/04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../curriculum/05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../curriculum/06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../curriculum/07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../curriculum/08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: ../curriculum/09-mlops/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - 'link "Phase 10: Specializations" [ref=e82] [cursor=pointer]':
+                - /url: ../curriculum/10-specializations/README.html
+              - img [ref=e85] [cursor=pointer]
+          - heading "Advanced" [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e90] [cursor=pointer]':
+                - /url: ../curriculum/11-prompt-engineering/README.html
+              - img [ref=e93] [cursor=pointer]
+            - listitem [ref=e95]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e96] [cursor=pointer]':
+                - /url: ../curriculum/12-llm-finetuning/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - 'link "Phase 13: Multimodal AI" [ref=e102] [cursor=pointer]':
+                - /url: ../curriculum/13-multimodal/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - 'link "Phase 14: Local LLMs" [ref=e108] [cursor=pointer]':
+                - /url: ../curriculum/14-local-llms/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - 'link "Phase 15: AI Agents" [ref=e114] [cursor=pointer]':
+                - /url: ../curriculum/15-ai-agents/README.html
+              - img [ref=e117] [cursor=pointer]
+          - heading "Supplementary" [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - 'link "Phase 16: Model Evaluation" [ref=e122] [cursor=pointer]':
+                - /url: ../curriculum/16-model-evaluation/README.html
+              - img [ref=e125] [cursor=pointer]
+            - listitem [ref=e127]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e128] [cursor=pointer]':
+                - /url: ../curriculum/17-debugging/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e134] [cursor=pointer]':
+                - /url: ../curriculum/18-low-code/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e140] [cursor=pointer]':
+                - /url: ../curriculum/19-ai-safety/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e146] [cursor=pointer]':
+                - /url: ../curriculum/20-streaming/README.html
+              - img [ref=e149] [cursor=pointer]
+          - heading "Reference" [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - 'link "Phase 21: Quizzes" [ref=e154] [cursor=pointer]':
+                - /url: ../curriculum/21-quizzes/README.html
+              - img [ref=e157] [cursor=pointer]
+            - listitem [ref=e159]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e160] [cursor=pointer]':
+                - /url: ../curriculum/22-references/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e166] [cursor=pointer]':
+                - /url: ../curriculum/23-glossary/README.html
+              - img [ref=e169] [cursor=pointer]
+          - heading "Resources" [ref=e171]
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - link "Master Study Guide" [ref=e174] [cursor=pointer]:
+                - /url: MASTER_STUDY_GUIDE.html
+            - listitem [ref=e175]:
+              - link "Career Roadmap" [ref=e176] [cursor=pointer]:
+                - /url: CAREER_ROADMAP.html
+            - listitem [ref=e177]:
+              - link "Interview Preparation" [ref=e178] [cursor=pointer]:
+                - /url: INTERVIEW_PREP.html
+            - listitem [ref=e179]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e180] [cursor=pointer]:
+                - /url: COMPARISON_MATRICES.html
+            - listitem [ref=e181]:
+              - link "Setup Guide - Zero to AI" [ref=e182] [cursor=pointer]:
+                - /url: setup.html
+            - listitem [ref=e183]:
+              - link "AI/ML Learning Checklist ✅" [ref=e184] [cursor=pointer]:
+                - /url: checklist.html
+          - heading "Research" [ref=e185]
+          - list [ref=e186]:
+            - listitem [ref=e187]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e188] [cursor=pointer]':
+                - /url: ../curriculum/24-advanced-dl/README.html
+              - img [ref=e191] [cursor=pointer]
+            - listitem [ref=e193]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e194] [cursor=pointer]':
+                - /url: ../curriculum/25-rl/README.html
+              - img [ref=e197] [cursor=pointer]
+            - listitem [ref=e199]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e200] [cursor=pointer]':
+                - /url: ../curriculum/26-time-series/README.html
+              - img [ref=e203] [cursor=pointer]
+            - listitem [ref=e205]:
+              - 'link "Phase 27: Causal Inference" [ref=e206] [cursor=pointer]':
+                - /url: ../curriculum/27-causal-inference/README.html
+              - img [ref=e209] [cursor=pointer]
+          - heading "Production" [ref=e211]
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - 'link "Phase 28: Practical Data Science" [ref=e214] [cursor=pointer]':
+                - /url: ../curriculum/28-practical-ds/README.html
+              - img [ref=e217] [cursor=pointer]
+            - listitem [ref=e219]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e220] [cursor=pointer]':
+                - /url: ../curriculum/29-ai-hardware/README.html
+              - img [ref=e223] [cursor=pointer]
+            - listitem [ref=e225]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e226] [cursor=pointer]':
+                - /url: ../curriculum/30-inference-opt/README.html
+              - img [ref=e229] [cursor=pointer]
+          - heading "About" [ref=e231]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - link "Contributing to Zero to AI" [ref=e234] [cursor=pointer]:
+                - /url: CONTRIBUTING.html
+            - listitem [ref=e235]:
+              - link "Changelog" [ref=e236] [cursor=pointer]:
+                - /url: CHANGELOG.html
+            - listitem [ref=e237]:
+              - link "Contributor Covenant Code of Conduct" [ref=e238] [cursor=pointer]:
+                - /url: CODE_OF_CONDUCT.html
+            - listitem [ref=e239]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e240] [cursor=pointer]:
+                - /url: REFERENCES.html
+            - listitem [ref=e241]:
+              - link "Workspace Learning Review" [ref=e242] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e243]:
+              - link "License" [ref=e244] [cursor=pointer]:
+                - /url: LICENSE.html
+            - listitem [ref=e245]:
+              - link "Support" [ref=e246] [cursor=pointer]:
+                - /url: SUPPORT.html
+      - separator "Resize left sidebar" [ref=e247]:
+        - button "Collapse left sidebar" [ref=e248] [cursor=pointer]: ‹
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - link "View this page" [ref=e254] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/generated/WORKSPACE_LEARNING_REVIEW.md?plain=true
+              - img [ref=e255]
+              - generic [ref=e257]: View this page
+            - link "Edit this page" [ref=e259] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/generated/WORKSPACE_LEARNING_REVIEW.md
+              - img [ref=e260]
+              - generic [ref=e262]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e264] [cursor=pointer]:
+              - img [ref=e265]
+            - img [ref=e269] [cursor=pointer]
+          - main [ref=e271]:
+            - generic [ref=e272]:
+              - heading "Workspace Learning Review" [level=1] [ref=e273]
+              - paragraph [ref=e274]: "Audit of the repo as a learning system. Main risks at this scale: navigation drift, stale guidance, uneven scaffolding."
+              - generic [ref=e275]:
+                - heading "Key Findings" [level=2] [ref=e276]
+                - list [ref=e277]:
+                  - listitem [ref=e278]:
+                    - paragraph [ref=e279]: Several phase READMEs described wrong file layouts or old phase numbering.
+                  - listitem [ref=e280]:
+                    - paragraph [ref=e281]: Root-level entry point pushed learners toward a weak or nonexistent orientation flow.
+                  - listitem [ref=e282]:
+                    - paragraph [ref=e283]:
+                      - code [ref=e284]: 23-glossary/
+                      - text: and
+                      - code [ref=e285]: 28-practical-data-science/
+                      - text: were missing usable landing pages.
+                  - listitem [ref=e286]:
+                    - paragraph [ref=e287]:
+                      - code [ref=e288]: 28-practical-data-science/00_START_HERE.ipynb
+                      - text: was empty.
+                  - listitem [ref=e289]:
+                    - paragraph [ref=e290]: Broken markdown links in top-level and phase-level guides.
+              - generic [ref=e291]:
+                - heading "Folder Priority" [level=2] [ref=e292]
+                - table [ref=e294]:
+                  - rowgroup [ref=e295]:
+                    - row "Priority Folders" [ref=e296]:
+                      - columnheader "Priority" [ref=e297]:
+                        - paragraph [ref=e298]: Priority
+                      - columnheader "Folders" [ref=e299]:
+                        - paragraph [ref=e300]: Folders
+                  - rowgroup [ref=e301]:
+                    - row "High 00-course-setup, 01-python, 05-embeddings, 06-neural-networks, 11-prompt-engineering, 12-llm-finetuning, 14-local-llms, 23-glossary, 28-practical-data-science" [ref=e302]:
+                      - cell "High" [ref=e303]:
+                        - paragraph [ref=e304]:
+                          - strong [ref=e305]: High
+                      - cell "00-course-setup, 01-python, 05-embeddings, 06-neural-networks, 11-prompt-engineering, 12-llm-finetuning, 14-local-llms, 23-glossary, 28-practical-data-science" [ref=e306]:
+                        - paragraph [ref=e307]:
+                          - code [ref=e308]: 00-course-setup
+                          - text: ","
+                          - code [ref=e309]: 01-python
+                          - text: ","
+                          - code [ref=e310]: 05-embeddings
+                          - text: ","
+                          - code [ref=e311]: 06-neural-networks
+                          - text: ","
+                          - code [ref=e312]: 11-prompt-engineering
+                          - text: ","
+                          - code [ref=e313]: 12-llm-finetuning
+                          - text: ","
+                          - code [ref=e314]: 14-local-llms
+                          - text: ","
+                          - code [ref=e315]: 23-glossary
+                          - text: ","
+                          - code [ref=e316]: 28-practical-data-science
+                    - row "Medium 02-data-science, 03-maths, 04-token, 07-vector-databases, 08-rag, 09-mlops, 10-specializations, 20-real-time-streaming, 21-quizzes, 24-advanced-deep-learning, 25-reinforcement-learning, 26-time-series, 27-causal-inference" [ref=e317]:
+                      - cell "Medium" [ref=e318]:
+                        - paragraph [ref=e319]:
+                          - strong [ref=e320]: Medium
+                      - cell "02-data-science, 03-maths, 04-token, 07-vector-databases, 08-rag, 09-mlops, 10-specializations, 20-real-time-streaming, 21-quizzes, 24-advanced-deep-learning, 25-reinforcement-learning, 26-time-series, 27-causal-inference" [ref=e321]:
+                        - paragraph [ref=e322]:
+                          - code [ref=e323]: 02-data-science
+                          - text: ","
+                          - code [ref=e324]: 03-maths
+                          - text: ","
+                          - code [ref=e325]: 04-token
+                          - text: ","
+                          - code [ref=e326]: 07-vector-databases
+                          - text: ","
+                          - code [ref=e327]: 08-rag
+                          - text: ","
+                          - code [ref=e328]: 09-mlops
+                          - text: ","
+                          - code [ref=e329]: 10-specializations
+                          - text: ","
+                          - code [ref=e330]: 20-real-time-streaming
+                          - text: ","
+                          - code [ref=e331]: 21-quizzes
+                          - text: ","
+                          - code [ref=e332]: 24-advanced-deep-learning
+                          - text: ","
+                          - code [ref=e333]: 25-reinforcement-learning
+                          - text: ","
+                          - code [ref=e334]: 26-time-series
+                          - text: ","
+                          - code [ref=e335]: 27-causal-inference
+                    - row "Low 15-ai-agents, 16-model-evaluation, 17-debugging, 18-low-code, 19-ai-safety, 22-references, scripts" [ref=e336]:
+                      - cell "Low" [ref=e337]:
+                        - paragraph [ref=e338]:
+                          - strong [ref=e339]: Low
+                      - cell "15-ai-agents, 16-model-evaluation, 17-debugging, 18-low-code, 19-ai-safety, 22-references, scripts" [ref=e340]:
+                        - paragraph [ref=e341]:
+                          - code [ref=e342]: 15-ai-agents
+                          - text: ","
+                          - code [ref=e343]: 16-model-evaluation
+                          - text: ","
+                          - code [ref=e344]: 17-debugging
+                          - text: ","
+                          - code [ref=e345]: 18-low-code
+                          - text: ","
+                          - code [ref=e346]: 19-ai-safety
+                          - text: ","
+                          - code [ref=e347]: 22-references
+                          - text: ","
+                          - code [ref=e348]: scripts
+              - generic [ref=e349]:
+                - heading "Fixes Applied" [level=2] [ref=e350]
+                - list [ref=e351]:
+                  - listitem [ref=e352]:
+                    - paragraph [ref=e353]: Corrected repo entry-point guidance in main README and setup docs
+                  - listitem [ref=e354]:
+                    - paragraph [ref=e355]:
+                      - text: Fixed stale links in
+                      - code [ref=e356]: 01-python/README.md
+                  - listitem [ref=e357]:
+                    - paragraph [ref=e358]: Rewrote phase READMEs for embeddings, neural networks, prompt engineering, fine-tuning, and local LLMs to match actual notebooks
+                  - listitem [ref=e359]:
+                    - paragraph [ref=e360]:
+                      - text: Added landing pages for
+                      - code [ref=e361]: 23-glossary/
+                      - text: and
+                      - code [ref=e362]: 28-practical-data-science/
+                  - listitem [ref=e363]:
+                    - paragraph [ref=e364]:
+                      - text: Added real start notebook for
+                      - code [ref=e365]: 28-practical-data-science/
+              - generic [ref=e366]:
+                - heading "Recommended Next Pass" [level=2] [ref=e367]
+                - list [ref=e368]:
+                  - listitem [ref=e369]:
+                    - paragraph [ref=e370]:
+                      - text: Repair broken links in
+                      - code [ref=e371]: checklist.md
+                      - text: to match current folder structure
+                  - listitem [ref=e372]:
+                    - paragraph [ref=e373]:
+                      - text: Refresh
+                      - code [ref=e374]: 07-vector-databases/README.md
+                      - text: ","
+                      - code [ref=e375]: 02-data-science/README.md
+                      - text: ","
+                      - code [ref=e376]: 03-maths/README.md
+                      - text: with stronger curation
+                  - listitem [ref=e377]:
+                    - paragraph [ref=e378]: Add “first pass / second pass / optional” guidance to every advanced phase (24+)
+        - contentinfo [ref=e379]:
+          - generic [ref=e380]:
+            - link "Next License" [ref=e381] [cursor=pointer]:
+              - /url: LICENSE.html
+              - generic [ref=e382]:
+                - generic [ref=e384]: Next
+                - generic [ref=e385]: License
+              - img [ref=e386]
+            - link "Previous Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e388] [cursor=pointer]:
+              - /url: REFERENCES.html
+              - img [ref=e389]
+              - generic [ref=e391]:
+                - generic [ref=e393]: Previous
+                - generic [ref=e394]: Complete Reference Materials — Videos, Repos, Courses, Papers
+          - generic [ref=e395]:
+            - generic [ref=e396]:
+              - generic [ref=e397]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e398] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e399] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e400] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e403] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e404]
+      - complementary [ref=e406]:
+        - separator "Resize right sidebar" [ref=e407]:
+          - button "Collapse right sidebar" [ref=e408] [cursor=pointer]: ›
+        - generic [ref=e409]:
+          - generic [ref=e410]: On this page
+          - list [ref=e413]:
+            - listitem [ref=e414]:
+              - list [ref=e415]:
+                - listitem [ref=e416]:
+                  - link "Key Findings" [ref=e417] [cursor=pointer]:
+                    - /url: "#key-findings"
+                - listitem [ref=e418]:
+                  - link "Folder Priority" [ref=e419] [cursor=pointer]:
+                    - /url: "#folder-priority"
+                - listitem [ref=e420]:
+                  - link "Fixes Applied" [ref=e421] [cursor=pointer]:
+                    - /url: "#fixes-applied"
+                - listitem [ref=e422]:
+                  - link "Recommended Next Pass" [ref=e423] [cursor=pointer]:
+                    - /url: "#recommended-next-pass"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

@@ -1,0 +1,426 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: "#"
+              - img [ref=e33] [cursor=pointer]
+              - list [ref=e35]:
+                - listitem [ref=e36]:
+                  - 'link "Phase 2: Data Science Foundations Catalog" [ref=e37] [cursor=pointer]':
+                    - /url: CATALOG.html
+                - listitem [ref=e38]:
+                  - link "How To Become a Data Engineer" [ref=e39] [cursor=pointer]:
+                    - /url: DS.html
+                - listitem [ref=e40]:
+                  - link "NumPy Examples - Consolidated & Deduplicated" [ref=e41] [cursor=pointer]:
+                    - /url: 1-numpy-examples/README.html
+                  - img [ref=e44] [cursor=pointer]
+                - listitem [ref=e46]:
+                  - link "Pandas Examples - Consolidated & Organized" [ref=e47] [cursor=pointer]:
+                    - /url: 2-pandas-examples/README.html
+                  - img [ref=e50] [cursor=pointer]
+                - listitem [ref=e52]:
+                  - link "Data Science Examples" [ref=e53] [cursor=pointer]:
+                    - /url: 3-data-science-examples/README.html
+                  - img [ref=e56] [cursor=pointer]
+                - listitem [ref=e58]:
+                  - link "Matplotlib" [ref=e59] [cursor=pointer]:
+                    - /url: 4-matplotlib/README.html
+                  - img [ref=e62] [cursor=pointer]
+                - listitem [ref=e64]:
+                  - link "Scikit-Learn Examples" [ref=e65] [cursor=pointer]:
+                    - /url: 5-scikit-learn/README.html
+                  - img [ref=e68] [cursor=pointer]
+            - listitem [ref=e70]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e71] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e74] [cursor=pointer]
+          - heading "Core AI" [ref=e76]
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - 'link "Phase 4: Tokenization" [ref=e79] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e82] [cursor=pointer]
+            - listitem [ref=e84]:
+              - 'link "Phase 5: Embeddings" [ref=e85] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e88] [cursor=pointer]
+            - listitem [ref=e90]:
+              - 'link "Phase 6: Neural Networks" [ref=e91] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e94] [cursor=pointer]
+          - heading "Applied AI" [ref=e96]
+          - list [ref=e97]:
+            - listitem [ref=e98]:
+              - 'link "Phase 7: Vector Databases" [ref=e99] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e102] [cursor=pointer]
+            - listitem [ref=e104]:
+              - 'link "Phase 8: RAG" [ref=e105] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e108] [cursor=pointer]
+            - listitem [ref=e110]:
+              - 'link "Phase 9: MLOps" [ref=e111] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e114] [cursor=pointer]
+            - listitem [ref=e116]:
+              - 'link "Phase 10: Specializations" [ref=e117] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e120] [cursor=pointer]
+          - heading "Advanced" [ref=e122]
+          - list [ref=e123]:
+            - listitem [ref=e124]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e125] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e128] [cursor=pointer]
+            - listitem [ref=e130]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e131] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e134] [cursor=pointer]
+            - listitem [ref=e136]:
+              - 'link "Phase 13: Multimodal AI" [ref=e137] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e140] [cursor=pointer]
+            - listitem [ref=e142]:
+              - 'link "Phase 14: Local LLMs" [ref=e143] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e146] [cursor=pointer]
+            - listitem [ref=e148]:
+              - 'link "Phase 15: AI Agents" [ref=e149] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e152] [cursor=pointer]
+          - heading "Supplementary" [ref=e154]
+          - list [ref=e155]:
+            - listitem [ref=e156]:
+              - 'link "Phase 16: Model Evaluation" [ref=e157] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e160] [cursor=pointer]
+            - listitem [ref=e162]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e163] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e166] [cursor=pointer]
+            - listitem [ref=e168]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e169] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e172] [cursor=pointer]
+            - listitem [ref=e174]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e175] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e178] [cursor=pointer]
+            - listitem [ref=e180]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e181] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e184] [cursor=pointer]
+          - heading "Reference" [ref=e186]
+          - list [ref=e187]:
+            - listitem [ref=e188]:
+              - 'link "Phase 21: Quizzes" [ref=e189] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e192] [cursor=pointer]
+            - listitem [ref=e194]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e195] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e198] [cursor=pointer]
+            - listitem [ref=e200]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e201] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e204] [cursor=pointer]
+          - heading "Resources" [ref=e206]
+          - list [ref=e207]:
+            - listitem [ref=e208]:
+              - link "Master Study Guide" [ref=e209] [cursor=pointer]:
+                - /url: ../../generated/MASTER_STUDY_GUIDE.html
+            - listitem [ref=e210]:
+              - link "Career Roadmap" [ref=e211] [cursor=pointer]:
+                - /url: ../../generated/CAREER_ROADMAP.html
+            - listitem [ref=e212]:
+              - link "Interview Preparation" [ref=e213] [cursor=pointer]:
+                - /url: ../../generated/INTERVIEW_PREP.html
+            - listitem [ref=e214]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e215] [cursor=pointer]:
+                - /url: ../../generated/COMPARISON_MATRICES.html
+            - listitem [ref=e216]:
+              - link "Setup Guide - Zero to AI" [ref=e217] [cursor=pointer]:
+                - /url: ../../generated/setup.html
+            - listitem [ref=e218]:
+              - link "AI/ML Learning Checklist ✅" [ref=e219] [cursor=pointer]:
+                - /url: ../../generated/checklist.html
+          - heading "Research" [ref=e220]
+          - list [ref=e221]:
+            - listitem [ref=e222]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e223] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e226] [cursor=pointer]
+            - listitem [ref=e228]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e229] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e232] [cursor=pointer]
+            - listitem [ref=e234]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e235] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e238] [cursor=pointer]
+            - listitem [ref=e240]:
+              - 'link "Phase 27: Causal Inference" [ref=e241] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e244] [cursor=pointer]
+          - heading "Production" [ref=e246]
+          - list [ref=e247]:
+            - listitem [ref=e248]:
+              - 'link "Phase 28: Practical Data Science" [ref=e249] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e252] [cursor=pointer]
+            - listitem [ref=e254]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e255] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e258] [cursor=pointer]
+            - listitem [ref=e260]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e261] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e264] [cursor=pointer]
+          - heading "About" [ref=e266]
+          - list [ref=e267]:
+            - listitem [ref=e268]:
+              - link "Contributing to Zero to AI" [ref=e269] [cursor=pointer]:
+                - /url: ../../generated/CONTRIBUTING.html
+            - listitem [ref=e270]:
+              - link "Changelog" [ref=e271] [cursor=pointer]:
+                - /url: ../../generated/CHANGELOG.html
+            - listitem [ref=e272]:
+              - link "Contributor Covenant Code of Conduct" [ref=e273] [cursor=pointer]:
+                - /url: ../../generated/CODE_OF_CONDUCT.html
+            - listitem [ref=e274]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e275] [cursor=pointer]:
+                - /url: ../../generated/REFERENCES.html
+            - listitem [ref=e276]:
+              - link "Workspace Learning Review" [ref=e277] [cursor=pointer]:
+                - /url: ../../generated/WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e278]:
+              - link "License" [ref=e279] [cursor=pointer]:
+                - /url: ../../generated/LICENSE.html
+            - listitem [ref=e280]:
+              - link "Support" [ref=e281] [cursor=pointer]:
+                - /url: ../../generated/SUPPORT.html
+      - separator "Resize left sidebar" [ref=e282]:
+        - button "Collapse left sidebar" [ref=e283] [cursor=pointer]: ‹
+    - generic [ref=e284]:
+      - generic [ref=e285]:
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - link "View this page" [ref=e289] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/02-data-science/README.md?plain=true
+              - img [ref=e290]
+              - generic [ref=e292]: View this page
+            - link "Edit this page" [ref=e294] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/02-data-science/README.md
+              - img [ref=e295]
+              - generic [ref=e297]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e299] [cursor=pointer]:
+              - img [ref=e300]
+            - img [ref=e304] [cursor=pointer]
+          - main [ref=e306]:
+            - generic [ref=e307]:
+              - 'heading "Phase 2: Data Science Foundations" [level=1] [ref=e308]'
+              - paragraph [ref=e309]:
+                - text: This folder is the practical base layer for the rest of the repo. If you are not yet comfortable with arrays, DataFrames, plots, train/test splits, and the
+                - code [ref=e310]: fit/predict/transform
+                - text: workflow, later LLM and deep learning phases will feel harder than they need to.
+              - generic [ref=e311]:
+                - heading "What This Phase Covers" [level=2] [ref=e312]
+                - list [ref=e313]:
+                  - listitem [ref=e314]:
+                    - paragraph [ref=e315]: NumPy for numerical thinking
+                  - listitem [ref=e316]:
+                    - paragraph [ref=e317]: pandas for messy real-world data
+                  - listitem [ref=e318]:
+                    - paragraph [ref=e319]: matplotlib for basic visualization
+                  - listitem [ref=e320]:
+                    - paragraph [ref=e321]: scikit-learn for classical ML workflows
+                  - listitem [ref=e322]:
+                    - paragraph [ref=e323]: broader data science examples for exploratory and applied practice
+              - generic [ref=e324]:
+                - heading "Folder Map" [level=2] [ref=e325]
+                - list [ref=e326]:
+                  - listitem [ref=e327]:
+                    - paragraph [ref=e328]:
+                      - code [ref=e329]: 1-numpy-examples/
+                      - text: ": array operations, broadcasting, indexing, exercises"
+                  - listitem [ref=e330]:
+                    - paragraph [ref=e331]:
+                      - code [ref=e332]: 2-pandas-examples/
+                      - text: ": cleaning, joins, grouping, time-series handling, projects"
+                  - listitem [ref=e333]:
+                    - paragraph [ref=e334]:
+                      - code [ref=e335]: 3-data-science-examples/
+                      - text: ": broader learning material and reference notebooks"
+                  - listitem [ref=e336]:
+                    - paragraph [ref=e337]:
+                      - code [ref=e338]: 4-matplotlib/
+                      - text: ": plotting fundamentals"
+                  - listitem [ref=e339]:
+                    - paragraph [ref=e340]:
+                      - code [ref=e341]: 5-scikit-learn/
+                      - text: ": a very large example library across major model families"
+              - generic [ref=e342]:
+                - heading "Recommended First Pass" [level=2] [ref=e343]
+                - list [ref=e344]:
+                  - listitem [ref=e345]:
+                    - paragraph [ref=e346]:
+                      - text: Work through
+                      - code [ref=e347]: 1-numpy-examples/
+                  - listitem [ref=e348]:
+                    - paragraph [ref=e349]:
+                      - text: Move to
+                      - code [ref=e350]: 2-pandas-examples/
+                  - listitem [ref=e351]:
+                    - paragraph [ref=e352]:
+                      - text: Use
+                      - code [ref=e353]: 4-matplotlib/
+                      - text: for core plotting habits
+                  - listitem [ref=e354]:
+                    - paragraph [ref=e355]:
+                      - text: In
+                      - code [ref=e356]: 5-scikit-learn/
+                      - text: ", focus first on:"
+                    - list [ref=e357]:
+                      - listitem [ref=e358]:
+                        - paragraph [ref=e359]:
+                          - code [ref=e360]: linear_model/
+                      - listitem [ref=e361]:
+                        - paragraph [ref=e362]:
+                          - code [ref=e363]: model_selection/
+                      - listitem [ref=e364]:
+                        - paragraph [ref=e365]:
+                          - code [ref=e366]: preprocessing/
+                      - listitem [ref=e367]:
+                        - paragraph [ref=e368]:
+                          - code [ref=e369]: ensemble/
+                      - listitem [ref=e370]:
+                        - paragraph [ref=e371]:
+                          - code [ref=e372]: cluster/
+                  - listitem [ref=e373]:
+                    - paragraph [ref=e374]:
+                      - text: Use
+                      - code [ref=e375]: 3-data-science-examples/
+                      - text: as breadth and reinforcement, not as a strict sequential course
+              - generic [ref=e376]:
+                - heading "Study Advice" [level=2] [ref=e377]
+                - list [ref=e378]:
+                  - listitem [ref=e379]:
+                    - paragraph [ref=e380]: Do not try to complete every scikit-learn notebook on the first pass.
+                  - listitem [ref=e381]:
+                    - paragraph [ref=e382]: "Prefer one full workflow over broad shallow browsing: data loading -> cleaning -> feature work -> split -> train -> evaluate -> explain results."
+                  - listitem [ref=e383]:
+                    - paragraph [ref=e384]: Keep notes on leakage, validation mistakes, and metric choice. Those habits matter more than memorizing APIs.
+              - generic [ref=e385]:
+                - heading "Suggested Projects" [level=2] [ref=e386]
+                - list [ref=e387]:
+                  - listitem [ref=e388]:
+                    - paragraph [ref=e389]: Iris or wine classification with proper validation
+                  - listitem [ref=e390]:
+                    - paragraph [ref=e391]: Housing-price regression with feature engineering
+                  - listitem [ref=e392]:
+                    - paragraph [ref=e393]: Customer segmentation with clustering and a short business write-up
+              - generic [ref=e394]:
+                - heading "What Comes Next" [level=2] [ref=e395]
+                - paragraph [ref=e396]: "After this phase, move to:"
+                - list [ref=e397]:
+                  - listitem [ref=e398]:
+                    - paragraph [ref=e399]:
+                      - link "03-maths/README.md" [ref=e400] [cursor=pointer]:
+                        - /url: ../03-maths/README.html
+                  - listitem [ref=e401]:
+                    - paragraph [ref=e402]:
+                      - link "04-token/" [ref=e403] [cursor=pointer]:
+                        - /url: ../04-token/README.html
+                  - listitem [ref=e404]:
+                    - paragraph [ref=e405]:
+                      - link "05-embeddings/" [ref=e406] [cursor=pointer]:
+                        - /url: ../05-embeddings/README.html
+              - generic [ref=e407]:
+                - heading "Site Navigation" [level=2] [ref=e408]
+                - list [ref=e409]:
+                  - listitem [ref=e410]:
+                    - paragraph [ref=e411]:
+                      - link "Browse the phase catalog" [ref=e412] [cursor=pointer]:
+                        - /url: CATALOG.html
+        - contentinfo [ref=e413]:
+          - generic [ref=e414]:
+            - 'link "Next Phase 2: Data Science Foundations Catalog" [ref=e415] [cursor=pointer]':
+              - /url: CATALOG.html
+              - generic [ref=e416]:
+                - generic [ref=e418]: Next
+                - generic [ref=e419]: "Phase 2: Data Science Foundations Catalog"
+              - img [ref=e420]
+            - 'link "Previous Phase 1: Python Fundamentals Catalog" [ref=e422] [cursor=pointer]':
+              - /url: ../01-python/CATALOG.html
+              - img [ref=e423]
+              - generic [ref=e425]:
+                - generic [ref=e427]: Previous
+                - generic [ref=e428]: "Phase 1: Python Fundamentals Catalog"
+          - generic [ref=e429]:
+            - generic [ref=e430]:
+              - generic [ref=e431]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e432] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e433] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e434] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e437] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e438]
+      - complementary [ref=e440]:
+        - separator "Resize right sidebar" [ref=e441]:
+          - button "Collapse right sidebar" [ref=e442] [cursor=pointer]: ›
+        - generic [ref=e443]:
+          - generic [ref=e444]: On this page
+          - list [ref=e447]:
+            - listitem [ref=e448]:
+              - list [ref=e449]:
+                - listitem [ref=e450]:
+                  - link "What This Phase Covers" [ref=e451] [cursor=pointer]:
+                    - /url: "#what-this-phase-covers"
+                - listitem [ref=e452]:
+                  - link "Folder Map" [ref=e453] [cursor=pointer]:
+                    - /url: "#folder-map"
+                - listitem [ref=e454]:
+                  - link "Recommended First Pass" [ref=e455] [cursor=pointer]:
+                    - /url: "#recommended-first-pass"
+                - listitem [ref=e456]:
+                  - link "Study Advice" [ref=e457] [cursor=pointer]:
+                    - /url: "#study-advice"
+                - listitem [ref=e458]:
+                  - link "Suggested Projects" [ref=e459] [cursor=pointer]:
+                    - /url: "#suggested-projects"
+                - listitem [ref=e460]:
+                  - link "What Comes Next" [ref=e461] [cursor=pointer]:
+                    - /url: "#what-comes-next"
+                - listitem [ref=e462]:
+                  - link "Site Navigation" [ref=e463] [cursor=pointer]:
+                    - /url: "#site-navigation"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

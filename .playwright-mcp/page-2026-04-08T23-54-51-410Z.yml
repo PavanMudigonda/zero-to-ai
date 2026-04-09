@@ -1,0 +1,713 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../curriculum/00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../curriculum/01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../curriculum/02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../curriculum/03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../curriculum/04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../curriculum/05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../curriculum/06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../curriculum/07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../curriculum/08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: ../curriculum/09-mlops/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - 'link "Phase 10: Specializations" [ref=e82] [cursor=pointer]':
+                - /url: ../curriculum/10-specializations/README.html
+              - img [ref=e85] [cursor=pointer]
+          - heading "Advanced" [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e90] [cursor=pointer]':
+                - /url: ../curriculum/11-prompt-engineering/README.html
+              - img [ref=e93] [cursor=pointer]
+            - listitem [ref=e95]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e96] [cursor=pointer]':
+                - /url: ../curriculum/12-llm-finetuning/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - 'link "Phase 13: Multimodal AI" [ref=e102] [cursor=pointer]':
+                - /url: ../curriculum/13-multimodal/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - 'link "Phase 14: Local LLMs" [ref=e108] [cursor=pointer]':
+                - /url: ../curriculum/14-local-llms/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - 'link "Phase 15: AI Agents" [ref=e114] [cursor=pointer]':
+                - /url: ../curriculum/15-ai-agents/README.html
+              - img [ref=e117] [cursor=pointer]
+          - heading "Supplementary" [ref=e119]
+          - list [ref=e120]:
+            - listitem [ref=e121]:
+              - 'link "Phase 16: Model Evaluation" [ref=e122] [cursor=pointer]':
+                - /url: ../curriculum/16-model-evaluation/README.html
+              - img [ref=e125] [cursor=pointer]
+            - listitem [ref=e127]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e128] [cursor=pointer]':
+                - /url: ../curriculum/17-debugging/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e134] [cursor=pointer]':
+                - /url: ../curriculum/18-low-code/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e140] [cursor=pointer]':
+                - /url: ../curriculum/19-ai-safety/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e146] [cursor=pointer]':
+                - /url: ../curriculum/20-streaming/README.html
+              - img [ref=e149] [cursor=pointer]
+          - heading "Reference" [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - 'link "Phase 21: Quizzes" [ref=e154] [cursor=pointer]':
+                - /url: ../curriculum/21-quizzes/README.html
+              - img [ref=e157] [cursor=pointer]
+            - listitem [ref=e159]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e160] [cursor=pointer]':
+                - /url: ../curriculum/22-references/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e166] [cursor=pointer]':
+                - /url: ../curriculum/23-glossary/README.html
+              - img [ref=e169] [cursor=pointer]
+          - heading "Resources" [ref=e171]
+          - list [ref=e172]:
+            - listitem [ref=e173]:
+              - link "Master Study Guide" [ref=e174] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e175]:
+              - link "Career Roadmap" [ref=e176] [cursor=pointer]:
+                - /url: CAREER_ROADMAP.html
+            - listitem [ref=e177]:
+              - link "Interview Preparation" [ref=e178] [cursor=pointer]:
+                - /url: INTERVIEW_PREP.html
+            - listitem [ref=e179]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e180] [cursor=pointer]:
+                - /url: COMPARISON_MATRICES.html
+            - listitem [ref=e181]:
+              - link "Setup Guide - Zero to AI" [ref=e182] [cursor=pointer]:
+                - /url: setup.html
+            - listitem [ref=e183]:
+              - link "AI/ML Learning Checklist ✅" [ref=e184] [cursor=pointer]:
+                - /url: checklist.html
+          - heading "Research" [ref=e185]
+          - list [ref=e186]:
+            - listitem [ref=e187]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e188] [cursor=pointer]':
+                - /url: ../curriculum/24-advanced-dl/README.html
+              - img [ref=e191] [cursor=pointer]
+            - listitem [ref=e193]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e194] [cursor=pointer]':
+                - /url: ../curriculum/25-rl/README.html
+              - img [ref=e197] [cursor=pointer]
+            - listitem [ref=e199]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e200] [cursor=pointer]':
+                - /url: ../curriculum/26-time-series/README.html
+              - img [ref=e203] [cursor=pointer]
+            - listitem [ref=e205]:
+              - 'link "Phase 27: Causal Inference" [ref=e206] [cursor=pointer]':
+                - /url: ../curriculum/27-causal-inference/README.html
+              - img [ref=e209] [cursor=pointer]
+          - heading "Production" [ref=e211]
+          - list [ref=e212]:
+            - listitem [ref=e213]:
+              - 'link "Phase 28: Practical Data Science" [ref=e214] [cursor=pointer]':
+                - /url: ../curriculum/28-practical-ds/README.html
+              - img [ref=e217] [cursor=pointer]
+            - listitem [ref=e219]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e220] [cursor=pointer]':
+                - /url: ../curriculum/29-ai-hardware/README.html
+              - img [ref=e223] [cursor=pointer]
+            - listitem [ref=e225]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e226] [cursor=pointer]':
+                - /url: ../curriculum/30-inference-opt/README.html
+              - img [ref=e229] [cursor=pointer]
+          - heading "About" [ref=e231]
+          - list [ref=e232]:
+            - listitem [ref=e233]:
+              - link "Contributing to Zero to AI" [ref=e234] [cursor=pointer]:
+                - /url: CONTRIBUTING.html
+            - listitem [ref=e235]:
+              - link "Changelog" [ref=e236] [cursor=pointer]:
+                - /url: CHANGELOG.html
+            - listitem [ref=e237]:
+              - link "Contributor Covenant Code of Conduct" [ref=e238] [cursor=pointer]:
+                - /url: CODE_OF_CONDUCT.html
+            - listitem [ref=e239]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e240] [cursor=pointer]:
+                - /url: REFERENCES.html
+            - listitem [ref=e241]:
+              - link "Workspace Learning Review" [ref=e242] [cursor=pointer]:
+                - /url: WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e243]:
+              - link "License" [ref=e244] [cursor=pointer]:
+                - /url: LICENSE.html
+            - listitem [ref=e245]:
+              - link "Support" [ref=e246] [cursor=pointer]:
+                - /url: SUPPORT.html
+      - separator "Resize left sidebar" [ref=e247]:
+        - button "Collapse left sidebar" [ref=e248] [cursor=pointer]: ‹
+    - generic [ref=e249]:
+      - generic [ref=e250]:
+        - generic [ref=e251]:
+          - generic [ref=e252]:
+            - link "View this page" [ref=e254] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/generated/MASTER_STUDY_GUIDE.md?plain=true
+              - img [ref=e255]
+              - generic [ref=e257]: View this page
+            - link "Edit this page" [ref=e259] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/generated/MASTER_STUDY_GUIDE.md
+              - img [ref=e260]
+              - generic [ref=e262]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e264] [cursor=pointer]:
+              - img [ref=e265]
+            - img [ref=e269] [cursor=pointer]
+          - main [ref=e271]:
+            - generic [ref=e272]:
+              - heading "Master Study Guide" [level=1] [ref=e273]
+              - paragraph [ref=e274]: "Goal: Become a competitive AI/ML engineer in 6-12 months."
+              - generic [ref=e275]:
+                - heading "How to Use This Guide" [level=2] [ref=e276]
+                - list [ref=e277]:
+                  - listitem [ref=e278]:
+                    - paragraph [ref=e279]: Read top-to-bottom once for the full picture
+                  - listitem [ref=e280]:
+                    - paragraph [ref=e281]:
+                      - text: Use
+                      - link "CAREER_ROADMAP.md" [ref=e282] [cursor=pointer]:
+                        - /url: CAREER_ROADMAP.html
+                      - text: to target job roles
+                  - listitem [ref=e283]:
+                    - paragraph [ref=e284]:
+                      - text: Follow
+                      - link "checklist.md" [ref=e285] [cursor=pointer]:
+                        - /url: checklist.html
+                      - text: to track progress
+                  - listitem [ref=e286]:
+                    - paragraph [ref=e287]:
+                      - text: Use
+                      - link "REFERENCES.md" [ref=e288] [cursor=pointer]:
+                        - /url: REFERENCES.html
+                      - text: for courses and papers per phase
+                  - listitem [ref=e289]:
+                    - paragraph [ref=e290]:
+                      - text: Use
+                      - link "INTERVIEW_PREP.md" [ref=e291] [cursor=pointer]:
+                        - /url: INTERVIEW_PREP.html
+                      - text: for practice
+                  - listitem [ref=e292]:
+                    - paragraph [ref=e293]: Build portfolio projects progressively — they matter more than certifications
+              - generic [ref=e294]:
+                - heading "Learning Tracks" [level=2] [ref=e295]
+                - generic [ref=e296]:
+                  - 'heading "Track A: AI Engineer (4-6 months)" [level=3] [ref=e297]'
+                  - paragraph [ref=e298]: Focus on LLMs, RAG, agents, deployment. Skip deep math.
+                  - generic [ref=e300]:
+                    - generic [ref=e301]: "Month 1: Phase 0 (Foundations) → Phase 4 (Embeddings) → Phase 5 (NN basics only) Month 2: Phase 6 (Vector DBs) → Phase 7 (RAG) → Phase 18 (Low-code demos) Month 3: Phase 10 (Prompt Eng) → Phase 13 (Local LLMs) → Phase 14 (Agents) Month 4: Phase 8 (MLOps) → Phase 11 (Fine-tuning) → Portfolio projects Month 5: Interview prep → Applications"
+                    - button "Copy to clipboard" [ref=e302] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e303]
+                - generic [ref=e307]:
+                  - 'heading "Track B: ML Engineer (8-10 months)" [level=3] [ref=e308]'
+                  - paragraph [ref=e309]: Full foundation plus advanced topics.
+                  - generic [ref=e311]:
+                    - generic [ref=e312]: "Month 1-2: Phases 0-2 (Python, Data Science, Math) Month 3: Phases 3-5 (Tokenization, Embeddings, Neural Networks) Month 4: Phases 6-7 (Vector DBs, RAG) + Phase 18 (demos) Month 5: Phases 8-9 (MLOps, Specializations) + Phase 16 (Eval) Month 6-7: Phases 10-14 (Prompt Eng, Fine-tuning, Agents, Local LLMs) Month 8: Phase 19 (Safety) + Portfolio + Phase 15 (Streaming) Month 9: Interview prep + Applications"
+                    - button "Copy to clipboard" [ref=e313] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e314]
+                - generic [ref=e318]:
+                  - 'heading "Track C: Data Scientist (6-8 months)" [level=3] [ref=e319]'
+                  - paragraph [ref=e320]: Statistics, experimentation, classical ML.
+                  - generic [ref=e322]:
+                    - generic [ref=e323]: "Month 1-2: Phases 0-2 (Python, Statistics, Math) Month 3-4: Phase 27 (Causal Inference) + Phase 26 (Time Series) Month 5: Phase 7 (RAG) + Phase 10 (Prompt Eng) Month 6: Phase 16 (Eval) + Portfolio + Interview prep"
+                    - button "Copy to clipboard" [ref=e324] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e325]
+              - generic [ref=e329]:
+                - heading "Phase-by-Phase Notes" [level=2] [ref=e330]
+                - generic [ref=e331]:
+                  - 'heading "Phase 0: Foundations (1 week)" [level=3] [ref=e332]'
+                  - paragraph [ref=e333]: Supervised vs unsupervised vs RL. Train/val/test splits. Overfitting. Loss functions. ML vs deep learning vs LLMs.
+                  - paragraph [ref=e334]:
+                    - text: "Start:"
+                    - link "23-glossary/GLOSSARY.md" [ref=e335] [cursor=pointer]:
+                      - /url: ../curriculum/23-glossary/GLOSSARY.html
+                - generic [ref=e336]:
+                  - 'heading "Phase 1: Python & Data Science (3-4 weeks)" [level=3] [ref=e337]'
+                  - paragraph [ref=e338]: "NumPy, pandas, scikit-learn. Focus on: LinearRegression, LogisticRegression, RandomForest, GradientBoosting, KMeans, PCA."
+                  - paragraph [ref=e339]:
+                    - text: "Key notebooks:"
+                    - link "02-data-science/" [ref=e340] [cursor=pointer]:
+                      - /url: ../curriculum/02-data-science/README.html
+                - generic [ref=e341]:
+                  - 'heading "Phase 2: Mathematics for ML (2-3 weeks)" [level=3] [ref=e342]'
+                  - paragraph [ref=e343]: Linear algebra (vectors, matrices, dot products), gradient descent, probability. You need intuition, not proofs.
+                  - paragraph [ref=e344]:
+                    - text: "Key notebooks:"
+                    - link "03-maths/foundational/" [ref=e345] [cursor=pointer]:
+                      - /url: ../curriculum/03-maths/foundational/README.html
+                - generic [ref=e346]:
+                  - 'heading "Phase 3: Tokenization (1 week)" [level=3] [ref=e347]'
+                  - paragraph [ref=e348]: Tokens != words. BPE tokenization. Why it matters for cost and context. TikToken and HuggingFace tokenizers.
+                  - paragraph [ref=e349]:
+                    - text: "Key notebooks:"
+                    - link "04-token/" [ref=e350] [cursor=pointer]:
+                      - /url: ../curriculum/04-token/README.html
+                - generic [ref=e351]:
+                  - 'heading "Phase 4: Embeddings (1 week)" [level=3] [ref=e352]'
+                  - paragraph [ref=e353]: Text to vectors. Cosine similarity. Word vs sentence embeddings. Choosing between local models and APIs (Gemini Embedding, Voyage, OpenAI, Sentence Transformers).
+                  - paragraph [ref=e354]:
+                    - text: "Key notebooks:"
+                    - link "05-embeddings/" [ref=e355] [cursor=pointer]:
+                      - /url: ../curriculum/05-embeddings/README.html
+                - generic [ref=e356]:
+                  - 'heading "Phase 5: Neural Networks (2-3 weeks)" [level=3] [ref=e357]'
+                  - paragraph [ref=e358]: Neurons, layers, activations, backprop. The Transformer architecture. Self-attention. Multi-head attention.
+                  - paragraph [ref=e359]:
+                    - text: "Key notebooks:"
+                    - link "06-neural-networks/" [ref=e360] [cursor=pointer]:
+                      - /url: ../curriculum/06-neural-networks/README.html
+                - generic [ref=e361]:
+                  - 'heading "Phase 6: Vector Databases (1 week)" [level=3] [ref=e362]'
+                  - paragraph [ref=e363]: ANN search, HNSW. ChromaDB for prototypes, Qdrant for production, pgvector if you already use Postgres.
+                  - paragraph [ref=e364]:
+                    - text: "Key notebooks:"
+                    - link "07-vector-databases/" [ref=e365] [cursor=pointer]:
+                      - /url: ../curriculum/07-vector-databases/README.html
+                - generic [ref=e366]:
+                  - 'heading "Phase 7: RAG Systems (2 weeks)" [level=3] [ref=e367]'
+                  - paragraph [ref=e368]: "The RAG pipeline: chunk → embed → store → retrieve → rerank → generate. Chunking strategies. Hybrid search. RAGAS evaluation."
+                  - blockquote [ref=e369]:
+                    - paragraph [ref=e371]:
+                      - text: RAG is the most in-demand AI skill in enterprise right now. The basic version is easy — making it work
+                      - emphasis [ref=e372]: well
+                      - text: is the challenge.
+                  - paragraph [ref=e373]:
+                    - text: "Key notebooks:"
+                    - link "08-rag/" [ref=e374] [cursor=pointer]:
+                      - /url: ../curriculum/08-rag/README.html
+                - generic [ref=e375]:
+                  - 'heading "Phase 8: MLOps (2 weeks)" [level=3] [ref=e376]'
+                  - paragraph [ref=e377]: MLflow, FastAPI, Docker, GitHub Actions, monitoring. 80% of ML projects fail because of bad ops, not bad models.
+                  - paragraph [ref=e378]:
+                    - text: "Key notebooks:"
+                    - link "09-mlops/" [ref=e379] [cursor=pointer]:
+                      - /url: ../curriculum/09-mlops/README.html
+                - generic [ref=e380]:
+                  - 'heading "Phase 9: Specializations (2-3 weeks, pick one)" [level=3] [ref=e381]'
+                  - list [ref=e382]:
+                    - listitem [ref=e383]:
+                      - paragraph [ref=e384]:
+                        - strong [ref=e385]: AI Agents
+                        - text: ": ReAct, tool calling, LangGraph, MCP —"
+                        - link "10-specializations/ai-agents/" [ref=e386] [cursor=pointer]:
+                          - /url: ../curriculum/10-specializations/ai-agents/README.html
+                    - listitem [ref=e387]:
+                      - paragraph [ref=e388]:
+                        - strong [ref=e389]: Computer Vision
+                        - text: ": CNNs, YOLO, CLIP —"
+                        - link "10-specializations/computer-vision/" [ref=e390] [cursor=pointer]:
+                          - /url: ../curriculum/10-specializations/computer-vision/README.html
+                    - listitem [ref=e391]:
+                      - paragraph [ref=e392]:
+                        - strong [ref=e393]: NLP
+                        - text: ": BERT fine-tuning, NER, summarization —"
+                        - link "10-specializations/nlp/" [ref=e394] [cursor=pointer]:
+                          - /url: ../curriculum/10-specializations/nlp/README.html
+                - generic [ref=e395]:
+                  - 'heading "Phase 10: Prompt Engineering (1 week)" [level=3] [ref=e396]'
+                  - paragraph [ref=e397]: "Zero/few-shot, Chain-of-Thought, ReAct, structured outputs, DSPy. Treat prompting like software engineering: version control, testing, iteration."
+                  - paragraph [ref=e398]:
+                    - text: "Key notebooks:"
+                    - link "11-prompt-engineering/" [ref=e399] [cursor=pointer]:
+                      - /url: ../curriculum/11-prompt-engineering/README.html
+                - generic [ref=e400]:
+                  - 'heading "Phase 11: LLM Fine-tuning (2-3 weeks)" [level=3] [ref=e401]'
+                  - paragraph [ref=e402]: "Decision: prompt → RAG → fine-tune. LoRA, QLoRA, SFT, DPO. Use Unsloth for 2-5x faster training."
+                  - paragraph [ref=e403]:
+                    - text: "Key notebooks:"
+                    - link "12-llm-finetuning/" [ref=e404] [cursor=pointer]:
+                      - /url: ../curriculum/12-llm-finetuning/README.html
+                - generic [ref=e405]:
+                  - 'heading "Phase 12: Multimodal AI (1 week)" [level=3] [ref=e406]'
+                  - paragraph [ref=e407]: CLIP, vision-language models (GPT-5.4, Claude Sonnet 4.6, Qwen2.5-VL), Stable Diffusion, multimodal RAG.
+                  - paragraph [ref=e408]:
+                    - text: "Key notebooks:"
+                    - link "13-multimodal/" [ref=e409] [cursor=pointer]:
+                      - /url: ../curriculum/13-multimodal/README.html
+                - generic [ref=e410]:
+                  - 'heading "Phase 13: Local LLMs (1 week)" [level=3] [ref=e411]'
+                  - paragraph [ref=e412]: Ollama (Qwen 3, Llama 4, DeepSeek R1), llama.cpp, vLLM. Quantization formats. TurboQuant for KV cache compression (ICLR 2026). OpenAI-compatible local APIs.
+                  - paragraph [ref=e413]:
+                    - text: "Key notebooks:"
+                    - link "14-local-llms/" [ref=e414] [cursor=pointer]:
+                      - /url: ../curriculum/14-local-llms/README.html
+                - generic [ref=e415]:
+                  - 'heading "Phase 14: AI Agents (2 weeks)" [level=3] [ref=e416]'
+                  - paragraph [ref=e417]: ReAct loop, tool calling, agent memory, multi-agent systems, MCP, LangGraph.
+                  - paragraph [ref=e418]:
+                    - text: "Key notebooks:"
+                    - link "15-ai-agents/" [ref=e419] [cursor=pointer]:
+                      - /url: ../curriculum/15-ai-agents/README.html
+                - generic [ref=e420]:
+                  - heading "Supplementary Phases" [level=3] [ref=e421]
+                  - list [ref=e422]:
+                    - listitem [ref=e423]:
+                      - paragraph [ref=e424]:
+                        - strong [ref=e425]: Model Evaluation
+                        - text: —
+                        - link "16-model-evaluation/" [ref=e426] [cursor=pointer]:
+                          - /url: ../curriculum/16-model-evaluation/README.html
+                        - text: — do after Phase 7
+                    - listitem [ref=e427]:
+                      - paragraph [ref=e428]:
+                        - strong [ref=e429]: Debugging
+                        - text: —
+                        - link "17-debugging-troubleshooting/" [ref=e430] [cursor=pointer]:
+                          - /url: ../curriculum/17-debugging/README.html
+                        - text: — alongside portfolio projects
+                    - listitem [ref=e431]:
+                      - paragraph [ref=e432]:
+                        - strong [ref=e433]: Low-Code Tools
+                        - text: —
+                        - link "18-low-code-ai-tools/" [ref=e434] [cursor=pointer]:
+                          - /url: ../curriculum/18-low-code/README.html
+                        - text: — Gradio/Streamlit for demos
+                    - listitem [ref=e435]:
+                      - paragraph [ref=e436]:
+                        - strong [ref=e437]: AI Safety
+                        - text: —
+                        - link "19-ai-safety-redteaming/" [ref=e438] [cursor=pointer]:
+                          - /url: ../curriculum/19-ai-safety/README.html
+                        - text: — before deploying anything publicly
+                    - listitem [ref=e439]:
+                      - paragraph [ref=e440]:
+                        - strong [ref=e441]: Streaming
+                        - text: —
+                        - link "20-real-time-streaming/" [ref=e442] [cursor=pointer]:
+                          - /url: ../curriculum/20-streaming/README.html
+                        - text: — for production UX
+              - generic [ref=e443]:
+                - heading "Portfolio Projects" [level=2] [ref=e444]
+                - generic [ref=e445]:
+                  - heading "Required (3 projects)" [level=3] [ref=e446]
+                  - paragraph [ref=e447]:
+                    - strong [ref=e448]: "Project 1: RAG Document Assistant"
+                    - text: LangChain/LlamaIndex + ChromaDB + Ollama/OpenAI + FastAPI + Streamlit. Add hybrid search, reranking, RAGAS eval.
+                  - paragraph [ref=e449]:
+                    - strong [ref=e450]: "Project 2: Fine-tuned Domain Expert"
+                    - text: Pick a domain. Fine-tune Qwen 3 4B or Phi-4 Mini with QLoRA. Evaluate before/after. Deploy with Ollama or vLLM.
+                  - paragraph [ref=e451]:
+                    - strong [ref=e452]: "Project 3: End-to-End MLOps Pipeline"
+                    - text: Train a model. Track with MLflow. Serve with FastAPI + Docker. CI/CD with GitHub Actions.
+                - generic [ref=e453]:
+                  - heading "Differentiators" [level=3] [ref=e454]
+                  - paragraph [ref=e455]:
+                    - strong [ref=e456]: "Project 4: AI Agent with Real Tools"
+                    - text: — 3+ tools, memory, documented failure modes
+                  - paragraph [ref=e457]:
+                    - strong [ref=e458]: "Project 5: Evaluation Framework"
+                    - text: — automated regression testing for model quality
+              - generic [ref=e459]:
+                - heading "Key Papers to Know" [level=2] [ref=e460]
+                - table [ref=e462]:
+                  - rowgroup [ref=e463]:
+                    - row "Paper Year Contribution" [ref=e464]:
+                      - columnheader "Paper" [ref=e465]:
+                        - paragraph [ref=e466]: Paper
+                      - columnheader "Year" [ref=e467]:
+                        - paragraph [ref=e468]: Year
+                      - columnheader "Contribution" [ref=e469]:
+                        - paragraph [ref=e470]: Contribution
+                  - rowgroup [ref=e471]:
+                    - row "Attention Is All You Need 2017 Transformer architecture" [ref=e472]:
+                      - cell "Attention Is All You Need" [ref=e473]:
+                        - paragraph [ref=e474]: Attention Is All You Need
+                      - cell "2017" [ref=e475]:
+                        - paragraph [ref=e476]: "2017"
+                      - cell "Transformer architecture" [ref=e477]:
+                        - paragraph [ref=e478]: Transformer architecture
+                    - row "BERT 2018 Bidirectional pre-training" [ref=e479]:
+                      - cell "BERT" [ref=e480]:
+                        - paragraph [ref=e481]: BERT
+                      - cell "2018" [ref=e482]:
+                        - paragraph [ref=e483]: "2018"
+                      - cell "Bidirectional pre-training" [ref=e484]:
+                        - paragraph [ref=e485]: Bidirectional pre-training
+                    - row "GPT-3 2020 Scale + few-shot prompting" [ref=e486]:
+                      - cell "GPT-3" [ref=e487]:
+                        - paragraph [ref=e488]: GPT-3
+                      - cell "2020" [ref=e489]:
+                        - paragraph [ref=e490]: "2020"
+                      - cell "Scale + few-shot prompting" [ref=e491]:
+                        - paragraph [ref=e492]: Scale + few-shot prompting
+                    - row "RAG (Lewis et al.) 2020 Retrieval-augmented generation" [ref=e493]:
+                      - cell "RAG (Lewis et al.)" [ref=e494]:
+                        - paragraph [ref=e495]: RAG (Lewis et al.)
+                      - cell "2020" [ref=e496]:
+                        - paragraph [ref=e497]: "2020"
+                      - cell "Retrieval-augmented generation" [ref=e498]:
+                        - paragraph [ref=e499]: Retrieval-augmented generation
+                    - row "LoRA 2021 Parameter-efficient fine-tuning" [ref=e500]:
+                      - cell "LoRA" [ref=e501]:
+                        - paragraph [ref=e502]: LoRA
+                      - cell "2021" [ref=e503]:
+                        - paragraph [ref=e504]: "2021"
+                      - cell "Parameter-efficient fine-tuning" [ref=e505]:
+                        - paragraph [ref=e506]: Parameter-efficient fine-tuning
+                    - row "InstructGPT (RLHF) 2022 Alignment via human feedback" [ref=e507]:
+                      - cell "InstructGPT (RLHF)" [ref=e508]:
+                        - paragraph [ref=e509]: InstructGPT (RLHF)
+                      - cell "2022" [ref=e510]:
+                        - paragraph [ref=e511]: "2022"
+                      - cell "Alignment via human feedback" [ref=e512]:
+                        - paragraph [ref=e513]: Alignment via human feedback
+                    - row "Chain-of-Thought 2022 Reasoning via step-by-step prompts" [ref=e514]:
+                      - cell "Chain-of-Thought" [ref=e515]:
+                        - paragraph [ref=e516]: Chain-of-Thought
+                      - cell "2022" [ref=e517]:
+                        - paragraph [ref=e518]: "2022"
+                      - cell "Reasoning via step-by-step prompts" [ref=e519]:
+                        - paragraph [ref=e520]: Reasoning via step-by-step prompts
+                    - row "DPO 2023 Alignment without RL" [ref=e521]:
+                      - cell "DPO" [ref=e522]:
+                        - paragraph [ref=e523]: DPO
+                      - cell "2023" [ref=e524]:
+                        - paragraph [ref=e525]: "2023"
+                      - cell "Alignment without RL" [ref=e526]:
+                        - paragraph [ref=e527]: Alignment without RL
+              - generic [ref=e528]:
+                - heading "Weekly Schedule Template" [level=2] [ref=e529]
+                - paragraph [ref=e530]:
+                  - strong [ref=e531]: Weekdays (3 hrs/day)
+                  - text: ": 1 hr theory → 1 hr notebook → 1 hr project work"
+                - paragraph [ref=e532]:
+                  - strong [ref=e533]: Weekends (4-5 hrs/day)
+                  - text: ": 2-3 hrs deep dive → 1-2 hrs portfolio → 30 min review"
+              - generic [ref=e534]:
+                - heading "Progress Checkpoints" [level=2] [ref=e535]
+                - list [ref=e536]:
+                  - listitem [ref=e537]:
+                    - paragraph [ref=e538]:
+                      - strong [ref=e539]: Week 4
+                      - text: ": Can you train a scikit-learn classifier, clean data, evaluate properly?"
+                  - listitem [ref=e540]:
+                    - paragraph [ref=e541]:
+                      - strong [ref=e542]: Week 8
+                      - text: ": Can you explain transformers? Build a simple neural network in PyTorch?"
+                  - listitem [ref=e543]:
+                    - paragraph [ref=e544]:
+                      - strong [ref=e545]: Week 12
+                      - text: ": Can you build a working RAG system? Evaluate its quality?"
+                  - listitem [ref=e546]:
+                    - paragraph [ref=e547]:
+                      - strong [ref=e548]: Week 16
+                      - text: ": Can you fine-tune a small LLM? Deploy it with FastAPI?"
+                  - listitem [ref=e549]:
+                    - paragraph [ref=e550]:
+                      - strong [ref=e551]: Week 20
+                      - text: ": Can you build a working AI agent with tools and memory?"
+                  - listitem [ref=e552]:
+                    - paragraph [ref=e553]:
+                      - strong [ref=e554]: Week 24
+                      - text: ": 3+ portfolio projects on GitHub with READMEs?"
+              - generic [ref=e555]:
+                - heading "Related Files" [level=2] [ref=e556]
+                - list [ref=e557]:
+                  - listitem [ref=e558]:
+                    - paragraph [ref=e559]:
+                      - link "CAREER_ROADMAP.md" [ref=e560] [cursor=pointer]:
+                        - /url: CAREER_ROADMAP.html
+                      - text: — job targeting, resume, networking
+                  - listitem [ref=e561]:
+                    - paragraph [ref=e562]:
+                      - link "INTERVIEW_PREP.md" [ref=e563] [cursor=pointer]:
+                        - /url: INTERVIEW_PREP.html
+                      - text: — questions, coding, system design
+                  - listitem [ref=e564]:
+                    - paragraph [ref=e565]:
+                      - link "REFERENCES.md" [ref=e566] [cursor=pointer]:
+                        - /url: REFERENCES.html
+                      - text: — videos, courses, repos, papers
+                  - listitem [ref=e567]:
+                    - paragraph [ref=e568]:
+                      - link "checklist.md" [ref=e569] [cursor=pointer]:
+                        - /url: checklist.html
+                      - text: — track completion
+                - paragraph [ref=e570]:
+                  - emphasis [ref=e571]: "Last Updated: April 2026"
+        - contentinfo [ref=e572]:
+          - generic [ref=e573]:
+            - link "Next Career Roadmap" [ref=e574] [cursor=pointer]:
+              - /url: CAREER_ROADMAP.html
+              - generic [ref=e575]:
+                - generic [ref=e577]: Next
+                - generic [ref=e578]: Career Roadmap
+              - img [ref=e579]
+            - link "Previous AI/ML Glossary" [ref=e581] [cursor=pointer]:
+              - /url: ../curriculum/23-glossary/GLOSSARY.html
+              - img [ref=e582]
+              - generic [ref=e584]:
+                - generic [ref=e586]: Previous
+                - generic [ref=e587]: AI/ML Glossary
+          - generic [ref=e588]:
+            - generic [ref=e589]:
+              - generic [ref=e590]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e591] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e592] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e593] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e596] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e597]
+      - complementary [ref=e599]:
+        - separator "Resize right sidebar" [ref=e600]:
+          - button "Collapse right sidebar" [ref=e601] [cursor=pointer]: ›
+        - generic [ref=e602]:
+          - generic [ref=e603]: On this page
+          - list [ref=e606]:
+            - listitem [ref=e607]:
+              - list [ref=e608]:
+                - listitem [ref=e609]:
+                  - link "How to Use This Guide" [ref=e610] [cursor=pointer]:
+                    - /url: "#how-to-use-this-guide"
+                - listitem [ref=e611]:
+                  - link "Learning Tracks" [ref=e612] [cursor=pointer]:
+                    - /url: "#learning-tracks"
+                  - list [ref=e613]:
+                    - listitem [ref=e614]:
+                      - 'link "Track A: AI Engineer (4-6 months)" [ref=e615] [cursor=pointer]':
+                        - /url: "#track-a-ai-engineer-4-6-months"
+                    - listitem [ref=e616]:
+                      - 'link "Track B: ML Engineer (8-10 months)" [ref=e617] [cursor=pointer]':
+                        - /url: "#track-b-ml-engineer-8-10-months"
+                    - listitem [ref=e618]:
+                      - 'link "Track C: Data Scientist (6-8 months)" [ref=e619] [cursor=pointer]':
+                        - /url: "#track-c-data-scientist-6-8-months"
+                - listitem [ref=e620]:
+                  - link "Phase-by-Phase Notes" [ref=e621] [cursor=pointer]:
+                    - /url: "#phase-by-phase-notes"
+                  - list [ref=e622]:
+                    - listitem [ref=e623]:
+                      - 'link "Phase 0: Foundations (1 week)" [ref=e624] [cursor=pointer]':
+                        - /url: "#phase-0-foundations-1-week"
+                    - listitem [ref=e625]:
+                      - 'link "Phase 1: Python & Data Science (3-4 weeks)" [ref=e626] [cursor=pointer]':
+                        - /url: "#phase-1-python-data-science-3-4-weeks"
+                    - listitem [ref=e627]:
+                      - 'link "Phase 2: Mathematics for ML (2-3 weeks)" [ref=e628] [cursor=pointer]':
+                        - /url: "#phase-2-mathematics-for-ml-2-3-weeks"
+                    - listitem [ref=e629]:
+                      - 'link "Phase 3: Tokenization (1 week)" [ref=e630] [cursor=pointer]':
+                        - /url: "#phase-3-tokenization-1-week"
+                    - listitem [ref=e631]:
+                      - 'link "Phase 4: Embeddings (1 week)" [ref=e632] [cursor=pointer]':
+                        - /url: "#phase-4-embeddings-1-week"
+                    - listitem [ref=e633]:
+                      - 'link "Phase 5: Neural Networks (2-3 weeks)" [ref=e634] [cursor=pointer]':
+                        - /url: "#phase-5-neural-networks-2-3-weeks"
+                    - listitem [ref=e635]:
+                      - 'link "Phase 6: Vector Databases (1 week)" [ref=e636] [cursor=pointer]':
+                        - /url: "#phase-6-vector-databases-1-week"
+                    - listitem [ref=e637]:
+                      - 'link "Phase 7: RAG Systems (2 weeks)" [ref=e638] [cursor=pointer]':
+                        - /url: "#phase-7-rag-systems-2-weeks"
+                    - listitem [ref=e639]:
+                      - 'link "Phase 8: MLOps (2 weeks)" [ref=e640] [cursor=pointer]':
+                        - /url: "#phase-8-mlops-2-weeks"
+                    - listitem [ref=e641]:
+                      - 'link "Phase 9: Specializations (2-3 weeks, pick one)" [ref=e642] [cursor=pointer]':
+                        - /url: "#phase-9-specializations-2-3-weeks-pick-one"
+                    - listitem [ref=e643]:
+                      - 'link "Phase 10: Prompt Engineering (1 week)" [ref=e644] [cursor=pointer]':
+                        - /url: "#phase-10-prompt-engineering-1-week"
+                    - listitem [ref=e645]:
+                      - 'link "Phase 11: LLM Fine-tuning (2-3 weeks)" [ref=e646] [cursor=pointer]':
+                        - /url: "#phase-11-llm-fine-tuning-2-3-weeks"
+                    - listitem [ref=e647]:
+                      - 'link "Phase 12: Multimodal AI (1 week)" [ref=e648] [cursor=pointer]':
+                        - /url: "#phase-12-multimodal-ai-1-week"
+                    - listitem [ref=e649]:
+                      - 'link "Phase 13: Local LLMs (1 week)" [ref=e650] [cursor=pointer]':
+                        - /url: "#phase-13-local-llms-1-week"
+                    - listitem [ref=e651]:
+                      - 'link "Phase 14: AI Agents (2 weeks)" [ref=e652] [cursor=pointer]':
+                        - /url: "#phase-14-ai-agents-2-weeks"
+                    - listitem [ref=e653]:
+                      - link "Supplementary Phases" [ref=e654] [cursor=pointer]:
+                        - /url: "#supplementary-phases"
+                - listitem [ref=e655]:
+                  - link "Portfolio Projects" [ref=e656] [cursor=pointer]:
+                    - /url: "#portfolio-projects"
+                  - list [ref=e657]:
+                    - listitem [ref=e658]:
+                      - link "Required (3 projects)" [ref=e659] [cursor=pointer]:
+                        - /url: "#required-3-projects"
+                    - listitem [ref=e660]:
+                      - link "Differentiators" [ref=e661] [cursor=pointer]:
+                        - /url: "#differentiators"
+                - listitem [ref=e662]:
+                  - link "Key Papers to Know" [ref=e663] [cursor=pointer]:
+                    - /url: "#key-papers-to-know"
+                - listitem [ref=e664]:
+                  - link "Weekly Schedule Template" [ref=e665] [cursor=pointer]:
+                    - /url: "#weekly-schedule-template"
+                - listitem [ref=e666]:
+                  - link "Progress Checkpoints" [ref=e667] [cursor=pointer]:
+                    - /url: "#progress-checkpoints"
+                - listitem [ref=e668]:
+                  - link "Related Files" [ref=e669] [cursor=pointer]:
+                    - /url: "#related-files"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

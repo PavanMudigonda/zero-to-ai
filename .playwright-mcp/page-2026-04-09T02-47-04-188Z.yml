@@ -1,0 +1,992 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../../../00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../../../01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../../../02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../../README.html
+              - img [ref=e39] [cursor=pointer]
+              - list [ref=e41]:
+                - listitem [ref=e42]:
+                  - 'link "Phase 3: Mathematics for ML Catalog" [ref=e43] [cursor=pointer]':
+                    - /url: ../../CATALOG.html
+                - listitem [ref=e44]:
+                  - link "3Blue1Brown Visual Mathematics" [ref=e45] [cursor=pointer]:
+                    - /url: ../README.html
+                  - img [ref=e48] [cursor=pointer]
+                  - list [ref=e50]:
+                    - listitem [ref=e51]:
+                      - link "Calculus (3Blue1Brown)" [ref=e52] [cursor=pointer]:
+                        - /url: README.html
+                      - img [ref=e55] [cursor=pointer]
+                      - list [ref=e57]:
+                        - listitem [ref=e58]:
+                          - 'link "Chapter 1: The Essence of Calculus" [ref=e59] [cursor=pointer]':
+                            - /url: 01_essence_of_calculus.html
+                        - listitem [ref=e60]:
+                          - 'link "Chapter 2: The Paradox of the Derivative" [ref=e61] [cursor=pointer]':
+                            - /url: 02_paradox_of_derivative.html
+                        - listitem [ref=e62]:
+                          - 'link "Chapter 3: Derivative Formulas through Geometry" [ref=e63] [cursor=pointer]':
+                            - /url: 03_derivative_formulas.html
+                        - listitem [ref=e64]:
+                          - 'link "Chapter 4: Visualizing the Chain Rule and Product Rule" [ref=e65] [cursor=pointer]':
+                            - /url: 04_chain_product_rules.html
+                        - listitem [ref=e66]:
+                          - 'link "Chapter 5: Derivatives of Exponential" [ref=e67] [cursor=pointer]':
+                            - /url: 05_exponential_derivatives.html
+                        - listitem [ref=e68]:
+                          - 'link "Chapter 6: Implicit Differentiation" [ref=e69] [cursor=pointer]':
+                            - /url: 06_implicit_differentiation.html
+                        - listitem [ref=e70]:
+                          - 'link "Chapter 7: Limits and L’Hopital’s Rule" [ref=e71] [cursor=pointer]':
+                            - /url: 07_limits_lhopital.html
+                        - listitem [ref=e72]:
+                          - 'link "Chapter 8: Integration and the Fundamental Theorem" [ref=e73] [cursor=pointer]':
+                            - /url: 08_integration_fundamental_theorem.html
+                        - listitem [ref=e74]:
+                          - 'link "Chapter 9: What Does Area Have to Do with Slope?" [ref=e75] [cursor=pointer]':
+                            - /url: 09_area_and_slope.html
+                        - listitem [ref=e76]:
+                          - 'link "Chapter 10: Higher Order Derivatives" [ref=e77] [cursor=pointer]':
+                            - /url: 10_higher_order_derivatives.html
+                        - listitem [ref=e78]:
+                          - 'link "Chapter 11: Taylor Series" [ref=e79] [cursor=pointer]':
+                            - /url: 11_taylor_series.html
+                        - listitem [ref=e80]:
+                          - 'link "Chapter 12: What Makes So Special?" [ref=e81] [cursor=pointer]':
+                            - /url: "#"
+                            - text: "Chapter 12: What Makes"
+                            - generic [ref=e83]:
+                              - generic [ref=e85]:
+                                - generic [ref=e87]: e
+                                - generic [ref=e90]: x
+                              - math [ref=e92]:
+                                - generic [ref=e93]:
+                                  - generic [ref=e94]: e
+                                  - generic [ref=e95]: x
+                            - text: So Special?
+                    - listitem [ref=e96]:
+                      - 'link "Chapter 1: Differential Equations - Introduction" [ref=e97] [cursor=pointer]':
+                        - /url: ../differential-equations/01_differential_equations_intro.html
+                    - listitem [ref=e98]:
+                      - 'link "Chapter 2: The Heat Equation" [ref=e99] [cursor=pointer]':
+                        - /url: ../differential-equations/02_heat_equation.html
+                    - listitem [ref=e100]:
+                      - 'link "Chapter 3: Solving the Heat Equation" [ref=e101] [cursor=pointer]':
+                        - /url: ../differential-equations/03_solving_heat_equation.html
+                    - listitem [ref=e102]:
+                      - 'link "Chapter 4: Fourier Series and Complex Exponential" [ref=e103] [cursor=pointer]':
+                        - /url: ../differential-equations/04_fourier_series.html
+                    - listitem [ref=e104]:
+                      - 'link "Chapter 5: Laplace Transforms" [ref=e105] [cursor=pointer]':
+                        - /url: ../differential-equations/05_laplace_transforms.html
+                    - listitem [ref=e106]:
+                      - 'link "Chapter 6: Understanding the Laplace Transform" [ref=e107] [cursor=pointer]':
+                        - /url: ../differential-equations/06_understanding_laplace.html
+                    - listitem [ref=e108]:
+                      - 'link "Chapter 7: Resonance and Forced Oscillations" [ref=e109] [cursor=pointer]':
+                        - /url: ../differential-equations/07_resonance.html
+                    - listitem [ref=e110]:
+                      - 'link "Chapter 8: Matrix Exponents" [ref=e111] [cursor=pointer]':
+                        - /url: ../differential-equations/08_matrix_exponents.html
+                    - listitem [ref=e112]:
+                      - 'link "Chapter 1: Abstract Vector Spaces" [ref=e113] [cursor=pointer]':
+                        - /url: ../linear-algebra/01_vectors_and_linear_combinations.html
+                    - listitem [ref=e114]:
+                      - 'link "Chapter 2: Linear combinations, span, and basis vectors" [ref=e115] [cursor=pointer]':
+                        - /url: ../linear-algebra/02_linear_transformations_and_matrices.html
+                    - listitem [ref=e116]:
+                      - 'link "Chapter 3: Linear transformations and matrices" [ref=e117] [cursor=pointer]':
+                        - /url: ../linear-algebra/03_matrix_multiplication_composition.html
+                    - listitem [ref=e118]:
+                      - 'link "Chapter 4: Matrix multiplication as composition" [ref=e119] [cursor=pointer]':
+                        - /url: ../linear-algebra/04_determinants.html
+                    - listitem [ref=e120]:
+                      - 'link "# Chapter 5: Three-dimensional linear transformations" [ref=e121] [cursor=pointer]':
+                        - /url: ../linear-algebra/05_eigenvalues_eigenvectors.html
+                    - listitem [ref=e122]:
+                      - 'link "Chapter 6: The determinant" [ref=e123] [cursor=pointer]':
+                        - /url: ../linear-algebra/06_inverse_matrices_and_systems.html
+                    - listitem [ref=e124]:
+                      - 'link "Chapter 7: Inverse matrices, column space and null space" [ref=e125] [cursor=pointer]':
+                        - /url: ../linear-algebra/07_dot_products_and_duality.html
+                    - listitem [ref=e126]:
+                      - 'link "Chapter 8: Nonsquare matrices as transformations between dimensions" [ref=e127] [cursor=pointer]':
+                        - /url: ../linear-algebra/08_cross_products.html
+                    - listitem [ref=e128]:
+                      - 'link "Chapter 9: Dot products and duality" [ref=e129] [cursor=pointer]':
+                        - /url: ../linear-algebra/09_change_of_basis.html
+                    - listitem [ref=e130]:
+                      - 'link "Chapter 10: Three-Dimensional Linear Transformations" [ref=e131] [cursor=pointer]':
+                        - /url: ../linear-algebra/10_three_dimensional_transformations.html
+                    - listitem [ref=e132]:
+                      - 'link "Chapter 12: Cramer’s rule, explained geometrically" [ref=e133] [cursor=pointer]':
+                        - /url: ../linear-algebra/12_cramers_rule.html
+                    - listitem [ref=e134]:
+                      - 'link "Chapter 13: Change of basis" [ref=e135] [cursor=pointer]':
+                        - /url: ../linear-algebra/13_quick_eigenvalue_trick.html
+                    - listitem [ref=e136]:
+                      - 'link "Chapter 16: Abstract Vector Spaces" [ref=e137] [cursor=pointer]':
+                        - /url: ../linear-algebra/16_abstract_vector_spaces.html
+                    - listitem [ref=e138]:
+                      - 'link "Chapter 1: But What is a Neural Network?" [ref=e139] [cursor=pointer]':
+                        - /url: ../neural-networks/01_what_is_neural_network.html
+                    - listitem [ref=e140]:
+                      - 'link "Chapter 2: Gradient Descent" [ref=e141] [cursor=pointer]':
+                        - /url: ../neural-networks/02_gradient_descent.html
+                    - listitem [ref=e142]:
+                      - 'link "Chapter 3: What is Backpropagation?" [ref=e143] [cursor=pointer]':
+                        - /url: ../neural-networks/03_backpropagation.html
+                    - listitem [ref=e144]:
+                      - 'link "Chapter 4: Backpropagation Calculus" [ref=e145] [cursor=pointer]':
+                        - /url: ../neural-networks/04_backprop_calculus.html
+                    - listitem [ref=e146]:
+                      - 'link "Chapter 5: GPT and Large Language Models" [ref=e147] [cursor=pointer]':
+                        - /url: ../neural-networks/05_gpt_llms.html
+                    - listitem [ref=e148]:
+                      - 'link "Chapter 6: Attention in Transformers" [ref=e149] [cursor=pointer]':
+                        - /url: ../neural-networks/06_attention_transformers.html
+                    - listitem [ref=e150]:
+                      - 'link "Chapter 7: Attention Mechanism Deep Dive" [ref=e151] [cursor=pointer]':
+                        - /url: ../neural-networks/07_attention_deep_dive.html
+                    - listitem [ref=e152]:
+                      - 'link "Chapter 8: How GPT Stores Facts" [ref=e153] [cursor=pointer]':
+                        - /url: ../neural-networks/08_how_gpt_stores_facts.html
+                    - listitem [ref=e154]:
+                      - 'link "Chapter 9: Diffusion Models" [ref=e155] [cursor=pointer]':
+                        - /url: ../neural-networks/09_diffusion_models.html
+                - listitem [ref=e156]:
+                  - link "Advanced Mathematics for Machine Learning" [ref=e157] [cursor=pointer]:
+                    - /url: ../../advanced/README.html
+                  - img [ref=e160] [cursor=pointer]
+                  - text: A x = b
+                - listitem [ref=e162]:
+                  - link "Stanford CS229 Machine Learning" [ref=e163] [cursor=pointer]:
+                    - /url: ../../cs229-course/README.html
+                  - img [ref=e166] [cursor=pointer]
+                - listitem [ref=e168]:
+                  - 'link "Practice Labs: Deep Learning Interviews (Kashani)" [ref=e169] [cursor=pointer]':
+                    - /url: ../../dli-book/README.html
+                  - img [ref=e172] [cursor=pointer]
+                - listitem [ref=e174]:
+                  - link "Foundational Mathematics" [ref=e175] [cursor=pointer]:
+                    - /url: ../../foundational/README.html
+                  - img [ref=e178] [cursor=pointer]
+                - listitem [ref=e180]:
+                  - link "Introduction to Statistical Learning with Python (ISLP)" [ref=e181] [cursor=pointer]:
+                    - /url: ../../islp-book/README.html
+                  - img [ref=e184] [cursor=pointer]
+                - listitem [ref=e186]:
+                  - link "ML Problem Solving" [ref=e187] [cursor=pointer]:
+                    - /url: ../../ml-problem/README.html
+                - listitem [ref=e188]:
+                  - 'link "Machine Learning: A Probabilistic Perspective" [ref=e189] [cursor=pointer]':
+                    - /url: ../../mlpp-book/README.html
+                  - img [ref=e192] [cursor=pointer]
+                - listitem [ref=e194]:
+                  - link "Mathematics for Machine Learning (MML)" [ref=e195] [cursor=pointer]:
+                    - /url: ../../mml-book/README.html
+                  - img [ref=e198] [cursor=pointer]
+                - listitem [ref=e200]:
+                  - 'link "Practice Labs: Speech & Language Processing (Jurafsky/Martin)" [ref=e201] [cursor=pointer]':
+                    - /url: ../../slp-book/README.html
+                  - img [ref=e204] [cursor=pointer]
+          - heading "Core AI" [ref=e206]
+          - list [ref=e207]:
+            - listitem [ref=e208]:
+              - 'link "Phase 4: Tokenization" [ref=e209] [cursor=pointer]':
+                - /url: ../../../04-token/README.html
+              - img [ref=e212] [cursor=pointer]
+            - listitem [ref=e214]:
+              - 'link "Phase 5: Embeddings" [ref=e215] [cursor=pointer]':
+                - /url: ../../../05-embeddings/README.html
+              - img [ref=e218] [cursor=pointer]
+            - listitem [ref=e220]:
+              - 'link "Phase 6: Neural Networks" [ref=e221] [cursor=pointer]':
+                - /url: ../../../06-neural-networks/README.html
+              - img [ref=e224] [cursor=pointer]
+          - heading "Applied AI" [ref=e226]
+          - list [ref=e227]:
+            - listitem [ref=e228]:
+              - 'link "Phase 7: Vector Databases" [ref=e229] [cursor=pointer]':
+                - /url: ../../../07-vector-databases/README.html
+              - img [ref=e232] [cursor=pointer]
+            - listitem [ref=e234]:
+              - 'link "Phase 8: RAG" [ref=e235] [cursor=pointer]':
+                - /url: ../../../08-rag/README.html
+              - img [ref=e238] [cursor=pointer]
+            - listitem [ref=e240]:
+              - 'link "Phase 9: MLOps" [ref=e241] [cursor=pointer]':
+                - /url: ../../../09-mlops/README.html
+              - img [ref=e244] [cursor=pointer]
+            - listitem [ref=e246]:
+              - 'link "Phase 10: Specializations" [ref=e247] [cursor=pointer]':
+                - /url: ../../../10-specializations/README.html
+              - img [ref=e250] [cursor=pointer]
+          - heading "Advanced" [ref=e252]
+          - list [ref=e253]:
+            - listitem [ref=e254]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e255] [cursor=pointer]':
+                - /url: ../../../11-prompt-engineering/README.html
+              - img [ref=e258] [cursor=pointer]
+            - listitem [ref=e260]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e261] [cursor=pointer]':
+                - /url: ../../../12-llm-finetuning/README.html
+              - img [ref=e264] [cursor=pointer]
+            - listitem [ref=e266]:
+              - 'link "Phase 13: Multimodal AI" [ref=e267] [cursor=pointer]':
+                - /url: ../../../13-multimodal/README.html
+              - img [ref=e270] [cursor=pointer]
+            - listitem [ref=e272]:
+              - 'link "Phase 14: Local LLMs" [ref=e273] [cursor=pointer]':
+                - /url: ../../../14-local-llms/README.html
+              - img [ref=e276] [cursor=pointer]
+            - listitem [ref=e278]:
+              - 'link "Phase 15: AI Agents" [ref=e279] [cursor=pointer]':
+                - /url: ../../../15-ai-agents/README.html
+              - img [ref=e282] [cursor=pointer]
+          - heading "Supplementary" [ref=e284]
+          - list [ref=e285]:
+            - listitem [ref=e286]:
+              - 'link "Phase 16: Model Evaluation" [ref=e287] [cursor=pointer]':
+                - /url: ../../../16-model-evaluation/README.html
+              - img [ref=e290] [cursor=pointer]
+            - listitem [ref=e292]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e293] [cursor=pointer]':
+                - /url: ../../../17-debugging/README.html
+              - img [ref=e296] [cursor=pointer]
+            - listitem [ref=e298]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e299] [cursor=pointer]':
+                - /url: ../../../18-low-code/README.html
+              - img [ref=e302] [cursor=pointer]
+            - listitem [ref=e304]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e305] [cursor=pointer]':
+                - /url: ../../../19-ai-safety/README.html
+              - img [ref=e308] [cursor=pointer]
+            - listitem [ref=e310]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e311] [cursor=pointer]':
+                - /url: ../../../20-streaming/README.html
+              - img [ref=e314] [cursor=pointer]
+          - heading "Reference" [ref=e316]
+          - list [ref=e317]:
+            - listitem [ref=e318]:
+              - 'link "Phase 21: Quizzes" [ref=e319] [cursor=pointer]':
+                - /url: ../../../21-quizzes/README.html
+              - img [ref=e322] [cursor=pointer]
+            - listitem [ref=e324]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e325] [cursor=pointer]':
+                - /url: ../../../22-references/README.html
+              - img [ref=e328] [cursor=pointer]
+            - listitem [ref=e330]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e331] [cursor=pointer]':
+                - /url: ../../../23-glossary/README.html
+              - img [ref=e334] [cursor=pointer]
+          - heading "Resources" [ref=e336]
+          - list [ref=e337]:
+            - listitem [ref=e338]:
+              - link "Master Study Guide" [ref=e339] [cursor=pointer]:
+                - /url: ../../../../generated/MASTER_STUDY_GUIDE.html
+            - listitem [ref=e340]:
+              - link "Career Roadmap" [ref=e341] [cursor=pointer]:
+                - /url: ../../../../generated/CAREER_ROADMAP.html
+            - listitem [ref=e342]:
+              - link "Interview Preparation" [ref=e343] [cursor=pointer]:
+                - /url: ../../../../generated/INTERVIEW_PREP.html
+            - listitem [ref=e344]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e345] [cursor=pointer]:
+                - /url: ../../../../generated/COMPARISON_MATRICES.html
+            - listitem [ref=e346]:
+              - link "Setup Guide - Zero to AI" [ref=e347] [cursor=pointer]:
+                - /url: ../../../../generated/setup.html
+            - listitem [ref=e348]:
+              - link "AI/ML Learning Checklist ✅" [ref=e349] [cursor=pointer]:
+                - /url: ../../../../generated/checklist.html
+          - heading "Research" [ref=e350]
+          - list [ref=e351]:
+            - listitem [ref=e352]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e353] [cursor=pointer]':
+                - /url: ../../../24-advanced-dl/README.html
+              - img [ref=e356] [cursor=pointer]
+            - listitem [ref=e358]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e359] [cursor=pointer]':
+                - /url: ../../../25-rl/README.html
+              - img [ref=e362] [cursor=pointer]
+            - listitem [ref=e364]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e365] [cursor=pointer]':
+                - /url: ../../../26-time-series/README.html
+              - img [ref=e368] [cursor=pointer]
+            - listitem [ref=e370]:
+              - 'link "Phase 27: Causal Inference" [ref=e371] [cursor=pointer]':
+                - /url: ../../../27-causal-inference/README.html
+              - img [ref=e374] [cursor=pointer]
+          - heading "Production" [ref=e376]
+          - list [ref=e377]:
+            - listitem [ref=e378]:
+              - 'link "Phase 28: Practical Data Science" [ref=e379] [cursor=pointer]':
+                - /url: ../../../28-practical-ds/README.html
+              - img [ref=e382] [cursor=pointer]
+            - listitem [ref=e384]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e385] [cursor=pointer]':
+                - /url: ../../../29-ai-hardware/README.html
+              - img [ref=e388] [cursor=pointer]
+            - listitem [ref=e390]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e391] [cursor=pointer]':
+                - /url: ../../../30-inference-opt/README.html
+              - img [ref=e394] [cursor=pointer]
+          - heading "About" [ref=e396]
+          - list [ref=e397]:
+            - listitem [ref=e398]:
+              - link "Contributing to Zero to AI" [ref=e399] [cursor=pointer]:
+                - /url: ../../../../generated/CONTRIBUTING.html
+            - listitem [ref=e400]:
+              - link "Changelog" [ref=e401] [cursor=pointer]:
+                - /url: ../../../../generated/CHANGELOG.html
+            - listitem [ref=e402]:
+              - link "Contributor Covenant Code of Conduct" [ref=e403] [cursor=pointer]:
+                - /url: ../../../../generated/CODE_OF_CONDUCT.html
+            - listitem [ref=e404]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e405] [cursor=pointer]:
+                - /url: ../../../../generated/REFERENCES.html
+            - listitem [ref=e406]:
+              - link "Workspace Learning Review" [ref=e407] [cursor=pointer]:
+                - /url: ../../../../generated/WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e408]:
+              - link "License" [ref=e409] [cursor=pointer]:
+                - /url: ../../../../generated/LICENSE.html
+            - listitem [ref=e410]:
+              - link "Support" [ref=e411] [cursor=pointer]:
+                - /url: ../../../../generated/SUPPORT.html
+      - separator "Resize left sidebar" [ref=e412]:
+        - button "Collapse left sidebar" [ref=e413] [cursor=pointer]: ‹
+    - generic [ref=e414]:
+      - generic [ref=e415]:
+        - generic [ref=e416]:
+          - generic [ref=e417]:
+            - link "View this page" [ref=e419] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/03-maths/3blue1brown/calculus/12_what_makes_e_special.ipynb?plain=true
+              - img [ref=e420]
+              - generic [ref=e422]: View this page
+            - link "Edit this page" [ref=e424] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/03-maths/3blue1brown/calculus/12_what_makes_e_special.ipynb
+              - img [ref=e425]
+              - generic [ref=e427]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e429] [cursor=pointer]:
+              - img [ref=e430]
+            - img [ref=e434] [cursor=pointer]
+          - main [ref=e436]:
+            - group "Notebook launch options" [ref=e437]:
+              - generic [ref=e438]: "Run this notebook:"
+              - link "Open in Colab" [ref=e439] [cursor=pointer]:
+                - /url: https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main/03-maths/3blue1brown/calculus/12_what_makes_e_special.ipynb
+                - img [ref=e440]
+                - text: Open in Colab
+              - link "Open in Kaggle" [ref=e442] [cursor=pointer]:
+                - /url: https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai/blob/main/03-maths/3blue1brown/calculus/12_what_makes_e_special.ipynb
+                - img [ref=e443]
+                - text: Open in Kaggle
+            - generic [ref=e445]:
+              - 'heading "Chapter 12: What Makes So Special?" [level=1] [ref=e446]':
+                - 'link "Chapter 12: What Makes So Special?" [ref=e447] [cursor=pointer]':
+                  - /url: https://youtu.be/CfW845LNObM?si=aknsKkicEkV5qvju
+                  - text: "Chapter 12: What Makes"
+                  - generic [ref=e449]:
+                    - generic [ref=e451]:
+                      - generic [ref=e453]: e
+                      - generic [ref=e456]: x
+                    - math [ref=e458]:
+                      - generic [ref=e459]:
+                        - generic [ref=e460]: e
+                        - generic [ref=e461]: x
+                  - text: So Special?
+              - generic [ref=e462]:
+                - heading "The One Function That Is Its Own Derivative" [level=2] [ref=e463]
+                - paragraph [ref=e464]:
+                  - text: Among all exponential functions,
+                  - generic [ref=e466]:
+                    - generic [ref=e468]:
+                      - generic [ref=e470]: e
+                      - generic [ref=e473]: x
+                    - math [ref=e475]:
+                      - generic [ref=e476]:
+                        - generic [ref=e477]: e
+                        - generic [ref=e478]: x
+                  - text: "holds a unique position: it is the only function (up to constant multiples) satisfying"
+                  - generic [ref=e480]:
+                    - generic [ref=e481]:
+                      - generic [ref=e483]:
+                        - generic [ref=e486]: d
+                        - generic [ref=e492]:
+                          - generic [ref=e494]: d
+                          - generic [ref=e496]: x
+                      - generic [ref=e497]:
+                        - generic [ref=e499]: e
+                        - generic [ref=e502]: x
+                      - generic [ref=e504]: =
+                      - generic [ref=e505]:
+                        - generic [ref=e507]: e
+                        - generic [ref=e510]: x
+                    - math [ref=e512]:
+                      - generic [ref=e513]:
+                        - generic [ref=e514]: d
+                        - generic [ref=e515]:
+                          - generic [ref=e516]: d
+                          - generic [ref=e517]: x
+                      - generic [ref=e518]:
+                        - generic [ref=e519]: e
+                        - generic [ref=e520]: x
+                      - generic [ref=e521]: =
+                      - generic [ref=e522]:
+                        - generic [ref=e523]: e
+                        - generic [ref=e524]: x
+                  - text: ". Its Taylor series reveals why:"
+                - generic [ref=e527]:
+                  - generic [ref=e528]:
+                    - generic [ref=e529]:
+                      - generic [ref=e531]: e
+                      - generic [ref=e534]: x
+                    - generic [ref=e536]: =
+                    - generic [ref=e538]: "1"
+                    - generic [ref=e540]: +
+                    - generic [ref=e542]: x
+                    - generic [ref=e544]: +
+                    - generic [ref=e546]:
+                      - generic [ref=e548]:
+                        - generic [ref=e550]: x
+                        - generic [ref=e553]: "2"
+                      - generic [ref=e559]:
+                        - generic [ref=e561]: "2"
+                        - generic [ref=e563]: "!"
+                    - generic [ref=e565]: +
+                    - generic [ref=e567]:
+                      - generic [ref=e569]:
+                        - generic [ref=e571]: x
+                        - generic [ref=e574]: "3"
+                      - generic [ref=e580]:
+                        - generic [ref=e582]: "3"
+                        - generic [ref=e584]: "!"
+                    - generic [ref=e586]: +
+                    - generic [ref=e588]: ⋯
+                    - generic [ref=e590]: =
+                    - generic [ref=e591]:
+                      - generic [ref=e595]: ∞
+                      - generic [ref=e597]:
+                        - generic [ref=e601]: ∑
+                        - generic [ref=e604]:
+                          - generic [ref=e606]: "n"
+                          - generic [ref=e608]: =
+                          - generic [ref=e610]: "0"
+                    - generic [ref=e612]:
+                      - generic [ref=e614]:
+                        - generic [ref=e616]: x
+                        - generic [ref=e619]: "n"
+                      - generic [ref=e625]:
+                        - generic [ref=e627]: "n"
+                        - generic [ref=e629]: "!"
+                  - math [ref=e631]:
+                    - generic [ref=e632]:
+                      - generic [ref=e633]: e
+                      - generic [ref=e634]: x
+                    - generic [ref=e635]: =
+                    - generic [ref=e636]: "1"
+                    - generic [ref=e637]: +
+                    - generic [ref=e638]: x
+                    - generic [ref=e639]: +
+                    - generic [ref=e640]:
+                      - generic [ref=e641]:
+                        - generic [ref=e642]: x
+                        - generic [ref=e643]: "2"
+                      - generic [ref=e644]:
+                        - generic [ref=e645]: "2"
+                        - generic [ref=e646]: "!"
+                    - generic [ref=e647]: +
+                    - generic [ref=e648]:
+                      - generic [ref=e649]:
+                        - generic [ref=e650]: x
+                        - generic [ref=e651]: "3"
+                      - generic [ref=e652]:
+                        - generic [ref=e653]: "3"
+                        - generic [ref=e654]: "!"
+                    - generic [ref=e655]: +
+                    - generic [ref=e656]: ⋯
+                    - generic [ref=e657]: =
+                    - generic [ref=e658]:
+                      - generic [ref=e659]: ∑
+                      - generic [ref=e660]:
+                        - generic [ref=e661]: "n"
+                        - generic [ref=e662]: =
+                        - generic [ref=e663]: "0"
+                      - generic [ref=e665]: ∞
+                    - generic [ref=e666]:
+                      - generic [ref=e667]:
+                        - generic [ref=e668]: x
+                        - generic [ref=e669]: "n"
+                      - generic [ref=e670]:
+                        - generic [ref=e671]: "n"
+                        - generic [ref=e672]: "!"
+                - paragraph [ref=e673]:
+                  - text: Differentiating term by term shifts every coefficient down by one index, reproducing the original series perfectly. The number
+                  - generic [ref=e675]:
+                    - generic [ref=e676]:
+                      - generic [ref=e678]: e
+                      - generic [ref=e680]: ≈
+                      - generic [ref=e681]:
+                        - generic [ref=e682]: "2"
+                        - generic [ref=e683]: .
+                        - generic [ref=e684]: "7"
+                        - generic [ref=e685]: "1"
+                        - generic [ref=e686]: "8"
+                        - generic [ref=e687]: "2"
+                        - generic [ref=e688]: "8"
+                    - math [ref=e690]:
+                      - generic [ref=e691]: e
+                      - generic [ref=e692]: ≈
+                      - generic [ref=e693]: "2.71828"
+                  - text: is not an arbitrary constant – it is the unique base for which the derivative of
+                  - generic [ref=e695]:
+                    - generic [ref=e697]:
+                      - generic [ref=e699]: a
+                      - generic [ref=e702]: x
+                    - math [ref=e704]:
+                      - generic [ref=e705]:
+                        - generic [ref=e706]: a
+                        - generic [ref=e707]: x
+                  - text: equals
+                  - generic [ref=e709]:
+                    - generic [ref=e711]:
+                      - generic [ref=e713]: a
+                      - generic [ref=e716]: x
+                    - math [ref=e718]:
+                      - generic [ref=e719]:
+                        - generic [ref=e720]: a
+                        - generic [ref=e721]: x
+                  - text: itself, because
+                  - generic [ref=e723]:
+                    - generic [ref=e724]:
+                      - generic [ref=e725]:
+                        - generic [ref=e726]: l
+                        - generic [ref=e727]: "n"
+                      - generic [ref=e729]: (
+                      - generic [ref=e731]: e
+                      - generic [ref=e733]: )
+                      - generic [ref=e735]: =
+                      - generic [ref=e737]: "1"
+                    - math [ref=e739]:
+                      - generic [ref=e740]: ln
+                      - generic: ⁡
+                      - generic [ref=e741]: (
+                      - generic [ref=e742]: e
+                      - generic [ref=e743]: )
+                      - generic [ref=e744]: =
+                      - generic [ref=e745]: "1"
+                  - text: .
+                - paragraph [ref=e746]:
+                  - strong [ref=e747]:
+                    - text: Why
+                    - generic [ref=e749]:
+                      - generic [ref=e751]:
+                        - generic [ref=e753]: e
+                        - generic [ref=e756]: x
+                      - math [ref=e758]:
+                        - generic [ref=e759]:
+                          - generic [ref=e760]: e
+                          - generic [ref=e761]: x
+                    - text: is central to ML/AI
+                  - text: ": The exponential function is the backbone of the"
+                  - strong [ref=e762]: softmax
+                  - text: activation (
+                  - generic [ref=e764]:
+                    - generic [ref=e765]:
+                      - generic [ref=e767]: σ
+                      - generic [ref=e769]: (
+                      - generic [ref=e770]:
+                        - generic [ref=e772]: z
+                        - generic [ref=e775]: i
+                      - generic [ref=e777]: )
+                      - generic [ref=e779]: =
+                      - generic [ref=e780]:
+                        - generic [ref=e782]: e
+                        - generic [ref=e785]:
+                          - generic [ref=e787]: z
+                          - generic [ref=e790]: i
+                      - generic [ref=e793]: /
+                      - generic [ref=e794]:
+                        - generic [ref=e796]: ∑
+                        - generic [ref=e799]: j
+                      - generic [ref=e800]:
+                        - generic [ref=e802]: e
+                        - generic [ref=e805]:
+                          - generic [ref=e807]: z
+                          - generic [ref=e810]: j
+                    - math [ref=e812]:
+                      - generic [ref=e813]: σ
+                      - generic [ref=e814]: (
+                      - generic [ref=e815]:
+                        - generic [ref=e816]: z
+                        - generic [ref=e817]: i
+                      - generic [ref=e818]: )
+                      - generic [ref=e819]: =
+                      - generic [ref=e820]:
+                        - generic [ref=e821]: e
+                        - generic [ref=e823]:
+                          - generic [ref=e824]: z
+                          - generic [ref=e825]: i
+                      - generic [ref=e827]: /
+                      - generic [ref=e828]:
+                        - generic [ref=e829]: ∑
+                        - generic [ref=e830]: j
+                      - generic [ref=e831]:
+                        - generic [ref=e832]: e
+                        - generic [ref=e834]:
+                          - generic [ref=e835]: z
+                          - generic [ref=e836]: j
+                  - text: ), the
+                  - strong [ref=e837]: sigmoid
+                  - text: function (
+                  - generic [ref=e839]:
+                    - generic [ref=e840]:
+                      - generic [ref=e842]: σ
+                      - generic [ref=e844]: (
+                      - generic [ref=e846]: x
+                      - generic [ref=e848]: )
+                      - generic [ref=e850]: =
+                      - generic [ref=e852]: "1"
+                      - generic [ref=e855]: /
+                      - generic [ref=e857]: (
+                      - generic [ref=e859]: "1"
+                      - generic [ref=e861]: +
+                      - generic [ref=e862]:
+                        - generic [ref=e864]: e
+                        - generic [ref=e866]:
+                          - generic [ref=e868]: −
+                          - generic [ref=e870]: x
+                      - generic [ref=e872]: )
+                    - math [ref=e874]:
+                      - generic [ref=e875]: σ
+                      - generic [ref=e876]: (
+                      - generic [ref=e877]: x
+                      - generic [ref=e878]: )
+                      - generic [ref=e879]: =
+                      - generic [ref=e880]: "1"
+                      - generic [ref=e882]: /
+                      - generic [ref=e883]: (
+                      - generic [ref=e884]: "1"
+                      - generic [ref=e885]: +
+                      - generic [ref=e886]:
+                        - generic [ref=e887]: e
+                        - generic [ref=e888]:
+                          - generic [ref=e889]: −
+                          - generic [ref=e890]: x
+                      - generic [ref=e891]: )
+                  - text: ), probability distributions (Gaussian, Boltzmann), and the cross-entropy loss. Its self-derivative property makes gradient computations clean and efficient. In differential equations,
+                  - generic [ref=e893]:
+                    - generic [ref=e895]:
+                      - generic [ref=e897]: e
+                      - generic [ref=e900]: x
+                    - math [ref=e902]:
+                      - generic [ref=e903]:
+                        - generic [ref=e904]: e
+                        - generic [ref=e905]: x
+                  - text: governs exponential growth and decay, which models learning rate warmup schedules, weight decay (L2 regularization as exponential shrinkage), and the dynamics of recurrent neural networks.
+                - generic [ref=e909]:
+                  - generic [ref=e910]: import numpy as np import matplotlib.pyplot as plt import seaborn as sns sns.set_style('whitegrid') plt.rcParams['figure.figsize'] = (14, 10)
+                  - button "Copy to clipboard" [ref=e911] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e912]
+              - generic [ref=e916]:
+                - heading "Visualizing What Makes Unique Among Exponentials" [level=2] [ref=e917]:
+                  - text: Visualizing What Makes
+                  - generic [ref=e919]:
+                    - generic [ref=e921]:
+                      - generic [ref=e923]: e
+                      - generic [ref=e926]: x
+                    - math [ref=e928]:
+                      - generic [ref=e929]:
+                        - generic [ref=e930]: e
+                        - generic [ref=e931]: x
+                  - text: Unique Among Exponentials
+                - paragraph [ref=e932]:
+                  - text: For a general exponential
+                  - generic [ref=e934]:
+                    - generic [ref=e936]:
+                      - generic [ref=e938]: a
+                      - generic [ref=e941]: x
+                    - math [ref=e943]:
+                      - generic [ref=e944]:
+                        - generic [ref=e945]: a
+                        - generic [ref=e946]: x
+                  - text: ", the derivative is"
+                  - generic [ref=e948]:
+                    - generic [ref=e949]:
+                      - generic [ref=e951]:
+                        - generic [ref=e954]: d
+                        - generic [ref=e960]:
+                          - generic [ref=e962]: d
+                          - generic [ref=e964]: x
+                      - generic [ref=e965]:
+                        - generic [ref=e967]: a
+                        - generic [ref=e970]: x
+                      - generic [ref=e972]: =
+                      - generic [ref=e973]:
+                        - generic [ref=e974]: l
+                        - generic [ref=e975]: "n"
+                      - generic [ref=e977]: (
+                      - generic [ref=e979]: a
+                      - generic [ref=e981]: )
+                      - generic [ref=e983]: ⋅
+                      - generic [ref=e984]:
+                        - generic [ref=e986]: a
+                        - generic [ref=e989]: x
+                    - math [ref=e991]:
+                      - generic [ref=e992]:
+                        - generic [ref=e993]: d
+                        - generic [ref=e994]:
+                          - generic [ref=e995]: d
+                          - generic [ref=e996]: x
+                      - generic [ref=e997]:
+                        - generic [ref=e998]: a
+                        - generic [ref=e999]: x
+                      - generic [ref=e1000]: =
+                      - generic [ref=e1001]: ln
+                      - generic: ⁡
+                      - generic [ref=e1002]: (
+                      - generic [ref=e1003]: a
+                      - generic [ref=e1004]: )
+                      - generic [ref=e1005]: ⋅
+                      - generic [ref=e1006]:
+                        - generic [ref=e1007]: a
+                        - generic [ref=e1008]: x
+                  - text: – the function times a proportionality constant
+                  - generic [ref=e1010]:
+                    - generic [ref=e1011]:
+                      - generic [ref=e1012]:
+                        - generic [ref=e1013]: l
+                        - generic [ref=e1014]: "n"
+                      - generic [ref=e1016]: (
+                      - generic [ref=e1018]: a
+                      - generic [ref=e1020]: )
+                    - math [ref=e1022]:
+                      - generic [ref=e1023]: ln
+                      - generic: ⁡
+                      - generic [ref=e1024]: (
+                      - generic [ref=e1025]: a
+                      - generic [ref=e1026]: )
+                  - text: . When
+                  - generic [ref=e1028]:
+                    - generic [ref=e1029]:
+                      - generic [ref=e1031]: a
+                      - generic [ref=e1033]: =
+                      - generic [ref=e1035]: "2"
+                    - math [ref=e1037]:
+                      - generic [ref=e1038]: a
+                      - generic [ref=e1039]: =
+                      - generic [ref=e1040]: "2"
+                  - text: ", this constant is"
+                  - generic [ref=e1042]:
+                    - generic [ref=e1043]:
+                      - generic [ref=e1044]:
+                        - generic [ref=e1045]: l
+                        - generic [ref=e1046]: "n"
+                      - generic [ref=e1048]: (
+                      - generic [ref=e1050]: "2"
+                      - generic [ref=e1052]: )
+                      - generic [ref=e1054]: ≈
+                      - generic [ref=e1055]:
+                        - generic [ref=e1056]: "0"
+                        - generic [ref=e1057]: .
+                        - generic [ref=e1058]: "6"
+                        - generic [ref=e1059]: "9"
+                        - generic [ref=e1060]: "3"
+                    - math [ref=e1062]:
+                      - generic [ref=e1063]: ln
+                      - generic: ⁡
+                      - generic [ref=e1064]: (
+                      - generic [ref=e1065]: "2"
+                      - generic [ref=e1066]: )
+                      - generic [ref=e1067]: ≈
+                      - generic [ref=e1068]: "0.693"
+                  - text: (the derivative is smaller than the function). When
+                  - generic [ref=e1070]:
+                    - generic [ref=e1071]:
+                      - generic [ref=e1073]: a
+                      - generic [ref=e1075]: =
+                      - generic [ref=e1077]: "3"
+                    - math [ref=e1079]:
+                      - generic [ref=e1080]: a
+                      - generic [ref=e1081]: =
+                      - generic [ref=e1082]: "3"
+                  - text: ", it is"
+                  - generic [ref=e1084]:
+                    - generic [ref=e1085]:
+                      - generic [ref=e1086]:
+                        - generic [ref=e1087]: l
+                        - generic [ref=e1088]: "n"
+                      - generic [ref=e1090]: (
+                      - generic [ref=e1092]: "3"
+                      - generic [ref=e1094]: )
+                      - generic [ref=e1096]: ≈
+                      - generic [ref=e1097]:
+                        - generic [ref=e1098]: "1"
+                        - generic [ref=e1099]: .
+                        - generic [ref=e1100]: "0"
+                        - generic [ref=e1101]: "9"
+                        - generic [ref=e1102]: "9"
+                    - math [ref=e1104]:
+                      - generic [ref=e1105]: ln
+                      - generic: ⁡
+                      - generic [ref=e1106]: (
+                      - generic [ref=e1107]: "3"
+                      - generic [ref=e1108]: )
+                      - generic [ref=e1109]: ≈
+                      - generic [ref=e1110]: "1.099"
+                  - text: (the derivative is larger). The number
+                  - generic [ref=e1112]:
+                    - generic [ref=e1115]: e
+                    - math [ref=e1117]:
+                      - generic [ref=e1118]: e
+                  - text: is the “Goldilocks” base where
+                  - generic [ref=e1120]:
+                    - generic [ref=e1121]:
+                      - generic [ref=e1122]:
+                        - generic [ref=e1123]: l
+                        - generic [ref=e1124]: "n"
+                      - generic [ref=e1126]: (
+                      - generic [ref=e1128]: e
+                      - generic [ref=e1130]: )
+                      - generic [ref=e1132]: =
+                      - generic [ref=e1134]: "1"
+                    - math [ref=e1136]:
+                      - generic [ref=e1137]: ln
+                      - generic: ⁡
+                      - generic [ref=e1138]: (
+                      - generic [ref=e1139]: e
+                      - generic [ref=e1140]: )
+                      - generic [ref=e1141]: =
+                      - generic [ref=e1142]: "1"
+                  - text: ", making the derivative exactly equal to the function."
+                - paragraph [ref=e1143]:
+                  - text: The code below plots various exponential functions alongside their derivatives to reveal this relationship visually. It also plots the ratio
+                  - generic [ref=e1145]:
+                    - generic [ref=e1146]:
+                      - generic [ref=e1147]:
+                        - generic [ref=e1149]: f
+                        - generic [ref=e1152]: ′
+                      - generic [ref=e1154]: (
+                      - generic [ref=e1156]: x
+                      - generic [ref=e1158]: )
+                      - generic [ref=e1161]: /
+                      - generic [ref=e1163]: f
+                      - generic [ref=e1165]: (
+                      - generic [ref=e1167]: x
+                      - generic [ref=e1169]: )
+                    - math [ref=e1171]:
+                      - generic [ref=e1172]:
+                        - generic [ref=e1173]: f
+                        - generic [ref=e1174]: ′
+                      - generic [ref=e1175]: (
+                      - generic [ref=e1176]: x
+                      - generic [ref=e1177]: )
+                      - generic [ref=e1179]: /
+                      - generic [ref=e1180]: f
+                      - generic [ref=e1181]: (
+                      - generic [ref=e1182]: x
+                      - generic [ref=e1183]: )
+                  - text: for each base, showing that this ratio is constant (equal to
+                  - generic [ref=e1185]:
+                    - generic [ref=e1186]:
+                      - generic [ref=e1187]:
+                        - generic [ref=e1188]: l
+                        - generic [ref=e1189]: "n"
+                      - generic [ref=e1191]: (
+                      - generic [ref=e1193]: a
+                      - generic [ref=e1195]: )
+                    - math [ref=e1197]:
+                      - generic [ref=e1198]: ln
+                      - generic: ⁡
+                      - generic [ref=e1199]: (
+                      - generic [ref=e1200]: a
+                      - generic [ref=e1201]: )
+                  - text: ) regardless of
+                  - generic [ref=e1203]:
+                    - generic [ref=e1206]: x
+                    - math [ref=e1208]:
+                      - generic [ref=e1209]: x
+                  - text: – a hallmark property of exponential functions that distinguishes them from polynomials and trigonometric functions.
+        - contentinfo [ref=e1210]:
+          - generic [ref=e1211]:
+            - link "Next <no title>" [ref=e1212] [cursor=pointer]:
+              - /url: ../differential-equations/README.html
+              - generic [ref=e1213]:
+                - generic [ref=e1215]: Next
+                - generic [ref=e1216]: <no title>
+              - img [ref=e1217]
+            - 'link "Previous Chapter 11: Taylor Series" [ref=e1219] [cursor=pointer]':
+              - /url: 11_taylor_series.html
+              - img [ref=e1220]
+              - generic [ref=e1222]:
+                - generic [ref=e1224]: Previous
+                - generic [ref=e1225]: "Chapter 11: Taylor Series"
+          - generic [ref=e1226]:
+            - generic [ref=e1227]:
+              - generic [ref=e1228]: Copyright © 2024, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e1229] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e1230] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e1231] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e1234] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e1235]
+      - complementary [ref=e1237]:
+        - separator "Resize right sidebar" [ref=e1238]:
+          - button "Collapse right sidebar" [ref=e1239] [cursor=pointer]: ›
+        - generic [ref=e1240]:
+          - generic [ref=e1241]: On this page
+          - list [ref=e1244]:
+            - listitem [ref=e1245]:
+              - text: e x
+              - list [ref=e1246]:
+                - listitem [ref=e1247]:
+                  - link "The One Function That Is Its Own Derivative" [ref=e1248] [cursor=pointer]:
+                    - /url: "#the-one-function-that-is-its-own-derivative"
+                - listitem [ref=e1249]:
+                  - link "Visualizing What Makes Unique Among Exponentials" [ref=e1250] [cursor=pointer]:
+                    - /url: "#visualizing-what-makes-e-x-unique-among-exponentials"
+                    - text: Visualizing What Makes
+                    - generic [ref=e1252]:
+                      - generic [ref=e1254]:
+                        - generic [ref=e1256]: e
+                        - generic [ref=e1259]: x
+                      - math [ref=e1261]:
+                        - generic [ref=e1262]:
+                          - generic [ref=e1263]: e
+                          - generic [ref=e1264]: x
+                    - text: Unique Among Exponentials
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹
