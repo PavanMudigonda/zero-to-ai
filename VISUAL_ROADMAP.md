@@ -378,6 +378,9 @@ flowchart TD
         I --> S1[REST API - FastAPI]
         I --> S2[vLLM / TGI]
         I --> S3[Triton Inference Server]
+        I --> S4[Managed APIs - Bedrock / Vertex AI / Azure AI Foundry]
+        I --> S5[Edge Runtime - ONNX Runtime]
+        I --> S6[Open Source - Ollama / llama.cpp / SGLang]
     end
 ```
 

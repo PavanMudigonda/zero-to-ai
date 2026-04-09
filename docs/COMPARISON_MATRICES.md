@@ -223,33 +223,47 @@ flowchart TD
 |--------|----------|------|------|------|-------------|
 | **OpenAI API** | Quick production | No infrastructure, reliable | Expensive at scale, data privacy | Pay per token | MVP, low-medium volume |
 | **Anthropic (Claude)** | Production apps | Great models, reliable | Limited models | Pay per token | Production chatbots |
-| **Cloud GPU (AWS/GCP)** | Self-hosted production | Full control, scalable | Complex setup, cost management | $1-5/hour | High-volume production |
+| **AWS Bedrock** | Managed foundation models | No GPU ops, enterprise-friendly | Less control than self-hosting | Pay per token | Fast AWS-native production |
+| **Azure AI Foundry / Azure OpenAI** | Managed foundation models | Strong enterprise integration | Region/model availability varies | Pay per token | Azure-native production |
+| **Google Vertex AI** | Gemini and managed ML | Good Google ecosystem integration | Less flexible than self-hosting | Pay per token / endpoint | Google-native production |
+| **SageMaker / Azure ML / Vertex custom endpoints** | Custom model deployment | Managed training + serving | More platform complexity | Endpoint + compute cost | Classical ML and custom DL |
+| **Cloud GPU (AWS/GCP/Azure)** | Self-hosted production | Full control, scalable | Complex setup, cost management | $1-5+/hour | High-volume production |
 | **Modal** | Serverless GPU | Auto-scaling, easy | Limited control | Pay per second | Bursty workloads |
 | **Replicate** | Model hosting | Easy deployment, many models | Higher cost | Pay per prediction | Quick deployment |
 | **HuggingFace Inference** | Quick hosting | Many models, easy | Limited free tier | Free/Pay | Testing, demos |
 | **Local (Ollama)** | Development, privacy | Free, private, fast iteration | Limited by hardware | Free (power cost) | Development, sensitive data |
 | **vLLM** | Self-hosted serving | Very fast, efficient | Requires setup | Hosting cost | Production self-hosting |
 | **TGI** | HuggingFace models | Optimized for HF models | HF ecosystem only | Hosting cost | HuggingFace models |
+| **Triton Inference Server** | Mixed model fleets | Supports ONNX, TensorRT, PyTorch | More infra work | Hosting cost | Multi-model production |
+| **ONNX Runtime** | Edge and portable inference | Fast, cross-platform, flexible | You still need hosting | Hosting/device cost | Edge, mobile, portable serving |
+| **llama.cpp / SGLang / Ollama** | Open-source local or self-hosted | Maximum control, low cost | More ops and tuning | Infra cost | Open-weight models |
+
+**Key distinction:**
+
+- **Managed APIs**: Bedrock, Azure AI Foundry, Vertex AI.
+- **Managed custom model platforms**: SageMaker, Azure ML, Vertex AI endpoints.
+- **Open-source self-hosting**: vLLM, TGI, Triton, SGLang, Ollama, llama.cpp.
+- **Portable runtime**: ONNX Runtime.
 
 **By Requirements:**
 
 **Privacy Critical:**
-- Local with Ollama or self-hosted vLLM
+- Local with Ollama, llama.cpp, ONNX Runtime, or self-hosted vLLM
 
 **Cost Optimization:**
 1. **Low volume (<1M tokens/month)**: OpenAI API
-2. **Medium (1-10M)**: Replicate or Claude
-3. **High (>10M)**: Self-hosted on cloud GPU
+2. **Medium (1-10M)**: Bedrock / Azure AI Foundry / Vertex AI or Claude
+3. **High (>10M)**: Self-hosted vLLM / TGI / Triton on cloud GPU
 
 **Speed Requirements:**
 - **Fastest**: vLLM (self-hosted) or OpenAI API
-- **Low latency**: Edge deployment (TensorFlow Lite, ONNX)
+- **Low latency**: Edge deployment (ONNX Runtime, TensorFlow Lite)
 - **Batch processing**: Cloud GPU with large batches
 
 **Development vs Production:**
 - **Development**: Ollama (local) or OpenAI API
-- **Production**: vLLM (self-hosted) or OpenAI/Claude API
-- **Hybrid**: API for dev, self-hosted for production
+- **Production**: Bedrock / Azure AI Foundry / Vertex AI or vLLM / Triton
+- **Hybrid**: Managed API for MVP, self-hosted for scale
 
 ---
 

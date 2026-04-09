@@ -1,80 +1,81 @@
 /**
- * Preserve the left sidebar scroll position across page navigations.
- *
- * Strategy: if a saved position exists, we immediately inject CSS that
- * hides the sidebar (visibility:hidden keeps layout stable). Then on
- * DOMContentLoaded we set scrollTop, intercept Furo's scrollIntoView,
- * and reveal — all before the user sees anything.
+ * Preserve only the left sidebar scroll position across sidebar-driven
+ * navigations without touching the main page scroll behavior.
  */
 (function () {
   "use strict";
 
   var STORAGE_KEY = "ztai-sidebar-scroll";
-  var hasSaved = sessionStorage.getItem(STORAGE_KEY) !== null;
+  var NAV_KEY = "ztai-sidebar-nav";
 
-  /* ---- Phase 1: run immediately at parse time ---- */
-  // If we have a saved position, hide sidebar content to prevent flash
-  if (hasSaved) {
-    var hideStyle = document.createElement("style");
-    hideStyle.id = "ztai-sidebar-hide";
-    hideStyle.textContent = ".sidebar-scroll{visibility:hidden!important}";
-    document.head.appendChild(hideStyle);
+  function getSidebar() {
+    return document.querySelector(".sidebar-scroll");
   }
 
-  /* ---- Phase 2: intercept scrollIntoView at parse time ---- */
-  var nativeScrollIntoView = Element.prototype.scrollIntoView;
-
-  if (hasSaved) {
-    Element.prototype.scrollIntoView = function () {
-      // Skip calls targeting sidebar children
-      var sidebar = document.querySelector(".sidebar-scroll");
-      if (sidebar && sidebar.contains(this)) return;
-      return nativeScrollIntoView.apply(this, arguments);
-    };
+  function save(sidebar) {
+    if (!sidebar) return;
+    sessionStorage.setItem(STORAGE_KEY, String(sidebar.scrollTop));
   }
 
-  /* ---- Phase 3: restore position on DOMContentLoaded ---- */
   function restore() {
-    var sidebar = document.querySelector(".sidebar-scroll");
-    if (!sidebar) { cleanup(); return; }
-
+    var sidebar = getSidebar();
     var raw = sessionStorage.getItem(STORAGE_KEY);
-    sessionStorage.removeItem(STORAGE_KEY);
+    var fromSidebarNav = sessionStorage.getItem(NAV_KEY) === "1";
 
-    if (raw !== null) {
-      var target = parseInt(raw, 10);
-      if (!isNaN(target)) {
-        sidebar.scrollTop = target;
-      }
+    if (!sidebar || raw === null || !fromSidebarNav) {
+      sessionStorage.removeItem(NAV_KEY);
+      return;
     }
 
-    // Reveal: remove the hide style and restore native scrollIntoView
-    cleanup();
-  }
+    sessionStorage.removeItem(NAV_KEY);
 
-  function cleanup() {
-    var s = document.getElementById("ztai-sidebar-hide");
-    if (s) s.remove();
-    Element.prototype.scrollIntoView = nativeScrollIntoView;
-  }
+    var target = parseInt(raw, 10);
+    if (isNaN(target)) return;
 
-  /* ---- Save on click ---- */
-  function listen() {
-    var sidebar = document.querySelector(".sidebar-scroll");
-    if (!sidebar) return;
-    sidebar.addEventListener("click", function (e) {
-      if (e.target.closest("a")) {
-        sessionStorage.setItem(STORAGE_KEY, sidebar.scrollTop);
-      }
+    var previousBehavior = sidebar.style.scrollBehavior;
+    sidebar.style.scrollBehavior = "auto";
+
+    function apply() {
+      sidebar.scrollTop = target;
+    }
+
+    apply();
+    requestAnimationFrame(function () {
+      apply();
+      requestAnimationFrame(function () {
+        apply();
+        sidebar.style.scrollBehavior = previousBehavior;
+      });
     });
   }
 
-  /* ---- Boot ---- */
-  function boot() { restore(); listen(); }
+  function listen() {
+    var sidebar = getSidebar();
+    if (!sidebar) return;
+
+    sidebar.addEventListener("click", function (e) {
+      var link = e.target.closest("a");
+      if (!link) return;
+      sessionStorage.setItem(NAV_KEY, "1");
+      save(sidebar);
+    }, true);
+
+    window.addEventListener("pagehide", function () {
+      save(sidebar);
+    });
+  }
+
+  function boot() {
+    restore();
+    listen();
+  }
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", boot);
   } else {
     boot();
   }
+
+  window.addEventListener("pageshow", restore);
+  window.addEventListener("load", restore);
 })();

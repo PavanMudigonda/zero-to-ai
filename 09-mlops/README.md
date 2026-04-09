@@ -78,6 +78,8 @@ mlflow.end_run()
 | REST API | FastAPI | Standard models, <100ms latency needed |
 | Batch inference | Celery/Ray | Large datasets, overnight jobs |
 | Streaming | vLLM + SSE | LLM text generation |
+| Managed foundation model API | Bedrock / Vertex AI / Azure AI Foundry | Fastest path to production without running GPUs |
+| GPU inference server | Triton / vLLM / TGI | High-throughput production serving |
 | Edge deployment | ONNX Runtime | Mobile/embedded devices |
 
 ### The MLOps Stack (What to Learn)
@@ -91,7 +93,39 @@ mlflow.end_run()
 | Monitoring | Prometheus + Grafana | Know basics |
 | LLM serving | vLLM | Know if doing LLM work |
 | Orchestration | Kubeflow / Airflow | Nice to have |
-| Cloud ML | AWS SageMaker / GCP Vertex | Nice to have |
+| Cloud ML | SageMaker / Azure ML / Vertex AI | Nice to have |
+
+### Deployment Matrix: AWS, Azure, Google, and Open Source
+
+Different deployment targets solve different problems. `ONNX Runtime` is a runtime and model format choice. `Bedrock`, `Vertex AI`, and `Azure AI Foundry` are managed platforms. `vLLM`, `TGI`, `Triton`, `Ollama`, and `llama.cpp` are open-source serving stacks.
+
+| Need | AWS | Azure | Google Cloud | Open Source | Best Fit |
+|------|-----|-------|--------------|-------------|----------|
+| Managed LLM API | Bedrock | Azure AI Foundry / Azure OpenAI | Vertex AI Gemini | OpenAI-compatible gateway over hosted OSS is possible, but not truly managed | Teams that want minimal infra |
+| Train and deploy custom ML model | SageMaker | Azure ML | Vertex AI | FastAPI + Docker + Kubernetes | Classical ML and custom DL models |
+| Self-host open-weight LLMs on GPU | EKS/ECS + vLLM or TGI | AKS + vLLM or TGI | GKE + vLLM or TGI | vLLM / TGI / Triton / SGLang | High-volume LLM inference |
+| Multi-model inference server | SageMaker endpoints or ECS/EKS + Triton | Azure ML managed endpoints or AKS + Triton | Vertex endpoints or GKE + Triton | Triton Inference Server | Mixed PyTorch / TensorRT / ONNX workloads |
+| Edge or mobile deployment | Greengrass + ONNX Runtime | Azure IoT Edge + ONNX Runtime | Edge TPU / Vertex Edge + ONNX Runtime | ONNX Runtime / TensorFlow Lite / llama.cpp | Low-latency local inference |
+| Local developer workflow | Bedrock local emulation is limited | Azure-hosted only | Vertex-hosted only | Ollama / llama.cpp / LM Studio | Fast iteration and privacy |
+
+### How to Choose a Deployment Path
+
+1. **Use ONNX Runtime** when you own the model artifact and want portable, optimized inference across CPU, GPU, and edge devices.
+2. **Use Bedrock / Azure AI Foundry / Vertex AI** when you want managed foundation model access and do not want to run your own inference cluster.
+3. **Use SageMaker / Azure ML / Vertex AI custom endpoints** when you need managed training plus deployment for your own models.
+4. **Use vLLM / TGI / Triton / SGLang** when you want open-source control, custom batching, lower cost at scale, or open-weight LLM hosting.
+5. **Use Ollama or llama.cpp** for local development, offline demos, CPU-friendly inference, or privacy-sensitive prototyping.
+
+### Practical Defaults
+
+| Scenario | Recommended Path |
+|----------|------------------|
+| MVP chatbot with lowest ops burden | Bedrock, Azure AI Foundry, Vertex AI, or OpenAI/Anthropic API |
+| Enterprise app with strict cloud standard | Match the platform to your cloud: Bedrock, Azure AI Foundry, or Vertex AI |
+| Open-weight LLM in production | vLLM or TGI on Kubernetes / cloud GPU |
+| Mixed model fleet with TensorRT/ONNX/PyTorch | Triton Inference Server |
+| Mobile / embedded / offline | ONNX Runtime or TensorFlow Lite |
+| Local-first development | Ollama or llama.cpp |
 
 ### Docker for ML — The Essential Pattern
 
@@ -132,6 +166,13 @@ This newer notebook covers production LLM serving:
 | Production, high throughput | vLLM |
 | HuggingFace models in prod | TGI |
 | CPU-only inference | llama.cpp |
+| Managed cloud FM access | Bedrock / Azure AI Foundry / Vertex AI |
+
+### Bedrock vs ONNX vs vLLM in One Sentence
+
+- **Bedrock**: managed API for foundation models.
+- **ONNX Runtime**: portable runtime for your own exported model.
+- **vLLM**: high-throughput open-source LLM server for self-hosting.
 
 ---
 
