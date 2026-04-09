@@ -8,7 +8,7 @@
 
 - Don't try to consume all of these — use them as a menu
 - For each phase, pick 1-2 video resources and 1-2 repos to study
-- "Must-watch" items are marked with **
+- "Must-watch" items are marked with ⭐
 
 ---
 

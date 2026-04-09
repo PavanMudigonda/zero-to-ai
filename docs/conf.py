@@ -37,6 +37,7 @@ myst_enable_extensions = [
     "substitution",
     "tasklist",
 ]
+myst_dmath_allow_digits = False
 myst_heading_anchors = 3
 
 # Notebook execution settings

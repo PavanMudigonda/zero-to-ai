@@ -402,3 +402,30 @@
     init();
   }
 })();
+
+/* Back-to-top scroll visibility toggle */
+(function () {
+  function initBackToTop() {
+    var btn = document.querySelector("a.back-to-top");
+    if (!btn) return;
+
+    function checkScroll() {
+      var st = document.documentElement.scrollTop || document.body.scrollTop;
+      if (st > 400) {
+        btn.classList.add("show");
+      } else {
+        btn.classList.remove("show");
+      }
+    }
+
+    document.addEventListener("scroll", checkScroll, { passive: true });
+    window.addEventListener("scroll", checkScroll, { passive: true });
+    checkScroll();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBackToTop);
+  } else {
+    initBackToTop();
+  }
+})();

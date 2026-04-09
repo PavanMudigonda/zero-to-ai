@@ -481,3 +481,56 @@ body.sidebar-resizing * {
     display: none !important;
   }
 }
+
+/* Back-to-top floating button (Furo built-in) */
+.back-to-top {
+  position: fixed !important;
+  bottom: 2rem;
+  right: 2rem;
+  top: auto !important;
+  left: auto !important;
+  z-index: 1000;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--color-foreground-border);
+  background: var(--color-background-primary);
+  color: var(--color-foreground-secondary);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s, background 0.2s;
+  padding: 0;
+  text-decoration: none;
+  font-size: 0;
+  line-height: 0;
+  /* Hidden by default, shown via JS */
+  display: none !important;
+  opacity: 0;
+}
+.back-to-top.show {
+  display: flex !important;
+  opacity: 1;
+}
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.back-to-top span {
+  display: none;
+}
+.back-to-top:hover {
+  background: var(--color-brand-primary);
+  color: white;
+  border-color: var(--color-brand-primary);
+}
+@media (max-width: 63em) {
+  .back-to-top.show {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
