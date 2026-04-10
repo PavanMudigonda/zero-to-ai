@@ -46,7 +46,7 @@ sd_hide_title: true
 <h3>AI Engineer</h3>
 <p>LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications fast.</p>
 <p><strong>Key phases:</strong> Embeddings, RAG, Prompt Engineering, Agents, MLOps</p>
-<p><a href="generated/CAREER_ROADMAP.html">View track &rarr;</a></p>
+<p><a href="curriculum/00-course-setup/README.html">Get started &rarr;</a></p>
 </div>
 
 <div class="track-card">
@@ -54,7 +54,7 @@ sd_hide_title: true
 <h3>ML Engineer</h3>
 <p>Full foundation plus advanced topics. Deep understanding of models, math, and infrastructure.</p>
 <p><strong>Key phases:</strong> Math, Neural Networks, Fine-tuning, MLOps, Evaluation</p>
-<p><a href="generated/CAREER_ROADMAP.html">View track &rarr;</a></p>
+<p><a href="curriculum/00-course-setup/README.html">Get started &rarr;</a></p>
 </div>
 
 <div class="track-card">
@@ -62,7 +62,7 @@ sd_hide_title: true
 <h3>Data Scientist</h3>
 <p>Statistics, experimentation, classical ML. Strong analytical foundation.</p>
 <p><strong>Key phases:</strong> Statistics, Causal Inference, Time Series, Evaluation</p>
-<p><a href="generated/CAREER_ROADMAP.html">View track &rarr;</a></p>
+<p><a href="curriculum/00-course-setup/README.html">Get started &rarr;</a></p>
 </div>
 
 </div>
@@ -139,32 +139,12 @@ sd_hide_title: true
 <div class="track-grid">
 
 <div class="track-card">
-<h3>📖 Career Roadmap</h3>
-<p>Month-by-month learning plans for all three tracks.</p>
-<p><a href="generated/CAREER_ROADMAP.html">Open guide &rarr;</a></p>
-</div>
-
-<div class="track-card">
-<h3>💼 Interview Prep</h3>
-<p>15 core ML questions, coding problems, and system design walkthroughs.</p>
-<p><a href="generated/INTERVIEW_PREP.html">Start prepping &rarr;</a></p>
-</div>
-
-<div class="track-card">
-<h3>🗺️ Visual Roadmaps</h3>
+<h3>️ Visual Roadmaps</h3>
 <p>Interactive diagrams showing the full curriculum and how topics connect.</p>
 <p><a href="generated/roadmaps/01_overview.html">View roadmaps &rarr;</a></p>
 </div>
 
 </div>
-
-```{toctree}
-:hidden:
-:caption: Resources
-
-generated/CAREER_ROADMAP
-generated/INTERVIEW_PREP
-```
 
 ```{toctree}
 :hidden:
@@ -262,9 +242,4 @@ curriculum/30-inference-opt/README
 curriculum/31-ai-dev-tools/README
 ```
 
-```{toctree}
-:hidden:
-:caption: About
 
-generated/WORKSPACE_LEARNING_REVIEW
-```

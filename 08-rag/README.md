@@ -409,7 +409,7 @@ Build a RAG system that combines multiple retrieval strategies and exposes evide
 
 ## ✅ Completion Checklist
 
-Before moving to Phase 8 (MLOps), you should be able to:
+Before moving to Phase 9 (MLOps), you should be able to:
 
 - [ ] Explain RAG architecture and benefits
 - [ ] Process and chunk documents effectively

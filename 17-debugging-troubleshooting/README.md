@@ -360,9 +360,9 @@ After completing this phase, you should be able to:
 
 ## 🚀 Next Steps
 
-After completing Phase 16:
-- **Phase 17:** Low-Code AI Tools (Gradio, Streamlit)
-- **Phase 18:** Production Deployment
+After completing Phase 17:
+- **Phase 18:** Low-Code AI Tools (Gradio, Streamlit)
+- **Phase 19:** AI Safety & Red Teaming
 - **Advanced:** MLOps and Model Monitoring
 
 ---

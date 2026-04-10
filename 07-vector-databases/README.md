@@ -24,7 +24,7 @@ This module turns embeddings into something operational. Once you can generate v
 - Start with the basics notebook
 - Use Chroma first for local intuition
 - Compare Qdrant, Weaviate, Milvus, and pgvector-style workflows after that
-- Move to Phase 7 RAG once you understand indexing, retrieval, and filtering trade-offs
+- Move to Phase 8 RAG once you understand indexing, retrieval, and filtering trade-offs
 
 ## Study Advice
 

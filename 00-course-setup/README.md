@@ -9,7 +9,7 @@
 1. **Fork & Clone**: Click "Fork" → `git clone https://github.com/YOUR-USERNAME/zero-to-ai.git`
 2. **Install**: Run `./install_dependencies.sh` (uses UV - fastest!)
 3. **Start**: `jupyter notebook` → Open any `.ipynb` file
-4. **Begin Learning**: Read [../MASTER_STUDY_GUIDE.md](../MASTER_STUDY_GUIDE.md), then choose the first phase for your track
+4. **Begin Learning**: Read [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md), then choose the first phase for your track
 
 **Not ready?** See detailed setup below.
 
@@ -246,8 +246,8 @@ zero-to-ai/
 ## 📋 Next Steps
 
 1. ✅ **Complete Setup**: Ensure your environment is working
-2. ✅ **Read the Checklist**: Open [checklist.md](../checklist.md) - your complete roadmap
-3. ✅ **Start Learning**: Begin with [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md), then move to the first phase for your track
+2. ✅ **Review the Glossary**: Read [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md) for terminology
+3. ✅ **Start Learning**: Begin with [01-python/](../01-python/README.md) if new to Python, or jump to [04-token/](../04-token/README.md) for your track
 4. ✅ **Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
 5. ✅ **Join Community**: Connect with other learners for support
 
@@ -280,8 +280,8 @@ Before moving to Lesson 1, ensure:
 - [ ] All dependencies installed (`pip list` shows numpy, pandas, sklearn, etc.)
 - [ ] Jupyter Notebook launches successfully
 - [ ] Can open and run a test notebook
-- [ ] Read [checklist.md](../checklist.md) learning roadmap
 - [ ] Familiar with [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md) terms
+- [ ] Reviewed the Visual Roadmaps for your chosen track
 
 ## 🎓 Ready to Start?
 
@@ -294,10 +294,9 @@ Before moving to Lesson 1, ensure:
 **📚 Additional Resources**
 
 - [Main README](../README.md) - Repository overview
-- [Learning Checklist](../checklist.md) - Complete roadmap
-- [Setup Guide](../setup.md) - Detailed installation instructions
-- [Contributing Guidelines](../CONTRIBUTING.md) - How to contribute
-- [Code of Conduct](../CODE_OF_CONDUCT.md) - Community guidelines
+- [Visual Roadmaps](https://zero-to-ai.dev/generated/roadmaps/01_overview.html) - See the full curriculum at a glance
+- [Contributing](https://github.com/PavanMudigonda/zero-to-ai/blob/main/CONTRIBUTING.md) - How to contribute
+- [Code of Conduct](https://github.com/PavanMudigonda/zero-to-ai/blob/main/CODE_OF_CONDUCT.md) - Community guidelines
 
 ---
 

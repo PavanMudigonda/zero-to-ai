@@ -301,8 +301,7 @@ Check out `tiktoken_example.py` to see tokenization in action with real examples
 
 ---
 
-**Next Step:** Learn about [Embeddings](../4-embeddings/) - how tokens are converted into meaningful vector representations that capture semantic relationships.
+**Next Step:** Learn about [Embeddings](../05-embeddings/) - how tokens are converted into meaningful vector representations that capture semantic relationships.
 
 **See Also:**
-- [Glossary](../0-glossary/GLOSSARY.md) - Definitions of AI/ML terms
-- [Learning Roadmap](../0-glossary/ML_Topic_Guide.md) - Your personalized AI/ML learning path
+- [Glossary](../23-glossary/GLOSSARY.md) - Definitions of AI/ML terms

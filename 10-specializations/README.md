@@ -5,9 +5,10 @@
 Choose your path and dive deep into specialized AI domains!
 
 **Prerequisites:**
-- ✅ Foundation (Phases 1-6)
-- ✅ RAG Systems (Phase 7)
-- ✅ MLOps (Phase 8)
+- ✅ Foundation (Phases 0-6)
+- ✅ Vector Databases (Phase 7)
+- ✅ RAG Systems (Phase 8)
+- ✅ MLOps (Phase 9)
 
 **Time:** 2-3 months per specialization  
 **Outcome:** Deep expertise in your chosen domain
@@ -232,9 +233,9 @@ After mastering one, you can:
 **All Specializations Use:**
 - PyTorch / TensorFlow
 - HuggingFace Transformers
-- Your RAG knowledge (Phase 7)
-- Production skills (Phase 8)
-- Vector databases (Phase 6)
+- Your RAG knowledge (Phase 8)
+- Production skills (Phase 9)
+- Vector databases (Phase 7)
 
 **Specialization-Specific:**
 
@@ -369,16 +370,17 @@ After specializations, consider:
 ## 📊 Your Journey So Far
 
 ```
-✅ Phase 0: Glossary
+✅ Phase 0: Course Setup
 ✅ Phase 1: Python Fundamentals
-✅ Phase 2: Mathematics for ML
-✅ Phase 3: Tokenization
-✅ Phase 4: Embeddings
-✅ Phase 5: Neural Networks
-✅ Phase 6: Vector Databases
-✅ Phase 7: RAG Systems
-✅ Phase 8: MLOps
-🎯 Phase 9: Specializations ← YOU ARE HERE
+✅ Phase 2: Data Science Foundations
+✅ Phase 3: Mathematics for ML
+✅ Phase 4: Tokenization
+✅ Phase 5: Embeddings
+✅ Phase 6: Neural Networks
+✅ Phase 7: Vector Databases
+✅ Phase 8: RAG Systems
+✅ Phase 9: MLOps
+🎯 Phase 10: Specializations ← YOU ARE HERE
 ```
 
 **You've come incredibly far!** 🎉

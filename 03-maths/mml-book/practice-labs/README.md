@@ -1,6 +1,6 @@
 # Practice Labs: Mathematics for Machine Learning (Deisenroth/Faisal/Ong)
 
-**Source PDF:** [../mml-book.pdf](../mml-book.pdf)
+**Source PDF:** [Mathematics for Machine Learning](https://mml-book.github.io/book/mml-book.pdf)
 **Book:** *Mathematics for Machine Learning* by Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong (Cambridge University Press, 2020)
 
 This book covers the mathematical foundations that underpin machine learning: linear algebra, calculus, probability, optimization, and four central ML algorithms (regression, PCA, GMM, SVM).

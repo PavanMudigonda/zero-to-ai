@@ -279,9 +279,9 @@ async def streaming_rag(query):
 ## Next Steps
 
 After completing this phase:
-1. Review Phase 18 (AI Safety) for securing streaming apps
-2. Explore Phase 14 (AI Agents) for multi-agent streaming
-3. Check Phase 17 (Low-Code) for Gradio/Streamlit streaming
+1. Review Phase 19 (AI Safety) for securing streaming apps
+2. Explore Phase 15 (AI Agents) for multi-agent streaming
+3. Check Phase 18 (Low-Code) for Gradio/Streamlit streaming
 4. Build your own production streaming application
 
 ## Time Estimates

@@ -310,4 +310,4 @@ Track these metrics for your secure AI system:
 
 **Start with:** [Prompt Security Basics](01_prompt_security.ipynb)
 
-**Phase 18: AI Safety & Red Teaming** - Build secure, responsible AI systems! 🛡️
+**Phase 19: AI Safety & Red Teaming** - Build secure, responsible AI systems! 🛡️

@@ -64,7 +64,7 @@ This phase is centered on text embeddings, but production retrieval systems in 2
 
 - A semantic FAQ search system
 - A duplicate-detection tool for documents
-- A chunk-and-retrieve pipeline that feeds Phase 7 RAG work
+- A chunk-and-retrieve pipeline that feeds Phase 8 RAG work
 - An image-text search prototype using multimodal embeddings
 - A hybrid retrieval stack with a reranker on top of dense retrieval
 
