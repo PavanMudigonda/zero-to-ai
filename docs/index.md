@@ -164,6 +164,12 @@ sd_hide_title: true
 
 generated/CAREER_ROADMAP
 generated/INTERVIEW_PREP
+```
+
+```{toctree}
+:hidden:
+:caption: Roadmaps
+
 generated/roadmaps/01_overview
 generated/roadmaps/02_core_systems
 generated/roadmaps/03_advanced_topics

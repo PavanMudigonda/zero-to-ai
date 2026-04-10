@@ -91,6 +91,14 @@ exclude_patterns = [
     # Translation directories — non-English content with broken relative image paths
     "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
+    # Orphaned docs/ copies of deleted root files
+    "COMPARISON_MATRICES.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "REFERENCES.md",
+    "SUPPORT.md",
+    "checklist.md",
+    "setup.md",
 ]
 
 # -- Options for HTML output -------------------------------------------------
