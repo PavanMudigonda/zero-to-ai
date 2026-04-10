@@ -254,10 +254,5 @@ curriculum/30-inference-opt/README
 :hidden:
 :caption: About
 
-generated/CONTRIBUTING
-generated/CODE_OF_CONDUCT
-generated/REFERENCES
 generated/WORKSPACE_LEARNING_REVIEW
-generated/LICENSE
-generated/SUPPORT
 ```

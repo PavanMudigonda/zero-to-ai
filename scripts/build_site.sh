@@ -161,16 +161,7 @@ phase_output_dirs = {
 }
 
 site_doc_outputs = {
-    "CODE_OF_CONDUCT.md": "generated/CODE_OF_CONDUCT.md",
-    "COMPARISON_MATRICES.md": "generated/COMPARISON_MATRICES.md",
-    "CONTRIBUTING.md": "generated/CONTRIBUTING.md",
-    "LICENSE.md": "generated/LICENSE.md",
-    "MASTER_STUDY_GUIDE.md": "generated/MASTER_STUDY_GUIDE.md",
-    "REFERENCES.md": "generated/REFERENCES.md",
-    "SUPPORT.md": "generated/SUPPORT.md",
     "VISUAL_ROADMAP.md": "generated/VISUAL_ROADMAP.md",
-    "checklist.md": "generated/checklist.md",
-    "setup.md": "generated/setup.md",
 }
 
 link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
