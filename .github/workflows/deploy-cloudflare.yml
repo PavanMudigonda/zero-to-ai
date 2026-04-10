@@ -18,6 +18,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 0
+
+      - name: Resolve release version
+        id: version
+        run: |
+          TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          if [ -z "$TAG" ]; then
+            TAG="v0.1.0"
+          fi
+          VERSION="${TAG#v}"
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Resolved version: $VERSION"
 
       - name: Setup Python
         uses: actions/setup-python@v6.2.0
@@ -37,9 +50,10 @@ jobs:
       - name: Generate Sphinx site
         run: |
           bash scripts/build_site.sh
-          sphinx-build -b html docs site
+          sphinx-build -b html -D release="${SITE_VERSION}" docs site
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          SITE_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3.14.1

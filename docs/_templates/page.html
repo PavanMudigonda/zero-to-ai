@@ -5,6 +5,57 @@
 {% include "analytics.html" %}
 {% endblock %}
 
+{% block footer %}
+{#- Furo's default footer with prev/next nav -#}
+<div class="related-pages">
+  {% if prev -%}
+    <a class="next-page" href="{{ prev.link|e }}">
+      <div class="page-info">
+        <div class="context">
+          <span>Next</span>
+        </div>
+        <div class="title">{{ prev.title }}</div>
+      </div>
+      <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+    </a>
+  {%- endif %}
+  {% if next -%}
+    <a class="prev-page" href="{{ next.link|e }}">
+      <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      <div class="page-info">
+        <div class="context">
+          <span>Previous</span>
+        </div>
+        <div class="title">{{ next.title }}</div>
+      </div>
+    </a>
+  {%- endif %}
+</div>
+<div class="bottom-of-page">
+  <div class="left-details">
+    {%- if show_copyright %}
+    <div class="copyright">
+      {% trans copyright=copyright|e -%}
+        Copyright &#169; {{ copyright }}
+      {%- endtrans %}
+    </div>
+    {%- endif %}
+    <span class="site-version">v{{ release }}</span>
+  </div>
+  <div class="right-details">
+    {% if theme_footer_icons -%}
+    <div class="icons">
+      {% for icon_dict in theme_footer_icons -%}
+      <a class="muted-link {{ icon_dict.class }}" href="{{ icon_dict.url }}" aria-label="{{ icon_dict.name }}">
+        {{- icon_dict.html -}}
+      </a>
+      {% endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</div>
+{% endblock footer %}
+
 {% block content %}
 {% if notebook_launchers %}
 <div class="notebook-launchers" role="group" aria-label="Notebook launch options">
