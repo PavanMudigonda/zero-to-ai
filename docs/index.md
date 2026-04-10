@@ -46,7 +46,7 @@ sd_hide_title: true
 <h3>AI Engineer</h3>
 <p>LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications fast.</p>
 <p><strong>Key phases:</strong> Embeddings, RAG, Prompt Engineering, Agents, MLOps</p>
-<p><a href="generated/MASTER_STUDY_GUIDE.html#track-a-ai-engineer-4-6-months">View track &rarr;</a></p>
+<p><a href="generated/CAREER_ROADMAP.html">View track &rarr;</a></p>
 </div>
 
 <div class="track-card">
@@ -54,7 +54,7 @@ sd_hide_title: true
 <h3>ML Engineer</h3>
 <p>Full foundation plus advanced topics. Deep understanding of models, math, and infrastructure.</p>
 <p><strong>Key phases:</strong> Math, Neural Networks, Fine-tuning, MLOps, Evaluation</p>
-<p><a href="generated/MASTER_STUDY_GUIDE.html#track-b-ml-engineer-8-10-months">View track &rarr;</a></p>
+<p><a href="generated/CAREER_ROADMAP.html">View track &rarr;</a></p>
 </div>
 
 <div class="track-card">
@@ -62,7 +62,7 @@ sd_hide_title: true
 <h3>Data Scientist</h3>
 <p>Statistics, experimentation, classical ML. Strong analytical foundation.</p>
 <p><strong>Key phases:</strong> Statistics, Causal Inference, Time Series, Evaluation</p>
-<p><a href="generated/MASTER_STUDY_GUIDE.html#track-c-data-scientist-6-8-months">View track &rarr;</a></p>
+<p><a href="generated/CAREER_ROADMAP.html">View track &rarr;</a></p>
 </div>
 
 </div>
@@ -139,9 +139,9 @@ sd_hide_title: true
 <div class="track-grid">
 
 <div class="track-card">
-<h3>📖 Study Guide</h3>
+<h3>📖 Career Roadmap</h3>
 <p>Month-by-month learning plans for all three tracks.</p>
-<p><a href="generated/MASTER_STUDY_GUIDE.html">Open guide &rarr;</a></p>
+<p><a href="generated/CAREER_ROADMAP.html">Open guide &rarr;</a></p>
 </div>
 
 <div class="track-card">
@@ -151,9 +151,9 @@ sd_hide_title: true
 </div>
 
 <div class="track-card">
-<h3>⚖️ Model Comparisons</h3>
-<p>Side-by-side comparisons of LLMs, embedding models, and tools.</p>
-<p><a href="generated/COMPARISON_MATRICES.html">Compare models &rarr;</a></p>
+<h3>🗺️ Visual Roadmap</h3>
+<p>Interactive diagrams showing the full curriculum and how topics connect.</p>
+<p><a href="generated/VISUAL_ROADMAP.html">View roadmap &rarr;</a></p>
 </div>
 
 </div>
@@ -162,13 +162,9 @@ sd_hide_title: true
 :hidden:
 :caption: Resources
 
-generated/MASTER_STUDY_GUIDE
 generated/CAREER_ROADMAP
 generated/INTERVIEW_PREP
-generated/COMPARISON_MATRICES
 generated/VISUAL_ROADMAP
-generated/setup
-generated/checklist
 ```
 
 ```{toctree}
@@ -248,6 +244,13 @@ curriculum/27-causal-inference/README
 curriculum/28-practical-ds/README
 curriculum/29-ai-hardware/README
 curriculum/30-inference-opt/README
+```
+
+```{toctree}
+:hidden:
+:caption: Developer Tools
+
+curriculum/31-ai-dev-tools/README
 ```
 
 ```{toctree}

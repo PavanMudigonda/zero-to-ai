@@ -151,6 +151,13 @@
 
   /* --- Main init -------------------------------------------------- */
   function init() {
+    /* Enable sidebar transitions only after first paint to prevent flicker */
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add("sidebar-transitions-ready");
+      });
+    });
+
     var leftDrawer  = getLeftDrawer();
     var rightDrawer = getRightDrawer();
 

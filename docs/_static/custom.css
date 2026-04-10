@@ -338,7 +338,7 @@ body.sidebar-resizing * {
   /* Allow the drawers to receive custom widths from JS */
   .sidebar-drawer {
     position: relative;          /* anchor for the handle */
-    transition: min-width 0.2s ease, width 0.2s ease, opacity 0.15s ease;
+    transition: none;            /* JS adds .sidebar-transitions-ready to enable */
     /* overflow NOT set here — set only when collapsed/resizing so the
        absolutely-positioned drag handle isn't clipped */
   }
@@ -350,6 +350,14 @@ body.sidebar-resizing * {
 
   .toc-drawer {
     position: relative;
+    transition: none;            /* JS adds .sidebar-transitions-ready to enable */
+  }
+
+  /* Re-enable transitions after first paint (class added by sidebar-toggle.js) */
+  body.sidebar-transitions-ready .sidebar-drawer {
+    transition: min-width 0.2s ease, width 0.2s ease, opacity 0.15s ease;
+  }
+  body.sidebar-transitions-ready .toc-drawer {
     transition: width 0.2s ease, opacity 0.15s ease, padding 0.2s ease;
   }
 

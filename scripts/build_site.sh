@@ -39,6 +39,7 @@ PHASES=(
   "28-practical-data-science:28-practical-ds"
   "29-ai-hardware-llm-validation:29-ai-hardware"
   "30-inference-optimization:30-inference-opt"
+  "31-ai-powered-dev-tools:31-ai-dev-tools"
 )
 
 copy_phase() {
@@ -158,6 +159,7 @@ phase_output_dirs = {
     "28-practical-data-science": "28-practical-ds",
     "29-ai-hardware-llm-validation": "29-ai-hardware",
     "30-inference-optimization": "30-inference-opt",
+    "31-ai-powered-dev-tools": "31-ai-dev-tools",
 }
 
 site_doc_outputs = {
