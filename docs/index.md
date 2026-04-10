@@ -255,7 +255,6 @@ curriculum/30-inference-opt/README
 :caption: About
 
 generated/CONTRIBUTING
-generated/CHANGELOG
 generated/CODE_OF_CONDUCT
 generated/REFERENCES
 generated/WORKSPACE_LEARNING_REVIEW

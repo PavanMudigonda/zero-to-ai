@@ -92,7 +92,6 @@ exclude_patterns = [
     "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
     "VISUAL_ROADMAP.md",
-    "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
     "COMPARISON_MATRICES.md",
     "CONTRIBUTING.md",

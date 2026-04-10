@@ -161,7 +161,6 @@ phase_output_dirs = {
 }
 
 site_doc_outputs = {
-    "CHANGELOG.md": "generated/CHANGELOG.md",
     "CODE_OF_CONDUCT.md": "generated/CODE_OF_CONDUCT.md",
     "COMPARISON_MATRICES.md": "generated/COMPARISON_MATRICES.md",
     "CONTRIBUTING.md": "generated/CONTRIBUTING.md",
