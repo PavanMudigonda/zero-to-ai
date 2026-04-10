@@ -161,18 +161,15 @@ phase_output_dirs = {
 }
 
 site_doc_outputs = {
-    "CAREER_ROADMAP.md": "generated/CAREER_ROADMAP.md",
     "CHANGELOG.md": "generated/CHANGELOG.md",
     "CODE_OF_CONDUCT.md": "generated/CODE_OF_CONDUCT.md",
     "COMPARISON_MATRICES.md": "generated/COMPARISON_MATRICES.md",
     "CONTRIBUTING.md": "generated/CONTRIBUTING.md",
-    "INTERVIEW_PREP.md": "generated/INTERVIEW_PREP.md",
     "LICENSE.md": "generated/LICENSE.md",
     "MASTER_STUDY_GUIDE.md": "generated/MASTER_STUDY_GUIDE.md",
     "REFERENCES.md": "generated/REFERENCES.md",
     "SUPPORT.md": "generated/SUPPORT.md",
     "VISUAL_ROADMAP.md": "generated/VISUAL_ROADMAP.md",
-    "WORKSPACE_LEARNING_REVIEW.md": "generated/WORKSPACE_LEARNING_REVIEW.md",
     "checklist.md": "generated/checklist.md",
     "setup.md": "generated/setup.md",
 }

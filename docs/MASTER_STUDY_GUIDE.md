@@ -5,11 +5,9 @@ Goal: Become a competitive AI/ML engineer in 6-12 months.
 ## How to Use This Guide
 
 1. Read top-to-bottom once for the full picture
-2. Use [CAREER_ROADMAP.md](CAREER_ROADMAP.md) to target job roles
-3. Follow [checklist.md](checklist.md) to track progress
-4. Use [REFERENCES.md](REFERENCES.md) for courses and papers per phase
-5. Use [INTERVIEW_PREP.md](INTERVIEW_PREP.md) for practice
-6. Build portfolio projects progressively — they matter more than certifications
+2. Follow [checklist.md](checklist.md) to track progress
+3. Use [REFERENCES.md](REFERENCES.md) for courses and papers per phase
+4. Build portfolio projects progressively — they matter more than certifications
 
 ---
 
@@ -196,8 +194,6 @@ Train a model. Track with MLflow. Serve with FastAPI + Docker. CI/CD with GitHub
 
 ## Related Files
 
-- [CAREER_ROADMAP.md](CAREER_ROADMAP.md) — job targeting, resume, networking
-- [INTERVIEW_PREP.md](INTERVIEW_PREP.md) — questions, coding, system design
 - [REFERENCES.md](REFERENCES.md) — videos, courses, repos, papers
 - [checklist.md](checklist.md) — track completion
 

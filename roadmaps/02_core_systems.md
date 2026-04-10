@@ -1,0 +1,222 @@
+# Visual Roadmap — Part 2: Core Systems
+
+> LLM landscape, embeddings, vector search, RAG, agents, multi-agent systems, and MLOps.
+
+[← Back to Roadmap Index](../VISUAL_ROADMAP.md)
+
+---
+
+## 5. The LLM Model Landscape (2026)
+
+```{mermaid}
+flowchart TD
+    subgraph Proprietary
+        GPT[GPT-5.4 / o3 / o4-mini]
+        CLAUDE[Claude Sonnet 4.6 / Opus 4.6]
+        GEMINI[Gemini 3.1 Pro / Flash]
+    end
+
+    subgraph Open-Weight
+        LLAMA[Llama 4 Scout / Maverick]
+        QWEN[Qwen 3 0.6B-235B]
+        DS[DeepSeek V3.2 / R1]
+        PHI[Phi-4 14B]
+        MISTRAL[Mistral / Mixtral]
+    end
+
+    subgraph Reasoning
+        O3[OpenAI o3 / o4-mini]
+        R1[DeepSeek R1 671B]
+        CT[Claude Extended Thinking]
+    end
+
+    subgraph Local Running
+        OLLAMA[Ollama]
+        LLAMACPP[llama.cpp]
+        MLX[Apple MLX]
+        AITK[AI Toolkit for VS Code]
+        OLLAMA --- PHI
+        LLAMACPP --- QWEN
+        MLX --- LLAMA
+        AITK --- PHI
+    end
+```
+
+---
+
+## 6. Embeddings & Vector Search
+
+```{mermaid}
+flowchart TD
+    subgraph Embedding Models
+        OAI_E["OpenAI text-embedding-3"]
+        ST["Sentence Transformers"]
+        COHERE_E["Cohere embed-v4"]
+        NOM["nomic-embed-text"]
+    end
+
+    subgraph Vector Databases
+        CHROMA[ChromaDB]
+        QDRANT[Qdrant]
+        PINECONE[Pinecone]
+        WEAVIATE[Weaviate]
+        PGVEC[pgvector]
+        FAISS[FAISS]
+    end
+
+    DOC[Documents] --> CHUNK[Chunk] --> EMB[Embed]
+    EMB --> OAI_E
+    EMB --> ST
+    OAI_E --> STORE[Store]
+    ST --> STORE
+    STORE --> CHROMA
+    STORE --> QDRANT
+    STORE --> PINECONE
+
+    QUERY[Query] --> Q_EMB[Embed Query]
+    Q_EMB --> SIM[Similarity Search]
+    CHROMA --> SIM
+    QDRANT --> SIM
+    PINECONE --> SIM
+    SIM --> RESULTS[Top-K Results]
+```
+
+---
+
+## 7. RAG (Retrieval-Augmented Generation)
+
+```{mermaid}
+flowchart TD
+    subgraph Indexing Pipeline
+        A[Documents] --> B[Chunk]
+        B --> C[Embed]
+        C --> D[Vector Store]
+    end
+
+    subgraph Query Pipeline
+        E[User Question] --> F[Embed Query]
+        F --> G[Retrieve Top-K]
+        D --> G
+        G --> H["Context + Question"]
+    end
+
+    subgraph Generation
+        H --> I[LLM]
+        I --> J[Answer with Citations]
+    end
+
+    subgraph "Advanced RAG — Query"
+        L[Query Expansion] --> F
+        HY[HyDE - Hypothetical Answers] --> F
+    end
+
+    subgraph "Advanced RAG — Retrieval"
+        M[Hybrid Search BM25 + Dense] --> G
+        K[Re-ranking / Cross-Encoder] --> G
+        PC[Parent-Child Retrieval] --> G
+        RAP[RAPTOR - Summary Trees] --> G
+    end
+
+    subgraph "Advanced RAG — Control"
+        CR[CRAG - Retrieval Grading] --> H
+        N[Agentic RAG] --> I
+        GR[GraphRAG] --> G
+    end
+```
+
+---
+
+## 8. AI Agents Architecture
+
+```{mermaid}
+flowchart TD
+    USER[User Request] --> AGENT[Agent - LLM Brain]
+
+    AGENT --> PLAN[Plan / Reason]
+    PLAN --> ACT[Select Tool]
+    ACT --> TOOL1["🔧 Web Search"]
+    ACT --> TOOL2["🔧 Code Executor"]
+    ACT --> TOOL3["🔧 Database Query"]
+    ACT --> TOOL4["🔧 API Call"]
+
+    TOOL1 --> OBS[Observation]
+    TOOL2 --> OBS
+    TOOL3 --> OBS
+    TOOL4 --> OBS
+
+    OBS --> REFLECT{Done?}
+    REFLECT -->|No| PLAN
+    REFLECT -->|Yes| ANSWER[Final Answer]
+
+    subgraph Protocols
+        MCP["MCP - Tool Connectivity"]
+        A2A["A2A - Agent Delegation"]
+    end
+
+    subgraph Frameworks
+        LC[LangChain / LangGraph]
+        OAI_SDK[OpenAI Agents SDK]
+        CREW[CrewAI]
+        ADK[Google ADK]
+        SK[Semantic Kernel]
+    end
+```
+
+---
+
+## 9. Multi-Agent Systems
+
+```{mermaid}
+flowchart TD
+    USER[User Task] --> COORD[Coordinator Agent]
+
+    COORD --> R[Researcher]
+    COORD --> W[Writer]
+    COORD --> C[Critic]
+
+    R -->|findings| COORD
+    W -->|draft| COORD
+    C -->|feedback| COORD
+
+    COORD --> FINAL[Final Output]
+
+    subgraph Patterns
+        P1[Coordinator / Delegate]
+        P2[Pipeline - Sequential]
+        P3[Debate - Adversarial]
+        P4[Voting - Consensus]
+    end
+```
+
+---
+
+## 10. MLOps Lifecycle
+
+```{mermaid}
+flowchart TD
+    A[Data Collection] --> B[Data Validation]
+    B --> C[Feature Engineering]
+    C --> D[Model Training]
+    D --> E[Experiment Tracking - MLflow]
+    E --> F[Model Evaluation]
+    F --> G[Model Registry]
+    G --> H[CI/CD Pipeline]
+    H --> I[Deployment]
+    I --> J[Monitoring & Observability]
+    J --> K{Drift Detected?}
+    K -->|Yes| A
+    K -->|No| J
+
+    subgraph Serving
+        I --> S1[REST API - FastAPI]
+        I --> S2[vLLM / TGI]
+        I --> S3[Triton Inference Server]
+        I --> S4[Managed APIs - Bedrock / Vertex AI / Azure AI Foundry]
+        I --> S5[Edge Runtime - ONNX Runtime]
+        I --> S6[Open Source - Ollama / llama.cpp / SGLang]
+    end
+```
+
+---
+
+[← Previous: Overview](01_overview.md) | [← Back to Roadmap Index](../VISUAL_ROADMAP.md) | [Next: Advanced Topics →](03_advanced_topics.md)

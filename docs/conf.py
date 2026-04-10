@@ -91,18 +91,15 @@ exclude_patterns = [
     # Translation directories — non-English content with broken relative image paths
     "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
-    "CAREER_ROADMAP.md",
     "VISUAL_ROADMAP.md",
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
     "COMPARISON_MATRICES.md",
     "CONTRIBUTING.md",
-    "INTERVIEW_PREP.md",
     "LICENSE.md",
     "MASTER_STUDY_GUIDE.md",
     "REFERENCES.md",
     "SUPPORT.md",
-    "WORKSPACE_LEARNING_REVIEW.md",
     "checklist.md",
     "setup.md",
 ]

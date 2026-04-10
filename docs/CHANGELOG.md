@@ -9,8 +9,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ## [Unreleased]
 
 ### Added
-- `CAREER_ROADMAP.md` — Target roles, skills matrix, 30-60-90 day plan, resume strategy, portfolio guide
-- `INTERVIEW_PREP.md` — 15 ML Q&A with answers, 4 coding problems, 3 system design walkthroughs, LLM/GenAI questions, behavioral prep
 - `CODE_OF_CONDUCT.md` — Contributor Covenant Code of Conduct
 - `CHANGELOG.md` — This file
 

@@ -6,9 +6,7 @@
 
 
 - [ ] Done  **[MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)** — Phase-by-phase learning notes, text explanations, and study schedule. Start here.
-- [ ] Done  **[CAREER_ROADMAP.md](CAREER_ROADMAP.md)** — Target roles, interview prep, portfolio strategy, and 30-60-90 day plan.
 - [ ] Done  **[REFERENCES.md](REFERENCES.md)** — All videos, GitHub repos, courses, papers, and tools organized by phase.
-- [ ] Done  **[INTERVIEW_PREP.md](INTERVIEW_PREP.md)** — 15 ML Q&A with answers, specific coding problems, 3 system design walkthroughs.
 
 
 
