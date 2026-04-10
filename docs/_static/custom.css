@@ -330,9 +330,9 @@ body.sidebar-resizing * {
        absolutely-positioned drag handle isn't clipped */
   }
 
-  /* Clip sidebar content so it doesn't spill when drawer shrinks */
+  /* Keep Furo's sticky sidebar behavior intact during normal page scroll. */
   .sidebar-drawer .sidebar-container {
-    overflow: hidden;
+    overflow: visible;
   }
 
   .toc-drawer {
@@ -349,6 +349,11 @@ body.sidebar-resizing * {
   body.sidebar-resizing .toc-drawer {
     transition: none !important;
     overflow: hidden;            /* clip during active drag */
+  }
+
+  body.sidebar-resizing .sidebar-drawer .sidebar-container,
+  body.sidebar-left-collapsed .sidebar-drawer .sidebar-container {
+    overflow: hidden;
   }
 
   /* Left sidebar collapsed */

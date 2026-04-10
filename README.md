@@ -56,6 +56,7 @@ This comprehensive AI/ML curriculum uses progressive numbered modules covering e
 | **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
 | **Production** | Deployment, Monitoring, Optimization |
 | **2026 Systems** 🆕 | MCP, reasoning models, realtime multimodal, agent evaluation, inference serving |
+| **Developer Tools** 🆕 | VS Code AI setup, MCP servers, custom instructions, Copilot agent workflows |
 | **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
 | **Hardware** 🆕 | AI Silicon Validation, Kernel Testing, Distributed Training, Datacenter |
 
@@ -202,6 +203,7 @@ zero-to-ai/
 ├── 🔨 28-practical-data-science/ Interview prep & hands-on practice
 ├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, TPU, Apple Silicon
 ├── 🚄 30-inference-optimization/ 🆕 KV cache, vLLM, TensorRT-LLM, quantization, speculative decoding
+├── 🛠️ 31-ai-powered-dev-tools/ 🆕 VS Code AI setup, MCP deep dive, custom instructions, tool workflows
 ├── ✅ checklist.md             Your complete learning roadmap
 ├── 📋 setup.md                 Detailed installation guide
 └── !! COMPARISON_MATRICES.md   Comparison of LLM Models

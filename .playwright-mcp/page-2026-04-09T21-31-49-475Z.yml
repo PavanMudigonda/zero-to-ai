@@ -1,0 +1,1079 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Foundations" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Phase 0: Course Setup" [ref=e18] [cursor=pointer]':
+                - /url: ../00-course-setup/README.html
+              - img [ref=e21] [cursor=pointer]
+            - listitem [ref=e23]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e24] [cursor=pointer]':
+                - /url: ../01-python/README.html
+              - img [ref=e27] [cursor=pointer]
+            - listitem [ref=e29]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e30] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e36] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e39] [cursor=pointer]
+          - heading "Core AI" [ref=e41]
+          - list [ref=e42]:
+            - listitem [ref=e43]:
+              - 'link "Phase 4: Tokenization" [ref=e44] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e47] [cursor=pointer]
+            - listitem [ref=e49]:
+              - 'link "Phase 5: Embeddings" [ref=e50] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - 'link "Phase 6: Neural Networks" [ref=e56] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e59] [cursor=pointer]
+          - heading "Applied AI" [ref=e61]
+          - list [ref=e62]:
+            - listitem [ref=e63]:
+              - 'link "Phase 7: Vector Databases" [ref=e64] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e67] [cursor=pointer]
+            - listitem [ref=e69]:
+              - 'link "Phase 8: RAG" [ref=e70] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - 'link "Phase 9: MLOps" [ref=e76] [cursor=pointer]':
+                - /url: "#"
+              - img [ref=e79] [cursor=pointer]
+              - list [ref=e81]:
+                - listitem [ref=e82]:
+                  - 'link "Phase 9: MLOps Catalog" [ref=e83] [cursor=pointer]':
+                    - /url: CATALOG.html
+                - listitem [ref=e84]:
+                  - 'link "MLOps: Machine Learning in Production" [ref=e85] [cursor=pointer]':
+                    - /url: 00_START_HERE.html
+                - listitem [ref=e86]:
+                  - link "Experiment Tracking with MLflow" [ref=e87] [cursor=pointer]:
+                    - /url: 01_experiment_tracking.html
+                - listitem [ref=e88]:
+                  - link "Building ML APIs with FastAPI" [ref=e89] [cursor=pointer]:
+                    - /url: 02_fastapi_basics.html
+                - listitem [ref=e90]:
+                  - link "Model Deployment Strategies" [ref=e91] [cursor=pointer]:
+                    - /url: 03_model_deployment.html
+                - listitem [ref=e92]:
+                  - link "Containerizing ML Applications with Docker" [ref=e93] [cursor=pointer]:
+                    - /url: 04_docker_ml.html
+                - listitem [ref=e94]:
+                  - link "Monitoring ML Models in Production" [ref=e95] [cursor=pointer]:
+                    - /url: 05_monitoring.html
+                - listitem [ref=e96]:
+                  - link "CI/CD for Machine Learning" [ref=e97] [cursor=pointer]:
+                    - /url: 06_ci_cd_pipeline.html
+                - listitem [ref=e98]:
+                  - link "Cloud Deployment for ML Models" [ref=e99] [cursor=pointer]:
+                    - /url: 07_cloud_deployment.html
+                - listitem [ref=e100]:
+                  - link "LLM Infrastructure for Production (2025-2026 Essential Stack)" [ref=e101] [cursor=pointer]:
+                    - /url: 09_llm_infrastructure.html
+                - listitem [ref=e102]:
+                  - link "LLM Production Optimization" [ref=e103] [cursor=pointer]:
+                    - /url: 10_llm_optimization.html
+            - listitem [ref=e104]:
+              - 'link "Phase 10: Specializations" [ref=e105] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e108] [cursor=pointer]
+          - heading "Advanced" [ref=e110]
+          - list [ref=e111]:
+            - listitem [ref=e112]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e113] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e116] [cursor=pointer]
+            - listitem [ref=e118]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e119] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e122] [cursor=pointer]
+            - listitem [ref=e124]:
+              - 'link "Phase 13: Multimodal AI" [ref=e125] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e128] [cursor=pointer]
+            - listitem [ref=e130]:
+              - 'link "Phase 14: Local LLMs" [ref=e131] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e134] [cursor=pointer]
+            - listitem [ref=e136]:
+              - 'link "Phase 15: AI Agents" [ref=e137] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e140] [cursor=pointer]
+          - heading "Supplementary" [ref=e142]
+          - list [ref=e143]:
+            - listitem [ref=e144]:
+              - 'link "Phase 16: Model Evaluation" [ref=e145] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e148] [cursor=pointer]
+            - listitem [ref=e150]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e151] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e154] [cursor=pointer]
+            - listitem [ref=e156]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e157] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e160] [cursor=pointer]
+            - listitem [ref=e162]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e163] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e166] [cursor=pointer]
+            - listitem [ref=e168]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e169] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e172] [cursor=pointer]
+          - heading "Reference" [ref=e174]
+          - list [ref=e175]:
+            - listitem [ref=e176]:
+              - 'link "Phase 21: Quizzes" [ref=e177] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e180] [cursor=pointer]
+            - listitem [ref=e182]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e183] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e186] [cursor=pointer]
+            - listitem [ref=e188]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e189] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e192] [cursor=pointer]
+          - heading "Resources" [ref=e194]
+          - list [ref=e195]:
+            - listitem [ref=e196]:
+              - link "Master Study Guide" [ref=e197] [cursor=pointer]:
+                - /url: ../../generated/MASTER_STUDY_GUIDE.html
+            - listitem [ref=e198]:
+              - link "Career Roadmap" [ref=e199] [cursor=pointer]:
+                - /url: ../../generated/CAREER_ROADMAP.html
+            - listitem [ref=e200]:
+              - link "Interview Preparation" [ref=e201] [cursor=pointer]:
+                - /url: ../../generated/INTERVIEW_PREP.html
+            - listitem [ref=e202]:
+              - link "AI/ML Decision Matrices & Comparison Guides" [ref=e203] [cursor=pointer]:
+                - /url: ../../generated/COMPARISON_MATRICES.html
+            - listitem [ref=e204]:
+              - link "AI / ML Visual Roadmap" [ref=e205] [cursor=pointer]:
+                - /url: ../../generated/VISUAL_ROADMAP.html
+            - listitem [ref=e206]:
+              - link "Setup Guide - Zero to AI" [ref=e207] [cursor=pointer]:
+                - /url: ../../generated/setup.html
+            - listitem [ref=e208]:
+              - link "AI/ML Learning Checklist ✅" [ref=e209] [cursor=pointer]:
+                - /url: ../../generated/checklist.html
+          - heading "Research" [ref=e210]
+          - list [ref=e211]:
+            - listitem [ref=e212]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e213] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e216] [cursor=pointer]
+            - listitem [ref=e218]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e219] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e222] [cursor=pointer]
+            - listitem [ref=e224]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e225] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e228] [cursor=pointer]
+            - listitem [ref=e230]:
+              - 'link "Phase 27: Causal Inference" [ref=e231] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e234] [cursor=pointer]
+          - heading "Production" [ref=e236]
+          - list [ref=e237]:
+            - listitem [ref=e238]:
+              - 'link "Phase 28: Practical Data Science" [ref=e239] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e242] [cursor=pointer]
+            - listitem [ref=e244]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e245] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e248] [cursor=pointer]
+            - listitem [ref=e250]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e251] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e254] [cursor=pointer]
+          - heading "About" [ref=e256]
+          - list [ref=e257]:
+            - listitem [ref=e258]:
+              - link "Contributing to Zero to AI" [ref=e259] [cursor=pointer]:
+                - /url: ../../generated/CONTRIBUTING.html
+            - listitem [ref=e260]:
+              - link "Changelog" [ref=e261] [cursor=pointer]:
+                - /url: ../../generated/CHANGELOG.html
+            - listitem [ref=e262]:
+              - link "Contributor Covenant Code of Conduct" [ref=e263] [cursor=pointer]:
+                - /url: ../../generated/CODE_OF_CONDUCT.html
+            - listitem [ref=e264]:
+              - link "Complete Reference Materials — Videos, Repos, Courses, Papers" [ref=e265] [cursor=pointer]:
+                - /url: ../../generated/REFERENCES.html
+            - listitem [ref=e266]:
+              - link "Workspace Learning Review" [ref=e267] [cursor=pointer]:
+                - /url: ../../generated/WORKSPACE_LEARNING_REVIEW.html
+            - listitem [ref=e268]:
+              - link "License" [ref=e269] [cursor=pointer]:
+                - /url: ../../generated/LICENSE.html
+            - listitem [ref=e270]:
+              - link "Support" [ref=e271] [cursor=pointer]:
+                - /url: ../../generated/SUPPORT.html
+      - separator "Resize left sidebar" [ref=e272]:
+        - button "Collapse left sidebar" [ref=e273] [cursor=pointer]: ‹
+    - generic [ref=e274]:
+      - generic [ref=e275]:
+        - generic [ref=e276]:
+          - generic [ref=e277]:
+            - link "View this page" [ref=e279] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/09-mlops/README.md?plain=true
+              - img [ref=e280]
+              - generic [ref=e282]: View this page
+            - link "Edit this page" [ref=e284] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/09-mlops/README.md
+              - img [ref=e285]
+              - generic [ref=e287]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e289] [cursor=pointer]:
+              - img [ref=e290]
+          - main [ref=e292]:
+            - generic [ref=e293]:
+              - 'heading "Phase 9: MLOps" [level=1] [ref=e294]'
+              - blockquote [ref=e295]:
+                - paragraph [ref=e297]:
+                  - strong [ref=e298]: Goal
+                  - text: ": Learn to deploy, monitor, and maintain ML models as production systems. This is what separates a data scientist from a machine learning engineer."
+              - generic [ref=e299]:
+                - heading "Why MLOps Matters for Your Career" [level=2] [ref=e300]
+                - paragraph [ref=e301]: "80% of ML projects never reach production. The ones that do succeed because of solid MLOps practices. Employers specifically look for:"
+                - list [ref=e302]:
+                  - listitem [ref=e303]:
+                    - paragraph [ref=e304]: Can you deploy a model beyond a Jupyter notebook?
+                  - listitem [ref=e305]:
+                    - paragraph [ref=e306]: Can you reproduce an experiment from 3 months ago?
+                  - listitem [ref=e307]:
+                    - paragraph [ref=e308]: Do you know how to detect when a model starts degrading?
+                  - listitem [ref=e309]:
+                    - paragraph [ref=e310]: Can you build a CI/CD pipeline for ML?
+                - paragraph [ref=e311]: MLOps is consistently one of the top hiring criteria for ML Engineer roles.
+              - generic [ref=e312]:
+                - heading "Notebooks — Work in This Order" [level=2] [ref=e313]
+                - table [ref=e315]:
+                  - rowgroup [ref=e316]:
+                    - row "# Notebook What You Learn Time" [ref=e317]:
+                      - columnheader "#" [ref=e318]:
+                        - paragraph [ref=e319]: "#"
+                      - columnheader "Notebook" [ref=e320]:
+                        - paragraph [ref=e321]: Notebook
+                      - columnheader "What You Learn" [ref=e322]:
+                        - paragraph [ref=e323]: What You Learn
+                      - columnheader "Time" [ref=e324]:
+                        - paragraph [ref=e325]: Time
+                  - rowgroup [ref=e326]:
+                    - row "1 00_START_HERE.ipynb MLOps overview and the full lifecycle 30 min" [ref=e327]:
+                      - cell "1" [ref=e328]:
+                        - paragraph [ref=e329]: "1"
+                      - cell "00_START_HERE.ipynb" [ref=e330]:
+                        - paragraph [ref=e331]:
+                          - link "00_START_HERE.ipynb" [ref=e332] [cursor=pointer]:
+                            - /url: 00_START_HERE.html
+                      - cell "MLOps overview and the full lifecycle" [ref=e333]:
+                        - paragraph [ref=e334]: MLOps overview and the full lifecycle
+                      - cell "30 min" [ref=e335]:
+                        - paragraph [ref=e336]: 30 min
+                    - 'row "2 01_experiment_tracking.ipynb MLflow: log metrics, params, artifacts 60 min" [ref=e337]':
+                      - cell "2" [ref=e338]:
+                        - paragraph [ref=e339]: "2"
+                      - cell "01_experiment_tracking.ipynb" [ref=e340]:
+                        - paragraph [ref=e341]:
+                          - link "01_experiment_tracking.ipynb" [ref=e342] [cursor=pointer]:
+                            - /url: 01_experiment_tracking.html
+                      - 'cell "MLflow: log metrics, params, artifacts" [ref=e343]':
+                        - paragraph [ref=e344]: "MLflow: log metrics, params, artifacts"
+                      - cell "60 min" [ref=e345]:
+                        - paragraph [ref=e346]: 60 min
+                    - row "3 02_fastapi_basics.ipynb Build REST API endpoints for model serving 60 min" [ref=e347]:
+                      - cell "3" [ref=e348]:
+                        - paragraph [ref=e349]: "3"
+                      - cell "02_fastapi_basics.ipynb" [ref=e350]:
+                        - paragraph [ref=e351]:
+                          - link "02_fastapi_basics.ipynb" [ref=e352] [cursor=pointer]:
+                            - /url: 02_fastapi_basics.html
+                      - cell "Build REST API endpoints for model serving" [ref=e353]:
+                        - paragraph [ref=e354]: Build REST API endpoints for model serving
+                      - cell "60 min" [ref=e355]:
+                        - paragraph [ref=e356]: 60 min
+                    - row "4 03_model_deployment.ipynb Package and deploy a model end-to-end 90 min" [ref=e357]:
+                      - cell "4" [ref=e358]:
+                        - paragraph [ref=e359]: "4"
+                      - cell "03_model_deployment.ipynb" [ref=e360]:
+                        - paragraph [ref=e361]:
+                          - link "03_model_deployment.ipynb" [ref=e362] [cursor=pointer]:
+                            - /url: 03_model_deployment.html
+                      - cell "Package and deploy a model end-to-end" [ref=e363]:
+                        - paragraph [ref=e364]: Package and deploy a model end-to-end
+                      - cell "90 min" [ref=e365]:
+                        - paragraph [ref=e366]: 90 min
+                    - row "5 04_docker_ml.ipynb Containerize ML models with Docker 90 min" [ref=e367]:
+                      - cell "5" [ref=e368]:
+                        - paragraph [ref=e369]: "5"
+                      - cell "04_docker_ml.ipynb" [ref=e370]:
+                        - paragraph [ref=e371]:
+                          - link "04_docker_ml.ipynb" [ref=e372] [cursor=pointer]:
+                            - /url: 04_docker_ml.html
+                      - cell "Containerize ML models with Docker" [ref=e373]:
+                        - paragraph [ref=e374]: Containerize ML models with Docker
+                      - cell "90 min" [ref=e375]:
+                        - paragraph [ref=e376]: 90 min
+                    - row "6 05_monitoring.ipynb Detect data drift and model degradation 60 min" [ref=e377]:
+                      - cell "6" [ref=e378]:
+                        - paragraph [ref=e379]: "6"
+                      - cell "05_monitoring.ipynb" [ref=e380]:
+                        - paragraph [ref=e381]:
+                          - link "05_monitoring.ipynb" [ref=e382] [cursor=pointer]:
+                            - /url: 05_monitoring.html
+                      - cell "Detect data drift and model degradation" [ref=e383]:
+                        - paragraph [ref=e384]: Detect data drift and model degradation
+                      - cell "60 min" [ref=e385]:
+                        - paragraph [ref=e386]: 60 min
+                    - row "7 06_ci_cd_pipeline.ipynb GitHub Actions for automated ML testing 60 min" [ref=e387]:
+                      - cell "7" [ref=e388]:
+                        - paragraph [ref=e389]: "7"
+                      - cell "06_ci_cd_pipeline.ipynb" [ref=e390]:
+                        - paragraph [ref=e391]:
+                          - link "06_ci_cd_pipeline.ipynb" [ref=e392] [cursor=pointer]:
+                            - /url: 06_ci_cd_pipeline.html
+                      - cell "GitHub Actions for automated ML testing" [ref=e393]:
+                        - paragraph [ref=e394]: GitHub Actions for automated ML testing
+                      - cell "60 min" [ref=e395]:
+                        - paragraph [ref=e396]: 60 min
+                    - row "8 07_cloud_deployment.ipynb Deploy to AWS/GCP/Azure 90 min" [ref=e397]:
+                      - cell "8" [ref=e398]:
+                        - paragraph [ref=e399]: "8"
+                      - cell "07_cloud_deployment.ipynb" [ref=e400]:
+                        - paragraph [ref=e401]:
+                          - link "07_cloud_deployment.ipynb" [ref=e402] [cursor=pointer]:
+                            - /url: 07_cloud_deployment.html
+                      - cell "Deploy to AWS/GCP/Azure" [ref=e403]:
+                        - paragraph [ref=e404]: Deploy to AWS/GCP/Azure
+                      - cell "90 min" [ref=e405]:
+                        - paragraph [ref=e406]: 90 min
+                    - row "9 09_llm_infrastructure.ipynb vLLM, TGI, and LLM serving at scale 60 min" [ref=e407]:
+                      - cell "9" [ref=e408]:
+                        - paragraph [ref=e409]: "9"
+                      - cell "09_llm_infrastructure.ipynb" [ref=e410]:
+                        - paragraph [ref=e411]:
+                          - link "09_llm_infrastructure.ipynb" [ref=e412] [cursor=pointer]:
+                            - /url: 09_llm_infrastructure.html
+                      - cell "vLLM, TGI, and LLM serving at scale" [ref=e413]:
+                        - paragraph [ref=e414]: vLLM, TGI, and LLM serving at scale
+                      - cell "60 min" [ref=e415]:
+                        - paragraph [ref=e416]: 60 min
+              - generic [ref=e417]:
+                - heading "Key Concepts" [level=2] [ref=e418]
+                - generic [ref=e419]:
+                  - heading "The ML Lifecycle (What MLOps Manages)" [level=3] [ref=e420]
+                  - generic [ref=e421]:
+                    - document [ref=e423]:
+                      - generic [ref=e430]:
+                        - paragraph [ref=e437]: Data Collection
+                        - paragraph [ref=e444]: Data Validation
+                        - paragraph [ref=e451]: Feature Engineering
+                        - paragraph [ref=e458]: Model Training
+                        - paragraph [ref=e465]: Experiment Tracking
+                        - paragraph [ref=e472]: Model Evaluation
+                        - paragraph [ref=e479]: Model Registry
+                        - paragraph [ref=e486]: CI/CD
+                        - paragraph [ref=e493]: Deployment
+                        - paragraph [ref=e500]: Monitoring
+                        - paragraph [ref=e507]: Retraining
+                    - button "View diagram in fullscreen" [ref=e508] [cursor=pointer]: ⛶
+                - generic [ref=e509]:
+                  - heading "Experiment Tracking (MLflow)" [level=3] [ref=e510]
+                  - paragraph [ref=e511]: "Every training run should be tracked. Track:"
+                  - list [ref=e512]:
+                    - listitem [ref=e513]:
+                      - paragraph [ref=e514]:
+                        - strong [ref=e515]: Parameters
+                        - text: ": learning rate, batch size, model architecture choices"
+                    - listitem [ref=e516]:
+                      - paragraph [ref=e517]:
+                        - strong [ref=e518]: Metrics
+                        - text: ": loss, accuracy, F1, AUC — over time, not just final values"
+                    - listitem [ref=e519]:
+                      - paragraph [ref=e520]:
+                        - strong [ref=e521]: Artifacts
+                        - text: ": the trained model file, tokenizer, feature scaler"
+                    - listitem [ref=e522]:
+                      - paragraph [ref=e523]:
+                        - strong [ref=e524]: Environment
+                        - text: ": Python version, library versions (requirements.txt)"
+                  - paragraph [ref=e525]:
+                    - strong [ref=e526]: "MLflow quick start:"
+                  - generic [ref=e528]:
+                    - generic [ref=e529]: import mlflow mlflow.start_run() mlflow.log_param("learning_rate", 0.001) mlflow.log_metric("accuracy", 0.94) mlflow.log_artifact("model.pkl") mlflow.end_run()
+                    - button "Copy to clipboard" [ref=e530] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e531]
+                - generic [ref=e535]:
+                  - heading "Model Serving Patterns" [level=3] [ref=e536]
+                  - table [ref=e538]:
+                    - rowgroup [ref=e539]:
+                      - row "Pattern Tool When to Use" [ref=e540]:
+                        - columnheader "Pattern" [ref=e541]:
+                          - paragraph [ref=e542]: Pattern
+                        - columnheader "Tool" [ref=e543]:
+                          - paragraph [ref=e544]: Tool
+                        - columnheader "When to Use" [ref=e545]:
+                          - paragraph [ref=e546]: When to Use
+                    - rowgroup [ref=e547]:
+                      - row "REST API FastAPI Standard models, <100ms latency needed" [ref=e548]:
+                        - cell "REST API" [ref=e549]:
+                          - paragraph [ref=e550]: REST API
+                        - cell "FastAPI" [ref=e551]:
+                          - paragraph [ref=e552]: FastAPI
+                        - cell "Standard models, <100ms latency needed" [ref=e553]:
+                          - paragraph [ref=e554]: Standard models, <100ms latency needed
+                      - row "Batch inference Celery/Ray Large datasets, overnight jobs" [ref=e555]:
+                        - cell "Batch inference" [ref=e556]:
+                          - paragraph [ref=e557]: Batch inference
+                        - cell "Celery/Ray" [ref=e558]:
+                          - paragraph [ref=e559]: Celery/Ray
+                        - cell "Large datasets, overnight jobs" [ref=e560]:
+                          - paragraph [ref=e561]: Large datasets, overnight jobs
+                      - row "Streaming vLLM + SSE LLM text generation" [ref=e562]:
+                        - cell "Streaming" [ref=e563]:
+                          - paragraph [ref=e564]: Streaming
+                        - cell "vLLM + SSE" [ref=e565]:
+                          - paragraph [ref=e566]: vLLM + SSE
+                        - cell "LLM text generation" [ref=e567]:
+                          - paragraph [ref=e568]: LLM text generation
+                      - row "Managed foundation model API Bedrock / Vertex AI / Azure AI Foundry Fastest path to production without running GPUs" [ref=e569]:
+                        - cell "Managed foundation model API" [ref=e570]:
+                          - paragraph [ref=e571]: Managed foundation model API
+                        - cell "Bedrock / Vertex AI / Azure AI Foundry" [ref=e572]:
+                          - paragraph [ref=e573]: Bedrock / Vertex AI / Azure AI Foundry
+                        - cell "Fastest path to production without running GPUs" [ref=e574]:
+                          - paragraph [ref=e575]: Fastest path to production without running GPUs
+                      - row "GPU inference server Triton / vLLM / TGI High-throughput production serving" [ref=e576]:
+                        - cell "GPU inference server" [ref=e577]:
+                          - paragraph [ref=e578]: GPU inference server
+                        - cell "Triton / vLLM / TGI" [ref=e579]:
+                          - paragraph [ref=e580]: Triton / vLLM / TGI
+                        - cell "High-throughput production serving" [ref=e581]:
+                          - paragraph [ref=e582]: High-throughput production serving
+                      - row "Edge deployment ONNX Runtime Mobile/embedded devices" [ref=e583]:
+                        - cell "Edge deployment" [ref=e584]:
+                          - paragraph [ref=e585]: Edge deployment
+                        - cell "ONNX Runtime" [ref=e586]:
+                          - paragraph [ref=e587]: ONNX Runtime
+                        - cell "Mobile/embedded devices" [ref=e588]:
+                          - paragraph [ref=e589]: Mobile/embedded devices
+                - generic [ref=e590]:
+                  - heading "The MLOps Stack (What to Learn)" [level=3] [ref=e591]
+                  - table [ref=e593]:
+                    - rowgroup [ref=e594]:
+                      - row "Category Tool Priority" [ref=e595]:
+                        - columnheader "Category" [ref=e596]:
+                          - paragraph [ref=e597]: Category
+                        - columnheader "Tool" [ref=e598]:
+                          - paragraph [ref=e599]: Tool
+                        - columnheader "Priority" [ref=e600]:
+                          - paragraph [ref=e601]: Priority
+                    - rowgroup [ref=e602]:
+                      - row "Experiment tracking MLflow or W&B Must know" [ref=e603]:
+                        - cell "Experiment tracking" [ref=e604]:
+                          - paragraph [ref=e605]: Experiment tracking
+                        - cell "MLflow or W&B" [ref=e606]:
+                          - paragraph [ref=e607]: MLflow or W&B
+                        - cell "Must know" [ref=e608]:
+                          - paragraph [ref=e609]: Must know
+                      - row "Model serving FastAPI Must know" [ref=e610]:
+                        - cell "Model serving" [ref=e611]:
+                          - paragraph [ref=e612]: Model serving
+                        - cell "FastAPI" [ref=e613]:
+                          - paragraph [ref=e614]: FastAPI
+                        - cell "Must know" [ref=e615]:
+                          - paragraph [ref=e616]: Must know
+                      - row "Containerization Docker Must know" [ref=e617]:
+                        - cell "Containerization" [ref=e618]:
+                          - paragraph [ref=e619]: Containerization
+                        - cell "Docker" [ref=e620]:
+                          - paragraph [ref=e621]: Docker
+                        - cell "Must know" [ref=e622]:
+                          - paragraph [ref=e623]: Must know
+                      - row "CI/CD GitHub Actions Must know" [ref=e624]:
+                        - cell "CI/CD" [ref=e625]:
+                          - paragraph [ref=e626]: CI/CD
+                        - cell "GitHub Actions" [ref=e627]:
+                          - paragraph [ref=e628]: GitHub Actions
+                        - cell "Must know" [ref=e629]:
+                          - paragraph [ref=e630]: Must know
+                      - row "Monitoring Prometheus + Grafana Know basics" [ref=e631]:
+                        - cell "Monitoring" [ref=e632]:
+                          - paragraph [ref=e633]: Monitoring
+                        - cell "Prometheus + Grafana" [ref=e634]:
+                          - paragraph [ref=e635]: Prometheus + Grafana
+                        - cell "Know basics" [ref=e636]:
+                          - paragraph [ref=e637]: Know basics
+                      - row "LLM serving vLLM Know if doing LLM work" [ref=e638]:
+                        - cell "LLM serving" [ref=e639]:
+                          - paragraph [ref=e640]: LLM serving
+                        - cell "vLLM" [ref=e641]:
+                          - paragraph [ref=e642]: vLLM
+                        - cell "Know if doing LLM work" [ref=e643]:
+                          - paragraph [ref=e644]: Know if doing LLM work
+                      - row "Orchestration Kubeflow / Airflow Nice to have" [ref=e645]:
+                        - cell "Orchestration" [ref=e646]:
+                          - paragraph [ref=e647]: Orchestration
+                        - cell "Kubeflow / Airflow" [ref=e648]:
+                          - paragraph [ref=e649]: Kubeflow / Airflow
+                        - cell "Nice to have" [ref=e650]:
+                          - paragraph [ref=e651]: Nice to have
+                      - row "Cloud ML SageMaker / Azure ML / Vertex AI Nice to have" [ref=e652]:
+                        - cell "Cloud ML" [ref=e653]:
+                          - paragraph [ref=e654]: Cloud ML
+                        - cell "SageMaker / Azure ML / Vertex AI" [ref=e655]:
+                          - paragraph [ref=e656]: SageMaker / Azure ML / Vertex AI
+                        - cell "Nice to have" [ref=e657]:
+                          - paragraph [ref=e658]: Nice to have
+                - generic [ref=e659]:
+                  - 'heading "Deployment Matrix: AWS, Azure, Google, and Open Source" [level=3] [ref=e660]'
+                  - paragraph [ref=e661]:
+                    - text: Different deployment targets solve different problems.
+                    - code [ref=e662]: ONNX Runtime
+                    - text: is a runtime and model format choice.
+                    - code [ref=e663]: Bedrock
+                    - text: ","
+                    - code [ref=e664]: Vertex AI
+                    - text: ", and"
+                    - code [ref=e665]: Azure AI Foundry
+                    - text: are managed platforms.
+                    - code [ref=e666]: vLLM
+                    - text: ","
+                    - code [ref=e667]: TGI
+                    - text: ","
+                    - code [ref=e668]: Triton
+                    - text: ","
+                    - code [ref=e669]: Ollama
+                    - text: ", and"
+                    - code [ref=e670]: llama.cpp
+                    - text: are open-source serving stacks.
+                  - table [ref=e672]:
+                    - rowgroup [ref=e673]:
+                      - row "Need AWS Azure Google Cloud Open Source Best Fit" [ref=e674]:
+                        - columnheader "Need" [ref=e675]:
+                          - paragraph [ref=e676]: Need
+                        - columnheader "AWS" [ref=e677]:
+                          - paragraph [ref=e678]: AWS
+                        - columnheader "Azure" [ref=e679]:
+                          - paragraph [ref=e680]: Azure
+                        - columnheader "Google Cloud" [ref=e681]:
+                          - paragraph [ref=e682]: Google Cloud
+                        - columnheader "Open Source" [ref=e683]:
+                          - paragraph [ref=e684]: Open Source
+                        - columnheader "Best Fit" [ref=e685]:
+                          - paragraph [ref=e686]: Best Fit
+                    - rowgroup [ref=e687]:
+                      - row "Managed LLM API Bedrock Azure AI Foundry / Azure OpenAI Vertex AI Gemini OpenAI-compatible gateway over hosted OSS is possible, but not truly managed Teams that want minimal infra" [ref=e688]:
+                        - cell "Managed LLM API" [ref=e689]:
+                          - paragraph [ref=e690]: Managed LLM API
+                        - cell "Bedrock" [ref=e691]:
+                          - paragraph [ref=e692]: Bedrock
+                        - cell "Azure AI Foundry / Azure OpenAI" [ref=e693]:
+                          - paragraph [ref=e694]: Azure AI Foundry / Azure OpenAI
+                        - cell "Vertex AI Gemini" [ref=e695]:
+                          - paragraph [ref=e696]: Vertex AI Gemini
+                        - cell "OpenAI-compatible gateway over hosted OSS is possible, but not truly managed" [ref=e697]:
+                          - paragraph [ref=e698]: OpenAI-compatible gateway over hosted OSS is possible, but not truly managed
+                        - cell "Teams that want minimal infra" [ref=e699]:
+                          - paragraph [ref=e700]: Teams that want minimal infra
+                      - row "Train and deploy custom ML model SageMaker Azure ML Vertex AI FastAPI + Docker + Kubernetes Classical ML and custom DL models" [ref=e701]:
+                        - cell "Train and deploy custom ML model" [ref=e702]:
+                          - paragraph [ref=e703]: Train and deploy custom ML model
+                        - cell "SageMaker" [ref=e704]:
+                          - paragraph [ref=e705]: SageMaker
+                        - cell "Azure ML" [ref=e706]:
+                          - paragraph [ref=e707]: Azure ML
+                        - cell "Vertex AI" [ref=e708]:
+                          - paragraph [ref=e709]: Vertex AI
+                        - cell "FastAPI + Docker + Kubernetes" [ref=e710]:
+                          - paragraph [ref=e711]: FastAPI + Docker + Kubernetes
+                        - cell "Classical ML and custom DL models" [ref=e712]:
+                          - paragraph [ref=e713]: Classical ML and custom DL models
+                      - row "Self-host open-weight LLMs on GPU EKS/ECS + vLLM or TGI AKS + vLLM or TGI GKE + vLLM or TGI vLLM / TGI / Triton / SGLang High-volume LLM inference" [ref=e714]:
+                        - cell "Self-host open-weight LLMs on GPU" [ref=e715]:
+                          - paragraph [ref=e716]: Self-host open-weight LLMs on GPU
+                        - cell "EKS/ECS + vLLM or TGI" [ref=e717]:
+                          - paragraph [ref=e718]: EKS/ECS + vLLM or TGI
+                        - cell "AKS + vLLM or TGI" [ref=e719]:
+                          - paragraph [ref=e720]: AKS + vLLM or TGI
+                        - cell "GKE + vLLM or TGI" [ref=e721]:
+                          - paragraph [ref=e722]: GKE + vLLM or TGI
+                        - cell "vLLM / TGI / Triton / SGLang" [ref=e723]:
+                          - paragraph [ref=e724]: vLLM / TGI / Triton / SGLang
+                        - cell "High-volume LLM inference" [ref=e725]:
+                          - paragraph [ref=e726]: High-volume LLM inference
+                      - row "Multi-model inference server SageMaker endpoints or ECS/EKS + Triton Azure ML managed endpoints or AKS + Triton Vertex endpoints or GKE + Triton Triton Inference Server Mixed PyTorch / TensorRT / ONNX workloads" [ref=e727]:
+                        - cell "Multi-model inference server" [ref=e728]:
+                          - paragraph [ref=e729]: Multi-model inference server
+                        - cell "SageMaker endpoints or ECS/EKS + Triton" [ref=e730]:
+                          - paragraph [ref=e731]: SageMaker endpoints or ECS/EKS + Triton
+                        - cell "Azure ML managed endpoints or AKS + Triton" [ref=e732]:
+                          - paragraph [ref=e733]: Azure ML managed endpoints or AKS + Triton
+                        - cell "Vertex endpoints or GKE + Triton" [ref=e734]:
+                          - paragraph [ref=e735]: Vertex endpoints or GKE + Triton
+                        - cell "Triton Inference Server" [ref=e736]:
+                          - paragraph [ref=e737]: Triton Inference Server
+                        - cell "Mixed PyTorch / TensorRT / ONNX workloads" [ref=e738]:
+                          - paragraph [ref=e739]: Mixed PyTorch / TensorRT / ONNX workloads
+                      - row "Edge or mobile deployment Greengrass + ONNX Runtime Azure IoT Edge + ONNX Runtime Edge TPU / Vertex Edge + ONNX Runtime ONNX Runtime / TensorFlow Lite / llama.cpp Low-latency local inference" [ref=e740]:
+                        - cell "Edge or mobile deployment" [ref=e741]:
+                          - paragraph [ref=e742]: Edge or mobile deployment
+                        - cell "Greengrass + ONNX Runtime" [ref=e743]:
+                          - paragraph [ref=e744]: Greengrass + ONNX Runtime
+                        - cell "Azure IoT Edge + ONNX Runtime" [ref=e745]:
+                          - paragraph [ref=e746]: Azure IoT Edge + ONNX Runtime
+                        - cell "Edge TPU / Vertex Edge + ONNX Runtime" [ref=e747]:
+                          - paragraph [ref=e748]: Edge TPU / Vertex Edge + ONNX Runtime
+                        - cell "ONNX Runtime / TensorFlow Lite / llama.cpp" [ref=e749]:
+                          - paragraph [ref=e750]: ONNX Runtime / TensorFlow Lite / llama.cpp
+                        - cell "Low-latency local inference" [ref=e751]:
+                          - paragraph [ref=e752]: Low-latency local inference
+                      - row "Local developer workflow Bedrock local emulation is limited Azure-hosted only Vertex-hosted only Ollama / llama.cpp / LM Studio Fast iteration and privacy" [ref=e753]:
+                        - cell "Local developer workflow" [ref=e754]:
+                          - paragraph [ref=e755]: Local developer workflow
+                        - cell "Bedrock local emulation is limited" [ref=e756]:
+                          - paragraph [ref=e757]: Bedrock local emulation is limited
+                        - cell "Azure-hosted only" [ref=e758]:
+                          - paragraph [ref=e759]: Azure-hosted only
+                        - cell "Vertex-hosted only" [ref=e760]:
+                          - paragraph [ref=e761]: Vertex-hosted only
+                        - cell "Ollama / llama.cpp / LM Studio" [ref=e762]:
+                          - paragraph [ref=e763]: Ollama / llama.cpp / LM Studio
+                        - cell "Fast iteration and privacy" [ref=e764]:
+                          - paragraph [ref=e765]: Fast iteration and privacy
+                - generic [ref=e766]:
+                  - heading "How to Choose a Deployment Path" [level=3] [ref=e767]
+                  - list [ref=e768]:
+                    - listitem [ref=e769]:
+                      - paragraph [ref=e770]:
+                        - strong [ref=e771]: Use ONNX Runtime
+                        - text: when you own the model artifact and want portable, optimized inference across CPU, GPU, and edge devices.
+                    - listitem [ref=e772]:
+                      - paragraph [ref=e773]:
+                        - strong [ref=e774]: Use Bedrock / Azure AI Foundry / Vertex AI
+                        - text: when you want managed foundation model access and do not want to run your own inference cluster.
+                    - listitem [ref=e775]:
+                      - paragraph [ref=e776]:
+                        - strong [ref=e777]: Use SageMaker / Azure ML / Vertex AI custom endpoints
+                        - text: when you need managed training plus deployment for your own models.
+                    - listitem [ref=e778]:
+                      - paragraph [ref=e779]:
+                        - strong [ref=e780]: Use vLLM / TGI / Triton / SGLang
+                        - text: when you want open-source control, custom batching, lower cost at scale, or open-weight LLM hosting.
+                    - listitem [ref=e781]:
+                      - paragraph [ref=e782]:
+                        - strong [ref=e783]: Use Ollama or llama.cpp
+                        - text: for local development, offline demos, CPU-friendly inference, or privacy-sensitive prototyping.
+                - generic [ref=e784]:
+                  - heading "Practical Defaults" [level=3] [ref=e785]
+                  - table [ref=e787]:
+                    - rowgroup [ref=e788]:
+                      - row "Scenario Recommended Path" [ref=e789]:
+                        - columnheader "Scenario" [ref=e790]:
+                          - paragraph [ref=e791]: Scenario
+                        - columnheader "Recommended Path" [ref=e792]:
+                          - paragraph [ref=e793]: Recommended Path
+                    - rowgroup [ref=e794]:
+                      - row "MVP chatbot with lowest ops burden Bedrock, Azure AI Foundry, Vertex AI, or OpenAI/Anthropic API" [ref=e795]:
+                        - cell "MVP chatbot with lowest ops burden" [ref=e796]:
+                          - paragraph [ref=e797]: MVP chatbot with lowest ops burden
+                        - cell "Bedrock, Azure AI Foundry, Vertex AI, or OpenAI/Anthropic API" [ref=e798]:
+                          - paragraph [ref=e799]: Bedrock, Azure AI Foundry, Vertex AI, or OpenAI/Anthropic API
+                      - 'row "Enterprise app with strict cloud standard Match the platform to your cloud: Bedrock, Azure AI Foundry, or Vertex AI" [ref=e800]':
+                        - cell "Enterprise app with strict cloud standard" [ref=e801]:
+                          - paragraph [ref=e802]: Enterprise app with strict cloud standard
+                        - 'cell "Match the platform to your cloud: Bedrock, Azure AI Foundry, or Vertex AI" [ref=e803]':
+                          - paragraph [ref=e804]: "Match the platform to your cloud: Bedrock, Azure AI Foundry, or Vertex AI"
+                      - row "Open-weight LLM in production vLLM or TGI on Kubernetes / cloud GPU" [ref=e805]:
+                        - cell "Open-weight LLM in production" [ref=e806]:
+                          - paragraph [ref=e807]: Open-weight LLM in production
+                        - cell "vLLM or TGI on Kubernetes / cloud GPU" [ref=e808]:
+                          - paragraph [ref=e809]: vLLM or TGI on Kubernetes / cloud GPU
+                      - row "Mixed model fleet with TensorRT/ONNX/PyTorch Triton Inference Server" [ref=e810]:
+                        - cell "Mixed model fleet with TensorRT/ONNX/PyTorch" [ref=e811]:
+                          - paragraph [ref=e812]: Mixed model fleet with TensorRT/ONNX/PyTorch
+                        - cell "Triton Inference Server" [ref=e813]:
+                          - paragraph [ref=e814]: Triton Inference Server
+                      - row "Mobile / embedded / offline ONNX Runtime or TensorFlow Lite" [ref=e815]:
+                        - cell "Mobile / embedded / offline" [ref=e816]:
+                          - paragraph [ref=e817]: Mobile / embedded / offline
+                        - cell "ONNX Runtime or TensorFlow Lite" [ref=e818]:
+                          - paragraph [ref=e819]: ONNX Runtime or TensorFlow Lite
+                      - row "Local-first development Ollama or llama.cpp" [ref=e820]:
+                        - cell "Local-first development" [ref=e821]:
+                          - paragraph [ref=e822]: Local-first development
+                        - cell "Ollama or llama.cpp" [ref=e823]:
+                          - paragraph [ref=e824]: Ollama or llama.cpp
+                - generic [ref=e825]:
+                  - heading "Docker for ML — The Essential Pattern" [level=3] [ref=e826]
+                  - generic [ref=e828]:
+                    - generic [ref=e829]: FROM python:3.11-slim WORKDIR /app COPY requirements.txt . RUN pip install --no-cache-dir -r requirements.txt COPY . . EXPOSE 8000 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+                    - button "Copy to clipboard" [ref=e830] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e831]
+                - generic [ref=e835]:
+                  - heading "Model Monitoring — What to Watch" [level=3] [ref=e836]
+                  - list [ref=e837]:
+                    - listitem [ref=e838]:
+                      - paragraph [ref=e839]:
+                        - strong [ref=e840]: Data drift
+                        - text: ": Input feature distributions shift from training distribution"
+                    - listitem [ref=e841]:
+                      - paragraph [ref=e842]:
+                        - strong [ref=e843]: Concept drift
+                        - text: ": The relationship between features and labels changes"
+                    - listitem [ref=e844]:
+                      - paragraph [ref=e845]:
+                        - strong [ref=e846]: Performance degradation
+                        - text: ": Accuracy/F1 drops on recent data"
+                    - listitem [ref=e847]:
+                      - paragraph [ref=e848]:
+                        - strong [ref=e849]: Latency
+                        - text: ": Response time increases (often due to memory pressure)"
+                    - listitem [ref=e850]:
+                      - paragraph [ref=e851]:
+                        - strong [ref=e852]: Error rates
+                        - text: ": HTTP 5xx errors in your API"
+              - generic [ref=e853]:
+                - heading "LLM Infrastructure (09_llm_infrastructure.ipynb)" [level=2] [ref=e854]
+                - paragraph [ref=e855]: "This newer notebook covers production LLM serving:"
+                - list [ref=e856]:
+                  - listitem [ref=e857]:
+                    - paragraph [ref=e858]:
+                      - strong [ref=e859]: vLLM
+                      - text: ": PagedAttention for high-throughput LLM inference (10-30x faster than naive serving)"
+                  - listitem [ref=e860]:
+                    - paragraph [ref=e861]:
+                      - strong [ref=e862]: TGI (Text Generation Inference)
+                      - text: ": HuggingFace’s production LLM server"
+                  - listitem [ref=e863]:
+                    - paragraph [ref=e864]:
+                      - strong [ref=e865]: Ollama
+                      - text: ": Easy local LLM serving with OpenAI-compatible API"
+                  - listitem [ref=e866]:
+                    - paragraph [ref=e867]:
+                      - strong [ref=e868]: llama.cpp
+                      - text: ": CPU inference for quantized models"
+                - paragraph [ref=e869]:
+                  - strong [ref=e870]: "When to use what:"
+                - table [ref=e872]:
+                  - rowgroup [ref=e873]:
+                    - row "Scenario Tool" [ref=e874]:
+                      - columnheader "Scenario" [ref=e875]:
+                        - paragraph [ref=e876]: Scenario
+                      - columnheader "Tool" [ref=e877]:
+                        - paragraph [ref=e878]: Tool
+                  - rowgroup [ref=e879]:
+                    - row "Local development Ollama" [ref=e880]:
+                      - cell "Local development" [ref=e881]:
+                        - paragraph [ref=e882]: Local development
+                      - cell "Ollama" [ref=e883]:
+                        - paragraph [ref=e884]: Ollama
+                    - row "Production, high throughput vLLM" [ref=e885]:
+                      - cell "Production, high throughput" [ref=e886]:
+                        - paragraph [ref=e887]: Production, high throughput
+                      - cell "vLLM" [ref=e888]:
+                        - paragraph [ref=e889]: vLLM
+                    - row "HuggingFace models in prod TGI" [ref=e890]:
+                      - cell "HuggingFace models in prod" [ref=e891]:
+                        - paragraph [ref=e892]: HuggingFace models in prod
+                      - cell "TGI" [ref=e893]:
+                        - paragraph [ref=e894]: TGI
+                    - row "CPU-only inference llama.cpp" [ref=e895]:
+                      - cell "CPU-only inference" [ref=e896]:
+                        - paragraph [ref=e897]: CPU-only inference
+                      - cell "llama.cpp" [ref=e898]:
+                        - paragraph [ref=e899]: llama.cpp
+                    - row "Managed cloud FM access Bedrock / Azure AI Foundry / Vertex AI" [ref=e900]:
+                      - cell "Managed cloud FM access" [ref=e901]:
+                        - paragraph [ref=e902]: Managed cloud FM access
+                      - cell "Bedrock / Azure AI Foundry / Vertex AI" [ref=e903]:
+                        - paragraph [ref=e904]: Bedrock / Azure AI Foundry / Vertex AI
+                - generic [ref=e905]:
+                  - heading "Bedrock vs ONNX vs vLLM in One Sentence" [level=3] [ref=e906]
+                  - list [ref=e907]:
+                    - listitem [ref=e908]:
+                      - paragraph [ref=e909]:
+                        - strong [ref=e910]: Bedrock
+                        - text: ": managed API for foundation models."
+                    - listitem [ref=e911]:
+                      - paragraph [ref=e912]:
+                        - strong [ref=e913]: ONNX Runtime
+                        - text: ": portable runtime for your own exported model."
+                    - listitem [ref=e914]:
+                      - paragraph [ref=e915]:
+                        - strong [ref=e916]: vLLM
+                        - text: ": high-throughput open-source LLM server for self-hosting."
+              - generic [ref=e917]:
+                - heading "Practice Projects (Put These on GitHub)" [level=2] [ref=e918]
+                - paragraph [ref=e919]:
+                  - strong [ref=e920]: "Project 1: Model API with Full MLOps"
+                - list [ref=e921]:
+                  - listitem [ref=e922]:
+                    - paragraph [ref=e923]: Train any classifier (e.g., sentiment analysis)
+                  - listitem [ref=e924]:
+                    - paragraph [ref=e925]: Track experiment with MLflow
+                  - listitem [ref=e926]:
+                    - paragraph [ref=e927]: Serve with FastAPI
+                  - listitem [ref=e928]:
+                    - paragraph [ref=e929]: Containerize with Docker
+                  - listitem [ref=e930]:
+                    - paragraph [ref=e931]: Add GitHub Actions to run tests on every push
+                - paragraph [ref=e932]:
+                  - strong [ref=e933]: "Project 2: LLM Serving Setup"
+                - list [ref=e934]:
+                  - listitem [ref=e935]:
+                    - paragraph [ref=e936]: Set up vLLM with a small model (Qwen2.5-1.5B)
+                  - listitem [ref=e937]:
+                    - paragraph [ref=e938]: Create OpenAI-compatible endpoints
+                  - listitem [ref=e939]:
+                    - paragraph [ref=e940]: Load test with Locust
+                  - listitem [ref=e941]:
+                    - paragraph [ref=e942]: Monitor with basic Prometheus metrics
+                - paragraph [ref=e943]:
+                  - strong [ref=e944]: "Project 3: Model Monitoring Pipeline"
+                - list [ref=e945]:
+                  - listitem [ref=e946]:
+                    - paragraph [ref=e947]: Deploy a model
+                  - listitem [ref=e948]:
+                    - paragraph [ref=e949]: Generate artificial drift in incoming data
+                  - listitem [ref=e950]:
+                    - paragraph [ref=e951]: Detect and alert on drift
+                  - listitem [ref=e952]:
+                    - paragraph [ref=e953]: Trigger retraining pipeline
+              - generic [ref=e954]:
+                - heading "Interview Questions for MLOps" [level=2] [ref=e955]
+                - list [ref=e956]:
+                  - listitem [ref=e957]:
+                    - paragraph [ref=e958]: How do you detect data drift? What would you do when you detect it?
+                  - listitem [ref=e959]:
+                    - paragraph [ref=e960]: What’s the difference between a model registry and an artifact store?
+                  - listitem [ref=e961]:
+                    - paragraph [ref=e962]: How does vLLM’s PagedAttention improve throughput?
+                  - listitem [ref=e963]:
+                    - paragraph [ref=e964]: Walk me through how you’d deploy a new model version with zero downtime.
+                  - listitem [ref=e965]:
+                    - paragraph [ref=e966]: What’s the difference between online and batch inference? When would you use each?
+              - generic [ref=e967]:
+                - heading "External Resources" [level=2] [ref=e968]
+                - table [ref=e970]:
+                  - rowgroup [ref=e971]:
+                    - row "Resource Type Link" [ref=e972]:
+                      - columnheader "Resource" [ref=e973]:
+                        - paragraph [ref=e974]: Resource
+                      - columnheader "Type" [ref=e975]:
+                        - paragraph [ref=e976]: Type
+                      - columnheader "Link" [ref=e977]:
+                        - paragraph [ref=e978]: Link
+                  - rowgroup [ref=e979]:
+                    - row "Made With ML Free Course https://madewithml.com" [ref=e980]:
+                      - cell "Made With ML" [ref=e981]:
+                        - paragraph [ref=e982]: Made With ML
+                      - cell "Free Course" [ref=e983]:
+                        - paragraph [ref=e984]: Free Course
+                      - cell "https://madewithml.com" [ref=e985]:
+                        - paragraph [ref=e986]:
+                          - link "https://madewithml.com" [ref=e987] [cursor=pointer]:
+                            - /url: https://madewithml.com
+                    - row "Full Stack Deep Learning Free Course https://fullstackdeeplearning.com" [ref=e988]:
+                      - cell "Full Stack Deep Learning" [ref=e989]:
+                        - paragraph [ref=e990]: Full Stack Deep Learning
+                      - cell "Free Course" [ref=e991]:
+                        - paragraph [ref=e992]: Free Course
+                      - cell "https://fullstackdeeplearning.com" [ref=e993]:
+                        - paragraph [ref=e994]:
+                          - link "https://fullstackdeeplearning.com" [ref=e995] [cursor=pointer]:
+                            - /url: https://fullstackdeeplearning.com
+                    - row "MLflow Docs Docs https://mlflow.org/docs/latest/index.html" [ref=e996]:
+                      - cell "MLflow Docs" [ref=e997]:
+                        - paragraph [ref=e998]: MLflow Docs
+                      - cell "Docs" [ref=e999]:
+                        - paragraph [ref=e1000]: Docs
+                      - cell "https://mlflow.org/docs/latest/index.html" [ref=e1001]:
+                        - paragraph [ref=e1002]:
+                          - link "https://mlflow.org/docs/latest/index.html" [ref=e1003] [cursor=pointer]:
+                            - /url: https://mlflow.org/docs/latest/index.html
+                    - row "vLLM Docs Docs https://docs.vllm.ai" [ref=e1004]:
+                      - cell "vLLM Docs" [ref=e1005]:
+                        - paragraph [ref=e1006]: vLLM Docs
+                      - cell "Docs" [ref=e1007]:
+                        - paragraph [ref=e1008]: Docs
+                      - cell "https://docs.vllm.ai" [ref=e1009]:
+                        - paragraph [ref=e1010]:
+                          - link "https://docs.vllm.ai" [ref=e1011] [cursor=pointer]:
+                            - /url: https://docs.vllm.ai
+                    - row "FastAPI Docs Docs https://fastapi.tiangolo.com" [ref=e1012]:
+                      - cell "FastAPI Docs" [ref=e1013]:
+                        - paragraph [ref=e1014]: FastAPI Docs
+                      - cell "Docs" [ref=e1015]:
+                        - paragraph [ref=e1016]: Docs
+                      - cell "https://fastapi.tiangolo.com" [ref=e1017]:
+                        - paragraph [ref=e1018]:
+                          - link "https://fastapi.tiangolo.com" [ref=e1019] [cursor=pointer]:
+                            - /url: https://fastapi.tiangolo.com
+                    - row "mlflow/mlflow GitHub https://github.com/mlflow/mlflow" [ref=e1020]:
+                      - cell "mlflow/mlflow" [ref=e1021]:
+                        - paragraph [ref=e1022]: mlflow/mlflow
+                      - cell "GitHub" [ref=e1023]:
+                        - paragraph [ref=e1024]: GitHub
+                      - cell "https://github.com/mlflow/mlflow" [ref=e1025]:
+                        - paragraph [ref=e1026]:
+                          - link "https://github.com/mlflow/mlflow" [ref=e1027] [cursor=pointer]:
+                            - /url: https://github.com/mlflow/mlflow
+                    - row "vllm-project/vllm GitHub https://github.com/vllm-project/vllm" [ref=e1028]:
+                      - cell "vllm-project/vllm" [ref=e1029]:
+                        - paragraph [ref=e1030]: vllm-project/vllm
+                      - cell "GitHub" [ref=e1031]:
+                        - paragraph [ref=e1032]: GitHub
+                      - cell "https://github.com/vllm-project/vllm" [ref=e1033]:
+                        - paragraph [ref=e1034]:
+                          - link "https://github.com/vllm-project/vllm" [ref=e1035] [cursor=pointer]:
+                            - /url: https://github.com/vllm-project/vllm
+              - generic [ref=e1036]:
+                - heading "What to Learn Next" [level=2] [ref=e1037]
+                - paragraph [ref=e1038]: "After MLOps, choose your specialization path:"
+                - list [ref=e1039]:
+                  - listitem [ref=e1040]:
+                    - paragraph [ref=e1041]:
+                      - strong [ref=e1042]: AI Agents
+                      - text: →
+                      - link "15-ai-agents/" [ref=e1043] [cursor=pointer]:
+                        - /url: ../15-ai-agents/README.html
+                  - listitem [ref=e1044]:
+                    - paragraph [ref=e1045]:
+                      - strong [ref=e1046]: LLM Fine-tuning
+                      - text: →
+                      - link "12-llm-finetuning/" [ref=e1047] [cursor=pointer]:
+                        - /url: ../12-llm-finetuning/README.html
+                  - listitem [ref=e1048]:
+                    - paragraph [ref=e1049]:
+                      - strong [ref=e1050]: Computer Vision
+                      - text: →
+                      - link "10-specializations/computer-vision/" [ref=e1051] [cursor=pointer]:
+                        - /url: ../10-specializations/computer-vision/README.html
+              - generic [ref=e1052]:
+                - heading "Site Navigation" [level=2] [ref=e1053]
+                - list [ref=e1054]:
+                  - listitem [ref=e1055]:
+                    - paragraph [ref=e1056]:
+                      - link "Browse the phase catalog" [ref=e1057] [cursor=pointer]:
+                        - /url: CATALOG.html
+        - contentinfo [ref=e1058]:
+          - generic [ref=e1059]:
+            - 'link "Next Phase 9: MLOps Catalog" [ref=e1060] [cursor=pointer]':
+              - /url: CATALOG.html
+              - generic [ref=e1061]:
+                - generic [ref=e1063]: Next
+                - generic [ref=e1064]: "Phase 9: MLOps Catalog"
+              - img [ref=e1065]
+            - link "Previous GraphRAG and Visual RAG (Microsoft GraphRAG + ColPali)" [ref=e1067] [cursor=pointer]:
+              - /url: ../08-rag/10_graphrag_visual_rag.html
+              - img [ref=e1068]
+              - generic [ref=e1070]:
+                - generic [ref=e1072]: Previous
+                - generic [ref=e1073]: GraphRAG and Visual RAG (Microsoft GraphRAG + ColPali)
+          - generic [ref=e1074]:
+            - generic [ref=e1075]:
+              - generic [ref=e1076]: Copyright © MIT License 2026, Pavan Mudigonda
+              - text: Made with
+              - link "Sphinx" [ref=e1077] [cursor=pointer]:
+                - /url: https://www.sphinx-doc.org/
+              - text: and
+              - link "@pradyunsg" [ref=e1078] [cursor=pointer]:
+                - /url: https://pradyunsg.me
+              - text: "'s"
+              - link "Furo" [ref=e1079] [cursor=pointer]:
+                - /url: https://github.com/pradyunsg/furo
+            - link "GitHub" [ref=e1082] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e1083]
+      - complementary [ref=e1085]:
+        - separator "Resize right sidebar" [ref=e1086]:
+          - button "Collapse right sidebar" [ref=e1087] [cursor=pointer]: ›
+        - generic [ref=e1088]:
+          - generic [ref=e1089]: On this page
+          - list [ref=e1092]:
+            - listitem [ref=e1093]:
+              - list [ref=e1094]:
+                - listitem [ref=e1095]:
+                  - link "Why MLOps Matters for Your Career" [ref=e1096] [cursor=pointer]:
+                    - /url: "#why-mlops-matters-for-your-career"
+                - listitem [ref=e1097]:
+                  - link "Notebooks — Work in This Order" [ref=e1098] [cursor=pointer]:
+                    - /url: "#notebooks-work-in-this-order"
+                - listitem [ref=e1099]:
+                  - link "Key Concepts" [ref=e1100] [cursor=pointer]:
+                    - /url: "#key-concepts"
+                  - list [ref=e1101]:
+                    - listitem [ref=e1102]:
+                      - link "The ML Lifecycle (What MLOps Manages)" [ref=e1103] [cursor=pointer]:
+                        - /url: "#the-ml-lifecycle-what-mlops-manages"
+                    - listitem [ref=e1104]:
+                      - link "Experiment Tracking (MLflow)" [ref=e1105] [cursor=pointer]:
+                        - /url: "#experiment-tracking-mlflow"
+                    - listitem [ref=e1106]:
+                      - link "Model Serving Patterns" [ref=e1107] [cursor=pointer]:
+                        - /url: "#model-serving-patterns"
+                    - listitem [ref=e1108]:
+                      - link "The MLOps Stack (What to Learn)" [ref=e1109] [cursor=pointer]:
+                        - /url: "#the-mlops-stack-what-to-learn"
+                    - listitem [ref=e1110]:
+                      - 'link "Deployment Matrix: AWS, Azure, Google, and Open Source" [ref=e1111] [cursor=pointer]':
+                        - /url: "#deployment-matrix-aws-azure-google-and-open-source"
+                    - listitem [ref=e1112]:
+                      - link "How to Choose a Deployment Path" [ref=e1113] [cursor=pointer]:
+                        - /url: "#how-to-choose-a-deployment-path"
+                    - listitem [ref=e1114]:
+                      - link "Practical Defaults" [ref=e1115] [cursor=pointer]:
+                        - /url: "#practical-defaults"
+                    - listitem [ref=e1116]:
+                      - link "Docker for ML — The Essential Pattern" [ref=e1117] [cursor=pointer]:
+                        - /url: "#docker-for-ml-the-essential-pattern"
+                    - listitem [ref=e1118]:
+                      - link "Model Monitoring — What to Watch" [ref=e1119] [cursor=pointer]:
+                        - /url: "#model-monitoring-what-to-watch"
+                - listitem [ref=e1120]:
+                  - link "LLM Infrastructure (09_llm_infrastructure.ipynb)" [ref=e1121] [cursor=pointer]:
+                    - /url: "#llm-infrastructure-09-llm-infrastructure-ipynb"
+                  - list [ref=e1122]:
+                    - listitem [ref=e1123]:
+                      - link "Bedrock vs ONNX vs vLLM in One Sentence" [ref=e1124] [cursor=pointer]:
+                        - /url: "#bedrock-vs-onnx-vs-vllm-in-one-sentence"
+                - listitem [ref=e1125]:
+                  - link "Practice Projects (Put These on GitHub)" [ref=e1126] [cursor=pointer]:
+                    - /url: "#practice-projects-put-these-on-github"
+                - listitem [ref=e1127]:
+                  - link "Interview Questions for MLOps" [ref=e1128] [cursor=pointer]:
+                    - /url: "#interview-questions-for-mlops"
+                - listitem [ref=e1129]:
+                  - link "External Resources" [ref=e1130] [cursor=pointer]:
+                    - /url: "#external-resources"
+                - listitem [ref=e1131]:
+                  - link "What to Learn Next" [ref=e1132] [cursor=pointer]:
+                    - /url: "#what-to-learn-next"
+                - listitem [ref=e1133]:
+                  - link "Site Navigation" [ref=e1134] [cursor=pointer]:
+                    - /url: "#site-navigation"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

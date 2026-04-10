@@ -10,6 +10,7 @@ This module should help you answer a practical question: when does running model
 4. [03_local_rag_with_ollama.ipynb](03_local_rag_with_ollama.ipynb)
 5. [04_llm_server_and_api.ipynb](04_llm_server_and_api.ipynb)
 6. [05_speculative_decoding.ipynb](05_speculative_decoding.ipynb)
+7. [06_ai_toolkit_vscode.md](06_ai_toolkit_vscode.md)
 
 ## Recommended Order
 
@@ -33,6 +34,7 @@ This module should help you answer a practical question: when does running model
 - MLX for Apple Silicon-native training and inference
 - vLLM and SGLang for higher-throughput serving on stronger local GPUs
 - OpenAI-compatible local gateways for app portability across hosted and self-hosted backends
+- **AI Toolkit for VS Code** for model browsing, local playground, fine-tuning (QLoRA), and evaluation — all inside the editor
 
 ## Study Advice
 

@@ -55,6 +55,7 @@ Implement advanced retrieval strategies:
 - [ ] **Hybrid search:** Combine dense (semantic) + sparse (keyword) retrieval
 - [ ] **Re-ranking:** Implement cross-encoder re-ranking for top results
 - [ ] **Metadata filtering:** Filter by date, author, document type
+- [ ] **One modern retrieval upgrade:** Implement at least one of HyDE, query decomposition, contextual compression, parent-child retrieval, or relevant-segment extraction
 
 ```python
 class RAGRetriever:
@@ -84,6 +85,14 @@ class RAGRetriever:
         """Apply metadata filters to results."""
         # TODO: Implement filtering
         pass
+
+    def advanced_retrieve(self, query):
+        """Apply one modern retrieval upgrade beyond baseline hybrid search."""
+        # Example options:
+        # - HyDE or query rewriting before retrieval
+        # - contextual compression after retrieval
+        # - parent-child or hierarchical retrieval for long documents
+        pass
 ```
 
 ### Part 3: Answer Generation (25 points)
@@ -95,6 +104,7 @@ Create an intelligent answer generator:
 - [ ] **Citation tracking:** Include source references in answers
 - [ ] **Confidence scoring:** Estimate answer confidence
 - [ ] **Fallback handling:** Graceful handling when no good answer exists
+- [ ] **Abstention policy:** Refuse to answer when evidence is weak or conflicting
 
 ```python
 class AnswerGenerator:
@@ -154,6 +164,8 @@ Comprehensively evaluate your RAG system:
   - Answer accuracy
   - Latency (< 3 seconds)
   - Cost per query
+- [ ] **Failure analysis:** Compare at least 3 failure modes (bad chunking, weak retrieval, unsupported answer)
+- [ ] **Ablation study:** Measure baseline RAG vs. one advanced technique you added
 
 ```python
 class RAGEvaluator:
@@ -187,6 +199,10 @@ class RAGEvaluator:
     def create_evaluation_report(self):
         """Generate comprehensive evaluation report."""
         pass
+
+    def compare_variants(self, test_set):
+        """Compare baseline retrieval against your improved retrieval pipeline."""
+        pass
 ```
 
 ---
@@ -196,9 +212,9 @@ class RAGEvaluator:
 | Criteria | Exemplary (A: 90-100%) | Proficient (B: 80-89%) | Adequate (C: 70-79%) | Needs Work (D/F: <70%) |
 |----------|---------------------|-------------------|-----------------|-------------------|
 | **Document Processing** (20pts) | Multi-format, semantic chunking, metadata | Good chunking, basic metadata | Simple chunking only | Broken or incomplete |
-| **Retrieval** (25pts) | Hybrid search + reranking, excellent relevance | Good retrieval, some reranking | Basic semantic search | Poor retrieval quality |
-| **Generation** (25pts) | Citations, confidence, high quality answers | Good answers, some citations | Basic answers generated | Poor answer quality |
-| **Evaluation** (30pts) | Comprehensive metrics, >50 test cases, deep analysis | Good metrics, 30-50 tests | Basic eval, 20-30 tests | Incomplete evaluation |
+| **Retrieval** (25pts) | Hybrid + reranking + one modern upgrade with clear gains | Good retrieval, some reranking | Basic semantic search | Poor retrieval quality |
+| **Generation** (25pts) | Citations, confidence, abstention, high quality answers | Good answers, some citations | Basic answers generated | Poor answer quality |
+| **Evaluation** (30pts) | Comprehensive metrics, >50 test cases, ablation + failure analysis | Good metrics, 30-50 tests | Basic eval, 20-30 tests | Incomplete evaluation |
 
 ---
 
@@ -244,6 +260,28 @@ class RAGEvaluator:
 - [ ] Multi-query retrieval
 - [ ] Parent document retrieval
 - [ ] Hypothetical Document Embeddings (HyDE)
+
+### Bonus 5: Reliability Loop (+10)
+- [ ] Implement CRAG-style retrieval correction or answer verification
+- [ ] Detect low-confidence retrieval and retry with a better query
+- [ ] Route unsupported questions to abstain / follow-up instead of hallucinating
+
+### Bonus 6: Advanced Architecture (+10)
+- [ ] RAPTOR, hierarchical retrieval, or GraphRAG prototype
+- [ ] Explain why the architecture helps your dataset
+- [ ] Compare it against your flat-chunk baseline
+
+---
+
+## 🧠 Suggested Technique Choices
+
+If you are unsure what to add beyond baseline RAG, pick one of these:
+
+1. **Best first upgrade:** Hybrid retrieval + reranking.
+2. **Best for ambiguous questions:** Query rewriting or HyDE.
+3. **Best for long structured documents:** Parent-child retrieval or RAPTOR-style summarization.
+4. **Best for noisy corpora:** Contextual compression or relevant-segment extraction.
+5. **Best for high-stakes settings:** Evidence verification, CRAG-style correction, or abstention logic.
 
 ### Bonus 3: Deployment (+10)
 - [ ] FastAPI backend

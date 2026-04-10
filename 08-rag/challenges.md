@@ -258,6 +258,101 @@ System should:
 4. Combine image + text in answer
 ```
 
+<details>
+<summary>💡 Hint</summary>
+Start with caption generation and text retrieval before attempting end-to-end multimodal embeddings.
+</details>
+
+---
+
+## 🚀 Challenge 6: Corrective RAG Loop
+
+**Difficulty:** ⭐⭐⭐⭐⭐ Expert  
+**Time:** 3-5 hours  
+**Concepts:** CRAG, retrieval grading, retry policies, abstention
+
+### The Problem
+Many RAG failures are not generation failures. They are retrieval failures that should have been caught before the model answered.
+
+### Your Task
+Build a corrective loop that evaluates retrieval quality before the final answer is generated.
+
+### Requirements
+- [ ] Grade retrieved evidence for relevance and coverage
+- [ ] Retry with a rewritten query if retrieval quality is weak
+- [ ] Compress or filter noisy chunks before generation
+- [ ] Abstain when no trustworthy evidence is found
+- [ ] Log which step fixed the failure, if any
+
+### Suggested pipeline
+```python
+def corrective_rag(query):
+    candidates = retrieve(query)
+    grade = grade_retrieval(query, candidates)
+
+    if grade < 0.5:
+        better_query = rewrite_query(query)
+        candidates = retrieve(better_query)
+        grade = grade_retrieval(better_query, candidates)
+
+    if grade < 0.5:
+        return {"answer": "I don't have enough reliable evidence.", "status": "abstain"}
+
+    context = compress_context(query, candidates)
+    return generate_answer(query, context)
+```
+
+### Success Criteria
+- [ ] Retrieval failures are explicitly detected
+- [ ] Retry logic improves at least some failed cases
+- [ ] Unsupported questions do not produce confident hallucinations
+- [ ] You can show before/after examples from a failure set
+
+<details>
+<summary>💡 Hint</summary>
+Keep the grading simple first: use a small rubric for topical relevance, evidence coverage, and answerability.
+</details>
+
+---
+
+## 🚀 Challenge 7: Hierarchical or Graph Retrieval
+
+**Difficulty:** ⭐⭐⭐⭐⭐ Expert  
+**Time:** 4-6 hours  
+**Concepts:** RAPTOR, parent-child retrieval, GraphRAG, multi-hop reasoning
+
+### The Problem
+Flat chunk retrieval breaks down when the answer is spread across sections, entities, or long reports.
+
+### Your Task
+Implement one structured retrieval approach:
+
+**Option A: Parent-Child / Hierarchical Retrieval**
+- Retrieve fine-grained chunks
+- Expand to their parent section or source document
+- Generate the final answer using both local evidence and larger context
+
+**Option B: RAPTOR-style Summarization Tree**
+- Create chunk summaries recursively
+- Retrieve from summaries first, then drill down to leaves
+- Compare quality and latency against flat retrieval
+
+**Option C: GraphRAG Prototype**
+- Extract entities and relations from documents
+- Build a lightweight graph
+- Retrieve by entity neighborhood plus semantic search
+
+### Success Criteria
+- [ ] Show at least 10 questions that require cross-section reasoning
+- [ ] Compare flat retrieval vs. your structured approach
+- [ ] Explain where the structured approach helps and where it adds overhead
+- [ ] Include failure cases, not just wins
+
+<details>
+<summary>💡 Hint</summary>
+If full GraphRAG is too heavy, parent-child retrieval is the best structured upgrade to implement first.
+</details>
+
 ### Implementation Components
 1. **Multi-Modal Embeddings:**
    - Text: sentence-transformers

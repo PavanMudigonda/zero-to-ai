@@ -79,17 +79,24 @@ flowchart TD
     end
 
     subgraph Advanced
-        I --> J[Prompt Engineering]
-        J --> K[LLM Fine-tuning]
-        K --> L[Multimodal AI]
-        L --> M[Local LLMs]
-        M --> N[AI Agents]
+        I --> J[Specializations]
+        J --> K[Prompt Engineering]
+        K --> L[LLM Fine-tuning]
+        L --> M[Multimodal AI]
+        M --> N[Local LLMs]
+        N --> O[AI Agents]
     end
 
     subgraph Production
-        N --> O[Model Evaluation]
-        O --> P[Inference Optimization]
-        P --> Q[AI Safety & Red-teaming]
+        O --> P[Model Evaluation]
+        P --> Q[Inference Optimization]
+        Q --> R[AI Safety & Red-teaming]
+    end
+
+    subgraph Developer Tools
+        R --> S[VS Code & GitHub Copilot]
+        S --> T[MCP Servers]
+        T --> U[Custom Instructions & Agent Config]
     end
 ```
 
@@ -214,9 +221,11 @@ flowchart TD
         OLLAMA[Ollama]
         LLAMACPP[llama.cpp]
         MLX[Apple MLX]
+        AITK[AI Toolkit for VS Code]
         OLLAMA --- PHI
         LLAMACPP --- QWEN
         MLX --- LLAMA
+        AITK --- PHI
     end
 ```
 
@@ -283,11 +292,22 @@ flowchart TD
         I --> J[Answer with Citations]
     end
 
-    subgraph Advanced RAG
-        K[Re-ranking] --> G
+    subgraph "Advanced RAG — Query"
         L[Query Expansion] --> F
+        HY[HyDE - Hypothetical Answers] --> F
+    end
+
+    subgraph "Advanced RAG — Retrieval"
         M[Hybrid Search BM25 + Dense] --> G
+        K[Re-ranking / Cross-Encoder] --> G
+        PC[Parent-Child Retrieval] --> G
+        RAP[RAPTOR - Summary Trees] --> G
+    end
+
+    subgraph "Advanced RAG — Control"
+        CR[CRAG - Retrieval Grading] --> H
         N[Agentic RAG] --> I
+        GR[GraphRAG] --> G
     end
 ```
 
@@ -724,7 +744,7 @@ flowchart LR
 | `{Diamond}` | Decision point |
 | `subgraph` | Grouping of related concepts |
 
-Each box roughly corresponds to a topic covered in one of the **31 phases** of the Zero to AI curriculum. Follow the arrows to find a natural learning path.
+Each box roughly corresponds to a topic covered in one of the **phases (00–31)** of the Zero to AI curriculum. Follow the arrows to find a natural learning path.
 
 ---
 

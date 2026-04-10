@@ -32,6 +32,12 @@ Combine your skills from previous phases to build production-grade RAG systems!
 - [ ] Parent-document retrieval
 - [ ] Self-query and metadata filtering
 - [ ] Conversation memory and context
+- [ ] HyDE and hypothetical-answer retrieval
+- [ ] Contextual compression and segment extraction
+- [ ] Cross-encoder reranking
+- [ ] Hierarchical retrieval, RAPTOR, and parent-child indexing
+- [ ] Corrective RAG (CRAG) and self-reflective retrieval loops
+- [ ] GraphRAG, multimodal RAG, and agentic retrieval
 
 ---
 
@@ -47,8 +53,14 @@ Combine your skills from previous phases to build production-grade RAG systems!
 ├── 05_advanced_retrieval.ipynb    # Hybrid search, re-ranking
 ├── 06_conversation_rag.ipynb      # Chat with memory
 ├── 07_evaluation.ipynb            # RAG evaluation metrics
+├── 08_hyde_reranking.ipynb        # HyDE-style query expansion plus reranking
+├── 08_rag_evaluation_playbook.md  # How to benchmark RAG improvements
+├── 08_rag_technique_selection.md  # How to choose the right RAG upgrade
 ├── 09_advanced_retrieval.ipynb    # Parent-child retrieval, ensemble
 ├── 10_graphrag_visual_rag.ipynb   # GraphRAG and multimodal RAG
+├── 11_corrective_rag.ipynb        # CRAG-style retrieval grading, retry, abstention
+├── 12_parent_child_retrieval.ipynb # Structured retrieval with chunk-to-parent expansion
+├── 13_raptor_retrieval.ipynb       # RAPTOR-style hierarchical summary-tree retrieval
 ├── assignment.md                  # Phase assignment
 ├── challenges.md                  # Hands-on challenges
 └── README.md                      # This file
@@ -118,6 +130,49 @@ response = llm.generate(prompt)
 - [ ] Implement caching and optimization
 - [ ] Deploy as API (preview of Phase 8)
 - [ ] **Capstone:** Personal knowledge assistant
+
+### Optional Week 5: Modern RAG Deep Dives
+- [ ] Explore HyDE / query rewriting / query decomposition patterns
+- [ ] Work through `08_hyde_reranking.ipynb` to compare baseline retrieval vs HyDE + reranking
+- [ ] Compare reranking, contextual compression, and relevant-segment extraction
+- [ ] Work through `11_corrective_rag.ipynb` to add retrieval grading, retry logic, and abstention
+- [ ] Work through `12_parent_child_retrieval.ipynb` before moving to RAPTOR or GraphRAG
+- [ ] Work through `13_raptor_retrieval.ipynb` to compare flat, parent-child, and tree-based retrieval
+- [ ] Study CRAG, Self-RAG, and retrieval-with-feedback loops
+- [ ] Review RAPTOR, GraphRAG, and multimodal RAG architectures
+- [ ] Build a small benchmark to compare at least 3 advanced techniques
+
+---
+
+## 🧭 Modern RAG Technique Map
+
+The cloned `RAG_Techniques` repository is strong because it does not treat RAG as one pattern. It treats RAG as a family of retrieval control strategies. Use this map to understand which techniques matter and when.
+
+| Problem | Techniques to Study | Why It Helps | When to Use |
+|---------|---------------------|--------------|-------------|
+| Queries are vague or underspecified | Query rewriting, query decomposition, multi-query retrieval, HyDE | Makes retrieval better aligned with user intent | User asks short, ambiguous, or multi-part questions |
+| Chunks lose too much context | Semantic chunking, proposition chunking, contextual headers, window expansion | Preserves meaning while keeping retrieval precise | Long docs, technical manuals, research papers |
+| Retriever finds partly-right docs | Hybrid retrieval, reranking, contextual compression, segment extraction | Improves top-k quality before the LLM sees context | Large corpora, noisy search results, enterprise docs |
+| Questions require structure beyond flat chunks | Parent-child retrieval, hierarchical indices, RAPTOR, GraphRAG | Retrieves summaries, entities, relationships, and larger context blocks | Multi-hop reasoning, long reports, knowledge graphs |
+| System hallucinates or retrieves weak evidence | Reliable RAG, CRAG, Self-RAG, feedback loops | Adds validation and correction before final answer | High-stakes workflows, compliance, research, support |
+| Queries span text, tables, and images | Multimodal RAG, caption-based retrieval, visual RAG, ColPali-style retrieval | Brings non-text content into the retrieval loop | PDFs, dashboards, slide decks, diagrams |
+| Workflow needs tools and planning | Agentic RAG, retrieval orchestration, tool selection | Lets the system choose retrieval tools dynamically | Complex research agents, enterprise copilots |
+
+### Suggested progression
+
+1. Learn the baseline pipeline first: chunk, embed, retrieve, answer.
+2. Improve retrieval quality next: hybrid search, reranking, metadata filters.
+3. Improve query understanding after that: rewriting, multi-query, HyDE.
+4. Add reliability controls next: compression, validation, CRAG or Self-RAG.
+5. Only then move into GraphRAG, agentic RAG, and multimodal retrieval.
+
+This ordering matters. Most weak RAG systems fail because teams jump to advanced architecture before fixing chunking, retrieval quality, and evaluation.
+
+### Companion guide
+
+Use [08_rag_technique_selection.md](08_rag_technique_selection.md) if you want a compact decision guide for choosing between HyDE, reranking, compression, RAPTOR, CRAG, Self-RAG, and GraphRAG.
+
+Use [08_rag_evaluation_playbook.md](08_rag_evaluation_playbook.md) if you want a practical framework for benchmarking retrieval quality, answer quality, latency, and failure behavior.
 
 ---
 
@@ -197,6 +252,28 @@ overlap = 50      # overlap between chunks
 - Re-rank with RRF (Reciprocal Rank Fusion)
 - Best of both worlds
 
+### 4. What Upgrades a Good RAG System into a Strong One
+
+**Query-side upgrades:**
+- Rewrite vague questions into standalone queries
+- Generate multiple retrieval queries and merge the results
+- Use HyDE when the question is abstract and semantic similarity is weak
+
+**Document-side upgrades:**
+- Use semantic or proposition chunking when fixed windows lose meaning
+- Add headers, summaries, or parent references to each chunk
+- Use hierarchical retrieval for long documents and section-level reasoning
+
+**Ranking-side upgrades:**
+- Retrieve broad candidate sets first
+- Re-rank with a cross-encoder or reranker model
+- Compress context so the generator only sees the best evidence
+
+**Control-loop upgrades:**
+- Detect low-confidence retrieval before answering
+- Retry with transformed queries when the first pass is weak
+- Add answer verification or evidence grading for high-risk use cases
+
 ---
 
 ## 🎯 Projects
@@ -236,6 +313,16 @@ RAG-powered FAQ system.
 - Handle common questions
 - Escalate to human when needed
 - Track conversation context
+
+### Project 5: Advanced Enterprise Search
+Build a RAG system that combines multiple retrieval strategies and exposes evidence quality.
+
+**Features:**
+- Query rewriting and multi-query retrieval
+- Hybrid retrieval plus reranking
+- Metadata-aware filtering
+- Confidence scoring and answer verification
+- Failure routing: answer, abstain, or ask follow-up
 
 ---
 
@@ -285,6 +372,10 @@ RAG-powered FAQ system.
 ✅ Monitor LLM costs  
 ✅ Implement rate limiting  
 ✅ Add error handling and retries
+✅ Benchmark retrieval variants before adding architectural complexity
+✅ Track answer faithfulness separately from answer fluency
+✅ Keep a failure set of hard questions and regressions
+✅ Prefer simpler retrieval improvements before adding agents or graphs
 
 ---
 
@@ -294,10 +385,14 @@ RAG-powered FAQ system.
 - [LangChain RAG Tutorial](https://python.langchain.com/docs/use_cases/question_answering/)
 - [LlamaIndex Docs](https://docs.llamaindex.ai/)
 - [OpenAI Embeddings Guide](https://platform.openai.com/docs/guides/embeddings)
+- [RAG Techniques Repository](https://github.com/NirDiamant/RAG_Techniques)
 
 ### Papers
 - [RAG: Retrieval-Augmented Generation](https://arxiv.org/abs/2005.11401)
 - [Improving RAG with Hybrid Search](https://arxiv.org/abs/2210.11416)
+- [RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval](https://arxiv.org/abs/2401.18059)
+- [Corrective Retrieval Augmented Generation](https://arxiv.org/abs/2401.15884)
+- [Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection](https://arxiv.org/abs/2310.11511)
 
 ### Courses
 - [DeepLearning.AI - Building RAG Applications](https://www.deeplearning.ai/short-courses/)
@@ -307,6 +402,8 @@ RAG-powered FAQ system.
 - [Ollama](https://ollama.ai/) - Run local LLMs
 - [Chroma](https://www.trychroma.com/) - Vector database
 - [LangSmith](https://www.langchain.com/langsmith) - RAG evaluation
+- [Ragas](https://github.com/explodinggradients/ragas) - Evaluate retrieval and answer quality
+- [DeepEval](https://github.com/confident-ai/deepeval) - LLM evaluation for RAG pipelines
 
 ---
 
@@ -321,6 +418,8 @@ Before moving to Phase 8 (MLOps), you should be able to:
 - [ ] Implement hybrid search (dense + sparse)
 - [ ] Add conversation memory to chatbots
 - [ ] Evaluate RAG system quality
+- [ ] Explain when to use HyDE, reranking, contextual compression, or GraphRAG
+- [ ] Diagnose retrieval failures and choose the right fix
 - [ ] Deploy a working RAG application
 - [ ] Understand cost/latency tradeoffs
 - [ ] Handle edge cases and errors
@@ -329,13 +428,13 @@ Before moving to Phase 8 (MLOps), you should be able to:
 
 ## 🎓 What's Next?
 
-**Phase 8: MLOps & Production** →
+**Phase 9: MLOps & Production** →
 - Deploy RAG as scalable API
 - Monitor performance and costs
 - CI/CD for ML systems
 - Cloud deployment (AWS, Azure, GCP)
 
-**Phase 9: Specializations** →
+**Phase 10: Specializations** →
 - Multimodal RAG (images + text)
 - Agent systems with RAG
 - Advanced prompt engineering
@@ -344,6 +443,6 @@ Before moving to Phase 8 (MLOps), you should be able to:
 
 **Ready to build your first RAG system?** → Start with `00_START_HERE.ipynb`
 
-**Questions?** → Check the `assignment.md` and `challenges.md` for practice exercises
+**Questions?** → Check the `assignment.md`, `challenges.md`, `08_rag_technique_selection.md`, and `08_rag_evaluation_playbook.md` for practice, technique selection, and benchmarking
 
 **🚀 Let's build intelligent systems that can learn from your data!**
