@@ -160,6 +160,19 @@ sd_hide_title: true
 
 ```{toctree}
 :hidden:
+:caption: Resources
+
+generated/MASTER_STUDY_GUIDE
+generated/CAREER_ROADMAP
+generated/INTERVIEW_PREP
+generated/COMPARISON_MATRICES
+generated/VISUAL_ROADMAP
+generated/setup
+generated/checklist
+```
+
+```{toctree}
+:hidden:
 :caption: Foundations
 
 curriculum/00-course-setup/README
@@ -216,19 +229,6 @@ curriculum/20-streaming/README
 curriculum/21-quizzes/README
 curriculum/22-references/README
 curriculum/23-glossary/README
-```
-
-```{toctree}
-:hidden:
-:caption: Resources
-
-generated/MASTER_STUDY_GUIDE
-generated/CAREER_ROADMAP
-generated/INTERVIEW_PREP
-generated/COMPARISON_MATRICES
-generated/VISUAL_ROADMAP
-generated/setup
-generated/checklist
 ```
 
 ```{toctree}

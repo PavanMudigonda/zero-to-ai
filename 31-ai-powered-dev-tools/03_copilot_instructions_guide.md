@@ -1,38 +1,28 @@
-# GitHub Copilot Custom Instructions Guide
+# GitHub Copilot Customization Guide
 
-Custom instructions tell Copilot how to behave in your project. They persist across sessions, apply to every team member, and are committed to version control.
-
----
-
-## 1. Why Instructions Matter
-
-Without instructions, Copilot:
-- Doesn't know your project conventions
-- Generates code in a generic style
-- Misses project-specific constraints (e.g., "always use Hydra for config")
-- Repeats mistakes you've already corrected
-
-With good instructions, Copilot:
-- Follows your team's coding standards automatically
-- Knows which frameworks and patterns to use
-- Avoids anti-patterns specific to your project
-- Produces code that passes your linter and tests on the first try
+Seven configuration primitives control how Copilot behaves in your project. They persist across sessions, apply to every team member, and are committed to version control.
 
 ---
 
-## 2. The Three Instruction Types
+## Quick Reference
 
-| Type | File | Scope | When to use |
-|------|------|-------|-------------|
-| **Repository instructions** | `.github/copilot-instructions.md` | Every Copilot interaction in this repo | Project-wide conventions |
-| **Scoped instructions** | Any `.instructions.md` with `applyTo` frontmatter | Only files matching the glob | Directory-specific rules |
-| **Prompt files** | `.github/prompts/*.prompt.md` | On-demand via prompt picker | Reusable agent workflows |
+| # | Primitive | File | Location | Scope |
+|---|-----------|------|----------|-------|
+| 1 | [Workspace instructions](#1-workspace-instructions) | `copilot-instructions.md` | `.github/` | Every interaction in this repo |
+| 2 | [AGENTS.md](#2-agentsmd) | `AGENTS.md` | Root or subfolders | Every interaction (monorepo-friendly) |
+| 3 | [Scoped instructions](#3-scoped-instructions) | `*.instructions.md` | `.github/instructions/` | Files matching `applyTo` glob |
+| 4 | [Prompt files](#4-prompt-files) | `*.prompt.md` | `.github/prompts/` | On-demand via prompt picker |
+| 5 | [Custom agents](#5-custom-agents) | `*.agent.md` | `.github/agents/` | Agent picker or subagent delegation |
+| 6 | [Skills](#6-skills) | `SKILL.md` + assets | `.github/skills/<name>/` | On-demand via `/` picker or auto-discovery |
+| 7 | [Hooks](#7-hooks) | `*.json` | `.github/hooks/` | Deterministic lifecycle events |
+
+**Rule:** Use `copilot-instructions.md` OR `AGENTS.md` for workspace instructions — not both.
 
 ---
 
-## 3. Repository Instructions
+## 1. Workspace Instructions
 
-Create `.github/copilot-instructions.md` in your repo root. This is automatically included in every Copilot interaction.
+Create `.github/copilot-instructions.md` in your repo root. Automatically included in every Copilot interaction.
 
 ### Example: Python ML Project
 
@@ -55,11 +45,6 @@ Create `.github/copilot-instructions.md` in your repo root. This is automaticall
 - Notebooks are ordered: 00_START_HERE.ipynb, 01_*, 02_*, ...
 - Each directory has a README.md as the chapter entrypoint
 
-## Notebook Rules
-- Self-contained: no API keys required, use toy data and TF-IDF
-- Every notebook must include a benchmark or comparison table
-- All code cells must execute without errors
-
 ## Testing
 - pytest for all tests
 - Run with: pytest tests/ -v
@@ -68,7 +53,6 @@ Create `.github/copilot-instructions.md` in your repo root. This is automaticall
 - Do not add API keys or secrets to any file
 - Do not install packages globally; use .venv
 - Do not use print() for debugging; use logging
-- Do not modify notebooks with saved outputs without re-running them
 ```
 
 ### Example: FastAPI Backend
@@ -86,17 +70,6 @@ Create `.github/copilot-instructions.md` in your repo root. This is automaticall
 - Dependency injection for database sessions (src/api/deps.py)
 - Environment variables via pydantic-settings, never os.getenv()
 
-## File Organization
-- src/api/routes/ — one file per resource
-- src/models/ — SQLAlchemy models
-- src/schemas/ — Pydantic request/response schemas
-- src/services/ — business logic (never in route handlers)
-
-## Testing
-- Every endpoint needs: happy path, 401, and 422 tests
-- Use factory_boy for test data
-- Mock external APIs with respx
-
 ## Build Commands
 - Install: pip install -e ".[dev]"
 - Test: pytest tests/ -v --timeout=30
@@ -106,11 +79,69 @@ Create `.github/copilot-instructions.md` in your repo root. This is automaticall
 
 ---
 
-## 4. Scoped Instructions (`.instructions.md`)
+## 2. AGENTS.md
 
-For rules that only apply to certain files or directories. Place `.instructions.md` files anywhere in your repo with `applyTo` YAML frontmatter.
+An alternative to `copilot-instructions.md` with **monorepo hierarchy support**. Place `AGENTS.md` at the repo root or in subfolders — the closest file in the directory tree wins.
 
-### Example: Test-Specific Rules
+```
+/AGENTS.md                  # Root defaults
+/frontend/AGENTS.md         # Frontend-specific (overrides root for frontend/)
+/backend/AGENTS.md          # Backend-specific (overrides root for backend/)
+```
+
+### When to use AGENTS.md vs copilot-instructions.md
+
+| Scenario | Use |
+|----------|-----|
+| Single-project repo | `copilot-instructions.md` |
+| Monorepo with different stacks per folder | `AGENTS.md` (one per subfolder) |
+| Want cross-editor compatibility | `AGENTS.md` (open standard) |
+
+**Important:** Use one or the other — never both in the same repo.
+
+### Example
+
+```markdown
+# Backend Guidelines
+
+## Architecture
+- FastAPI + SQLAlchemy 2.0
+- Service layer pattern: never put business logic in route handlers
+
+## Build and Test
+- Install: pip install -e ".[dev]"
+- Test: pytest tests/ -v
+- Lint: ruff check src/
+
+## Conventions
+- Use async def everywhere
+- Environment variables via pydantic-settings
+```
+
+---
+
+## 3. Scoped Instructions
+
+For rules that apply only to specific files or directories. Place `*.instructions.md` files in `.github/instructions/` with YAML frontmatter.
+
+### Frontmatter
+
+```yaml
+---
+description: "Use when writing database migrations"   # For on-demand discovery
+applyTo: "**/*.py"                                     # Auto-attach for matching files
+---
+```
+
+### Discovery Modes
+
+| Mode | Trigger | Use case |
+|------|---------|----------|
+| **On-demand** (`description`) | Agent detects task relevance | Task-based rules: migrations, refactoring |
+| **Explicit** (`applyTo`) | Files matching glob in context | File-based rules: language standards |
+| **Manual** | `Add Context` → `Instructions` | Ad-hoc attachment |
+
+### Example: Test Rules
 
 ```markdown
 ---
@@ -121,7 +152,6 @@ applyTo: "tests/**"
 - Use pytest.mark.asyncio for all async tests
 - Use the `client` fixture (defined in conftest.py) for HTTP tests
 - Assert specific error messages, not just status codes
-- Clean up test data in fixtures, not in test functions
 ```
 
 ### Example: RAG Notebook Rules
@@ -135,50 +165,31 @@ applyTo: "08-rag/**"
 - All RAG notebooks must be self-contained (no API keys)
 - Use TF-IDF or sklearn for retrieval in toy examples
 - Every notebook must include a benchmark comparison table
-- Link to 08_rag_technique_selection.md for technique context
 ```
 
-### Example: API Route Rules
+### Glob Patterns
 
-```markdown
----
-applyTo: "src/api/routes/**"
----
-# API Route Rules
-
-- Every route function must have a docstring
-- Use status_code parameter on the decorator
-- Always include response_model on the decorator
-- Rate limit all public endpoints with slowapi
+```yaml
+applyTo: "**"                      # Always included (use with caution — burns context)
+applyTo: "**/*.py"                 # All Python files
+applyTo: ["src/**", "lib/**"]      # Multiple patterns (OR)
+applyTo: "src/api/**/*.ts"         # Specific folder + extension
 ```
 
-### How Scoping Works
-
-- `applyTo` uses glob patterns (same as `.gitignore` syntax)
-- Multiple `.instructions.md` files can coexist — all matching ones apply
-- More specific scopes override general ones when they conflict
-- Files are found in any directory, not just `.github/`
-
 ---
 
-## 5. Prompt Files (`.prompt.md`)
+## 4. Prompt Files
 
-Reusable agent workflow templates that appear in Copilot's prompt picker. Save them in `.github/prompts/`.
+Reusable workflow templates that appear in Copilot's prompt picker (`/`). Save in `.github/prompts/`.
 
-### Example: Add Evaluation Metrics
+### Frontmatter
 
-```markdown
+```yaml
 ---
-mode: agent
-tools: ["terminal", "codebase"]
-description: "Add evaluation metrics to a notebook"
+mode: agent                              # agent or ask
+tools: ["terminal", "codebase"]          # tools the agent can use
+description: "Add evaluation metrics"    # shown in the picker
 ---
-# Add Evaluation Metrics
-
-Add precision@k, recall@k, MRR, and NDCG metrics to the selected notebook.
-Create a benchmark set with at least 3 test queries across categories.
-Compare at least 2 retrieval variants in a summary table.
-Run all cells to verify they execute without errors.
 ```
 
 ### Example: New API Endpoint
@@ -198,9 +209,9 @@ Create a new endpoint for the ${input:resource} resource:
 3. Create the SQLAlchemy model if needed
 4. Write tests in tests/api/test_${input:resource}.py
 5. Run tests: pytest tests/api/test_${input:resource}.py -v
-
-Follow all conventions in .github/copilot-instructions.md.
 ```
+
+The `${input:name}` syntax prompts the user for values when the prompt is selected.
 
 ### Example: Security Review
 
@@ -212,7 +223,7 @@ description: "Review code for security issues"
 ---
 # Security Review
 
-Review the current file or selection for:
+Review the current file for:
 1. SQL injection vulnerabilities
 2. Hardcoded secrets or credentials
 3. Missing input validation
@@ -222,64 +233,237 @@ Review the current file or selection for:
 For each issue found, explain the risk and provide a fix.
 ```
 
-### How to Use Prompt Files
+---
 
-1. Save `.prompt.md` files in `.github/prompts/`
-2. Open Copilot Chat
-3. Click the prompt picker (or type `/`) to see available prompts
-4. Select a prompt — it pre-fills the chat with the template
-5. The `${input:name}` syntax prompts you for values
+## 5. Custom Agents
+
+Custom personas with specific tools, instructions, and behaviors. Create `*.agent.md` files in `.github/agents/`.
+
+### Frontmatter
+
+```yaml
+---
+description: "Use when running database migrations"  # Required: for discovery
+tools: [read, search, execute]                        # Tool aliases
+model: "Claude Sonnet 4"                              # Optional: override default
+user-invocable: true                                  # Show in agent picker
+---
+```
+
+### Tool Aliases
+
+| Alias | Purpose |
+|-------|---------|
+| `execute` | Run shell commands |
+| `read` | Read file contents |
+| `edit` | Edit files |
+| `search` | Search files or text |
+| `agent` | Invoke other agents as subagents |
+| `web` | Fetch URLs and web search |
+| `todo` | Manage task lists |
+
+### Example: Read-Only Researcher
+
+```markdown
+---
+description: "Research codebase questions without making changes"
+tools: [read, search]
+---
+You are a read-only research agent. Your job is to answer questions about the codebase.
+
+## Constraints
+- DO NOT edit any files
+- DO NOT run terminal commands
+- ONLY read and search
+
+## Output Format
+Provide a concise answer with file paths and line numbers as evidence.
+```
+
+### Example: Test Writer
+
+```markdown
+---
+description: "Generate tests for Python modules following project conventions"
+tools: [read, search, edit, execute]
+---
+You are a test specialist. Generate comprehensive pytest tests.
+
+## Approach
+1. Read the target module to understand its API
+2. Read existing tests in tests/ for conventions
+3. Write tests covering: happy path, edge cases, error cases
+4. Run pytest to verify all tests pass
+
+## Constraints
+- Follow patterns in conftest.py
+- Use factory_boy for test data
+- Never mock the function under test
+```
+
+### Subagent Pattern
+
+A parent agent can delegate to specialized subagents:
+
+```yaml
+---
+description: "Coordinate feature implementation"
+tools: [read, search, edit, execute, agent]
+agents: [researcher, test-writer]
+---
+```
+
+Set `user-invocable: false` on helper agents you only want accessible as subagents.
 
 ---
 
-## 6. Model Selection
+## 6. Skills
 
-Copilot supports multiple models. Switch per conversation using the model picker dropdown.
+On-demand workflow packages with bundled scripts, templates, and reference docs. The agent loads them when relevant based on the `description`.
 
-| Model | Best for | Speed | Cost tier |
-|-------|----------|-------|-----------|
-| **GPT-4o** | General coding, fast iteration | Fast | Standard |
-| **Claude Sonnet 4** | Complex reasoning, long contexts | Medium | Premium |
-| **o3** | Algorithmic problems, math, hard bugs | Slow | Premium |
-| **Gemini 2.0 Flash** | Quick questions, simple edits | Fastest | Standard |
+### Directory Structure
 
-### Model Routing Strategy
+```
+.github/skills/webapp-testing/
+├── SKILL.md              # Required — must match folder name
+├── scripts/
+│   └── run-tests.sh
+├── references/
+│   └── test-patterns.md
+└── assets/
+    └── config-template.json
+```
 
-| Task | Recommended model |
-|------|-------------------|
-| Fast edits, boilerplate, docstrings | GPT-4o or Gemini Flash |
-| Multi-file feature implementation | Claude Sonnet 4 |
-| Hard debugging, algorithm design | o3 |
-| Code review and explanation | GPT-4o |
-| Large refactor | Claude Sonnet 4 |
+### SKILL.md Format
 
-**Rule of thumb:** Start with GPT-4o. Escalate to Claude Sonnet 4 or o3 only when the output quality isn't sufficient.
+```yaml
+---
+name: webapp-testing
+description: "Test web applications using Playwright. Use for verifying frontend, debugging UI, capturing screenshots."
+argument-hint: "Describe what to test"
+---
+```
+
+### Body
+
+```markdown
+# Web Application Testing
+
+## When to Use
+- Verify frontend functionality after changes
+- Debug UI behavior with screenshots
+- Run end-to-end tests
+
+## Procedure
+1. Start the dev server: `npm run dev`
+2. Run [test script](./scripts/run-tests.sh)
+3. Review screenshots in `./screenshots/`
+4. Report failures with specific selectors
+```
+
+### How Skills Differ from Prompts
+
+| Feature | Prompt (`.prompt.md`) | Skill (`SKILL.md`) |
+|---------|----------------------|---------------------|
+| Bundled assets | No | Yes (scripts, templates, references) |
+| Auto-discovery | No (manual `/` picker) | Yes (agent reads `description`) |
+| Progressive loading | No (full content sent) | Yes (description → body → assets) |
+| Best for | Single focused task | Multi-step workflow with assets |
+
+Both appear when you type `/` in chat.
 
 ---
 
-## 7. Copilot Chat Participants and Slash Commands
+## 7. Hooks
 
-### Participants
+Deterministic lifecycle automation. Unlike instructions (which guide behavior), hooks **enforce** behavior via shell commands at specific events.
 
-| Participant | What it does |
-|-------------|-------------|
-| `@workspace` | Searches your entire codebase for context |
-| `@terminal` | References terminal output |
-| `@vscode` | Asks about VS Code settings and commands |
+### Location
 
-### Slash Commands
+```
+.github/hooks/*.json      # Workspace (team-shared)
+```
 
-| Command | Effect |
-|---------|--------|
-| `/explain` | Explain the selected code |
-| `/fix` | Fix problems in the selected code |
-| `/tests` | Generate tests for the selection |
-| `/doc` | Generate documentation |
-| `/new` | Scaffold a new file or project |
+### Hook Events
+
+| Event | When it fires |
+|-------|--------------|
+| `SessionStart` | First prompt of a new agent session |
+| `PreToolUse` | Before a tool is invoked |
+| `PostToolUse` | After a tool succeeds |
+| `UserPromptSubmit` | User submits a prompt |
+| `Stop` | Agent session ends |
+
+### Example: Auto-format After Edits
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "type": "command",
+        "command": "ruff format --quiet .",
+        "timeout": 10
+      }
+    ]
+  }
+}
+```
+
+### Example: Block Dangerous Commands
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "command": "./scripts/validate-tool.sh",
+        "timeout": 15
+      }
+    ]
+  }
+}
+```
+
+The script receives JSON on stdin describing the tool call. It can return:
+- `"permissionDecision": "allow"` — proceed
+- `"permissionDecision": "ask"` — ask user for confirmation
+- `"permissionDecision": "deny"` — block the action
+
+### When to Use Hooks vs Instructions
+
+| Need | Use |
+|------|-----|
+| Guide coding style | Instructions |
+| Auto-run formatter after every edit | Hook (`PostToolUse`) |
+| Prevent `rm -rf` or `DROP TABLE` | Hook (`PreToolUse`) |
+| Inject runtime context | Hook (`SessionStart`) |
 
 ---
 
-## 8. Best Practices
+## 8. Decision Flowchart
+
+```
+Is this a project-wide coding standard?
+├── Yes → copilot-instructions.md or AGENTS.md
+│         (monorepo with subfolder differences? → AGENTS.md)
+└── No
+    ├── Does it apply only to specific files?
+    │   └── Yes → .instructions.md with applyTo
+    ├── Is it a reusable one-shot task?
+    │   └── Yes → .prompt.md
+    ├── Is it a multi-step workflow with scripts/templates?
+    │   └── Yes → SKILL.md
+    ├── Is it a specialized persona with tool restrictions?
+    │   └── Yes → .agent.md
+    └── Must it be enforced deterministically (not just guided)?
+        └── Yes → Hook (.json)
+```
+
+---
+
+## 9. Best Practices
 
 ### Keep Instructions Short and Specific
 
@@ -305,29 +489,40 @@ The agent can only run tests if you tell it how:
 
 ### List What NOT to Do
 
-Negative instructions are effective at preventing common AI mistakes:
+Negative instructions prevent common AI mistakes:
 ```
 ## Do NOT
 - Do not use os.getenv() — use pydantic-settings
 - Do not hardcode secrets — use environment variables
 - Do not add print() for debugging — use logging
-- Do not modify alembic/env.py without discussing first
 ```
 
-### Commit Instructions to Version Control
+### Write Keyword-Rich Descriptions
 
-All instruction files should be committed to git. This ensures every team member and CI job gets the same Copilot behavior.
+The `description` field is how Copilot discovers skills, agents, and on-demand instructions. If trigger words aren't in the description, the agent won't find it.
+
+Bad: `"A helpful skill for testing"`
+
+Good: `"Test web applications using Playwright. Use for verifying frontend, debugging UI, capturing screenshots."`
+
+### Commit Everything to Version Control
+
+All customization files should be committed to git — instructions, prompts, agents, skills, and hooks. This ensures every team member gets the same Copilot behavior.
 
 ---
 
-## 9. Troubleshooting
+## 10. Troubleshooting
 
 | Problem | Fix |
 |---------|-----|
-| Copilot ignores instructions | Verify file is at `.github/copilot-instructions.md` (exact path), UTF-8 encoding |
+| Copilot ignores instructions | Verify file is at `.github/copilot-instructions.md` (exact path) |
+| Using both AGENTS.md and copilot-instructions.md | Pick one — having both causes conflicts |
 | Scoped instructions not applying | Check `applyTo` glob matches the file you're editing |
-| Prompt files not appearing | Ensure they're in `.github/prompts/` and have `.prompt.md` extension |
-| Instructions conflict | More specific scopes win; check for overlapping `.instructions.md` files |
+| Prompt files not appearing | Ensure they're in `.github/prompts/` with `.prompt.md` extension |
+| Agent not appearing in picker | Check `user-invocable` isn't `false` and `description` is present |
+| Skill not auto-loading | Verify `name` in frontmatter matches folder name exactly |
+| Hooks not firing | Check JSON syntax, `type: "command"`, and file is in `.github/hooks/` |
+| `applyTo: "**"` slowing things down | Too broad — loads on every interaction. Use specific globs |
 | Too much instruction text | Keep under ~2000 words total; Copilot has context limits |
 
 ---

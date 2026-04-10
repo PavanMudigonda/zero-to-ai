@@ -34,7 +34,7 @@ For a surface-level comparison of all AI coding tools, see [00-course-setup/ai_d
 ├── README.md                           # This file
 ├── 01_vscode_ai_setup.md               # Copilot modes, model selection, settings
 ├── 02_mcp_deep_dive.md                 # MCP protocol, server catalog, configuration
-├── 03_copilot_instructions_guide.md    # Instructions, scoped rules, prompt files
+├── 03_copilot_instructions_guide.md    # All 7 customization primitives
 ├── 04_copilot_workflows.md             # Real VS Code + Copilot workflows
 └── 05_build_mcp_server.ipynb           # Hands-on: build an MCP server in Python
 ```

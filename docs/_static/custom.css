@@ -4,6 +4,19 @@
   margin: 0;
 }
 
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--color-brand-primary), #00bcd4);
+  z-index: 10000;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
 /* Hero section */
 .hero {
   padding: 1rem 1rem 0.8rem;
