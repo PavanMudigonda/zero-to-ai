@@ -2,8 +2,6 @@
 
 > Fine-tuning decisions, multimodal AI, inference optimization, and AI safety.
 
-[← Back to Roadmap Index](../VISUAL_ROADMAP.md)
-
 ---
 
 ## 11. Fine-tuning Decision Tree
@@ -109,4 +107,4 @@ flowchart TD
 
 ---
 
-[← Previous: Core Systems](02_core_systems.md) | [← Back to Roadmap Index](../VISUAL_ROADMAP.md) | [Next: End-to-End Flows →](04_end_to_end_flows.md)
+[← Previous: Core Systems](02_core_systems.md) | [Next: End-to-End Flows →](04_end_to_end_flows.md)

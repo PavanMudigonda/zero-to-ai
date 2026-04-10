@@ -2,8 +2,6 @@
 
 > Foundational diagrams: the big picture, ML paradigms, deep learning architectures, and the NLP/LLM pipeline.
 
-[← Back to Roadmap Index](../VISUAL_ROADMAP.md)
-
 ---
 
 ## 1. The Big Picture
@@ -142,4 +140,4 @@ flowchart LR
 
 ---
 
-[← Back to Roadmap Index](../VISUAL_ROADMAP.md) | [Next: Core Systems →](02_core_systems.md)
+[Next: Core Systems →](02_core_systems.md)

@@ -2,8 +2,6 @@
 
 > LLM landscape, embeddings, vector search, RAG, agents, multi-agent systems, and MLOps.
 
-[← Back to Roadmap Index](../VISUAL_ROADMAP.md)
-
 ---
 
 ## 5. The LLM Model Landscape (2026)
@@ -219,4 +217,4 @@ flowchart TD
 
 ---
 
-[← Previous: Overview](01_overview.md) | [← Back to Roadmap Index](../VISUAL_ROADMAP.md) | [Next: Advanced Topics →](03_advanced_topics.md)
+[← Previous: Overview](01_overview.md) | [Next: Advanced Topics →](03_advanced_topics.md)

@@ -2,8 +2,6 @@
 
 > Complete pipelines from raw data to production: project flow, RAG pipeline, document ingestion, LLM training, agentic RAG, idea-to-production, and multimodal.
 
-[← Back to Roadmap Index](../VISUAL_ROADMAP.md)
-
 ---
 
 ## 15. End-to-End Project Flow
@@ -231,4 +229,4 @@ flowchart LR
 
 ---
 
-[← Previous: Advanced Topics](03_advanced_topics.md) | [← Back to Roadmap Index](../VISUAL_ROADMAP.md)
+[← Previous: Advanced Topics](03_advanced_topics.md)

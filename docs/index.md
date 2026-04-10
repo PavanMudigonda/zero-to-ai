@@ -151,9 +151,9 @@ sd_hide_title: true
 </div>
 
 <div class="track-card">
-<h3>🗺️ Visual Roadmap</h3>
+<h3>🗺️ Visual Roadmaps</h3>
 <p>Interactive diagrams showing the full curriculum and how topics connect.</p>
-<p><a href="generated/VISUAL_ROADMAP.html">View roadmap &rarr;</a></p>
+<p><a href="generated/roadmaps/01_overview.html">View roadmaps &rarr;</a></p>
 </div>
 
 </div>
@@ -164,7 +164,10 @@ sd_hide_title: true
 
 generated/CAREER_ROADMAP
 generated/INTERVIEW_PREP
-generated/VISUAL_ROADMAP
+generated/roadmaps/01_overview
+generated/roadmaps/02_core_systems
+generated/roadmaps/03_advanced_topics
+generated/roadmaps/04_end_to_end_flows
 ```
 
 ```{toctree}

@@ -91,7 +91,6 @@ exclude_patterns = [
     # Translation directories — non-English content with broken relative image paths
     "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
-    "VISUAL_ROADMAP.md",
 ]
 
 # -- Options for HTML output -------------------------------------------------

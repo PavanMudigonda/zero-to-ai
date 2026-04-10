@@ -163,8 +163,14 @@ phase_output_dirs = {
 }
 
 site_doc_outputs = {
-    "VISUAL_ROADMAP.md": "generated/VISUAL_ROADMAP.md",
 }
+
+roadmap_files = [
+    "roadmaps/01_overview.md",
+    "roadmaps/02_core_systems.md",
+    "roadmaps/03_advanced_topics.md",
+    "roadmaps/04_end_to_end_flows.md",
+]
 
 link_pattern = re.compile(r"\[([^\]]+)\]\(([^)]+)\)")
 
@@ -240,85 +246,12 @@ def rewrite_links(text: str, current_source_path: Path, current_output_rel: Path
 
     return link_pattern.sub(repl, text)
 
-def write_phase_catalog(phase_dir: Path):
-    readme_path = phase_dir / "README.md"
-    title = phase_dir.name.replace("-", " ").title()
-    if readme_path.exists():
-        heading_match = re.search(r"^#\s+(.+)$", readme_path.read_text(encoding="utf-8"), re.MULTILINE)
-        if heading_match:
-            title = heading_match.group(1).strip()
-
-    root_notebooks = sorted(p for p in phase_dir.glob("*.ipynb"))
-    top_sections = sorted(p for p in phase_dir.iterdir() if p.is_dir())
-    total_notebooks = len(list(phase_dir.rglob("*.ipynb")))
-    total_markdown = len(list(phase_dir.rglob("*.md")))
-
-    lines = [
-        f"# {title} Catalog",
-        "",
-        f"- Total notebooks: **{total_notebooks}**",
-        f"- Markdown guides: **{total_markdown}**",
-        "",
-        "Use this page to jump into the main sections of the phase.",
-        "",
-    ]
-
-    if root_notebooks:
-        lines.extend(["## Root Notebooks", ""])
-        for notebook in root_notebooks:
-            lines.append(f"- [{notebook.name}]({notebook.name})")
-        lines.append("")
-
-    if top_sections:
-        lines.extend(["## Sections", ""])
-        for section in top_sections:
-            section_notebooks = len(list(section.rglob("*.ipynb")))
-            section_markdown = len(list(section.rglob("*.md")))
-            preferred = None
-            for candidate in ("README.md", "START_HERE.ipynb", "00_START_HERE.ipynb"):
-                candidate_path = section / candidate
-                if candidate_path.exists():
-                    preferred = candidate_path
-                    break
-            if preferred is None:
-                first_notebook = sorted(section.rglob("*.ipynb"))
-                if first_notebook:
-                    preferred = first_notebook[0]
-                else:
-                    first_markdown = sorted(section.rglob("*.md"))
-                    if first_markdown:
-                        preferred = first_markdown[0]
-
-            summary = f"{section_notebooks} notebooks"
-            if section_markdown:
-                summary += f", {section_markdown} markdown files"
-
-            if preferred is not None:
-                rel = preferred.relative_to(phase_dir).as_posix()
-                lines.append(f"- [{section.name}]({rel}) — {summary}")
-            else:
-                lines.append(f"- `{section.name}` — {summary}")
-        lines.append("")
-
-    catalog_path = phase_dir / "CATALOG.md"
-    catalog_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
-
-    if readme_path.exists():
-        readme = readme_path.read_text(encoding="utf-8")
-        marker = "## Site Navigation"
-        block = "\n## Site Navigation\n\n- [Browse the phase catalog](CATALOG.md)\n"
-        if marker not in readme:
-            readme_path.write_text(readme.rstrip() + block + "\n", encoding="utf-8")
-
 for md_file in curriculum_dir.rglob("*.md"):
     current_output_rel = md_file.relative_to(docs_dir)
     current_source_path = original_path_for_curriculum_output(md_file)
     text = md_file.read_text(encoding="utf-8")
     rewritten = rewrite_links(text, current_source_path, current_output_rel)
     md_file.write_text(rewritten, encoding="utf-8")
-
-for phase_dir in sorted(p for p in curriculum_dir.iterdir() if p.is_dir()):
-    write_phase_catalog(phase_dir)
 
 
 # ---------------------------------------------------------------------------
@@ -335,13 +268,9 @@ def _collect_toctree_entries(directory: Path):
             seen.add(entry)
             entries.append(entry)
 
-    # Include the auto-generated CATALOG if it exists
-    if (directory / "CATALOG.md").exists():
-        _add("CATALOG")
-
-    # Root-level markdown files (skip README and CATALOG, they're structural)
+    # Root-level markdown files (skip README, it's structural)
     for md in sorted(directory.glob("*.md")):
-        if md.name in ("README.md", "CATALOG.md"):
+        if md.name == "README.md":
             continue
         _add(md.stem)
 
@@ -430,12 +359,24 @@ for source_name, output_rel in site_doc_outputs.items():
     rewritten = rewrite_links(text, actual_source_path, current_output_rel)
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(rewritten, encoding="utf-8")
+
+# Copy roadmap files into docs/generated/roadmaps/
+for rm_rel in roadmap_files:
+    rm_source = repo_root / rm_rel
+    rm_output = docs_dir / "generated" / rm_rel
+    rm_output_rel = Path("generated") / rm_rel
+    if rm_source.exists():
+        text = rm_source.read_text(encoding="utf-8")
+        rewritten = rewrite_links(text, rm_source, rm_output_rel)
+        rm_output.parent.mkdir(parents=True, exist_ok=True)
+        rm_output.write_text(rewritten, encoding="utf-8")
+    else:
+        print(f"WARNING: roadmap source not found: {rm_source}")
 PY
 
 phase_count=$(find "$CURRICULUM_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l | tr -d ' ')
 readme_count=$(find "$CURRICULUM_DIR" -type f -name 'README.md' | wc -l | tr -d ' ')
 nb_count=$(find "$CURRICULUM_DIR" -type f -name '*.ipynb' | wc -l | tr -d ' ')
-catalog_count=$(find "$CURRICULUM_DIR" -type f -name 'CATALOG.md' | wc -l | tr -d ' ')
 
 # ---------------------------------------------------------------------------
 # Normalize notebooks: add missing cell IDs (required by nbformat >= 5.5)
@@ -469,4 +410,4 @@ for path in glob.glob('$CURRICULUM_DIR/**/*.ipynb', recursive=True):
 print(f'Normalized {fixed} notebooks (added missing cell IDs, ensured nbformat_minor >= 5).')
 "
 
-echo "Published $phase_count phases, $readme_count README files, $catalog_count catalogs, and $nb_count notebooks."
+echo "Published $phase_count phases, $readme_count README files, and $nb_count notebooks."
