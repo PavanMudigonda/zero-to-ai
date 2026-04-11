@@ -29,13 +29,6 @@
 
 > **From Zero to AI Mastery** WORK IN PROGRESS. OPEN FOR FEEDBACK.
 
-**Latest updates (April 9, 2026):**
-- Model landscape snapshot: [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md)
-- AI dev tools snapshot: [31-ai-powered-dev-tools/00_ai_dev_tools_2026.md](31-ai-powered-dev-tools/00_ai_dev_tools_2026.md)
-- Agent ecosystem refresh: MCP, managed agent APIs, OpenAI Agents SDK, LangGraph, Google ADK
-- Inference optimization refresh: vLLM, TensorRT-LLM, SGLang, speculative decoding, KV cache tuning
-- Hardware validation refresh: Apple MLX, AI PCs / NPUs, TPU and accelerator validation context
-
 ---
 
 ## 🌱 Getting Started
@@ -45,34 +38,6 @@ This comprehensive AI/ML curriculum uses progressive numbered modules covering e
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
 - 🍴 [Fork this repo](https://github.com/PavanMudigonda/zero-to-ai/fork) to track your personal progress
-
-### 🎯 What You'll Learn
-
-| Category | Topics Covered |
-|----------|---------------|
-| **Foundations** | Python, Data Science, Mathematics for ML |
-| **Core AI** | Neural Networks, Embeddings, Transformers |
-| **Advanced ML** | RAG Systems, Vector Databases, MLOps |
-| **Cutting-Edge** | LLM Fine-tuning, Multimodal AI, AI Agents |
-| **Production** | Deployment, Monitoring, Optimization |
-| **2026 Systems** 🆕 | MCP, reasoning models, realtime multimodal, agent evaluation, inference serving |
-| **Developer Tools** 🆕 | VS Code AI setup, MCP servers, custom instructions, Copilot agent workflows |
-| **Research** 🆕 | Learning Theory, Advanced GANs/VAEs, 3D Vision, Neural ODEs |
-| **Hardware** 🆕 | AI Silicon Validation, Kernel Testing, Distributed Training, Datacenter |
-
-### 🎓 Who Is This For?
-
-- **Beginners**: Start from Python basics, no ML experience required
-- **Self-Learners**: Structured path with 900+ hands-on notebooks
-- **Career Switchers**: Complete curriculum from fundamentals to job-ready skills
-- **Professionals**: Deep dive into specific topics (RAG, Fine-tuning, MLOps)
-
-### ⏱️ Time Commitment
-
-- **Full Program**: 6-12 months (10-15 hours/week)
-- **Foundations Only**: 2-3 months
-- **Advanced Topics**: 3-4 months
-- **Flexible**: Learn at your own pace
 
 ---
 
@@ -137,29 +102,6 @@ jupyter notebook
 - **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) — packages auto-install on first run via `requirements-replit.txt`
 
 - **github.dev**: Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai) — browser-based editor only (no execution)
-
-### Your First Steps
-
-1. **📖 Course Setup**: Read [00-course-setup/README.md](00-course-setup/README.md) and get your environment working
-2. **🧭 Pick a Track**: Use [MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose AI Engineer, ML Engineer, or Data Scientist
-3. **✅ Plan Your Work**: Review [checklist.md](docs/checklist.md) so you know which phases to skip and which to complete
-4. **📚 Start with Foundations**: Begin with [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md), then move into the first phase for your track
-5. **📊 Track Progress**: Use `python scripts/progress_tracker.py` to monitor your journey
-
----
-
-## 📚 Important Guides
-
-| Guide | Description |
-|-------|-------------|
-| [MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) | Learning paths for AI Engineer, ML Engineer, Data Scientist tracks |
-| [checklist.md](docs/checklist.md) | Phase-by-phase completion checklist with checkboxes |
-| [REFERENCES.md](docs/REFERENCES.md) | Curated videos, papers, and courses organized by phase |
-| [COMPARISON_MATRICES.md](docs/COMPARISON_MATRICES.md) | Side-by-side comparisons of models, tools, and frameworks |
-| [CONTRIBUTING.md](docs/CONTRIBUTING.md) | How to contribute notebooks and fixes |
-| [SUPPORT.md](docs/SUPPORT.md) | Getting help, community links |
-| [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md) | Current AI model landscape (updated March 2026) |
-| [00-course-setup/troubleshooting.md](00-course-setup/troubleshooting.md) | Comprehensive troubleshooting guide |
 
 ---
 
