@@ -5,8 +5,8 @@
 Go beyond text! Learn to work with Vision-Language Models, Audio AI, and multimodal systems that combine text, images, audio, and video.
 
 **Prerequisites:**
-- ✅ Neural Networks & Transformers (Phase 5)
-- ✅ LLMs & Prompt Engineering (Phase 10)
+- ✅ Neural Networks & Transformers (Phase 6)
+- ✅ LLMs & Prompt Engineering (Phase 11)
 - ✅ Python & PyTorch
 
 **Time:** 3-4 weeks | 60-80 hours  
@@ -437,12 +437,12 @@ Before moving forward, you should be able to:
 
 ## 🎓 What's Next?
 
-**Phase 9: AI Agents** →
+**Phase 15: AI Agents** →
 - Agents with vision capabilities
 - Tool use with multimodal inputs
 - Autonomous systems
 
-**Phase 11: LLM Fine-tuning** →
+**Phase 12: LLM Fine-tuning** →
 - Fine-tune vision-language models
 - Custom image generation models
 - Specialized multimodal systems

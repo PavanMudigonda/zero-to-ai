@@ -1,6 +1,6 @@
 # Embeddings
 
-Embeddings are the bridge between raw text and everything that follows in this repo: semantic search, vector databases, RAG, clustering, retrieval evaluation, and recommendation-style systems.
+Dense vector representations are the bridge between raw text and everything that follows in this repo: semantic search, vector databases, RAG, clustering, retrieval evaluation, and recommendation-style systems.
 
 ## What To Learn Here
 

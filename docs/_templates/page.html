@@ -3,6 +3,16 @@
 {% block extrahead %}
 {{ super() }}
 {% include "analytics.html" %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".theme-toggle").forEach(function(btn) {
+    if (!btn.getAttribute("aria-label")) {
+      btn.setAttribute("aria-label", "Toggle light/dark/auto theme");
+      btn.setAttribute("title", "Toggle light/dark/auto theme");
+    }
+  });
+});
+</script>
 {% endblock %}
 
 {% block footer %}

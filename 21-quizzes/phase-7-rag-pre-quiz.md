@@ -23,7 +23,7 @@ D) Rapid AI Gateway
 
 RAG is a technique that combines information retrieval with language generation. It retrieves relevant documents/passages and uses them to augment the LLM's response, grounding answers in factual sources.
 
-**Reference:** Phase 7 - Introduction to RAG
+**Reference:** Phase 8 - Introduction to RAG
 
 </details>
 
@@ -48,7 +48,7 @@ D) Model size limitations
 - **Outdated knowledge:** LLMs trained on old data → RAG accesses current information
 - **Domain-specific needs:** LLMs lack specialized knowledge → RAG retrieves from custom knowledge bases
 
-**Reference:** Phase 7 - Why RAG?
+**Reference:** Phase 8 - Why RAG?
 
 </details>
 
@@ -85,7 +85,7 @@ D) Encode, Store, Decode
    - Send to LLM
    - Generate grounded response
 
-**Reference:** Phase 7 - RAG Architecture
+**Reference:** Phase 8 - RAG Architecture
 
 </details>
 
@@ -117,7 +117,7 @@ D) A machine learning model
 "car" → [-0.45, 0.67, -0.23, ..., -0.12]  # Different
 ```
 
-**Reference:** Phase 7 - Embeddings & Vector Search
+**Reference:** Phase 8 - Embeddings & Vector Search
 
 </details>
 
@@ -148,7 +148,7 @@ D) To format text for display
 - **Semantic:** Chunks by topic/section
 - **Overlap:** Chunks share 50-100 tokens
 
-**Reference:** Phase 7 - Document Processing
+**Reference:** Phase 8 - Document Processing
 
 </details>
 
@@ -187,7 +187,7 @@ similarity = (A · B) / (||A|| * ||B||)
 - **Dot product:** Faster but magnitude-sensitive
 - **Euclidean:** Can work but less common
 
-**Reference:** Phase 7 - Similarity Search
+**Reference:** Phase 8 - Similarity Search
 
 </details>
 
@@ -221,7 +221,7 @@ D) A graph database
 
 **Traditional databases can't:** Efficiently search "find most similar vectors" at scale
 
-**Reference:** Phase 9 - Vector Databases
+**Reference:** Phase 7 - Vector Databases
 
 </details>
 
@@ -259,7 +259,7 @@ D) The embedding dimension
 
 **RAG consideration:** Must fit retrieved chunks within context window!
 
-**Reference:** Phase 7 - LLM Context Limits
+**Reference:** Phase 8 - LLM Context Limits
 
 </details>
 
@@ -297,7 +297,7 @@ results = vector_db.search(query_embedding, top_k=5)
 - **Small k (3):** Fast, focused, but might miss context
 - **Large k (10):** More context, but slower and noisier
 
-**Reference:** Phase 7 - Retrieval Strategies
+**Reference:** Phase 8 - Retrieval Strategies
 
 </details>
 
@@ -330,7 +330,7 @@ D) Fine-tuning doesn't require data
 - **Fine-tuning:** Specialized behavior, consistent style
 - **Both:** Often combined for best results!
 
-**Reference:** Phase 7 - RAG vs Fine-Tuning
+**Reference:** Phase 8 - RAG vs Fine-Tuning
 
 </details>
 
@@ -339,9 +339,8 @@ D) Fine-tuning doesn't require data
 ## Scoring Guide
 
 **0-3 correct (0-30%):** RAG is an advanced topic. Make sure you've completed:
-- Phase 5 (Neural Networks)
-- Phase 10 (Prompt Engineering)
-- Phase 8 (LangChain basics)
+- Phase 6 (Neural Networks)
+- Phase 11 (Prompt Engineering & LangChain)
 
 **4-5 correct (40-50%):** You have some relevant background. Review vector embeddings and LLM basics before starting.
 
@@ -355,10 +354,10 @@ D) Fine-tuning doesn't require data
 
 ## Prerequisites Checklist
 
-Before starting Phase 7, ensure you understand:
+Before starting Phase 8, ensure you understand:
 
-- ✅ How LLMs work (Phase 10)
-- ✅ Vector embeddings (Phase 9)
+- ✅ How LLMs work (Phase 11)
+- ✅ Vector embeddings (Phase 5)
 - ✅ Python and APIs
 - ✅ Basic prompt engineering
 - ✅ JSON and data structures
@@ -370,16 +369,16 @@ Before starting Phase 7, ensure you understand:
 **After this pre-quiz:**
 
 1. **Score < 50%:** Review prerequisites first
-   - Phase 10: Prompt Engineering
-   - Phase 9: Vector Databases intro
+   - Phase 11: Prompt Engineering
+   - Phase 7: Vector Databases intro
    - LLM fundamentals
 
-2. **Score 50-70%:** Start Phase 7 but take it slow
+2. **Score 50-70%:** Start Phase 8 but take it slow
    - Revisit embedding concepts
    - Practice with simple examples
    - Ask questions in community
 
-3. **Score > 70%:** Dive into Phase 7!
+3. **Score > 70%:** Dive into Phase 8!
    - Build a RAG system
    - Complete the assignment
    - Try advanced challenges

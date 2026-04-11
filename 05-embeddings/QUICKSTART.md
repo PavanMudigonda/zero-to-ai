@@ -2,16 +2,16 @@
 
 ## 🎯 You're Here Because...
 
-You completed Phase 1 (Tokenization) and noticed Phase 2 was missing the connection to HuggingFace Transformers!
+You completed Phase 4 (Tokenization) and noticed Phase 5 was missing the connection to HuggingFace Transformers!
 
-**You were right!** Phase 2 now includes that missing bridge.
+**You were right!** Phase 5 now includes that missing bridge.
 
 ---
 
 ## 📦 What's Available
 
 ### New Files (Just Added) ⭐
-1. **huggingface_embeddings.py** - Extract embeddings from BERT/RoBERTa (bridges Phase 1!)
+1. **huggingface_embeddings.py** - Extract embeddings from BERT/RoBERTa (bridges Phase 4!)
 2. **openai_embeddings.py** - Cloud-based embeddings (production alternative)
 3. **embedding_comparison.md** - Choose the right approach (decision guide)
 4. **WHATS_NEW.md** - Detailed explanation of what was added
@@ -38,7 +38,7 @@ cd 4-embeddings
 python huggingface_embeddings.py
 ```
 
-This shows how to extract embeddings from BERT (which you learned in Phase 1)!
+This shows how to extract embeddings from BERT (which you learned in Phase 4)!
 
 ### 3. Read the Comparison Guide
 ```bash
@@ -62,7 +62,7 @@ python semantic_similarity.py       # 20-25 min
 
 ### Step 2: HuggingFace Bridge (45-60 min) ⭐
 ```bash
-# Connect Phase 1 to Phase 2
+# Connect Phase 4 to Phase 5
 python huggingface_embeddings.py    # 45-60 min
 ```
 **This is the key file you were missing!**
@@ -90,11 +90,11 @@ python vector_database_demo.py      # 30-35 min
 
 ## 🎓 Learning Objectives
 
-After completing Phase 2, you'll understand:
+After completing Phase 5, you'll understand:
 
-### ✅ Connection to Phase 1
-- Phase 1: BERT tokenizer → tokens
-- Phase 2: BERT model → embeddings
+### ✅ Connection to Phase 4
+- Phase 4: BERT tokenizer → tokens
+- Phase 5: BERT model → embeddings
 - How they work together
 
 ### ✅ Three Approaches
@@ -119,7 +119,7 @@ After completing Phase 2, you'll understand:
 
 | File | What It Teaches | When to Use |
 |------|----------------|-------------|
-| `huggingface_embeddings.py` ⭐ | BERT/RoBERTa embeddings | Learn the bridge from Phase 1 |
+| `huggingface_embeddings.py` ⭐ | BERT/RoBERTa embeddings | Learn the bridge from Phase 4 |
 | `openai_embeddings.py` ⭐ | Cloud embeddings | Explore production alternative |
 | `embedding_comparison.md` ⭐ | Decision guide | Choose your approach |
 | `embeddings_intro.py` | Basic embeddings | Start here if new |
@@ -134,20 +134,20 @@ After completing Phase 2, you'll understand:
 
 **Before:**
 ```
-Phase 1: Learn BERT tokenizer
+Phase 4: Learn BERT tokenizer
    ↓
    ❓ How do I get embeddings from BERT?
    ↓
-Phase 2: Only showed Sentence Transformers (different models)
+Phase 5: Only showed Sentence Transformers (different models)
 ```
 
 **Now:**
 ```
-Phase 1: Learn BERT tokenizer
+Phase 4: Learn BERT tokenizer
    ↓
    ✅ huggingface_embeddings.py
    ↓
-Phase 2: Extract BERT embeddings + compare approaches
+Phase 5: Extract BERT embeddings + compare approaches
 ```
 
 ---
@@ -205,14 +205,14 @@ pip install transformers
 ├── semantic_similarity.py       (Sentence Transformers)
 └── vector_database_demo.py      (ChromaDB)
 ```
-❌ No connection to Phase 1 BERT tokenizers
+❌ No connection to Phase 4 BERT tokenizers
 
 ### After (Complete) ✅
 ```
 4-embeddings/
 ├── embeddings_intro.py              (Sentence Transformers)
 ├── semantic_similarity.py           (Sentence Transformers)
-├── huggingface_embeddings.py    ⭐  (Bridges Phase 1!)
+├── huggingface_embeddings.py    ⭐  (Bridges Phase 4!)
 ├── openai_embeddings.py         ⭐  (Production alternative)
 ├── embedding_comparison.md      ⭐  (Decision guide)
 ├── vector_database_demo.py          (ChromaDB)
@@ -231,14 +231,14 @@ Start with:
 python huggingface_embeddings.py
 ```
 
-This will show you exactly how to bridge Phase 1 (BERT tokenizer) to Phase 2 (BERT embeddings)!
+This will show you exactly how to bridge Phase 4 (BERT tokenizer) to Phase 5 (BERT embeddings)!
 
 ---
 
 ## 📝 Questions?
 
 ### "Which file should I run first?"
-Start with `huggingface_embeddings.py` - it directly connects to Phase 1!
+Start with `huggingface_embeddings.py` - it directly connects to Phase 4!
 
 ### "Do I need an OpenAI API key?"
 No, it's optional. You can learn everything with free local models. OpenAI is just an alternative approach.
@@ -257,7 +257,7 @@ pip install transformers torch sentence-transformers openai numpy scipy chromadb
 
 ## ✅ Success Checklist
 
-After Phase 2, you should be able to:
+After Phase 5, you should be able to:
 
 - [ ] Explain how BERT tokenizer connects to BERT embeddings
 - [ ] Extract embeddings from BERT/RoBERTa models
@@ -271,9 +271,9 @@ After Phase 2, you should be able to:
 
 ## 🚀 Next Phase
 
-Once you complete Phase 2:
+Once you complete Phase 5:
 
-**Phase 3: Vector Databases** (already available in `6-vector-databases`)
+**Phase 7: Vector Databases** (already available in `6-vector-databases`)
 - 10 database options (Pinecone, MongoDB, Chroma, Qdrant, etc.)
 - Cloud providers (AWS, Google, Azure)
 - Production patterns

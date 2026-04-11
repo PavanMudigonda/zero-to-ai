@@ -23,7 +23,7 @@ D) Decision trees
 
 Neural networks are loosely inspired by biological neurons in the brain. They consist of interconnected nodes (neurons) that process information, similar to how biological neurons fire signals.
 
-**Reference:** Phase 5 - Introduction to Neural Networks
+**Reference:** Phase 6 - Introduction to Neural Networks
 
 </details>
 
@@ -45,7 +45,7 @@ D) Layer
 
 While "node" is also commonly used, the formal term is "neuron" or "artificial neuron," reflecting the biological inspiration.
 
-**Reference:** Phase 5 - Neural Network Basics
+**Reference:** Phase 6 - Neural Network Basics
 
 </details>
 
@@ -67,7 +67,7 @@ D) The learning rate
 
 Weights are parameters that determine how much influence one neuron has on another. During training, these weights are adjusted to improve the network's performance.
 
-**Reference:** Phase 5 - Weights and Biases
+**Reference:** Phase 6 - Weights and Biases
 
 </details>
 
@@ -113,7 +113,7 @@ D) Data, Compute, Result
 - **Hidden layer(s):** Process the data (can be multiple)
 - **Output layer:** Produces the final prediction
 
-**Reference:** Phase 5 - Network Architecture
+**Reference:** Phase 6 - Network Architecture
 
 </details>
 
@@ -135,7 +135,7 @@ D) Preventing overfitting
 
 Backpropagation is an algorithm that calculates the gradient of the loss function with respect to each weight using the chain rule of calculus. These gradients are then used to update the weights via gradient descent.
 
-**Reference:** Phase 5 - Backpropagation
+**Reference:** Phase 6 - Backpropagation
 
 </details>
 
@@ -159,7 +159,7 @@ The learning rate (α) determines how much the weights are adjusted during each 
 
 Formula: `new_weight = old_weight - learning_rate * gradient`
 
-**Reference:** Phase 5 - Training Hyperparameters
+**Reference:** Phase 6 - Training Hyperparameters
 
 </details>
 
@@ -196,7 +196,7 @@ output = (0.5 × 1) + (-0.3 × 2) + (0.8 × 3) + 0.1
 
 This is a simple neuron computation: weighted sum of inputs plus bias.
 
-**Reference:** Phase 5 - Forward Pass
+**Reference:** Phase 6 - Forward Pass
 
 </details>
 
@@ -221,7 +221,7 @@ D) Learning rate
 
 Deep networks can learn more complex, hierarchical representations of data.
 
-**Reference:** Phase 5 - Deep Learning Basics
+**Reference:** Phase 6 - Deep Learning Basics
 
 </details>
 
@@ -245,7 +245,7 @@ In deep networks with certain activation functions (e.g., sigmoid, tanh), gradie
 
 **Solution:** Use ReLU activation or batch normalization
 
-**Reference:** Phase 5 - Training Challenges
+**Reference:** Phase 6 - Training Challenges
 
 </details>
 
@@ -274,9 +274,9 @@ After taking this pre-quiz:
    - Basic calculus (derivatives)
    - Python programming
 
-2. **Score ≥ 70%:** Proceed with Phase 5 content
+2. **Score ≥ 70%:** Proceed with Phase 6 content
 
-3. **Retake after Phase 5:** Take the post-quiz to measure your progress
+3. **Retake after Phase 6:** Take the post-quiz to measure your progress
 
 ---
 

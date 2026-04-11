@@ -702,23 +702,23 @@ for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
 
 ## 🔗 Integration with Your Learning Path
 
-### Phase 1: Tokenization (Completed ✅)
+### Phase 4: Tokenization (Completed ✅)
 - Convert text → tokens
 - Handle special characters
 - Different algorithms (BPE, WordPiece, SentencePiece)
 
-### Phase 2: Embeddings (Next)
+### Phase 5: Embeddings (Next)
 - Convert tokens → dense vectors
 - Word2Vec, GloVe, Transformer embeddings
 - OpenAI, HuggingFace embedding models
 
-### Phase 3: Vector Databases (This Module 📍)
+### Phase 7: Vector Databases (This Module 📍)
 - Store embeddings efficiently
 - Semantic similarity search
 - RAG systems
 - Production deployment
 
-### Phase 4: LLM Applications
+### Phase 8: LLM Applications
 - ChatGPT integration
 - Retrieval-Augmented Generation
 - Context management
@@ -900,8 +900,8 @@ pip install transformers torch
 
 Before starting this module, ensure you understand:
 
-- [ ] Tokenization (Phase 1)
-- [ ] What embeddings are (Phase 2)
+- [ ] Tokenization (Phase 4)
+- [ ] What embeddings are (Phase 5)
 - [ ] Vector similarity (cosine, dot product)
 - [ ] Basic Python and APIs
 - [ ] SQL basics (for pgvector)

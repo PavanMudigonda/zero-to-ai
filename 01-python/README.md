@@ -21,6 +21,6 @@ Complete Python programming course covering:
 ## 🚀 Next Steps
 
 Once you're comfortable with Python basics:
-1. Proceed to **[Phase 1: Data Science](../02-data-science/)** for NumPy, pandas, and scikit-learn
-2. Follow the **[Learning Checklist](../docs/checklist.md)** from Phase 1 onwards
+1. Proceed to **[Phase 2: Data Science](../02-data-science/)** for NumPy, pandas, and scikit-learn
+2. Follow the **[Learning Checklist](../docs/checklist.md)** from Phase 2 onwards
 3. Check **[Setup Guide](../docs/setup.md)** for environment setup

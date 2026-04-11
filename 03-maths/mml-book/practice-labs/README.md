@@ -1,4 +1,4 @@
-# Practice Labs: Mathematics for Machine Learning (Deisenroth/Faisal/Ong)
+# Practice Labs: Math for ML (MML Book)
 
 **Source PDF:** [Mathematics for Machine Learning](https://mml-book.github.io/book/mml-book.pdf)
 **Book:** *Mathematics for Machine Learning* by Marc Peter Deisenroth, A. Aldo Faisal, Cheng Soon Ong (Cambridge University Press, 2020)

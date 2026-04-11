@@ -6,8 +6,8 @@ Build autonomous AI systems that can reason, use tools, and collaborate to solve
 
 **Time:** 3-4 weeks | 60-80 hours  
 **Prerequisites:**
-- ✅ LLMs & Prompt Engineering (Phase 10)
-- ✅ RAG systems (Phase 7)
+- ✅ LLMs & Prompt Engineering (Phase 11)
+- ✅ RAG systems (Phase 8)
 - ✅ Python programming
 
 **Outcome:** Deploy production-ready AI agent systems with tool use and multi-agent collaboration

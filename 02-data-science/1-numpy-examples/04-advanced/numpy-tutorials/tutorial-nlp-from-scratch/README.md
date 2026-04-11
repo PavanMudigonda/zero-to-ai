@@ -1,4 +1,4 @@
-# Data used for building the [NLP from scratch tutorial](https://github.com/Dbhasin1/numpy-tutorials/blob/ethics-tutorial/content/tutorial-nlp-from-scratch.md)
+# NLP from Scratch Tutorial Data
 
 ## [IMDb Reviews Dataset](https://github.com/Dbhasin1/numpy-tutorials/blob/ethics-tutorial/content/tutorial-nlp-from-scratch/IMDB%20Dataset.csv)
 

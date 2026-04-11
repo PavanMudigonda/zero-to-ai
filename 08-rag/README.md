@@ -5,10 +5,10 @@
 Combine your skills from previous phases to build production-grade RAG systems!
 
 **Prerequisites:**
-- ✅ Tokenization (Phase 3)
-- ✅ Embeddings (Phase 4)
-- ✅ Neural Networks (Phase 5)
-- ✅ Vector Databases (Phase 6)
+- ✅ Tokenization (Phase 4)
+- ✅ Embeddings (Phase 5)
+- ✅ Neural Networks (Phase 6)
+- ✅ Vector Databases (Phase 7)
 
 **Time:** 3-4 weeks | 60-80 hours  
 **Outcome:** Build AI applications that can query your knowledge base
@@ -128,7 +128,7 @@ response = llm.generate(prompt)
 - [ ] Build end-to-end RAG application
 - [ ] Add proper error handling
 - [ ] Implement caching and optimization
-- [ ] Deploy as API (preview of Phase 8)
+- [ ] Deploy as API (preview of Phase 9)
 - [ ] **Capstone:** Personal knowledge assistant
 
 ### Optional Week 5: Modern RAG Deep Dives
@@ -190,7 +190,7 @@ Use [08_rag_evaluation_playbook.md](08_rag_evaluation_playbook.md) if you want a
 - Local models (Qwen 3, Llama 4, DeepSeek R1 via Ollama)
 
 **Vector Databases:**
-- Use what you learned in Phase 6!
+- Use what you learned in Phase 7!
 - Chroma, Qdrant, Weaviate, Milvus
 
 **Embeddings:**

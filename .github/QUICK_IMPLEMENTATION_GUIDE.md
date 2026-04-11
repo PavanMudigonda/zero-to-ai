@@ -143,11 +143,11 @@ Validate your learning:
 ```
 
 ### Example Topics by Phase
-- **Phase 4 (Embeddings):** Spotify recommendations, Google search
-- **Phase 5 (Neural Networks):** Tesla Autopilot, DeepMind AlphaGo
-- **Phase 7 (RAG):** Perplexity.ai, ChatGPT with web search
-- **Phase 10 (Prompts):** GitHub Copilot, Jasper.ai
-- **Phase 12 (Multimodal):** DALL-E, GPT-4 Vision
+- **Phase 5 (Embeddings):** Spotify recommendations, Google search
+- **Phase 6 (Neural Networks):** Tesla Autopilot, DeepMind AlphaGo
+- **Phase 8 (RAG):** Perplexity.ai, ChatGPT with web search
+- **Phase 11 (Prompts):** GitHub Copilot, Jasper.ai
+- **Phase 13 (Multimodal):** DALL-E, GPT-4 Vision
 
 ---
 

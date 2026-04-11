@@ -159,13 +159,13 @@ peft>=0.7.0
 ## 🔗 Connections to Other Phases
 
 **Builds upon concepts from**:
-- Phase 3 (Tokenization): [How it relates]
-- Phase 5 (Neural Networks): [How it relates]
+- Phase 4 (Tokenization): [How it relates]
+- Phase 6 (Neural Networks): [How it relates]
 - [Other phases]
 
 **Prepares learners for**:
-- Phase 8 (MLOps): [e.g., deployment strategies]
-- Phase 13 (Local LLMs): [e.g., running locally]
+- Phase 9 (MLOps): [e.g., deployment strategies]
+- Phase 14 (Local LLMs): [e.g., running locally]
 
 ## 📊 Example Code Snippet
 

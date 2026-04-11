@@ -170,7 +170,7 @@ After completing this series, you will be able to:
 
 - **Previous Total:** 777 notebooks
 - **New Total:** 784 notebooks (+7)
-- **Phase 9 (Specializations):** 7 AI Agents notebooks
+- **Phase 10 (Specializations):** 7 AI Agents notebooks
 
 ---
 

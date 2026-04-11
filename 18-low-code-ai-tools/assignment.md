@@ -1,6 +1,6 @@
-# Assignment: Build and Deploy a Complete Low-Code ML Application
+# Assignment: Low-Code ML Application
 
-**Phase 17: Low-Code AI Tools**  
+**Phase 18: Low-Code AI Tools**  
 **Total Points:** 100  
 **Due:** As specified by your instructor
 

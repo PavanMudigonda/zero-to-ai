@@ -1,4 +1,4 @@
-# Practice Labs: Speech & Language Processing (Jurafsky/Martin)
+# Practice Labs: SLP (Jurafsky/Martin)
 
 **Source PDF:** [ed3book_jan26.pdf](ed3book_jan26.pdf)
 **Book:** *Speech and Language Processing* (3rd Edition draft) by Daniel Jurafsky & James H. Martin

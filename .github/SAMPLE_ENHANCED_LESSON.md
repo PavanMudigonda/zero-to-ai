@@ -462,4 +462,4 @@ Preview what you'll learn:
 - **Updated:** December 15, 2024
 - **Difficulty:** ⭐⭐ Intermediate
 - **Completion Time:** ~45 minutes
-- **Prerequisites:** Phase 0 (Python), Phase 1 (Data Science basics)
+- **Prerequisites:** Phase 1 (Python), Phase 2 (Data Science basics)

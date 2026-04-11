@@ -119,7 +119,7 @@ Let's build intuition with a simple example.
 
 ### Step 1: Embed Words
 
-Convert words to vectors (from Phase 2: Embeddings):
+Convert words to vectors (from Phase 5: Embeddings):
 
 ```python
 # Simplified 4-dimensional embeddings

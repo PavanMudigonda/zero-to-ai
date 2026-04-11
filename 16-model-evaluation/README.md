@@ -170,9 +170,9 @@ Build an evaluation framework that:
 ## 📖 Prerequisites
 
 **Required:**
-- Phase 1-4: Python fundamentals and data manipulation
-- Phase 5: Machine learning basics
-- Phase 7: Model training experience
+- Phase 1-2: Python fundamentals and data manipulation
+- Phase 2-5: Machine learning basics
+- Phase 6: Neural network training experience
 
 **Recommended:**
 - Statistics knowledge (hypothesis testing, p-values)
@@ -244,8 +244,8 @@ Track your progress and identify areas for deeper study!
 ## 🚀 Next Steps
 
 After mastering model evaluation:
-- **Phase 16:** Debugging & Troubleshooting
-- **Phase 17:** Production Deployment
+- **Phase 17:** Debugging & Troubleshooting
+- **Phase 18:** Low-Code AI Tools
 - **Phase 18:** MLOps & Monitoring
 
 ---

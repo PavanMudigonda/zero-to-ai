@@ -196,11 +196,11 @@ You'll build one of these agents:
 
 Before starting this phase, ensure you understand:
 
-- ✅ **LLM Basics** (Phase 10: Prompt Engineering)
+- ✅ **LLM Basics** (Phase 11: Prompt Engineering)
 - ✅ **API Usage** (Python, REST APIs)
 - ✅ **JSON** (Tool schemas are JSON)
 - ✅ **Async Programming** (For concurrent tool calls)
-- ✅ **RAG Systems** (Phase 7) - helpful but not required
+- ✅ **RAG Systems** (Phase 8) - helpful but not required
 
 ---
 
@@ -296,9 +296,9 @@ By the end of this phase, you should be able to:
 
 After completing this phase:
 
-1. **Phase 15:** Low-Code AI Tools (Gradio, Streamlit)
-2. **Phase 16:** Debugging AI Systems
-3. **Phase 17:** Model Evaluation & Metrics
+1. **Phase 16:** Model Evaluation & Metrics
+2. **Phase 17:** Debugging AI Systems
+3. **Phase 18:** Low-Code AI Tools (Gradio, Streamlit)
 
 Or explore advanced topics:
 - Multi-agent collaboration

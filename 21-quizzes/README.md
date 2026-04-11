@@ -168,7 +168,7 @@ Track these metrics:
 ## Example Results
 
 ```
-Phase 5: Neural Networks
+Phase 6: Neural Networks
 ├── Pre-Quiz Average: 42% (challenging content)
 ├── Post-Quiz Average: 81% (strong learning)
 ├── Improvement: +39 points (excellent progress)
