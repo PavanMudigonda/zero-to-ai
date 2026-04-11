@@ -1,4 +1,4 @@
-# Phase 28: Practical Data Science
+# Practical Data Science
 
 This folder is the transition from studying concepts to performing applied work under interview-style and project-style constraints. It is broad by design, so the main job of this README is to keep the breadth from turning into noise.
 

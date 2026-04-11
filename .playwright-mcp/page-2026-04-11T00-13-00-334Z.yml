@@ -1,0 +1,925 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Overview" [ref=e18] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - link "Core Systems" [ref=e20] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - link "Advanced Topics" [ref=e22] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - link "End-to-End Flows" [ref=e24] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - 'link "Phase 0: Course Setup" [ref=e28] [cursor=pointer]':
+                - /url: "#"
+              - img [ref=e31] [cursor=pointer]
+              - list [ref=e33]:
+                - listitem [ref=e34]:
+                  - 'link "AI Model Landscape: March 6, 2026" [ref=e35] [cursor=pointer]':
+                    - /url: 2026_model_landscape.html
+                - listitem [ref=e36]:
+                  - link "Troubleshooting Guide" [ref=e37] [cursor=pointer]:
+                    - /url: troubleshooting.html
+            - listitem [ref=e38]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e39] [cursor=pointer]':
+                - /url: ../01-python/README.html
+            - listitem [ref=e40]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e41] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e44] [cursor=pointer]
+            - listitem [ref=e46]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e47] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e50] [cursor=pointer]
+          - heading "Core AI" [ref=e52]
+          - list [ref=e53]:
+            - listitem [ref=e54]:
+              - 'link "Phase 4: Tokenization" [ref=e55] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e58] [cursor=pointer]
+            - listitem [ref=e60]:
+              - 'link "Phase 5: Embeddings" [ref=e61] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e64] [cursor=pointer]
+            - listitem [ref=e66]:
+              - 'link "Phase 6: Neural Networks" [ref=e67] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e70] [cursor=pointer]
+          - heading "Applied AI" [ref=e72]
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - 'link "Phase 7: Vector Databases" [ref=e75] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e78] [cursor=pointer]
+            - listitem [ref=e80]:
+              - 'link "Phase 8: RAG" [ref=e81] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e84] [cursor=pointer]
+            - listitem [ref=e86]:
+              - 'link "Phase 9: MLOps" [ref=e87] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e90] [cursor=pointer]
+            - listitem [ref=e92]:
+              - 'link "Phase 10: Specializations" [ref=e93] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e96] [cursor=pointer]
+          - heading "Advanced" [ref=e98]
+          - list [ref=e99]:
+            - listitem [ref=e100]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e101] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e104] [cursor=pointer]
+            - listitem [ref=e106]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e107] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e110] [cursor=pointer]
+            - listitem [ref=e112]:
+              - 'link "Phase 13: Multimodal AI" [ref=e113] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e116] [cursor=pointer]
+            - listitem [ref=e118]:
+              - 'link "Phase 14: Local LLMs" [ref=e119] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e122] [cursor=pointer]
+            - listitem [ref=e124]:
+              - 'link "Phase 15: AI Agents" [ref=e125] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e128] [cursor=pointer]
+          - heading "Supplementary" [ref=e130]
+          - list [ref=e131]:
+            - listitem [ref=e132]:
+              - 'link "Phase 16: Model Evaluation" [ref=e133] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e136] [cursor=pointer]
+            - listitem [ref=e138]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e139] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e142] [cursor=pointer]
+            - listitem [ref=e144]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e145] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e148] [cursor=pointer]
+            - listitem [ref=e150]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e151] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e154] [cursor=pointer]
+            - listitem [ref=e156]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e157] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e160] [cursor=pointer]
+          - heading "Reference" [ref=e162]
+          - list [ref=e163]:
+            - listitem [ref=e164]:
+              - 'link "Phase 21: Quizzes" [ref=e165] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e168] [cursor=pointer]
+            - listitem [ref=e170]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e171] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e174] [cursor=pointer]
+            - listitem [ref=e176]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e177] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e180] [cursor=pointer]
+          - heading "Research" [ref=e182]
+          - list [ref=e183]:
+            - listitem [ref=e184]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e185] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e188] [cursor=pointer]
+            - listitem [ref=e190]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e191] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e194] [cursor=pointer]
+            - listitem [ref=e196]:
+              - 'link "Phase 26: Time Series" [ref=e197] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e200] [cursor=pointer]
+            - listitem [ref=e202]:
+              - 'link "Phase 27: Causal Inference" [ref=e203] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e206] [cursor=pointer]
+          - heading "Production" [ref=e208]
+          - list [ref=e209]:
+            - listitem [ref=e210]:
+              - 'link "Phase 28: Practical Data Science" [ref=e211] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e214] [cursor=pointer]
+            - listitem [ref=e216]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e217] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e220] [cursor=pointer]
+            - listitem [ref=e222]:
+              - 'link "Phase 30: Inference Optimization" [ref=e223] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e226] [cursor=pointer]
+          - heading "Developer Tools" [ref=e228]
+          - list [ref=e229]:
+            - listitem [ref=e230]:
+              - 'link "Phase 31: AI Dev Tools" [ref=e231] [cursor=pointer]':
+                - /url: ../31-ai-dev-tools/README.html
+              - img [ref=e234] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e236]:
+        - button "Collapse left sidebar" [ref=e237] [cursor=pointer]: ‹
+    - generic [ref=e238]:
+      - generic [ref=e239]:
+        - generic [ref=e240]:
+          - generic [ref=e241]:
+            - link "View this page" [ref=e243] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/00-course-setup/README.md?plain=true
+              - img [ref=e244]
+              - generic [ref=e246]: View this page
+            - link "Edit this page" [ref=e248] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/00-course-setup/README.md
+              - img [ref=e249]
+              - generic [ref=e251]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e253] [cursor=pointer]:
+              - img [ref=e254]
+            - img [ref=e258] [cursor=pointer]
+          - main [ref=e260]:
+            - generic [ref=e261]:
+              - 'heading "Phase 0: Course Setup" [level=1] [ref=e262]'
+              - blockquote [ref=e263]:
+                - paragraph [ref=e265]:
+                  - strong [ref=e266]:
+                    - text: Browse the full curriculum online at
+                    - link "zero-to-ai.dev" [ref=e267] [cursor=pointer]:
+                      - /url: https://zero-to-ai.dev
+              - generic [ref=e268]:
+                - heading "⏱️ Quick Setup (5 minutes)" [level=2] [ref=e269]
+                - paragraph [ref=e270]:
+                  - strong [ref=e271]: Ready to start coding immediately?
+                  - text: "Here’s the fastest way:"
+                - list [ref=e272]:
+                  - listitem [ref=e273]:
+                    - paragraph [ref=e274]:
+                      - strong [ref=e275]: Fork & Clone
+                      - text: ": Click “Fork” →"
+                      - code [ref=e276]: git clone https://github.com/YOUR-USERNAME/zero-to-ai.git
+                  - listitem [ref=e277]:
+                    - paragraph [ref=e278]:
+                      - strong [ref=e279]: Install
+                      - text: ": Run"
+                      - code [ref=e280]: ./install_dependencies.sh
+                      - text: (uses UV - fastest!)
+                  - listitem [ref=e281]:
+                    - paragraph [ref=e282]:
+                      - strong [ref=e283]: Start
+                      - text: ":"
+                      - code [ref=e284]: jupyter notebook
+                      - text: → Open any
+                      - code [ref=e285]: .ipynb
+                      - text: file
+                  - listitem [ref=e286]:
+                    - paragraph [ref=e287]:
+                      - strong [ref=e288]: Begin Learning
+                      - text: ": Read"
+                      - link "23-glossary/GLOSSARY.md" [ref=e289] [cursor=pointer]:
+                        - /url: ../23-glossary/GLOSSARY.html
+                      - text: ", then choose the first phase for your track"
+                - paragraph [ref=e290]:
+                  - strong [ref=e291]: Not ready?
+                  - text: See detailed setup below.
+              - generic [ref=e292]:
+                - heading "🎯 Introduction" [level=2] [ref=e293]
+                - paragraph [ref=e294]: Welcome to Zero to AI! This comprehensive learning path will take you from Python basics to production-ready AI systems. This setup guide will ensure you have everything you need to begin your AI journey.
+              - generic [ref=e295]:
+                - heading "🤝 Join Our Learning Community" [level=2] [ref=e296]
+                - paragraph [ref=e297]: "Before you begin, connect with other learners and get support:"
+                - list [ref=e298]:
+                  - listitem [ref=e299]:
+                    - paragraph [ref=e300]:
+                      - strong [ref=e301]: 💬 Discussions
+                      - text: ":"
+                      - link "GitHub Discussions" [ref=e302] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/discussions
+                  - listitem [ref=e303]:
+                    - paragraph [ref=e304]:
+                      - strong [ref=e305]: 🐛 Issues
+                      - text: ": Found a bug or have a suggestion?"
+                      - link "Create an issue" [ref=e306] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/issues
+              - generic [ref=e307]:
+                - heading "🍴 Fork or Clone This Repository" [level=2] [ref=e308]
+                - generic [ref=e309]:
+                  - 'heading "Step 1: Fork the Repository (Recommended)" [level=3] [ref=e310]'
+                  - paragraph [ref=e311]: "Forking creates your own copy where you can track progress and make changes:"
+                  - list [ref=e312]:
+                    - listitem [ref=e313]:
+                      - paragraph [ref=e314]:
+                        - text: Click the
+                        - strong [ref=e315]: “Fork”
+                        - text: button at the top-right of
+                        - link "this page" [ref=e316] [cursor=pointer]:
+                          - /url: https://github.com/PavanMudigonda/zero-to-ai
+                    - listitem [ref=e317]:
+                      - paragraph [ref=e318]:
+                        - text: This creates
+                        - code [ref=e319]: https://github.com/YOUR-USERNAME/zero-to-ai
+                - generic [ref=e320]:
+                  - 'heading "Step 2: Clone Your Fork" [level=3] [ref=e321]'
+                  - generic [ref=e323]:
+                    - generic [ref=e324]: "# Clone your forked repository git clone https://github.com/YOUR-USERNAME/zero-to-ai.git cd zero-to-ai # Add upstream remote (to sync with original repo) git remote add upstream https://github.com/PavanMudigonda/zero-to-ai.git"
+                    - button "Copy to clipboard" [ref=e325] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e326]
+                - generic [ref=e330]:
+                  - heading "Quick Clone Options" [level=3] [ref=e331]
+                  - generic [ref=e332]:
+                    - heading "Full Clone (for complete learning)" [level=4] [ref=e333]
+                    - generic [ref=e335]:
+                      - generic [ref=e336]: git clone https://github.com/YOUR-USERNAME/zero-to-ai.git
+                      - button "Copy to clipboard" [ref=e337] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e338]
+                  - generic [ref=e342]:
+                    - heading "Shallow Clone (faster, recent commits only)" [level=4] [ref=e343]
+                    - generic [ref=e345]:
+                      - generic [ref=e346]: git clone --depth 1 https://github.com/YOUR-USERNAME/zero-to-ai.git
+                      - button "Copy to clipboard" [ref=e347] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e348]
+                  - generic [ref=e352]:
+                    - heading "Sparse Clone (specific sections only)" [level=4] [ref=e353]
+                    - generic [ref=e355]:
+                      - generic [ref=e356]: "# Clone with minimal data git clone --depth 1 --filter=blob:none --sparse https://github.com/YOUR-USERNAME/zero-to-ai.git cd zero-to-ai # Choose specific sections git sparse-checkout set 02-data-science 06-neural-networks 11-prompt-engineering"
+                      - button "Copy to clipboard" [ref=e357] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e358]
+              - generic [ref=e362]:
+                - heading "🚀 Environment Setup" [level=2] [ref=e363]
+                - generic [ref=e364]:
+                  - 'heading "Option 1: Quick Setup with UV (Recommended - Fastest!)" [level=3] [ref=e365]'
+                  - generic [ref=e367]:
+                    - generic [ref=e368]: "# Install UV package manager (if not installed) curl -LsSf https://astral.sh/uv/install.sh | sh # Install all dependencies ./install_dependencies.sh # Activate environment source .venv/bin/activate # On Windows: .venv\\Scripts\\activate"
+                    - button "Copy to clipboard" [ref=e369] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e370]
+                - generic [ref=e374]:
+                  - 'heading "Option 2: Conda Environment (Recommended for ML/Data Science)" [level=3] [ref=e375]'
+                  - generic [ref=e377]:
+                    - generic [ref=e378]: "# Create environment from environment.yml conda env create -f environment.yml # Activate environment conda activate aiml-learning"
+                    - button "Copy to clipboard" [ref=e379] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e380]
+                - generic [ref=e384]:
+                  - 'heading "Option 3: Traditional Python venv + pip" [level=3] [ref=e385]'
+                  - generic [ref=e387]:
+                    - generic [ref=e388]: "# Create virtual environment python -m venv .venv # Activate it source .venv/bin/activate # On Windows: .venv\\Scripts\\activate # Install dependencies pip install -r requirements.txt"
+                    - button "Copy to clipboard" [ref=e389] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e390]
+                - generic [ref=e394]:
+                  - heading "Verify Installation" [level=3] [ref=e395]
+                  - generic [ref=e397]:
+                    - generic [ref=e398]: "# Check Python version (should be 3.9+) python --version # Verify key packages python -c \"import numpy, pandas, sklearn, torch; print('✅ All packages installed!')\" # Start Jupyter jupyter notebook"
+                    - button "Copy to clipboard" [ref=e399] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e400]
+              - generic [ref=e404]:
+                - heading "🎓 What You’ll Need" [level=2] [ref=e405]
+                - generic [ref=e406]:
+                  - heading "Hardware Requirements" [level=3] [ref=e407]
+                  - table [ref=e409]:
+                    - rowgroup [ref=e410]:
+                      - row "Component Minimum Recommended Notes" [ref=e411]:
+                        - columnheader "Component" [ref=e412]:
+                          - paragraph [ref=e413]: Component
+                        - columnheader "Minimum" [ref=e414]:
+                          - paragraph [ref=e415]: Minimum
+                        - columnheader "Recommended" [ref=e416]:
+                          - paragraph [ref=e417]: Recommended
+                        - columnheader "Notes" [ref=e418]:
+                          - paragraph [ref=e419]: Notes
+                    - rowgroup [ref=e420]:
+                      - row "RAM 8GB 16GB+ 32GB for advanced topics" [ref=e421]:
+                        - cell "RAM" [ref=e422]:
+                          - paragraph [ref=e423]:
+                            - strong [ref=e424]: RAM
+                        - cell "8GB" [ref=e425]:
+                          - paragraph [ref=e426]: 8GB
+                        - cell "16GB+" [ref=e427]:
+                          - paragraph [ref=e428]: 16GB+
+                        - cell "32GB for advanced topics" [ref=e429]:
+                          - paragraph [ref=e430]: 32GB for advanced topics
+                      - row "Storage 10GB free 50GB+ free Large datasets & models" [ref=e431]:
+                        - cell "Storage" [ref=e432]:
+                          - paragraph [ref=e433]:
+                            - strong [ref=e434]: Storage
+                        - cell "10GB free" [ref=e435]:
+                          - paragraph [ref=e436]: 10GB free
+                        - cell "50GB+ free" [ref=e437]:
+                          - paragraph [ref=e438]: 50GB+ free
+                        - cell "Large datasets & models" [ref=e439]:
+                          - paragraph [ref=e440]: Large datasets & models
+                      - row "CPU Any modern CPU Multi-core (4+ cores) Intel i5/AMD Ryzen or better" [ref=e441]:
+                        - cell "CPU" [ref=e442]:
+                          - paragraph [ref=e443]:
+                            - strong [ref=e444]: CPU
+                        - cell "Any modern CPU" [ref=e445]:
+                          - paragraph [ref=e446]: Any modern CPU
+                        - cell "Multi-core (4+ cores)" [ref=e447]:
+                          - paragraph [ref=e448]: Multi-core (4+ cores)
+                        - cell "Intel i5/AMD Ryzen or better" [ref=e449]:
+                          - paragraph [ref=e450]: Intel i5/AMD Ryzen or better
+                      - row "GPU Optional NVIDIA with CUDA GTX 1060 or RTX 2060+" [ref=e451]:
+                        - cell "GPU" [ref=e452]:
+                          - paragraph [ref=e453]:
+                            - strong [ref=e454]: GPU
+                        - cell "Optional" [ref=e455]:
+                          - paragraph [ref=e456]: Optional
+                        - cell "NVIDIA with CUDA" [ref=e457]:
+                          - paragraph [ref=e458]: NVIDIA with CUDA
+                        - cell "GTX 1060 or RTX 2060+" [ref=e459]:
+                          - paragraph [ref=e460]: GTX 1060 or RTX 2060+
+                      - row "Internet Stable connection High-speed For cloud options & downloads" [ref=e461]:
+                        - cell "Internet" [ref=e462]:
+                          - paragraph [ref=e463]:
+                            - strong [ref=e464]: Internet
+                        - cell "Stable connection" [ref=e465]:
+                          - paragraph [ref=e466]: Stable connection
+                        - cell "High-speed" [ref=e467]:
+                          - paragraph [ref=e468]: High-speed
+                        - cell "For cloud options & downloads" [ref=e469]:
+                          - paragraph [ref=e470]: For cloud options & downloads
+                - generic [ref=e471]:
+                  - heading "Prerequisites" [level=3] [ref=e472]
+                  - list [ref=e473]:
+                    - listitem [ref=e474]:
+                      - paragraph [ref=e475]:
+                        - strong [ref=e476]: Python Knowledge
+                        - text: ": Basic understanding of Python (loops, functions, classes)"
+                      - list [ref=e477]:
+                        - listitem [ref=e478]:
+                          - paragraph [ref=e479]:
+                            - text: New to Python? Start with
+                            - link "01-python/" [ref=e480] [cursor=pointer]:
+                              - /url: ../01-python/README.html
+                            - text: section first
+                    - listitem [ref=e481]:
+                      - paragraph [ref=e482]:
+                        - strong [ref=e483]: Mathematics
+                        - text: ": High school algebra (we’ll teach the rest!)"
+                    - listitem [ref=e484]:
+                      - paragraph [ref=e485]:
+                        - strong [ref=e486]: Time Commitment
+                        - text: ": 10-15 hours/week for 6-12 months"
+                    - listitem [ref=e487]:
+                      - paragraph [ref=e488]:
+                        - strong [ref=e489]: Hardware
+                        - text: ": Any modern computer (GPU helpful but not required initially)"
+                - generic [ref=e490]:
+                  - heading "Required Software" [level=3] [ref=e491]
+                  - list [ref=e492]:
+                    - listitem [ref=e493]:
+                      - paragraph [ref=e494]:
+                        - strong [ref=e495]: Python 3.9+
+                        - text: "-"
+                        - link "Download here" [ref=e496] [cursor=pointer]:
+                          - /url: https://www.python.org/downloads/
+                    - listitem [ref=e497]:
+                      - paragraph [ref=e498]:
+                        - strong [ref=e499]: Git
+                        - text: "-"
+                        - link "Download here" [ref=e500] [cursor=pointer]:
+                          - /url: https://git-scm.com/downloads
+                    - listitem [ref=e501]:
+                      - paragraph [ref=e502]:
+                        - strong [ref=e503]: Jupyter Notebook
+                        - text: "- Installed via requirements.txt"
+                    - listitem [ref=e504]:
+                      - paragraph [ref=e505]:
+                        - strong [ref=e506]: VS Code
+                        - text: (recommended) -
+                        - link "Download here" [ref=e507] [cursor=pointer]:
+                          - /url: https://code.visualstudio.com/
+                - generic [ref=e508]:
+                  - heading "Optional but Recommended" [level=3] [ref=e509]
+                  - list [ref=e510]:
+                    - listitem [ref=e511]:
+                      - paragraph [ref=e512]:
+                        - strong [ref=e513]: GitHub Account
+                        - text: "- For saving progress and collaboration"
+                    - listitem [ref=e514]:
+                      - paragraph [ref=e515]:
+                        - strong [ref=e516]: Google Colab Account
+                        - text: "- For free GPU access"
+                    - listitem [ref=e517]:
+                      - paragraph [ref=e518]:
+                        - strong [ref=e519]: Kaggle Account
+                        - text: "- For datasets and competitions"
+              - generic [ref=e520]:
+                - heading "🌐 Cloud Development Options" [level=2] [ref=e521]
+                - generic [ref=e522]:
+                  - heading "GitHub Codespaces (Recommended for No-Setup Experience)" [level=3] [ref=e523]
+                  - list [ref=e524]:
+                    - listitem [ref=e525]:
+                      - paragraph [ref=e526]: Go to your forked repository on GitHub
+                    - listitem [ref=e527]:
+                      - paragraph [ref=e528]:
+                        - text: Click
+                        - strong [ref=e529]: Code
+                        - text: →
+                        - strong [ref=e530]: Codespaces
+                        - text: →
+                        - strong [ref=e531]: Create codespace on main
+                    - listitem [ref=e532]:
+                      - paragraph [ref=e533]: Wait for the environment to build (first time takes ~5 minutes)
+                    - listitem [ref=e534]:
+                      - paragraph [ref=e535]: Start coding! Everything is pre-installed
+                - generic [ref=e536]:
+                  - heading "Google Colab" [level=3] [ref=e537]
+                  - list [ref=e538]:
+                    - listitem [ref=e539]:
+                      - paragraph [ref=e540]:
+                        - text: Click
+                        - link "Open In Colab" [ref=e541] [cursor=pointer]:
+                          - /url: https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main
+                          - img "Open In Colab" [ref=e542]
+                    - listitem [ref=e543]:
+                      - paragraph [ref=e544]: Each notebook can be opened directly in Colab
+                    - listitem [ref=e545]:
+                      - paragraph [ref=e546]: Free GPU access available
+                - generic [ref=e547]:
+                  - heading "Replit" [level=3] [ref=e548]
+                  - list [ref=e549]:
+                    - listitem [ref=e550]:
+                      - paragraph [ref=e551]:
+                        - text: Click
+                        - link "Open in Replit" [ref=e552] [cursor=pointer]:
+                          - /url: https://replit.com/github/PavanMudigonda/zero-to-ai
+                          - img "Open in Replit" [ref=e553]
+                    - listitem [ref=e554]:
+                      - paragraph [ref=e555]: Collaborative coding environment
+                    - listitem [ref=e556]:
+                      - paragraph [ref=e557]: Great for learning with others
+                - generic [ref=e558]:
+                  - heading "Kaggle Kernels" [level=3] [ref=e559]
+                  - list [ref=e560]:
+                    - listitem [ref=e561]:
+                      - paragraph [ref=e562]:
+                        - text: Click
+                        - link "Open in Kaggle" [ref=e563] [cursor=pointer]:
+                          - /url: https://www.kaggle.com/code
+                          - img "Open in Kaggle" [ref=e564]
+                    - listitem [ref=e565]:
+                      - paragraph [ref=e566]: Create a new notebook, enable Internet, and clone this repo from GitHub inside the notebook
+                    - listitem [ref=e567]:
+                      - paragraph [ref=e568]: Access to free GPU/TPU
+                    - listitem [ref=e569]:
+                      - paragraph [ref=e570]: Large dataset library included
+              - generic [ref=e571]:
+                - heading "📂 Repository Structure Overview" [level=2] [ref=e572]
+                - generic [ref=e574]:
+                  - generic [ref=e575]: zero-to-ai/ ├── 📘 00-course-setup/ ⭐ START HERE - Setup & orientation ├── 📚 01-python/ Python fundamentals (if needed) ├── 📊 02-data-science/ NumPy, Pandas, Scikit-learn (278 notebooks!) │ ├── 1-numpy-examples/ Array operations & data manipulation │ ├── 2-pandas-examples/ DataFrames & analysis │ ├── 3-data-science-examples/ Statistical analysis & visualization │ ├── 4-matplotlib/ Plotting & charts │ └── 5-scikit-learn/ Machine learning algorithms ├── 🔢 03-maths/ Linear Algebra, Calculus, Statistics (40+ notebooks) │ ├── foundational/ Core math topics │ ├── mml-book/ Mathematics for Machine Learning │ ├── islp-book/ Statistical learning with Python │ ├── cs229-course/ Stanford ML course │ └── advanced/ 🆕 Learning theory, optimization ├── 🔤 04-token/ Tokenization (tiktoken, sentencepiece, HF) ├── 🎯 05-embeddings/ Word & sentence embeddings ├── 🧠 06-neural-networks/ Deep learning from scratch to Transformers ├── 💾 07-vector-databases/ Chroma, Qdrant, Weaviate, Milvus, pgvector ├── 🔍 08-rag/ Retrieval-Augmented Generation ├── 🚀 09-mlops/ Deployment, monitoring, optimization ├── 🎨 10-specializations/ AI Agents, Computer Vision, NLP ├── 💬 11-prompt-engineering/ Advanced prompting techniques ├── ⚙️ 12-llm-finetuning/ LoRA, QLoRA, PEFT ├── 🎭 13-multimodal/ Vision, Audio, Video AI ├── 🏠 14-local-llms/ Ollama & private AI ├── 🧪 15-ai-agents/ Autonomous AI systems ├── 📈 16-model-evaluation/ Model evaluation & metrics ├── 🔧 17-debugging-troubleshooting/ Troubleshooting & debugging ├── ⚡ 18-low-code-ai-tools/ No-code AI tools ├── 🛡️ 19-ai-safety-redteaming/ AI safety & red teaming ├── 📡 20-real-time-streaming/ Live AI applications ├── 📝 21-quizzes/ Knowledge assessments ├── 📖 22-references/ Research papers & resources ├── 🗂️ 23-glossary/ Terminology & definitions ├── 🧠 24-advanced-deep-learning/ Cutting-edge techniques ├── 🎯 25-reinforcement-learning/ Reinforcement learning ├── 📊 26-time-series-analysis/ Time series analysis ├── 🔬 27-causal-inference/ Causal inference ├── 🔨 28-practical-data-science/ Practical data science └── 📚 scripts/ Utility scripts & tools
+                  - button "Copy to clipboard" [ref=e576] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e577]
+              - generic [ref=e581]:
+                - heading "🗺️ Your Learning Path" [level=2] [ref=e582]
+                - generic [ref=e583]:
+                  - 'heading "Phase 0: Setup & Prerequisites (You are here!)" [level=3] [ref=e584]'
+                  - list [ref=e585]:
+                    - listitem [ref=e586]:
+                      - paragraph [ref=e587]: ✅ Complete this setup guide
+                    - listitem [ref=e588]:
+                      - paragraph [ref=e589]:
+                        - text: ✅ Review
+                        - link "23-glossary/GLOSSARY.md" [ref=e590] [cursor=pointer]:
+                          - /url: ../23-glossary/GLOSSARY.html
+                        - text: for terminology
+                    - listitem [ref=e591]:
+                      - paragraph [ref=e592]:
+                        - text: ✅ If new to Python, start with
+                        - link "01-python/" [ref=e593] [cursor=pointer]:
+                          - /url: ../01-python/README.html
+                - generic [ref=e594]:
+                  - 'heading "Phase 1: Foundations (Weeks 1-8)" [level=3] [ref=e595]'
+                  - list [ref=e596]:
+                    - listitem [ref=e597]:
+                      - paragraph [ref=e598]:
+                        - strong [ref=e599]: Lesson 1
+                        - text: ":"
+                        - link "Python & Data Science" [ref=e600] [cursor=pointer]:
+                          - /url: ../02-data-science/README.html
+                        - text: "- 278 notebooks"
+                    - listitem [ref=e601]:
+                      - paragraph [ref=e602]:
+                        - strong [ref=e603]: Lesson 2
+                        - text: ":"
+                        - link "Mathematics for ML" [ref=e604] [cursor=pointer]:
+                          - /url: ../03-maths/README.html
+                        - text: "- Linear algebra, calculus, stats"
+                - generic [ref=e605]:
+                  - 'heading "Phase 2: Core AI (Weeks 9-20)" [level=3] [ref=e606]'
+                  - list [ref=e607]:
+                    - listitem [ref=e608]:
+                      - paragraph [ref=e609]:
+                        - strong [ref=e610]: Lesson 3-7
+                        - text: ": Tokenization → Embeddings → Neural Networks → Vector DBs → RAG"
+                - generic [ref=e611]:
+                  - 'heading "Phase 3: Advanced Topics (Weeks 21-32)" [level=3] [ref=e612]'
+                  - list [ref=e613]:
+                    - listitem [ref=e614]:
+                      - paragraph [ref=e615]:
+                        - strong [ref=e616]: Lesson 8-13
+                        - text: ": MLOps → Specializations → Prompt Engineering → Fine-tuning → Multimodal → Local LLMs"
+              - generic [ref=e617]:
+                - heading "📋 Next Steps" [level=2] [ref=e618]
+                - list [ref=e619]:
+                  - listitem [ref=e620]:
+                    - paragraph [ref=e621]:
+                      - text: ✅
+                      - strong [ref=e622]: Complete Setup
+                      - text: ": Ensure your environment is working"
+                  - listitem [ref=e623]:
+                    - paragraph [ref=e624]:
+                      - text: ✅
+                      - strong [ref=e625]: Review the Glossary
+                      - text: ": Read"
+                      - link "23-glossary/GLOSSARY.md" [ref=e626] [cursor=pointer]:
+                        - /url: ../23-glossary/GLOSSARY.html
+                      - text: for terminology
+                  - listitem [ref=e627]:
+                    - paragraph [ref=e628]:
+                      - text: ✅
+                      - strong [ref=e629]: Start Learning
+                      - text: ": Begin with"
+                      - link "01-python/" [ref=e630] [cursor=pointer]:
+                        - /url: ../01-python/README.html
+                      - text: if new to Python, or jump to
+                      - link "04-token/" [ref=e631] [cursor=pointer]:
+                        - /url: ../04-token/README.html
+                      - text: for your track
+                  - listitem [ref=e632]:
+                    - paragraph [ref=e633]:
+                      - text: ✅
+                      - strong [ref=e634]: Track Progress
+                      - text: ": Use"
+                      - code [ref=e635]: python scripts/progress_tracker.py
+                      - text: to monitor your journey
+                  - listitem [ref=e636]:
+                    - paragraph [ref=e637]:
+                      - text: ✅
+                      - strong [ref=e638]: Join Community
+                      - text: ": Connect with other learners for support"
+              - generic [ref=e639]:
+                - heading "🆘 Troubleshooting" [level=2] [ref=e640]
+                - generic [ref=e641]:
+                  - heading "Common Issues" [level=3] [ref=e642]
+                  - table [ref=e644]:
+                    - rowgroup [ref=e645]:
+                      - row "Issue Solution" [ref=e646]:
+                        - columnheader "Issue" [ref=e647]:
+                          - paragraph [ref=e648]: Issue
+                        - columnheader "Solution" [ref=e649]:
+                          - paragraph [ref=e650]: Solution
+                    - rowgroup [ref=e651]:
+                      - row "ModuleNotFoundError Run pip install -r requirements.txt again" [ref=e652]:
+                        - cell "ModuleNotFoundError" [ref=e653]:
+                          - paragraph [ref=e654]:
+                            - code [ref=e655]: ModuleNotFoundError
+                        - cell "Run pip install -r requirements.txt again" [ref=e656]:
+                          - paragraph [ref=e657]:
+                            - text: Run
+                            - code [ref=e658]: pip install -r requirements.txt
+                            - text: again
+                      - row "Python not found Ensure Python 3.9+ is installed and in PATH" [ref=e659]:
+                        - cell "Python not found" [ref=e660]:
+                          - paragraph [ref=e661]:
+                            - code [ref=e662]: Python not found
+                        - cell "Ensure Python 3.9+ is installed and in PATH" [ref=e663]:
+                          - paragraph [ref=e664]: Ensure Python 3.9+ is installed and in PATH
+                      - row "Jupyter kernel not found Run python -m ipykernel install --user" [ref=e665]:
+                        - cell "Jupyter kernel not found" [ref=e666]:
+                          - paragraph [ref=e667]:
+                            - code [ref=e668]: Jupyter kernel not found
+                        - cell "Run python -m ipykernel install --user" [ref=e669]:
+                          - paragraph [ref=e670]:
+                            - text: Run
+                            - code [ref=e671]: python -m ipykernel install --user
+                      - 'row "Import torch fails Install PyTorch: pip install torch" [ref=e672]':
+                        - cell "Import torch fails" [ref=e673]:
+                          - paragraph [ref=e674]:
+                            - code [ref=e675]: Import torch fails
+                        - 'cell "Install PyTorch: pip install torch" [ref=e676]':
+                          - paragraph [ref=e677]:
+                            - text: "Install PyTorch:"
+                            - code [ref=e678]: pip install torch
+                      - row "Out of memory errors Use Google Colab for free GPU" [ref=e679]:
+                        - cell "Out of memory errors" [ref=e680]:
+                          - paragraph [ref=e681]:
+                            - code [ref=e682]: Out of memory errors
+                        - cell "Use Google Colab for free GPU" [ref=e683]:
+                          - paragraph [ref=e684]: Use Google Colab for free GPU
+                      - 'row "Git clone too slow Use shallow clone: git clone --depth 1 ..." [ref=e685]':
+                        - cell "Git clone too slow" [ref=e686]:
+                          - paragraph [ref=e687]:
+                            - code [ref=e688]: Git clone too slow
+                        - 'cell "Use shallow clone: git clone --depth 1 ..." [ref=e689]':
+                          - paragraph [ref=e690]:
+                            - text: "Use shallow clone:"
+                            - code [ref=e691]: git clone --depth 1 ...
+                - generic [ref=e692]:
+                  - heading "Getting Help" [level=3] [ref=e693]
+                  - list [ref=e694]:
+                    - listitem [ref=e695]:
+                      - paragraph [ref=e696]:
+                        - strong [ref=e697]:
+                          - text: Check
+                          - link "troubleshooting.md" [ref=e698] [cursor=pointer]:
+                            - /url: troubleshooting.html
+                        - text: for detailed solutions
+                    - listitem [ref=e699]:
+                      - paragraph [ref=e700]:
+                        - strong [ref=e701]:
+                          - text: Search
+                          - link "GitHub Issues" [ref=e702] [cursor=pointer]:
+                            - /url: https://github.com/PavanMudigonda/zero-to-ai/issues
+                    - listitem [ref=e703]:
+                      - paragraph [ref=e704]:
+                        - strong [ref=e705]:
+                          - text: Ask in
+                          - link "Discussions" [ref=e706] [cursor=pointer]:
+                            - /url: https://github.com/PavanMudigonda/zero-to-ai/discussions
+              - generic [ref=e707]:
+                - heading "🎯 Verification Checklist" [level=2] [ref=e708]
+                - paragraph [ref=e709]: "Before moving to Lesson 1, ensure:"
+                - list [ref=e710]:
+                  - listitem [ref=e711]:
+                    - paragraph [ref=e712]:
+                      - checkbox [disabled] [ref=e713]
+                      - text: Repository cloned/forked successfully
+                  - listitem [ref=e714]:
+                    - paragraph [ref=e715]:
+                      - checkbox [disabled] [ref=e716]
+                      - text: Python 3.9+ installed and accessible
+                  - listitem [ref=e717]:
+                    - paragraph [ref=e718]:
+                      - checkbox [disabled] [ref=e719]
+                      - text: Virtual environment created and activated
+                  - listitem [ref=e720]:
+                    - paragraph [ref=e721]:
+                      - checkbox [disabled] [ref=e722]
+                      - text: All dependencies installed (
+                      - code [ref=e723]: pip list
+                      - text: shows numpy, pandas, sklearn, etc.)
+                  - listitem [ref=e724]:
+                    - paragraph [ref=e725]:
+                      - checkbox [disabled] [ref=e726]
+                      - text: Jupyter Notebook launches successfully
+                  - listitem [ref=e727]:
+                    - paragraph [ref=e728]:
+                      - checkbox [disabled] [ref=e729]
+                      - text: Can open and run a test notebook
+                  - listitem [ref=e730]:
+                    - paragraph [ref=e731]:
+                      - checkbox [disabled] [ref=e732]
+                      - text: Familiar with
+                      - link "23-glossary/GLOSSARY.md" [ref=e733] [cursor=pointer]:
+                        - /url: ../23-glossary/GLOSSARY.html
+                      - text: terms
+                  - listitem [ref=e734]:
+                    - paragraph [ref=e735]:
+                      - checkbox [disabled] [ref=e736]
+                      - text: Reviewed the Visual Roadmaps for your chosen track
+              - generic [ref=e737]:
+                - heading "🎓 Ready to Start?" [level=2] [ref=e738]
+                - paragraph [ref=e739]:
+                  - strong [ref=e740]: Congratulations!
+                  - text: 🎉 You’re all set up and ready to begin your AI journey!
+                - paragraph [ref=e741]:
+                  - strong [ref=e742]: Next Stop
+                  - text: ":"
+                  - 'link "Lesson 1: Python & Data Science →" [ref=e743] [cursor=pointer]':
+                    - /url: ../02-data-science/README.html
+                - paragraph [ref=e744]:
+                  - strong [ref=e745]: 📚 Additional Resources
+                - list [ref=e746]:
+                  - listitem [ref=e747]:
+                    - paragraph [ref=e748]:
+                      - link "Main README" [ref=e749] [cursor=pointer]:
+                        - /url: ../../index.html
+                      - text: "- Repository overview"
+                  - listitem [ref=e750]:
+                    - paragraph [ref=e751]:
+                      - link "Visual Roadmaps" [ref=e752] [cursor=pointer]:
+                        - /url: https://zero-to-ai.dev/generated/roadmaps/01_overview.html
+                      - text: "- See the full curriculum at a glance"
+                  - listitem [ref=e753]:
+                    - paragraph [ref=e754]:
+                      - link "Contributing" [ref=e755] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/CONTRIBUTING.md
+                      - text: "- How to contribute"
+                  - listitem [ref=e756]:
+                    - paragraph [ref=e757]:
+                      - link "Code of Conduct" [ref=e758] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/CODE_OF_CONDUCT.md
+                      - text: "- Community guidelines"
+                - paragraph [ref=e759]:
+                  - strong [ref=e760]: Need Help?
+                  - text: Open an
+                  - link "issue" [ref=e761] [cursor=pointer]:
+                    - /url: https://github.com/PavanMudigonda/zero-to-ai/issues
+                  - text: or join our community!
+                - paragraph [ref=e762]:
+                  - strong [ref=e763]: Found this helpful?
+                  - text: ⭐ Star this repo to support the project!
+        - contentinfo [ref=e764]:
+          - generic [ref=e765]:
+            - 'link "Next Visual Roadmap — Part 4: End-to-End Flows" [ref=e766] [cursor=pointer]':
+              - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+              - generic [ref=e767]:
+                - generic [ref=e769]: Next
+                - generic [ref=e770]: "Visual Roadmap — Part 4: End-to-End Flows"
+              - img [ref=e771]
+            - 'link "Previous AI Model Landscape: March 6, 2026" [ref=e773] [cursor=pointer]':
+              - /url: 2026_model_landscape.html
+              - img [ref=e774]
+              - generic [ref=e776]:
+                - generic [ref=e778]: Previous
+                - generic [ref=e779]: "AI Model Landscape: March 6, 2026"
+          - generic [ref=e780]:
+            - generic [ref=e781]:
+              - generic [ref=e782]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e783]: v0.1.0
+            - link "GitHub" [ref=e786] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e787]
+      - complementary [ref=e789]:
+        - separator "Resize right sidebar" [ref=e790]:
+          - button "Collapse right sidebar" [ref=e791] [cursor=pointer]: ›
+        - generic [ref=e792]:
+          - generic [ref=e793]: On this page
+          - list [ref=e796]:
+            - listitem [ref=e797]:
+              - list [ref=e798]:
+                - listitem [ref=e799]:
+                  - link "⏱️ Quick Setup (5 minutes)" [ref=e800] [cursor=pointer]:
+                    - /url: "#quick-setup-5-minutes"
+                - listitem [ref=e801]:
+                  - link "🎯 Introduction" [ref=e802] [cursor=pointer]:
+                    - /url: "#introduction"
+                - listitem [ref=e803]:
+                  - link "🤝 Join Our Learning Community" [ref=e804] [cursor=pointer]:
+                    - /url: "#join-our-learning-community"
+                - listitem [ref=e805]:
+                  - link "🍴 Fork or Clone This Repository" [ref=e806] [cursor=pointer]:
+                    - /url: "#fork-or-clone-this-repository"
+                  - list [ref=e807]:
+                    - listitem [ref=e808]:
+                      - 'link "Step 1: Fork the Repository (Recommended)" [ref=e809] [cursor=pointer]':
+                        - /url: "#step-1-fork-the-repository-recommended"
+                    - listitem [ref=e810]:
+                      - 'link "Step 2: Clone Your Fork" [ref=e811] [cursor=pointer]':
+                        - /url: "#step-2-clone-your-fork"
+                    - listitem [ref=e812]:
+                      - link "Quick Clone Options" [ref=e813] [cursor=pointer]:
+                        - /url: "#quick-clone-options"
+                      - list [ref=e814]:
+                        - listitem [ref=e815]:
+                          - link "Full Clone (for complete learning)" [ref=e816] [cursor=pointer]:
+                            - /url: "#full-clone-for-complete-learning"
+                        - listitem [ref=e817]:
+                          - link "Shallow Clone (faster, recent commits only)" [ref=e818] [cursor=pointer]:
+                            - /url: "#shallow-clone-faster-recent-commits-only"
+                        - listitem [ref=e819]:
+                          - link "Sparse Clone (specific sections only)" [ref=e820] [cursor=pointer]:
+                            - /url: "#sparse-clone-specific-sections-only"
+                - listitem [ref=e821]:
+                  - link "🚀 Environment Setup" [ref=e822] [cursor=pointer]:
+                    - /url: "#environment-setup"
+                  - list [ref=e823]:
+                    - listitem [ref=e824]:
+                      - 'link "Option 1: Quick Setup with UV (Recommended - Fastest!)" [ref=e825] [cursor=pointer]':
+                        - /url: "#option-1-quick-setup-with-uv-recommended-fastest"
+                    - listitem [ref=e826]:
+                      - 'link "Option 2: Conda Environment (Recommended for ML/Data Science)" [ref=e827] [cursor=pointer]':
+                        - /url: "#option-2-conda-environment-recommended-for-ml-data-science"
+                    - listitem [ref=e828]:
+                      - 'link "Option 3: Traditional Python venv + pip" [ref=e829] [cursor=pointer]':
+                        - /url: "#option-3-traditional-python-venv-pip"
+                    - listitem [ref=e830]:
+                      - link "Verify Installation" [ref=e831] [cursor=pointer]:
+                        - /url: "#verify-installation"
+                - listitem [ref=e832]:
+                  - link "🎓 What You’ll Need" [ref=e833] [cursor=pointer]:
+                    - /url: "#what-youll-need"
+                  - list [ref=e834]:
+                    - listitem [ref=e835]:
+                      - link "Hardware Requirements" [ref=e836] [cursor=pointer]:
+                        - /url: "#hardware-requirements"
+                    - listitem [ref=e837]:
+                      - link "Prerequisites" [ref=e838] [cursor=pointer]:
+                        - /url: "#prerequisites"
+                    - listitem [ref=e839]:
+                      - link "Required Software" [ref=e840] [cursor=pointer]:
+                        - /url: "#required-software"
+                    - listitem [ref=e841]:
+                      - link "Optional but Recommended" [ref=e842] [cursor=pointer]:
+                        - /url: "#optional-but-recommended"
+                - listitem [ref=e843]:
+                  - link "🌐 Cloud Development Options" [ref=e844] [cursor=pointer]:
+                    - /url: "#cloud-development-options"
+                  - list [ref=e845]:
+                    - listitem [ref=e846]:
+                      - link "GitHub Codespaces (Recommended for No-Setup Experience)" [ref=e847] [cursor=pointer]:
+                        - /url: "#github-codespaces-recommended-for-no-setup-experience"
+                    - listitem [ref=e848]:
+                      - link "Google Colab" [ref=e849] [cursor=pointer]:
+                        - /url: "#google-colab"
+                    - listitem [ref=e850]:
+                      - link "Replit" [ref=e851] [cursor=pointer]:
+                        - /url: "#replit"
+                    - listitem [ref=e852]:
+                      - link "Kaggle Kernels" [ref=e853] [cursor=pointer]:
+                        - /url: "#kaggle-kernels"
+                - listitem [ref=e854]:
+                  - link "📂 Repository Structure Overview" [ref=e855] [cursor=pointer]:
+                    - /url: "#repository-structure-overview"
+                - listitem [ref=e856]:
+                  - link "🗺️ Your Learning Path" [ref=e857] [cursor=pointer]:
+                    - /url: "#your-learning-path"
+                  - list [ref=e858]:
+                    - listitem [ref=e859]:
+                      - 'link "Phase 0: Setup & Prerequisites (You are here!)" [ref=e860] [cursor=pointer]':
+                        - /url: "#phase-0-setup-prerequisites-you-are-here"
+                    - listitem [ref=e861]:
+                      - 'link "Phase 1: Foundations (Weeks 1-8)" [ref=e862] [cursor=pointer]':
+                        - /url: "#phase-1-foundations-weeks-1-8"
+                    - listitem [ref=e863]:
+                      - 'link "Phase 2: Core AI (Weeks 9-20)" [ref=e864] [cursor=pointer]':
+                        - /url: "#phase-2-core-ai-weeks-9-20"
+                    - listitem [ref=e865]:
+                      - 'link "Phase 3: Advanced Topics (Weeks 21-32)" [ref=e866] [cursor=pointer]':
+                        - /url: "#phase-3-advanced-topics-weeks-21-32"
+                - listitem [ref=e867]:
+                  - link "📋 Next Steps" [ref=e868] [cursor=pointer]:
+                    - /url: "#next-steps"
+                - listitem [ref=e869]:
+                  - link "🆘 Troubleshooting" [ref=e870] [cursor=pointer]:
+                    - /url: "#troubleshooting"
+                  - list [ref=e871]:
+                    - listitem [ref=e872]:
+                      - link "Common Issues" [ref=e873] [cursor=pointer]:
+                        - /url: "#common-issues"
+                    - listitem [ref=e874]:
+                      - link "Getting Help" [ref=e875] [cursor=pointer]:
+                        - /url: "#getting-help"
+                - listitem [ref=e876]:
+                  - link "🎯 Verification Checklist" [ref=e877] [cursor=pointer]:
+                    - /url: "#verification-checklist"
+                - listitem [ref=e878]:
+                  - link "🎓 Ready to Start?" [ref=e879] [cursor=pointer]:
+                    - /url: "#ready-to-start"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

@@ -1,4 +1,6 @@
-# HuggingFace Tokenizers - Complete Learning Module> **Fast, blazing-fast tokenization with the 🤗 Tokenizers library**
+# HuggingFace Tokenizers - Complete Learning Module
+
+> **Fast, blazing-fast tokenization with the 🤗 Tokenizers library**
 
 This module provides a complete, hands-on guide to the HuggingFace Tokenizers library - the fastest tokenization library available, with full alignment tracking and support for all major tokenization algorithms.
 

@@ -150,10 +150,10 @@ sd_hide_title: true
 :hidden:
 :caption: Roadmaps
 
-generated/roadmaps/01_overview
-generated/roadmaps/02_core_systems
-generated/roadmaps/03_advanced_topics
-generated/roadmaps/04_end_to_end_flows
+Overview <generated/roadmaps/01_overview>
+Core Systems <generated/roadmaps/02_core_systems>
+Advanced Topics <generated/roadmaps/03_advanced_topics>
+End-to-End Flows <generated/roadmaps/04_end_to_end_flows>
 ```
 
 ```{toctree}

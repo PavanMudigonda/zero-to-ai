@@ -1,0 +1,1235 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Overview" [ref=e18] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - link "Core Systems" [ref=e20] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - link "Advanced Topics" [ref=e22] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - link "End-to-End Flows" [ref=e24] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - 'link "Phase 0: Course Setup" [ref=e28] [cursor=pointer]':
+                - /url: ../00-course-setup/README.html
+              - img [ref=e31] [cursor=pointer]
+            - listitem [ref=e33]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e34] [cursor=pointer]':
+                - /url: ../01-python/README.html
+            - listitem [ref=e35]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e36] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e39] [cursor=pointer]
+            - listitem [ref=e41]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e42] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e45] [cursor=pointer]
+          - heading "Core AI" [ref=e47]
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - 'link "Phase 4: Tokenization" [ref=e50] [cursor=pointer]':
+                - /url: README.html
+              - img [ref=e53] [cursor=pointer]
+              - list [ref=e55]:
+                - listitem [ref=e56]:
+                  - link "Production Tokenization Guide" [ref=e57] [cursor=pointer]:
+                    - /url: 04_production_guide.html
+                - listitem [ref=e58]:
+                  - link "Tokenization Comparison Guide" [ref=e59] [cursor=pointer]:
+                    - /url: 05_tokenizer_comparison.html
+                - listitem [ref=e60]:
+                  - 'link "Integration Guide: Using Tokenizers with Popular Frameworks" [ref=e61] [cursor=pointer]':
+                    - /url: 06_integration_guide.html
+                - listitem [ref=e62]:
+                  - 'link "Phase 1: Understanding Tokens" [ref=e63] [cursor=pointer]':
+                    - /url: README_TIKTOKEN.html
+                - listitem [ref=e64]:
+                  - link "HuggingFace Tokenizers - Complete Learning Module> Fast, blazing-fast tokenization with the 🤗 Tokenizers library" [ref=e65] [cursor=pointer]:
+                    - /url: "#"
+                    - text: HuggingFace Tokenizers - Complete Learning Module>
+                    - strong [ref=e66]: Fast, blazing-fast tokenization with the 🤗 Tokenizers library
+                - listitem [ref=e67]:
+                  - link "HuggingFace Tokenizers Library - Complete Learning Guide" [ref=e68] [cursor=pointer]:
+                    - /url: huggingface_tokenizers_guide.html
+                - listitem [ref=e69]:
+                  - 'link "Understanding Tokens: The Foundation of Language Models" [ref=e70] [cursor=pointer]':
+                    - /url: intro.html
+                - listitem [ref=e71]:
+                  - 'link "Phase 4: Tokenization — Start Here" [ref=e72] [cursor=pointer]':
+                    - /url: 00_START_HERE.html
+                - listitem [ref=e73]:
+                  - link "01 Tokenizers Quickstart" [ref=e74] [cursor=pointer]:
+                    - /url: 01_tokenizers_quickstart.html
+                - listitem [ref=e75]:
+                  - link "HuggingFace Tokenizers - Quick Start Examples" [ref=e76] [cursor=pointer]:
+                    - /url: 01_tokenizers_quickstart.html#huggingface-tokenizers-quick-start-examples
+                - listitem [ref=e77]:
+                  - link "02 Tokenizers Training" [ref=e78] [cursor=pointer]:
+                    - /url: 02_tokenizers_training.html
+                - listitem [ref=e79]:
+                  - link "HuggingFace Tokenizers - Training Examples" [ref=e80] [cursor=pointer]:
+                    - /url: 02_tokenizers_training.html#huggingface-tokenizers-training-examples
+                - listitem [ref=e81]:
+                  - link "03 Advanced Training Methods" [ref=e82] [cursor=pointer]:
+                    - /url: 03_advanced_training_methods.html
+                - listitem [ref=e83]:
+                  - link "Advanced Training Methods for Tokenizers" [ref=e84] [cursor=pointer]:
+                    - /url: 03_advanced_training_methods.html#advanced-training-methods-for-tokenizers
+                - listitem [ref=e85]:
+                  - link "Setup" [ref=e86] [cursor=pointer]:
+                    - /url: 06_pipeline_components.html
+                - listitem [ref=e87]:
+                  - 'link "Part 1: Normalization" [ref=e88] [cursor=pointer]':
+                    - /url: 06_pipeline_components.html#part-1-normalization
+                - listitem [ref=e89]:
+                  - 'link "Part 2: Pre-tokenization" [ref=e90] [cursor=pointer]':
+                    - /url: 06_pipeline_components.html#part-2-pre-tokenization
+                - listitem [ref=e91]:
+                  - 'link "Part 3: Post-processing" [ref=e92] [cursor=pointer]':
+                    - /url: 06_pipeline_components.html#part-3-post-processing
+                - listitem [ref=e93]:
+                  - 'link "Part 4: Decoders" [ref=e94] [cursor=pointer]':
+                    - /url: 06_pipeline_components.html#part-4-decoders
+                - listitem [ref=e95]:
+                  - 'link "Part 5: Complete Pipeline Examples" [ref=e96] [cursor=pointer]':
+                    - /url: 06_pipeline_components.html#part-5-complete-pipeline-examples
+                - listitem [ref=e97]:
+                  - link "Summary" [ref=e98] [cursor=pointer]:
+                    - /url: 06_pipeline_components.html#summary
+                - listitem [ref=e99]:
+                  - link "Sentencepiece Example" [ref=e100] [cursor=pointer]:
+                    - /url: sentencepiece_example.html
+                - listitem [ref=e101]:
+                  - link "Tiktoken Example" [ref=e102] [cursor=pointer]:
+                    - /url: tiktoken_example.html
+                - listitem [ref=e103]:
+                  - link "Basic Tokenization Example" [ref=e104] [cursor=pointer]:
+                    - /url: tiktoken_example.html#basic-tokenization-example
+                - listitem [ref=e105]:
+                  - link "Token Exercises" [ref=e106] [cursor=pointer]:
+                    - /url: token_exercises.html
+                - listitem [ref=e107]:
+                  - link "Token Exercises - Interactive Practice" [ref=e108] [cursor=pointer]:
+                    - /url: token_exercises.html#token-exercises-interactive-practice
+                - listitem [ref=e109]:
+                  - link "Token Exploration" [ref=e110] [cursor=pointer]:
+                    - /url: token_exploration.html
+                - listitem [ref=e111]:
+                  - link "Token Exploration - Advanced Examples" [ref=e112] [cursor=pointer]:
+                    - /url: token_exploration.html#token-exploration-advanced-examples
+            - listitem [ref=e113]:
+              - 'link "Phase 5: Embeddings" [ref=e114] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e117] [cursor=pointer]
+            - listitem [ref=e119]:
+              - 'link "Phase 6: Neural Networks" [ref=e120] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e123] [cursor=pointer]
+          - heading "Applied AI" [ref=e125]
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - 'link "Phase 7: Vector Databases" [ref=e128] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - 'link "Phase 8: RAG" [ref=e134] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - 'link "Phase 9: MLOps" [ref=e140] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - 'link "Phase 10: Specializations" [ref=e146] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e149] [cursor=pointer]
+          - heading "Advanced" [ref=e151]
+          - list [ref=e152]:
+            - listitem [ref=e153]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e154] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e157] [cursor=pointer]
+            - listitem [ref=e159]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e160] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - 'link "Phase 13: Multimodal AI" [ref=e166] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e169] [cursor=pointer]
+            - listitem [ref=e171]:
+              - 'link "Phase 14: Local LLMs" [ref=e172] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e175] [cursor=pointer]
+            - listitem [ref=e177]:
+              - 'link "Phase 15: AI Agents" [ref=e178] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e181] [cursor=pointer]
+          - heading "Supplementary" [ref=e183]
+          - list [ref=e184]:
+            - listitem [ref=e185]:
+              - 'link "Phase 16: Model Evaluation" [ref=e186] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e189] [cursor=pointer]
+            - listitem [ref=e191]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e192] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e195] [cursor=pointer]
+            - listitem [ref=e197]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e198] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e201] [cursor=pointer]
+            - listitem [ref=e203]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e204] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e207] [cursor=pointer]
+            - listitem [ref=e209]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e210] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e213] [cursor=pointer]
+          - heading "Reference" [ref=e215]
+          - list [ref=e216]:
+            - listitem [ref=e217]:
+              - 'link "Phase 21: Quizzes" [ref=e218] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e221] [cursor=pointer]
+            - listitem [ref=e223]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e224] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e227] [cursor=pointer]
+            - listitem [ref=e229]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e230] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e233] [cursor=pointer]
+          - heading "Research" [ref=e235]
+          - list [ref=e236]:
+            - listitem [ref=e237]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e238] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e241] [cursor=pointer]
+            - listitem [ref=e243]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e244] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e247] [cursor=pointer]
+            - listitem [ref=e249]:
+              - 'link "Phase 26: Time Series" [ref=e250] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e253] [cursor=pointer]
+            - listitem [ref=e255]:
+              - 'link "Phase 27: Causal Inference" [ref=e256] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e259] [cursor=pointer]
+          - heading "Production" [ref=e261]
+          - list [ref=e262]:
+            - listitem [ref=e263]:
+              - 'link "Phase 28: Practical Data Science" [ref=e264] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e267] [cursor=pointer]
+            - listitem [ref=e269]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e270] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e273] [cursor=pointer]
+            - listitem [ref=e275]:
+              - 'link "Phase 30: Inference Optimization" [ref=e276] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e279] [cursor=pointer]
+          - heading "Developer Tools" [ref=e281]
+          - list [ref=e282]:
+            - listitem [ref=e283]:
+              - 'link "Phase 31: AI Dev Tools" [ref=e284] [cursor=pointer]':
+                - /url: ../31-ai-dev-tools/README.html
+              - img [ref=e287] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e289]:
+        - button "Collapse left sidebar" [ref=e290] [cursor=pointer]: ‹
+    - generic [ref=e291]:
+      - generic [ref=e292]:
+        - generic [ref=e293]:
+          - generic [ref=e294]:
+            - link "View this page" [ref=e296] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/04-token/README_TOKENIZERS.md?plain=true
+              - img [ref=e297]
+              - generic [ref=e299]: View this page
+            - link "Edit this page" [ref=e301] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/04-token/README_TOKENIZERS.md
+              - img [ref=e302]
+              - generic [ref=e304]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e306] [cursor=pointer]:
+              - img [ref=e307]
+            - img [ref=e311] [cursor=pointer]
+          - main [ref=e313]:
+            - generic [ref=e314]:
+              - heading "HuggingFace Tokenizers - Complete Learning Module> Fast, blazing-fast tokenization with the 🤗 Tokenizers library" [level=1] [ref=e315]:
+                - text: HuggingFace Tokenizers - Complete Learning Module>
+                - strong [ref=e316]: Fast, blazing-fast tokenization with the 🤗 Tokenizers library
+              - paragraph [ref=e317]: This module provides a complete, hands-on guide to the HuggingFace Tokenizers library - the fastest tokenization library available, with full alignment tracking and support for all major tokenization algorithms.
+              - generic [ref=e318]:
+                - heading "📚 What You’ll Learn" [level=2] [ref=e319]
+                - list [ref=e320]:
+                  - listitem [ref=e321]:
+                    - paragraph [ref=e322]: Build tokenizers from scratch
+                  - listitem [ref=e323]:
+                    - paragraph [ref=e324]: Train custom tokenizers on your data
+                  - listitem [ref=e325]:
+                    - paragraph [ref=e326]: Use pretrained tokenizers
+                  - listitem [ref=e327]:
+                    - paragraph [ref=e328]: Understand BPE, WordPiece, and Unigram algorithms
+                  - listitem [ref=e329]:
+                    - paragraph [ref=e330]: Master the tokenization pipeline
+                  - listitem [ref=e331]:
+                    - paragraph [ref=e332]: Optimize for production use
+              - generic [ref=e333]:
+                - heading "🚀 Quick Start" [level=2] [ref=e334]
+                - generic [ref=e335]:
+                  - heading "Installation" [level=3] [ref=e336]
+                  - generic [ref=e338]:
+                    - generic [ref=e339]: pip install tokenizers
+                    - button "Copy to clipboard" [ref=e340] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e341]
+                - generic [ref=e345]:
+                  - heading "Your First Tokenizer (2 minutes)" [level=3] [ref=e346]
+                  - generic [ref=e348]:
+                    - generic [ref=e349]: "from tokenizers import Tokenizer # Load pretrained BERT tokenizer tokenizer = Tokenizer.from_pretrained(\"bert-base-uncased\") # Encode text output = tokenizer.encode(\"Hello, world!\") print(output.tokens) # ['hello', ',', 'world', '!'] print(output.ids) # [7592, 1010, 2088, 999]"
+                    - button "Copy to clipboard" [ref=e350] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e351]
+              - generic [ref=e355]:
+                - heading "📖 Learning Path" [level=2] [ref=e356]
+                - generic [ref=e357]:
+                  - heading "1. Read the Guide (1 hour)" [level=3] [ref=e358]
+                  - paragraph [ref=e359]: "Start with the comprehensive guide:"
+                  - paragraph [ref=e360]:
+                    - strong [ref=e361]:
+                      - link "📘 huggingface_tokenizers_guide.md" [ref=e362] [cursor=pointer]:
+                        - /url: huggingface_tokenizers_guide.html
+                  - paragraph [ref=e363]: "This guide covers:"
+                  - list [ref=e364]:
+                    - listitem [ref=e365]:
+                      - paragraph [ref=e366]: Introduction and installation
+                    - listitem [ref=e367]:
+                      - paragraph [ref=e368]: Quick start examples
+                    - listitem [ref=e369]:
+                      - paragraph [ref=e370]: Tokenization pipeline explained
+                    - listitem [ref=e371]:
+                      - paragraph [ref=e372]: All components (Normalizers, PreTokenizers, Models, PostProcessors, Decoders)
+                    - listitem [ref=e373]:
+                      - paragraph [ref=e374]: Training custom tokenizers
+                    - listitem [ref=e375]:
+                      - paragraph [ref=e376]: Working with pretrained models
+                    - listitem [ref=e377]:
+                      - paragraph [ref=e378]: Advanced features (padding, truncation, batch encoding)
+                    - listitem [ref=e379]:
+                      - paragraph [ref=e380]: Complete examples
+                    - listitem [ref=e381]:
+                      - paragraph [ref=e382]: Best practices
+                  - paragraph [ref=e383]:
+                    - strong [ref=e384]: "Sections:"
+                  - list [ref=e385]:
+                    - listitem [ref=e386]:
+                      - paragraph [ref=e387]:
+                        - strong [ref=e388]: Introduction
+                        - text: "- What and why"
+                    - listitem [ref=e389]:
+                      - paragraph [ref=e390]:
+                        - strong [ref=e391]: Quick Start
+                        - text: "- Get running in 5 minutes"
+                    - listitem [ref=e392]:
+                      - paragraph [ref=e393]:
+                        - strong [ref=e394]: Tokenization Pipeline
+                        - text: "- Understanding the process"
+                    - listitem [ref=e395]:
+                      - paragraph [ref=e396]:
+                        - strong [ref=e397]: Components Deep Dive
+                        - text: "- Each component explained"
+                    - listitem [ref=e398]:
+                      - paragraph [ref=e399]:
+                        - strong [ref=e400]: Training Custom Tokenizers
+                        - text: "- Build your own"
+                    - listitem [ref=e401]:
+                      - paragraph [ref=e402]:
+                        - strong [ref=e403]: Pretrained Tokenizers
+                        - text: "- Load existing models"
+                    - listitem [ref=e404]:
+                      - paragraph [ref=e405]:
+                        - strong [ref=e406]: Advanced Features
+                        - text: "- Encoding, padding, truncation"
+                    - listitem [ref=e407]:
+                      - paragraph [ref=e408]:
+                        - strong [ref=e409]: Complete Examples
+                        - text: "- Full implementations"
+                    - listitem [ref=e410]:
+                      - paragraph [ref=e411]:
+                        - strong [ref=e412]: Best Practices
+                        - text: "- Tips and tricks"
+                - generic [ref=e413]:
+                  - heading "2. Run Quick Start Examples (30 minutes)" [level=3] [ref=e414]
+                  - paragraph [ref=e415]: "Practice with the quick start script:"
+                  - paragraph [ref=e416]:
+                    - strong [ref=e417]:
+                      - link "🎯 01_tokenizers_quickstart.py" [ref=e418] [cursor=pointer]:
+                        - /url: "#01_tokenizers_quickstart.py"
+                  - paragraph [ref=e419]:
+                    - strong [ref=e420]: "10 Interactive Examples:"
+                  - list [ref=e421]:
+                    - listitem [ref=e422]:
+                      - paragraph [ref=e423]:
+                        - strong [ref=e424]: Load Pretrained Tokenizer
+                        - text: "- Use BERT tokenizer"
+                    - listitem [ref=e425]:
+                      - paragraph [ref=e426]:
+                        - strong [ref=e427]: Build from Scratch
+                        - text: "- Create a simple BPE tokenizer"
+                    - listitem [ref=e428]:
+                      - paragraph [ref=e429]:
+                        - strong [ref=e430]: Understanding Encoding
+                        - text: "- Explore the Encoding object"
+                    - listitem [ref=e431]:
+                      - paragraph [ref=e432]:
+                        - strong [ref=e433]: Batch Encoding
+                        - text: "- Process multiple sequences"
+                    - listitem [ref=e434]:
+                      - paragraph [ref=e435]:
+                        - strong [ref=e436]: Padding & Truncation
+                        - text: "- Handle variable lengths"
+                    - listitem [ref=e437]:
+                      - paragraph [ref=e438]:
+                        - strong [ref=e439]: Encode & Decode
+                        - text: "- Round-trip conversion"
+                    - listitem [ref=e440]:
+                      - paragraph [ref=e441]:
+                        - strong [ref=e442]: Sentence Pairs
+                        - text: "- Work with pairs (for NLI, QA)"
+                    - listitem [ref=e443]:
+                      - paragraph [ref=e444]:
+                        - strong [ref=e445]: Vocabulary Inspection
+                        - text: "- Explore token mappings"
+                    - listitem [ref=e446]:
+                      - paragraph [ref=e447]:
+                        - strong [ref=e448]: Special Tokens
+                        - text: "- Add custom tokens"
+                    - listitem [ref=e449]:
+                      - paragraph [ref=e450]:
+                        - strong [ref=e451]: Performance Comparison
+                        - text: "- Batch vs single encoding"
+                  - generic [ref=e453]:
+                    - generic [ref=e454]: "# Run all examples python 01_tokenizers_quickstart.py # Or run individual examples in Python from tokenizers_quickstart import example_1_pretrained_tokenizer example_1_pretrained_tokenizer()"
+                    - button "Copy to clipboard" [ref=e455] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e456]
+                - generic [ref=e460]:
+                  - heading "3. Train Your Own Tokenizers (45 minutes)" [level=3] [ref=e461]
+                  - paragraph [ref=e462]: "Learn to train custom tokenizers:"
+                  - paragraph [ref=e463]:
+                    - strong [ref=e464]:
+                      - link "🏋️ 02_tokenizers_training.py" [ref=e465] [cursor=pointer]:
+                        - /url: "#02_tokenizers_training.py"
+                  - paragraph [ref=e466]:
+                    - strong [ref=e467]: "7 Training Examples:"
+                  - list [ref=e468]:
+                    - listitem [ref=e469]:
+                      - paragraph [ref=e470]:
+                        - strong [ref=e471]: BPE Tokenizer (GPT-2 Style)
+                        - text: "- Byte-level BPE"
+                    - listitem [ref=e472]:
+                      - paragraph [ref=e473]:
+                        - strong [ref=e474]: WordPiece (BERT Style)
+                        - text: "- Classic BERT tokenizer"
+                    - listitem [ref=e475]:
+                      - paragraph [ref=e476]:
+                        - strong [ref=e477]: Unigram (Multilingual)
+                        - text: "- SentencePiece-style for multiple languages"
+                    - listitem [ref=e478]:
+                      - paragraph [ref=e479]:
+                        - strong [ref=e480]: Code Tokenizer
+                        - text: "- Domain-specific for programming languages"
+                    - listitem [ref=e481]:
+                      - paragraph [ref=e482]:
+                        - strong [ref=e483]: Train from Files
+                        - text: "- Use actual text files"
+                    - listitem [ref=e484]:
+                      - paragraph [ref=e485]:
+                        - strong [ref=e486]: Compare Tokenizers
+                        - text: "- See differences between models"
+                    - listitem [ref=e487]:
+                      - paragraph [ref=e488]:
+                        - strong [ref=e489]: Fine-tune Tokenizer
+                        - text: "- Add tokens to existing models"
+                  - generic [ref=e491]:
+                    - generic [ref=e492]: "# Run all training examples python 02_tokenizers_training.py"
+                    - button "Copy to clipboard" [ref=e493] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e494]
+                  - paragraph [ref=e498]:
+                    - strong [ref=e499]: "Outputs:"
+                  - list [ref=e500]:
+                    - listitem [ref=e501]:
+                      - paragraph [ref=e502]:
+                        - text: Trained tokenizers saved in
+                        - code [ref=e503]: ./tokenizers/
+                        - text: directory
+                    - listitem [ref=e504]:
+                      - paragraph [ref=e505]: Ready to use in your projects
+                    - listitem [ref=e506]:
+                      - paragraph [ref=e507]: Comparison reports
+                - generic [ref=e508]:
+                  - heading "4. Advanced Training Methods (45 minutes)" [level=3] [ref=e509]
+                  - paragraph [ref=e510]: "Master different training patterns:"
+                  - paragraph [ref=e511]:
+                    - strong [ref=e512]:
+                      - link "🎓 03_advanced_training_methods.py" [ref=e513] [cursor=pointer]:
+                        - /url: "#03_advanced_training_methods.py"
+                  - paragraph [ref=e514]:
+                    - strong [ref=e515]: "7 Advanced Patterns:"
+                  - list [ref=e516]:
+                    - listitem [ref=e517]:
+                      - paragraph [ref=e518]:
+                        - strong [ref=e519]: Train from List
+                        - text: "- Simple Python lists/tuples"
+                    - listitem [ref=e520]:
+                      - paragraph [ref=e521]:
+                        - strong [ref=e522]: Train from Iterables
+                        - text: "- Tuples, generators, any iterable"
+                    - listitem [ref=e523]:
+                      - paragraph [ref=e524]:
+                        - strong [ref=e525]: 🤗 Datasets Library
+                        - text: "- Batch iterators for efficiency"
+                    - listitem [ref=e526]:
+                      - paragraph [ref=e527]:
+                        - strong [ref=e528]: Gzip Files
+                        - text: "- Read compressed files directly"
+                    - listitem [ref=e529]:
+                      - paragraph [ref=e530]:
+                        - strong [ref=e531]: Batch Efficiency
+                        - text: "- Compare single vs batch performance"
+                    - listitem [ref=e532]:
+                      - paragraph [ref=e533]:
+                        - strong [ref=e534]: Custom Iterators
+                        - text: "- Filter, transform, multi-source patterns"
+                    - listitem [ref=e535]:
+                      - paragraph [ref=e536]:
+                        - strong [ref=e537]: Progress Tracking
+                        - text: "- Monitor training with length parameter"
+                  - generic [ref=e539]:
+                    - generic [ref=e540]: "# Run all advanced training examples python 03_advanced_training_methods.py"
+                    - button "Copy to clipboard" [ref=e541] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e542]
+                  - paragraph [ref=e546]:
+                    - strong [ref=e547]: "Key Learnings:"
+                  - list [ref=e548]:
+                    - listitem [ref=e549]:
+                      - paragraph [ref=e550]: Batch iterators are 10-20x faster
+                    - listitem [ref=e551]:
+                      - paragraph [ref=e552]: Use generators for memory efficiency
+                    - listitem [ref=e553]:
+                      - paragraph [ref=e554]:
+                        - text: Progress tracking with
+                        - code [ref=e555]: length
+                        - text: parameter
+                    - listitem [ref=e556]:
+                      - paragraph [ref=e557]: Train from any Python iterator
+                - generic [ref=e558]:
+                  - heading "5. Production Guide (30 minutes)" [level=3] [ref=e559]
+                  - paragraph [ref=e560]: "Learn production-level considerations:"
+                  - paragraph [ref=e561]:
+                    - strong [ref=e562]:
+                      - link "🏭 04_production_guide.md" [ref=e563] [cursor=pointer]:
+                        - /url: 04_production_guide.html
+                  - paragraph [ref=e564]:
+                    - strong [ref=e565]: "Critical Topics:"
+                  - list [ref=e566]:
+                    - listitem [ref=e567]:
+                      - paragraph [ref=e568]: Performance optimization (batch processing, parallelization)
+                    - listitem [ref=e569]:
+                      - paragraph [ref=e570]: Memory management (streaming, lazy loading)
+                    - listitem [ref=e571]:
+                      - paragraph [ref=e572]: Error handling & edge cases
+                    - listitem [ref=e573]:
+                      - paragraph [ref=e574]: Security considerations (input sanitization, rate limiting)
+                    - listitem [ref=e575]:
+                      - paragraph [ref=e576]: Monitoring & debugging
+                    - listitem [ref=e577]:
+                      - paragraph [ref=e578]: Common production issues & solutions
+                - generic [ref=e579]:
+                  - heading "6. Tokenizer Comparison (20 minutes)" [level=3] [ref=e580]
+                  - paragraph [ref=e581]: "Understand different algorithms and choose the right one:"
+                  - paragraph [ref=e582]:
+                    - strong [ref=e583]:
+                      - link "📊 05_tokenizer_comparison.md" [ref=e584] [cursor=pointer]:
+                        - /url: 05_tokenizer_comparison.html
+                  - paragraph [ref=e585]:
+                    - strong [ref=e586]: "Comparisons:"
+                  - list [ref=e587]:
+                    - listitem [ref=e588]:
+                      - paragraph [ref=e589]: BPE vs WordPiece vs Unigram vs WordLevel
+                    - listitem [ref=e590]:
+                      - paragraph [ref=e591]: GPT vs BERT vs T5 vs LLaMA tokenizers
+                    - listitem [ref=e592]:
+                      - paragraph [ref=e593]: Performance benchmarks (speed, memory)
+                    - listitem [ref=e594]:
+                      - paragraph [ref=e595]: Language support comparison
+                    - listitem [ref=e596]:
+                      - paragraph [ref=e597]: Use case recommendations
+                  - paragraph [ref=e598]:
+                    - strong [ref=e599]: Includes decision tree
+                    - text: to help you choose!
+                - generic [ref=e600]:
+                  - heading "7. Integration Guide (30 minutes)" [level=3] [ref=e601]
+                  - paragraph [ref=e602]: "Connect tokenizers to your ML workflow:"
+                  - paragraph [ref=e603]:
+                    - strong [ref=e604]:
+                      - link "🔌 06_integration_guide.md" [ref=e605] [cursor=pointer]:
+                        - /url: 06_integration_guide.html
+                  - paragraph [ref=e606]:
+                    - strong [ref=e607]: "Integrations:"
+                  - list [ref=e608]:
+                    - listitem [ref=e609]:
+                      - paragraph [ref=e610]: 🤗 Transformers (AutoTokenizer, models)
+                    - listitem [ref=e611]:
+                      - paragraph [ref=e612]: PyTorch & TensorFlow (custom datasets)
+                    - listitem [ref=e613]:
+                      - paragraph [ref=e614]: FastAPI / Flask (REST APIs)
+                    - listitem [ref=e615]:
+                      - paragraph [ref=e616]: Database storage (SQLite, PostgreSQL)
+                    - listitem [ref=e617]:
+                      - paragraph [ref=e618]: Streaming applications
+                    - listitem [ref=e619]:
+                      - paragraph [ref=e620]: Complete working examples
+              - generic [ref=e621]:
+                - heading "🎯 Learning Objectives" [level=2] [ref=e622]
+                - paragraph [ref=e623]: "By the end of this module, you will be able to:"
+                - list [ref=e624]:
+                  - listitem [ref=e625]:
+                    - paragraph [ref=e626]: ✅ Load and use pretrained tokenizers
+                  - listitem [ref=e627]:
+                    - paragraph [ref=e628]: ✅ Build custom tokenizers from scratch
+                  - listitem [ref=e629]:
+                    - paragraph [ref=e630]: ✅ Choose the right tokenization algorithm for your task
+                  - listitem [ref=e631]:
+                    - paragraph [ref=e632]: ✅ Train tokenizers on your own data
+                  - listitem [ref=e633]:
+                    - paragraph [ref=e634]: ✅ Understand the full tokenization pipeline
+                  - listitem [ref=e635]:
+                    - paragraph [ref=e636]: ✅ Use advanced features (padding, truncation, batching)
+                  - listitem [ref=e637]:
+                    - paragraph [ref=e638]: ✅ Optimize tokenization for production
+                  - listitem [ref=e639]:
+                    - paragraph [ref=e640]: ✅ Debug tokenization issues
+                  - listitem [ref=e641]:
+                    - paragraph [ref=e642]: ✅ Compare different tokenization approaches
+              - generic [ref=e643]:
+                - heading "📊 File Structure" [level=2] [ref=e644]
+                - generic [ref=e646]:
+                  - generic [ref=e647]: "1-token/ ├── README_TOKENIZERS.md # This file - Complete guide ├── huggingface_tokenizers_guide.md # Detailed reference (1 hour) ├── 01_tokenizers_quickstart.py # Quick start (30 min) ├── 02_tokenizers_training.py # Training examples (45 min) ├── 03_advanced_training_methods.py # Advanced patterns (45 min) │ ├── intro.md # Tokenization basics ├── tiktoken_example.py # tiktoken examples ├── token_exploration.py # Token analysis ├── token_exercises.py # Practice exercises │ └── tokenizers/ # Output directory ├── bpe_gpt2_style.json # Trained BPE tokenizer ├── wordpiece_bert_style.json # Trained WordPiece ├── unigram_multilingual.json # Trained Unigram ├── code_tokenizer.json # Code-specific tokenizer ├── finetuned_tokenizer.json # Fine-tuned model └── list_trained.json # List-trained example"
+                  - button "Copy to clipboard" [ref=e648] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e649]
+              - generic [ref=e653]:
+                - heading "🔑 Key Concepts" [level=2] [ref=e654]
+                - generic [ref=e655]:
+                  - heading "Tokenization Algorithms" [level=3] [ref=e656]
+                  - table [ref=e658]:
+                    - rowgroup [ref=e659]:
+                      - row "Algorithm Use Case Examples" [ref=e660]:
+                        - columnheader "Algorithm" [ref=e661]:
+                          - paragraph [ref=e662]: Algorithm
+                        - columnheader "Use Case" [ref=e663]:
+                          - paragraph [ref=e664]: Use Case
+                        - columnheader "Examples" [ref=e665]:
+                          - paragraph [ref=e666]: Examples
+                    - rowgroup [ref=e667]:
+                      - row "BPE General purpose, English GPT-2, GPT-3, RoBERTa" [ref=e668]:
+                        - cell "BPE" [ref=e669]:
+                          - paragraph [ref=e670]:
+                            - strong [ref=e671]: BPE
+                        - cell "General purpose, English" [ref=e672]:
+                          - paragraph [ref=e673]: General purpose, English
+                        - cell "GPT-2, GPT-3, RoBERTa" [ref=e674]:
+                          - paragraph [ref=e675]: GPT-2, GPT-3, RoBERTa
+                      - row "WordPiece BERT-style models BERT, DistilBERT, ELECTRA" [ref=e676]:
+                        - cell "WordPiece" [ref=e677]:
+                          - paragraph [ref=e678]:
+                            - strong [ref=e679]: WordPiece
+                        - cell "BERT-style models" [ref=e680]:
+                          - paragraph [ref=e681]: BERT-style models
+                        - cell "BERT, DistilBERT, ELECTRA" [ref=e682]:
+                          - paragraph [ref=e683]: BERT, DistilBERT, ELECTRA
+                      - row "Unigram Multilingual, probabilistic T5, ALBERT, XLNet" [ref=e684]:
+                        - cell "Unigram" [ref=e685]:
+                          - paragraph [ref=e686]:
+                            - strong [ref=e687]: Unigram
+                        - cell "Multilingual, probabilistic" [ref=e688]:
+                          - paragraph [ref=e689]: Multilingual, probabilistic
+                        - cell "T5, ALBERT, XLNet" [ref=e690]:
+                          - paragraph [ref=e691]: T5, ALBERT, XLNet
+                      - row "WordLevel Simple baseline Basic models" [ref=e692]:
+                        - cell "WordLevel" [ref=e693]:
+                          - paragraph [ref=e694]:
+                            - strong [ref=e695]: WordLevel
+                        - cell "Simple baseline" [ref=e696]:
+                          - paragraph [ref=e697]: Simple baseline
+                        - cell "Basic models" [ref=e698]:
+                          - paragraph [ref=e699]: Basic models
+                - generic [ref=e700]:
+                  - heading "Tokenization Pipeline" [level=3] [ref=e701]
+                  - img [ref=e704]
+                - generic [ref=e705]:
+                  - heading "Why HuggingFace Tokenizers?" [level=3] [ref=e706]
+                  - list [ref=e707]:
+                    - listitem [ref=e708]:
+                      - paragraph [ref=e709]:
+                        - strong [ref=e710]: Speed
+                        - text: ⚡
+                      - list [ref=e711]:
+                        - listitem [ref=e712]:
+                          - paragraph [ref=e713]: 10-20x faster than pure Python implementations
+                        - listitem [ref=e714]:
+                          - paragraph [ref=e715]: Optimized Rust core with Python bindings
+                        - listitem [ref=e716]:
+                          - paragraph [ref=e717]: Can tokenize 1GB of text in seconds
+                    - listitem [ref=e718]:
+                      - paragraph [ref=e719]:
+                        - strong [ref=e720]: Full Alignment
+                        - text: 🎯
+                      - list [ref=e721]:
+                        - listitem [ref=e722]:
+                          - paragraph [ref=e723]: Track exact character positions
+                        - listitem [ref=e724]:
+                          - paragraph [ref=e725]: Map tokens back to original text
+                        - listitem [ref=e726]:
+                          - paragraph [ref=e727]: Essential for span-based tasks (NER, QA)
+                    - listitem [ref=e728]:
+                      - paragraph [ref=e729]:
+                        - strong [ref=e730]: All Algorithms
+                        - text: 🧰
+                      - list [ref=e731]:
+                        - listitem [ref=e732]:
+                          - paragraph [ref=e733]: BPE (GPT-2 style)
+                        - listitem [ref=e734]:
+                          - paragraph [ref=e735]: WordPiece (BERT style)
+                        - listitem [ref=e736]:
+                          - paragraph [ref=e737]: Unigram (SentencePiece)
+                        - listitem [ref=e738]:
+                          - paragraph [ref=e739]: WordLevel (baseline)
+                    - listitem [ref=e740]:
+                      - paragraph [ref=e741]:
+                        - strong [ref=e742]: Production Ready
+                        - text: 🚀
+                      - list [ref=e743]:
+                        - listitem [ref=e744]:
+                          - paragraph [ref=e745]: Used by Transformers library
+                        - listitem [ref=e746]:
+                          - paragraph [ref=e747]: Battle-tested in production
+                        - listitem [ref=e748]:
+                          - paragraph [ref=e749]: Easy to serialize/deserialize
+              - generic [ref=e750]:
+                - heading "💡 Quick Reference" [level=2] [ref=e751]
+                - generic [ref=e752]:
+                  - heading "Load Pretrained" [level=3] [ref=e753]
+                  - generic [ref=e755]:
+                    - generic [ref=e756]: "from tokenizers import Tokenizer # From Hugging Face Hub tokenizer = Tokenizer.from_pretrained(\"bert-base-uncased\") # From local file tokenizer = Tokenizer.from_file(\"my-tokenizer.json\")"
+                    - button "Copy to clipboard" [ref=e757] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e758]
+                - generic [ref=e762]:
+                  - heading "Train Custom" [level=3] [ref=e763]
+                  - generic [ref=e765]:
+                    - generic [ref=e766]: "from tokenizers import Tokenizer from tokenizers.models import BPE from tokenizers.trainers import BpeTrainer tokenizer = Tokenizer(BPE(unk_token=\"[UNK]\")) trainer = BpeTrainer(special_tokens=[\"[UNK]\", \"[CLS]\", \"[SEP]\"]) # Train from iterator tokenizer.train_from_iterator(texts, trainer=trainer) # Or train from files tokenizer.train([\"data.txt\"], trainer)"
+                    - button "Copy to clipboard" [ref=e767] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e768]
+                - generic [ref=e772]:
+                  - heading "Encode & Decode" [level=3] [ref=e773]
+                  - generic [ref=e775]:
+                    - generic [ref=e776]: "# Encode output = tokenizer.encode(\"Hello, world!\") print(output.tokens) # Token strings print(output.ids) # Token IDs print(output.offsets) # Character positions # Decode text = tokenizer.decode([7592, 1010, 2088])"
+                    - button "Copy to clipboard" [ref=e777] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e778]
+                - generic [ref=e782]:
+                  - heading "Batch Processing" [level=3] [ref=e783]
+                  - generic [ref=e785]:
+                    - generic [ref=e786]: "# Encode batch outputs = tokenizer.encode_batch([\"Text 1\", \"Text 2\", \"Text 3\"]) # With padding tokenizer.enable_padding(pad_id=0, pad_token=\"[PAD]\") outputs = tokenizer.encode_batch(texts) # With truncation tokenizer.enable_truncation(max_length=512) outputs = tokenizer.encode_batch(texts)"
+                    - button "Copy to clipboard" [ref=e787] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e788]
+              - generic [ref=e792]:
+                - heading "🎓 Exercises" [level=2] [ref=e793]
+                - generic [ref=e794]:
+                  - heading "Beginner" [level=3] [ref=e795]
+                  - list [ref=e796]:
+                    - listitem [ref=e797]:
+                      - paragraph [ref=e798]: Load BERT tokenizer and encode 5 sentences
+                    - listitem [ref=e799]:
+                      - paragraph [ref=e800]: Count tokens for different models on same text
+                    - listitem [ref=e801]:
+                      - paragraph [ref=e802]: Find which tokens correspond to unknown words
+                    - listitem [ref=e803]:
+                      - paragraph [ref=e804]: Compare BPE vs WordPiece on your text
+                - generic [ref=e805]:
+                  - heading "Intermediate" [level=3] [ref=e806]
+                  - list [ref=e807]:
+                    - listitem [ref=e808]:
+                      - paragraph [ref=e809]: Train a BPE tokenizer on your domain data
+                    - listitem [ref=e810]:
+                      - paragraph [ref=e811]: Add 50 domain-specific tokens to BERT tokenizer
+                    - listitem [ref=e812]:
+                      - paragraph [ref=e813]: Build a tokenizer pipeline with custom normalizer
+                    - listitem [ref=e814]:
+                      - paragraph [ref=e815]: Implement padding and truncation strategy
+                - generic [ref=e816]:
+                  - heading "Advanced" [level=3] [ref=e817]
+                  - list [ref=e818]:
+                    - listitem [ref=e819]:
+                      - paragraph [ref=e820]: Train multilingual tokenizer (3+ languages)
+                    - listitem [ref=e821]:
+                      - paragraph [ref=e822]: Build code-specific tokenizer for your language
+                    - listitem [ref=e823]:
+                      - paragraph [ref=e824]: Optimize vocab size for your task
+                    - listitem [ref=e825]:
+                      - paragraph [ref=e826]: Compare tokenizer performance on 1GB corpus
+              - generic [ref=e827]:
+                - heading "📈 Performance Tips" [level=2] [ref=e828]
+                - list [ref=e829]:
+                  - listitem [ref=e830]:
+                    - paragraph [ref=e831]:
+                      - strong [ref=e832]: Use Batch Encoding
+                      - text: "- 10-20x faster than loops"
+                  - listitem [ref=e833]:
+                    - paragraph [ref=e834]:
+                      - strong [ref=e835]: Enable Padding Efficiently
+                      - text: "- Pad to multiple of 8 for GPU"
+                  - listitem [ref=e836]:
+                    - paragraph [ref=e837]:
+                      - strong [ref=e838]: Choose Right Vocab Size
+                      - text: "- Larger = better coverage, slower"
+                  - listitem [ref=e839]:
+                    - paragraph [ref=e840]:
+                      - strong [ref=e841]: Reuse Tokenizers
+                      - text: "- Don’t reload every time"
+                  - listitem [ref=e842]:
+                    - paragraph [ref=e843]:
+                      - strong [ref=e844]: Save in JSON
+                      - text: "- Fast serialization/deserialization"
+              - generic [ref=e845]:
+                - heading "🔍 Debugging Tips" [level=2] [ref=e846]
+                - generic [ref=e848]:
+                  - generic [ref=e849]: "# Check vocabulary vocab = tokenizer.get_vocab() print(f\"Vocab size: {len(vocab)}\") # Inspect tokens for token, id in list(vocab.items())[:10]: print(f\"{token} -> {id}\") # Track alignment output = tokenizer.encode(text) for i, token in enumerate(output.tokens): start, end = output.offsets[i] print(f\"{token} came from: {text[start:end]}\") # Test special tokens print(tokenizer.token_to_id(\"[MASK]\")) print(tokenizer.id_to_token(0))"
+                  - button "Copy to clipboard" [ref=e850] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e851]
+              - generic [ref=e855]:
+                - heading "🌟 Next Steps" [level=2] [ref=e856]
+                - paragraph [ref=e857]: "After completing this module:"
+                - list [ref=e858]:
+                  - listitem [ref=e859]:
+                    - paragraph [ref=e860]:
+                      - strong [ref=e861]: Integrate with Transformers
+                      - text: "- Use with 🤗 Transformers models"
+                  - listitem [ref=e862]:
+                    - paragraph [ref=e863]:
+                      - strong [ref=e864]: Build NLP Pipeline
+                      - text: "- Tokenize → Model → Decode"
+                  - listitem [ref=e865]:
+                    - paragraph [ref=e866]:
+                      - strong [ref=e867]: Production Deployment
+                      - text: "- Optimize for speed and memory"
+                  - listitem [ref=e868]:
+                    - paragraph [ref=e869]:
+                      - strong [ref=e870]: Custom Algorithms
+                      - text: "- Implement your own tokenizer"
+                  - listitem [ref=e871]:
+                    - paragraph [ref=e872]:
+                      - strong [ref=e873]: Multilingual Systems
+                      - text: "- Build language-agnostic pipelines"
+              - generic [ref=e874]:
+                - heading "📚 Additional Resources" [level=2] [ref=e875]
+                - generic [ref=e876]:
+                  - heading "Official Documentation" [level=3] [ref=e877]
+                  - list [ref=e878]:
+                    - listitem [ref=e879]:
+                      - paragraph [ref=e880]:
+                        - link "Tokenizers Docs" [ref=e881] [cursor=pointer]:
+                          - /url: https://huggingface.co/docs/tokenizers
+                    - listitem [ref=e882]:
+                      - paragraph [ref=e883]:
+                        - link "Tokenizers GitHub" [ref=e884] [cursor=pointer]:
+                          - /url: https://github.com/huggingface/tokenizers
+                    - listitem [ref=e885]:
+                      - paragraph [ref=e886]:
+                        - link "Transformers Integration" [ref=e887] [cursor=pointer]:
+                          - /url: https://huggingface.co/docs/transformers
+                - generic [ref=e888]:
+                  - heading "Related Topics" [level=3] [ref=e889]
+                  - list [ref=e890]:
+                    - listitem [ref=e891]:
+                      - paragraph [ref=e892]:
+                        - strong [ref=e893]: Phase 5
+                        - text: ":"
+                        - link "Embeddings Module" [ref=e894] [cursor=pointer]:
+                          - /url: ../05-embeddings/README.html
+                        - text: "- Next in learning path"
+                    - listitem [ref=e895]:
+                      - paragraph [ref=e896]:
+                        - strong [ref=e897]: tiktoken
+                        - text: ":"
+                        - link "OpenAI’s tokenizer" [ref=e898] [cursor=pointer]:
+                          - /url: intro.html
+                        - text: "- Alternative approach"
+                    - listitem [ref=e899]:
+                      - paragraph [ref=e900]:
+                        - strong [ref=e901]: SentencePiece
+                        - text: ": Google’s tokenizer - Another option"
+                - generic [ref=e902]:
+                  - heading "Community" [level=3] [ref=e903]
+                  - list [ref=e904]:
+                    - listitem [ref=e905]:
+                      - paragraph [ref=e906]:
+                        - link "Hugging Face Forum" [ref=e907] [cursor=pointer]:
+                          - /url: https://discuss.huggingface.co
+                    - listitem [ref=e908]:
+                      - paragraph [ref=e909]:
+                        - link "Discord Community" [ref=e910] [cursor=pointer]:
+                          - /url: https://discord.gg/hugging-face
+                    - listitem [ref=e911]:
+                      - paragraph [ref=e912]:
+                        - link "GitHub Issues" [ref=e913] [cursor=pointer]:
+                          - /url: https://github.com/huggingface/tokenizers/issues
+              - generic [ref=e914]:
+                - heading "⏱️ Time Estimates" [level=2] [ref=e915]
+                - table [ref=e917]:
+                  - rowgroup [ref=e918]:
+                    - row "Activity Time Difficulty" [ref=e919]:
+                      - columnheader "Activity" [ref=e920]:
+                        - paragraph [ref=e921]: Activity
+                      - columnheader "Time" [ref=e922]:
+                        - paragraph [ref=e923]: Time
+                      - columnheader "Difficulty" [ref=e924]:
+                        - paragraph [ref=e925]: Difficulty
+                  - rowgroup [ref=e926]:
+                    - row "Read guide 1 hour Beginner" [ref=e927]:
+                      - cell "Read guide" [ref=e928]:
+                        - paragraph [ref=e929]: Read guide
+                      - cell "1 hour" [ref=e930]:
+                        - paragraph [ref=e931]: 1 hour
+                      - cell "Beginner" [ref=e932]:
+                        - paragraph [ref=e933]: Beginner
+                    - row "Quick start examples 30 min Beginner" [ref=e934]:
+                      - cell "Quick start examples" [ref=e935]:
+                        - paragraph [ref=e936]: Quick start examples
+                      - cell "30 min" [ref=e937]:
+                        - paragraph [ref=e938]: 30 min
+                      - cell "Beginner" [ref=e939]:
+                        - paragraph [ref=e940]: Beginner
+                    - row "Training examples 45 min Intermediate" [ref=e941]:
+                      - cell "Training examples" [ref=e942]:
+                        - paragraph [ref=e943]: Training examples
+                      - cell "45 min" [ref=e944]:
+                        - paragraph [ref=e945]: 45 min
+                      - cell "Intermediate" [ref=e946]:
+                        - paragraph [ref=e947]: Intermediate
+                    - row "Advanced training methods 45 min Intermediate" [ref=e948]:
+                      - cell "Advanced training methods" [ref=e949]:
+                        - paragraph [ref=e950]: Advanced training methods
+                      - cell "45 min" [ref=e951]:
+                        - paragraph [ref=e952]: 45 min
+                      - cell "Intermediate" [ref=e953]:
+                        - paragraph [ref=e954]: Intermediate
+                    - row "Production guide 30 min Advanced" [ref=e955]:
+                      - cell "Production guide" [ref=e956]:
+                        - paragraph [ref=e957]:
+                          - strong [ref=e958]: Production guide
+                      - cell "30 min" [ref=e959]:
+                        - paragraph [ref=e960]:
+                          - strong [ref=e961]: 30 min
+                      - cell "Advanced" [ref=e962]:
+                        - paragraph [ref=e963]:
+                          - strong [ref=e964]: Advanced
+                    - row "Comparison guide 20 min Intermediate" [ref=e965]:
+                      - cell "Comparison guide" [ref=e966]:
+                        - paragraph [ref=e967]:
+                          - strong [ref=e968]: Comparison guide
+                      - cell "20 min" [ref=e969]:
+                        - paragraph [ref=e970]:
+                          - strong [ref=e971]: 20 min
+                      - cell "Intermediate" [ref=e972]:
+                        - paragraph [ref=e973]:
+                          - strong [ref=e974]: Intermediate
+                    - row "Integration guide 30 min Advanced" [ref=e975]:
+                      - cell "Integration guide" [ref=e976]:
+                        - paragraph [ref=e977]:
+                          - strong [ref=e978]: Integration guide
+                      - cell "30 min" [ref=e979]:
+                        - paragraph [ref=e980]:
+                          - strong [ref=e981]: 30 min
+                      - cell "Advanced" [ref=e982]:
+                        - paragraph [ref=e983]:
+                          - strong [ref=e984]: Advanced
+                    - row "Practice exercises 2 hours Mixed" [ref=e985]:
+                      - cell "Practice exercises" [ref=e986]:
+                        - paragraph [ref=e987]: Practice exercises
+                      - cell "2 hours" [ref=e988]:
+                        - paragraph [ref=e989]: 2 hours
+                      - cell "Mixed" [ref=e990]:
+                        - paragraph [ref=e991]: Mixed
+                    - row "Total ~7-8 hours Beginner-Advanced" [ref=e992]:
+                      - cell "Total" [ref=e993]:
+                        - paragraph [ref=e994]:
+                          - strong [ref=e995]: Total
+                      - cell "~7-8 hours" [ref=e996]:
+                        - paragraph [ref=e997]:
+                          - strong [ref=e998]: ~7-8 hours
+                      - cell "Beginner-Advanced" [ref=e999]:
+                        - paragraph [ref=e1000]:
+                          - strong [ref=e1001]: Beginner-Advanced
+              - generic [ref=e1002]:
+                - heading "🎯 Success Criteria" [level=2] [ref=e1003]
+                - paragraph [ref=e1004]: "You’ve mastered this module when you can:"
+                - list [ref=e1005]:
+                  - listitem [ref=e1006]:
+                    - paragraph [ref=e1007]:
+                      - checkbox [disabled] [ref=e1008]
+                      - text: Explain the tokenization pipeline
+                  - listitem [ref=e1009]:
+                    - paragraph [ref=e1010]:
+                      - checkbox [disabled] [ref=e1011]
+                      - text: Choose appropriate algorithm for your task
+                  - listitem [ref=e1012]:
+                    - paragraph [ref=e1013]:
+                      - checkbox [disabled] [ref=e1014]
+                      - text: Train tokenizer on your data (>95% success rate)
+                  - listitem [ref=e1015]:
+                    - paragraph [ref=e1016]:
+                      - checkbox [disabled] [ref=e1017]
+                      - text: Use all encoding features (padding, truncation, batching)
+                  - listitem [ref=e1018]:
+                    - paragraph [ref=e1019]:
+                      - checkbox [disabled] [ref=e1020]
+                      - text: Debug tokenization issues independently
+                  - listitem [ref=e1021]:
+                    - paragraph [ref=e1022]:
+                      - checkbox [disabled] [ref=e1023]
+                      - text: Optimize for production deployment
+                  - listitem [ref=e1024]:
+                    - paragraph [ref=e1025]:
+                      - checkbox [disabled] [ref=e1026]
+                      - text: Integrate with ML models
+              - generic [ref=e1027]:
+                - heading "🤝 Contributing" [level=2] [ref=e1028]
+                - paragraph [ref=e1029]: Found an issue or want to add examples?
+                - list [ref=e1030]:
+                  - listitem [ref=e1031]:
+                    - paragraph [ref=e1032]: Fork the repository
+                  - listitem [ref=e1033]:
+                    - paragraph [ref=e1034]: Add your improvements
+                  - listitem [ref=e1035]:
+                    - paragraph [ref=e1036]: Submit a pull request
+              - generic [ref=e1037]:
+                - heading "📝 Notes" [level=2] [ref=e1038]
+                - list [ref=e1039]:
+                  - listitem [ref=e1040]:
+                    - paragraph [ref=e1041]: All examples use Python 3.7+
+                  - listitem [ref=e1042]:
+                    - paragraph [ref=e1043]:
+                      - text: Requires
+                      - code [ref=e1044]: tokenizers
+                      - text: library (pip install tokenizers)
+                  - listitem [ref=e1045]:
+                    - paragraph [ref=e1046]: Some examples download pretrained models (requires internet)
+                  - listitem [ref=e1047]:
+                    - paragraph [ref=e1048]:
+                      - text: Output files saved in
+                      - code [ref=e1049]: ./tokenizers/
+                      - text: directory
+              - generic [ref=e1050]:
+                - heading "❓ FAQ" [level=2] [ref=e1051]
+                - paragraph [ref=e1052]:
+                  - strong [ref=e1053]: "Q: Which tokenizer algorithm should I use?"
+                  - text: "A: Use BPE for general English, WordPiece for BERT-style, Unigram for multilingual."
+                - paragraph [ref=e1054]:
+                  - strong [ref=e1055]: "Q: How much data do I need to train?"
+                  - text: "A: Minimum 1MB text for basic vocab, 10MB+ for production quality."
+                - paragraph [ref=e1056]:
+                  - strong [ref=e1057]: "Q: Can I use with other frameworks?"
+                  - text: "A: Yes! Works standalone or with Transformers, FastAI, etc."
+                - paragraph [ref=e1058]:
+                  - strong [ref=e1059]: "Q: Is it faster than tiktoken?"
+                  - text: "A: Yes, generally 2-5x faster due to Rust core."
+                - paragraph [ref=e1060]:
+                  - strong [ref=e1061]: "Q: How do I handle unknown words?"
+                  - text: "A: All tokenizers have"
+                  - code [ref=e1062]: unk_token
+                  - text: that represents unknown tokens.
+                - paragraph [ref=e1063]:
+                  - strong [ref=e1064]: "Q: Can I add new tokens later?"
+                  - text: "A: Yes! Use"
+                  - code [ref=e1065]: add_tokens()
+                  - text: or
+                  - code [ref=e1066]: add_special_tokens()
+                  - text: .
+              - generic [ref=e1067]:
+                - heading "Happy Tokenizing! 🚀" [level=2] [ref=e1068]
+                - paragraph [ref=e1069]: Built with ❤️ by the AI/ML learning community
+        - contentinfo [ref=e1070]:
+          - generic [ref=e1071]:
+            - 'link "Next Phase 1: Understanding Tokens" [ref=e1072] [cursor=pointer]':
+              - /url: README_TIKTOKEN.html
+              - generic [ref=e1073]:
+                - generic [ref=e1075]: Next
+                - generic [ref=e1076]: "Phase 1: Understanding Tokens"
+              - img [ref=e1077]
+            - link "Previous HuggingFace Tokenizers Library - Complete Learning Guide" [ref=e1079] [cursor=pointer]:
+              - /url: huggingface_tokenizers_guide.html
+              - img [ref=e1080]
+              - generic [ref=e1082]:
+                - generic [ref=e1084]: Previous
+                - generic [ref=e1085]: HuggingFace Tokenizers Library - Complete Learning Guide
+          - generic [ref=e1086]:
+            - generic [ref=e1087]:
+              - generic [ref=e1088]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e1089]: v0.1.0
+            - link "GitHub" [ref=e1092] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e1093]
+      - complementary [ref=e1095]:
+        - separator "Resize right sidebar" [ref=e1096]:
+          - button "Collapse right sidebar" [ref=e1097] [cursor=pointer]: ›
+        - generic [ref=e1098]:
+          - generic [ref=e1099]: On this page
+          - list [ref=e1102]:
+            - listitem [ref=e1103]:
+              - list [ref=e1104]:
+                - listitem [ref=e1105]:
+                  - link "📚 What You’ll Learn" [ref=e1106] [cursor=pointer]:
+                    - /url: "#what-youll-learn"
+                - listitem [ref=e1107]:
+                  - link "🚀 Quick Start" [ref=e1108] [cursor=pointer]:
+                    - /url: "#quick-start"
+                  - list [ref=e1109]:
+                    - listitem [ref=e1110]:
+                      - link "Installation" [ref=e1111] [cursor=pointer]:
+                        - /url: "#installation"
+                    - listitem [ref=e1112]:
+                      - link "Your First Tokenizer (2 minutes)" [ref=e1113] [cursor=pointer]:
+                        - /url: "#your-first-tokenizer-2-minutes"
+                - listitem [ref=e1114]:
+                  - link "📖 Learning Path" [ref=e1115] [cursor=pointer]:
+                    - /url: "#learning-path"
+                  - list [ref=e1116]:
+                    - listitem [ref=e1117]:
+                      - link "1. Read the Guide (1 hour)" [ref=e1118] [cursor=pointer]:
+                        - /url: "#read-the-guide-1-hour"
+                    - listitem [ref=e1119]:
+                      - link "2. Run Quick Start Examples (30 minutes)" [ref=e1120] [cursor=pointer]:
+                        - /url: "#run-quick-start-examples-30-minutes"
+                    - listitem [ref=e1121]:
+                      - link "3. Train Your Own Tokenizers (45 minutes)" [ref=e1122] [cursor=pointer]:
+                        - /url: "#train-your-own-tokenizers-45-minutes"
+                    - listitem [ref=e1123]:
+                      - link "4. Advanced Training Methods (45 minutes)" [ref=e1124] [cursor=pointer]:
+                        - /url: "#advanced-training-methods-45-minutes"
+                    - listitem [ref=e1125]:
+                      - link "5. Production Guide (30 minutes)" [ref=e1126] [cursor=pointer]:
+                        - /url: "#production-guide-30-minutes"
+                    - listitem [ref=e1127]:
+                      - link "6. Tokenizer Comparison (20 minutes)" [ref=e1128] [cursor=pointer]:
+                        - /url: "#tokenizer-comparison-20-minutes"
+                    - listitem [ref=e1129]:
+                      - link "7. Integration Guide (30 minutes)" [ref=e1130] [cursor=pointer]:
+                        - /url: "#integration-guide-30-minutes"
+                - listitem [ref=e1131]:
+                  - link "🎯 Learning Objectives" [ref=e1132] [cursor=pointer]:
+                    - /url: "#learning-objectives"
+                - listitem [ref=e1133]:
+                  - link "📊 File Structure" [ref=e1134] [cursor=pointer]:
+                    - /url: "#file-structure"
+                - listitem [ref=e1135]:
+                  - link "🔑 Key Concepts" [ref=e1136] [cursor=pointer]:
+                    - /url: "#key-concepts"
+                  - list [ref=e1137]:
+                    - listitem [ref=e1138]:
+                      - link "Tokenization Algorithms" [ref=e1139] [cursor=pointer]:
+                        - /url: "#tokenization-algorithms"
+                    - listitem [ref=e1140]:
+                      - link "Tokenization Pipeline" [ref=e1141] [cursor=pointer]:
+                        - /url: "#tokenization-pipeline"
+                    - listitem [ref=e1142]:
+                      - link "Why HuggingFace Tokenizers?" [ref=e1143] [cursor=pointer]:
+                        - /url: "#why-huggingface-tokenizers"
+                - listitem [ref=e1144]:
+                  - link "💡 Quick Reference" [ref=e1145] [cursor=pointer]:
+                    - /url: "#quick-reference"
+                  - list [ref=e1146]:
+                    - listitem [ref=e1147]:
+                      - link "Load Pretrained" [ref=e1148] [cursor=pointer]:
+                        - /url: "#load-pretrained"
+                    - listitem [ref=e1149]:
+                      - link "Train Custom" [ref=e1150] [cursor=pointer]:
+                        - /url: "#train-custom"
+                    - listitem [ref=e1151]:
+                      - link "Encode & Decode" [ref=e1152] [cursor=pointer]:
+                        - /url: "#encode-decode"
+                    - listitem [ref=e1153]:
+                      - link "Batch Processing" [ref=e1154] [cursor=pointer]:
+                        - /url: "#batch-processing"
+                - listitem [ref=e1155]:
+                  - link "🎓 Exercises" [ref=e1156] [cursor=pointer]:
+                    - /url: "#exercises"
+                  - list [ref=e1157]:
+                    - listitem [ref=e1158]:
+                      - link "Beginner" [ref=e1159] [cursor=pointer]:
+                        - /url: "#beginner"
+                    - listitem [ref=e1160]:
+                      - link "Intermediate" [ref=e1161] [cursor=pointer]:
+                        - /url: "#intermediate"
+                    - listitem [ref=e1162]:
+                      - link "Advanced" [ref=e1163] [cursor=pointer]:
+                        - /url: "#advanced"
+                - listitem [ref=e1164]:
+                  - link "📈 Performance Tips" [ref=e1165] [cursor=pointer]:
+                    - /url: "#performance-tips"
+                - listitem [ref=e1166]:
+                  - link "🔍 Debugging Tips" [ref=e1167] [cursor=pointer]:
+                    - /url: "#debugging-tips"
+                - listitem [ref=e1168]:
+                  - link "🌟 Next Steps" [ref=e1169] [cursor=pointer]:
+                    - /url: "#next-steps"
+                - listitem [ref=e1170]:
+                  - link "📚 Additional Resources" [ref=e1171] [cursor=pointer]:
+                    - /url: "#additional-resources"
+                  - list [ref=e1172]:
+                    - listitem [ref=e1173]:
+                      - link "Official Documentation" [ref=e1174] [cursor=pointer]:
+                        - /url: "#official-documentation"
+                    - listitem [ref=e1175]:
+                      - link "Related Topics" [ref=e1176] [cursor=pointer]:
+                        - /url: "#related-topics"
+                    - listitem [ref=e1177]:
+                      - link "Community" [ref=e1178] [cursor=pointer]:
+                        - /url: "#community"
+                - listitem [ref=e1179]:
+                  - link "⏱️ Time Estimates" [ref=e1180] [cursor=pointer]:
+                    - /url: "#time-estimates"
+                - listitem [ref=e1181]:
+                  - link "🎯 Success Criteria" [ref=e1182] [cursor=pointer]:
+                    - /url: "#success-criteria"
+                - listitem [ref=e1183]:
+                  - link "🤝 Contributing" [ref=e1184] [cursor=pointer]:
+                    - /url: "#contributing"
+                - listitem [ref=e1185]:
+                  - link "📝 Notes" [ref=e1186] [cursor=pointer]:
+                    - /url: "#notes"
+                - listitem [ref=e1187]:
+                  - link "❓ FAQ" [ref=e1188] [cursor=pointer]:
+                    - /url: "#faq"
+                - listitem [ref=e1189]:
+                  - link "Happy Tokenizing! 🚀" [ref=e1190] [cursor=pointer]:
+                    - /url: "#happy-tokenizing"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

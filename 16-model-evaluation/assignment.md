@@ -1,4 +1,4 @@
-# Phase 15 Assignment: Complete Model Evaluation Pipeline
+# Assignment: Complete Model Evaluation Pipeline
 
 ## 📋 Overview
 

@@ -1,4 +1,4 @@
-# Phase 14: AI Agents - Post-Quiz
+# AI Agents - Post-Quiz
 
 Test your knowledge after completing the AI Agents phase.
 

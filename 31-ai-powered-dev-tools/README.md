@@ -1,10 +1,10 @@
-# Phase 31: AI-Powered Development with VS Code & GitHub Copilot
+# AI-Powered Development with VS Code & GitHub Copilot
 
 ## Overview
 
 This chapter teaches you how to turn VS Code into a fully AI-native development environment. We go deep on the three systems that make Copilot truly powerful: **agent mode**, **MCP (Model Context Protocol)**, and **custom instructions**.
 
-For a surface-level comparison of all AI coding tools, see [00-course-setup/ai_dev_tools_2026.md](../00-course-setup/ai_dev_tools_2026.md). This chapter focuses exclusively on VS Code + GitHub Copilot.
+For a surface-level comparison of all AI coding tools, see [00_ai_dev_tools_2026.md](00_ai_dev_tools_2026.md). This chapter focuses exclusively on VS Code + GitHub Copilot.
 
 **Prerequisites:**
 - Comfortable with Python and VS Code
@@ -103,7 +103,7 @@ Understanding how to configure these systems is as important as understanding th
 
 | Phase | Connection |
 |-------|-----------|
-| **00 — Course Setup** | `ai_dev_tools_2026.md` compares all AI coding tools; this chapter goes deep on VS Code |
+| **00 — AI Dev Tools** | `00_ai_dev_tools_2026.md` compares all AI coding tools; this chapter goes deep on VS Code |
 | **08 — RAG** | MCP servers can expose your RAG pipeline as a tool Copilot can call |
 | **15 — AI Agents** | The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does |
 | **18 — Low-Code AI Tools** | Gradio/Streamlit build UIs; this chapter builds developer workflows |

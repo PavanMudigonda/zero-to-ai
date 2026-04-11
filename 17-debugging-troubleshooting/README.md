@@ -1,4 +1,4 @@
-# Phase 17: Debugging & Troubleshooting
+# Debugging & Troubleshooting
 
 Learn systematic approaches to debug, diagnose, and optimize machine learning models and pipelines.
 

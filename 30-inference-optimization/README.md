@@ -1,4 +1,4 @@
-# Phase 30: Inference Optimization & Model Serving
+# Inference Optimization & Model Serving
 
 ## 🎯 Learning Objectives
 - [ ] Understand the memory and compute bottlenecks of LLM inference (Memory Wall vs Compute Wall).

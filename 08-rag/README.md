@@ -1,4 +1,4 @@
-# Phase 8: RAG
+# RAG
 
 ## 🎯 Overview
 

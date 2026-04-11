@@ -31,7 +31,7 @@
 
 **Latest updates (April 9, 2026):**
 - Model landscape snapshot: [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md)
-- AI dev tools snapshot: [00-course-setup/ai_dev_tools_2026.md](00-course-setup/ai_dev_tools_2026.md)
+- AI dev tools snapshot: [31-ai-powered-dev-tools/00_ai_dev_tools_2026.md](31-ai-powered-dev-tools/00_ai_dev_tools_2026.md)
 - Agent ecosystem refresh: MCP, managed agent APIs, OpenAI Agents SDK, LangGraph, Google ADK
 - Inference optimization refresh: vLLM, TensorRT-LLM, SGLang, speculative decoding, KV cache tuning
 - Hardware validation refresh: Apple MLX, AI PCs / NPUs, TPU and accelerator validation context

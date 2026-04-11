@@ -1,4 +1,4 @@
-# Phase 12: LLM Fine-Tuning
+# LLM Fine-Tuning
 
 This module is strongest when approached as decision-making, not just training mechanics. The real question is when fine-tuning is the right tool, how to prepare data well enough for it to matter, and how to evaluate whether the resulting model is actually better than prompting or RAG.
 

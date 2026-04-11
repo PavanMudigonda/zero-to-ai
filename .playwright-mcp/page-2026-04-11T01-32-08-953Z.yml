@@ -1,0 +1,562 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Overview" [ref=e18] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - link "Core Systems" [ref=e20] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - link "Advanced Topics" [ref=e22] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - link "End-to-End Flows" [ref=e24] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - link "Course Setup" [ref=e28] [cursor=pointer]:
+                - /url: ../00-course-setup/README.html
+              - img [ref=e31] [cursor=pointer]
+            - listitem [ref=e33]:
+              - link "Python Fundamentals" [ref=e34] [cursor=pointer]:
+                - /url: ../01-python/README.html
+            - listitem [ref=e35]:
+              - link "Data Science Foundations" [ref=e36] [cursor=pointer]:
+                - /url: ../02-data-science/README.html
+              - img [ref=e39] [cursor=pointer]
+            - listitem [ref=e41]:
+              - link "Mathematics for ML" [ref=e42] [cursor=pointer]:
+                - /url: ../03-maths/README.html
+              - img [ref=e45] [cursor=pointer]
+          - heading "Core AI" [ref=e47]
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - link "Tokenization" [ref=e50] [cursor=pointer]:
+                - /url: ../04-token/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - link "Embeddings" [ref=e56] [cursor=pointer]:
+                - /url: ../05-embeddings/README.html
+              - img [ref=e59] [cursor=pointer]
+            - listitem [ref=e61]:
+              - link "Neural Networks" [ref=e62] [cursor=pointer]:
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e65] [cursor=pointer]
+          - heading "Applied AI" [ref=e67]
+          - list [ref=e68]:
+            - listitem [ref=e69]:
+              - link "Vector Databases" [ref=e70] [cursor=pointer]:
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - link "RAG" [ref=e76] [cursor=pointer]:
+                - /url: ../08-rag/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - link "MLOps" [ref=e82] [cursor=pointer]:
+                - /url: ../09-mlops/README.html
+              - img [ref=e85] [cursor=pointer]
+            - listitem [ref=e87]:
+              - link "Specializations" [ref=e88] [cursor=pointer]:
+                - /url: ../10-specializations/README.html
+              - img [ref=e91] [cursor=pointer]
+          - heading "Advanced" [ref=e93]
+          - list [ref=e94]:
+            - listitem [ref=e95]:
+              - link "Prompt Engineering" [ref=e96] [cursor=pointer]:
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - link "LLM Fine-Tuning" [ref=e102] [cursor=pointer]:
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - link "Multimodal AI" [ref=e108] [cursor=pointer]:
+                - /url: ../13-multimodal/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - link "Local LLMs" [ref=e114] [cursor=pointer]:
+                - /url: ../14-local-llms/README.html
+              - img [ref=e117] [cursor=pointer]
+            - listitem [ref=e119]:
+              - link "AI Agents" [ref=e120] [cursor=pointer]:
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e123] [cursor=pointer]
+          - heading "Supplementary" [ref=e125]
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - link "Model Evaluation" [ref=e128] [cursor=pointer]:
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - link "Debugging & Troubleshooting" [ref=e134] [cursor=pointer]:
+                - /url: ../17-debugging/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - link "Low-Code AI Tools" [ref=e140] [cursor=pointer]:
+                - /url: ../18-low-code/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - link "AI Safety & Red Teaming" [ref=e146] [cursor=pointer]:
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e149] [cursor=pointer]
+            - listitem [ref=e151]:
+              - link "Real-Time & Streaming AI" [ref=e152] [cursor=pointer]:
+                - /url: ../20-streaming/README.html
+              - img [ref=e155] [cursor=pointer]
+          - heading "Reference" [ref=e157]
+          - list [ref=e158]:
+            - listitem [ref=e159]:
+              - link "Quizzes" [ref=e160] [cursor=pointer]:
+                - /url: ../21-quizzes/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - link "References & Hands-On Labs" [ref=e166] [cursor=pointer]:
+                - /url: ../22-references/README.html
+              - img [ref=e169] [cursor=pointer]
+            - listitem [ref=e171]:
+              - link "Glossary & Foundations" [ref=e172] [cursor=pointer]:
+                - /url: ../23-glossary/README.html
+              - img [ref=e175] [cursor=pointer]
+          - heading "Research" [ref=e177]
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - link "Advanced Deep Learning" [ref=e180] [cursor=pointer]:
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e183] [cursor=pointer]
+            - listitem [ref=e185]:
+              - link "Reinforcement Learning" [ref=e186] [cursor=pointer]:
+                - /url: ../25-rl/README.html
+              - img [ref=e189] [cursor=pointer]
+            - listitem [ref=e191]:
+              - link "Time Series Analysis & Forecasting" [ref=e192] [cursor=pointer]:
+                - /url: ../26-time-series/README.html
+              - img [ref=e195] [cursor=pointer]
+            - listitem [ref=e197]:
+              - link "Causal Inference" [ref=e198] [cursor=pointer]:
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e201] [cursor=pointer]
+          - heading "Production" [ref=e203]
+          - list [ref=e204]:
+            - listitem [ref=e205]:
+              - link "Practical Data Science" [ref=e206] [cursor=pointer]:
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e209] [cursor=pointer]
+            - listitem [ref=e211]:
+              - link "AI Hardware & Validation" [ref=e212] [cursor=pointer]:
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e215] [cursor=pointer]
+            - listitem [ref=e217]:
+              - link "Inference Optimization & Model Serving" [ref=e218] [cursor=pointer]:
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e221] [cursor=pointer]
+          - heading "Developer Tools" [ref=e223]
+          - list [ref=e224]:
+            - listitem [ref=e225]:
+              - link "AI-Powered Development with VS Code & GitHub Copilot" [ref=e226] [cursor=pointer]:
+                - /url: "#"
+              - img [ref=e229] [cursor=pointer]
+              - list [ref=e231]:
+                - listitem [ref=e232]:
+                  - link "AI Coding Tools for ML Engineers (March 2026)" [ref=e233] [cursor=pointer]:
+                    - /url: 00_ai_dev_tools_2026.html
+                - listitem [ref=e234]:
+                  - link "VS Code AI Setup Guide" [ref=e235] [cursor=pointer]:
+                    - /url: 01_vscode_ai_setup.html
+                - listitem [ref=e236]:
+                  - 'link "MCP Deep Dive: Model Context Protocol" [ref=e237] [cursor=pointer]':
+                    - /url: 02_mcp_deep_dive.html
+                - listitem [ref=e238]:
+                  - link "GitHub Copilot Customization Guide" [ref=e239] [cursor=pointer]:
+                    - /url: 03_copilot_instructions_guide.html
+                - listitem [ref=e240]:
+                  - link "VS Code + GitHub Copilot Workflows" [ref=e241] [cursor=pointer]:
+                    - /url: 04_copilot_workflows.html
+                - listitem [ref=e242]:
+                  - link "Build a Simple MCP Server in Python" [ref=e243] [cursor=pointer]:
+                    - /url: 05_build_mcp_server.html
+      - separator "Resize left sidebar" [ref=e244]:
+        - button "Collapse left sidebar" [ref=e245] [cursor=pointer]: ‹
+    - generic [ref=e246]:
+      - generic [ref=e247]:
+        - generic [ref=e248]:
+          - generic [ref=e249]:
+            - link "View this page" [ref=e251] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/31-ai-dev-tools/README.md?plain=true
+              - img [ref=e252]
+              - generic [ref=e254]: View this page
+            - link "Edit this page" [ref=e256] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/31-ai-dev-tools/README.md
+              - img [ref=e257]
+              - generic [ref=e259]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e261] [cursor=pointer]:
+              - img [ref=e262]
+            - img [ref=e266] [cursor=pointer]
+          - main [ref=e268]:
+            - generic [ref=e269]:
+              - heading "AI-Powered Development with VS Code & GitHub Copilot" [level=1] [ref=e270]
+              - generic [ref=e271]:
+                - heading "Overview" [level=2] [ref=e272]
+                - paragraph [ref=e273]:
+                  - text: "This chapter teaches you how to turn VS Code into a fully AI-native development environment. We go deep on the three systems that make Copilot truly powerful:"
+                  - strong [ref=e274]: agent mode
+                  - text: ","
+                  - strong [ref=e275]: MCP (Model Context Protocol)
+                  - text: ", and"
+                  - strong [ref=e276]: custom instructions
+                  - text: .
+                - paragraph [ref=e277]:
+                  - text: For a surface-level comparison of all AI coding tools, see
+                  - link "00_ai_dev_tools_2026.md" [ref=e278] [cursor=pointer]:
+                    - /url: 00_ai_dev_tools_2026.html
+                  - text: . This chapter focuses exclusively on VS Code + GitHub Copilot.
+                - paragraph [ref=e279]:
+                  - strong [ref=e280]: "Prerequisites:"
+                - list [ref=e281]:
+                  - listitem [ref=e282]:
+                    - paragraph [ref=e283]: Comfortable with Python and VS Code
+                  - listitem [ref=e284]:
+                    - paragraph [ref=e285]: Familiarity with git basics
+                  - listitem [ref=e286]:
+                    - paragraph [ref=e287]: Completed at least Phases 0-8 of the curriculum
+                - paragraph [ref=e288]:
+                  - strong [ref=e289]: "Time:"
+                  - text: 1 week | 10-15 hours
+                  - strong [ref=e290]: "Outcome:"
+                  - text: A fully configured VS Code environment with Copilot agent mode, MCP servers, custom instructions, and model routing
+              - generic [ref=e291]:
+                - heading "What You’ll Learn" [level=2] [ref=e292]
+                - list [ref=e293]:
+                  - listitem [ref=e294]:
+                    - paragraph [ref=e295]:
+                      - checkbox [disabled] [ref=e296]
+                      - text: "How Copilot’s three modes work: completions, chat, and agent mode"
+                  - listitem [ref=e297]:
+                    - paragraph [ref=e298]:
+                      - checkbox [disabled] [ref=e299]
+                      - text: How to configure and use MCP servers to connect Copilot to databases, browsers, and APIs
+                  - listitem [ref=e300]:
+                    - paragraph [ref=e301]:
+                      - checkbox [disabled] [ref=e302]
+                      - text: How to write custom instructions (
+                      - code [ref=e303]: .github/copilot-instructions.md
+                      - text: ","
+                      - code [ref=e304]: .instructions.md
+                      - text: ","
+                      - code [ref=e305]: .prompt.md
+                      - text: )
+                  - listitem [ref=e306]:
+                    - paragraph [ref=e307]:
+                      - checkbox [disabled] [ref=e308]
+                      - text: How to select and route between models (GPT-4o, Claude, o3, Gemini)
+                  - listitem [ref=e309]:
+                    - paragraph [ref=e310]:
+                      - checkbox [disabled] [ref=e311]
+                      - text: How to build your own MCP server in Python
+                  - listitem [ref=e312]:
+                    - paragraph [ref=e313]:
+                      - checkbox [disabled] [ref=e314]
+                      - text: Real VS Code workflows for multi-file editing, debugging, testing, and code review
+              - generic [ref=e315]:
+                - heading "Module Structure" [level=2] [ref=e316]
+                - generic [ref=e318]:
+                  - generic [ref=e319]: "31-ai-powered-dev-tools/ ├── README.md # This file ├── 01_vscode_ai_setup.md # Copilot modes, model selection, settings ├── 02_mcp_deep_dive.md # MCP protocol, server catalog, configuration ├── 03_copilot_instructions_guide.md # All 7 customization primitives ├── 04_copilot_workflows.md # Real VS Code + Copilot workflows └── 05_build_mcp_server.ipynb # Hands-on: build an MCP server in Python"
+                  - button "Copy to clipboard" [ref=e320] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e321]
+              - generic [ref=e325]:
+                - heading "Learning Path" [level=2] [ref=e326]
+                - generic [ref=e327]:
+                  - 'heading "Day 1-2: VS Code AI Setup" [level=3] [ref=e328]'
+                  - list [ref=e329]:
+                    - listitem [ref=e330]:
+                      - paragraph [ref=e331]:
+                        - checkbox [disabled] [ref=e332]
+                        - text: Read
+                        - code [ref=e333]: 01_vscode_ai_setup.md
+                    - listitem [ref=e334]:
+                      - paragraph [ref=e335]:
+                        - checkbox [disabled] [ref=e336]
+                        - text: Configure Copilot agent mode and model selection
+                    - listitem [ref=e337]:
+                      - paragraph [ref=e338]:
+                        - checkbox [disabled] [ref=e339]
+                        - text: Set up at least one MCP server in your workspace
+                    - listitem [ref=e340]:
+                      - paragraph [ref=e341]:
+                        - checkbox [disabled] [ref=e342]
+                        - strong [ref=e343]: "Exercise:"
+                        - text: Use agent mode to refactor a file, run tests, and fix failures
+                - generic [ref=e344]:
+                  - 'heading "Day 3-4: MCP Deep Dive" [level=3] [ref=e345]'
+                  - list [ref=e346]:
+                    - listitem [ref=e347]:
+                      - paragraph [ref=e348]:
+                        - checkbox [disabled] [ref=e349]
+                        - text: Read
+                        - code [ref=e350]: 02_mcp_deep_dive.md
+                    - listitem [ref=e351]:
+                      - paragraph [ref=e352]:
+                        - checkbox [disabled] [ref=e353]
+                        - text: "Understand the MCP protocol: tools, resources, prompts"
+                    - listitem [ref=e354]:
+                      - paragraph [ref=e355]:
+                        - checkbox [disabled] [ref=e356]
+                        - text: Configure Playwright MCP, a database MCP, or a filesystem MCP
+                    - listitem [ref=e357]:
+                      - paragraph [ref=e358]:
+                        - checkbox [disabled] [ref=e359]
+                        - text: Run through
+                        - code [ref=e360]: 05_build_mcp_server.ipynb
+                        - text: to build your own
+                    - listitem [ref=e361]:
+                      - paragraph [ref=e362]:
+                        - checkbox [disabled] [ref=e363]
+                        - strong [ref=e364]: "Exercise:"
+                        - text: Build an MCP server that exposes your project’s test results
+                - generic [ref=e365]:
+                  - 'heading "Day 5: Custom Instructions and Workflows" [level=3] [ref=e366]'
+                  - list [ref=e367]:
+                    - listitem [ref=e368]:
+                      - paragraph [ref=e369]:
+                        - checkbox [disabled] [ref=e370]
+                        - text: Read
+                        - code [ref=e371]: 03_copilot_instructions_guide.md
+                    - listitem [ref=e372]:
+                      - paragraph [ref=e373]:
+                        - checkbox [disabled] [ref=e374]
+                        - text: Create a
+                        - code [ref=e375]: .github/copilot-instructions.md
+                        - text: for this repo
+                    - listitem [ref=e376]:
+                      - paragraph [ref=e377]:
+                        - checkbox [disabled] [ref=e378]
+                        - text: Create at least one scoped
+                        - code [ref=e379]: .instructions.md
+                        - text: file
+                    - listitem [ref=e380]:
+                      - paragraph [ref=e381]:
+                        - checkbox [disabled] [ref=e382]
+                        - text: Read
+                        - code [ref=e383]: 04_copilot_workflows.md
+                    - listitem [ref=e384]:
+                      - paragraph [ref=e385]:
+                        - checkbox [disabled] [ref=e386]
+                        - strong [ref=e387]: "Exercise:"
+                        - text: Create a
+                        - code [ref=e388]: .prompt.md
+                        - text: file for a common task in your project
+              - generic [ref=e389]:
+                - heading "Key Concepts" [level=2] [ref=e390]
+                - generic [ref=e391]:
+                  - heading "The Three Layers of AI-Assisted Development" [level=3] [ref=e392]
+                  - generic [ref=e394]:
+                    - generic [ref=e395]: "┌─────────────────────────────────────────────┐ │ Layer 3: Agent Mode │ │ (multi-file edits, test-run-fix loops, │ │ autonomous task completion) │ ├─────────────────────────────────────────────┤ │ Layer 2: MCP Tools │ │ (database access, web search, file system, │ │ API calls, custom tools) │ ├─────────────────────────────────────────────┤ │ Layer 1: Custom Instructions │ │ (copilot-instructions.md, │ │ .instructions.md, .prompt.md) │ └─────────────────────────────────────────────┘"
+                    - button "Copy to clipboard" [ref=e396] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e397]
+                  - paragraph [ref=e401]: Most developers only use Layer 3 (the chat). The 10x productivity gain comes from configuring Layers 1 and 2 properly.
+                - generic [ref=e402]:
+                  - heading "Why This Chapter Exists" [level=3] [ref=e403]
+                  - paragraph [ref=e404]: "Copilot in 2026 is not autocomplete. It is:"
+                  - list [ref=e405]:
+                    - listitem [ref=e406]:
+                      - paragraph [ref=e407]:
+                        - text: An
+                        - strong [ref=e408]: agent
+                        - text: that reads your codebase, runs commands, and iterates on errors
+                    - listitem [ref=e409]:
+                      - paragraph [ref=e410]:
+                        - strong [ref=e411]: Protocol-connected
+                        - text: via MCP to databases, APIs, browsers, and cloud services
+                    - listitem [ref=e412]:
+                      - paragraph [ref=e413]:
+                        - strong [ref=e414]: Instruction-driven
+                        - text: by project-level config files that shape every response
+                    - listitem [ref=e415]:
+                      - paragraph [ref=e416]:
+                        - strong [ref=e417]: Multi-model
+                        - text: with routing between GPT-4o, Claude, o3, and Gemini per task
+                  - paragraph [ref=e418]: Understanding how to configure these systems is as important as understanding the models themselves.
+              - generic [ref=e419]:
+                - heading "How This Chapter Relates to Other Phases" [level=2] [ref=e420]
+                - table [ref=e422]:
+                  - rowgroup [ref=e423]:
+                    - row "Phase Connection" [ref=e424]:
+                      - columnheader "Phase" [ref=e425]:
+                        - paragraph [ref=e426]: Phase
+                      - columnheader "Connection" [ref=e427]:
+                        - paragraph [ref=e428]: Connection
+                  - rowgroup [ref=e429]:
+                    - row "00 — AI Dev Tools 00_ai_dev_tools_2026.md compares all AI coding tools; this chapter goes deep on VS Code" [ref=e430]:
+                      - cell "00 — AI Dev Tools" [ref=e431]:
+                        - paragraph [ref=e432]:
+                          - strong [ref=e433]: 00 — AI Dev Tools
+                      - cell "00_ai_dev_tools_2026.md compares all AI coding tools; this chapter goes deep on VS Code" [ref=e434]:
+                        - paragraph [ref=e435]:
+                          - code [ref=e436]: 00_ai_dev_tools_2026.md
+                          - text: compares all AI coding tools; this chapter goes deep on VS Code
+                    - row "08 — RAG MCP servers can expose your RAG pipeline as a tool Copilot can call" [ref=e437]:
+                      - cell "08 — RAG" [ref=e438]:
+                        - paragraph [ref=e439]:
+                          - strong [ref=e440]: 08 — RAG
+                      - cell "MCP servers can expose your RAG pipeline as a tool Copilot can call" [ref=e441]:
+                        - paragraph [ref=e442]: MCP servers can expose your RAG pipeline as a tool Copilot can call
+                    - row "15 — AI Agents The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does" [ref=e443]:
+                      - cell "15 — AI Agents" [ref=e444]:
+                        - paragraph [ref=e445]:
+                          - strong [ref=e446]: 15 — AI Agents
+                      - cell "The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does" [ref=e447]:
+                        - paragraph [ref=e448]: The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does
+                    - row "18 — Low-Code AI Tools Gradio/Streamlit build UIs; this chapter builds developer workflows" [ref=e449]:
+                      - cell "18 — Low-Code AI Tools" [ref=e450]:
+                        - paragraph [ref=e451]:
+                          - strong [ref=e452]: 18 — Low-Code AI Tools
+                      - cell "Gradio/Streamlit build UIs; this chapter builds developer workflows" [ref=e453]:
+                        - paragraph [ref=e454]: Gradio/Streamlit build UIs; this chapter builds developer workflows
+              - generic [ref=e455]:
+                - 'heading "Quick Reference: Copilot Configuration Files" [level=2] [ref=e456]'
+                - table [ref=e458]:
+                  - rowgroup [ref=e459]:
+                    - row "File Purpose Scope" [ref=e460]:
+                      - columnheader "File" [ref=e461]:
+                        - paragraph [ref=e462]: File
+                      - columnheader "Purpose" [ref=e463]:
+                        - paragraph [ref=e464]: Purpose
+                      - columnheader "Scope" [ref=e465]:
+                        - paragraph [ref=e466]: Scope
+                  - rowgroup [ref=e467]:
+                    - row ".github/copilot-instructions.md Project-wide coding rules All Copilot interactions in this repo" [ref=e468]:
+                      - cell ".github/copilot-instructions.md" [ref=e469]:
+                        - paragraph [ref=e470]:
+                          - code [ref=e471]: .github/copilot-instructions.md
+                      - cell "Project-wide coding rules" [ref=e472]:
+                        - paragraph [ref=e473]: Project-wide coding rules
+                      - cell "All Copilot interactions in this repo" [ref=e474]:
+                        - paragraph [ref=e475]: All Copilot interactions in this repo
+                    - row ".instructions.md (with applyTo frontmatter) Scoped rules for specific files/dirs Files matching the glob pattern" [ref=e476]:
+                      - cell ".instructions.md (with applyTo frontmatter)" [ref=e477]:
+                        - paragraph [ref=e478]:
+                          - code [ref=e479]: .instructions.md
+                          - text: (with
+                          - code [ref=e480]: applyTo
+                          - text: frontmatter)
+                      - cell "Scoped rules for specific files/dirs" [ref=e481]:
+                        - paragraph [ref=e482]: Scoped rules for specific files/dirs
+                      - cell "Files matching the glob pattern" [ref=e483]:
+                        - paragraph [ref=e484]: Files matching the glob pattern
+                    - row ".prompt.md files (in .github/prompts/) Reusable agent workflow templates Available in the prompt picker" [ref=e485]:
+                      - cell ".prompt.md files (in .github/prompts/)" [ref=e486]:
+                        - paragraph [ref=e487]:
+                          - code [ref=e488]: .prompt.md
+                          - text: files (in
+                          - code [ref=e489]: .github/prompts/
+                          - text: )
+                      - cell "Reusable agent workflow templates" [ref=e490]:
+                        - paragraph [ref=e491]: Reusable agent workflow templates
+                      - cell "Available in the prompt picker" [ref=e492]:
+                        - paragraph [ref=e493]: Available in the prompt picker
+                    - row ".vscode/mcp.json MCP server configuration This workspace" [ref=e494]:
+                      - cell ".vscode/mcp.json" [ref=e495]:
+                        - paragraph [ref=e496]:
+                          - code [ref=e497]: .vscode/mcp.json
+                      - cell "MCP server configuration" [ref=e498]:
+                        - paragraph [ref=e499]: MCP server configuration
+                      - cell "This workspace" [ref=e500]:
+                        - paragraph [ref=e501]: This workspace
+                    - row ".mcp.json (project root) MCP server configuration (shared) This project, also Claude Code" [ref=e502]:
+                      - cell ".mcp.json (project root)" [ref=e503]:
+                        - paragraph [ref=e504]:
+                          - code [ref=e505]: .mcp.json
+                          - text: (project root)
+                      - cell "MCP server configuration (shared)" [ref=e506]:
+                        - paragraph [ref=e507]: MCP server configuration (shared)
+                      - cell "This project, also Claude Code" [ref=e508]:
+                        - paragraph [ref=e509]: This project, also Claude Code
+                - paragraph [ref=e510]:
+                  - emphasis [ref=e511]:
+                    - text: Part of the
+                    - link "Zero to AI" [ref=e512] [cursor=pointer]:
+                      - /url: ../../index.html
+                    - text: curriculum — Phase 31
+        - contentinfo [ref=e513]:
+          - generic [ref=e514]:
+            - 'link "Next vLLM Quickstart: High-Throughput Model Serving" [ref=e515] [cursor=pointer]':
+              - /url: ../30-inference-opt/03_serving_with_vllm.html
+              - generic [ref=e516]:
+                - generic [ref=e518]: Next
+                - generic [ref=e519]: "vLLM Quickstart: High-Throughput Model Serving"
+              - img [ref=e520]
+            - link "Previous AI Coding Tools for ML Engineers (March 2026)" [ref=e522] [cursor=pointer]:
+              - /url: 00_ai_dev_tools_2026.html
+              - img [ref=e523]
+              - generic [ref=e525]:
+                - generic [ref=e527]: Previous
+                - generic [ref=e528]: AI Coding Tools for ML Engineers (March 2026)
+          - generic [ref=e529]:
+            - generic [ref=e530]:
+              - generic [ref=e531]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e532]: v0.1.0
+            - link "GitHub" [ref=e535] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e536]
+      - complementary [ref=e538]:
+        - separator "Resize right sidebar" [ref=e539]:
+          - button "Collapse right sidebar" [ref=e540] [cursor=pointer]: ›
+        - generic [ref=e541]:
+          - generic [ref=e542]: On this page
+          - list [ref=e545]:
+            - listitem [ref=e546]:
+              - list [ref=e547]:
+                - listitem [ref=e548]:
+                  - link "Overview" [ref=e549] [cursor=pointer]:
+                    - /url: "#overview"
+                - listitem [ref=e550]:
+                  - link "What You’ll Learn" [ref=e551] [cursor=pointer]:
+                    - /url: "#what-youll-learn"
+                - listitem [ref=e552]:
+                  - link "Module Structure" [ref=e553] [cursor=pointer]:
+                    - /url: "#module-structure"
+                - listitem [ref=e554]:
+                  - link "Learning Path" [ref=e555] [cursor=pointer]:
+                    - /url: "#learning-path"
+                  - list [ref=e556]:
+                    - listitem [ref=e557]:
+                      - 'link "Day 1-2: VS Code AI Setup" [ref=e558] [cursor=pointer]':
+                        - /url: "#day-1-2-vs-code-ai-setup"
+                    - listitem [ref=e559]:
+                      - 'link "Day 3-4: MCP Deep Dive" [ref=e560] [cursor=pointer]':
+                        - /url: "#day-3-4-mcp-deep-dive"
+                    - listitem [ref=e561]:
+                      - 'link "Day 5: Custom Instructions and Workflows" [ref=e562] [cursor=pointer]':
+                        - /url: "#day-5-custom-instructions-and-workflows"
+                - listitem [ref=e563]:
+                  - link "Key Concepts" [ref=e564] [cursor=pointer]:
+                    - /url: "#key-concepts"
+                  - list [ref=e565]:
+                    - listitem [ref=e566]:
+                      - link "The Three Layers of AI-Assisted Development" [ref=e567] [cursor=pointer]:
+                        - /url: "#the-three-layers-of-ai-assisted-development"
+                    - listitem [ref=e568]:
+                      - link "Why This Chapter Exists" [ref=e569] [cursor=pointer]:
+                        - /url: "#why-this-chapter-exists"
+                - listitem [ref=e570]:
+                  - link "How This Chapter Relates to Other Phases" [ref=e571] [cursor=pointer]:
+                    - /url: "#how-this-chapter-relates-to-other-phases"
+                - listitem [ref=e572]:
+                  - 'link "Quick Reference: Copilot Configuration Files" [ref=e573] [cursor=pointer]':
+                    - /url: "#quick-reference-copilot-configuration-files"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

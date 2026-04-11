@@ -1,4 +1,4 @@
-# Phase 26: Time Series Analysis & Forecasting
+# Time Series Analysis & Forecasting
 
 > "The future is uncertain, but the past is fixed. Time series analysis bridges them." - Anonymous
 

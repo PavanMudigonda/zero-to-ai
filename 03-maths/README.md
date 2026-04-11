@@ -1,4 +1,4 @@
-# Phase 3: Mathematics for ML
+# Mathematics for ML
 
 Mathematical foundations for the rest of the curriculum. The goal is enough fluency to understand optimization, probability, embeddings, attention, and evaluation without treating them as magic.
 

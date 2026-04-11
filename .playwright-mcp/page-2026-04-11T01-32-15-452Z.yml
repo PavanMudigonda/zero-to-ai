@@ -1,0 +1,437 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: "#"
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Overview" [ref=e18] [cursor=pointer]:
+                - /url: generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - link "Core Systems" [ref=e20] [cursor=pointer]:
+                - /url: generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - link "Advanced Topics" [ref=e22] [cursor=pointer]:
+                - /url: generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - link "End-to-End Flows" [ref=e24] [cursor=pointer]:
+                - /url: generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - link "Course Setup" [ref=e28] [cursor=pointer]:
+                - /url: curriculum/00-course-setup/README.html
+              - img [ref=e31] [cursor=pointer]
+            - listitem [ref=e33]:
+              - link "Python Fundamentals" [ref=e34] [cursor=pointer]:
+                - /url: curriculum/01-python/README.html
+            - listitem [ref=e35]:
+              - link "Data Science Foundations" [ref=e36] [cursor=pointer]:
+                - /url: curriculum/02-data-science/README.html
+              - img [ref=e39] [cursor=pointer]
+            - listitem [ref=e41]:
+              - link "Mathematics for ML" [ref=e42] [cursor=pointer]:
+                - /url: curriculum/03-maths/README.html
+              - img [ref=e45] [cursor=pointer]
+              - text: e x A x = b
+          - heading "Core AI" [ref=e47]
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - link "Tokenization" [ref=e50] [cursor=pointer]:
+                - /url: curriculum/04-token/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - link "Embeddings" [ref=e56] [cursor=pointer]:
+                - /url: curriculum/05-embeddings/README.html
+              - img [ref=e59] [cursor=pointer]
+            - listitem [ref=e61]:
+              - link "Neural Networks" [ref=e62] [cursor=pointer]:
+                - /url: curriculum/06-neural-networks/README.html
+              - img [ref=e65] [cursor=pointer]
+          - heading "Applied AI" [ref=e67]
+          - list [ref=e68]:
+            - listitem [ref=e69]:
+              - link "Vector Databases" [ref=e70] [cursor=pointer]:
+                - /url: curriculum/07-vector-databases/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - link "RAG" [ref=e76] [cursor=pointer]:
+                - /url: curriculum/08-rag/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - link "MLOps" [ref=e82] [cursor=pointer]:
+                - /url: curriculum/09-mlops/README.html
+              - img [ref=e85] [cursor=pointer]
+            - listitem [ref=e87]:
+              - link "Specializations" [ref=e88] [cursor=pointer]:
+                - /url: curriculum/10-specializations/README.html
+              - img [ref=e91] [cursor=pointer]
+          - heading "Advanced" [ref=e93]
+          - list [ref=e94]:
+            - listitem [ref=e95]:
+              - link "Prompt Engineering" [ref=e96] [cursor=pointer]:
+                - /url: curriculum/11-prompt-engineering/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - link "LLM Fine-Tuning" [ref=e102] [cursor=pointer]:
+                - /url: curriculum/12-llm-finetuning/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - link "Multimodal AI" [ref=e108] [cursor=pointer]:
+                - /url: curriculum/13-multimodal/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - link "Local LLMs" [ref=e114] [cursor=pointer]:
+                - /url: curriculum/14-local-llms/README.html
+              - img [ref=e117] [cursor=pointer]
+            - listitem [ref=e119]:
+              - link "AI Agents" [ref=e120] [cursor=pointer]:
+                - /url: curriculum/15-ai-agents/README.html
+              - img [ref=e123] [cursor=pointer]
+          - heading "Supplementary" [ref=e125]
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - link "Model Evaluation" [ref=e128] [cursor=pointer]:
+                - /url: curriculum/16-model-evaluation/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - link "Debugging & Troubleshooting" [ref=e134] [cursor=pointer]:
+                - /url: curriculum/17-debugging/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - link "Low-Code AI Tools" [ref=e140] [cursor=pointer]:
+                - /url: curriculum/18-low-code/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - link "AI Safety & Red Teaming" [ref=e146] [cursor=pointer]:
+                - /url: curriculum/19-ai-safety/README.html
+              - img [ref=e149] [cursor=pointer]
+            - listitem [ref=e151]:
+              - link "Real-Time & Streaming AI" [ref=e152] [cursor=pointer]:
+                - /url: curriculum/20-streaming/README.html
+              - img [ref=e155] [cursor=pointer]
+          - heading "Reference" [ref=e157]
+          - list [ref=e158]:
+            - listitem [ref=e159]:
+              - link "Quizzes" [ref=e160] [cursor=pointer]:
+                - /url: curriculum/21-quizzes/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - link "References & Hands-On Labs" [ref=e166] [cursor=pointer]:
+                - /url: curriculum/22-references/README.html
+              - img [ref=e169] [cursor=pointer]
+            - listitem [ref=e171]:
+              - link "Glossary & Foundations" [ref=e172] [cursor=pointer]:
+                - /url: curriculum/23-glossary/README.html
+              - img [ref=e175] [cursor=pointer]
+          - heading "Research" [ref=e177]
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - link "Advanced Deep Learning" [ref=e180] [cursor=pointer]:
+                - /url: curriculum/24-advanced-dl/README.html
+              - img [ref=e183] [cursor=pointer]
+            - listitem [ref=e185]:
+              - link "Reinforcement Learning" [ref=e186] [cursor=pointer]:
+                - /url: curriculum/25-rl/README.html
+              - img [ref=e189] [cursor=pointer]
+            - listitem [ref=e191]:
+              - link "Time Series Analysis & Forecasting" [ref=e192] [cursor=pointer]:
+                - /url: curriculum/26-time-series/README.html
+              - img [ref=e195] [cursor=pointer]
+            - listitem [ref=e197]:
+              - link "Causal Inference" [ref=e198] [cursor=pointer]:
+                - /url: curriculum/27-causal-inference/README.html
+              - img [ref=e201] [cursor=pointer]
+          - heading "Production" [ref=e203]
+          - list [ref=e204]:
+            - listitem [ref=e205]:
+              - link "Practical Data Science" [ref=e206] [cursor=pointer]:
+                - /url: curriculum/28-practical-ds/README.html
+              - img [ref=e209] [cursor=pointer]
+            - listitem [ref=e211]:
+              - link "AI Hardware & Validation" [ref=e212] [cursor=pointer]:
+                - /url: curriculum/29-ai-hardware/README.html
+              - img [ref=e215] [cursor=pointer]
+            - listitem [ref=e217]:
+              - link "Inference Optimization & Model Serving" [ref=e218] [cursor=pointer]:
+                - /url: curriculum/30-inference-opt/README.html
+              - img [ref=e221] [cursor=pointer]
+          - heading "Developer Tools" [ref=e223]
+          - list [ref=e224]:
+            - listitem [ref=e225]:
+              - link "AI-Powered Development with VS Code & GitHub Copilot" [ref=e226] [cursor=pointer]:
+                - /url: curriculum/31-ai-dev-tools/README.html
+              - img [ref=e229] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e231]:
+        - button "Collapse left sidebar" [ref=e232] [cursor=pointer]: ‹
+    - generic [ref=e233]:
+      - generic [ref=e234]:
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - link "View this page" [ref=e238] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/index.md?plain=true
+              - img [ref=e239]
+              - generic [ref=e241]: View this page
+            - link "Edit this page" [ref=e243] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/index.md
+              - img [ref=e244]
+              - generic [ref=e246]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e248] [cursor=pointer]:
+              - img [ref=e249]
+            - img [ref=e253] [cursor=pointer]
+          - main [ref=e255]:
+            - generic [ref=e256]:
+              - generic [ref=e257]:
+                - heading "Zero to AI" [level=1] [ref=e258]
+                - paragraph [ref=e259]:
+                  - strong [ref=e260]: A comprehensive curriculum from Python fundamentals to production-ready AI systems
+                - paragraph [ref=e261]: Master machine learning, deep learning, LLMs, RAG, agents, and MLOps through hands-on notebooks and real projects.
+                - generic [ref=e262]:
+                  - link "Open In Colab" [ref=e263] [cursor=pointer]:
+                    - /url: https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main
+                    - img "Open In Colab" [ref=e264]
+                  - link "Open in Codespaces" [ref=e265] [cursor=pointer]:
+                    - /url: https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai
+                    - img "Open in Codespaces" [ref=e266]
+                  - link "GitHub Stars" [ref=e267] [cursor=pointer]:
+                    - /url: https://github.com/PavanMudigonda/zero-to-ai
+                    - img "GitHub Stars" [ref=e268]
+              - generic [ref=e269]:
+                - generic [ref=e270]:
+                  - generic [ref=e271]: "31"
+                  - text: Phases
+                - generic [ref=e272]:
+                  - generic [ref=e273]: 950+
+                  - text: Notebooks
+                - generic [ref=e274]:
+                  - generic [ref=e275]: "3"
+                  - text: Learning Tracks
+                - generic [ref=e276]:
+                  - generic [ref=e277]: 6-12
+                  - text: Months
+              - generic [ref=e278]:
+                - heading "Choose Your Track" [level=2] [ref=e279]
+                - paragraph [ref=e280]: Pick the path that matches your goals and timeline.
+              - generic [ref=e281]:
+                - generic [ref=e282]:
+                  - generic [ref=e283]: 4-6 months
+                  - heading "AI Engineer" [level=3] [ref=e284]
+                  - paragraph [ref=e285]: LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications fast.
+                  - paragraph [ref=e286]:
+                    - strong [ref=e287]: "Key phases:"
+                    - text: Embeddings, RAG, Prompt Engineering, Agents, MLOps
+                  - paragraph [ref=e288]:
+                    - link "Get started →" [ref=e289] [cursor=pointer]:
+                      - /url: curriculum/00-course-setup/README.html
+                - generic [ref=e290]:
+                  - generic [ref=e291]: 8-10 months
+                  - heading "ML Engineer" [level=3] [ref=e292]
+                  - paragraph [ref=e293]: Full foundation plus advanced topics. Deep understanding of models, math, and infrastructure.
+                  - paragraph [ref=e294]:
+                    - strong [ref=e295]: "Key phases:"
+                    - text: Math, Neural Networks, Fine-tuning, MLOps, Evaluation
+                  - paragraph [ref=e296]:
+                    - link "Get started →" [ref=e297] [cursor=pointer]:
+                      - /url: curriculum/00-course-setup/README.html
+                - generic [ref=e298]:
+                  - generic [ref=e299]: 6-8 months
+                  - heading "Data Scientist" [level=3] [ref=e300]
+                  - paragraph [ref=e301]: Statistics, experimentation, classical ML. Strong analytical foundation.
+                  - paragraph [ref=e302]:
+                    - strong [ref=e303]: "Key phases:"
+                    - text: Statistics, Causal Inference, Time Series, Evaluation
+                  - paragraph [ref=e304]:
+                    - link "Get started →" [ref=e305] [cursor=pointer]:
+                      - /url: curriculum/00-course-setup/README.html
+              - generic [ref=e306]:
+                - heading "Curriculum" [level=2] [ref=e307]
+                - paragraph [ref=e308]: 31 phases organized from fundamentals to cutting-edge research.
+              - generic [ref=e309]:
+                - heading "Foundations" [level=2] [ref=e310]
+                - generic [ref=e311]:
+                  - link "Phase 0 Course Setup" [ref=e312] [cursor=pointer]:
+                    - /url: curriculum/00-course-setup/README.html
+                    - generic [ref=e313]: Phase 0
+                    - generic [ref=e314]: Course Setup
+                  - link "Phase 1 Python" [ref=e315] [cursor=pointer]:
+                    - /url: curriculum/01-python/README.html
+                    - generic [ref=e316]: Phase 1
+                    - generic [ref=e317]: Python
+                  - link "Phase 2 Data Science" [ref=e318] [cursor=pointer]:
+                    - /url: curriculum/02-data-science/README.html
+                    - generic [ref=e319]: Phase 2
+                    - generic [ref=e320]: Data Science
+                  - link "Phase 3 Mathematics for ML" [ref=e321] [cursor=pointer]:
+                    - /url: curriculum/03-maths/README.html
+                    - generic [ref=e322]: Phase 3
+                    - generic [ref=e323]: Mathematics for ML
+              - generic [ref=e324]:
+                - heading "Core AI" [level=2] [ref=e325]
+                - generic [ref=e326]:
+                  - link "Phase 4 Tokenization" [ref=e327] [cursor=pointer]:
+                    - /url: curriculum/04-token/README.html
+                    - generic [ref=e328]: Phase 4
+                    - generic [ref=e329]: Tokenization
+                  - link "Phase 5 Embeddings" [ref=e330] [cursor=pointer]:
+                    - /url: curriculum/05-embeddings/README.html
+                    - generic [ref=e331]: Phase 5
+                    - generic [ref=e332]: Embeddings
+                  - link "Phase 6 Neural Networks" [ref=e333] [cursor=pointer]:
+                    - /url: curriculum/06-neural-networks/README.html
+                    - generic [ref=e334]: Phase 6
+                    - generic [ref=e335]: Neural Networks
+              - generic [ref=e336]:
+                - heading "Applied AI" [level=2] [ref=e337]
+                - generic [ref=e338]:
+                  - link "Phase 7 Vector Databases" [ref=e339] [cursor=pointer]:
+                    - /url: curriculum/07-vector-databases/README.html
+                    - generic [ref=e340]: Phase 7
+                    - generic [ref=e341]: Vector Databases
+                  - link "Phase 8 RAG Systems" [ref=e342] [cursor=pointer]:
+                    - /url: curriculum/08-rag/README.html
+                    - generic [ref=e343]: Phase 8
+                    - generic [ref=e344]: RAG Systems
+                  - link "Phase 9 MLOps" [ref=e345] [cursor=pointer]:
+                    - /url: curriculum/09-mlops/README.html
+                    - generic [ref=e346]: Phase 9
+                    - generic [ref=e347]: MLOps
+                  - link "Phase 10 Specializations" [ref=e348] [cursor=pointer]:
+                    - /url: curriculum/10-specializations/README.html
+                    - generic [ref=e349]: Phase 10
+                    - generic [ref=e350]: Specializations
+              - generic [ref=e351]:
+                - heading "Advanced" [level=2] [ref=e352]
+                - generic [ref=e353]:
+                  - link "Phase 11 Prompt Engineering" [ref=e354] [cursor=pointer]:
+                    - /url: curriculum/11-prompt-engineering/README.html
+                    - generic [ref=e355]: Phase 11
+                    - generic [ref=e356]: Prompt Engineering
+                  - link "Phase 12 LLM Fine-tuning" [ref=e357] [cursor=pointer]:
+                    - /url: curriculum/12-llm-finetuning/README.html
+                    - generic [ref=e358]: Phase 12
+                    - generic [ref=e359]: LLM Fine-tuning
+                  - link "Phase 13 Multimodal AI" [ref=e360] [cursor=pointer]:
+                    - /url: curriculum/13-multimodal/README.html
+                    - generic [ref=e361]: Phase 13
+                    - generic [ref=e362]: Multimodal AI
+                  - link "Phase 14 Local LLMs" [ref=e363] [cursor=pointer]:
+                    - /url: curriculum/14-local-llms/README.html
+                    - generic [ref=e364]: Phase 14
+                    - generic [ref=e365]: Local LLMs
+                  - link "Phase 15 AI Agents" [ref=e366] [cursor=pointer]:
+                    - /url: curriculum/15-ai-agents/README.html
+                    - generic [ref=e367]: Phase 15
+                    - generic [ref=e368]: AI Agents
+              - generic [ref=e369]:
+                - heading "Supplementary" [level=2] [ref=e370]
+                - generic [ref=e371]:
+                  - link "Phase 16 Model Evaluation" [ref=e372] [cursor=pointer]:
+                    - /url: curriculum/16-model-evaluation/README.html
+                    - generic [ref=e373]: Phase 16
+                    - generic [ref=e374]: Model Evaluation
+                  - link "Phase 17 Debugging" [ref=e375] [cursor=pointer]:
+                    - /url: curriculum/17-debugging/README.html
+                    - generic [ref=e376]: Phase 17
+                    - generic [ref=e377]: Debugging
+                  - link "Phase 18 Low-Code AI Tools" [ref=e378] [cursor=pointer]:
+                    - /url: curriculum/18-low-code/README.html
+                    - generic [ref=e379]: Phase 18
+                    - generic [ref=e380]: Low-Code AI Tools
+                  - link "Phase 19 AI Safety" [ref=e381] [cursor=pointer]:
+                    - /url: curriculum/19-ai-safety/README.html
+                    - generic [ref=e382]: Phase 19
+                    - generic [ref=e383]: AI Safety
+                  - link "Phase 20 Real-Time Streaming" [ref=e384] [cursor=pointer]:
+                    - /url: curriculum/20-streaming/README.html
+                    - generic [ref=e385]: Phase 20
+                    - generic [ref=e386]: Real-Time Streaming
+              - generic [ref=e387]:
+                - heading "Research & Production" [level=2] [ref=e388]
+                - generic [ref=e389]:
+                  - link "Phase 24 Advanced Deep Learning" [ref=e390] [cursor=pointer]:
+                    - /url: curriculum/24-advanced-dl/README.html
+                    - generic [ref=e391]: Phase 24
+                    - generic [ref=e392]: Advanced Deep Learning
+                  - link "Phase 25 Reinforcement Learning" [ref=e393] [cursor=pointer]:
+                    - /url: curriculum/25-rl/README.html
+                    - generic [ref=e394]: Phase 25
+                    - generic [ref=e395]: Reinforcement Learning
+                  - link "Phase 26 Time Series" [ref=e396] [cursor=pointer]:
+                    - /url: curriculum/26-time-series/README.html
+                    - generic [ref=e397]: Phase 26
+                    - generic [ref=e398]: Time Series
+                  - link "Phase 27 Causal Inference" [ref=e399] [cursor=pointer]:
+                    - /url: curriculum/27-causal-inference/README.html
+                    - generic [ref=e400]: Phase 27
+                    - generic [ref=e401]: Causal Inference
+                  - link "Phase 28 Practical Data Science" [ref=e402] [cursor=pointer]:
+                    - /url: curriculum/28-practical-ds/README.html
+                    - generic [ref=e403]: Phase 28
+                    - generic [ref=e404]: Practical Data Science
+                  - link "Phase 29 AI Hardware" [ref=e405] [cursor=pointer]:
+                    - /url: curriculum/29-ai-hardware/README.html
+                    - generic [ref=e406]: Phase 29
+                    - generic [ref=e407]: AI Hardware
+                  - link "Phase 30 Inference Optimization" [ref=e408] [cursor=pointer]:
+                    - /url: curriculum/30-inference-opt/README.html
+                    - generic [ref=e409]: Phase 30
+                    - generic [ref=e410]: Inference Optimization
+                - heading "Quick Links" [level=2] [ref=e412]
+                - generic [ref=e414]:
+                  - heading "️ Visual Roadmaps" [level=3] [ref=e415]
+                  - paragraph [ref=e416]: Interactive diagrams showing the full curriculum and how topics connect.
+                  - paragraph [ref=e417]:
+                    - link "View roadmaps →" [ref=e418] [cursor=pointer]:
+                      - /url: generated/roadmaps/01_overview.html
+        - contentinfo [ref=e419]:
+          - 'link "Previous Visual Roadmap — Part 1: Overview" [ref=e421] [cursor=pointer]':
+            - /url: generated/roadmaps/01_overview.html
+            - img [ref=e422]
+            - generic [ref=e424]:
+              - generic [ref=e426]: Previous
+              - generic [ref=e427]: "Visual Roadmap — Part 1: Overview"
+          - generic [ref=e428]:
+            - generic [ref=e429]:
+              - generic [ref=e430]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e431]: v0.1.0
+            - link "GitHub" [ref=e434] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e435]
+      - complementary [ref=e437]:
+        - separator "Resize right sidebar" [ref=e438]:
+          - button "Collapse right sidebar" [ref=e439] [cursor=pointer]: ›
+        - generic [ref=e440]:
+          - generic [ref=e441]: On this page
+          - list [ref=e444]:
+            - listitem [ref=e445]:
+              - list [ref=e446]:
+                - listitem [ref=e447]:
+                  - link "Foundations" [ref=e448] [cursor=pointer]:
+                    - /url: "#foundations"
+                - listitem [ref=e449]:
+                  - link "Core AI" [ref=e450] [cursor=pointer]:
+                    - /url: "#core-ai"
+                - listitem [ref=e451]:
+                  - link "Applied AI" [ref=e452] [cursor=pointer]:
+                    - /url: "#applied-ai"
+                - listitem [ref=e453]:
+                  - link "Advanced" [ref=e454] [cursor=pointer]:
+                    - /url: "#advanced"
+                - listitem [ref=e455]:
+                  - link "Supplementary" [ref=e456] [cursor=pointer]:
+                    - /url: "#supplementary"
+                - listitem [ref=e457]:
+                  - link "Research & Production" [ref=e458] [cursor=pointer]:
+                    - /url: "#research-production"
+                  - list
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

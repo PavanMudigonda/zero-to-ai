@@ -1,4 +1,4 @@
-# Phase 21: Quizzes
+# Quizzes
 
 ## Overview
 

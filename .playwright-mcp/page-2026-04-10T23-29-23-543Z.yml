@@ -1,0 +1,1271 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Overview" [ref=e18] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - link "Core Systems" [ref=e20] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - link "Advanced Topics" [ref=e22] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - link "End-to-End Flows" [ref=e24] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - 'link "Phase 0: Course Setup" [ref=e28] [cursor=pointer]':
+                - /url: README.html
+              - img [ref=e31] [cursor=pointer]
+              - list [ref=e33]:
+                - listitem [ref=e34]:
+                  - 'link "AI Model Landscape: March 6, 2026" [ref=e35] [cursor=pointer]':
+                    - /url: 2026_model_landscape.html
+                - listitem [ref=e36]:
+                  - link "AI Coding Tools for ML Engineers (March 2026)" [ref=e37] [cursor=pointer]:
+                    - /url: ai_dev_tools_2026.html
+                - listitem [ref=e38]:
+                  - link "Troubleshooting Guide" [ref=e39] [cursor=pointer]:
+                    - /url: "#"
+            - listitem [ref=e40]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e41] [cursor=pointer]':
+                - /url: ../01-python/README.html
+            - listitem [ref=e42]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e43] [cursor=pointer]':
+                - /url: ../02-data-science/README.html
+              - img [ref=e46] [cursor=pointer]
+            - listitem [ref=e48]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e49] [cursor=pointer]':
+                - /url: ../03-maths/README.html
+              - img [ref=e52] [cursor=pointer]
+          - heading "Core AI" [ref=e54]
+          - list [ref=e55]:
+            - listitem [ref=e56]:
+              - 'link "Phase 4: Tokenization" [ref=e57] [cursor=pointer]':
+                - /url: ../04-token/README.html
+              - img [ref=e60] [cursor=pointer]
+            - listitem [ref=e62]:
+              - 'link "Phase 5: Embeddings" [ref=e63] [cursor=pointer]':
+                - /url: ../05-embeddings/README.html
+              - img [ref=e66] [cursor=pointer]
+            - listitem [ref=e68]:
+              - 'link "Phase 6: Neural Networks" [ref=e69] [cursor=pointer]':
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e72] [cursor=pointer]
+          - heading "Applied AI" [ref=e74]
+          - list [ref=e75]:
+            - listitem [ref=e76]:
+              - 'link "Phase 7: Vector Databases" [ref=e77] [cursor=pointer]':
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e80] [cursor=pointer]
+            - listitem [ref=e82]:
+              - 'link "Phase 8: RAG" [ref=e83] [cursor=pointer]':
+                - /url: ../08-rag/README.html
+              - img [ref=e86] [cursor=pointer]
+            - listitem [ref=e88]:
+              - 'link "Phase 9: MLOps" [ref=e89] [cursor=pointer]':
+                - /url: ../09-mlops/README.html
+              - img [ref=e92] [cursor=pointer]
+            - listitem [ref=e94]:
+              - 'link "Phase 10: Specializations" [ref=e95] [cursor=pointer]':
+                - /url: ../10-specializations/README.html
+              - img [ref=e98] [cursor=pointer]
+          - heading "Advanced" [ref=e100]
+          - list [ref=e101]:
+            - listitem [ref=e102]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e103] [cursor=pointer]':
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e106] [cursor=pointer]
+            - listitem [ref=e108]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e109] [cursor=pointer]':
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e112] [cursor=pointer]
+            - listitem [ref=e114]:
+              - 'link "Phase 13: Multimodal AI" [ref=e115] [cursor=pointer]':
+                - /url: ../13-multimodal/README.html
+              - img [ref=e118] [cursor=pointer]
+            - listitem [ref=e120]:
+              - 'link "Phase 14: Local LLMs" [ref=e121] [cursor=pointer]':
+                - /url: ../14-local-llms/README.html
+              - img [ref=e124] [cursor=pointer]
+            - listitem [ref=e126]:
+              - 'link "Phase 15: AI Agents" [ref=e127] [cursor=pointer]':
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e130] [cursor=pointer]
+          - heading "Supplementary" [ref=e132]
+          - list [ref=e133]:
+            - listitem [ref=e134]:
+              - 'link "Phase 16: Model Evaluation" [ref=e135] [cursor=pointer]':
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e138] [cursor=pointer]
+            - listitem [ref=e140]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e141] [cursor=pointer]':
+                - /url: ../17-debugging/README.html
+              - img [ref=e144] [cursor=pointer]
+            - listitem [ref=e146]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e147] [cursor=pointer]':
+                - /url: ../18-low-code/README.html
+              - img [ref=e150] [cursor=pointer]
+            - listitem [ref=e152]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e153] [cursor=pointer]':
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e156] [cursor=pointer]
+            - listitem [ref=e158]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e159] [cursor=pointer]':
+                - /url: ../20-streaming/README.html
+              - img [ref=e162] [cursor=pointer]
+          - heading "Reference" [ref=e164]
+          - list [ref=e165]:
+            - listitem [ref=e166]:
+              - 'link "Phase 21: Quizzes" [ref=e167] [cursor=pointer]':
+                - /url: ../21-quizzes/README.html
+              - img [ref=e170] [cursor=pointer]
+            - listitem [ref=e172]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e173] [cursor=pointer]':
+                - /url: ../22-references/README.html
+              - img [ref=e176] [cursor=pointer]
+            - listitem [ref=e178]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e179] [cursor=pointer]':
+                - /url: ../23-glossary/README.html
+              - img [ref=e182] [cursor=pointer]
+          - heading "Research" [ref=e184]
+          - list [ref=e185]:
+            - listitem [ref=e186]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e187] [cursor=pointer]':
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e190] [cursor=pointer]
+            - listitem [ref=e192]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e193] [cursor=pointer]':
+                - /url: ../25-rl/README.html
+              - img [ref=e196] [cursor=pointer]
+            - listitem [ref=e198]:
+              - 'link "Phase 26: Time Series" [ref=e199] [cursor=pointer]':
+                - /url: ../26-time-series/README.html
+              - img [ref=e202] [cursor=pointer]
+            - listitem [ref=e204]:
+              - 'link "Phase 27: Causal Inference" [ref=e205] [cursor=pointer]':
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e208] [cursor=pointer]
+          - heading "Production" [ref=e210]
+          - list [ref=e211]:
+            - listitem [ref=e212]:
+              - 'link "Phase 28: Practical Data Science" [ref=e213] [cursor=pointer]':
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e216] [cursor=pointer]
+            - listitem [ref=e218]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e219] [cursor=pointer]':
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e222] [cursor=pointer]
+            - listitem [ref=e224]:
+              - 'link "Phase 30: Inference Optimization" [ref=e225] [cursor=pointer]':
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e228] [cursor=pointer]
+          - heading "Developer Tools" [ref=e230]
+          - list [ref=e231]:
+            - listitem [ref=e232]:
+              - 'link "Phase 31: AI Dev Tools" [ref=e233] [cursor=pointer]':
+                - /url: ../31-ai-dev-tools/README.html
+              - img [ref=e236] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e238]:
+        - button "Collapse left sidebar" [ref=e239] [cursor=pointer]: ‹
+    - generic [ref=e240]:
+      - generic [ref=e241]:
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - link "View this page" [ref=e245] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/00-course-setup/troubleshooting.md?plain=true
+              - img [ref=e246]
+              - generic [ref=e248]: View this page
+            - link "Edit this page" [ref=e250] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/00-course-setup/troubleshooting.md
+              - img [ref=e251]
+              - generic [ref=e253]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e255] [cursor=pointer]:
+              - img [ref=e256]
+            - img [ref=e260] [cursor=pointer]
+          - main [ref=e262]:
+            - generic [ref=e263]:
+              - heading "Troubleshooting Guide" [level=1] [ref=e264]
+              - paragraph [ref=e265]: Common issues and solutions for Zero to AI learning path.
+              - generic [ref=e266]:
+                - heading "� Quick Fixes (Most Common Issues)" [level=2] [ref=e267]
+                - paragraph [ref=e268]:
+                  - strong [ref=e269]: Having trouble?
+                  - text: "Try these first:"
+                - list [ref=e270]:
+                  - listitem [ref=e271]:
+                    - paragraph [ref=e272]:
+                      - strong [ref=e273]: Environment not activating?
+                    - generic [ref=e275]:
+                      - generic [ref=e276]: "source .venv/bin/activate # macOS/Linux .venv\\Scripts\\activate # Windows"
+                      - button "Copy to clipboard" [ref=e277] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e278]
+                  - listitem [ref=e282]:
+                    - paragraph [ref=e283]:
+                      - strong [ref=e284]: Import errors?
+                    - generic [ref=e286]:
+                      - generic [ref=e287]: pip install -r requirements.txt
+                      - button "Copy to clipboard" [ref=e288] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e289]
+                  - listitem [ref=e293]:
+                    - paragraph [ref=e294]:
+                      - strong [ref=e295]: Jupyter won’t start?
+                    - generic [ref=e297]:
+                      - generic [ref=e298]: pip install jupyter notebook jupyter notebook --no-browser
+                      - button "Copy to clipboard" [ref=e299] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e300]
+                  - listitem [ref=e304]:
+                    - paragraph [ref=e305]:
+                      - strong [ref=e306]: CUDA not working?
+                    - generic [ref=e308]:
+                      - generic [ref=e309]: "# Check PyTorch CUDA availability import torch print(torch.cuda.is_available())"
+                      - button "Copy to clipboard" [ref=e310] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e311]
+                  - listitem [ref=e315]:
+                    - paragraph [ref=e316]:
+                      - strong [ref=e317]: Wrong Python version?
+                    - generic [ref=e319]:
+                      - generic [ref=e320]: "python --version # Should be 3.9+"
+                      - button "Copy to clipboard" [ref=e321] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e322]
+                - paragraph [ref=e326]:
+                  - strong [ref=e327]: Still stuck?
+                  - text: See detailed solutions below or run the
+                  - link "diagnostic script" [ref=e328] [cursor=pointer]:
+                    - /url: "#quick-diagnosis-script"
+                  - text: .
+              - generic [ref=e329]:
+                - heading "📋 Table of Contents" [level=2] [ref=e330]
+                - list [ref=e331]:
+                  - listitem [ref=e332]:
+                    - paragraph [ref=e333]:
+                      - link "Quick Fixes" [ref=e334] [cursor=pointer]:
+                        - /url: "#quick-fixes-most-common-issues"
+                  - listitem [ref=e335]:
+                    - paragraph [ref=e336]:
+                      - link "Error Message Quick Reference" [ref=e337] [cursor=pointer]:
+                        - /url: "#error-message-quick-reference"
+                  - listitem [ref=e338]:
+                    - paragraph [ref=e339]:
+                      - link "Compatibility Matrix" [ref=e340] [cursor=pointer]:
+                        - /url: "#compatibility-matrix"
+                  - listitem [ref=e341]:
+                    - paragraph [ref=e342]:
+                      - link "Installation Issues" [ref=e343] [cursor=pointer]:
+                        - /url: "#installation-issues"
+                  - listitem [ref=e344]:
+                    - paragraph [ref=e345]:
+                      - link "Environment Problems" [ref=e346] [cursor=pointer]:
+                        - /url: "#environment-problems"
+                  - listitem [ref=e347]:
+                    - paragraph [ref=e348]:
+                      - link "Jupyter Notebook Issues" [ref=e349] [cursor=pointer]:
+                        - /url: "#jupyter-notebook-issues"
+                  - listitem [ref=e350]:
+                    - paragraph [ref=e351]:
+                      - link "Package Import Errors" [ref=e352] [cursor=pointer]:
+                        - /url: "#package-import-errors"
+                  - listitem [ref=e353]:
+                    - paragraph [ref=e354]:
+                      - link "GPU/CUDA Issues" [ref=e355] [cursor=pointer]:
+                        - /url: "#gpu-cuda-issues"
+                  - listitem [ref=e356]:
+                    - paragraph [ref=e357]:
+                      - link "Memory Issues" [ref=e358] [cursor=pointer]:
+                        - /url: "#memory-issues"
+                  - listitem [ref=e359]:
+                    - paragraph [ref=e360]:
+                      - link "Platform-Specific Issues" [ref=e361] [cursor=pointer]:
+                        - /url: "#platform-specific-issues"
+                  - listitem [ref=e362]:
+                    - paragraph [ref=e363]:
+                      - link "Quick Diagnosis Script" [ref=e364] [cursor=pointer]:
+                        - /url: "#quick-diagnosis-script"
+                  - listitem [ref=e365]:
+                    - paragraph [ref=e366]:
+                      - link "Getting More Help" [ref=e367] [cursor=pointer]:
+                        - /url: "#getting-more-help"
+              - generic [ref=e368]:
+                - heading "🔍 Error Message Quick Reference" [level=2] [ref=e369]
+                - paragraph [ref=e370]:
+                  - strong [ref=e371]: "Jump directly to solutions for common error messages:"
+                - table [ref=e373]:
+                  - rowgroup [ref=e374]:
+                    - row "Error Message Category Quick Fix Details" [ref=e375]:
+                      - columnheader "Error Message" [ref=e376]:
+                        - paragraph [ref=e377]: Error Message
+                      - columnheader "Category" [ref=e378]:
+                        - paragraph [ref=e379]: Category
+                      - columnheader "Quick Fix" [ref=e380]:
+                        - paragraph [ref=e381]: Quick Fix
+                      - columnheader "Details" [ref=e382]:
+                        - paragraph [ref=e383]: Details
+                  - rowgroup [ref=e384]:
+                    - 'row "ModuleNotFoundError: No module named ''X'' Import pip install package-name Package Import Errors" [ref=e385]':
+                      - 'cell "ModuleNotFoundError: No module named ''X''" [ref=e386]':
+                        - paragraph [ref=e387]:
+                          - code [ref=e388]: "ModuleNotFoundError: No module named 'X'"
+                      - cell "Import" [ref=e389]:
+                        - paragraph [ref=e390]: Import
+                      - cell "pip install package-name" [ref=e391]:
+                        - paragraph [ref=e392]:
+                          - code [ref=e393]: pip install package-name
+                      - cell "Package Import Errors" [ref=e394]:
+                        - paragraph [ref=e395]:
+                          - link "Package Import Errors" [ref=e396] [cursor=pointer]:
+                            - /url: "#package-import-errors"
+                    - 'row "CUDA error: out of memory GPU Reduce batch size GPU/CUDA Issues" [ref=e397]':
+                      - 'cell "CUDA error: out of memory" [ref=e398]':
+                        - paragraph [ref=e399]:
+                          - code [ref=e400]: "CUDA error: out of memory"
+                      - cell "GPU" [ref=e401]:
+                        - paragraph [ref=e402]: GPU
+                      - cell "Reduce batch size" [ref=e403]:
+                        - paragraph [ref=e404]: Reduce batch size
+                      - cell "GPU/CUDA Issues" [ref=e405]:
+                        - paragraph [ref=e406]:
+                          - link "GPU/CUDA Issues" [ref=e407] [cursor=pointer]:
+                            - /url: "#gpu-cuda-issues"
+                    - row "pip install fails with permission errors Installation Use virtual environment Installation Issues" [ref=e408]:
+                      - cell "pip install fails with permission errors" [ref=e409]:
+                        - paragraph [ref=e410]:
+                          - code [ref=e411]: pip install fails with permission errors
+                      - cell "Installation" [ref=e412]:
+                        - paragraph [ref=e413]: Installation
+                      - cell "Use virtual environment" [ref=e414]:
+                        - paragraph [ref=e415]: Use virtual environment
+                      - cell "Installation Issues" [ref=e416]:
+                        - paragraph [ref=e417]:
+                          - link "Installation Issues" [ref=e418] [cursor=pointer]:
+                            - /url: "#installation-issues"
+                    - 'row "ImportError: DLL load failed Windows Reinstall Visual C++ Platform-Specific Issues" [ref=e419]':
+                      - 'cell "ImportError: DLL load failed" [ref=e420]':
+                        - paragraph [ref=e421]:
+                          - code [ref=e422]: "ImportError: DLL load failed"
+                      - cell "Windows" [ref=e423]:
+                        - paragraph [ref=e424]: Windows
+                      - cell "Reinstall Visual C++" [ref=e425]:
+                        - paragraph [ref=e426]: Reinstall Visual C++
+                      - cell "Platform-Specific Issues" [ref=e427]:
+                        - paragraph [ref=e428]:
+                          - link "Platform-Specific Issues" [ref=e429] [cursor=pointer]:
+                            - /url: "#platform-specific-issues"
+                    - row "conda command not found Environment Install Miniconda Installation Issues" [ref=e430]:
+                      - cell "conda command not found" [ref=e431]:
+                        - paragraph [ref=e432]:
+                          - code [ref=e433]: conda command not found
+                      - cell "Environment" [ref=e434]:
+                        - paragraph [ref=e435]: Environment
+                      - cell "Install Miniconda" [ref=e436]:
+                        - paragraph [ref=e437]: Install Miniconda
+                      - cell "Installation Issues" [ref=e438]:
+                        - paragraph [ref=e439]:
+                          - link "Installation Issues" [ref=e440] [cursor=pointer]:
+                            - /url: "#installation-issues"
+                    - row "Jupyter kernel keeps dying Jupyter Reduce memory usage Jupyter Notebook Issues" [ref=e441]:
+                      - cell "Jupyter kernel keeps dying" [ref=e442]:
+                        - paragraph [ref=e443]:
+                          - code [ref=e444]: Jupyter kernel keeps dying
+                      - cell "Jupyter" [ref=e445]:
+                        - paragraph [ref=e446]: Jupyter
+                      - cell "Reduce memory usage" [ref=e447]:
+                        - paragraph [ref=e448]: Reduce memory usage
+                      - cell "Jupyter Notebook Issues" [ref=e449]:
+                        - paragraph [ref=e450]:
+                          - link "Jupyter Notebook Issues" [ref=e451] [cursor=pointer]:
+                            - /url: "#jupyter-notebook-issues"
+                    - 'row "RuntimeError: CUDA not available GPU Install PyTorch with CUDA GPU/CUDA Issues" [ref=e452]':
+                      - 'cell "RuntimeError: CUDA not available" [ref=e453]':
+                        - paragraph [ref=e454]:
+                          - code [ref=e455]: "RuntimeError: CUDA not available"
+                      - cell "GPU" [ref=e456]:
+                        - paragraph [ref=e457]: GPU
+                      - cell "Install PyTorch with CUDA" [ref=e458]:
+                        - paragraph [ref=e459]: Install PyTorch with CUDA
+                      - cell "GPU/CUDA Issues" [ref=e460]:
+                        - paragraph [ref=e461]:
+                          - link "GPU/CUDA Issues" [ref=e462] [cursor=pointer]:
+                            - /url: "#gpu-cuda-issues"
+                    - 'row "SyntaxError: invalid syntax Python Check Python version (3.9+) Environment Problems" [ref=e463]':
+                      - 'cell "SyntaxError: invalid syntax" [ref=e464]':
+                        - paragraph [ref=e465]:
+                          - code [ref=e466]: "SyntaxError: invalid syntax"
+                      - cell "Python" [ref=e467]:
+                        - paragraph [ref=e468]: Python
+                      - cell "Check Python version (3.9+)" [ref=e469]:
+                        - paragraph [ref=e470]: Check Python version (3.9+)
+                      - cell "Environment Problems" [ref=e471]:
+                        - paragraph [ref=e472]:
+                          - link "Environment Problems" [ref=e473] [cursor=pointer]:
+                            - /url: "#environment-problems"
+                    - row "Virtual environment not activating Environment Check activation command Environment Problems" [ref=e474]:
+                      - cell "Virtual environment not activating" [ref=e475]:
+                        - paragraph [ref=e476]:
+                          - code [ref=e477]: Virtual environment not activating
+                      - cell "Environment" [ref=e478]:
+                        - paragraph [ref=e479]: Environment
+                      - cell "Check activation command" [ref=e480]:
+                        - paragraph [ref=e481]: Check activation command
+                      - cell "Environment Problems" [ref=e482]:
+                        - paragraph [ref=e483]:
+                          - link "Environment Problems" [ref=e484] [cursor=pointer]:
+                            - /url: "#environment-problems"
+                    - row "SSL certificate errors macOS Install certificates Platform-Specific Issues" [ref=e485]:
+                      - cell "SSL certificate errors" [ref=e486]:
+                        - paragraph [ref=e487]:
+                          - code [ref=e488]: SSL certificate errors
+                      - cell "macOS" [ref=e489]:
+                        - paragraph [ref=e490]: macOS
+                      - cell "Install certificates" [ref=e491]:
+                        - paragraph [ref=e492]: Install certificates
+                      - cell "Platform-Specific Issues" [ref=e493]:
+                        - paragraph [ref=e494]:
+                          - link "Platform-Specific Issues" [ref=e495] [cursor=pointer]:
+                            - /url: "#platform-specific-issues"
+              - generic [ref=e496]:
+                - heading "📊 Compatibility Matrix" [level=2] [ref=e497]
+                - paragraph [ref=e498]:
+                  - strong [ref=e499]: "Recommended versions and compatibility information:"
+                - generic [ref=e500]:
+                  - heading "Core Dependencies" [level=3] [ref=e501]
+                  - table [ref=e503]:
+                    - rowgroup [ref=e504]:
+                      - row "Component Minimum Recommended Tested Versions Notes" [ref=e505]:
+                        - columnheader "Component" [ref=e506]:
+                          - paragraph [ref=e507]: Component
+                        - columnheader "Minimum" [ref=e508]:
+                          - paragraph [ref=e509]: Minimum
+                        - columnheader "Recommended" [ref=e510]:
+                          - paragraph [ref=e511]: Recommended
+                        - columnheader "Tested Versions" [ref=e512]:
+                          - paragraph [ref=e513]: Tested Versions
+                        - columnheader "Notes" [ref=e514]:
+                          - paragraph [ref=e515]: Notes
+                    - rowgroup [ref=e516]:
+                      - row "Python 3.9 3.11 3.9, 3.10, 3.11, 3.12 3.12 may have package compatibility issues" [ref=e517]:
+                        - cell "Python" [ref=e518]:
+                          - paragraph [ref=e519]:
+                            - strong [ref=e520]: Python
+                        - cell "3.9" [ref=e521]:
+                          - paragraph [ref=e522]: "3.9"
+                        - cell "3.11" [ref=e523]:
+                          - paragraph [ref=e524]: "3.11"
+                        - cell "3.9, 3.10, 3.11, 3.12" [ref=e525]:
+                          - paragraph [ref=e526]: 3.9, 3.10, 3.11, 3.12
+                        - cell "3.12 may have package compatibility issues" [ref=e527]:
+                          - paragraph [ref=e528]: 3.12 may have package compatibility issues
+                      - row "pip 21.0 Latest 23.0+ Use pip install --upgrade pip" [ref=e529]:
+                        - cell "pip" [ref=e530]:
+                          - paragraph [ref=e531]:
+                            - strong [ref=e532]: pip
+                        - cell "21.0" [ref=e533]:
+                          - paragraph [ref=e534]: "21.0"
+                        - cell "Latest" [ref=e535]:
+                          - paragraph [ref=e536]: Latest
+                        - cell "23.0+" [ref=e537]:
+                          - paragraph [ref=e538]: 23.0+
+                        - cell "Use pip install --upgrade pip" [ref=e539]:
+                          - paragraph [ref=e540]:
+                            - text: Use
+                            - code [ref=e541]: pip install --upgrade pip
+                      - row "Jupyter 1.0 Latest 1.0+ Includes notebook and lab" [ref=e542]:
+                        - cell "Jupyter" [ref=e543]:
+                          - paragraph [ref=e544]:
+                            - strong [ref=e545]: Jupyter
+                        - cell "1.0" [ref=e546]:
+                          - paragraph [ref=e547]: "1.0"
+                        - cell "Latest" [ref=e548]:
+                          - paragraph [ref=e549]: Latest
+                        - cell "1.0+" [ref=e550]:
+                          - paragraph [ref=e551]: 1.0+
+                        - cell "Includes notebook and lab" [ref=e552]:
+                          - paragraph [ref=e553]: Includes notebook and lab
+                      - row "NumPy 1.21 1.26+ 1.21-1.26 Core numerical computing" [ref=e554]:
+                        - cell "NumPy" [ref=e555]:
+                          - paragraph [ref=e556]:
+                            - strong [ref=e557]: NumPy
+                        - cell "1.21" [ref=e558]:
+                          - paragraph [ref=e559]: "1.21"
+                        - cell "1.26+" [ref=e560]:
+                          - paragraph [ref=e561]: 1.26+
+                        - cell "1.21-1.26" [ref=e562]:
+                          - paragraph [ref=e563]: 1.21-1.26
+                        - cell "Core numerical computing" [ref=e564]:
+                          - paragraph [ref=e565]: Core numerical computing
+                      - row "Pandas 1.3 2.0+ 1.3-2.1 Data manipulation" [ref=e566]:
+                        - cell "Pandas" [ref=e567]:
+                          - paragraph [ref=e568]:
+                            - strong [ref=e569]: Pandas
+                        - cell "1.3" [ref=e570]:
+                          - paragraph [ref=e571]: "1.3"
+                        - cell "2.0+" [ref=e572]:
+                          - paragraph [ref=e573]: 2.0+
+                        - cell "1.3-2.1" [ref=e574]:
+                          - paragraph [ref=e575]: 1.3-2.1
+                        - cell "Data manipulation" [ref=e576]:
+                          - paragraph [ref=e577]: Data manipulation
+                      - row "Scikit-learn 1.0 1.4+ 1.0-1.4 Traditional ML" [ref=e578]:
+                        - cell "Scikit-learn" [ref=e579]:
+                          - paragraph [ref=e580]:
+                            - strong [ref=e581]: Scikit-learn
+                        - cell "1.0" [ref=e582]:
+                          - paragraph [ref=e583]: "1.0"
+                        - cell "1.4+" [ref=e584]:
+                          - paragraph [ref=e585]: 1.4+
+                        - cell "1.0-1.4" [ref=e586]:
+                          - paragraph [ref=e587]: 1.0-1.4
+                        - cell "Traditional ML" [ref=e588]:
+                          - paragraph [ref=e589]: Traditional ML
+                - generic [ref=e590]:
+                  - heading "Deep Learning Frameworks" [level=3] [ref=e591]
+                  - table [ref=e593]:
+                    - rowgroup [ref=e594]:
+                      - row "Framework Minimum Recommended CUDA Support Notes" [ref=e595]:
+                        - columnheader "Framework" [ref=e596]:
+                          - paragraph [ref=e597]: Framework
+                        - columnheader "Minimum" [ref=e598]:
+                          - paragraph [ref=e599]: Minimum
+                        - columnheader "Recommended" [ref=e600]:
+                          - paragraph [ref=e601]: Recommended
+                        - columnheader "CUDA Support" [ref=e602]:
+                          - paragraph [ref=e603]: CUDA Support
+                        - columnheader "Notes" [ref=e604]:
+                          - paragraph [ref=e605]: Notes
+                    - rowgroup [ref=e606]:
+                      - row "PyTorch 2.0 2.2+ CUDA 11.8, 12.1 Main framework" [ref=e607]:
+                        - cell "PyTorch" [ref=e608]:
+                          - paragraph [ref=e609]:
+                            - strong [ref=e610]: PyTorch
+                        - cell "2.0" [ref=e611]:
+                          - paragraph [ref=e612]: "2.0"
+                        - cell "2.2+" [ref=e613]:
+                          - paragraph [ref=e614]: 2.2+
+                        - cell "CUDA 11.8, 12.1" [ref=e615]:
+                          - paragraph [ref=e616]: CUDA 11.8, 12.1
+                        - cell "Main framework" [ref=e617]:
+                          - paragraph [ref=e618]: Main framework
+                      - row "TensorFlow 2.10 2.15+ CUDA 11.8 Optional" [ref=e619]:
+                        - cell "TensorFlow" [ref=e620]:
+                          - paragraph [ref=e621]:
+                            - strong [ref=e622]: TensorFlow
+                        - cell "2.10" [ref=e623]:
+                          - paragraph [ref=e624]: "2.10"
+                        - cell "2.15+" [ref=e625]:
+                          - paragraph [ref=e626]: 2.15+
+                        - cell "CUDA 11.8" [ref=e627]:
+                          - paragraph [ref=e628]: CUDA 11.8
+                        - cell "Optional" [ref=e629]:
+                          - paragraph [ref=e630]: Optional
+                      - row "Transformers 4.30 4.37+ - HuggingFace library" [ref=e631]:
+                        - cell "Transformers" [ref=e632]:
+                          - paragraph [ref=e633]:
+                            - strong [ref=e634]: Transformers
+                        - cell "4.30" [ref=e635]:
+                          - paragraph [ref=e636]: "4.30"
+                        - cell "4.37+" [ref=e637]:
+                          - paragraph [ref=e638]: 4.37+
+                        - cell "-" [ref=e639]:
+                          - paragraph [ref=e640]: "-"
+                        - cell "HuggingFace library" [ref=e641]:
+                          - paragraph [ref=e642]: HuggingFace library
+                - generic [ref=e643]:
+                  - heading "GPU/CUDA Compatibility" [level=3] [ref=e644]
+                  - table [ref=e646]:
+                    - rowgroup [ref=e647]:
+                      - row "GPU Series CUDA Version PyTorch Command" [ref=e648]:
+                        - columnheader "GPU Series" [ref=e649]:
+                          - paragraph [ref=e650]: GPU Series
+                        - columnheader "CUDA Version" [ref=e651]:
+                          - paragraph [ref=e652]: CUDA Version
+                        - columnheader "PyTorch Command" [ref=e653]:
+                          - paragraph [ref=e654]: PyTorch Command
+                    - rowgroup [ref=e655]:
+                      - row "RTX 40XX 12.1 pip install torch --index-url https://download.pytorch.org/whl/cu121" [ref=e656]:
+                        - cell "RTX 40XX" [ref=e657]:
+                          - paragraph [ref=e658]:
+                            - strong [ref=e659]: RTX 40XX
+                        - cell "12.1" [ref=e660]:
+                          - paragraph [ref=e661]: "12.1"
+                        - cell "pip install torch --index-url https://download.pytorch.org/whl/cu121" [ref=e662]:
+                          - paragraph [ref=e663]:
+                            - code [ref=e664]: pip install torch --index-url https://download.pytorch.org/whl/cu121
+                      - row "RTX 30XX 11.8 or 12.1 pip install torch --index-url https://download.pytorch.org/whl/cu118" [ref=e665]:
+                        - cell "RTX 30XX" [ref=e666]:
+                          - paragraph [ref=e667]:
+                            - strong [ref=e668]: RTX 30XX
+                        - cell "11.8 or 12.1" [ref=e669]:
+                          - paragraph [ref=e670]: 11.8 or 12.1
+                        - cell "pip install torch --index-url https://download.pytorch.org/whl/cu118" [ref=e671]:
+                          - paragraph [ref=e672]:
+                            - code [ref=e673]: pip install torch --index-url https://download.pytorch.org/whl/cu118
+                      - row "RTX 20XX / GTX 16XX 11.8 pip install torch --index-url https://download.pytorch.org/whl/cu118" [ref=e674]:
+                        - cell "RTX 20XX / GTX 16XX" [ref=e675]:
+                          - paragraph [ref=e676]:
+                            - strong [ref=e677]: RTX 20XX / GTX 16XX
+                        - cell "11.8" [ref=e678]:
+                          - paragraph [ref=e679]: "11.8"
+                        - cell "pip install torch --index-url https://download.pytorch.org/whl/cu118" [ref=e680]:
+                          - paragraph [ref=e681]:
+                            - code [ref=e682]: pip install torch --index-url https://download.pytorch.org/whl/cu118
+                      - row "GTX 10XX 11.8 pip install torch --index-url https://download.pytorch.org/whl/cu118" [ref=e683]:
+                        - cell "GTX 10XX" [ref=e684]:
+                          - paragraph [ref=e685]:
+                            - strong [ref=e686]: GTX 10XX
+                        - cell "11.8" [ref=e687]:
+                          - paragraph [ref=e688]: "11.8"
+                        - cell "pip install torch --index-url https://download.pytorch.org/whl/cu118" [ref=e689]:
+                          - paragraph [ref=e690]:
+                            - code [ref=e691]: pip install torch --index-url https://download.pytorch.org/whl/cu118
+                      - row "CPU Only N/A pip install torch" [ref=e692]:
+                        - cell "CPU Only" [ref=e693]:
+                          - paragraph [ref=e694]:
+                            - strong [ref=e695]: CPU Only
+                        - cell "N/A" [ref=e696]:
+                          - paragraph [ref=e697]: N/A
+                        - cell "pip install torch" [ref=e698]:
+                          - paragraph [ref=e699]:
+                            - code [ref=e700]: pip install torch
+                - generic [ref=e701]:
+                  - heading "Platform-Specific" [level=3] [ref=e702]
+                  - table [ref=e704]:
+                    - rowgroup [ref=e705]:
+                      - row "Platform Python Install Package Manager GPU Support" [ref=e706]:
+                        - columnheader "Platform" [ref=e707]:
+                          - paragraph [ref=e708]: Platform
+                        - columnheader "Python Install" [ref=e709]:
+                          - paragraph [ref=e710]: Python Install
+                        - columnheader "Package Manager" [ref=e711]:
+                          - paragraph [ref=e712]: Package Manager
+                        - columnheader "GPU Support" [ref=e713]:
+                          - paragraph [ref=e714]: GPU Support
+                    - rowgroup [ref=e715]:
+                      - row "macOS (Intel) python.org or Homebrew pip or conda No CUDA (MPS for M1/M2)" [ref=e716]:
+                        - cell "macOS (Intel)" [ref=e717]:
+                          - paragraph [ref=e718]:
+                            - strong [ref=e719]: macOS (Intel)
+                        - cell "python.org or Homebrew" [ref=e720]:
+                          - paragraph [ref=e721]:
+                            - link "python.org" [ref=e722] [cursor=pointer]:
+                              - /url: https://python.org
+                            - text: or Homebrew
+                        - cell "pip or conda" [ref=e723]:
+                          - paragraph [ref=e724]: pip or conda
+                        - cell "No CUDA (MPS for M1/M2)" [ref=e725]:
+                          - paragraph [ref=e726]: No CUDA (MPS for M1/M2)
+                      - row "macOS (M1/M2/M3) python.org or conda conda preferred Metal Performance Shaders" [ref=e727]:
+                        - cell "macOS (M1/M2/M3)" [ref=e728]:
+                          - paragraph [ref=e729]:
+                            - strong [ref=e730]: macOS (M1/M2/M3)
+                        - cell "python.org or conda" [ref=e731]:
+                          - paragraph [ref=e732]:
+                            - link "python.org" [ref=e733] [cursor=pointer]:
+                              - /url: https://python.org
+                            - text: or conda
+                        - cell "conda preferred" [ref=e734]:
+                          - paragraph [ref=e735]: conda preferred
+                        - cell "Metal Performance Shaders" [ref=e736]:
+                          - paragraph [ref=e737]: Metal Performance Shaders
+                      - row "Windows python.org pip or conda CUDA supported" [ref=e738]:
+                        - cell "Windows" [ref=e739]:
+                          - paragraph [ref=e740]:
+                            - strong [ref=e741]: Windows
+                        - cell "python.org" [ref=e742]:
+                          - paragraph [ref=e743]:
+                            - link "python.org" [ref=e744] [cursor=pointer]:
+                              - /url: https://python.org
+                        - cell "pip or conda" [ref=e745]:
+                          - paragraph [ref=e746]: pip or conda
+                        - cell "CUDA supported" [ref=e747]:
+                          - paragraph [ref=e748]: CUDA supported
+                      - row "Linux System package manager pip or conda CUDA supported" [ref=e749]:
+                        - cell "Linux" [ref=e750]:
+                          - paragraph [ref=e751]:
+                            - strong [ref=e752]: Linux
+                        - cell "System package manager" [ref=e753]:
+                          - paragraph [ref=e754]: System package manager
+                        - cell "pip or conda" [ref=e755]:
+                          - paragraph [ref=e756]: pip or conda
+                        - cell "CUDA supported" [ref=e757]:
+                          - paragraph [ref=e758]: CUDA supported
+                  - paragraph [ref=e759]:
+                    - strong [ref=e760]: "Last Updated:"
+                    - text: March 2026
+              - generic [ref=e761]:
+                - heading "Installation Issues" [level=2] [ref=e762]
+                - generic [ref=e763]:
+                  - 'heading "Problem: pip install fails with permission errors" [level=3] [ref=e764]':
+                    - text: "Problem:"
+                    - code [ref=e765]: pip install
+                    - text: fails with permission errors
+                  - paragraph [ref=e766]:
+                    - strong [ref=e767]: "Solution:"
+                  - generic [ref=e769]:
+                    - generic [ref=e770]: "# Use --user flag pip install --user -r requirements.txt # Or use virtual environment (recommended) python -m venv .venv source .venv/bin/activate # On Windows: .venv\\Scripts\\activate pip install -r requirements.txt"
+                    - button "Copy to clipboard" [ref=e771] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e772]
+                - generic [ref=e776]:
+                  - 'heading "Problem: conda command not found" [level=3] [ref=e777]':
+                    - text: "Problem:"
+                    - code [ref=e778]: conda
+                    - text: command not found
+                  - paragraph [ref=e779]:
+                    - strong [ref=e780]: "Solution:"
+                  - generic [ref=e782]:
+                    - generic [ref=e783]: "# Install Miniconda # macOS/Linux: wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh bash Miniconda3-latest-Linux-x86_64.sh # Or download from https://docs.conda.io/en/latest/miniconda.html # Then restart your terminal"
+                    - button "Copy to clipboard" [ref=e784] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e785]
+                - generic [ref=e789]:
+                  - 'heading "Problem: UV installation fails" [level=3] [ref=e790]'
+                  - paragraph [ref=e791]:
+                    - strong [ref=e792]: "Solution:"
+                  - generic [ref=e794]:
+                    - generic [ref=e795]: "# Alternative installation methods # Using pip: pip install uv # Using Homebrew (macOS): brew install uv # Manual download from: # https://github.com/astral-sh/uv/releases"
+                    - button "Copy to clipboard" [ref=e796] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e797]
+              - generic [ref=e801]:
+                - heading "Environment Problems" [level=2] [ref=e802]
+                - generic [ref=e803]:
+                  - 'heading "Problem: Wrong Python version" [level=3] [ref=e804]'
+                  - paragraph [ref=e805]:
+                    - strong [ref=e806]: "Solution:"
+                  - generic [ref=e808]:
+                    - generic [ref=e809]: "# Check Python version python --version # Should be Python 3.9 or higher # If not, install correct version: # Using conda: conda create -n aiml-learning python=3.11 conda activate aiml-learning # Using pyenv: pyenv install 3.11.0 pyenv local 3.11.0"
+                    - button "Copy to clipboard" [ref=e810] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e811]
+                - generic [ref=e815]:
+                  - 'heading "Problem: Virtual environment not activating" [level=3] [ref=e816]'
+                  - paragraph [ref=e817]:
+                    - strong [ref=e818]: "Solution:"
+                  - generic [ref=e820]:
+                    - generic [ref=e821]: "# macOS/Linux: source .venv/bin/activate # Windows (Command Prompt): .venv\\Scripts\\activate.bat # Windows (PowerShell): .venv\\Scripts\\Activate.ps1 # If PowerShell gives execution policy error: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser"
+                    - button "Copy to clipboard" [ref=e822] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e823]
+                - generic [ref=e827]:
+                  - 'heading "Problem: Environment packages not found after activation" [level=3] [ref=e828]'
+                  - paragraph [ref=e829]:
+                    - strong [ref=e830]: "Solution:"
+                  - generic [ref=e832]:
+                    - generic [ref=e833]: "# Verify environment is active which python # macOS/Linux where python # Windows # Should point to .venv/bin/python or similar # If not, deactivate and reactivate: deactivate source .venv/bin/activate # Reinstall packages: pip install -r requirements.txt"
+                    - button "Copy to clipboard" [ref=e834] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e835]
+              - generic [ref=e839]:
+                - heading "Jupyter Notebook Issues" [level=2] [ref=e840]
+                - generic [ref=e841]:
+                  - 'heading "Problem: Jupyter not found" [level=3] [ref=e842]'
+                  - paragraph [ref=e843]:
+                    - strong [ref=e844]: "Solution:"
+                  - generic [ref=e846]:
+                    - generic [ref=e847]: "# Install Jupyter pip install jupyter notebook # Verify installation jupyter --version # Launch Jupyter jupyter notebook"
+                    - button "Copy to clipboard" [ref=e848] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e849]
+                - generic [ref=e853]:
+                  - 'heading "Problem: Kernel not found or wrong kernel" [level=3] [ref=e854]'
+                  - paragraph [ref=e855]:
+                    - strong [ref=e856]: "Solution:"
+                  - generic [ref=e858]:
+                    - generic [ref=e859]: "# Install ipykernel pip install ipykernel # Add current environment to Jupyter python -m ipykernel install --user --name=aiml-learning --display-name \"Python (AI/ML)\" # In Jupyter, select: Kernel > Change Kernel > Python (AI/ML)"
+                    - button "Copy to clipboard" [ref=e860] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e861]
+                - generic [ref=e865]:
+                  - 'heading "Problem: Jupyter kernel keeps dying" [level=3] [ref=e866]'
+                  - paragraph [ref=e867]:
+                    - strong [ref=e868]: "Solutions:"
+                  - list [ref=e869]:
+                    - listitem [ref=e870]:
+                      - paragraph [ref=e871]:
+                        - strong [ref=e872]: "Reduce memory usage:"
+                      - generic [ref=e874]:
+                        - generic [ref=e875]: "# In your notebook, clear variables %reset -f # Import garbage collector import gc gc.collect()"
+                        - button "Copy to clipboard" [ref=e876] [cursor=pointer]:
+                          - img "Copy to clipboard" [ref=e877]
+                    - listitem [ref=e881]:
+                      - paragraph [ref=e882]:
+                        - strong [ref=e883]: "Increase memory limits:"
+                      - generic [ref=e885]:
+                        - generic [ref=e886]: "# Start Jupyter with more memory jupyter notebook --NotebookApp.max_buffer_size=1000000000"
+                        - button "Copy to clipboard" [ref=e887] [cursor=pointer]:
+                          - img "Copy to clipboard" [ref=e888]
+                    - listitem [ref=e892]:
+                      - paragraph [ref=e893]:
+                        - strong [ref=e894]: "Check logs:"
+                      - generic [ref=e896]:
+                        - generic [ref=e897]: "# View Jupyter logs jupyter notebook --debug"
+                        - button "Copy to clipboard" [ref=e898] [cursor=pointer]:
+                          - img "Copy to clipboard" [ref=e899]
+                - generic [ref=e903]:
+                  - 'heading "Problem: Cannot open notebooks" [level=3] [ref=e904]'
+                  - paragraph [ref=e905]:
+                    - strong [ref=e906]: "Solution:"
+                  - generic [ref=e908]:
+                    - generic [ref=e909]: "# Try opening specific notebook jupyter notebook path/to/notebook.ipynb # If file association broken, reinstall: pip uninstall jupyter notebook pip install jupyter notebook"
+                    - button "Copy to clipboard" [ref=e910] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e911]
+              - generic [ref=e915]:
+                - heading "Package Import Errors" [level=2] [ref=e916]
+                - generic [ref=e917]:
+                  - 'heading "Problem: ModuleNotFoundError: No module named ''X''" [level=3] [ref=e918]':
+                    - text: "Problem:"
+                    - code [ref=e919]: "ModuleNotFoundError: No module named 'X'"
+                  - paragraph [ref=e920]:
+                    - strong [ref=e921]: "Solution:"
+                  - generic [ref=e923]:
+                    - generic [ref=e924]: "# Install missing package pip install package-name # For common packages: pip install numpy pandas matplotlib scikit-learn # For deep learning: pip install torch torchvision pip install tensorflow # For NLP: pip install transformers tokenizers # Install everything: pip install -r requirements.txt"
+                    - button "Copy to clipboard" [ref=e925] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e926]
+                - generic [ref=e930]:
+                  - 'heading "Problem: Import works in terminal but not in Jupyter" [level=3] [ref=e931]'
+                  - paragraph [ref=e932]:
+                    - strong [ref=e933]: "Solution:"
+                  - generic [ref=e935]:
+                    - generic [ref=e936]: "# Verify Jupyter is using correct Python # In Jupyter notebook: import sys print(sys.executable) # Should match your virtual environment # If not, reinstall kernel: python -m ipykernel install --user --name=aiml-learning --display-name \"Python (AI/ML)\""
+                    - button "Copy to clipboard" [ref=e937] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e938]
+                - generic [ref=e942]:
+                  - 'heading "Problem: Package version conflicts" [level=3] [ref=e943]'
+                  - paragraph [ref=e944]:
+                    - strong [ref=e945]: "Solution:"
+                  - generic [ref=e947]:
+                    - generic [ref=e948]: "# Create fresh environment conda create -n aiml-fresh python=3.11 conda activate aiml-fresh # Install packages one group at a time: pip install numpy pandas matplotlib scikit-learn pip install torch torchvision pip install transformers # Check for conflicts: pip check"
+                    - button "Copy to clipboard" [ref=e949] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e950]
+              - generic [ref=e954]:
+                - heading "GPU/CUDA Issues" [level=2] [ref=e955]
+                - generic [ref=e956]:
+                  - 'heading "Problem: PyTorch not using GPU" [level=3] [ref=e957]'
+                  - paragraph [ref=e958]:
+                    - strong [ref=e959]: "Solution:"
+                  - generic [ref=e961]:
+                    - generic [ref=e962]: "import torch # Check CUDA availability print(f\"CUDA available: {torch.cuda.is_available()}\") print(f\"CUDA version: {torch.version.cuda}\") print(f\"GPU device: {torch.cuda.get_device_name(0) if torch.cuda.is_available() else 'None'}\") # If False, reinstall PyTorch with CUDA: # Visit: https://pytorch.org/get-started/locally/ # Select your OS, Package, and CUDA version"
+                    - button "Copy to clipboard" [ref=e963] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e964]
+                  - paragraph [ref=e968]:
+                    - strong [ref=e969]: "Example installation commands:"
+                  - generic [ref=e971]:
+                    - generic [ref=e972]: "# For CUDA 11.8: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118 # For CUDA 12.1: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121 # For CPU only: pip install torch torchvision torchaudio"
+                    - button "Copy to clipboard" [ref=e973] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e974]
+                - generic [ref=e978]:
+                  - 'heading "Problem: CUDA out of memory" [level=3] [ref=e979]'
+                  - paragraph [ref=e980]:
+                    - strong [ref=e981]: "Solutions:"
+                  - generic [ref=e983]:
+                    - generic [ref=e984]: "# 1. Reduce batch size batch_size = 8 # Instead of 32 # 2. Use gradient accumulation # Simulate larger batch size accumulation_steps = 4 # 3. Clear CUDA cache import torch torch.cuda.empty_cache() # 4. Use mixed precision training from torch.cuda.amp import autocast, GradScaler # 5. Use gradient checkpointing model.gradient_checkpointing_enable()"
+                    - button "Copy to clipboard" [ref=e985] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e986]
+                - generic [ref=e990]:
+                  - 'heading "Problem: Multiple CUDA versions" [level=3] [ref=e991]'
+                  - paragraph [ref=e992]:
+                    - strong [ref=e993]: "Solution:"
+                  - generic [ref=e995]:
+                    - generic [ref=e996]: "# Check installed CUDA version nvcc --version # Check PyTorch CUDA version python -c \"import torch; print(torch.version.cuda)\" # Ensure they match # Reinstall PyTorch if needed (see above)"
+                    - button "Copy to clipboard" [ref=e997] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e998]
+              - generic [ref=e1002]:
+                - heading "Memory Issues" [level=2] [ref=e1003]
+                - generic [ref=e1004]:
+                  - 'heading "Problem: Jupyter notebook crashes with large datasets" [level=3] [ref=e1005]'
+                  - paragraph [ref=e1006]:
+                    - strong [ref=e1007]: "Solutions:"
+                  - generic [ref=e1009]:
+                    - generic [ref=e1010]: "# 1. Use chunking for large files import pandas as pd # Instead of: # df = pd.read_csv('large_file.csv') # Use: chunks = pd.read_csv('large_file.csv', chunksize=10000) for chunk in chunks: process(chunk) # 2. Use efficient dtypes df = pd.read_csv('file.csv', dtype={'column': 'int32'}) # 3. Free memory del large_object import gc gc.collect()"
+                    - button "Copy to clipboard" [ref=e1011] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1012]
+                - generic [ref=e1016]:
+                  - 'heading "Problem: RAM usage grows over time" [level=3] [ref=e1017]'
+                  - paragraph [ref=e1018]:
+                    - strong [ref=e1019]: "Solution:"
+                  - generic [ref=e1021]:
+                    - generic [ref=e1022]: "# Monitor memory usage import psutil import os def get_memory_usage(): process = psutil.Process(os.getpid()) return process.memory_info().rss / 1024 / 1024 # MB print(f\"Memory usage: {get_memory_usage():.2f} MB\") # Clear variables regularly %reset -f # In Jupyter # Use context managers with open('file.txt') as f: data = f.read() # process data # file automatically closed"
+                    - button "Copy to clipboard" [ref=e1023] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1024]
+              - generic [ref=e1028]:
+                - heading "Platform-Specific Issues" [level=2] [ref=e1029]
+                - generic [ref=e1030]:
+                  - heading "macOS" [level=3] [ref=e1031]
+                  - generic [ref=e1032]:
+                    - 'heading "Problem: SSL certificate errors" [level=4] [ref=e1033]'
+                    - paragraph [ref=e1034]:
+                      - strong [ref=e1035]: "Solution:"
+                    - generic [ref=e1037]:
+                      - generic [ref=e1038]: "# Install certificates /Applications/Python\\ 3.x/Install\\ Certificates.command # Or manually: pip install --upgrade certifi"
+                      - button "Copy to clipboard" [ref=e1039] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e1040]
+                  - generic [ref=e1044]:
+                    - 'heading "Problem: M1/M2 compatibility issues" [level=4] [ref=e1045]'
+                    - paragraph [ref=e1046]:
+                      - strong [ref=e1047]: "Solution:"
+                    - generic [ref=e1049]:
+                      - generic [ref=e1050]: "# Use Conda for better M1/M2 support conda create -n aiml-learning python=3.11 conda activate aiml-learning # Install packages via conda when possible conda install numpy pandas scikit-learn conda install pytorch torchvision -c pytorch"
+                      - button "Copy to clipboard" [ref=e1051] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e1052]
+                - generic [ref=e1056]:
+                  - heading "Windows" [level=3] [ref=e1057]
+                  - generic [ref=e1058]:
+                    - 'heading "Problem: Long path names" [level=4] [ref=e1059]'
+                    - paragraph [ref=e1060]:
+                      - strong [ref=e1061]: "Solution:"
+                    - generic [ref=e1063]:
+                      - generic [ref=e1064]: "# Enable long path support (Windows 10+) # Run as Administrator in PowerShell: New-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Control\\FileSystem\" -Name \"LongPathsEnabled\" -Value 1 -PropertyType DWORD -Force # Or clone to shorter path: git clone https://github.com/PavanMudigonda/zero-to-ai.git C:\\ai"
+                      - button "Copy to clipboard" [ref=e1065] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e1066]
+                  - generic [ref=e1070]:
+                    - 'heading "Problem: Visual C++ redistributable missing" [level=4] [ref=e1071]'
+                    - paragraph [ref=e1072]:
+                      - strong [ref=e1073]: "Solution:"
+                    - list [ref=e1074]:
+                      - listitem [ref=e1075]:
+                        - paragraph [ref=e1076]:
+                          - text: "Download from:"
+                          - link "https://aka.ms/vs/17/release/vc_redist.x64.exe" [ref=e1077] [cursor=pointer]:
+                            - /url: https://aka.ms/vs/17/release/vc_redist.x64.exe
+                      - listitem [ref=e1078]:
+                        - paragraph [ref=e1079]: Install and restart computer
+                - generic [ref=e1080]:
+                  - heading "Linux" [level=3] [ref=e1081]
+                  - generic [ref=e1082]:
+                    - 'heading "Problem: python3-dev missing" [level=4] [ref=e1083]':
+                      - text: "Problem:"
+                      - code [ref=e1084]: python3-dev
+                      - text: missing
+                    - paragraph [ref=e1085]:
+                      - strong [ref=e1086]: "Solution:"
+                    - generic [ref=e1088]:
+                      - generic [ref=e1089]: "# Ubuntu/Debian: sudo apt-get update sudo apt-get install python3-dev python3-pip # Fedora/RHEL: sudo dnf install python3-devel # Arch: sudo pacman -S python python-pip"
+                      - button "Copy to clipboard" [ref=e1090] [cursor=pointer]:
+                        - img "Copy to clipboard" [ref=e1091]
+              - generic [ref=e1095]:
+                - heading "Common Error Messages" [level=2] [ref=e1096]
+                - generic [ref=e1097]:
+                  - 'heading "ImportError: DLL load failed" [level=3] [ref=e1098]':
+                    - code [ref=e1099]: "ImportError: DLL load failed"
+                  - paragraph [ref=e1100]:
+                    - strong [ref=e1101]: "Windows Solution:"
+                  - generic [ref=e1103]:
+                    - generic [ref=e1104]: "# Install/reinstall Visual C++ Redistributable # Download from Microsoft # Reinstall numpy pip uninstall numpy pip install numpy"
+                    - button "Copy to clipboard" [ref=e1105] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1106]
+                - generic [ref=e1110]:
+                  - 'heading "RuntimeError: CUDA error: out of memory" [level=3] [ref=e1111]':
+                    - code [ref=e1112]: "RuntimeError: CUDA error: out of memory"
+                  - paragraph [ref=e1113]:
+                    - strong [ref=e1114]: "Solution:"
+                  - generic [ref=e1116]:
+                    - generic [ref=e1117]: "# Reduce batch size batch_size = batch_size // 2 # Clear CUDA cache torch.cuda.empty_cache() # Or use CPU device = 'cpu'"
+                    - button "Copy to clipboard" [ref=e1118] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1119]
+                - generic [ref=e1123]:
+                  - 'heading "SyntaxError: invalid syntax" [level=3] [ref=e1124]':
+                    - code [ref=e1125]: "SyntaxError: invalid syntax"
+                  - paragraph [ref=e1126]:
+                    - strong [ref=e1127]: "Solution:"
+                  - generic [ref=e1129]:
+                    - generic [ref=e1130]: "# Check Python version python --version # Ensure using Python 3.9+ # Check for Python 2 vs 3 issues which python which python3"
+                    - button "Copy to clipboard" [ref=e1131] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1132]
+              - generic [ref=e1136]:
+                - heading "Getting More Help" [level=2] [ref=e1137]
+                - paragraph [ref=e1138]: "If your issue isn’t listed here:"
+                - list [ref=e1139]:
+                  - listitem [ref=e1140]:
+                    - paragraph [ref=e1141]:
+                      - strong [ref=e1142]: Search existing issues
+                      - text: ":"
+                      - link "GitHub Issues" [ref=e1143] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/issues
+                  - listitem [ref=e1144]:
+                    - paragraph [ref=e1145]:
+                      - strong [ref=e1146]: Check discussions
+                      - text: ":"
+                      - link "GitHub Discussions" [ref=e1147] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/discussions
+                  - listitem [ref=e1148]:
+                    - paragraph [ref=e1149]:
+                      - strong [ref=e1150]: Create new issue
+                      - text: ":"
+                      - link "New Issue" [ref=e1151] [cursor=pointer]:
+                        - /url: https://github.com/PavanMudigonda/zero-to-ai/issues/new
+                  - listitem [ref=e1152]:
+                    - paragraph [ref=e1153]:
+                      - strong [ref=e1154]: Run diagnostics
+                      - text: ": Use the"
+                      - link "Quick Diagnosis Script" [ref=e1155] [cursor=pointer]:
+                        - /url: "#quick-diagnosis-script"
+                      - text: above
+                - generic [ref=e1156]:
+                  - heading "When Asking for Help" [level=3] [ref=e1157]
+                  - paragraph [ref=e1158]: "Include:"
+                  - list [ref=e1159]:
+                    - listitem [ref=e1160]:
+                      - paragraph [ref=e1161]: Operating system and version
+                    - listitem [ref=e1162]:
+                      - paragraph [ref=e1163]:
+                        - text: Python version (
+                        - code [ref=e1164]: python --version
+                        - text: )
+                    - listitem [ref=e1165]:
+                      - paragraph [ref=e1166]: Error message (full traceback)
+                    - listitem [ref=e1167]:
+                      - paragraph [ref=e1168]: Steps to reproduce
+                    - listitem [ref=e1169]:
+                      - paragraph [ref=e1170]: What you’ve already tried
+              - generic [ref=e1171]:
+                - heading "Quick Diagnosis Script" [level=2] [ref=e1172]
+                - generic [ref=e1173]:
+                  - heading "🔧 One-Command Diagnostics" [level=3] [ref=e1174]
+                  - paragraph [ref=e1175]:
+                    - strong [ref=e1176]: "Quick environment checks (copy and paste):"
+                  - generic [ref=e1178]:
+                    - generic [ref=e1179]: "# Check Python version and location python --version && which python # Verify key packages in one line python -c \"import sys; import numpy as np; import pandas as pd; import sklearn; import torch; print(f'✅ Python {sys.version_info.major}.{sys.version_info.minor} | NumPy {np.__version__} | Pandas {pd.__version__} | PyTorch {torch.__version__} | CUDA: {torch.cuda.is_available()}')\" # Check CUDA setup python -c \"import torch; print(f'CUDA Available: {torch.cuda.is_available()}'); print(f'CUDA Version: {torch.version.cuda}' if torch.cuda.is_available() else 'CPU Only'); print(f'GPU: {torch.cuda.get_device_name(0)}' if torch.cuda.is_available() else 'No GPU')\" # List installed packages pip list | grep -E 'numpy|pandas|torch|transformers|jupyter'"
+                    - button "Copy to clipboard" [ref=e1180] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1181]
+                - generic [ref=e1185]:
+                  - heading "📝 Comprehensive Diagnostic Script" [level=3] [ref=e1186]
+                  - paragraph [ref=e1187]: "Run this complete diagnostic to check your environment:"
+                  - generic [ref=e1189]:
+                    - generic [ref=e1190]: "#!/usr/bin/env python3 \"\"\"Comprehensive environment diagnostic script for Zero to AI\"\"\" import sys import platform import subprocess print(\"=\" * 60) print(\"ZERO TO AI - ENVIRONMENT DIAGNOSTICS\") print(\"=\" * 60) # System Information print(\"\\n📋 SYSTEM INFORMATION\") print(\"-\" * 60) print(f\"Platform: {platform.platform()}\") print(f\"Python Version: {sys.version}\") print(f\"Python Executable: {sys.executable}\") print(f\"Architecture: {platform.machine()}\") # Check Python version compatibility python_version = sys.version_info if python_version >= (3, 9): print(f\"✅ Python version {python_version.major}.{python_version.minor} is compatible\") else: print(f\"❌ Python {python_version.major}.{python_version.minor} detected. Please upgrade to 3.9+\") # Package Checks print(\"\\n📦 CHECKING PACKAGES\") print(\"-\" * 60) packages = [ 'numpy', 'pandas', 'matplotlib', 'scikit-learn', 'torch', 'torchvision', 'transformers', 'tokenizers', 'jupyter', 'notebook', 'ipykernel' ] missing_packages = [] for package in packages: try: mod = __import__(package.replace('-', '_')) version = getattr(mod, '__version__', 'Unknown') print(f\"✅ {package:20s} {version}\") except ImportError: print(f\"❌ {package:20s} NOT INSTALLED\") missing_packages.append(package) # GPU/CUDA Check print(\"\\n🎮 GPU/CUDA STATUS\") print(\"-\" * 60) try: import torch cuda_available = torch.cuda.is_available() print(f\"CUDA Available: {'✅ YES' if cuda_available else '❌ NO'}\") if cuda_available: print(f\"CUDA Version: {torch.version.cuda}\") print(f\"GPU Device: {torch.cuda.get_device_name(0)}\") print(f\"GPU Memory: {torch.cuda.get_device_properties(0).total_memory / 1024**3:.2f} GB\") else: print(\"Running in CPU-only mode\") print(\"For GPU support, install PyTorch with CUDA:\") print(\" pip install torch --index-url https://download.pytorch.org/whl/cu118\") # Check MPS (Apple Silicon) if hasattr(torch.backends, 'mps') and torch.backends.mps.is_available(): print(\"✅ Apple Metal Performance Shaders (MPS) available\") except ImportError: print(\"❌ PyTorch not installed - cannot check CUDA status\") # Memory Check print(\"\\n💾 SYSTEM RESOURCES\") print(\"-\" * 60) try: import psutil mem = psutil.virtual_memory() print(f\"Total RAM: {mem.total / 1024**3:.2f} GB\") print(f\"Available RAM: {mem.available / 1024**3:.2f} GB\") print(f\"RAM Usage: {mem.percent}%\") except ImportError: print(\"⚠️ psutil not installed - cannot check memory\") # Jupyter Check print(\"\\n📓 JUPYTER STATUS\") print(\"-\" * 60) try: result = subprocess.run(['jupyter', '--version'], capture_output=True, text=True) if result.returncode == 0: print(\"✅ Jupyter installed:\") print(result.stdout) else: print(\"❌ Jupyter command failed\") except FileNotFoundError: print(\"❌ Jupyter not found in PATH\") # Summary print(\"\\n\" + \"=\" * 60) print(\"SUMMARY\") print(\"=\" * 60) if missing_packages: print(f\"\\n❌ Missing packages ({len(missing_packages)}):\") print(\" \" + \", \".join(missing_packages)) print(\"\\n📝 To install missing packages:\") print(f\" pip install {' '.join(missing_packages)}\") else: print(\"\\n✅ All core packages installed!\") if python_version < (3, 9): print(\"\\n⚠️ WARNING: Python version upgrade required (3.9+)\") print(\"\\n💡 For detailed troubleshooting, visit:\") print(\" https://github.com/PavanMudigonda/zero-to-ai/blob/main/00-course-setup/troubleshooting.md\") print(\"\\n\" + \"=\" * 60)"
+                    - button "Copy to clipboard" [ref=e1191] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1192]
+                  - paragraph [ref=e1196]:
+                    - strong [ref=e1197]:
+                      - text: Save as
+                      - code [ref=e1198]: diagnose_env.py
+                      - text: "and run:"
+                  - generic [ref=e1200]:
+                    - generic [ref=e1201]: python diagnose_env.py
+                    - button "Copy to clipboard" [ref=e1202] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1203]
+                  - paragraph [ref=e1207]:
+                    - strong [ref=e1208]: "Or download and run directly:"
+                  - generic [ref=e1210]:
+                    - generic [ref=e1211]: curl -fsSL https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/scripts/diagnose_env.py | python
+                    - button "Copy to clipboard" [ref=e1212] [cursor=pointer]:
+                      - img "Copy to clipboard" [ref=e1213]
+                  - paragraph [ref=e1217]:
+                    - strong [ref=e1218]: Still stuck?
+                    - text: Don’t hesitate to
+                    - link "ask for help" [ref=e1219] [cursor=pointer]:
+                      - /url: https://github.com/PavanMudigonda/zero-to-ai/discussions
+                    - text: "!"
+        - contentinfo [ref=e1220]:
+          - generic [ref=e1221]:
+            - link "Next AI Coding Tools for ML Engineers (March 2026)" [ref=e1222] [cursor=pointer]:
+              - /url: ai_dev_tools_2026.html
+              - generic [ref=e1223]:
+                - generic [ref=e1225]: Next
+                - generic [ref=e1226]: AI Coding Tools for ML Engineers (March 2026)
+              - img [ref=e1227]
+            - 'link "Previous Phase 1: Python Fundamentals" [ref=e1229] [cursor=pointer]':
+              - /url: ../01-python/README.html
+              - img [ref=e1230]
+              - generic [ref=e1232]:
+                - generic [ref=e1234]: Previous
+                - generic [ref=e1235]: "Phase 1: Python Fundamentals"
+          - generic [ref=e1236]:
+            - generic [ref=e1237]:
+              - generic [ref=e1238]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e1239]: v0.1.0
+            - link "GitHub" [ref=e1242] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e1243]
+      - complementary [ref=e1245]:
+        - separator "Resize right sidebar" [ref=e1246]:
+          - button "Collapse right sidebar" [ref=e1247] [cursor=pointer]: ›
+        - generic [ref=e1248]:
+          - generic [ref=e1249]: On this page
+          - list [ref=e1252]:
+            - listitem [ref=e1253]:
+              - list [ref=e1254]:
+                - listitem [ref=e1255]:
+                  - link "� Quick Fixes (Most Common Issues)" [ref=e1256] [cursor=pointer]:
+                    - /url: "#quick-fixes-most-common-issues"
+                - listitem [ref=e1257]:
+                  - link "📋 Table of Contents" [ref=e1258] [cursor=pointer]:
+                    - /url: "#table-of-contents"
+                - listitem [ref=e1259]:
+                  - link "🔍 Error Message Quick Reference" [ref=e1260] [cursor=pointer]:
+                    - /url: "#error-message-quick-reference"
+                - listitem [ref=e1261]:
+                  - link "📊 Compatibility Matrix" [ref=e1262] [cursor=pointer]:
+                    - /url: "#compatibility-matrix"
+                  - list [ref=e1263]:
+                    - listitem [ref=e1264]:
+                      - link "Core Dependencies" [ref=e1265] [cursor=pointer]:
+                        - /url: "#core-dependencies"
+                    - listitem [ref=e1266]:
+                      - link "Deep Learning Frameworks" [ref=e1267] [cursor=pointer]:
+                        - /url: "#deep-learning-frameworks"
+                    - listitem [ref=e1268]:
+                      - link "GPU/CUDA Compatibility" [ref=e1269] [cursor=pointer]:
+                        - /url: "#gpu-cuda-compatibility"
+                    - listitem [ref=e1270]:
+                      - link "Platform-Specific" [ref=e1271] [cursor=pointer]:
+                        - /url: "#platform-specific"
+                - listitem [ref=e1272]:
+                  - link "Installation Issues" [ref=e1273] [cursor=pointer]:
+                    - /url: "#installation-issues"
+                  - list [ref=e1274]:
+                    - listitem [ref=e1275]:
+                      - 'link "Problem: pip install fails with permission errors" [ref=e1276] [cursor=pointer]':
+                        - /url: "#problem-pip-install-fails-with-permission-errors"
+                        - text: "Problem:"
+                        - code [ref=e1277]: pip install
+                        - text: fails with permission errors
+                    - listitem [ref=e1278]:
+                      - 'link "Problem: conda command not found" [ref=e1279] [cursor=pointer]':
+                        - /url: "#problem-conda-command-not-found"
+                        - text: "Problem:"
+                        - code [ref=e1280]: conda
+                        - text: command not found
+                    - listitem [ref=e1281]:
+                      - 'link "Problem: UV installation fails" [ref=e1282] [cursor=pointer]':
+                        - /url: "#problem-uv-installation-fails"
+                - listitem [ref=e1283]:
+                  - link "Environment Problems" [ref=e1284] [cursor=pointer]:
+                    - /url: "#environment-problems"
+                  - list [ref=e1285]:
+                    - listitem [ref=e1286]:
+                      - 'link "Problem: Wrong Python version" [ref=e1287] [cursor=pointer]':
+                        - /url: "#problem-wrong-python-version"
+                    - listitem [ref=e1288]:
+                      - 'link "Problem: Virtual environment not activating" [ref=e1289] [cursor=pointer]':
+                        - /url: "#problem-virtual-environment-not-activating"
+                    - listitem [ref=e1290]:
+                      - 'link "Problem: Environment packages not found after activation" [ref=e1291] [cursor=pointer]':
+                        - /url: "#problem-environment-packages-not-found-after-activation"
+                - listitem [ref=e1292]:
+                  - link "Jupyter Notebook Issues" [ref=e1293] [cursor=pointer]:
+                    - /url: "#jupyter-notebook-issues"
+                  - list [ref=e1294]:
+                    - listitem [ref=e1295]:
+                      - 'link "Problem: Jupyter not found" [ref=e1296] [cursor=pointer]':
+                        - /url: "#problem-jupyter-not-found"
+                    - listitem [ref=e1297]:
+                      - 'link "Problem: Kernel not found or wrong kernel" [ref=e1298] [cursor=pointer]':
+                        - /url: "#problem-kernel-not-found-or-wrong-kernel"
+                    - listitem [ref=e1299]:
+                      - 'link "Problem: Jupyter kernel keeps dying" [ref=e1300] [cursor=pointer]':
+                        - /url: "#problem-jupyter-kernel-keeps-dying"
+                    - listitem [ref=e1301]:
+                      - 'link "Problem: Cannot open notebooks" [ref=e1302] [cursor=pointer]':
+                        - /url: "#problem-cannot-open-notebooks"
+                - listitem [ref=e1303]:
+                  - link "Package Import Errors" [ref=e1304] [cursor=pointer]:
+                    - /url: "#package-import-errors"
+                  - list [ref=e1305]:
+                    - listitem [ref=e1306]:
+                      - 'link "Problem: ModuleNotFoundError: No module named ''X''" [ref=e1307] [cursor=pointer]':
+                        - /url: "#problem-modulenotfounderror-no-module-named-x"
+                        - text: "Problem:"
+                        - code [ref=e1308]: "ModuleNotFoundError: No module named 'X'"
+                    - listitem [ref=e1309]:
+                      - 'link "Problem: Import works in terminal but not in Jupyter" [ref=e1310] [cursor=pointer]':
+                        - /url: "#problem-import-works-in-terminal-but-not-in-jupyter"
+                    - listitem [ref=e1311]:
+                      - 'link "Problem: Package version conflicts" [ref=e1312] [cursor=pointer]':
+                        - /url: "#problem-package-version-conflicts"
+                - listitem [ref=e1313]:
+                  - link "GPU/CUDA Issues" [ref=e1314] [cursor=pointer]:
+                    - /url: "#gpu-cuda-issues"
+                  - list [ref=e1315]:
+                    - listitem [ref=e1316]:
+                      - 'link "Problem: PyTorch not using GPU" [ref=e1317] [cursor=pointer]':
+                        - /url: "#problem-pytorch-not-using-gpu"
+                    - listitem [ref=e1318]:
+                      - 'link "Problem: CUDA out of memory" [ref=e1319] [cursor=pointer]':
+                        - /url: "#problem-cuda-out-of-memory"
+                    - listitem [ref=e1320]:
+                      - 'link "Problem: Multiple CUDA versions" [ref=e1321] [cursor=pointer]':
+                        - /url: "#problem-multiple-cuda-versions"
+                - listitem [ref=e1322]:
+                  - link "Memory Issues" [ref=e1323] [cursor=pointer]:
+                    - /url: "#memory-issues"
+                  - list [ref=e1324]:
+                    - listitem [ref=e1325]:
+                      - 'link "Problem: Jupyter notebook crashes with large datasets" [ref=e1326] [cursor=pointer]':
+                        - /url: "#problem-jupyter-notebook-crashes-with-large-datasets"
+                    - listitem [ref=e1327]:
+                      - 'link "Problem: RAM usage grows over time" [ref=e1328] [cursor=pointer]':
+                        - /url: "#problem-ram-usage-grows-over-time"
+                - listitem [ref=e1329]:
+                  - link "Platform-Specific Issues" [ref=e1330] [cursor=pointer]:
+                    - /url: "#platform-specific-issues"
+                  - list [ref=e1331]:
+                    - listitem [ref=e1332]:
+                      - link "macOS" [ref=e1333] [cursor=pointer]:
+                        - /url: "#macos"
+                      - list [ref=e1334]:
+                        - listitem [ref=e1335]:
+                          - 'link "Problem: SSL certificate errors" [ref=e1336] [cursor=pointer]':
+                            - /url: "#problem-ssl-certificate-errors"
+                        - listitem [ref=e1337]:
+                          - 'link "Problem: M1/M2 compatibility issues" [ref=e1338] [cursor=pointer]':
+                            - /url: "#problem-m1-m2-compatibility-issues"
+                    - listitem [ref=e1339]:
+                      - link "Windows" [ref=e1340] [cursor=pointer]:
+                        - /url: "#windows"
+                      - list [ref=e1341]:
+                        - listitem [ref=e1342]:
+                          - 'link "Problem: Long path names" [ref=e1343] [cursor=pointer]':
+                            - /url: "#problem-long-path-names"
+                        - listitem [ref=e1344]:
+                          - 'link "Problem: Visual C++ redistributable missing" [ref=e1345] [cursor=pointer]':
+                            - /url: "#problem-visual-c-redistributable-missing"
+                    - listitem [ref=e1346]:
+                      - link "Linux" [ref=e1347] [cursor=pointer]:
+                        - /url: "#linux"
+                      - list [ref=e1348]:
+                        - listitem [ref=e1349]:
+                          - 'link "Problem: python3-dev missing" [ref=e1350] [cursor=pointer]':
+                            - /url: "#problem-python3-dev-missing"
+                            - text: "Problem:"
+                            - code [ref=e1351]: python3-dev
+                            - text: missing
+                - listitem [ref=e1352]:
+                  - link "Common Error Messages" [ref=e1353] [cursor=pointer]:
+                    - /url: "#common-error-messages"
+                  - list [ref=e1354]:
+                    - listitem [ref=e1355]:
+                      - 'link "ImportError: DLL load failed" [ref=e1356] [cursor=pointer]':
+                        - /url: "#importerror-dll-load-failed"
+                        - code [ref=e1357]: "ImportError: DLL load failed"
+                    - listitem [ref=e1358]:
+                      - 'link "RuntimeError: CUDA error: out of memory" [ref=e1359] [cursor=pointer]':
+                        - /url: "#runtimeerror-cuda-error-out-of-memory"
+                        - code [ref=e1360]: "RuntimeError: CUDA error: out of memory"
+                    - listitem [ref=e1361]:
+                      - 'link "SyntaxError: invalid syntax" [ref=e1362] [cursor=pointer]':
+                        - /url: "#syntaxerror-invalid-syntax"
+                        - code [ref=e1363]: "SyntaxError: invalid syntax"
+                - listitem [ref=e1364]:
+                  - link "Getting More Help" [ref=e1365] [cursor=pointer]:
+                    - /url: "#getting-more-help"
+                  - list [ref=e1366]:
+                    - listitem [ref=e1367]:
+                      - link "When Asking for Help" [ref=e1368] [cursor=pointer]:
+                        - /url: "#when-asking-for-help"
+                - listitem [ref=e1369]:
+                  - link "Quick Diagnosis Script" [ref=e1370] [cursor=pointer]:
+                    - /url: "#quick-diagnosis-script"
+                  - list [ref=e1371]:
+                    - listitem [ref=e1372]:
+                      - link "🔧 One-Command Diagnostics" [ref=e1373] [cursor=pointer]:
+                        - /url: "#one-command-diagnostics"
+                    - listitem [ref=e1374]:
+                      - link "📝 Comprehensive Diagnostic Script" [ref=e1375] [cursor=pointer]:
+                        - /url: "#comprehensive-diagnostic-script"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

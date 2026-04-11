@@ -1,4 +1,4 @@
-# Phase 14: Local LLMs
+# Local LLMs
 
 This module should help you answer a practical question: when does running models locally make sense, and what trade-offs do you accept in exchange for privacy, cost control, and deployment flexibility?
 

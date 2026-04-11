@@ -1,4 +1,4 @@
-# Phase 4: Tokenization
+# Tokenization
 
 > **Goal**: Understand how text is converted into numbers that language models can process. This is the foundational step before embeddings and neural networks.
 

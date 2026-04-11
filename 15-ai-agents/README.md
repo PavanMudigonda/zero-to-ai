@@ -1,4 +1,4 @@
-# Phase 15: AI Agents
+# AI Agents
 
 > **Build intelligent agents that can reason, plan, and use tools to accomplish complex tasks**
 

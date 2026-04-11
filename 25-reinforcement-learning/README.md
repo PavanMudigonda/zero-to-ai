@@ -1,4 +1,4 @@
-# Phase 25: Reinforcement Learning
+# Reinforcement Learning
 
 > "Reinforcement learning is the first field of machine learning where learning systems have reached human-level performance." - Richard Sutton
 

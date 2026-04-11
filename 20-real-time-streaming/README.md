@@ -1,4 +1,4 @@
-# Phase 20: Real-Time & Streaming AI
+# Real-Time & Streaming AI
 
 ## Overview
 Learn how to build real-time AI applications with streaming responses, WebSocket connections, and progressive loading.

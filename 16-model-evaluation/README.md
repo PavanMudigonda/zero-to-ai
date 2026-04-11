@@ -1,4 +1,4 @@
-# Phase 16: Model Evaluation
+# Model Evaluation
 
 Learn how to measure, evaluate, and improve your AI models with comprehensive metrics and testing strategies.
 

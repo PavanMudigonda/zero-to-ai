@@ -1,4 +1,4 @@
-# Quick Start Guide - Phase 2 Embeddings
+# Quick Start Guide - Embeddings
 
 ## 🎯 You're Here Because...
 

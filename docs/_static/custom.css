@@ -1,3 +1,18 @@
+/* Prevent wide tables/code from breaking page layout */
+.main {
+  min-width: 0;          /* stop flex child from stretching */
+}
+.content {
+  min-width: 0;
+  overflow-x: hidden;    /* contain overflow within content area */
+}
+.content table,
+.content .highlight,
+.content pre {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
 /* Sidebar logo */
 .sidebar-logo {
   max-width: 36px;

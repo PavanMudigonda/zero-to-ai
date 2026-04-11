@@ -1,4 +1,4 @@
-# Phase 27: Causal Inference
+# Causal Inference
 
 > "Correlation does not imply causation, but causation implies correlation." - Statistics Proverb
 

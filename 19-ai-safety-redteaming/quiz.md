@@ -1,4 +1,4 @@
-# Phase 18 Quiz: AI Safety & Red Teaming
+# Quiz: AI Safety & Red Teaming
 
 ## Instructions
 - Total questions: 20

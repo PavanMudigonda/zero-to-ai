@@ -1,4 +1,4 @@
-# Phase 18 Challenges: AI Security & Red Teaming
+# Challenges: AI Security & Red Teaming
 
 ## Overview
 

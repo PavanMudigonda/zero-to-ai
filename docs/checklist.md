@@ -19,7 +19,7 @@
 
 - [ ] Done  [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md)
 - [ ] Done  [00-course-setup/2026_model_landscape.md](00-course-setup/2026_model_landscape.md) — frontier models, open-weight models, benchmarks as of 2026
-- [ ] Done  [00-course-setup/ai_dev_tools_2026.md](00-course-setup/ai_dev_tools_2026.md) — Cursor, Windsurf, Aider, GitHub Copilot comparison
+- [ ] Done  [31-ai-powered-dev-tools/00_ai_dev_tools_2026.md](31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) — Cursor, Windsurf, Aider, GitHub Copilot comparison
 - [ ] Familiarize yourself with basic ML concepts
 - [ ] Understand the difference between supervised/unsupervised learning
 - [ ] Done  [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) — choose your learning track (AI Engineer / ML Engineer / Data Scientist)

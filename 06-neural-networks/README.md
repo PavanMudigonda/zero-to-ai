@@ -1,4 +1,4 @@
-# Phase 6: Neural Networks
+# Neural Networks
 
 This module is where the repo shifts from classical ML intuition into modern deep learning. The goal is not just to run PyTorch code, but to understand why gradient-based learning, attention, and transformers work well enough that later LLM modules feel connected instead of magical.
 

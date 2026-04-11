@@ -1,4 +1,4 @@
-# Phase 5: Neural Networks - Pre-Quiz
+# Neural Networks - Pre-Quiz
 
 **Time:** 15 minutes  
 **Questions:** 10  

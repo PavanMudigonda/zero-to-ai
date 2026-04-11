@@ -1,0 +1,450 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - 'link "Visual Roadmap — Part 1: Overview" [ref=e18] [cursor=pointer]':
+                - /url: ../../../../generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - 'link "Visual Roadmap — Part 2: Core Systems" [ref=e20] [cursor=pointer]':
+                - /url: ../../../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - 'link "Visual Roadmap — Part 3: Advanced Topics" [ref=e22] [cursor=pointer]':
+                - /url: ../../../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - 'link "Visual Roadmap — Part 4: End-to-End Flows" [ref=e24] [cursor=pointer]':
+                - /url: ../../../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - 'link "Phase 0: Course Setup" [ref=e28] [cursor=pointer]':
+                - /url: ../../../00-course-setup/README.html
+              - img [ref=e31] [cursor=pointer]
+            - listitem [ref=e33]:
+              - 'link "Phase 1: Python Fundamentals" [ref=e34] [cursor=pointer]':
+                - /url: ../../../01-python/README.html
+            - listitem [ref=e35]:
+              - 'link "Phase 2: Data Science Foundations" [ref=e36] [cursor=pointer]':
+                - /url: ../../README.html
+              - img [ref=e39] [cursor=pointer]
+              - list [ref=e41]:
+                - listitem [ref=e42]:
+                  - link "How To Become a Data Engineer" [ref=e43] [cursor=pointer]:
+                    - /url: ../../DS.html
+                - listitem [ref=e44]:
+                  - link "NumPy Examples - Consolidated & Deduplicated" [ref=e45] [cursor=pointer]:
+                    - /url: ../../1-numpy-examples/README.html
+                  - img [ref=e48] [cursor=pointer]
+                - listitem [ref=e50]:
+                  - link "Pandas Examples - Consolidated & Organized" [ref=e51] [cursor=pointer]:
+                    - /url: ../../2-pandas-examples/README.html
+                  - img [ref=e54] [cursor=pointer]
+                - listitem [ref=e56]:
+                  - link "Data Science Examples" [ref=e57] [cursor=pointer]:
+                    - /url: ../../3-data-science-examples/README.html
+                  - img [ref=e60] [cursor=pointer]
+                - listitem [ref=e62]:
+                  - link "Matplotlib" [ref=e63] [cursor=pointer]:
+                    - /url: ../../4-matplotlib/README.html
+                  - img [ref=e66] [cursor=pointer]
+                - listitem [ref=e68]:
+                  - link "Scikit-Learn Examples" [ref=e69] [cursor=pointer]:
+                    - /url: ../README.html
+                  - img [ref=e72] [cursor=pointer]
+                  - list [ref=e74]:
+                    - listitem [ref=e75]:
+                      - link "Applications" [ref=e76] [cursor=pointer]:
+                        - /url: ../applications/README.html
+                      - img [ref=e79] [cursor=pointer]
+                    - listitem [ref=e81]:
+                      - link "Bicluster" [ref=e82] [cursor=pointer]:
+                        - /url: ../bicluster/README.html
+                      - img [ref=e85] [cursor=pointer]
+                    - listitem [ref=e87]:
+                      - link "Calibration" [ref=e88] [cursor=pointer]:
+                        - /url: ../calibration/README.html
+                      - img [ref=e91] [cursor=pointer]
+                    - listitem [ref=e93]:
+                      - link "Classification" [ref=e94] [cursor=pointer]:
+                        - /url: ../classification/README.html
+                      - img [ref=e97] [cursor=pointer]
+                    - listitem [ref=e99]:
+                      - link "Cluster" [ref=e100] [cursor=pointer]:
+                        - /url: ../cluster/README.html
+                      - img [ref=e103] [cursor=pointer]
+                    - listitem [ref=e105]:
+                      - link "Compose" [ref=e106] [cursor=pointer]:
+                        - /url: ../compose/README.html
+                      - img [ref=e109] [cursor=pointer]
+                    - listitem [ref=e111]:
+                      - link "Covariance" [ref=e112] [cursor=pointer]:
+                        - /url: ../covariance/README.html
+                      - img [ref=e115] [cursor=pointer]
+                    - listitem [ref=e117]:
+                      - link "Cross Decomposition" [ref=e118] [cursor=pointer]:
+                        - /url: ../cross_decomposition/README.html
+                      - img [ref=e121] [cursor=pointer]
+                    - listitem [ref=e123]:
+                      - link "Datasets" [ref=e124] [cursor=pointer]:
+                        - /url: ../datasets/README.html
+                      - img [ref=e127] [cursor=pointer]
+                    - listitem [ref=e129]:
+                      - link "Decomposition" [ref=e130] [cursor=pointer]:
+                        - /url: ../decomposition/README.html
+                      - img [ref=e133] [cursor=pointer]
+                    - listitem [ref=e135]:
+                      - link "Developing Estimators" [ref=e136] [cursor=pointer]:
+                        - /url: ../developing_estimators/README.html
+                      - img [ref=e139] [cursor=pointer]
+                    - listitem [ref=e141]:
+                      - link "Ensemble" [ref=e142] [cursor=pointer]:
+                        - /url: ../ensemble/README.html
+                      - img [ref=e145] [cursor=pointer]
+                    - listitem [ref=e147]:
+                      - link "Feature Selection" [ref=e148] [cursor=pointer]:
+                        - /url: ../feature_selection/README.html
+                      - img [ref=e151] [cursor=pointer]
+                    - listitem [ref=e153]:
+                      - link "Frozen" [ref=e154] [cursor=pointer]:
+                        - /url: ../frozen/README.html
+                      - img [ref=e157] [cursor=pointer]
+                    - listitem [ref=e159]:
+                      - link "Gaussian Process" [ref=e160] [cursor=pointer]:
+                        - /url: ../gaussian_process/README.html
+                      - img [ref=e163] [cursor=pointer]
+                    - listitem [ref=e165]:
+                      - link "Impute" [ref=e166] [cursor=pointer]:
+                        - /url: ../impute/README.html
+                      - img [ref=e169] [cursor=pointer]
+                    - listitem [ref=e171]:
+                      - link "Inspection" [ref=e172] [cursor=pointer]:
+                        - /url: ../inspection/README.html
+                      - img [ref=e175] [cursor=pointer]
+                    - listitem [ref=e177]:
+                      - link "Kernel Approximation" [ref=e178] [cursor=pointer]:
+                        - /url: ../kernel_approximation/README.html
+                      - img [ref=e181] [cursor=pointer]
+                    - listitem [ref=e183]:
+                      - link "Linear Model" [ref=e184] [cursor=pointer]:
+                        - /url: ../linear_model/README.html
+                      - img [ref=e187] [cursor=pointer]
+                    - listitem [ref=e189]:
+                      - link "Manifold" [ref=e190] [cursor=pointer]:
+                        - /url: ../manifold/README.html
+                      - img [ref=e193] [cursor=pointer]
+                    - listitem [ref=e195]:
+                      - link "Miscellaneous" [ref=e196] [cursor=pointer]:
+                        - /url: ../miscellaneous/README.html
+                      - img [ref=e199] [cursor=pointer]
+                    - listitem [ref=e201]:
+                      - link "Mixture" [ref=e202] [cursor=pointer]:
+                        - /url: ../mixture/README.html
+                      - img [ref=e205] [cursor=pointer]
+                    - listitem [ref=e207]:
+                      - link "Model Selection" [ref=e208] [cursor=pointer]:
+                        - /url: ../model_selection/README.html
+                      - img [ref=e211] [cursor=pointer]
+                    - listitem [ref=e213]:
+                      - link "Multiclass" [ref=e214] [cursor=pointer]:
+                        - /url: ../multiclass/README.html
+                      - img [ref=e217] [cursor=pointer]
+                    - listitem [ref=e219]:
+                      - link "Multioutput" [ref=e220] [cursor=pointer]:
+                        - /url: ../multioutput/README.html
+                      - img [ref=e223] [cursor=pointer]
+                    - listitem [ref=e225]:
+                      - link "Neighbors" [ref=e226] [cursor=pointer]:
+                        - /url: ../neighbors/README.html
+                      - img [ref=e229] [cursor=pointer]
+                    - listitem [ref=e231]:
+                      - link "Neural Networks" [ref=e232] [cursor=pointer]:
+                        - /url: ../neural_networks/README.html
+                      - img [ref=e235] [cursor=pointer]
+                    - listitem [ref=e237]:
+                      - link "Preprocessing" [ref=e238] [cursor=pointer]:
+                        - /url: ../preprocessing/README.html
+                      - img [ref=e241] [cursor=pointer]
+                    - listitem [ref=e243]:
+                      - link "Release Highlights" [ref=e244] [cursor=pointer]:
+                        - /url: ../release_highlights/README.html
+                      - img [ref=e247] [cursor=pointer]
+                    - listitem [ref=e249]:
+                      - link "Semi Supervised" [ref=e250] [cursor=pointer]:
+                        - /url: ../semi_supervised/README.html
+                      - img [ref=e253] [cursor=pointer]
+                    - listitem [ref=e255]:
+                      - link "Svm" [ref=e256] [cursor=pointer]:
+                        - /url: ../svm/README.html
+                      - img [ref=e259] [cursor=pointer]
+                    - listitem [ref=e261]:
+                      - link "Text" [ref=e262] [cursor=pointer]:
+                        - /url: ../text/README.html
+                      - img [ref=e265] [cursor=pointer]
+                    - listitem [ref=e267]:
+                      - link "Tree" [ref=e268] [cursor=pointer]:
+                        - /url: README.html
+                      - img [ref=e271] [cursor=pointer]
+                      - list [ref=e273]:
+                        - listitem [ref=e274]:
+                          - link "Plot Cost Complexity Pruning" [ref=e275] [cursor=pointer]:
+                            - /url: "#"
+                        - listitem [ref=e276]:
+                          - link "======================================================== Post pruning decision trees with cost complexity pruning" [ref=e277] [cursor=pointer]:
+                            - /url: "#post-pruning-decision-trees-with-cost-complexity-pruning"
+                        - listitem [ref=e278]:
+                          - link "Plot Iris Dtc" [ref=e279] [cursor=pointer]:
+                            - /url: plot_iris_dtc.html
+                        - listitem [ref=e280]:
+                          - link "======================================================================= Plot the decision surface of decision trees trained on the iris dataset" [ref=e281] [cursor=pointer]:
+                            - /url: plot_iris_dtc.html#plot-the-decision-surface-of-decision-trees-trained-on-the-iris-dataset
+                        - listitem [ref=e282]:
+                          - link "Plot Tree Regression" [ref=e283] [cursor=pointer]:
+                            - /url: plot_tree_regression.html
+                        - listitem [ref=e284]:
+                          - link "======================== Decision Tree Regression" [ref=e285] [cursor=pointer]:
+                            - /url: plot_tree_regression.html#decision-tree-regression
+                        - listitem [ref=e286]:
+                          - link "Plot Unveil Tree Structure" [ref=e287] [cursor=pointer]:
+                            - /url: plot_unveil_tree_structure.html
+                        - listitem [ref=e288]:
+                          - link "========================================= Understanding the decision tree structure" [ref=e289] [cursor=pointer]:
+                            - /url: plot_unveil_tree_structure.html#understanding-the-decision-tree-structure
+            - listitem [ref=e290]:
+              - 'link "Phase 3: Mathematics for ML" [ref=e291] [cursor=pointer]':
+                - /url: ../../../03-maths/README.html
+              - img [ref=e294] [cursor=pointer]
+          - heading "Core AI" [ref=e296]
+          - list [ref=e297]:
+            - listitem [ref=e298]:
+              - 'link "Phase 4: Tokenization" [ref=e299] [cursor=pointer]':
+                - /url: ../../../04-token/README.html
+              - img [ref=e302] [cursor=pointer]
+            - listitem [ref=e304]:
+              - 'link "Phase 5: Embeddings" [ref=e305] [cursor=pointer]':
+                - /url: ../../../05-embeddings/README.html
+              - img [ref=e308] [cursor=pointer]
+            - listitem [ref=e310]:
+              - 'link "Phase 6: Neural Networks" [ref=e311] [cursor=pointer]':
+                - /url: ../../../06-neural-networks/README.html
+              - img [ref=e314] [cursor=pointer]
+          - heading "Applied AI" [ref=e316]
+          - list [ref=e317]:
+            - listitem [ref=e318]:
+              - 'link "Phase 7: Vector Databases" [ref=e319] [cursor=pointer]':
+                - /url: ../../../07-vector-databases/README.html
+              - img [ref=e322] [cursor=pointer]
+            - listitem [ref=e324]:
+              - 'link "Phase 8: RAG" [ref=e325] [cursor=pointer]':
+                - /url: ../../../08-rag/README.html
+              - img [ref=e328] [cursor=pointer]
+            - listitem [ref=e330]:
+              - 'link "Phase 9: MLOps" [ref=e331] [cursor=pointer]':
+                - /url: ../../../09-mlops/README.html
+              - img [ref=e334] [cursor=pointer]
+            - listitem [ref=e336]:
+              - 'link "Phase 10: Specializations" [ref=e337] [cursor=pointer]':
+                - /url: ../../../10-specializations/README.html
+              - img [ref=e340] [cursor=pointer]
+          - heading "Advanced" [ref=e342]
+          - list [ref=e343]:
+            - listitem [ref=e344]:
+              - 'link "Phase 11: Prompt Engineering" [ref=e345] [cursor=pointer]':
+                - /url: ../../../11-prompt-engineering/README.html
+              - img [ref=e348] [cursor=pointer]
+            - listitem [ref=e350]:
+              - 'link "Phase 12: LLM Fine-Tuning" [ref=e351] [cursor=pointer]':
+                - /url: ../../../12-llm-finetuning/README.html
+              - img [ref=e354] [cursor=pointer]
+            - listitem [ref=e356]:
+              - 'link "Phase 13: Multimodal AI" [ref=e357] [cursor=pointer]':
+                - /url: ../../../13-multimodal/README.html
+              - img [ref=e360] [cursor=pointer]
+            - listitem [ref=e362]:
+              - 'link "Phase 14: Local LLMs" [ref=e363] [cursor=pointer]':
+                - /url: ../../../14-local-llms/README.html
+              - img [ref=e366] [cursor=pointer]
+            - listitem [ref=e368]:
+              - 'link "Phase 15: AI Agents" [ref=e369] [cursor=pointer]':
+                - /url: ../../../15-ai-agents/README.html
+              - img [ref=e372] [cursor=pointer]
+          - heading "Supplementary" [ref=e374]
+          - list [ref=e375]:
+            - listitem [ref=e376]:
+              - 'link "Phase 16: Model Evaluation" [ref=e377] [cursor=pointer]':
+                - /url: ../../../16-model-evaluation/README.html
+              - img [ref=e380] [cursor=pointer]
+            - listitem [ref=e382]:
+              - 'link "Phase 17: Debugging & Troubleshooting" [ref=e383] [cursor=pointer]':
+                - /url: ../../../17-debugging/README.html
+              - img [ref=e386] [cursor=pointer]
+            - listitem [ref=e388]:
+              - 'link "Phase 18: Low-Code AI Tools" [ref=e389] [cursor=pointer]':
+                - /url: ../../../18-low-code/README.html
+              - img [ref=e392] [cursor=pointer]
+            - listitem [ref=e394]:
+              - 'link "Phase 19: AI Safety & Red Teaming" [ref=e395] [cursor=pointer]':
+                - /url: ../../../19-ai-safety/README.html
+              - img [ref=e398] [cursor=pointer]
+            - listitem [ref=e400]:
+              - 'link "Phase 20: Real-Time & Streaming AI" [ref=e401] [cursor=pointer]':
+                - /url: ../../../20-streaming/README.html
+              - img [ref=e404] [cursor=pointer]
+          - heading "Reference" [ref=e406]
+          - list [ref=e407]:
+            - listitem [ref=e408]:
+              - 'link "Phase 21: Quizzes" [ref=e409] [cursor=pointer]':
+                - /url: ../../../21-quizzes/README.html
+              - img [ref=e412] [cursor=pointer]
+            - listitem [ref=e414]:
+              - 'link "Phase 22: References & Hands-On Labs" [ref=e415] [cursor=pointer]':
+                - /url: ../../../22-references/README.html
+              - img [ref=e418] [cursor=pointer]
+            - listitem [ref=e420]:
+              - 'link "Phase 23: Glossary & Foundations" [ref=e421] [cursor=pointer]':
+                - /url: ../../../23-glossary/README.html
+              - img [ref=e424] [cursor=pointer]
+          - heading "Research" [ref=e426]
+          - list [ref=e427]:
+            - listitem [ref=e428]:
+              - 'link "Phase 24: Advanced Deep Learning" [ref=e429] [cursor=pointer]':
+                - /url: ../../../24-advanced-dl/README.html
+              - img [ref=e432] [cursor=pointer]
+            - listitem [ref=e434]:
+              - 'link "Phase 25: Reinforcement Learning" [ref=e435] [cursor=pointer]':
+                - /url: ../../../25-rl/README.html
+              - img [ref=e438] [cursor=pointer]
+            - listitem [ref=e440]:
+              - 'link "Phase 26: Time Series Analysis & Forecasting" [ref=e441] [cursor=pointer]':
+                - /url: ../../../26-time-series/README.html
+              - img [ref=e444] [cursor=pointer]
+            - listitem [ref=e446]:
+              - 'link "Phase 27: Causal Inference" [ref=e447] [cursor=pointer]':
+                - /url: ../../../27-causal-inference/README.html
+              - img [ref=e450] [cursor=pointer]
+          - heading "Production" [ref=e452]
+          - list [ref=e453]:
+            - listitem [ref=e454]:
+              - 'link "Phase 28: Practical Data Science" [ref=e455] [cursor=pointer]':
+                - /url: ../../../28-practical-ds/README.html
+              - img [ref=e458] [cursor=pointer]
+            - listitem [ref=e460]:
+              - 'link "Phase 29: AI Hardware & Validation" [ref=e461] [cursor=pointer]':
+                - /url: ../../../29-ai-hardware/README.html
+              - img [ref=e464] [cursor=pointer]
+            - listitem [ref=e466]:
+              - 'link "Phase 30: Inference Optimization & Model Serving" [ref=e467] [cursor=pointer]':
+                - /url: ../../../30-inference-opt/README.html
+              - img [ref=e470] [cursor=pointer]
+          - heading "Developer Tools" [ref=e472]
+          - list [ref=e473]:
+            - listitem [ref=e474]:
+              - 'link "Phase 31: AI-Powered Development with VS Code & GitHub Copilot" [ref=e475] [cursor=pointer]':
+                - /url: ../../../31-ai-dev-tools/README.html
+              - img [ref=e478] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e480]:
+        - button "Collapse left sidebar" [ref=e481] [cursor=pointer]: ‹
+    - generic [ref=e483]:
+      - generic [ref=e484]:
+        - generic [ref=e485]:
+          - link "View this page" [ref=e487] [cursor=pointer]:
+            - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/02-data-science/5-scikit-learn/tree/plot_cost_complexity_pruning.ipynb?plain=true
+            - img [ref=e488]
+            - generic [ref=e490]: View this page
+          - link "Edit this page" [ref=e492] [cursor=pointer]:
+            - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/02-data-science/5-scikit-learn/tree/plot_cost_complexity_pruning.ipynb
+            - img [ref=e493]
+            - generic [ref=e495]: Edit this page
+          - button "Toggle Light / Dark / Auto color theme" [ref=e497] [cursor=pointer]:
+            - img [ref=e498]
+        - main [ref=e500]:
+          - group "Notebook launch options" [ref=e501]:
+            - generic [ref=e502]: "Run this notebook:"
+            - link "Open in Colab" [ref=e503] [cursor=pointer]:
+              - /url: https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main/02-data-science/5-scikit-learn/tree/plot_cost_complexity_pruning.ipynb
+              - img [ref=e504]
+              - text: Open in Colab
+            - link "Open in Kaggle" [ref=e506] [cursor=pointer]:
+              - /url: https://kaggle.com/kernels/welcome?src=https://github.com/PavanMudigonda/zero-to-ai/blob/main/02-data-science/5-scikit-learn/tree/plot_cost_complexity_pruning.ipynb
+              - img [ref=e507]
+              - text: Open in Kaggle
+          - heading "Plot Cost Complexity Pruning" [level=1] [ref=e510]
+          - generic [ref=e511]:
+            - heading "======================================================== Post pruning decision trees with cost complexity pruning" [level=1] [ref=e512]
+            - paragraph [ref=e513]: "… currentmodule:: sklearn.tree"
+            - paragraph [ref=e514]:
+              - text: "The :class:"
+              - code [ref=e515]: DecisionTreeClassifier
+              - text: provides parameters such as
+              - code [ref=e516]: min_samples_leaf
+              - text: and
+              - code [ref=e517]: max_depth
+              - text: to prevent a tree from overfitting. Cost complexity pruning provides another option to control the size of a tree. In
+            - generic [ref=e518]:
+              - term [ref=e519]: "class:"
+              - definition [ref=e520]:
+                - paragraph [ref=e521]:
+                  - code [ref=e522]: DecisionTreeClassifier
+                  - text: ", this pruning technique is parameterized by the cost complexity parameter,"
+                  - code [ref=e523]: ccp_alpha
+                  - text: . Greater values of
+                  - code [ref=e524]: ccp_alpha
+                  - text: increase the number of nodes pruned. Here we only show the effect of
+                  - code [ref=e525]: ccp_alpha
+                  - text: on regularizing the trees and how to choose a
+                  - code [ref=e526]: ccp_alpha
+                  - text: based on validation scores.
+            - paragraph [ref=e527]:
+              - text: "See also :ref:"
+              - code [ref=e528]: minimal_cost_complexity_pruning
+              - text: for details on pruning.
+            - generic [ref=e529]:
+              - heading "Imports for Cost Complexity Pruning" [level=2] [ref=e530]
+              - paragraph [ref=e531]:
+                - text: Unpruned decision trees tend to grow until every leaf is pure, which almost always overfits the training data. Cost complexity pruning (also called minimal cost-complexity pruning or weakest-link pruning) addresses this by adding a penalty term
+                - code [ref=e532]: ccp_alpha
+                - text: "that penalizes tree complexity. The total cost of a tree becomes: (leaf impurity) + alpha * (number of leaves). As"
+                - code [ref=e533]: ccp_alpha
+                - text: increases, the algorithm prunes subtrees whose reduction in impurity does not justify their added complexity.
+              - paragraph [ref=e534]:
+                - strong [ref=e535]: How it works
+                - text: ":"
+                - code [ref=e536]: DecisionTreeClassifier.cost_complexity_pruning_path
+                - text: computes the sequence of effective alpha values at which subtrees are pruned, along with the corresponding total leaf impurity. By training a tree at each alpha and plotting train vs. test accuracy, you can identify the alpha that maximizes generalization – analogous to choosing a regularization strength in linear models. The breast cancer dataset used here is a standard binary classification benchmark with 30 features.
+              - generic [ref=e540]:
+                - generic [ref=e541]: "# Authors: The scikit-learn developers # SPDX-License-Identifier: BSD-3-Clause import matplotlib.pyplot as plt from sklearn.datasets import load_breast_cancer from sklearn.model_selection import train_test_split from sklearn.tree import DecisionTreeClassifier # %% # Total impurity of leaves vs effective alphas of pruned tree # --------------------------------------------------------------- # Minimal cost complexity pruning recursively finds the node with the \"weakest # link\". The weakest link is characterized by an effective alpha, where the # nodes with the smallest effective alpha are pruned first. To get an idea of # what values of ``ccp_alpha`` could be appropriate, scikit-learn provides # :func:`DecisionTreeClassifier.cost_complexity_pruning_path` that returns the # effective alphas and the corresponding total leaf impurities at each step of # the pruning process. As alpha increases, more of the tree is pruned, which # increases the total impurity of its leaves. X, y = load_breast_cancer(return_X_y=True) X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0) clf = DecisionTreeClassifier(random_state=0) path = clf.cost_complexity_pruning_path(X_train, y_train) ccp_alphas, impurities = path.ccp_alphas, path.impurities # %% # In the following plot, the maximum effective alpha value is removed, because # it is the trivial tree with only one node. fig, ax = plt.subplots() ax.plot(ccp_alphas[:-1], impurities[:-1], marker=\"o\", drawstyle=\"steps-post\") ax.set_xlabel(\"effective alpha\") ax.set_ylabel(\"total impurity of leaves\") ax.set_title(\"Total Impurity vs effective alpha for training set\") # %% # Next, we train a decision tree using the effective alphas. The last value # in ``ccp_alphas`` is the alpha value that prunes the whole tree, # leaving the tree, ``clfs[-1]``, with one node. clfs = [] for ccp_alpha in ccp_alphas: clf = DecisionTreeClassifier(random_state=0, ccp_alpha=ccp_alpha) clf.fit(X_train, y_train) clfs.append(clf) print( \"Number of nodes in the last tree is: {} with ccp_alpha: {}\".format( clfs[-1].tree_.node_count, ccp_alphas[-1] ) ) # %% # For the remainder of this example, we remove the last element in # ``clfs`` and ``ccp_alphas``, because it is the trivial tree with only one # node. Here we show that the number of nodes and tree depth decreases as alpha # increases. clfs = clfs[:-1] ccp_alphas = ccp_alphas[:-1] node_counts = [clf.tree_.node_count for clf in clfs] depth = [clf.tree_.max_depth for clf in clfs] fig, ax = plt.subplots(2, 1) ax[0].plot(ccp_alphas, node_counts, marker=\"o\", drawstyle=\"steps-post\") ax[0].set_xlabel(\"alpha\") ax[0].set_ylabel(\"number of nodes\") ax[0].set_title(\"Number of nodes vs alpha\") ax[1].plot(ccp_alphas, depth, marker=\"o\", drawstyle=\"steps-post\") ax[1].set_xlabel(\"alpha\") ax[1].set_ylabel(\"depth of tree\") ax[1].set_title(\"Depth vs alpha\") fig.tight_layout() # %% # Accuracy vs alpha for training and testing sets # ---------------------------------------------------- # When ``ccp_alpha`` is set to zero and keeping the other default parameters # of :class:`DecisionTreeClassifier`, the tree overfits, leading to # a 100% training accuracy and 88% testing accuracy. As alpha increases, more # of the tree is pruned, thus creating a decision tree that generalizes better. # In this example, setting ``ccp_alpha=0.015`` maximizes the testing accuracy. train_scores = [clf.score(X_train, y_train) for clf in clfs] test_scores = [clf.score(X_test, y_test) for clf in clfs] fig, ax = plt.subplots() ax.set_xlabel(\"alpha\") ax.set_ylabel(\"accuracy\") ax.set_title(\"Accuracy vs alpha for training and testing sets\") ax.plot(ccp_alphas, train_scores, marker=\"o\", label=\"train\", drawstyle=\"steps-post\") ax.plot(ccp_alphas, test_scores, marker=\"o\", label=\"test\", drawstyle=\"steps-post\") ax.legend() plt.show()"
+                - button "Copy to clipboard" [ref=e542] [cursor=pointer]:
+                  - img "Copy to clipboard" [ref=e543]
+      - contentinfo [ref=e547]:
+        - generic [ref=e548]:
+          - link "Next Tree" [ref=e549] [cursor=pointer]:
+            - /url: README.html
+            - generic [ref=e550]:
+              - generic [ref=e552]: Next
+              - generic [ref=e553]: Tree
+            - img [ref=e554]
+          - link "Previous Plot Iris Dtc" [ref=e556] [cursor=pointer]:
+            - /url: plot_iris_dtc.html
+            - img [ref=e557]
+            - generic [ref=e559]:
+              - generic [ref=e561]: Previous
+              - generic [ref=e562]: Plot Iris Dtc
+        - generic [ref=e563]:
+          - generic [ref=e564]:
+            - generic [ref=e565]: Copyright © MIT License 2026, Pavan Mudigonda
+            - generic [ref=e566]: v0.1.0
+          - link "GitHub" [ref=e569] [cursor=pointer]:
+            - /url: https://github.com/PavanMudigonda/zero-to-ai
+            - img [ref=e570]
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

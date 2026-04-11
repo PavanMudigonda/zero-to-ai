@@ -1,4 +1,4 @@
-# Phase 14: AI Agents - Challenges
+# AI Agents - Challenges
 
 Test your understanding of AI agents with these hands-on challenges! Each challenge builds on the concepts from the notebooks.
 

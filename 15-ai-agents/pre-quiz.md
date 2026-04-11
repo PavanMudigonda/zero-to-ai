@@ -1,4 +1,4 @@
-# Phase 14: AI Agents - Pre-Quiz
+# AI Agents - Pre-Quiz
 
 Test your baseline knowledge before starting the AI Agents phase.
 

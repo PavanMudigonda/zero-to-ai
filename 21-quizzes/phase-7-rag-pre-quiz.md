@@ -1,4 +1,4 @@
-# Phase 7: Retrieval-Augmented Generation (RAG) - Pre-Quiz
+# Retrieval-Augmented Generation (RAG) - Pre-Quiz
 
 **Time:** 15 minutes  
 **Questions:** 10  

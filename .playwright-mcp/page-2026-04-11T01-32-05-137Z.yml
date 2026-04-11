@@ -1,0 +1,847 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Overview" [ref=e18] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/01_overview.html
+            - listitem [ref=e19]:
+              - link "Core Systems" [ref=e20] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e21]:
+              - link "Advanced Topics" [ref=e22] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e23]:
+              - link "End-to-End Flows" [ref=e24] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e25]
+          - list [ref=e26]:
+            - listitem [ref=e27]:
+              - link "Course Setup" [ref=e28] [cursor=pointer]:
+                - /url: ../00-course-setup/README.html
+              - img [ref=e31] [cursor=pointer]
+            - listitem [ref=e33]:
+              - link "Python Fundamentals" [ref=e34] [cursor=pointer]:
+                - /url: ../01-python/README.html
+            - listitem [ref=e35]:
+              - link "Data Science Foundations" [ref=e36] [cursor=pointer]:
+                - /url: ../02-data-science/README.html
+              - img [ref=e39] [cursor=pointer]
+            - listitem [ref=e41]:
+              - link "Mathematics for ML" [ref=e42] [cursor=pointer]:
+                - /url: ../03-maths/README.html
+              - img [ref=e45] [cursor=pointer]
+              - text: e x A x = b
+          - heading "Core AI" [ref=e47]
+          - list [ref=e48]:
+            - listitem [ref=e49]:
+              - link "Tokenization" [ref=e50] [cursor=pointer]:
+                - /url: ../04-token/README.html
+              - img [ref=e53] [cursor=pointer]
+            - listitem [ref=e55]:
+              - link "Embeddings" [ref=e56] [cursor=pointer]:
+                - /url: ../05-embeddings/README.html
+              - img [ref=e59] [cursor=pointer]
+            - listitem [ref=e61]:
+              - link "Neural Networks" [ref=e62] [cursor=pointer]:
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e65] [cursor=pointer]
+          - heading "Applied AI" [ref=e67]
+          - list [ref=e68]:
+            - listitem [ref=e69]:
+              - link "Vector Databases" [ref=e70] [cursor=pointer]:
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e73] [cursor=pointer]
+            - listitem [ref=e75]:
+              - link "RAG" [ref=e76] [cursor=pointer]:
+                - /url: ../08-rag/README.html
+              - img [ref=e79] [cursor=pointer]
+            - listitem [ref=e81]:
+              - link "MLOps" [ref=e82] [cursor=pointer]:
+                - /url: ../09-mlops/README.html
+              - img [ref=e85] [cursor=pointer]
+            - listitem [ref=e87]:
+              - link "Specializations" [ref=e88] [cursor=pointer]:
+                - /url: ../10-specializations/README.html
+              - img [ref=e91] [cursor=pointer]
+          - heading "Advanced" [ref=e93]
+          - list [ref=e94]:
+            - listitem [ref=e95]:
+              - link "Prompt Engineering" [ref=e96] [cursor=pointer]:
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e99] [cursor=pointer]
+            - listitem [ref=e101]:
+              - link "LLM Fine-Tuning" [ref=e102] [cursor=pointer]:
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e105] [cursor=pointer]
+            - listitem [ref=e107]:
+              - link "Multimodal AI" [ref=e108] [cursor=pointer]:
+                - /url: ../13-multimodal/README.html
+              - img [ref=e111] [cursor=pointer]
+            - listitem [ref=e113]:
+              - link "Local LLMs" [ref=e114] [cursor=pointer]:
+                - /url: ../14-local-llms/README.html
+              - img [ref=e117] [cursor=pointer]
+            - listitem [ref=e119]:
+              - link "AI Agents" [ref=e120] [cursor=pointer]:
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e123] [cursor=pointer]
+          - heading "Supplementary" [ref=e125]
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - link "Model Evaluation" [ref=e128] [cursor=pointer]:
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e131] [cursor=pointer]
+            - listitem [ref=e133]:
+              - link "Debugging & Troubleshooting" [ref=e134] [cursor=pointer]:
+                - /url: ../17-debugging/README.html
+              - img [ref=e137] [cursor=pointer]
+            - listitem [ref=e139]:
+              - link "Low-Code AI Tools" [ref=e140] [cursor=pointer]:
+                - /url: ../18-low-code/README.html
+              - img [ref=e143] [cursor=pointer]
+            - listitem [ref=e145]:
+              - link "AI Safety & Red Teaming" [ref=e146] [cursor=pointer]:
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e149] [cursor=pointer]
+            - listitem [ref=e151]:
+              - link "Real-Time & Streaming AI" [ref=e152] [cursor=pointer]:
+                - /url: ../20-streaming/README.html
+              - img [ref=e155] [cursor=pointer]
+          - heading "Reference" [ref=e157]
+          - list [ref=e158]:
+            - listitem [ref=e159]:
+              - link "Quizzes" [ref=e160] [cursor=pointer]:
+                - /url: ../21-quizzes/README.html
+              - img [ref=e163] [cursor=pointer]
+            - listitem [ref=e165]:
+              - link "References & Hands-On Labs" [ref=e166] [cursor=pointer]:
+                - /url: ../22-references/README.html
+              - img [ref=e169] [cursor=pointer]
+            - listitem [ref=e171]:
+              - link "Glossary & Foundations" [ref=e172] [cursor=pointer]:
+                - /url: ../23-glossary/README.html
+              - img [ref=e175] [cursor=pointer]
+          - heading "Research" [ref=e177]
+          - list [ref=e178]:
+            - listitem [ref=e179]:
+              - link "Advanced Deep Learning" [ref=e180] [cursor=pointer]:
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e183] [cursor=pointer]
+            - listitem [ref=e185]:
+              - link "Reinforcement Learning" [ref=e186] [cursor=pointer]:
+                - /url: ../25-rl/README.html
+              - img [ref=e189] [cursor=pointer]
+            - listitem [ref=e191]:
+              - link "Time Series Analysis & Forecasting" [ref=e192] [cursor=pointer]:
+                - /url: "#"
+              - img [ref=e195] [cursor=pointer]
+              - list [ref=e197]:
+                - listitem [ref=e198]:
+                  - link "Time Series Analysis — Start Here" [ref=e199] [cursor=pointer]:
+                    - /url: 00_START_HERE.html
+                - listitem [ref=e200]:
+                  - 'link "01: Time Series Fundamentals" [ref=e201] [cursor=pointer]':
+                    - /url: 01_time_series_fundamentals.html
+                - listitem [ref=e202]:
+                  - 'link "02: Classical Statistical Methods" [ref=e203] [cursor=pointer]':
+                    - /url: 02_classical_statistical_methods.html
+                - listitem [ref=e204]:
+                  - 'link "03: Facebook Prophet" [ref=e205] [cursor=pointer]':
+                    - /url: 03_facebook_prophet.html
+                - listitem [ref=e206]:
+                  - 'link "04: Deep Learning for Time Series" [ref=e207] [cursor=pointer]':
+                    - /url: 04_deep_learning_time_series.html
+                - listitem [ref=e208]:
+                  - 'link "05: Advanced Techniques & Applications" [ref=e209] [cursor=pointer]':
+                    - /url: 05_advanced_techniques_applications.html
+                - listitem [ref=e210]:
+                  - 'link "06: Practical Applications & Exercises" [ref=e211] [cursor=pointer]':
+                    - /url: 06_practical_applications_exercises.html
+            - listitem [ref=e212]:
+              - link "Causal Inference" [ref=e213] [cursor=pointer]:
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e216] [cursor=pointer]
+          - heading "Production" [ref=e218]
+          - list [ref=e219]:
+            - listitem [ref=e220]:
+              - link "Practical Data Science" [ref=e221] [cursor=pointer]:
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e224] [cursor=pointer]
+            - listitem [ref=e226]:
+              - link "AI Hardware & Validation" [ref=e227] [cursor=pointer]:
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e230] [cursor=pointer]
+            - listitem [ref=e232]:
+              - link "Inference Optimization & Model Serving" [ref=e233] [cursor=pointer]:
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e236] [cursor=pointer]
+          - heading "Developer Tools" [ref=e238]
+          - list [ref=e239]:
+            - listitem [ref=e240]:
+              - link "AI-Powered Development with VS Code & GitHub Copilot" [ref=e241] [cursor=pointer]:
+                - /url: ../31-ai-dev-tools/README.html
+              - img [ref=e244] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e246]:
+        - button "Collapse left sidebar" [ref=e247] [cursor=pointer]: ‹
+    - generic [ref=e248]:
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - generic [ref=e251]:
+            - link "View this page" [ref=e253] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/26-time-series/README.md?plain=true
+              - img [ref=e254]
+              - generic [ref=e256]: View this page
+            - link "Edit this page" [ref=e258] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/26-time-series/README.md
+              - img [ref=e259]
+              - generic [ref=e261]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e263] [cursor=pointer]:
+              - img [ref=e264]
+            - img [ref=e268] [cursor=pointer]
+          - main [ref=e270]:
+            - generic [ref=e271]:
+              - heading "Time Series Analysis & Forecasting" [level=1] [ref=e272]
+              - blockquote [ref=e273]:
+                - paragraph [ref=e275]: “The future is uncertain, but the past is fixed. Time series analysis bridges them.” - Anonymous
+              - paragraph [ref=e276]: Welcome to the comprehensive time series analysis and forecasting module! This phase covers everything from classical statistical methods to modern deep learning approaches for analyzing and predicting temporal data.
+              - generic [ref=e277]:
+                - heading "🎯 Learning Objectives" [level=2] [ref=e278]
+                - paragraph [ref=e279]: "By the end of this phase, you’ll be able to:"
+                - list [ref=e280]:
+                  - listitem [ref=e281]:
+                    - paragraph [ref=e282]:
+                      - strong [ref=e283]: Understand time series fundamentals
+                      - text: ": Stationarity, autocorrelation, seasonality"
+                  - listitem [ref=e284]:
+                    - paragraph [ref=e285]:
+                      - strong [ref=e286]: Apply classical methods
+                      - text: ": ARIMA, SARIMA, exponential smoothing"
+                  - listitem [ref=e287]:
+                    - paragraph [ref=e288]:
+                      - strong [ref=e289]: Use modern approaches
+                      - text: ": Prophet, LSTM, Transformer-based forecasting"
+                  - listitem [ref=e290]:
+                    - paragraph [ref=e291]:
+                      - strong [ref=e292]: Handle real-world challenges
+                      - text: ": Missing data, outliers, multiple seasonality"
+                  - listitem [ref=e293]:
+                    - paragraph [ref=e294]:
+                      - strong [ref=e295]: Evaluate and compare models
+                      - text: ": Cross-validation, forecast accuracy metrics"
+                  - listitem [ref=e296]:
+                    - paragraph [ref=e297]:
+                      - strong [ref=e298]: Deploy forecasting systems
+                      - text: ": Production-ready implementations"
+              - generic [ref=e299]:
+                - heading "📚 Module Structure" [level=2] [ref=e300]
+                - generic [ref=e301]:
+                  - 'heading "01: Time Series Fundamentals" [level=3] [ref=e302]'
+                  - list [ref=e303]:
+                    - listitem [ref=e304]:
+                      - paragraph [ref=e305]: Time series components (trend, seasonality, noise)
+                    - listitem [ref=e306]:
+                      - paragraph [ref=e307]: Stationarity and differencing
+                    - listitem [ref=e308]:
+                      - paragraph [ref=e309]: Autocorrelation and partial autocorrelation
+                    - listitem [ref=e310]:
+                      - paragraph [ref=e311]: Time series decomposition
+                - generic [ref=e312]:
+                  - 'heading "02: Classical Statistical Methods" [level=3] [ref=e313]'
+                  - list [ref=e314]:
+                    - listitem [ref=e315]:
+                      - paragraph [ref=e316]: Moving averages and exponential smoothing
+                    - listitem [ref=e317]:
+                      - paragraph [ref=e318]: ARIMA and SARIMA models
+                    - listitem [ref=e319]:
+                      - paragraph [ref=e320]: Seasonal decomposition
+                    - listitem [ref=e321]:
+                      - paragraph [ref=e322]: Holt-Winters method
+                - generic [ref=e323]:
+                  - 'heading "03: Facebook Prophet" [level=3] [ref=e324]'
+                  - list [ref=e325]:
+                    - listitem [ref=e326]:
+                      - paragraph [ref=e327]: Prophet framework overview
+                    - listitem [ref=e328]:
+                      - paragraph [ref=e329]: Handling holidays and special events
+                    - listitem [ref=e330]:
+                      - paragraph [ref=e331]: Multiplicative seasonality
+                    - listitem [ref=e332]:
+                      - paragraph [ref=e333]: Uncertainty intervals
+                - generic [ref=e334]:
+                  - 'heading "04: Deep Learning for Time Series" [level=3] [ref=e335]'
+                  - list [ref=e336]:
+                    - listitem [ref=e337]:
+                      - paragraph [ref=e338]: Recurrent Neural Networks (RNN, LSTM, GRU)
+                    - listitem [ref=e339]:
+                      - paragraph [ref=e340]: Convolutional Neural Networks for time series
+                    - listitem [ref=e341]:
+                      - paragraph [ref=e342]: Attention mechanisms and Transformers
+                    - listitem [ref=e343]:
+                      - paragraph [ref=e344]: Temporal Convolutional Networks (TCN)
+                - generic [ref=e345]:
+                  - 'heading "05: Advanced Forecasting Techniques" [level=3] [ref=e346]'
+                  - list [ref=e347]:
+                    - listitem [ref=e348]:
+                      - paragraph [ref=e349]: Ensemble methods
+                    - listitem [ref=e350]:
+                      - paragraph [ref=e351]: Bayesian forecasting
+                    - listitem [ref=e352]:
+                      - paragraph [ref=e353]: Probabilistic forecasting
+                    - listitem [ref=e354]:
+                      - paragraph [ref=e355]: Real-world applications and case studies
+                - generic [ref=e356]:
+                  - 'heading "06: Practical Implementation & Deployment" [level=3] [ref=e357]'
+                  - list [ref=e358]:
+                    - listitem [ref=e359]:
+                      - paragraph [ref=e360]: Building forecasting pipelines
+                    - listitem [ref=e361]:
+                      - paragraph [ref=e362]: Model evaluation and validation
+                    - listitem [ref=e363]:
+                      - paragraph [ref=e364]: Handling production challenges
+                    - listitem [ref=e365]:
+                      - paragraph [ref=e366]: Deployment strategies
+              - generic [ref=e367]:
+                - heading "🔧 Technical Requirements" [level=2] [ref=e368]
+                - generic [ref=e370]:
+                  - generic [ref=e371]: pip install statsmodels scikit-learn pandas numpy matplotlib seaborn pip install prophet torch torchvision torchaudio pip install tensorflow keras pip install pmdarima sktime
+                  - button "Copy to clipboard" [ref=e372] [cursor=pointer]:
+                    - img "Copy to clipboard" [ref=e373]
+              - generic [ref=e377]:
+                - heading "📊 Key Concepts Covered" [level=2] [ref=e378]
+                - generic [ref=e379]:
+                  - heading "Statistical Foundations" [level=3] [ref=e380]
+                  - list [ref=e381]:
+                    - listitem [ref=e382]:
+                      - paragraph [ref=e383]:
+                        - strong [ref=e384]: Stationarity
+                        - text: ": Mean, variance, autocorrelation structure unchanged over time"
+                    - listitem [ref=e385]:
+                      - paragraph [ref=e386]:
+                        - strong [ref=e387]: Autocorrelation Function (ACF)
+                        - text: ": Correlation between time series and its lagged versions"
+                    - listitem [ref=e388]:
+                      - paragraph [ref=e389]:
+                        - strong [ref=e390]: Partial Autocorrelation Function (PACF)
+                        - text: ": Direct correlation at specific lags"
+                    - listitem [ref=e391]:
+                      - paragraph [ref=e392]:
+                        - strong [ref=e393]: Seasonal Decomposition
+                        - text: ": Trend, seasonal, residual components"
+                - generic [ref=e394]:
+                  - heading "Classical Methods" [level=3] [ref=e395]
+                  - list [ref=e396]:
+                    - listitem [ref=e397]:
+                      - paragraph [ref=e398]:
+                        - strong [ref=e399]: ARIMA(p,d,q)
+                        - text: ": AutoRegressive Integrated Moving Average"
+                    - listitem [ref=e400]:
+                      - paragraph [ref=e401]:
+                        - strong [ref=e402]: SARIMA
+                        - text: ": Seasonal ARIMA for seasonal data"
+                    - listitem [ref=e403]:
+                      - paragraph [ref=e404]:
+                        - strong [ref=e405]: Exponential Smoothing
+                        - text: ": Simple, double, triple exponential smoothing"
+                    - listitem [ref=e406]:
+                      - paragraph [ref=e407]:
+                        - strong [ref=e408]: Holt-Winters
+                        - text: ": Trend and seasonal exponential smoothing"
+                - generic [ref=e409]:
+                  - heading "Modern Approaches" [level=3] [ref=e410]
+                  - list [ref=e411]:
+                    - listitem [ref=e412]:
+                      - paragraph [ref=e413]:
+                        - strong [ref=e414]: Prophet
+                        - text: ": Automated forecasting with interpretable parameters"
+                    - listitem [ref=e415]:
+                      - paragraph [ref=e416]:
+                        - strong [ref=e417]: LSTM Networks
+                        - text: ": Long Short-Term Memory for sequence modeling"
+                    - listitem [ref=e418]:
+                      - paragraph [ref=e419]:
+                        - strong [ref=e420]: Transformer Models
+                        - text: ": Attention-based forecasting (Autoformer, Informer)"
+                    - listitem [ref=e421]:
+                      - paragraph [ref=e422]:
+                        - strong [ref=e423]: TCN
+                        - text: ": Temporal Convolutional Networks for parallel processing"
+              - generic [ref=e424]:
+                - heading "🏗️ Applications" [level=2] [ref=e425]
+                - generic [ref=e426]:
+                  - heading "Finance & Economics" [level=3] [ref=e427]
+                  - list [ref=e428]:
+                    - listitem [ref=e429]:
+                      - paragraph [ref=e430]: Stock price prediction
+                    - listitem [ref=e431]:
+                      - paragraph [ref=e432]: Economic indicator forecasting
+                    - listitem [ref=e433]:
+                      - paragraph [ref=e434]: Risk modeling and volatility prediction
+                    - listitem [ref=e435]:
+                      - paragraph [ref=e436]: Portfolio optimization
+                - generic [ref=e437]:
+                  - heading "Business & Operations" [level=3] [ref=e438]
+                  - list [ref=e439]:
+                    - listitem [ref=e440]:
+                      - paragraph [ref=e441]: Sales forecasting
+                    - listitem [ref=e442]:
+                      - paragraph [ref=e443]: Demand prediction
+                    - listitem [ref=e444]:
+                      - paragraph [ref=e445]: Inventory optimization
+                    - listitem [ref=e446]:
+                      - paragraph [ref=e447]: Resource planning
+                - generic [ref=e448]:
+                  - heading "Science & Engineering" [level=3] [ref=e449]
+                  - list [ref=e450]:
+                    - listitem [ref=e451]:
+                      - paragraph [ref=e452]: Weather forecasting
+                    - listitem [ref=e453]:
+                      - paragraph [ref=e454]: Sensor data analysis
+                    - listitem [ref=e455]:
+                      - paragraph [ref=e456]: Quality control
+                    - listitem [ref=e457]:
+                      - paragraph [ref=e458]: Predictive maintenance
+                - generic [ref=e459]:
+                  - heading "Healthcare & Social" [level=3] [ref=e460]
+                  - list [ref=e461]:
+                    - listitem [ref=e462]:
+                      - paragraph [ref=e463]: Disease outbreak prediction
+                    - listitem [ref=e464]:
+                      - paragraph [ref=e465]: Patient monitoring
+                    - listitem [ref=e466]:
+                      - paragraph [ref=e467]: Social media trend analysis
+                    - listitem [ref=e468]:
+                      - paragraph [ref=e469]: Demographic forecasting
+              - generic [ref=e470]:
+                - heading "📈 Evaluation Metrics" [level=2] [ref=e471]
+                - generic [ref=e472]:
+                  - heading "Point Forecast Accuracy" [level=3] [ref=e473]
+                  - list [ref=e474]:
+                    - listitem [ref=e475]:
+                      - paragraph [ref=e476]:
+                        - strong [ref=e477]: MAE (Mean Absolute Error)
+                        - text: ": Average absolute prediction error"
+                    - listitem [ref=e478]:
+                      - paragraph [ref=e479]:
+                        - strong [ref=e480]: MSE (Mean Squared Error)
+                        - text: ": Average squared prediction error"
+                    - listitem [ref=e481]:
+                      - paragraph [ref=e482]:
+                        - strong [ref=e483]: RMSE (Root Mean Squared Error)
+                        - text: ": Square root of MSE"
+                    - listitem [ref=e484]:
+                      - paragraph [ref=e485]:
+                        - strong [ref=e486]: MAPE (Mean Absolute Percentage Error)
+                        - text: ": Percentage error"
+                - generic [ref=e487]:
+                  - heading "Probabilistic Forecast Evaluation" [level=3] [ref=e488]
+                  - list [ref=e489]:
+                    - listitem [ref=e490]:
+                      - paragraph [ref=e491]:
+                        - strong [ref=e492]: CRPS (Continuous Ranked Probability Score)
+                        - text: ": Measures full forecast distribution"
+                    - listitem [ref=e493]:
+                      - paragraph [ref=e494]:
+                        - strong [ref=e495]: Quantile Loss
+                        - text: ": Penalizes quantile forecast errors"
+                    - listitem [ref=e496]:
+                      - paragraph [ref=e497]:
+                        - strong [ref=e498]: Coverage
+                        - text: ": Percentage of observations within prediction intervals"
+              - generic [ref=e499]:
+                - heading "🔍 Model Selection Framework" [level=2] [ref=e500]
+                - generic [ref=e501]:
+                  - heading "For Short-term Forecasts (< 1 month)" [level=3] [ref=e502]
+                  - list [ref=e503]:
+                    - listitem [ref=e504]:
+                      - paragraph [ref=e505]:
+                        - strong [ref=e506]: Simple methods
+                        - text: ": Moving averages, exponential smoothing"
+                    - listitem [ref=e507]:
+                      - paragraph [ref=e508]:
+                        - strong [ref=e509]: When
+                        - text: ": Limited data, interpretability needed"
+                    - listitem [ref=e510]:
+                      - paragraph [ref=e511]:
+                        - strong [ref=e512]: Pros
+                        - text: ": Fast, interpretable, robust"
+                    - listitem [ref=e513]:
+                      - paragraph [ref=e514]:
+                        - strong [ref=e515]: Cons
+                        - text: ": Limited flexibility, poor for complex patterns"
+                - generic [ref=e516]:
+                  - heading "For Medium-term Forecasts (1-12 months)" [level=3] [ref=e517]
+                  - list [ref=e518]:
+                    - listitem [ref=e519]:
+                      - paragraph [ref=e520]:
+                        - strong [ref=e521]: ARIMA/SARIMA
+                        - text: ": Statistical models"
+                    - listitem [ref=e522]:
+                      - paragraph [ref=e523]:
+                        - strong [ref=e524]: Prophet
+                        - text: ": Automated forecasting"
+                    - listitem [ref=e525]:
+                      - paragraph [ref=e526]:
+                        - strong [ref=e527]: When
+                        - text: ": Clear seasonal patterns, business applications"
+                    - listitem [ref=e528]:
+                      - paragraph [ref=e529]:
+                        - strong [ref=e530]: Pros
+                        - text: ": Interpretable, handles seasonality well"
+                    - listitem [ref=e531]:
+                      - paragraph [ref=e532]:
+                        - strong [ref=e533]: Cons
+                        - text: ": Assumes stationarity, limited non-linear modeling"
+                - generic [ref=e534]:
+                  - heading "For Long-term Forecasts (> 1 year)" [level=3] [ref=e535]
+                  - list [ref=e536]:
+                    - listitem [ref=e537]:
+                      - paragraph [ref=e538]:
+                        - strong [ref=e539]: Machine Learning
+                        - text: ": Random Forest, Gradient Boosting"
+                    - listitem [ref=e540]:
+                      - paragraph [ref=e541]:
+                        - strong [ref=e542]: Deep Learning
+                        - text: ": LSTM, Transformer models"
+                    - listitem [ref=e543]:
+                      - paragraph [ref=e544]:
+                        - strong [ref=e545]: When
+                        - text: ": Complex patterns, large datasets available"
+                    - listitem [ref=e546]:
+                      - paragraph [ref=e547]:
+                        - strong [ref=e548]: Pros
+                        - text: ": Flexible, handles non-linear relationships"
+                    - listitem [ref=e549]:
+                      - paragraph [ref=e550]:
+                        - strong [ref=e551]: Cons
+                        - text: ": Requires more data, less interpretable"
+              - generic [ref=e552]:
+                - heading "🛠️ Implementation Best Practices" [level=2] [ref=e553]
+                - generic [ref=e554]:
+                  - heading "Data Preparation" [level=3] [ref=e555]
+                  - list [ref=e556]:
+                    - listitem [ref=e557]:
+                      - paragraph [ref=e558]:
+                        - strong [ref=e559]: Handle missing values
+                        - text: ": Forward fill, interpolation, or model-based imputation"
+                    - listitem [ref=e560]:
+                      - paragraph [ref=e561]:
+                        - strong [ref=e562]: Outlier detection
+                        - text: ": Statistical methods (IQR, Z-score) or ML-based approaches"
+                    - listitem [ref=e563]:
+                      - paragraph [ref=e564]:
+                        - strong [ref=e565]: Feature engineering
+                        - text: ": Lag features, rolling statistics, calendar features"
+                    - listitem [ref=e566]:
+                      - paragraph [ref=e567]:
+                        - strong [ref=e568]: Train/validation split
+                        - text: ": Time-based split to avoid data leakage"
+                - generic [ref=e569]:
+                  - heading "Model Development" [level=3] [ref=e570]
+                  - list [ref=e571]:
+                    - listitem [ref=e572]:
+                      - paragraph [ref=e573]:
+                        - strong [ref=e574]: Cross-validation
+                        - text: ": Time series split, rolling window validation"
+                    - listitem [ref=e575]:
+                      - paragraph [ref=e576]:
+                        - strong [ref=e577]: Hyperparameter tuning
+                        - text: ": Grid search, random search, Bayesian optimization"
+                    - listitem [ref=e578]:
+                      - paragraph [ref=e579]:
+                        - strong [ref=e580]: Ensemble methods
+                        - text: ": Combine multiple models for better performance"
+                    - listitem [ref=e581]:
+                      - paragraph [ref=e582]:
+                        - strong [ref=e583]: Uncertainty quantification
+                        - text: ": Prediction intervals, conformal prediction"
+                - generic [ref=e584]:
+                  - heading "Production Deployment" [level=3] [ref=e585]
+                  - list [ref=e586]:
+                    - listitem [ref=e587]:
+                      - paragraph [ref=e588]:
+                        - strong [ref=e589]: Model monitoring
+                        - text: ": Drift detection, performance monitoring"
+                    - listitem [ref=e590]:
+                      - paragraph [ref=e591]:
+                        - strong [ref=e592]: Retraining strategy
+                        - text: ": Scheduled retraining, online learning"
+                    - listitem [ref=e593]:
+                      - paragraph [ref=e594]:
+                        - strong [ref=e595]: Scalability
+                        - text: ": Batch processing, real-time inference"
+                    - listitem [ref=e596]:
+                      - paragraph [ref=e597]:
+                        - strong [ref=e598]: Error handling
+                        - text: ": Graceful degradation, fallback models"
+              - generic [ref=e599]:
+                - heading "📚 Recommended Resources" [level=2] [ref=e600]
+                - generic [ref=e601]:
+                  - heading "Books" [level=3] [ref=e602]
+                  - list [ref=e603]:
+                    - listitem [ref=e604]:
+                      - paragraph [ref=e605]: "“Forecasting: Principles and Practice” by Hyndman & Athanasopoulos"
+                    - listitem [ref=e606]:
+                      - paragraph [ref=e607]: “Time Series Analysis and Its Applications” by Shumway & Stoffer
+                    - listitem [ref=e608]:
+                      - paragraph [ref=e609]: “Practical Time Series Forecasting with R” by Hyndman & Khandakar
+                - generic [ref=e610]:
+                  - heading "Online Courses" [level=3] [ref=e611]
+                  - list [ref=e612]:
+                    - listitem [ref=e613]:
+                      - paragraph [ref=e614]: "Coursera: “Practical Time Series Analysis” by State University of New York"
+                    - listitem [ref=e615]:
+                      - paragraph [ref=e616]: "edX: “Time Series Analysis” by Columbia University"
+                    - listitem [ref=e617]:
+                      - paragraph [ref=e618]: "Udacity: “Time Series Forecasting” by Facebook"
+                - generic [ref=e619]:
+                  - heading "Research Papers" [level=3] [ref=e620]
+                  - list [ref=e621]:
+                    - listitem [ref=e622]:
+                      - paragraph [ref=e623]: “Attention Is All You Need” (Transformer architecture)
+                    - listitem [ref=e624]:
+                      - paragraph [ref=e625]: "“DeepAR: Probabilistic Forecasting with Autoregressive Recurrent Networks”"
+                    - listitem [ref=e626]:
+                      - paragraph [ref=e627]: “Temporal Convolutional Networks for Action Segmentation and Detection”
+              - generic [ref=e628]:
+                - heading "🎯 Success Metrics" [level=2] [ref=e629]
+                - paragraph [ref=e630]: "By the end of this phase, you should be able to:"
+                - list [ref=e631]:
+                  - listitem [ref=e632]:
+                    - paragraph [ref=e633]:
+                      - strong [ref=e634]: Analyze any time series dataset
+                      - text: and identify key patterns
+                  - listitem [ref=e635]:
+                    - paragraph [ref=e636]:
+                      - strong [ref=e637]: Choose appropriate forecasting methods
+                      - text: based on data characteristics
+                  - listitem [ref=e638]:
+                    - paragraph [ref=e639]:
+                      - strong [ref=e640]: Implement and evaluate forecasting models
+                      - text: using statistical and ML approaches
+                  - listitem [ref=e641]:
+                    - paragraph [ref=e642]:
+                      - strong [ref=e643]: Deploy forecasting systems
+                      - text: that handle real-world challenges
+                  - listitem [ref=e644]:
+                    - paragraph [ref=e645]:
+                      - strong [ref=e646]: Communicate forecasting results
+                      - text: to stakeholders effectively
+              - generic [ref=e647]:
+                - heading "🚀 What’s Next" [level=2] [ref=e648]
+                - paragraph [ref=e649]: "After mastering time series analysis, you’ll be ready for:"
+                - list [ref=e650]:
+                  - listitem [ref=e651]:
+                    - paragraph [ref=e652]:
+                      - strong [ref=e653]: "Phase 27: Causal Inference"
+                      - text: "- Understanding cause-and-effect relationships"
+                  - listitem [ref=e654]:
+                    - paragraph [ref=e655]:
+                      - strong [ref=e656]: "Phase 28: Federated Learning"
+                      - text: "- Privacy-preserving distributed learning"
+                  - listitem [ref=e657]:
+                    - paragraph [ref=e658]:
+                      - strong [ref=e659]: "Phase 29: Quantum Machine Learning"
+                      - text: "- Quantum algorithms for ML"
+              - generic [ref=e660]:
+                - heading "💡 Pro Tips" [level=2] [ref=e661]
+                - list [ref=e662]:
+                  - listitem [ref=e663]:
+                    - paragraph [ref=e664]:
+                      - strong [ref=e665]: Always check stationarity
+                      - text: before applying statistical models
+                  - listitem [ref=e666]:
+                    - paragraph [ref=e667]:
+                      - strong [ref=e668]: Visualize your data
+                      - text: extensively - time series patterns are often obvious in plots
+                  - listitem [ref=e669]:
+                    - paragraph [ref=e670]:
+                      - strong [ref=e671]: Start simple
+                      - text: "- Don’t jump to deep learning for every problem"
+                  - listitem [ref=e672]:
+                    - paragraph [ref=e673]:
+                      - strong [ref=e674]: Domain knowledge matters
+                      - text: "- Understand the business context deeply"
+                  - listitem [ref=e675]:
+                    - paragraph [ref=e676]:
+                      - strong [ref=e677]: Monitor forecast performance
+                      - text: continuously in production
+                  - listitem [ref=e678]:
+                    - paragraph [ref=e679]:
+                      - strong [ref=e680]: Consider uncertainty
+                      - text: "- Point forecasts are rarely sufficient"
+              - generic [ref=e681]:
+                - heading "🤝 Contributing" [level=2] [ref=e682]
+                - paragraph [ref=e683]: "Found an interesting time series dataset or forecasting technique? Consider contributing:"
+                - list [ref=e684]:
+                  - listitem [ref=e685]:
+                    - paragraph [ref=e686]: New notebook examples
+                  - listitem [ref=e687]:
+                    - paragraph [ref=e688]: Real-world case studies
+                  - listitem [ref=e689]:
+                    - paragraph [ref=e690]: Performance benchmarks
+                  - listitem [ref=e691]:
+                    - paragraph [ref=e692]: Best practice guides
+                - paragraph [ref=e693]:
+                  - strong [ref=e694]: Ready to predict the future? Let’s dive into time series analysis!
+                  - text: ⏰📊
+        - contentinfo [ref=e695]:
+          - generic [ref=e696]:
+            - 'link "Next 06: Practical Exercises & Implementations" [ref=e697] [cursor=pointer]':
+              - /url: ../25-rl/06_practical_exercises.html
+              - generic [ref=e698]:
+                - generic [ref=e700]: Next
+                - generic [ref=e701]: "06: Practical Exercises & Implementations"
+              - img [ref=e702]
+            - link "Previous Time Series Analysis — Start Here" [ref=e704] [cursor=pointer]:
+              - /url: 00_START_HERE.html
+              - img [ref=e705]
+              - generic [ref=e707]:
+                - generic [ref=e709]: Previous
+                - generic [ref=e710]: Time Series Analysis — Start Here
+          - generic [ref=e711]:
+            - generic [ref=e712]:
+              - generic [ref=e713]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e714]: v0.1.0
+            - link "GitHub" [ref=e717] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e718]
+      - complementary [ref=e720]:
+        - separator "Resize right sidebar" [ref=e721]:
+          - button "Collapse right sidebar" [ref=e722] [cursor=pointer]: ›
+        - generic [ref=e723]:
+          - generic [ref=e724]: On this page
+          - list [ref=e727]:
+            - listitem [ref=e728]:
+              - list [ref=e729]:
+                - listitem [ref=e730]:
+                  - link "🎯 Learning Objectives" [ref=e731] [cursor=pointer]:
+                    - /url: "#learning-objectives"
+                - listitem [ref=e732]:
+                  - link "📚 Module Structure" [ref=e733] [cursor=pointer]:
+                    - /url: "#module-structure"
+                  - list [ref=e734]:
+                    - listitem [ref=e735]:
+                      - 'link "01: Time Series Fundamentals" [ref=e736] [cursor=pointer]':
+                        - /url: "#time-series-fundamentals"
+                    - listitem [ref=e737]:
+                      - 'link "02: Classical Statistical Methods" [ref=e738] [cursor=pointer]':
+                        - /url: "#classical-statistical-methods"
+                    - listitem [ref=e739]:
+                      - 'link "03: Facebook Prophet" [ref=e740] [cursor=pointer]':
+                        - /url: "#facebook-prophet"
+                    - listitem [ref=e741]:
+                      - 'link "04: Deep Learning for Time Series" [ref=e742] [cursor=pointer]':
+                        - /url: "#deep-learning-for-time-series"
+                    - listitem [ref=e743]:
+                      - 'link "05: Advanced Forecasting Techniques" [ref=e744] [cursor=pointer]':
+                        - /url: "#advanced-forecasting-techniques"
+                    - listitem [ref=e745]:
+                      - 'link "06: Practical Implementation & Deployment" [ref=e746] [cursor=pointer]':
+                        - /url: "#practical-implementation-deployment"
+                - listitem [ref=e747]:
+                  - link "🔧 Technical Requirements" [ref=e748] [cursor=pointer]:
+                    - /url: "#technical-requirements"
+                - listitem [ref=e749]:
+                  - link "📊 Key Concepts Covered" [ref=e750] [cursor=pointer]:
+                    - /url: "#key-concepts-covered"
+                  - list [ref=e751]:
+                    - listitem [ref=e752]:
+                      - link "Statistical Foundations" [ref=e753] [cursor=pointer]:
+                        - /url: "#statistical-foundations"
+                    - listitem [ref=e754]:
+                      - link "Classical Methods" [ref=e755] [cursor=pointer]:
+                        - /url: "#classical-methods"
+                    - listitem [ref=e756]:
+                      - link "Modern Approaches" [ref=e757] [cursor=pointer]:
+                        - /url: "#modern-approaches"
+                - listitem [ref=e758]:
+                  - link "🏗️ Applications" [ref=e759] [cursor=pointer]:
+                    - /url: "#applications"
+                  - list [ref=e760]:
+                    - listitem [ref=e761]:
+                      - link "Finance & Economics" [ref=e762] [cursor=pointer]:
+                        - /url: "#finance-economics"
+                    - listitem [ref=e763]:
+                      - link "Business & Operations" [ref=e764] [cursor=pointer]:
+                        - /url: "#business-operations"
+                    - listitem [ref=e765]:
+                      - link "Science & Engineering" [ref=e766] [cursor=pointer]:
+                        - /url: "#science-engineering"
+                    - listitem [ref=e767]:
+                      - link "Healthcare & Social" [ref=e768] [cursor=pointer]:
+                        - /url: "#healthcare-social"
+                - listitem [ref=e769]:
+                  - link "📈 Evaluation Metrics" [ref=e770] [cursor=pointer]:
+                    - /url: "#evaluation-metrics"
+                  - list [ref=e771]:
+                    - listitem [ref=e772]:
+                      - link "Point Forecast Accuracy" [ref=e773] [cursor=pointer]:
+                        - /url: "#point-forecast-accuracy"
+                    - listitem [ref=e774]:
+                      - link "Probabilistic Forecast Evaluation" [ref=e775] [cursor=pointer]:
+                        - /url: "#probabilistic-forecast-evaluation"
+                - listitem [ref=e776]:
+                  - link "🔍 Model Selection Framework" [ref=e777] [cursor=pointer]:
+                    - /url: "#model-selection-framework"
+                  - list [ref=e778]:
+                    - listitem [ref=e779]:
+                      - link "For Short-term Forecasts (< 1 month)" [ref=e780] [cursor=pointer]:
+                        - /url: "#for-short-term-forecasts-1-month"
+                    - listitem [ref=e781]:
+                      - link "For Medium-term Forecasts (1-12 months)" [ref=e782] [cursor=pointer]:
+                        - /url: "#for-medium-term-forecasts-1-12-months"
+                    - listitem [ref=e783]:
+                      - link "For Long-term Forecasts (> 1 year)" [ref=e784] [cursor=pointer]:
+                        - /url: "#for-long-term-forecasts-1-year"
+                - listitem [ref=e785]:
+                  - link "🛠️ Implementation Best Practices" [ref=e786] [cursor=pointer]:
+                    - /url: "#implementation-best-practices"
+                  - list [ref=e787]:
+                    - listitem [ref=e788]:
+                      - link "Data Preparation" [ref=e789] [cursor=pointer]:
+                        - /url: "#data-preparation"
+                    - listitem [ref=e790]:
+                      - link "Model Development" [ref=e791] [cursor=pointer]:
+                        - /url: "#model-development"
+                    - listitem [ref=e792]:
+                      - link "Production Deployment" [ref=e793] [cursor=pointer]:
+                        - /url: "#production-deployment"
+                - listitem [ref=e794]:
+                  - link "📚 Recommended Resources" [ref=e795] [cursor=pointer]:
+                    - /url: "#recommended-resources"
+                  - list [ref=e796]:
+                    - listitem [ref=e797]:
+                      - link "Books" [ref=e798] [cursor=pointer]:
+                        - /url: "#books"
+                    - listitem [ref=e799]:
+                      - link "Online Courses" [ref=e800] [cursor=pointer]:
+                        - /url: "#online-courses"
+                    - listitem [ref=e801]:
+                      - link "Research Papers" [ref=e802] [cursor=pointer]:
+                        - /url: "#research-papers"
+                - listitem [ref=e803]:
+                  - link "🎯 Success Metrics" [ref=e804] [cursor=pointer]:
+                    - /url: "#success-metrics"
+                - listitem [ref=e805]:
+                  - link "🚀 What’s Next" [ref=e806] [cursor=pointer]:
+                    - /url: "#whats-next"
+                - listitem [ref=e807]:
+                  - link "💡 Pro Tips" [ref=e808] [cursor=pointer]:
+                    - /url: "#pro-tips"
+                - listitem [ref=e809]:
+                  - link "🤝 Contributing" [ref=e810] [cursor=pointer]:
+                    - /url: "#contributing"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹

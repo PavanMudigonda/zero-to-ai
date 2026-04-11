@@ -1,4 +1,4 @@
-# Phase 15 Challenges: Model Evaluation & Metrics
+# Challenges: Model Evaluation & Metrics
 
 Complete these progressive challenges to master model evaluation techniques!
 

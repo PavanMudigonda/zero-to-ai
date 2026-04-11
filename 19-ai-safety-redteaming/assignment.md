@@ -1,4 +1,4 @@
-# Phase 18 Assignment: Secure AI System Implementation
+# Assignment: Secure AI System Implementation
 
 **Total Points: 100**  
 **Estimated Time: 8-12 hours**

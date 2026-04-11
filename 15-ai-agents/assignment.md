@@ -1,4 +1,4 @@
-# Phase 14: AI Agents - Assignment
+# AI Agents - Assignment
 
 **Build a Production-Ready AI Agent System**
 

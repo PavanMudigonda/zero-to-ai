@@ -1,4 +1,4 @@
-# Phase 10: Specializations
+# Specializations
 
 ## 🎯 Overview
 

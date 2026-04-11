@@ -1,4 +1,4 @@
-# Phase 5: Neural Networks - Post-Quiz
+# Neural Networks - Post-Quiz
 
 **Time:** 15 minutes  
 **Questions:** 10  

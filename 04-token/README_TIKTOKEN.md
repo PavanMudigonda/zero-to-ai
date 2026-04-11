@@ -1,4 +1,4 @@
-# Phase 1: Understanding Tokens
+# Understanding Tokens
 
 **Learning Time:** 1-2 hours | **Difficulty:** Beginner
 

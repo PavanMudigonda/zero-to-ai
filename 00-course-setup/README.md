@@ -1,4 +1,4 @@
-# Phase 0: Course Setup
+# Course Setup
 
 > **Browse the full curriculum online at [zero-to-ai.dev](https://zero-to-ai.dev)**
 
