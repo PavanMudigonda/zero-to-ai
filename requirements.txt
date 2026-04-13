@@ -113,6 +113,9 @@ pyautogen>=0.4.0
 mcp>=1.0.0
 fastmcp>=0.1.0
 langmem>=0.0.6
+mini-swe-agent>=2.2.8
+# OpenHands lives in requirements-ai-dev-tools.txt because it requires Python 3.12
+# and conflicts with feast in the shared base environment.
 
 # Fine-tuning libraries
 peft>=0.13.0
@@ -202,6 +205,9 @@ duckdb>=1.1.0
 httpx>=0.27.0
 websockets>=13.0.0
 sse-starlette>=2.0.0
+
+# Task scheduling (used by agent notebooks)
+schedule>=1.2.0
 
 # Utilities
 python-dotenv>=1.0.0

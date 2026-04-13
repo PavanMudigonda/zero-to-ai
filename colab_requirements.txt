@@ -18,7 +18,7 @@ sentence-transformers>=3.3.0
 
 # API Clients
 openai>=1.58.0
-anthropic>=0.39.0
+anthropic>=0.40.0
 cohere>=5.0.0
 litellm>=1.50.0
 
@@ -47,6 +47,9 @@ crewai>=0.80.0
 pyautogen>=0.4.0
 mcp>=1.0.0
 fastmcp>=0.1.0
+mini-swe-agent>=2.2.8
+# OpenHands is kept in requirements-ai-dev-tools.txt because it requires Python 3.12
+# and conflicts with the shared base stack.
 
 # Vector Databases
 chromadb>=0.5.23

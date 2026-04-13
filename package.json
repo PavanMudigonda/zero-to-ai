@@ -1,0 +1,8 @@
+{
+  "name": "zero-to-ai-cli-tools",
+  "private": true,
+  "description": "Node-based CLI dependencies used by the Zero to AI developer tools lessons.",
+  "devDependencies": {
+    "opencode-ai": "^1.4.3"
+  }
+}

@@ -64,6 +64,13 @@ uv.lock
 # Vector database
 .vectordb/
 
+# Node
+node_modules/
+package-lock.json
+
+# AI dev tools venv
+.venv-ai-dev-tools/
+
 # Misc
 .cache/
 .pytest_cache/

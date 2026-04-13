@@ -69,6 +69,17 @@ cd zero-to-ai
 jupyter notebook
 ```
 
+Optional developer tooling for Phase 31:
+
+```bash
+# Install Node-based coding tools such as OpenCode
+npm install
+
+# Install the dedicated AI developer tools environment
+# (used for OpenHands because it currently needs Python 3.12)
+INSTALL_AI_DEV_TOOLS=1 ./install_dependencies.sh
+```
+
 #### Option 2: Conda - Best for ML/Data Science
 ```bash
 # Clone the repository

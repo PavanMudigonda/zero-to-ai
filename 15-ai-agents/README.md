@@ -14,6 +14,7 @@ By the end of this phase, you will:
 - ✅ Use agent frameworks (LangChain, LangGraph, OpenAI Agents SDK, CrewAI)
 - ✅ Understand MCP and modern agent interoperability patterns
 - ✅ Compare managed vs self-hosted agent stacks
+- ✅ Understand the 2026 agentic platform landscape (OpenHands, OpenCode, Lingxi, mini-swe-agent, computer-use agents)
 - ✅ Evaluate and observe agents in production
 - ✅ Deploy production-ready AI agents
 
@@ -92,6 +93,7 @@ By the end of this phase, you will:
 
 9. **[09_autonomous_agents_2026.ipynb](09_autonomous_agents_2026.ipynb)**
    - State of the art: autonomous agents in 2026
+   - OpenHands, OpenCode, Lingxi, mini-swe-agent, and computer-use agents
    - Production patterns and best practices
    - Future directions
 
@@ -123,10 +125,12 @@ By the end of this phase, you will:
 - **CrewAI** - Role-based multi-agent coordination
 - **Google ADK / Semantic Kernel** - Additional framework families to be aware of
 - **MCP** - Standard tool connectivity across agent runtimes
+- **OpenHands / OpenCode / mini-swe-agent / Lingxi** - Important 2026 agentic coding platforms
 
 ## 2026 Agent Topics To Know
 
 - Managed agent APIs vs self-hosted frameworks
+- Open-source agentic coding platforms vs proprietary IDE agents
 - MCP for tool integration and A2A for agent delegation
 - Agent observability: tracing, tool-call inspection, latency and cost tracking
 - Agent evaluation: task success, trajectory quality, tool correctness, and safety gates

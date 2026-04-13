@@ -1,6 +1,6 @@
 # AI Coding Tools for ML Engineers (March 2026)
 
-A practical guide to the tools that are reshaping how ML engineers write, debug, and ship code. This covers the five major AI coding assistants, a head-to-head comparison, ML-specific workflows, and AI-assisted research tools.
+A practical guide to the tools that are reshaping how ML engineers write, debug, and ship code. This covers the major AI coding assistants across IDE-first, terminal-first, and open-source agent workflows, plus a head-to-head comparison, ML-specific workflows, and AI-assisted research tools.
 
 ---
 
@@ -11,9 +11,10 @@ A practical guide to the tools that are reshaping how ML engineers write, debug,
 3. [Aider — Terminal-Native AI Pair Programmer](#3-aider--terminal-native-ai-pair-programmer)
 4. [Claude Code — Anthropic's Official Coding CLI + VS Code Extension](#4-claude-code--anthropics-official-coding-cli--vs-code-extension)
 5. [GitHub Copilot 2025](#5-github-copilot-2025)
-6. [Comparison Table](#6-comparison-table)
-7. [For ML Engineers Specifically](#7-for-ml-engineers-specifically)
-8. [AI-Assisted Research Tools](#8-ai-assisted-research-tools)
+6. [Open-Source Coding Agents: OpenHands, OpenCode, mini-swe-agent, and Lingxi](#6-open-source-coding-agents-openhands-opencode-mini-swe-agent-and-lingxi)
+7. [Comparison Table](#7-comparison-table)
+8. [For ML Engineers Specifically](#8-for-ml-engineers-specifically)
+9. [AI-Assisted Research Tools](#9-ai-assisted-research-tools)
 
 ---
 
@@ -35,6 +36,9 @@ This quick snapshot highlights what matters most right now for working engineers
 | Daily coding in large repo | Cursor or Copilot Agent Mode |
 | Autonomous feature implementation | Windsurf Cascade or Copilot Workspace |
 | CI/CD code maintenance | Aider in non-interactive mode |
+| Open-source autonomous coding agent | OpenHands or OpenCode |
+| Benchmark-oriented research and swe-bench style runs | mini-swe-agent |
+| Repository-level research agent with historical guidance | Lingxi |
 | Regulated enterprise teams | GitHub Copilot Business/Enterprise |
 | Remote SSH / terminal-first teams | Aider or Claude Code CLI |
 | Claude-native agentic workflows + MCP | Claude Code |
@@ -540,29 +544,144 @@ Third-party tools can be added to Copilot as extensions. Current popular ones:
 
 ---
 
-## 6. Comparison Table
+## 6. Open-Source Coding Agents: OpenHands, OpenCode, mini-swe-agent, and Lingxi
 
-| Feature | Cursor | Windsurf | Aider | Claude Code | GitHub Copilot |
-|---|---|---|---|---|---|
-| **Base IDE** | VS Code fork | VS Code fork | Terminal/any editor | CLI + VS Code extension | VS Code, JetBrains, web |
-| **Autonomy level** | Medium (Composer with diffs) | High (Cascade, auto-executes) | High (with --yes flag) | High (agentic, plan mode) | Medium (Agent Mode) |
-| **Multi-file editing** | Yes (Composer) | Yes (Cascade) | Yes | Yes | Yes (Agent Mode) |
-| **Git integration** | Manual | Manual | Native (auto-commits) | Manual | Via Copilot Workspace |
-| **Codebase indexing** | Yes (full codebase) | Yes | Context window only | Yes (repo exploration) | Yes (via @workspace) |
-| **MCP support** | No | No | No | Yes (native, first-class) | No |
-| **CI/CD integration** | No | No | Yes (CLI, scriptable) | Partial (--print mode) | Yes (Copilot Workspace API) |
-| **Model flexibility** | Multiple (Claude, GPT-4o, etc.) | Multiple (various) | Any (widest selection) | Claude only | Multiple (GPT-4o, Claude, Gemini) |
-| **Local/offline models** | No | No | Yes (via Ollama) | No | No |
-| **Hooks / custom automation** | No | No | No | Yes (pre/post tool events) | No |
-| **CLAUDE.md / project rules** | .cursor/rules | No | .aider.conf.yml | CLAUDE.md | Copilot instructions |
-| **Enterprise features** | Limited | Good | None | Moderate | Excellent |
-| **Pricing** | $20/month | $15/month | Pay-per-use API | Pay-per-use API | $10-$39/month |
-| **Best use case** | Complex multi-file refactors | Fully autonomous tasks | CLI, CI/CD, scripted automation | MCP-connected workflows, Claude-native | Enterprise, PR-level tasks |
-| **Learning curve** | Low | Low | Medium | Low-Medium | Very low |
+These three tools matter because they cover the open-source end of the coding-agent spectrum and are increasingly used in research, CI, and terminal-first teams.
+
+### OpenHands
+
+**What it is**: A full autonomous software engineering agent with terminal, browser, MCP, headless automation, and GUI modes. It is the most direct open-source analogue to Devin-style workflows.
+
+**Docs**: [docs.openhands.dev](https://docs.openhands.dev/openhands/usage/cli)
+
+**Installation**:
+
+```bash
+# Dedicated Python 3.12+ tool environment recommended
+uv tool install openhands --python 3.12
+
+# Or standalone binary
+curl -fsSL https://install.openhands.dev/install.sh | sh
+```
+
+**Why teams use it**:
+- Full agent loop with TUI, headless mode, web UI, and MCP support
+- Good fit for automation and reproducible task runs
+- Easier to self-host and inspect than proprietary IDE agents
+
+**Good use cases**:
+- Headless CI runs that need a real coding agent
+- Repositories where you want explicit MCP connectivity and approval controls
+- Teams comparing open-source agents against commercial products
+
+### OpenCode
+
+**What it is**: An open-source terminal coding agent focused on TUI workflows, provider flexibility, and local-first operation. It is closer in feel to Claude Code, but fully open.
+
+**Website**: [opencode.ai](https://opencode.ai)
+
+**Installation**:
+
+```bash
+# macOS and Linux
+brew install anomalyco/tap/opencode
+
+# npm
+npm i -g opencode-ai@latest
+```
+
+**Why teams use it**:
+- Terminal-first UX with built-in planning and execution agents
+- Provider-agnostic model support instead of being tied to one vendor
+- Strong fit for SSH, remote dev boxes, and neovim/TUI-heavy workflows
+
+**Good use cases**:
+- Developers who do most work over SSH or in tmux
+- Teams that want open-source Claude-Code-like workflows
+- Multi-provider setups using Claude, OpenAI, Gemini, or local models
+
+### mini-swe-agent
+
+**What it is**: A deliberately minimal software engineering agent from the SWE-bench/SWE-agent team. It is designed for simplicity, reproducibility, and strong benchmark performance rather than IDE polish.
+
+**Docs**: [mini-swe-agent.com](https://mini-swe-agent.com/latest/)
+
+**Installation**:
+
+```bash
+pip install mini-swe-agent
+
+# Or ephemeral CLI execution
+uvx mini-swe-agent
+```
+
+**Why teams use it**:
+- Very small, understandable architecture
+- Excellent for experiments, swe-bench-style tasks, and research baselines
+- Easy to script and reason about compared with larger agent frameworks
+
+**Good use cases**:
+- Benchmarking coding-agent performance
+- Research environments comparing prompts, models, and policies
+- Small teams that want a simple CLI agent instead of a full IDE workflow
+
+### Lingxi
+
+**What it is**: A knowledge-guided multi-agent framework for repository-level issue resolution. Lingxi is more research-oriented than day-to-day coding CLIs and is designed around specialized agents, historical repair knowledge, and strong SWE-bench-style performance.
+
+**Repo**: [github.com/lingxi-agent/Lingxi](https://github.com/lingxi-agent/Lingxi)
+
+**Installation**:
+
+```bash
+# Recommended: clone and use the repo's own uv workflow
+git clone https://github.com/lingxi-agent/Lingxi.git
+cd Lingxi
+uv sync
+
+# Alternative: install directly from GitHub into a Python 3.12 env
+pip install "lingxi @ git+https://github.com/lingxi-agent/Lingxi.git@master"
+```
+
+**Why teams use it**:
+- Strong repository-level issue resolution results, including >80% on SWE-bench Verified for Lingxi v2.0
+- Multi-agent decomposition tuned for bug localization, planning, solving, and review
+- Historical knowledge and trajectory-guidance focus, which is useful for research and evaluation
+
+**Good use cases**:
+- Research on repository-level issue resolution
+- Reproducing or studying strong SWE-bench-class systems
+- Teams exploring historical-guidance and multi-agent repair architectures
+
+### When To Pick Which
+
+| Tool | Best Fit |
+|---|---|
+| **OpenHands** | Full autonomous agent workflows with MCP, headless mode, and UI options |
+| **OpenCode** | Terminal-native, provider-agnostic daily coding in local or remote shells |
+| **mini-swe-agent** | Minimal, reproducible agent runs and research-oriented automation |
+| **Lingxi** | Repository-level issue resolution research with historical guidance and strong benchmark performance |
 
 ---
 
-## 7. For ML Engineers Specifically
+## 7. Comparison Table
+
+| Feature | Cursor | Windsurf | Aider | Claude Code | GitHub Copilot | OpenHands | OpenCode | mini-swe-agent | Lingxi |
+|---|---|---|---|---|---|---|---|---|---|
+| **Base IDE / UI** | VS Code fork | VS Code fork | Terminal/any editor | CLI + VS Code extension | VS Code, JetBrains, web | TUI, web UI, headless | Terminal UI | Terminal CLI | LangGraph Studio / Python framework |
+| **Autonomy level** | Medium | High | High | High | Medium | High | High | High | High |
+| **Multi-file editing** | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes | Yes |
+| **Git integration** | Manual | Manual | Native | Manual | Via Workspace | Manual | Manual | Manual | Manual |
+| **MCP support** | No | No | No | Yes | No | Yes | Limited / evolving ecosystem | No | No |
+| **CI/CD integration** | No | No | Yes | Partial | Yes | Yes | Scriptable CLI | Yes | Research / framework-oriented |
+| **Model flexibility** | Multiple | Multiple | Very high | Claude only | Multiple | Multiple | Very high | Very high | Multiple |
+| **Local/offline models** | No | No | Yes | No | No | Possible depending on provider | Yes | Yes | Depends on configured providers |
+| **Best use case** | Complex refactors | Autonomous IDE tasks | CLI automation | Claude-native workflows | Enterprise PR flows | Open-source autonomous coding agent | Terminal-first daily coding agent | Research and swe-bench style runs | Repository-level issue resolution research |
+| **Learning curve** | Low | Low | Medium | Low-Medium | Very low | Medium | Medium | Medium | High |
+
+---
+
+## 8. For ML Engineers Specifically
 
 ### Setting Up Cursor for Jupyter/Python ML Workflows
 
@@ -692,13 +811,17 @@ When writing code:
 | Refactoring training scripts, adding type hints | Aider (batch, git-tracked) |
 | CI/CD: auto-fix failing tests | Aider (headless --yes mode) |
 | MCP-connected workflows (live DB, vector store, W&B) | Claude Code |
+| Open-source autonomous repo work | OpenHands |
+| Terminal-native open-source daily agent | OpenCode |
+| Research and benchmark runs | mini-swe-agent |
+| Repository-level issue resolution experiments | Lingxi |
 | Claude-native agentic coding with VS Code | Claude Code VS Code Extension |
 | PR review and issue → code → PR | GitHub Copilot Workspace |
 | New developer onboarding | GitHub Copilot (lowest learning curve) |
 
 ---
 
-## 8. AI-Assisted Research Tools
+## 9. AI-Assisted Research Tools
 
 For ML engineers who need to stay current with research papers, three tools stand out.
 
@@ -784,8 +907,17 @@ Connected Papers builds a graph visualization of papers related to any seed pape
 ## Quick Reference: Getting Started Today
 
 ```bash
-# Install all CLI tools
-pip install aider-chat cursor-cli  # cursor-cli for command-line access
+# Install Python CLI tools
+pip install aider-chat mini-swe-agent
+
+# Optional: OpenHands in a dedicated Python 3.12 tool environment
+uv tool install openhands --python 3.12
+
+# Install Lingxi from GitHub in a Python 3.12 environment
+pip install "lingxi @ git+https://github.com/lingxi-agent/Lingxi.git@master"
+
+# Install OpenCode
+npm i -g opencode-ai@latest
 
 # Set up Aider with Claude
 export ANTHROPIC_API_KEY=your_key_here
@@ -796,6 +928,9 @@ aider --model claude-opus-4-6
 
 # Install Windsurf
 # Download from codeium.com/windsurf (separate install from VS Code)
+
+# Try mini-swe-agent quickly
+mini
 
 # GitHub Copilot
 # VS Code: Extensions → search "GitHub Copilot" → Install

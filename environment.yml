@@ -169,6 +169,9 @@ dependencies:
     - mcp>=1.0.0
     - fastmcp>=0.1.0
     - langmem>=0.0.6
+    - mini-swe-agent>=2.2.8
+    # OpenHands is kept in requirements-ai-dev-tools.txt because it conflicts with
+    # feast in the shared environment and requires Python 3.12.
     
     # --- Diffusion & Multimodal ---
     - diffusers>=0.32.0
@@ -254,6 +257,9 @@ dependencies:
     # --- Web / HTTP ---
     - websockets>=13.0.0
     - sse-starlette>=2.0.0
+    
+    # --- Task Scheduling ---
+    - schedule>=1.2.0
     
     # --- Statistical Analysis ---
     - lifelines>=0.30.0

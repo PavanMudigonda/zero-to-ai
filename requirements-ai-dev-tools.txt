@@ -1,0 +1,13 @@
+# ============================================================================
+# AI Developer Tooling Requirements
+# Install these in a dedicated tool environment when you want the external coding
+# CLIs used in the Phase 31 lessons.
+#
+# OpenHands currently requires Python 3.12 and conflicts with the base project
+# stack because feast pins tenacity<9 while OpenHands requires tenacity>=9.1.2.
+# ============================================================================
+
+mini-swe-agent>=2.2.8
+openhands>=1.14.0; python_version == "3.12"
+# Lingxi is source-installed from GitHub and requires Python 3.12.
+lingxi @ git+https://github.com/lingxi-agent/Lingxi.git@master ; python_version >= "3.12"

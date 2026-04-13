@@ -91,6 +91,7 @@ dependencies = [
     "mcp>=1.0.0",
     "fastmcp>=0.1.0",
     "langmem>=0.0.6",
+    "mini-swe-agent>=2.2.8",
     # Fine-tuning
     "peft>=0.13.0",
     "accelerate>=1.2.0",
@@ -180,6 +181,8 @@ dependencies = [
     "httpx>=0.27.0",
     "websockets>=13.0.0",
     "sse-starlette>=2.0.0",
+    # Task scheduling (used by agent notebooks)
+    "schedule>=1.2.0",
     # Utilities
     "python-dotenv>=1.0.0",
     "tqdm>=4.67.0",
@@ -224,6 +227,10 @@ all = [
     "flake8>=6.1.0",
     "mypy>=1.5.0",
 ]
+
+# OpenHands is intentionally excluded from the shared project environment
+# because it currently requires Python 3.12 and conflicts with feast's tenacity
+# constraint. Install it from requirements-ai-dev-tools.txt in a dedicated tool env.
 
 [project.urls]
 Homepage = "https://zero-to-ai.dev"

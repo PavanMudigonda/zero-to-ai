@@ -54,9 +54,40 @@ echo "📦 UV version:"
 uv --version
 echo ""
 
+INSTALL_AI_DEV_TOOLS="${INSTALL_AI_DEV_TOOLS:-0}"
+
 # Manage dependencies entirely using uv sync (Handles venv creation and locking)
 echo "🔧 Syncing workspace dependencies with uv sync (this is FAST!)..."
 uv sync --python 3.11
+
+if [[ -f package.json ]]; then
+    if command -v npm &> /dev/null; then
+        echo "📦 Installing Node-based developer tools from package.json..."
+        npm install
+        echo "✅ Node-based developer tools installed"
+        echo ""
+    else
+        echo "⚠️  npm not found. Skipping Node-based developer tools (for example OpenCode)."
+        echo "   Install Node.js and rerun 'npm install' if you want those CLIs locally."
+        echo ""
+    fi
+fi
+
+if [[ "$INSTALL_AI_DEV_TOOLS" == "1" ]]; then
+    if [[ -f requirements-ai-dev-tools.txt ]]; then
+        if command -v python3.12 &> /dev/null; then
+            echo "🧰 Creating dedicated AI developer tools environment (.venv-ai-dev-tools)..."
+            uv venv --python 3.12 .venv-ai-dev-tools
+            uv pip install --python .venv-ai-dev-tools/bin/python -r requirements-ai-dev-tools.txt
+            echo "✅ Dedicated AI developer tools environment created"
+            echo ""
+        else
+            echo "⚠️  INSTALL_AI_DEV_TOOLS=1 was set, but python3.12 is not available."
+            echo "   Skipping dedicated OpenHands environment setup."
+            echo ""
+        fi
+    fi
+fi
 
 # Activate virtual environment
 echo "🔌 Activating virtual environment..."
@@ -80,6 +111,9 @@ echo "  source .venv/bin/activate"
 echo ""
 echo "To install optional dev dependencies:"
 echo "  uv sync --all-extras    # Includes pytest, black, flake8, mypy"
+echo ""
+echo "To install the dedicated AI developer tools environment (OpenHands on Python 3.12):"
+echo "  INSTALL_AI_DEV_TOOLS=1 ./install_dependencies.sh"
 echo ""
 echo "To start Jupyter:"
 echo "  uv run jupyter notebook"
