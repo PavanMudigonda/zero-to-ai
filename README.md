@@ -157,9 +157,12 @@ zero-to-ai/
 ├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, TPU, Apple Silicon
 ├── 🚄 30-inference-optimization/ 🆕 KV cache, vLLM, TensorRT-LLM, quantization, speculative decoding
 ├── 🛠️ 31-ai-powered-dev-tools/ 🆕 VS Code AI setup, MCP deep dive, custom instructions, tool workflows
-├── ✅ checklist.md             Your complete learning roadmap
-├── 📋 setup.md                 Detailed installation guide
-└── !! COMPARISON_MATRICES.md   Comparison of LLM Models
+├── docs/
+│   ├── ✅ checklist.md             Your complete learning roadmap
+│   ├── 📋 setup.md                 Detailed installation guide
+│   ├── 📖 MASTER_STUDY_GUIDE.md    Phase-by-phase study guide & track picker
+│   ├── 📚 REFERENCES.md            Videos, repos, courses, papers by phase
+│   └── !! COMPARISON_MATRICES.md   Comparison of LLM Models
 ```
 
 **💡 Pro Tip**: Start with `00_START_HERE.ipynb` in each section for guided learning!
