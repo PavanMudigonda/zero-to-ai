@@ -6,13 +6,13 @@ Build a complete neural network from scratch (without PyTorch/TensorFlow) to cla
 
 **Estimated Time:** 6-8 hours  
 **Difficulty:** ⭐⭐⭐ Intermediate  
-**Due Date:** 2 weeks from assignment
+**Suggested Pace:** 1-2 weeks if you are moving through the course sequentially
 
 ---
 
 ## 📋 Requirements
 
-### Part 1: Network Architecture (25 points)
+### Part 1: Network Architecture
 
 Implement a 3-layer neural network with:
 
@@ -50,7 +50,7 @@ class NeuralNetwork:
         pass
 ```
 
-### Part 2: Training Loop (25 points)
+### Part 2: Training Loop
 
 Implement the training process:
 
@@ -67,7 +67,7 @@ Implement the training process:
 - Validation split: 20% of training data
 - Save best model based on validation accuracy
 
-### Part 3: Evaluation & Analysis (25 points)
+### Part 3: Evaluation & Analysis
 
 Evaluate your trained model:
 
@@ -87,7 +87,7 @@ Evaluate your trained model:
 - Overall confusion matrix
 ```
 
-### Part 4: Experimentation & Documentation (25 points)
+### Part 4: Experimentation & Documentation
 
 Experiment and document your findings:
 
@@ -106,52 +106,51 @@ Experiment and document your findings:
 
 ---
 
-## 📊 Grading Rubric
+## 📊 Self-Review Guide
 
-| Criteria | Exemplary (A: 90-100%) | Proficient (B: 80-89%) | Adequate (C: 70-79%) | Needs Work (D/F: <70%) |
-|----------|----------------------|---------------------|-------------------|---------------------|
-| **Implementation** | Clean, efficient, well-commented code; all functions work correctly | Mostly correct, minor bugs; adequate comments | Basic implementation with several bugs | Broken or incomplete code |
-| **Architecture** | Proper layer sizes, activations, and initialization; optimized design | Correct structure with minor inefficiencies | Basic structure but suboptimal choices | Incorrect architecture |
-| **Training** | Smooth convergence, proper validation, excellent learning curves | Good training process with minor issues | Training works but inefficient | Poor training or doesn't converge |
-| **Evaluation** | Comprehensive analysis, insightful visualizations, >92% accuracy | Good analysis, clear results, >90% accuracy | Basic evaluation, >85% accuracy | Incomplete evaluation or <85% accuracy |
-| **Experiments** | 4+ experiments, thorough analysis, clear insights | 3-4 experiments with good documentation | 2-3 experiments, basic documentation | <2 experiments or poor analysis |
-| **Documentation** | Exceptionally clear, professional, insightful | Well-written and organized | Adequate but could be clearer | Poor or missing documentation |
+| Criteria | Strong | Working | Emerging | Needs revision |
+|----------|--------|---------|----------|----------------|
+| **Implementation** | Clean, efficient, understandable code; all functions work correctly | Mostly correct with minor bugs | Basic implementation with several bugs | Broken or incomplete |
+| **Architecture** | Proper layer sizes, activations, and initialization with clear rationale | Correct structure with minor inefficiencies | Basic structure but suboptimal choices | Incorrect architecture |
+| **Training** | Smooth convergence, validation tracking, clear learning curves | Good training process with minor issues | Training works but is inefficient | Poor training or does not converge |
+| **Evaluation** | Comprehensive analysis, strong visualizations, and target accuracy reached | Good analysis with clear results | Basic evaluation with partial analysis | Incomplete evaluation or very weak results |
+| **Experiments** | Four or more experiments with clear insights | Three to four experiments with good documentation | Two to three experiments with basic documentation | Fewer than two experiments or poor analysis |
+| **Documentation** | Clear, professional, and reflective | Well organized and readable | Adequate but could be clearer | Poor or missing documentation |
 
-### Grade Breakdown
-- **A (90-100):** All requirements met + bonus challenges + exceptional documentation
-- **B (80-89):** All core requirements met with good quality
-- **C (70-79):** Most requirements met, basic functionality
-- **D/F (<70):** Major requirements missing or not working
+### Suggested Interpretation
+- If all core requirements work and your analysis is clear, the project is in strong shape.
+- If the model trains but some experiments or analysis are thin, strengthen the documentation before moving on.
+- If the implementation is unstable, focus first on correctness, then on accuracy improvements.
 
 ---
 
-## 🌟 Bonus Challenges (+10 points each, max +30)
+## 🌟 Optional Extensions
 
-### Bonus 1: Advanced Optimizers (+10 points)
+### Optional Extension 1: Advanced Optimizers
 - [ ] Implement momentum optimization
 - [ ] Implement Adam optimizer
 - [ ] Compare SGD vs Momentum vs Adam with plots
 
-### Bonus 2: Regularization (+10 points)
+### Optional Extension 2: Regularization
 - [ ] Add L2 regularization
 - [ ] Implement dropout
 - [ ] Show impact on overfitting with plots
 
-### Bonus 3: Advanced Analysis (+10 points)
+### Optional Extension 3: Advanced Analysis
 - [ ] Visualize activation patterns in hidden layers
 - [ ] Implement and visualize attention/saliency maps
 - [ ] Create interactive demo with matplotlib widgets
 
-### Bonus 4: Performance Optimization (+10 points)
+### Optional Extension 4: Performance Optimization
 - [ ] Vectorize all operations (no Python loops)
 - [ ] Compare training time: original vs optimized
 - [ ] Profile code and show bottleneck analysis
 
 ---
 
-## 📦 Submission Requirements
+## 📦 Deliverables
 
-### What to Submit
+### What to Prepare
 
 1. **Code Files:**
    - `neural_network.py` - Your NN class implementation
@@ -178,7 +177,7 @@ Experiment and document your findings:
    - `plots/` - All generated visualizations
    - `results/` - Experiment results (CSV/JSON)
 
-### Submission Format
+### Suggested Project Structure
 
 **GitHub Repository:**
 ```
@@ -200,10 +199,10 @@ your-name-mnist-nn/
     └── experiments.csv
 ```
 
-**Submit:**
-- GitHub repository link (make it public)
+**Recommended packaging:**
+- Keep the project in a public or private GitHub repository
 - Include all files listed above
-- Ensure code runs with: `pip install -r requirements.txt && python train.py`
+- Ensure the code runs with: `pip install -r requirements.txt && python train.py`
 
 ---
 
@@ -294,16 +293,16 @@ If accuracy is low, check:
 A: No - the point is to implement from scratch. You can use NumPy, but not ML frameworks.
 
 **Q: What if I can't reach 90% accuracy?**  
-A: 85-89% is still acceptable for a passing grade. Document what you tried and why you think it didn't work better.
+A: 85-89% is still a solid result for a first from-scratch implementation. Document what you tried and why it likely plateaued.
 
 **Q: Can I work with a partner?**  
-A: Discuss concepts together, but write your own code. No shared code submissions.
+A: Discuss concepts together if helpful, but build and understand your own implementation.
 
 **Q: How long should the report be?**  
 A: Quality over quantity. 2-4 pages of clear analysis is better than 10 pages of fluff.
 
 **Q: Can I use a different dataset?**  
-A: No - use MNIST so we can fairly compare submissions.
+A: Stick with MNIST for the first pass so your results stay comparable with the rest of the assignment.
 
 ---
 
@@ -340,10 +339,9 @@ After completing this assignment, you will be able to:
 
 ## 💬 Questions & Support
 
-- **Office Hours:** Tuesdays 2-4 PM, Thursdays 3-5 PM
 - **Discussion Forum:** [GitHub Discussions](https://github.com/zero-to-ai/discussions)
-- **Email:** instructor@zero-to-ai.com (response within 24 hours)
-- **Stuck?** Post your question in Discussions - help others by answering too!
+- **Stuck?** Post the bug, the exact error, and what you already tried.
+- **Best workflow:** Finish the core phase notebooks first, then come back to this assignment if your fundamentals still feel shaky.
 
 ---
 

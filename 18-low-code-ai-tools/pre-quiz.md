@@ -1,6 +1,6 @@
 # Pre-Quiz: Low-Code AI Tools
 
-**Phase 17: Low-Code AI Tools**  
+**Phase 18: Low-Code AI Tools**  
 **Duration:** 15 minutes  
 **Questions:** 10
 
@@ -8,10 +8,10 @@
 
 ## Instructions
 
-This quiz assesses your baseline knowledge of low-code AI tools before starting Phase 17.
+This quiz assesses your baseline knowledge of low-code AI tools before starting Phase 18.
 
 - Answer all questions
-- No resources allowed
+- Try to answer from memory first
 - Select the best answer for each question
 - Note areas where you're uncertain for focused learning
 
@@ -202,9 +202,9 @@ The README.md frontmatter in a Hugging Face Space contains metadata like the tit
 
 1. Review any questions you got wrong
 2. Note topics you're uncertain about
-3. Proceed to Phase 17 content
+3. Proceed to Phase 18 content
 4. Retake quiz after completing the phase
 
 ---
 
-**Ready to start learning? Let's build with low-code tools! 🚀**
+**Ready to start learning? Let's build with low-code tools!**

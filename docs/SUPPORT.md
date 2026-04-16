@@ -36,7 +36,7 @@ For questions, discussions, and general help:
 - [Suggest Ideas](https://github.com/PavanMudigonda/zero-to-ai/discussions/new?category=ideas)
 
 ### Discord Community
-Join our learning community (Coming Soon!)
+Discord community details will be added here when that channel is available.
 - Real-time chat with other learners
 - Study groups and collaboration
 - Weekly office hours

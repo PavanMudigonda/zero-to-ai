@@ -27,3 +27,8 @@ These visualization lessons were written with 🌸 by [Jen Looper](https://twitt
 🦆 Data for Minnesota Birds is from [Kaggle](https://www.kaggle.com/hannahcollins/minnesota-birds) scraped from [Wikipedia](https://en.wikipedia.org/wiki/List_of_birds_of_Minnesota) by Hannah Collins.
 
 All these datasets are licensed as [CC0: Creative Commons](https://creativecommons.org/publicdomain/zero/1.0/).
+
+## What Comes Next
+
+- Continue to [../4-Data-Science-Lifecycle/README.md](../4-Data-Science-Lifecycle/README.md) to connect visualization work to broader analysis and communication practice.
+- Revisit earlier visualization lessons if you still cannot explain why one chart choice is better than another.

@@ -2,6 +2,8 @@
 
 This directory contains a comprehensive collection of NumPy tutorials, exercises, and examples, consolidated from multiple GitHub repositories and deduplicated for clarity.
 
+Use this folder to build array intuition, shape awareness, and vectorized thinking. The goal is not to finish every notebook. The goal is to become comfortable enough with arrays that pandas, embeddings, and model tensors stop feeling mysterious.
+
 ## 📁 Directory Structure
 
 ### 01-basics/
@@ -162,6 +164,13 @@ A complete library of ML algorithms implemented in pure NumPy.
 2. Implement projects from the tutorials
 3. Explore `05-ml-applications/numpy-ml/` for ML implementations
 
+## How To Use This Folder Well
+
+- Complete a small basics pass before spending time on the advanced archive.
+- Prioritize indexing, broadcasting, reshaping, and reduction operations because those transfer everywhere else.
+- Use the exercise sets to check fluency, not just recognition.
+- Return to this folder whenever later phases expose confusion about shapes, similarity math, or vectorized computation.
+
 ---
 
 ## 📊 Content Statistics
@@ -230,6 +239,12 @@ print(np.__version__)
 - [NumPy User Guide](https://numpy.org/doc/stable/user/index.html)
 - [NumPy API Reference](https://numpy.org/doc/stable/reference/index.html)
 - [From Python to NumPy](https://www.labri.fr/perso/nrougier/from-python-to-numpy/)
+
+## What Comes Next
+
+- Continue to [../2-pandas-examples/README.md](../2-pandas-examples/README.md) to move from arrays into tabular workflows.
+- Continue to [../4-matplotlib/README.md](../4-matplotlib/README.md) to visualize the data you manipulate here.
+- Continue to [../../05-embeddings/README.md](../../05-embeddings/README.md) later when you want to see vector operations show up in AI systems directly.
 
 ---
 

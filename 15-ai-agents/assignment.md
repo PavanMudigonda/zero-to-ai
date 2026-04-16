@@ -9,8 +9,8 @@
 **Objective:** Build a fully functional AI agent that can autonomously accomplish complex tasks using multiple tools and reasoning.
 
 **Estimated Time:** 10-15 hours  
-**Weight:** 100 points + 30 bonus points  
-**Due:** End of Week 3  
+**Scope:** Capstone-style build with optional extensions  
+**Suggested Pace:** 1-2 weeks after completing the main agent notebooks  
 
 ---
 
@@ -38,7 +38,7 @@ After completing this assignment, you will be able to:
 
 ---
 
-## 🏗️ Part 1: Agent Design & Implementation (40 points)
+## 🏗️ Part 1: Agent Design & Implementation
 
 ### Choose ONE Agent Type:
 
@@ -172,19 +172,19 @@ Pipeline:
 
 ### Requirements (All Options):
 
-**1. Agent Architecture (15 points)**
+**1. Agent Architecture**
 - [ ] Clean separation of concerns (agent logic, tools, utilities)
 - [ ] Configurable (system prompts, tool selection, parameters)
 - [ ] Logging of all agent actions
 - [ ] Error recovery mechanisms
 
-**2. Tool Implementation (15 points)**
+**2. Tool Implementation**
 - [ ] At least 4 tools implemented
 - [ ] Proper JSON schemas for all tools
 - [ ] Input validation and error handling
 - [ ] Tool execution logging
 
-**3. Agent Reasoning (10 points)**
+**3. Agent Reasoning**
 - [ ] Intelligent tool selection
 - [ ] Multi-step planning for complex tasks
 - [ ] Ability to self-correct when errors occur
@@ -192,11 +192,11 @@ Pipeline:
 
 ---
 
-## 🧠 Part 2: Memory & State Management (20 points)
+## 🧠 Part 2: Memory & State Management
 
 Implement memory systems for your agent:
 
-### 2.1 Conversation History (8 points)
+### 2.1 Conversation History
 ```python
 class ConversationMemory:
     def __init__(self, max_messages=10):
@@ -222,7 +222,7 @@ class ConversationMemory:
 - [ ] Summarize old messages to save tokens
 - [ ] Clear context on user request
 
-### 2.2 Task Memory (7 points)
+### 2.2 Task Memory
 ```python
 class TaskMemory:
     def __init__(self):
@@ -243,16 +243,16 @@ class TaskMemory:
 - [ ] Resume from failures
 - [ ] Progress reporting
 
-### 2.3 Long-Term Memory (Optional - 5 bonus points)
+### 2.3 Long-Term Memory (Optional)
 - [ ] Vector database for facts/knowledge
 - [ ] Retrieve relevant past interactions
 - [ ] Personalization based on history
 
 ---
 
-## 🧪 Part 3: Testing & Evaluation (20 points)
+## 🧪 Part 3: Testing & Evaluation
 
-### 3.1 Unit Tests (8 points)
+### 3.1 Unit Tests
 Test each tool individually:
 
 ```python
@@ -273,7 +273,7 @@ def test_tool_error_handling():
 - [ ] Test edge cases
 - [ ] Achieve >80% code coverage
 
-### 3.2 Integration Tests (7 points)
+### 3.2 Integration Tests
 Test agent end-to-end:
 
 ```python
@@ -295,7 +295,7 @@ def test_agent_multi_step():
 - [ ] Test error recovery
 - [ ] Test with real/mocked APIs
 
-### 3.3 Evaluation Metrics (5 points)
+### 3.3 Evaluation Metrics
 Measure agent performance:
 
 ```python
@@ -316,9 +316,9 @@ metrics = {
 
 ---
 
-## 📝 Part 4: Documentation & Demo (20 points)
+## 📝 Part 4: Documentation & Demo
 
-### 4.1 README.md (8 points)
+### 4.1 README.md
 ```markdown
 # [Your Agent Name]
 
@@ -351,13 +351,13 @@ Tool descriptions and parameters
 5+ example interactions
 ```
 
-### 4.2 Code Documentation (5 points)
+### 4.2 Code Documentation
 - [ ] Docstrings for all functions
 - [ ] Type hints
 - [ ] Inline comments for complex logic
 - [ ] API reference (auto-generated)
 
-### 4.3 Demo (7 points)
+### 4.3 Demo
 **Option 1: Video Demo (3-5 minutes)**
 - Show agent handling 3+ different queries
 - Explain tool selection decisions
@@ -370,9 +370,9 @@ Tool descriptions and parameters
 
 ---
 
-## 🎁 Bonus Challenges (+20 points)
+## 🎁 Optional Extensions
 
-### Bonus 1: Advanced Reasoning (+5 points)
+### Optional Extension 1: Advanced Reasoning
 Implement **ReAct** (Reasoning + Acting) pattern:
 ```
 Thought: I need to find the revenue data
@@ -385,30 +385,30 @@ Thought: Growth is 26.8%, I can now respond
 Final Answer: Revenue grew by 26.8% from $4.1M to $5.2M
 ```
 
-### Bonus 2: Parallel Tool Execution (+5 points)
+### Optional Extension 2: Parallel Tool Execution
 - Execute multiple independent tools concurrently
 - Aggregate results efficiently
 - Handle parallel errors gracefully
 
-### Bonus 3: Agent Optimization (+5 points)
+### Optional Extension 3: Agent Optimization
 - Cache frequent API calls
 - Optimize token usage
 - Reduce latency with streaming
 - Smart tool selection (skip unnecessary tools)
 
-### Bonus 4: Production Deployment (+5 points)
+### Optional Extension 4: Production Deployment
 - Deploy as REST API (FastAPI/Flask)
 - Add authentication
 - Rate limiting
 - Monitoring dashboard
 - Docker containerization
 
-### Bonus 5: MCP Integration (+5 points)
+### Optional Extension 5: MCP Integration
 - Expose your agent's tools via MCP server
 - Connect to your agent from an MCP-compatible client (Claude Desktop, Cursor)
 - Demonstrate cross-runtime tool sharing
 
-### Bonus 6: Agent Evaluation Pipeline (+5 points)
+### Optional Extension 6: Agent Evaluation Pipeline
 - Build an LLM-as-Judge scorer for trajectory quality
 - Run eval suite of ≥10 test cases with pass/fail tracking
 - Generate a markdown report with failure analysis
@@ -416,37 +416,37 @@ Final Answer: Revenue grew by 26.8% from $4.1M to $5.2M
 
 ---
 
-## 📊 Grading Rubric
+## 📊 Self-Review Guide
 
-### Part 1: Agent Design & Implementation (40 points)
-| Criteria | Points | Description |
-|----------|--------|-------------|
-| **Architecture** | 15 | Clean code, separation of concerns, configurability |
-| **Tools** | 15 | All tools work correctly, proper schemas, error handling |
-| **Reasoning** | 10 | Intelligent tool selection, multi-step planning |
+### Part 1: Agent Design & Implementation
+| Criteria | Relative Emphasis | Description |
+|----------|-------------------|-------------|
+| **Architecture** | High | Clean code, separation of concerns, configurability |
+| **Tools** | High | All tools work correctly, proper schemas, error handling |
+| **Reasoning** | Medium | Intelligent tool selection, multi-step planning |
 
-### Part 2: Memory & State (20 points)
-| Criteria | Points | Description |
-|----------|--------|-------------|
-| **Conversation History** | 8 | Properly stores and retrieves context |
-| **Task Memory** | 7 | Tracks progress, resumes from failures |
-| **Implementation** | 5 | Clean code, efficient storage |
+### Part 2: Memory & State
+| Criteria | Relative Emphasis | Description |
+|----------|-------------------|-------------|
+| **Conversation History** | High | Properly stores and retrieves context |
+| **Task Memory** | High | Tracks progress, resumes from failures |
+| **Implementation** | Medium | Clean code, efficient storage |
 
-### Part 3: Testing & Evaluation (20 points)
-| Criteria | Points | Description |
-|----------|--------|-------------|
-| **Unit Tests** | 8 | Comprehensive coverage, edge cases |
-| **Integration Tests** | 7 | End-to-end scenarios, error cases |
-| **Metrics** | 5 | Proper evaluation methodology |
+### Part 3: Testing & Evaluation
+| Criteria | Relative Emphasis | Description |
+|----------|-------------------|-------------|
+| **Unit Tests** | High | Comprehensive coverage, edge cases |
+| **Integration Tests** | High | End-to-end scenarios, error cases |
+| **Metrics** | Medium | Proper evaluation methodology |
 
-### Part 4: Documentation & Demo (20 points)
-| Criteria | Points | Description |
-|----------|--------|-------------|
-| **README** | 8 | Clear, comprehensive, examples |
-| **Code Docs** | 5 | Docstrings, type hints, comments |
-| **Demo** | 7 | Shows key features, explains decisions |
+### Part 4: Documentation & Demo
+| Criteria | Relative Emphasis | Description |
+|----------|-------------------|-------------|
+| **README** | High | Clear, comprehensive, examples |
+| **Code Docs** | Medium | Docstrings, type hints, comments |
+| **Demo** | High | Shows key features, explains decisions |
 
-### Bonus (up to +30 points)
+### Optional Extensions
 - ReAct pattern: +5
 - Parallel execution: +5
 - Optimization: +5
@@ -503,24 +503,20 @@ Final Answer: Revenue grew by 26.8% from $4.1M to $5.2M
 
 ## 🤝 Collaboration Policy
 
-- **Individual assignment:** Complete independently
-- **Getting help:** Office hours, Discord, Stack Overflow
+- **Recommended default:** Build this project independently
+- **Getting help:** GitHub Discussions, documentation, and targeted implementation questions
 - **Code sharing:** Don't share solutions, but discuss approaches
 - **AI assistance:** OK to use for debugging, not for writing entire agent
 
 ---
 
-## 📅 Submission
+## 📅 Project Packaging
 
-**Submit via GitHub:**
+**Suggested GitHub workflow:**
 1. Create repo: `ai-agent-[your-name]`
 2. Include all deliverables
 3. Add comprehensive README
-4. Submit repo link
-
-**Deadline:** [Date]
-
-**Late Policy:** -10% per day, up to 3 days
+4. Save the repo link with your project notes or portfolio materials
 
 ---
 

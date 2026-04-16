@@ -1,6 +1,6 @@
 # Pre-Quiz: Debugging & Troubleshooting
 
-Test your baseline knowledge before starting Phase 16.
+Test your baseline knowledge before starting Phase 17.
 
 **Time:** 10 minutes  
 **Questions:** 10  
@@ -196,14 +196,14 @@ D) Data leakage
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
 Count your correct answers:
 
-- **9-10 correct:** Excellent! You have a strong foundation 🎓
-- **7-8 correct:** Good! Review a few concepts before starting 👍
-- **5-6 correct:** Moderate. Focus on weak areas during Phase 16 📚
-- **0-4 correct:** Review prerequisite material before Phase 16 🔄
+- **9-10 correct:** Strong foundation for this phase.
+- **7-8 correct:** Good starting point; review a few concepts before diving in.
+- **5-6 correct:** Moderate baseline; pay extra attention to the weaker topics.
+- **0-4 correct:** Review prerequisite material before Phase 17.
 
 ---
 
@@ -221,7 +221,7 @@ Based on your score, focus on:
 - Performance optimization basics
 
 **If you missed 6-8:**
-- Review Phase 15 (Model Evaluation)
+- Review Phase 16 (Model Evaluation)
 - Study debugging fundamentals
 - Practice with simple examples
 
@@ -237,8 +237,8 @@ Based on your score, focus on:
 1. Review any questions you got wrong
 2. Check the explanations carefully
 3. Read relevant notebook sections
-4. **Begin Phase 16 when ready!**
+4. **Begin Phase 17 when ready!**
 
 ---
 
-Good luck with Phase 16! 🚀
+Good luck with Phase 17!

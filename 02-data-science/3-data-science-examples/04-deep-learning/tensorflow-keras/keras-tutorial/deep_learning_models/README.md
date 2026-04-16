@@ -87,3 +87,10 @@ Additionally, don't forget to [cite Keras](https://keras.io/getting-started/faq/
 - All code in this repository is under the MIT license as specified by the LICENSE file.
 - The ResNet50 weights are ported from the ones [released by Kaiming He](https://github.com/KaimingHe/deep-residual-networks) under the [MIT license](https://github.com/KaimingHe/deep-residual-networks/blob/master/LICENSE).
 - The VGG16 and VGG19 weights are ported from the ones [released by VGG at Oxford](http://www.robots.ox.ac.uk/~vgg/research/very_deep/) under the [Creative Commons Attribution License](https://creativecommons.org/licenses/by/4.0/).
+
+## What Comes Next
+
+This folder is a model reference implementation, not the full learning path.
+
+1. Return to the parent Keras tutorial or deep-learning examples folder for the surrounding lessons and exercises.
+2. Use these model notes when you need architecture-specific reference material while working through the broader deep-learning track.

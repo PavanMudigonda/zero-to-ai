@@ -188,3 +188,11 @@ Do some research to find more information on this sticky decision.
 ## Assignment
 
 [Try it in Excel](assignment.md)
+
+## What Comes Next
+
+After proportions, continue into relationship-focused charts:
+
+- Move to [Visualizing Relationships](../12-visualization-relationships/README.md) to study how variables change together over time or across categories.
+- Then finish the section with [Making Meaningful Visualizations](../13-meaningful-visualizations/README.md), which ties chart choice, ethics, readability, and storytelling together.
+- If you want to compare chart families first, revisit [Visualizing Quantities](../09-visualization-quantities/README.md) and [Visualizing Distributions](../10-visualization-distributions/README.md).

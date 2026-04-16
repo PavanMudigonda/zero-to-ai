@@ -135,7 +135,7 @@ Build an evaluation framework that:
 - Generates visualization reports
 
 **Time Estimate:** 8-10 hours  
-**Weight:** 100 points
+**Scope:** capstone-style project build
 
 ### Challenges
 1. **Imbalanced Classification** (⭐⭐) - Handle 99:1 class imbalance
@@ -241,12 +241,13 @@ Track your progress and identify areas for deeper study!
 
 ---
 
-## 🚀 Next Steps
+## Next Steps
 
 After mastering model evaluation:
 - **Phase 17:** Debugging & Troubleshooting
-- **Phase 18:** Low-Code AI Tools
-- **Phase 18:** MLOps & Monitoring
+- **Phase 19:** AI Safety & Red Teaming
+- **Phase 09:** MLOps if you want deployment, monitoring, and production feedback loops
+- **Phase 28:** Practical Data Science if you want more applied project work
 
 ---
 

@@ -160,6 +160,14 @@ Visit [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.ipynb
 * **Task 1**: Modify the code above to find out related concepts for the fields of **Big Data** and **Machine Learning**
 * **Task 2**: [Think About Data Science Scenarios](assignment.md)
 
+## What Comes Next
+
+After this lesson, continue through the rest of the introduction sequence:
+
+- Move to [Data Ethics](../02-ethics/README.md) to understand responsible data work before you start collecting and analyzing datasets.
+- Continue with [Defining Data](../03-defining-data/README.md) to get clearer about data types, structures, and sources.
+- Finish the introduction unit with [Statistics and Probability](../04-stats-and-probability/README.md) before moving into the broader [Working With Data](../../2-Working-With-Data/README.md) section.
+
 ## Credits
 
 This lesson has been authored with ♥️ by [Dmitry Soshnikov](http://soshnikov.com)

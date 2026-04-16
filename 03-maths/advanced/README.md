@@ -4,6 +4,8 @@ Research-level mathematical topics and learning theory for understanding modern 
 
 **Prerequisites:** Complete [foundational/](../foundational/) and [mml-book/](../mml-book/) sections first.
 
+This folder is for deepening theory after the core curriculum starts making concrete sense. It is not a first-pass requirement, and it should be approached selectively based on your actual interests.
+
 ## Notebooks
 
 ### Part I: Learning Theory
@@ -45,6 +47,12 @@ Research-level mathematical topics and learning theory for understanding modern 
 
 **Optimization:** 09 -> 14 -> 15
 
+## How To Use This Folder Well
+
+- Pick one path based on your interest instead of trying to complete all sixteen notebooks at once.
+- Use this folder to support research reading or a specific technical curiosity.
+- Return to practical phases after each deep dive so the theory stays grounded.
+
 ## Prerequisites
 
 - Solid understanding of linear algebra, multivariable calculus, probability, and basic ML
@@ -55,3 +63,9 @@ Research-level mathematical topics and learning theory for understanding modern 
 - [foundational/](../foundational/) - Core prerequisites
 - [mml-book/](../mml-book/) - Intermediate theory
 - [mlpp-book/](../mlpp-book/) - Probabilistic ML depth
+
+## What Comes Next
+
+- Continue to [../../24-advanced-deep-learning/README.md](../../24-advanced-deep-learning/README.md) if you want theory connected to modern architectures.
+- Continue to [../../28-practical-data-science/README.md](../../28-practical-data-science/README.md) if you want to reconnect theory to applied work.
+- Return to [../README.md](../README.md) to choose another math path only if you have a clear reason.

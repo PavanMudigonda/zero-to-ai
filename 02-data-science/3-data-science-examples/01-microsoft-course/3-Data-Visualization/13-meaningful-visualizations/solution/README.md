@@ -24,3 +24,10 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## What Comes Next
+
+This is the reference solution for the project:
+
+- Return to the main lesson at [../README.md](../README.md) for the explanation, challenge framing, and assignment context.
+- If you want to practice from scratch, switch back to [../starter/README.md](../starter/README.md) and rebuild the project without relying on the completed code.

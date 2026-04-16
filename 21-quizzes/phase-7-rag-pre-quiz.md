@@ -336,19 +336,19 @@ D) Fine-tuning doesn't require data
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-**0-3 correct (0-30%):** RAG is an advanced topic. Make sure you've completed:
+**0-3 correct:** RAG is an advanced topic. Make sure you've completed:
 - Phase 6 (Neural Networks)
 - Phase 11 (Prompt Engineering & LangChain)
 
-**4-5 correct (40-50%):** You have some relevant background. Review vector embeddings and LLM basics before starting.
+**4-5 correct:** You have some relevant background. Review vector embeddings and LLM basics before starting.
 
-**6-7 correct (60-70%):** Good foundation! You're ready to learn RAG with focused effort.
+**6-7 correct:** Good foundation for learning RAG with focused effort.
 
-**8-9 correct (80-90%):** Excellent! You understand the core concepts. This phase will teach you implementation.
+**8-9 correct:** Strong conceptual understanding; this phase should push implementation.
 
-**10 correct (100%):** Outstanding! You may have RAG experience. You'll learn production best practices and advanced techniques.
+**10 correct:** Excellent starting point, with room to sharpen production practices and advanced techniques.
 
 ---
 
@@ -368,17 +368,17 @@ Before starting Phase 8, ensure you understand:
 
 **After this pre-quiz:**
 
-1. **Score < 50%:** Review prerequisites first
+1. **If the quiz felt difficult:** Review prerequisites first
    - Phase 11: Prompt Engineering
    - Phase 7: Vector Databases intro
    - LLM fundamentals
 
-2. **Score 50-70%:** Start Phase 8 but take it slow
+2. **If you felt partly comfortable:** Start Phase 8 but take it slow
    - Revisit embedding concepts
    - Practice with simple examples
    - Ask questions in community
 
-3. **Score > 70%:** Dive into Phase 8!
+3. **If most of it felt comfortable:** Dive into Phase 8
    - Build a RAG system
    - Complete the assignment
    - Try advanced challenges

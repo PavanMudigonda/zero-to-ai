@@ -26,7 +26,7 @@ Fill in the following table (substitute suggested problem domains for your own o
 
 > *We provide just one answer as an example, so that you can get an idea of what is expected in this assignment.*
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

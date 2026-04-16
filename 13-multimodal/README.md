@@ -12,6 +12,8 @@ Go beyond text! Learn to work with Vision-Language Models, Audio AI, and multimo
 **Time:** 3-4 weeks | 60-80 hours  
 **Outcome:** Build AI systems that understand and generate across multiple modalities
 
+This phase is a strong introduction and project-launch point. It is not yet intended to be the repo's deepest research track for multimodal systems.
+
 ---
 
 ## 📚 What You'll Learn
@@ -218,6 +220,12 @@ image.save("output.png")
 ### Week 4: Realtime Multimodal and Video
 
 - [ ] Study video understanding and generation patterns
+
+## What Comes Next
+
+- Continue to [../20-real-time-streaming/README.md](../20-real-time-streaming/README.md) for realtime interaction patterns.
+- Continue to [../24-advanced-deep-learning/README.md](../24-advanced-deep-learning/README.md) for deeper architecture work.
+- Continue to [../28-practical-data-science/README.md](../28-practical-data-science/README.md) if you want applied project work.
 - [ ] Compare image-first, audio-first, and omni-model workflows
 - [ ] **Project:** Build a multimodal assistant that can interpret image + speech input
 

@@ -14,6 +14,8 @@ Master the end-to-end validation stack for AI accelerators — from bare-metal h
 - AI Compiler & Runtime QA Engineer
 - AI PC / Edge Inference Validation Engineer
 
+This phase is intentionally specialized. Most learners should treat it as an elective for systems, infrastructure, or silicon-validation career paths rather than a required core module.
+
 ---
 
 ## Learning Objectives
@@ -254,3 +256,5 @@ It will catch notebook corruption and broken f-strings before they land in the r
 - **Interested in LLM fine-tuning validation?** → [12-llm-finetuning/](../12-llm-finetuning/)
 - **Need local GPU optimization?** → [14-local-llms/](../14-local-llms/)
 - **Looking for model evaluation metrics?** → [16-model-evaluation/](../16-model-evaluation/)
+
+- **Want practical portfolio projects after the systems view?** → [28-practical-data-science/](../28-practical-data-science/)

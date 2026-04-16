@@ -251,17 +251,17 @@ In deep networks with certain activation functions (e.g., sigmoid, tanh), gradie
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-**0-3 correct (0-30%):** Don't worry! Neural networks are advanced. Start with the basics and take your time.
+**0-3 correct:** Start with the basics and take your time.
 
-**4-5 correct (40-50%):** You have some foundation. Review mathematical concepts (linear algebra, calculus) before diving into neural networks.
+**4-5 correct:** You have some foundation; review linear algebra and calculus before diving in.
 
-**6-7 correct (60-70%):** Good baseline! You're ready to learn neural networks with some effort.
+**6-7 correct:** Good baseline for learning neural networks.
 
-**8-9 correct (80-90%):** Excellent! You have strong fundamentals. This phase will solidify your knowledge.
+**8-9 correct:** Strong fundamentals; this phase should deepen them well.
 
-**10 correct (100%):** Outstanding! You may already know this content, but you'll still learn implementation details and best practices.
+**10 correct:** Excellent starting point, with room to sharpen implementation details.
 
 ---
 
@@ -269,12 +269,12 @@ In deep networks with certain activation functions (e.g., sigmoid, tanh), gradie
 
 After taking this pre-quiz:
 
-1. **Score < 70%:** Review these prerequisites first:
+1. **If you found the quiz difficult:** Review these prerequisites first:
    - Linear algebra (matrix multiplication)
    - Basic calculus (derivatives)
    - Python programming
 
-2. **Score ≥ 70%:** Proceed with Phase 6 content
+2. **If the concepts felt familiar:** Proceed with Phase 6 content
 
 3. **Retake after Phase 6:** Take the post-quiz to measure your progress
 

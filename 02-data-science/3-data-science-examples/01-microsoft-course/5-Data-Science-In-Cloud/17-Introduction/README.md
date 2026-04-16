@@ -97,3 +97,11 @@ Sources:
 ## Assignment
 
 [Market Research](assignment.md)
+
+## What Comes Next
+
+After this introduction, continue through the two practical cloud implementation paths:
+
+- Move to [Low Code or No Code](../18-Low-Code/README.md) for the fastest way to experience an end-to-end cloud ML workflow.
+- Then continue to [Azure ML SDK](../19-Azure/README.md) to see how the same workflow becomes more programmable and production-oriented.
+- Keep the broader [Data Science Lifecycle](../../4-Data-Science-Lifecycle/README.md) in mind so cloud services stay connected to real project goals rather than just tooling.

@@ -342,7 +342,7 @@ flowchart TD
 - Production-ready deployment
 - Complete documentation
 
-### Bonus Features (+10 points each)
+### Optional Stretch Features
 - Web UI with real-time monitoring
 - Multi-language support
 - Custom ML model for classification
@@ -387,9 +387,9 @@ Lowest latency for full security pipeline.
 
 ---
 
-## Submission Guidelines
+## Share Your Work
 
-For each challenge, submit:
+For each challenge, try to keep:
 1. **Code** - Clean, documented, tested
 2. **README** - How to run and test
 3. **Results** - Output/screenshots demonstrating success
@@ -418,7 +418,7 @@ challenge-N/
 3. Review the relevant notebook
 4. Search documentation
 5. Ask in discussion forum
-6. Attend office hours
+6. Reproduce the issue with the smallest possible failing test
 
 **Remember:** The goal is learning, not just completion!
 

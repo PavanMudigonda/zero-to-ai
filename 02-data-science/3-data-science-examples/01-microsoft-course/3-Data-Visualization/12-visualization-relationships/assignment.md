@@ -4,7 +4,7 @@
 
 In this lesson you started looking at a dataset around bees and their honey production over a period of time that saw losses in the bee colony population overall. Dig deeper into this dataset and build a notebook that can tell the story of the health of the bee population, state by state and year by year. Do you discover anything interesting about this dataset?
 
-## Rubric
+## Self-Review Guide
 
 | Exemplary                                                                                                                                               | Adequate                                 | Needs Improvement                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |

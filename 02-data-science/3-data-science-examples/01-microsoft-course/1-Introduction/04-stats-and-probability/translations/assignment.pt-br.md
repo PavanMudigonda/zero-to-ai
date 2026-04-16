@@ -18,7 +18,7 @@ Nessa tarefa, nós vamos trabalhar com um pequeno dataset de diabetes em pacient
    [ ] Qual a distribuição das variáveis Age, Sex, BMI e Y?
    [ ] Teste a correlação entre diferentes variáveis e progressão da doença (Y)
    [ ] Teste a hipótese que o grau de progressão da diabetes é diferente entre homens e mulheres
-## Rubrica
+## Guia de Autoavaliacao
 
 Exemplar | Adequado | Precisa melhorar
 --- | --- | -- |

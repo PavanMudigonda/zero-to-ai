@@ -1,10 +1,22 @@
 # Python Fundamentals
 
-**Note**: This directory is a lightweight bridge into the main curriculum. If you already know basic Python, skip ahead to [02-data-science/](../02-data-science/). If you do not, use the external resources here first.
+**Note**: This directory is a lightweight bridge into the main curriculum. If you already know basic Python, skip ahead to [02-data-science/](../02-data-science/). If you do not, use the external resources here first and treat this file as your re-entry guide back into Zero to AI.
 
 ## 🎯 Purpose
 
 If you're new to Python or need to brush up on programming fundamentals, start here before diving into the rest of the repo.
+
+This phase is intentionally short today. It does not try to replace a full beginner Python course. Its job is to help you decide whether you can safely move into the rest of the curriculum.
+
+## ✅ You Are Ready To Leave This Phase When You Can
+
+- Read and write simple Python scripts without copying every line
+- Use variables, loops, functions, lists, dictionaries, and imports comfortably
+- Read a traceback and fix a small bug
+- Install a package and run a notebook without getting stuck immediately
+- Explain what a function, class, module, and virtual environment are at a basic level
+
+If you cannot do most of those yet, do not rush into Phase 2.
 
 ## 📚 Primary Python Course
 ---
@@ -18,9 +30,36 @@ Complete Python programming course covering:
 - Advanced Python concepts
 ---
 
-## 🚀 Next Steps
+## Suggested First Pass
+
+Use your external Python course to cover these topics in order:
+
+1. Variables, data types, conditionals, loops
+2. Functions and return values
+3. Lists, dictionaries, sets, tuples
+4. Modules, imports, and packages
+5. File handling and exceptions
+6. Classes and basic object-oriented programming
+
+## Minimum Practice Before Phase 2
+
+Do these before moving on:
+
+1. Write a script that reads a CSV and prints simple summary stats.
+2. Write a function that cleans a list of numbers and returns the mean.
+3. Create a small class with two methods.
+4. Run one notebook end to end in your local environment.
+
+## Where This Fits In The Full Course
+
+- If you are on any track and already know Python, skip this phase.
+- If you are new to programming, this is required before [02-data-science/](../02-data-science/).
+- If you are rusty, do a quick pass here and then learn the rest of Python in context while studying Phase 2.
+
+## Next Steps
 
 Once you're comfortable with Python basics:
 1. Proceed to **[Phase 2: Data Science](../02-data-science/)** for NumPy, pandas, and scikit-learn
 2. Follow the **[Learning Checklist](../docs/checklist.md)** from Phase 2 onwards
-3. Check **[Setup Guide](../docs/setup.md)** for environment setup
+3. Read **[Master Study Guide](../docs/MASTER_STUDY_GUIDE.md)** to pick your track before you continue
+4. Check **[Setup Guide](../docs/setup.md)** for environment setup

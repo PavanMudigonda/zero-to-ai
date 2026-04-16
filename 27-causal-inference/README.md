@@ -305,6 +305,12 @@ Upon completing this phase, you'll have mastered:
 ✅ **Causal discovery** - Learning from data  
 ✅ **Real-world application** - Business and policy impact  
 
+## What Comes Next
+
+- Continue to [../28-practical-data-science/README.md](../28-practical-data-science/README.md) for applied project work.
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want stronger measurement and experiment comparison habits.
+- Continue to [../29-ai-hardware-llm-validation/README.md](../29-ai-hardware-llm-validation/README.md) only if your focus shifts toward systems and infrastructure.
+
 ---
 
 **Ready to begin?** Let's dive into the fascinating world of causal inference, where we move beyond "what" to "why" and "what if"!

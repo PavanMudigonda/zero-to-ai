@@ -1,6 +1,6 @@
 # Assignment: Debug & Optimize a Broken ML Pipeline
 
-**Total Points:** 100 (+ 20 bonus)  
+**Scope:** capstone-style debugging project with optional extensions  
 **Duration:** 4-6 hours  
 **Difficulty:** ⭐⭐⭐⭐
 
@@ -28,7 +28,7 @@ Choose ONE of the following:
 1. **UCI Adult Income** (Classification)
 2. **California Housing** (Regression)
 3. **MNIST Digits** (Multi-class Classification)
-4. **Custom dataset** (with instructor approval)
+4. **Custom dataset** (recommended only if you can document the problem, target, and debugging constraints clearly)
 
 **Requirements:**
 - Minimum 5,000 samples
@@ -37,7 +37,7 @@ Choose ONE of the following:
 
 ---
 
-## 🛠️ Part 1: Initial Assessment (15 points)
+## 🛠️ Part 1: Initial Assessment
 
 ### Tasks:
 1. **Run the provided buggy code** (see below)
@@ -53,14 +53,14 @@ Choose ONE of the following:
 - Screenshots of errors/warnings
 - Baseline performance metrics
 
-### Grading Rubric:
-- Comprehensive problem list (8 pts)
-- Baseline metrics documented (4 pts)
-- Clear documentation (3 pts)
+### Self-check:
+- Comprehensive problem list
+- Baseline metrics documented
+- Clear documentation
 
 ---
 
-## 🐛 Part 2: Data Quality Debugging (20 points)
+## 🐛 Part 2: Data Quality Debugging
 
 ### Tasks:
 1. **Missing values analysis**
@@ -87,16 +87,16 @@ Choose ONE of the following:
 - Visualizations of data issues
 - Before/after comparison
 
-### Grading Rubric:
-- Missing value handling (5 pts)
-- Outlier detection & handling (5 pts)
-- Distribution analysis (5 pts)
-- Visualization quality (3 pts)
-- Documentation (2 pts)
+### Self-check:
+- Missing value handling
+- Outlier detection and handling
+- Distribution analysis
+- Visualization quality
+- Documentation
 
 ---
 
-## ⚡ Part 3: Performance Profiling & Optimization (25 points)
+## ⚡ Part 3: Performance Profiling & Optimization
 
 ### Tasks:
 1. **CPU Profiling**
@@ -126,15 +126,15 @@ Choose ONE of the following:
 - Optimization code with comments
 - Performance comparison table
 
-### Grading Rubric:
-- Comprehensive profiling (7 pts)
-- Multiple optimization techniques (10 pts)
-- Quantified improvements (5 pts)
-- Code quality & documentation (3 pts)
+### Self-check:
+- Comprehensive profiling
+- Multiple optimization techniques
+- Quantified improvements
+- Code quality and documentation
 
 ---
 
-## 🔧 Part 4: Model Debugging (20 points)
+## 🔧 Part 4: Model Debugging
 
 ### Tasks:
 1. **Learning Curves**
@@ -164,15 +164,15 @@ Choose ONE of the following:
 - Validation curves
 - Model comparison table
 
-### Grading Rubric:
-- Learning curve analysis (5 pts)
-- Convergence fixes (5 pts)
-- Regularization experiments (5 pts)
-- Model selection justification (5 pts)
+### Self-check:
+- Learning curve analysis
+- Convergence fixes
+- Regularization experiments
+- Model selection justification
 
 ---
 
-## 📊 Part 5: Error Analysis (20 points)
+## 📊 Part 5: Error Analysis
 
 ### Tasks:
 1. **Confusion Matrix Analysis**
@@ -206,11 +206,11 @@ Choose ONE of the following:
 - Failure case visualizations
 - Improvement roadmap
 
-### Grading Rubric:
-- Confusion matrix insights (5 pts)
-- Per-class analysis (5 pts)
-- Failure case categorization (5 pts)
-- Actionable recommendations (5 pts)
+### Self-check:
+- Confusion matrix insights
+- Per-class analysis
+- Failure case categorization
+- Actionable recommendations
 
 ---
 
@@ -271,24 +271,24 @@ print(f"Accuracy: {accuracy:.3f}")
 
 ---
 
-## 🎁 Bonus Challenges (20 points)
+## 🎁 Optional Extensions
 
-### Bonus 1: Advanced Profiling (5 points)
+### Optional Extension 1: Advanced Profiling
 - Use line_profiler for line-by-line analysis
 - Use memory_profiler with decorators
 - Create flame graphs or profiling visualizations
 
-### Bonus 2: Automated Bug Detection (5 points)
+### Optional Extension 2: Automated Bug Detection
 - Write a function that automatically detects common issues
 - Check for: data leakage, scaling problems, shape mismatches
 - Create a "pre-flight checklist" tool
 
-### Bonus 3: A/B Testing (5 points)
+### Optional Extension 3: A/B Testing
 - Compare optimized vs original pipeline
 - Run statistical significance tests
 - Document confidence intervals
 
-### Bonus 4: Production Monitoring (5 points)
+### Optional Extension 4: Production Monitoring
 - Add comprehensive logging
 - Implement error alerts
 - Create monitoring dashboard
@@ -296,7 +296,7 @@ print(f"Accuracy: {accuracy:.3f}")
 
 ---
 
-## 📤 Submission Requirements
+## 📤 Deliverables
 
 ### File Structure:
 ```
@@ -332,18 +332,16 @@ debugging_assignment/
 
 ---
 
-## 🎯 Grading Summary
+## 🎯 Review Summary
 
-| Component | Points |
-|-----------|--------|
-| Part 1: Initial Assessment | 15 |
-| Part 2: Data Quality | 20 |
-| Part 3: Performance Optimization | 25 |
-| Part 4: Model Debugging | 20 |
-| Part 5: Error Analysis | 20 |
-| **Base Total** | **100** |
-| Bonus Challenges | +20 |
-| **Maximum Total** | **120** |
+| Component | Relative Emphasis |
+|-----------|-------------------|
+| Part 1: Initial Assessment | Medium |
+| Part 2: Data Quality | High |
+| Part 3: Performance Optimization | High |
+| Part 4: Model Debugging | High |
+| Part 5: Error Analysis | High |
+| Optional Extensions | Extra depth |
 
 ---
 
@@ -388,22 +386,22 @@ debugging_assignment/
 - Complete Parts 4-5 (Model Debugging + Error Analysis)
 
 **Week 4:**
-- Bonus challenges (optional)
-- Final polish and submission
+- Optional stretch challenges
+- Final polish and packaging
 
 ---
 
 ## 🆘 Getting Help
 
-- **Office Hours:** [Time/Location]
-- **Discussion Forum:** [Link]
-- **Example Notebooks:** See course materials
+- **Discussion Forum:** [GitHub Discussions](https://github.com/zero-to-ai/discussions)
+- **Example Notebooks:** Revisit the phase notebooks and your own failing experiments
+- **Best help request:** Include the bug, the evidence, and what you already ruled out
 
 ---
 
-## ✅ Submission Checklist
+## ✅ Final Checklist
 
-Before submitting, verify:
+Before you call this project complete, verify:
 - [ ] All 5 required notebooks completed
 - [ ] All bugs in template code fixed
 - [ ] Performance improvements quantified
@@ -413,7 +411,7 @@ Before submitting, verify:
 - [ ] README.md summarizes all work
 - [ ] Files organized properly
 - [ ] Visualizations included
-- [ ] Submitted on time
+- [ ] Project is packaged clearly enough that someone else could run and review it
 
 ---
 

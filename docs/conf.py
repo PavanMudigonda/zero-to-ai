@@ -10,6 +10,40 @@ release = "0.1.0"
 
 html_baseurl = "https://zero-to-ai.dev/"
 
+# -- SEO / discoverability --------------------------------------------------
+# Site-wide <meta> tags injected into every page <head>
+html_meta = {
+    "description": (
+        "Zero to AI: free open-source AI/ML course with 950+ Jupyter notebooks. "
+        "Learn Python, deep learning, LLMs, RAG, AI agents, prompt engineering, "
+        "fine-tuning, MLOps, and more — from scratch to production."
+    ),
+    "keywords": (
+        "AI course, machine learning tutorial, deep learning, LLM, RAG, "
+        "AI agents, prompt engineering, embeddings, vector database, "
+        "fine-tuning, MLOps, Python, PyTorch, Transformers, free AI course, "
+        "open source AI curriculum, learn AI, Jupyter notebooks"
+    ),
+    "author": "Pavan Mudigonda",
+    "robots": "index, follow",
+    # OpenGraph
+    "og:title": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
+    "og:description": (
+        "Self-paced open-source curriculum: Python, deep learning, LLMs, RAG, "
+        "AI agents, MLOps, evaluation, and more. 31 phases, 3 tracks."
+    ),
+    "og:type": "website",
+    "og:url": "https://zero-to-ai.dev/",
+    "og:site_name": "Zero to AI",
+    # Twitter Card
+    "twitter:card": "summary_large_image",
+    "twitter:title": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
+    "twitter:description": (
+        "Open-source AI/ML curriculum from Python basics to production agents. "
+        "950+ hands-on Jupyter notebooks."
+    ),
+}
+
 # -- General configuration ---------------------------------------------------
 extensions = [
     "myst_nb",
@@ -19,6 +53,7 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_design",
     "sphinxcontrib.mermaid",
+    "sphinx_sitemap",
 ]
 
 # Mermaid diagram settings — render client-side via CDN (no mmdc binary needed)

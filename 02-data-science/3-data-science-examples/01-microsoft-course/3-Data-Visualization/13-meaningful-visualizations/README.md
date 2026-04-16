@@ -166,3 +166,11 @@ https://medium.com/@EvanSinar/use-animation-to-supercharge-data-visualization-cd
 ## Assignment
 
 [Build your own custom visualization](assignment.md)
+
+## What Comes Next
+
+This lesson closes the Data Visualization sequence. From here:
+
+- Continue to [Data Science Lifecycle](../../4-Data-Science-Lifecycle/README.md) to see where exploration, communication, and decision-making fit into a full project workflow.
+- Revisit earlier visualization lessons in this section when you need to pick a better chart type for quantity, distribution, proportion, or relationship questions.
+- Keep the earlier [Data Ethics](../../1-Introduction/02-ethics/README.md) lesson in mind as you design charts, especially when framing conclusions or avoiding misleading visual choices.

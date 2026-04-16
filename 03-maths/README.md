@@ -2,6 +2,8 @@
 
 Mathematical foundations for the rest of the curriculum. The goal is enough fluency to understand optimization, probability, embeddings, attention, and evaluation without treating them as magic.
 
+This phase is a support layer for the rest of the repo, not a requirement to master every theorem before moving forward. Use it to build enough intuition and fluency to stop later AI topics from feeling opaque.
+
 ## Folder Map
 
 | Folder | Notebooks | Level | What It Covers |
@@ -109,6 +111,19 @@ Each book folder contains its own PDF:
 - Do not try to finish every notebook before continuing the curriculum
 - Do not spend weeks on theorem-level depth if your goal is applied AI engineering
 
-## Next Step
+## How To Use This Phase Well
 
-After the foundational notebooks, continue into [05-embeddings/](../05-embeddings/) and [06-neural-networks/](../06-neural-networks/), then come back here as needed.
+- Do one foundational pass first instead of hopping randomly across all ten folders.
+- Use this phase just-in-time when later modules expose a math gap you can name.
+- Prefer targeted reinforcement over exhaustive completion when your main goal is building systems.
+- Return for deeper theory only after you have a concrete reason, such as optimization confusion, evaluation errors, or model architecture questions.
+
+## What Comes Next
+
+After the foundational notebooks, continue into:
+
+- [04-token/README.md](../04-token/README.md) if you want to connect math intuition to language-model preprocessing.
+- [05-embeddings/README.md](../05-embeddings/README.md) if you want the fastest payoff from vector geometry and similarity concepts.
+- [06-neural-networks/README.md](../06-neural-networks/README.md) if you want gradient-based modeling and deep learning context.
+
+Then come back here as needed instead of treating this folder as a prerequisite gate.

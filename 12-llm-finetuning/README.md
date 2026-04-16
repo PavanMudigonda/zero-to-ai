@@ -2,6 +2,8 @@
 
 This module is strongest when approached as decision-making, not just training mechanics. The real question is when fine-tuning is the right tool, how to prepare data well enough for it to matter, and how to evaluate whether the resulting model is actually better than prompting or RAG.
 
+This phase should be treated as a selective tool, not a default answer. Most learners get more value when they first understand prompting, retrieval, evaluation, and deployment tradeoffs before deciding to tune a model.
+
 ## Actual Module Contents
 
 1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
@@ -37,6 +39,13 @@ This module is strongest when approached as decision-making, not just training m
 - Treat [06_evaluation.ipynb](06_evaluation.ipynb) as a required notebook, not an optional one.
 - Compare every fine-tuning idea against a prompting baseline and a RAG baseline.
 
+## How To Use This Phase Well
+
+- Start with SFT, LoRA, and evaluation before moving into alignment-heavy notebooks.
+- Keep a baseline model and task benchmark so you can measure whether tuning actually helped.
+- Focus on data quality and task framing before spending time on training tricks.
+- Pair deployment and monitoring work here with [../09-mlops/README.md](../09-mlops/README.md) once you have a model worth serving.
+
 ## Practical Outcomes
 
 After this module, you should be able to:
@@ -56,3 +65,9 @@ Dataset curation and alignment decisions remain human work. The agents accelerat
 **Cross-references:**
 - **Phase 15** — [09_autonomous_agents_2026.ipynb](../15-ai-agents/09_autonomous_agents_2026.ipynb) for full coverage of OpenHands, OpenCode, Lingxi, and mini-swe-agent
 - **Phase 31** — [00_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) for installation, comparison, and ML-specific workflows
+
+## What Comes Next
+
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want stronger task-specific measurement and regression tracking.
+- Continue to [../14-local-llms/README.md](../14-local-llms/README.md) or [../30-inference-optimization/README.md](../30-inference-optimization/README.md) if your focus shifts toward serving tuned models efficiently.
+- Continue to [../09-mlops/README.md](../09-mlops/README.md) if you want to package, deploy, and monitor fine-tuned systems in production.

@@ -4,7 +4,7 @@
 
 Did you know you can create donut, pie, and waffle charts in Excel? Using a dataset of your choice, create these three charts right in an Excel spreadsheet.
 
-## Rubric
+## Self-Review Guide
 
 | Exemplary                                               | Adequate                                          | Needs Improvement                                      |
 | ------------------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ |

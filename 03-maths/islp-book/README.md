@@ -2,6 +2,8 @@
 
 A comprehensive collection of Jupyter notebooks covering the foundational concepts and advanced techniques in statistical learning and machine learning, based on "An Introduction to Statistical Learning" adapted for Python.
 
+Use this folder when you want a statistics-first view of machine learning rather than a purely optimization-first or deep-learning-first path. It is especially useful for classical modeling, validation, interpretability, and statistical decision making.
+
 ## 📚 Overview
 
 This series provides hands-on implementations of statistical learning methods with Python, featuring:
@@ -448,6 +450,12 @@ jupyter notebook
 - Visualization templates
 - Best practices
 
+## How To Use This Folder Well
+
+- Work through the beginner and intermediate tracks before treating this as a reference library.
+- Focus on model assessment, regularization, and method selection because those ideas transfer far beyond classical ML.
+- Pair the notebooks with your own small datasets so the statistical choices feel concrete.
+
 ---
 
 ## 📊 Datasets Used
@@ -737,5 +745,11 @@ After completing this series, you will be able to:
 ✅ Choose appropriate methods for different problems  
 ✅ Interpret and validate model results  
 ✅ Communicate findings effectively  
+
+## What Comes Next
+
+- Continue to [../mlpp-book/README.md](../mlpp-book/README.md) if you want a more explicitly probabilistic extension of similar topics.
+- Continue to [../advanced/README.md](../advanced/README.md) if you want deeper theory after the statistical foundations click.
+- Return to [../../28-practical-data-science/README.md](../../28-practical-data-science/README.md) or [../../16-model-evaluation/README.md](../../16-model-evaluation/README.md) to apply the ideas more directly.
 
 **Happy Learning! 🚀**

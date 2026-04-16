@@ -5,6 +5,8 @@
 
 This book is a comprehensive NLP textbook covering tokenization, language models, embeddings, neural networks, transformers, and LLMs. Labs follow the book's chapter order.
 
+Use this folder as a compact NLP foundations bridge inside the math section. It is especially useful if you want the conceptual path from tokens and n-grams to transformers and LLMs in one place.
+
 ## Labs
 
 | Lab | Topic | Book Chapter(s) | Key Concepts |
@@ -37,3 +39,15 @@ Follow the labs in order (1 through 6) as they build upon each other:
 4. **Lab 04** - Neural network foundations
 5. **Lab 05** - Transformer architecture
 6. **Lab 06** - Modern LLMs and applications
+
+## How To Use This Folder Well
+
+- Follow the order because each lab builds on the previous one.
+- Use these labs to connect NLP concepts to implementation rather than treating them as only theory notes.
+- Pair this folder with the token, embeddings, and prompt-engineering phases when you want the broader curriculum context.
+
+## What Comes Next
+
+- Continue to [../../04-token/README.md](../../04-token/README.md) and [../../05-embeddings/README.md](../../05-embeddings/README.md) for the main repo path.
+- Continue to [../../08-rag/README.md](../../08-rag/README.md) if you want to apply language-model retrieval systems.
+- Continue to [../../12-llm-finetuning/README.md](../../12-llm-finetuning/README.md) if your interest shifts toward adapting models.

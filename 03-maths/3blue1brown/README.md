@@ -2,6 +2,8 @@
 
 Interactive notebooks inspired by the [3Blue1Brown](https://www.3blue1brown.com/) video series. Use these alongside the foundational notebooks for visual intuition.
 
+This folder is best used as the intuition layer for the rest of the math section. Come here when a symbolic explanation makes sense formally but still does not feel concrete.
+
 ## Series
 
 ### [Calculus](calculus/) (12 notebooks)
@@ -76,7 +78,19 @@ These notebooks complement the [foundational/](../foundational/) course. When a 
 - Matrices feel mechanical? → `linear-algebra/01-05`
 - Backprop unclear? → `neural-networks/03-04`
 
+## How To Use This Folder Well
+
+- Use this folder to clarify concepts, not to replace the main math sequence.
+- Jump into the specific series that matches the concept blocking you.
+- Return to the more formal notebooks after you regain intuition.
+
 ## Prerequisites
 
 - Python 3.8+, NumPy, Matplotlib
 - No prior math prerequisites (these build intuition from scratch)
+
+## What Comes Next
+
+- Return to [../foundational/README.md](../foundational/README.md) after using these visual explanations.
+- Continue to [../mml-book/README.md](../mml-book/README.md) if you want more rigorous formal depth.
+- Continue to [../cs229-course/README.md](../cs229-course/README.md) if you want the ML-algorithm application layer next.

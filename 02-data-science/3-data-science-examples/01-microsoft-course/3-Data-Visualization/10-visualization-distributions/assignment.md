@@ -3,7 +3,7 @@
 ## Instructions
 
 So far, you have worked with the Minnesota birds dataset to discover information about bird quantities and population density. Practice your application of these techniques by trying a different dataset, perhaps sourced from [Kaggle](https://www.kaggle.com/). Build a notebook to tell a story about this dataset, and make sure to use histograms when discussing it.
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

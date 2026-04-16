@@ -2,7 +2,7 @@
 
 ## 🎯 Overview
 
-Choose your path and dive deep into specialized AI domains!
+Choose your path and build focused depth in one specialized AI domain at a time.
 
 **Prerequisites:**
 - ✅ Foundation (Phases 0-6)
@@ -11,7 +11,9 @@ Choose your path and dive deep into specialized AI domains!
 - ✅ MLOps (Phase 9)
 
 **Time:** 2-3 months per specialization  
-**Outcome:** Deep expertise in your chosen domain
+**Outcome:** A solid specialization foundation plus at least one portfolio-quality project
+
+This phase is best treated as a specialization hub, not as the deepest material in the entire repo. If you want research-heavy depth after this phase, continue into the later advanced modules such as `24-advanced-deep-learning/` or `28-practical-data-science/`.
 
 ---
 
@@ -170,6 +172,8 @@ Don't try to do all three at once. Pick the one that:
 - Solves problems you care about
 - Excites you the most
 
+If you want maximum depth, pick one path here and then follow it with a later advanced module rather than trying to complete all three immediately.
+
 ### 2. Follow the learning path
 Each specialization has:
 - `00_START_HERE.ipynb` - Overview and quick wins
@@ -189,6 +193,12 @@ After mastering one, you can:
 - Add a second specialization
 - Combine them (e.g., multimodal agents)
 - Create unique solutions
+
+## What Comes Next
+
+- If you want broader production depth, continue to [../15-ai-agents/README.md](../15-ai-agents/README.md), [../16-model-evaluation/README.md](../16-model-evaluation/README.md), or [../19-ai-safety-redteaming/README.md](../19-ai-safety-redteaming/README.md).
+- If you want deeper theory and research, continue to [../24-advanced-deep-learning/README.md](../24-advanced-deep-learning/README.md).
+- If you want applied interview and portfolio work, continue to [../28-practical-data-science/README.md](../28-practical-data-science/README.md).
 
 ---
 
@@ -320,10 +330,10 @@ After completing a specialization, you should:
 ## 🔗 Resources
 
 ### Communities
-- [HuggingFace Discord](https://discuss.huggingface.co/)
+- [Hugging Face Forum](https://discuss.huggingface.co/)
 - [r/MachineLearning](https://reddit.com/r/MachineLearning)
 - [Papers with Code](https://paperswithcode.com/)
-- [AI Discord Servers](https://discord.gg/ai)
+- [GitHub Discussions](https://github.com/zero-to-ai/discussions)
 
 ### Staying Updated
 - [ArXiv ML](https://arxiv.org/list/cs.LG/recent) - Research papers

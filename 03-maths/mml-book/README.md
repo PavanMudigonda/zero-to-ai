@@ -4,6 +4,8 @@ Notebook series following the *Mathematics for Machine Learning* textbook by Dei
 
 **Source PDF:** [mml-book.pdf](mml-book.pdf)
 
+This folder is the best next step after the foundational notebooks if you want structured, rigorous math depth without immediately jumping into research-level theory.
+
 ## Course Notebooks
 
 | # | Notebook | Book Chapter | Topics |
@@ -39,6 +41,12 @@ Follow the course notebooks 01-10 in order. The book has two parts:
 - **Part I** (01-06): Mathematical foundations
 - **Part II** (07-10): Central ML problems that apply those foundations
 
+## How To Use This Folder Well
+
+- Work in order unless you already know exactly which chapter you need.
+- Treat Part I as the core and Part II as the application payoff for that theory.
+- Use the practice labs when you want the concepts to become more operational.
+
 ## Practice Labs
 
 For hands-on implementations of each chapter, see [practice-labs/](practice-labs/).
@@ -48,3 +56,9 @@ For hands-on implementations of each chapter, see [practice-labs/](practice-labs
 - [cs229-course/](../cs229-course/) — ML algorithms (less math, more applied)
 - [advanced/](../advanced/) — research-level extensions of these topics
 - [mlpp-book/](../mlpp-book/) — probabilistic perspective on ML
+
+## What Comes Next
+
+- Continue to [../cs229-course/README.md](../cs229-course/README.md) for the algorithm-focused layer.
+- Continue to [../advanced/README.md](../advanced/README.md) if you want research-oriented theory after this.
+- Continue to [../mlpp-book/README.md](../mlpp-book/README.md) if you want more Bayesian and probabilistic depth.

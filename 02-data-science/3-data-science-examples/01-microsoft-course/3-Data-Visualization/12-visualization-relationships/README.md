@@ -172,3 +172,11 @@ Line plots can be simple or quite complex. Do a bit of reading in the [Seaborn d
 ## Assignment
 
 [Dive into the beehive](assignment.md)
+
+## What Comes Next
+
+After relationship charts, finish this visualization sequence by focusing on judgment and communication:
+
+- Continue to [Making Meaningful Visualizations](../13-meaningful-visualizations/README.md).
+- After that, move into [Data Science Lifecycle](../../4-Data-Science-Lifecycle/README.md) to place visualization inside a larger end-to-end workflow.
+- If you want more practice first, compare this lesson with [Visualizing Quantities](../09-visualization-quantities/README.md), [Distributions](../10-visualization-distributions/README.md), and [Proportions](../11-visualization-proportions/README.md) so you can better match question types to chart types.

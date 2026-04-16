@@ -365,18 +365,18 @@ D) Adam
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-**0-5 correct (0-50%):** Review Phase 5 content more carefully. Focus on:
+**0-5 correct:** Review Phase 5 content more carefully. Focus on:
 - Forward and backward propagation
 - Activation functions and their derivatives
 - Weight initialization and updates
 
-**6-7 correct (60-70%):** Good progress! Review the questions you missed and practice implementing a neural network from scratch.
+**6-7 correct:** Good progress. Review the questions you missed and practice implementing a neural network from scratch.
 
-**8-9 correct (80-90%):** Excellent! You have solid understanding. Practice on real datasets to reinforce concepts.
+**8-9 correct:** Strong understanding. Practice on real datasets to reinforce concepts.
 
-**10 correct (100%):** Outstanding! You've mastered neural network fundamentals. Ready for advanced topics (CNNs, RNNs, Transformers).
+**10 correct:** Excellent grasp of neural network fundamentals. You're ready for more advanced topics.
 
 ---
 
@@ -386,25 +386,25 @@ D) Adam
 **Post-Quiz Score:** ___ / 10  
 **Improvement:** +___ points
 
-**Typical improvement:** 3-5 points  
-**Strong improvement:** 6+ points
+**Typical improvement:** Several questions  
+**Strong improvement:** Most of the quiz
 
 ---
 
 ## Next Steps
 
-1. **Score < 70%:**
+1. **If several concepts still feel shaky:**
    - Re-watch Phase 5 videos
    - Redo the assignment
    - Work through challenges
    - Implement a neural network from scratch
 
-2. **Score ≥ 70%:**
+2. **If most concepts now feel comfortable:**
    - ✅ Move to Phase 6 (Advanced topics)
-   - Try the bonus challenges
+    - Try the optional stretch challenges
    - Build a project using neural networks
 
-3. **Score = 100%:**
+3. **If the quiz felt easy end to end:**
    - Mentor others in the community
    - Contribute to the repository
    - Explore research papers on neural architectures

@@ -136,7 +136,7 @@ from scipy import stats
 ## 📋 Prerequisites
 
 Before starting this phase, you should:
-- ✅ Complete Phase 15 (Model Evaluation & Metrics)
+- ✅ Complete Phase 16 (Model Evaluation & Metrics)
 - ✅ Understand model training basics
 - ✅ Be familiar with Python debugging
 - ✅ Know NumPy and pandas fundamentals
@@ -358,9 +358,9 @@ After completing this phase, you should be able to:
 
 ---
 
-## 🚀 Next Steps
+## What Comes Next
 
-After completing Phase 17:
+After this phase:
 - **Phase 18:** Low-Code AI Tools (Gradio, Streamlit)
 - **Phase 19:** AI Safety & Red Teaming
 - **Advanced:** MLOps and Model Monitoring

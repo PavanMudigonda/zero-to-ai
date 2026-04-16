@@ -200,13 +200,9 @@ def filter_output(text: str) -> str:
 
 ## 📊 Assessment Structure
 
-### Pre-Quiz (10 questions)
-Test baseline knowledge of AI safety concepts
+Quiz files for this phase are not published yet. For now, use the assignment and challenges below as your primary mastery checks.
 
-### Post-Quiz (18 questions)
-Comprehensive assessment of safety practices
-
-### Assignment (100 points)
+### Assignment
 Build a complete secure AI system with:
 - Multi-layer security
 - Red team testing
@@ -221,6 +217,12 @@ Build a complete secure AI system with:
 5. Implement bias detection
 6. Create security monitoring
 7. Build production-ready secure system
+
+## What Comes Next
+
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want to measure safety and fairness more rigorously.
+- Continue to [../20-real-time-streaming/README.md](../20-real-time-streaming/README.md) if you want to apply safety thinking to live systems.
+- Continue to [../31-ai-powered-dev-tools/README.md](../31-ai-powered-dev-tools/README.md) if you want stronger developer workflows for testing and auditing AI systems.
 
 ---
 

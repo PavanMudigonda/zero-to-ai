@@ -17,7 +17,7 @@ You can also open the taxi data file in text editor or spreadsheet software like
 
 Refer to the [dataset's dictionary](https://www1.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf) and [user guide](https://www1.nyc.gov/assets/tlc/downloads/pdf/trip_record_user_guide.pdf) for more information about the data.
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

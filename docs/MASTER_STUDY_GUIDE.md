@@ -3,6 +3,8 @@
 > Phase-by-phase learning notes, study schedule, and track recommendations.
 > Read this first, then use [checklist.md](checklist.md) to track your progress.
 
+This is the canonical learner navigation document for the repository.
+
 ---
 
 ## How to Use This Guide
@@ -12,6 +14,7 @@
 3. **Open `00_START_HERE.ipynb`** in each phase directory for guided entry
 4. **Track progress** in [checklist.md](checklist.md)
 5. **Use [REFERENCES.md](REFERENCES.md)** for supplementary videos, papers, and courses
+6. **Treat later WIP phases honestly** — some advanced modules are still being expanded
 
 ---
 
@@ -89,6 +92,7 @@ Not every phase is equally important for every role. Pick the track that matches
 
 ### Phase 1: Python (`01-python/`)
 - If new to Python, complete the [Python Bro Code](https://github.com/PavanMudigonda/python-bro-code) course first
+- Use [../01-python/README.md](../01-python/README.md) as your readiness checklist before moving on
 - If you already know Python, skip to Phase 2
 
 ### Phase 2: Data Science (`02-data-science/`)
@@ -178,6 +182,7 @@ Not every phase is equally important for every role. Pick the track that matches
 ### Phase 20: Real-Time Streaming (`20-real-time-streaming/`)
 - Start with `00_START_HERE.ipynb`
 - Focused on SSE, WebSocket, and production streaming
+- Treat this as an introduction today, not a full specialty track yet
 - ~6–8 hours
 
 ### Phases 24–27: Advanced Topics

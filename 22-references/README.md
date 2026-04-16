@@ -1,11 +1,11 @@
-# References & Hands-On Labs
+# References & External Resources
 
-Welcome to the labs section! Here you'll find curated hands-on exercises and projects to practice your AI/ML skills.
+This folder is a curated resource shelf, not a core teaching phase. Use it to supplement the main curriculum when you want alternate explanations, more examples, or external practice.
 
-## 📚 Available Lab Collections
+## 📚 Available Resource Collections
 
 ### [Microsoft Labs](microsoft-labs/README.md)
-**10+ FREE courses with 100+ interactive lessons**
+**External beginner-friendly and intermediate course collections**
 
 Featured courses:
 - 🤖 AI for Beginners (38.8k ⭐) - 24 lessons
@@ -15,7 +15,7 @@ Featured courses:
 - 🤝 AI Agents for Beginners
 - And more!
 
-**[Start with Microsoft Labs →](microsoft-labs/README.md)**
+**[Browse Microsoft Labs →](microsoft-labs/README.md)**
 
 ### [Video Courses](videos/README.md)
 **Essential video tutorials from top educators**
@@ -30,7 +30,7 @@ Featured channels:
 **[Browse Video Courses →](videos/README.md)**
 
 ### [Cloud Platforms](cloud-platforms/README.md)
-**Learn AI/ML on AWS, Google Cloud, and Azure**
+**Cloud learning resources for AWS, Google Cloud, and Azure**
 
 Featured resources:
 - ☁️ AWS SageMaker deep dives
@@ -38,21 +38,20 @@ Featured resources:
 - ☁️ Azure ML certification paths
 - ☁️ Free tier guides and best practices
 
-**[Explore Cloud Labs →](cloud-platforms/README.md)**
+**[Explore Cloud Resources →](cloud-platforms/README.md)**
 
 ---
 
-## 🎯 How to Use Labs
+## 🎯 How to Use This Folder
 
-1. **Choose labs** that match your current learning phase
-2. **Clone the repository** from GitHub
-3. **Complete exercises** and build projects
-4. **Track your progress** using checklists
-5. **Share your work** on GitHub/LinkedIn
+1. Use the main curriculum first.
+2. Come here when you want a second explanation, more exercises, or external depth.
+3. Pick only the resources that match your current phase or track.
+4. Avoid turning this folder into a separate curriculum you feel obligated to finish.
 
 ---
 
-## 💡 Lab Best Practices
+## 💡 Best Practices
 
 **Before Starting:**
 - ✅ Review the corresponding theory in main curriculum
@@ -93,7 +92,7 @@ Keep a log of completed labs:
 
 ---
 
-## 🚀 Coming Soon
+## Planned Additions
 
 More lab collections coming:
 - Kaggle Competitions Guide
@@ -101,4 +100,12 @@ More lab collections coming:
 
 ---
 
-**Ready to practice?** → [Microsoft Labs](microsoft-labs/README.md) | [Video Courses](videos/README.md)
+**Ready for supplemental material?** → [Microsoft Labs](microsoft-labs/README.md) | [Video Courses](videos/README.md)
+
+## What Comes Next
+
+After using this folder:
+
+- Go back to the main curriculum and apply the extra context immediately in your current phase.
+- Use the [master study guide](../docs/MASTER_STUDY_GUIDE.md) if you need to re-anchor yourself in the overall path.
+- Return here selectively when you want a second explanation, more practice, or alternate teaching styles.

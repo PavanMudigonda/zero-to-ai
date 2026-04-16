@@ -166,3 +166,11 @@ https://medium.com/@EvanSinar/use-animation-to-supercharge-data-visualization-cd
 ## Assignment
 
 [Build your own custom visualization](assignment.md)
+
+## What Comes Next
+
+This closes the R visualization sequence. From here:
+
+- Return to the R track overview in this folder and revisit earlier R lessons as needed.
+- Compare with the main lesson at [../../13-meaningful-visualizations/README.md](../../13-meaningful-visualizations/README.md) to keep the alternate-language paths aligned.
+- Continue into the broader [Data Science Lifecycle](../../../4-Data-Science-Lifecycle/README.md) section if you want to place visualization inside a full project workflow.

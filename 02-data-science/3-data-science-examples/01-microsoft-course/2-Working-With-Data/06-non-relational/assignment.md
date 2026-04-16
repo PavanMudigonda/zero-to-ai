@@ -13,7 +13,7 @@ The [Coca Cola Co spreadsheet](CocaColaCo.xlsx) is missing some calculations. Yo
 
 [Data source credit to Yiyi Wang](https://www.kaggle.com/yiyiwang0826/cocacola-excel)
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

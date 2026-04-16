@@ -6,13 +6,13 @@ Build a comprehensive prompt engineering system that demonstrates mastery of var
 
 **Estimated Time:** 5-7 hours  
 **Difficulty:** ⭐⭐⭐ Intermediate  
-**Due Date:** 2 weeks from assignment
+**Suggested Pace:** 1 week if you have already completed the main prompt-engineering notebooks
 
 ---
 
 ## 📋 Requirements
 
-### Part 1: Prompting Technique Library (30 points)
+### Part 1: Prompting Technique Library
 
 Implement at least 6 different prompting techniques:
 
@@ -56,7 +56,7 @@ class PromptEngine:
         pass
 ```
 
-### Part 2: Adaptive Strategy Selector (25 points)
+### Part 2: Adaptive Strategy Selector
 
 Create a system that automatically selects the best prompting strategy:
 
@@ -94,7 +94,7 @@ class StrategySelector:
         return strategy_map.get(task_type, "zero_shot")
 ```
 
-### Part 3: Real-World Applications (25 points)
+### Part 3: Real-World Applications
 
 Build 4 practical applications using different techniques:
 
@@ -122,7 +122,7 @@ Build 4 practical applications using different techniques:
 - [ ] Evaluates each approach
 - [ ] Presents best insights
 
-### Part 4: Optimization & Analysis (20 points)
+### Part 4: Optimization & Analysis
 
 Analyze and optimize your system:
 
@@ -142,37 +142,37 @@ Analyze and optimize your system:
 
 ---
 
-## 📊 Grading Rubric
+## 📊 Self-Review Guide
 
 | Criteria | Exemplary (A) | Proficient (B) | Adequate (C) | Needs Work (D/F) |
 |----------|--------------|----------------|--------------|------------------|
-| **Techniques** (30pts) | 6+ techniques, flawless implementation | 5-6 techniques, minor issues | 4-5 techniques, some bugs | <4 techniques or broken |
-| **Strategy Selector** (25pts) | Smart auto-selection, handles edge cases | Good selection logic | Basic selection | Poor or no selection |
-| **Applications** (25pts) | 4 polished apps, excellent UX | 3-4 good apps | 2-3 basic apps | <2 or poor quality |
-| **Analysis** (20pts) | Deep insights, comprehensive data | Good analysis | Basic metrics | Minimal analysis |
+| **Techniques** | 6+ techniques, flawless implementation | 5-6 techniques, minor issues | 4-5 techniques, some bugs | <4 techniques or broken |
+| **Strategy Selector** | Smart auto-selection, handles edge cases | Good selection logic | Basic selection | Poor or no selection |
+| **Applications** | 4 polished apps, excellent UX | 3-4 good apps | 2-3 basic apps | <2 or poor quality |
+| **Analysis** | Deep insights, comprehensive data | Good analysis | Basic metrics | Minimal analysis |
 
 ---
 
-## 🌟 Bonus Challenges (+10 points each, max +30)
+## 🌟 Optional Extensions
 
-### Bonus 1: Prompt Optimization System (+10)
+### Optional Extension 1: Prompt Optimization System
 - [ ] Automatically refine prompts based on output quality
 - [ ] Use LLM to critique and improve prompts
 - [ ] Show before/after prompt examples with quality improvements
 
-### Bonus 2: Cost Control Dashboard (+10)
+### Optional Extension 2: Cost Control Dashboard
 - [ ] Real-time token tracking
 - [ ] Budget alerts when approaching limits
 - [ ] Cost prediction for new tasks
 - [ ] Recommendations for cheaper alternatives
 
-### Bonus 3: Multi-Modal Prompting (+10)
+### Optional Extension 3: Multi-Modal Prompting
 - [ ] Integrate image understanding (GPT-4 Vision)
 - [ ] Process images + text together
 - [ ] Build visual Q&A system
 - [ ] Image-to-text and text-to-image workflows
 
-### Bonus 4: Evaluation Framework (+10)
+### Optional Extension 4: Evaluation Framework
 - [ ] Automated quality scoring for outputs
 - [ ] Human evaluation interface
 - [ ] Inter-rater reliability metrics
@@ -180,7 +180,7 @@ Analyze and optimize your system:
 
 ---
 
-## 📦 Submission Requirements
+## 📦 Deliverables
 
 ### Repository Structure
 ```
@@ -369,9 +369,9 @@ After completing this assignment, you will:
 
 ## 💬 Support
 
-- **Office Hours:** Mondays 3-5 PM, Wednesdays 2-4 PM
 - **Discussion:** [GitHub Discussions](https://github.com/zero-to-ai/discussions)
-- **Email:** instructor@zero-to-ai.com
+- **Best help request:** Share the task, the prompt variant you tested, and how you evaluated the output.
+- **Reminder:** Treat this assignment as system design practice, not just prompt writing.
 
 ---
 

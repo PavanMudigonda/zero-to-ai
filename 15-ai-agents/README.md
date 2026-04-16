@@ -114,6 +114,12 @@ By the end of this phase, you will:
 - **Pre-Quiz:** Assess baseline knowledge
 - **Post-Quiz:** Validate learning outcomes
 
+## How To Use This Phase Well
+
+- Treat this as one of the core production phases in the repo, not just a trend topic.
+- Build one agent end to end instead of sampling every framework shallowly.
+- Evaluate the system you build. Agent work without measurement turns into demos very quickly.
+
 ---
 
 ## 🛠️ Tools You'll Use
@@ -227,7 +233,7 @@ Before starting this phase, ensure you understand:
 - [LangGraph Tutorial (45 min)](https://youtube.com/watch?v=...)
 
 ### Community
-- [LangChain Discord](https://discord.gg/langchain)
+- [GitHub Discussions](https://github.com/zero-to-ai/discussions)
 - [OpenAI Community](https://community.openai.com/)
 - [AI Agents Subreddit](https://reddit.com/r/AIAgents)
 
@@ -271,12 +277,18 @@ Validate your mastery of:
 - ReAct pattern
 - Production best practices
 
-### Assignment (100 points)
+### Assignment
 Build a production-ready agent with:
-- Multiple tools (30 pts)
-- Error handling (20 pts)
-- Memory management (20 pts)
-- Evaluation & testing (30 pts)
+- Multiple tools
+- Error handling
+- Memory management
+- Evaluation and testing
+
+## What Comes Next
+
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) to measure task success, trajectory quality, and safety.
+- Continue to [../19-ai-safety-redteaming/README.md](../19-ai-safety-redteaming/README.md) to harden agent systems against failure and misuse.
+- Continue to [../31-ai-powered-dev-tools/README.md](../31-ai-powered-dev-tools/README.md) if you want to understand coding agents and MCP-heavy workflows more deeply.
 
 ---
 

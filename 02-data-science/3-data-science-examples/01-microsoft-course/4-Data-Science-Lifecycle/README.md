@@ -14,3 +14,8 @@ In these lessons, you'll explore some of the aspects of the Data Science lifecyc
 ### Credits
 
 These lessons were written with ❤️ by [Jalen McGee](https://twitter.com/JalenMCG) and [Jasmine Greenaway](https://twitter.com/paladique)
+
+## What Comes Next
+
+- Continue to [../5-Data-Science-In-Cloud/README.md](../5-Data-Science-In-Cloud/README.md) if you want to see how these workflows extend into cloud tooling.
+- Return to [../README.md](../README.md) if you want to choose a different imported-course branch instead.

@@ -14,3 +14,8 @@ In these lessons, you will learn some of the ways that data can be managed, mani
 ### Credits
 
 These lessons were written with ❤️ by [Christopher Harrison](https://twitter.com/geektrainer), [Dmitry Soshnikov](https://twitter.com/shwars) and [Jasmine Greenaway](https://twitter.com/paladique)
+
+## What Comes Next
+
+- Continue to [../3-Data-Visualization/README.md](../3-Data-Visualization/README.md) once you are comfortable querying, loading, and preparing data.
+- Return to [../README.md](../README.md) if you want the imported-course overview again.

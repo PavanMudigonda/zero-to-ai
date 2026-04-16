@@ -13,6 +13,8 @@ Combine your skills from previous phases to build production-grade RAG systems!
 **Time:** 3-4 weeks | 60-80 hours  
 **Outcome:** Build AI applications that can query your knowledge base
 
+This is one of the core application-building phases in the repo. It is where embeddings, vector search, prompting, and evaluation start behaving like a real system instead of isolated topics.
+
 ---
 
 ## 📚 What You'll Learn
@@ -173,6 +175,13 @@ This ordering matters. Most weak RAG systems fail because teams jump to advanced
 Use [08_rag_technique_selection.md](08_rag_technique_selection.md) if you want a compact decision guide for choosing between HyDE, reranking, compression, RAPTOR, CRAG, Self-RAG, and GraphRAG.
 
 Use [08_rag_evaluation_playbook.md](08_rag_evaluation_playbook.md) if you want a practical framework for benchmarking retrieval quality, answer quality, latency, and failure behavior.
+
+## How To Use This Phase Well
+
+- Build one baseline RAG pipeline before exploring advanced variants.
+- Treat retrieval evaluation as required work, not optional polish.
+- Compare upgrades against a simple baseline so you can tell whether complexity actually helped.
+- Use advanced techniques selectively based on failure modes, not because they are popular.
 
 ---
 
@@ -418,6 +427,13 @@ Before moving to Phase 9 (MLOps), you should be able to:
 - [ ] Implement hybrid search (dense + sparse)
 - [ ] Add conversation memory to chatbots
 - [ ] Evaluate RAG system quality
+
+## What Comes Next
+
+- Continue to [../09-mlops/README.md](../09-mlops/README.md) if you want deployment, monitoring, and production operations.
+- Continue to [../11-prompt-engineering/README.md](../11-prompt-engineering/README.md) if you want stronger prompt control inside retrieval systems.
+- Continue to [../15-ai-agents/README.md](../15-ai-agents/README.md) if you want retrieval as one tool inside larger agent workflows.
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want stronger measurement beyond ad hoc quality checks.
 - [ ] Explain when to use HyDE, reranking, contextual compression, or GraphRAG
 - [ ] Diagnose retrieval failures and choose the right fix
 - [ ] Deploy a working RAG application

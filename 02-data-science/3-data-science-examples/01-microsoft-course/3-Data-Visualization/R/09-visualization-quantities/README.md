@@ -214,3 +214,10 @@ This first lesson has given you some information about how to use `ggplot2`to vi
 
 ## Assignment
 [Lines, Scatters, and Bars](assignment.md)
+
+## What Comes Next
+
+After this R version of the lesson:
+
+- Continue to [../10-visualization-distributions/README.md](../10-visualization-distributions/README.md).
+- Compare it with the main Python-oriented lesson at [../../09-visualization-quantities/README.md](../../09-visualization-quantities/README.md) if you want to see the same charting ideas in a different stack.

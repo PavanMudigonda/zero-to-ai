@@ -124,3 +124,10 @@ Learn AI/ML on AWS, Google Cloud, and Azure with hands-on tutorials and certific
 ---
 
 **Pro Tip**: Start with one cloud provider, get comfortable with their ML services, then expand to others if needed. AWS has 50% market share and most job postings.
+
+## What Comes Next
+
+Use this folder after you already know why you need cloud tooling:
+
+1. Return to [22-references/README.md](../README.md) for the broader references map.
+2. Match one cloud platform to the deployment or MLOps phase you are studying instead of spreading attention across all providers too early.

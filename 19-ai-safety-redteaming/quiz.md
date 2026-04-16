@@ -5,7 +5,7 @@
 - Time limit: 30 minutes
 - Passing score: 70% (14/20)
 - Multiple choice and short answer
-- No resources allowed during quiz
+- Try to answer without looking first, then use the explanations to review weak areas
 
 ---
 
@@ -259,9 +259,9 @@ D) By order of discovery
 
 ---
 
-## Short Answer Questions (Bonus)
+## Short Answer Questions (Optional Stretch)
 
-### Bonus Question 1 (5 points)
+### Stretch Question 1
 Explain the trade-off between fairness and accuracy in ML models. When might you accept lower accuracy for better fairness?
 
 **Sample Answer:**
@@ -269,7 +269,7 @@ Fairness and accuracy can conflict because optimizing for overall accuracy might
 
 ---
 
-### Bonus Question 2 (5 points)
+### Stretch Question 2
 Describe a multi-layer defense architecture for LLM security. What are the advantages of multiple layers?
 
 **Sample Answer:**
@@ -286,7 +286,7 @@ Advantages: Defense in depth means if one layer fails, others still protect; dif
 
 ---
 
-### Bonus Question 3 (5 points)
+### Stretch Question 3
 What is the difference between pre-processing, in-processing, and post-processing bias mitigation? Give an example of each.
 
 **Sample Answer:**
@@ -327,25 +327,27 @@ Each has trade-offs in complexity, performance impact, and effectiveness.
 19. B
 20. C
 
-**Bonus:** See sample answers above (evaluated by instructor)
+**Bonus:** See sample answers above and use them as a self-check rubric
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-### Multiple Choice (20 questions × 4 points = 80 points)
-- 14+ correct: Pass (70%)
-- 16+ correct: Good (80%)
-- 18+ correct: Excellent (90%)
-- 20 correct: Perfect (100%)
+### Multiple Choice (20 questions)
+- 14+ correct: solid baseline understanding
+- 16+ correct: good working grasp of the material
+- 18+ correct: strong command of the concepts
+- 20 correct: excellent retention and precision
 
-### Bonus Questions (3 questions × 5 points = 15 points)
-- Comprehensive answer: 5 points
-- Good answer: 3-4 points
-- Partial answer: 1-2 points
-- Missing/incorrect: 0 points
+### Optional Stretch Questions (3 questions)
+- Comprehensive answer: clear explanation, trade-offs, and concrete examples
+- Good answer: mostly correct with minor gaps
+- Partial answer: some correct concepts but limited detail
+- Missing or incorrect: revisit the relevant notebook before moving on
 
-### Total Possible: 95 points (80 + 15 bonus)
+### Suggested Use
+- Use the multiple choice section as a fast checkpoint.
+- Use the stretch questions to verify that you can explain the ideas in your own words.
 
 ---
 
@@ -400,13 +402,13 @@ To prepare for this quiz, review:
 ### If you scored <70%:
 - Review notebooks thoroughly
 - Complete practice challenges
-- Attend office hours
+- Reproduce one failure case end-to-end and document where the defense broke
 - Retake quiz (different questions)
 
 ### If you scored 70-90%:
 - Good foundation, but review weak areas
 - Practice with real-world examples
-- Try bonus challenges
+- Try the optional stretch challenges
 
 ### If you scored >90%:
 - Excellent understanding!

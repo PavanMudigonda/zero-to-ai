@@ -58,7 +58,7 @@ Tipo de Valor:
 
 Tipo de Fonte:  
 
-## Rubrica
+## Guia de Autoavaliacao
 
 Exemplar | Adequado | Precisa melhorar
 --- | --- | -- |

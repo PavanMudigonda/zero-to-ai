@@ -333,3 +333,11 @@ There are many ways to discover and approach preparing your data for analysis an
 ## Assignment
 
 [Evaluating Data from a Form](assignment.md)
+
+## What Comes Next
+
+This lesson closes the Working With Data sequence. From here:
+
+- Move into [Data Visualization](../../3-Data-Visualization/README.md) to present cleaned data clearly and spot patterns faster.
+- Keep using [Python and the Pandas Library](../07-python/README.md) as your practical companion when you need to inspect or transform datasets.
+- When you want to connect data cleaning to a larger end-to-end workflow, continue with [Data Science Lifecycle](../../4-Data-Science-Lifecycle/README.md).

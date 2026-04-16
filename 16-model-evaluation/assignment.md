@@ -4,9 +4,9 @@
 
 Build a comprehensive model evaluation pipeline that compares multiple models across various metrics, tests for statistical significance, and provides deployment recommendations.
 
-**Due:** End of Phase 15  
-**Points:** 100 points (+ 20 bonus points)  
-**Submission:** Jupyter Notebook + Report
+**Suggested timing:** End of Phase 16  
+**Scope:** Capstone-style build with optional bonus depth  
+**Primary deliverables:** Jupyter Notebook + Report
 
 ---
 
@@ -23,7 +23,7 @@ You will:
 
 ## 📝 Requirements
 
-### Part 1: Dataset Selection (10 points)
+### Part 1: Dataset Selection
 
 Choose ONE dataset:
 
@@ -45,7 +45,7 @@ Choose ONE dataset:
 
 ---
 
-### Part 2: Model Training & Comparison (25 points)
+### Part 2: Model Training & Comparison
 
 **Train at least 3 different models:**
 
@@ -78,7 +78,7 @@ Regression options:
 
 ---
 
-### Part 3: Statistical Testing (20 points)
+### Part 3: Statistical Testing
 
 **Compare your top 2 models statistically:**
 
@@ -95,7 +95,7 @@ Regression options:
 
 ---
 
-### Part 4: Fairness & Bias Evaluation (25 points)
+### Part 4: Fairness & Bias Evaluation
 
 **Analyze bias across protected attribute:**
 
@@ -125,7 +125,7 @@ Regression:
 
 ---
 
-### Part 5: Model Selection & Recommendation (20 points)
+### Part 5: Model Selection & Recommendation
 
 **Make final deployment recommendation:**
 
@@ -151,26 +151,26 @@ Consider:
 
 ---
 
-## 🎁 Bonus Challenges (20 extra points)
+## 🎁 Optional Extensions
 
-### Bonus 1: Advanced Metrics (5 points)
+### Optional Extension 1: Advanced Metrics
 - Implement LLM-specific metrics (BLEU, ROUGE, BERTScore) if using text data
 - Or implement custom domain-specific metrics
 
-### Bonus 2: A/B Test Simulation (5 points)
+### Optional Extension 2: A/B Test Simulation
 - Simulate A/B test between top 2 models
 - Calculate required sample size
 - Perform power analysis
 - Create monitoring dashboard mockup
 
-### Bonus 3: Bias Mitigation (5 points)
+### Optional Extension 3: Bias Mitigation
 - Implement 2+ bias mitigation techniques:
   - Reweighting
   - Threshold optimization
   - Fairlearn constraints
 - Compare fairness before/after mitigation
 
-### Bonus 4: Production Monitoring Plan (5 points)
+### Optional Extension 4: Production Monitoring Plan
 - Design monitoring dashboard
 - Define alerting thresholds
 - Create model card documentation
@@ -178,7 +178,7 @@ Consider:
 
 ---
 
-## 📊 Grading Rubric
+## 📊 Self-Review Guide
 
 | Component | Points | Criteria |
 |-----------|--------|----------|
@@ -194,9 +194,9 @@ Consider:
 
 ---
 
-## 📦 Submission Requirements
+## 📦 Deliverables
 
-### Files to Submit:
+### Files to Prepare:
 
 1. **Jupyter Notebook** (`evaluation_pipeline.ipynb`)
    - All code with outputs
@@ -216,9 +216,9 @@ Consider:
    - Dataset download instructions
    - Expected runtime
 
-### Submission Format:
+### Suggested Project Structure:
 ```
-phase15_assignment_[your_name]/
+phase16_assignment_[your_name]/
 ├── evaluation_pipeline.ipynb
 ├── evaluation_report.pdf
 ├── README.md
@@ -278,7 +278,7 @@ phase15_assignment_[your_name]/
 - Scikit-learn documentation: https://scikit-learn.org/stable/
 - Fairlearn: https://fairlearn.org/
 - Statistical testing guide: scipy.stats
-- All Phase 15 notebooks
+- All Phase 16 notebooks
 
 ---
 
@@ -294,7 +294,7 @@ A: Use UCI Adult, Credit Approval, or similar public dataset with demographic in
 A: 3 different model types required. More is better!
 
 **Q: Can I work in a group?**  
-A: Check with instructor. Usually individual work preferred.
+A: Default to individual work so your evaluation reasoning is clearly your own. If you collaborate, document who did what and keep the analysis attributable.
 
 **Q: What if models perform very similarly?**  
 A: Great! Discuss why statistical testing is important. Recommend based on other factors (speed, interpretability, cost).

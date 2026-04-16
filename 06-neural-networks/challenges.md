@@ -279,7 +279,7 @@ criterion = CrossEntropyLoss()
 # Training loop works just like PyTorch!
 ```
 
-### Bonus Points
+### Optional Stretch
 - Clean, documented API
 - Comprehensive tests
 - Tutorial notebooks

@@ -93,6 +93,10 @@ copy_phase() {
 rm -rf "$CURRICULUM_DIR" "$GENERATED_DIR"
 mkdir -p "$CURRICULUM_DIR" "$GENERATED_DIR"
 
+# Copy LLM discovery files into _extras so they appear at site root
+cp -f "$REPO_ROOT/llms.txt" "$DOCS_DIR/_extras/llms.txt" 2>/dev/null || true
+cp -f "$REPO_ROOT/llms-full.txt" "$DOCS_DIR/_extras/llms-full.txt" 2>/dev/null || true
+
 for phase in "${PHASES[@]}"; do
   src="${phase%%:*}"
   target="${phase##*:}"

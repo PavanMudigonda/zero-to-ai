@@ -148,3 +148,11 @@ Try to run a few select queries to find the documents that have Microsoft in the
 ## Assignment
 
 [Soda Profits](assignment.md)
+
+## What Comes Next
+
+After this lesson, shift from storage concepts into hands-on data work:
+
+- Continue to [Python and the Pandas Library](../07-python/README.md) to start loading, transforming, and inspecting data in code.
+- Then study [Data Preparation](../08-data-preparation/README.md) so you can clean and standardize messy datasets before analysis.
+- If you want to compare approaches again, revisit [Relational Databases](../05-relational-databases/README.md) and note when SQL tables versus document-style storage make more sense.

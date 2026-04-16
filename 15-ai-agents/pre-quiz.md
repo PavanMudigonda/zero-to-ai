@@ -185,12 +185,12 @@ B) When the agent generates false or invented information
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-- **0-3 correct:** Perfect! You'll learn a lot in this phase
-- **4-6 correct:** Good foundation - ready to deepen your knowledge
-- **7-8 correct:** Strong baseline - you'll master advanced concepts
-- **9-10 correct:** Excellent! You may already know some agent concepts
+- **0-3 correct:** Early starting point; expect the phase to fill in a lot.
+- **4-6 correct:** Good foundation and ready to deepen your knowledge.
+- **7-8 correct:** Strong baseline for the advanced material.
+- **9-10 correct:** Excellent starting point; some concepts may already feel familiar.
 
 ---
 

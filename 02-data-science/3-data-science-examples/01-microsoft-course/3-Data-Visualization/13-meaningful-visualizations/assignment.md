@@ -3,7 +3,7 @@
 ## Instructions
 
 Using the code sample in this project to create a social network, mock up data of your own social interactions. You could map your usage of social media or make a diagram of your family members. Create an interesting web app that shows a unique visualization of a social network.
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

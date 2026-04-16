@@ -105,3 +105,11 @@ Applying the Data Science Lifecycle involves multiple roles and tasks, where som
 ## Assignment
 
 [Assessing a Dataset](assignment.md)
+
+## What Comes Next
+
+After this lifecycle overview, continue through the next two stages in detail:
+
+- Move to [Analyzing](../15-analyzing/README.md) to practice exploratory work that tests whether your data can answer the problem you care about.
+- Then continue to [Communication](../16-communication/README.md) so you can turn findings into decisions, recommendations, and stakeholder understanding.
+- Keep earlier sections like [Working With Data](../../2-Working-With-Data/README.md) and [Data Visualization](../../3-Data-Visualization/README.md) in mind, because they feed directly into this lifecycle.

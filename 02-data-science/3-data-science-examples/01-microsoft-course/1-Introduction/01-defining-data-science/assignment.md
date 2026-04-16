@@ -24,7 +24,7 @@ Fill in the following table (substitute suggested problem domains for your own o
 | Vaccination | | | | |
 | Productivity | | | | |
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

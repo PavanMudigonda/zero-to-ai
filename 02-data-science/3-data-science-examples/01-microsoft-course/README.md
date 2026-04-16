@@ -157,3 +157,15 @@ Our team produces other curricula! Check out:
 - [Machine Learning for Beginners](https://aka.ms/ml-beginners)
 - [XR Development for Beginners](https://aka.ms/xr-dev-for-beginners)
 - [Mastering GitHub Copilot for AI Paired Programming](https://aka.ms/GitHubCopilotAI)
+
+## How To Use This Imported Curriculum
+
+- Treat this as an external course library embedded inside Zero to AI, not as the canonical repo navigation path.
+- Use it when you want a more structured beginner-friendly walkthrough of core data-science ideas.
+- Prioritize the section READMEs below rather than trying to consume the entire imported course at once.
+
+## What Comes Next
+
+- Start with [1-Introduction/README.md](1-Introduction/README.md) if you want the gentlest entry point.
+- Continue through the section hubs in order if you want the original Microsoft progression.
+- Return to [../../README.md](../../README.md) if you want the Zero to AI phase-level roadmap instead of the imported one.

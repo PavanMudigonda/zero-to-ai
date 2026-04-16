@@ -201,3 +201,11 @@ In this lesson, you used Matplotlib and started working with Seaborn to show mor
 ## Assignment
 
 [Apply your skills](assignment.md)
+
+## What Comes Next
+
+After distributions, continue broadening the kinds of questions you can answer visually:
+
+- Move to [Visualizing Proportions](../11-visualization-proportions/README.md) to show parts-of-a-whole clearly.
+- Then study [Visualizing Relationships](../12-visualization-relationships/README.md) to look for correlation, trend, and comparison patterns across variables.
+- Keep [Visualizing Quantities](../09-visualization-quantities/README.md) nearby if you want to compare when a simple count or bar chart is enough versus when a histogram or density plot is more appropriate.

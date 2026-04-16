@@ -9,6 +9,8 @@ This section covers cutting-edge deep learning research topics with mathematical
 
 **Audience:** Researchers, PhD students, advanced ML practitioners
 
+This is one of the deepest theory-heavy sections in the repo. It is not intended for a first pass through Zero to AI. Come here after you already have strong fundamentals and a clear reason to study one of these research areas.
+
 ---
 
 ## 📚 Table of Contents
@@ -110,6 +112,12 @@ This section covers cutting-edge deep learning research topics with mathematical
 
 ### Path 5: Complete Research Track
 Work through all notebooks sequentially
+
+## How To Use This Section Well
+
+- Pick one research path first instead of trying to complete all 39 notebooks in order.
+- Read the linked papers selectively and implement one idea deeply.
+- Use this phase to deepen a specialization, not to replace the practical core path.
 
 ---
 
@@ -263,6 +271,12 @@ After completing this section, you will:
 6. ✅ Understand theoretical foundations (NTK, Neural ODE)
 7. ✅ Read and implement recent research papers
 8. ✅ Contribute to ML research
+
+## What Comes Next
+
+- Continue to [../28-practical-data-science/README.md](../28-practical-data-science/README.md) if you want to reconnect theory to applied work.
+- Continue to [../29-ai-hardware-llm-validation/README.md](../29-ai-hardware-llm-validation/README.md) if your interest shifts toward systems performance and deployment constraints.
+- Revisit [../12-llm-finetuning/README.md](../12-llm-finetuning/README.md) or [../13-multimodal/README.md](../13-multimodal/README.md) if you want to apply advanced concepts in more product-oriented settings.
 
 ---
 

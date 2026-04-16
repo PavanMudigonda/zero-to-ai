@@ -1,8 +1,8 @@
 # Assignment: Low-Code ML Application
 
 **Phase 18: Low-Code AI Tools**  
-**Total Points:** 100  
-**Due:** As specified by your instructor
+**Scope:** End-to-end app build with optional extra polish  
+**Suggested Pace:** 1-2 weeks, depending on deployment and polish
 
 ---
 
@@ -24,7 +24,7 @@ Build and deploy a complete machine learning application using low-code tools. Y
 
 ## 📝 Requirements
 
-### Part 1: Dataset and Problem (15 points)
+### Part 1: Dataset and Problem
 
 **Choose ONE of the following:**
 
@@ -46,14 +46,14 @@ Build and deploy a complete machine learning application using low-code tools. Y
 - Success metrics
 - Exploratory data analysis (EDA)
 
-**Grading:**
-- Clear problem definition (5 pts)
-- Appropriate dataset (5 pts)
-- EDA with visualizations (5 pts)
+**Self-check:**
+- Clear problem definition
+- Appropriate dataset
+- EDA with visualizations
 
 ---
 
-### Part 2: Model Training with AutoML (25 points)
+### Part 2: Model Training with AutoML
 
 Use **PyCaret**, **FLAML**, or **H2O AutoML** to train your model.
 
@@ -71,15 +71,15 @@ Use **PyCaret**, **FLAML**, or **H2O AutoML** to train your model.
 - Performance metrics on test set
 - Saved model file (.pkl or .h5)
 
-**Grading:**
-- Proper data preprocessing (7 pts)
-- Model comparison and selection (8 pts)
-- Performance evaluation (5 pts)
-- Model saved correctly (5 pts)
+**Self-check:**
+- Proper data preprocessing
+- Model comparison and selection
+- Performance evaluation
+- Model saved correctly
 
 ---
 
-### Part 3: Interactive Interface (30 points)
+### Part 3: Interactive Interface
 
 Build **EITHER** a Gradio interface **OR** a Streamlit app.
 
@@ -112,15 +112,15 @@ Build **EITHER** a Gradio interface **OR** a Streamlit app.
 - requirements.txt with all dependencies
 - Screenshots of working interface
 
-**Grading:**
-- User-friendly design (10 pts)
-- Proper functionality (10 pts)
-- Error handling and edge cases (5 pts)
-- Professional appearance (5 pts)
+**Self-check:**
+- User-friendly design
+- Proper functionality
+- Error handling and edge cases
+- Professional appearance
 
 ---
 
-### Part 4: Deployment (20 points)
+### Part 4: Deployment
 
 Deploy your application to **Hugging Face Spaces**.
 
@@ -144,15 +144,15 @@ Deploy your application to **Hugging Face Spaces**.
   - Example inputs
 - Working deployed application
 
-**Grading:**
-- Successful deployment (8 pts)
-- Complete README (5 pts)
-- App functionality (5 pts)
-- Professional presentation (2 pts)
+**Self-check:**
+- Successful deployment
+- Complete README
+- App functionality
+- Professional presentation
 
 ---
 
-### Part 5: Documentation and Report (10 points)
+### Part 5: Documentation and Report
 
 **Create a comprehensive report including:**
 
@@ -189,30 +189,30 @@ Deploy your application to **Hugging Face Spaces**.
 - Visualizations and tables
 - References (if applicable)
 
-**Grading:**
-- Clarity and organization (4 pts)
-- Technical accuracy (3 pts)
-- Completeness (3 pts)
+**Self-check:**
+- Clarity and organization
+- Technical accuracy
+- Completeness
 
 ---
 
-## 🌟 Bonus Points (Up to 15 extra points)
+## 🌟 Optional Extensions
 
-### Bonus Options:
+### Optional Stretch Ideas:
 
-1. **Advanced Features** (5 pts each, max 10 pts)
+1. **Advanced Features**
    - SHAP explanations for predictions
    - Batch prediction with file upload
    - Model comparison dashboard
    - Real-time data visualization
    - A/B testing different models
 
-2. **Additional Deployment** (5 pts)
+2. **Additional Deployment**
    - Deploy to multiple platforms (Docker, Cloud Run, etc.)
    - Set up CI/CD pipeline
    - Add monitoring/logging
 
-3. **Outstanding Quality** (5 pts)
+3. **Outstanding Quality**
    - Exceptional documentation
    - Production-ready code quality
    - Comprehensive error handling
@@ -220,9 +220,9 @@ Deploy your application to **Hugging Face Spaces**.
 
 ---
 
-## 📤 Submission Guidelines
+## 📤 Deliverables & Packaging
 
-### Submit the following:
+### Prepare the following:
 
 1. **GitHub Repository** containing:
    - Jupyter notebook(s) for model training
@@ -239,21 +239,21 @@ Deploy your application to **Hugging Face Spaces**.
 3. **Report (PDF)**
    - Following structure outlined above
 
-4. **Submission Form** with:
-   - Your name and student ID
+4. **Project Summary** with:
+   - Project name
    - GitHub repository URL
    - Hugging Face Space URL
    - Report PDF
    - Brief summary (200 words)
 
-### Submission Format:
-- ZIP file containing all materials
-- Named: `LastName_FirstName_Phase17_Assignment.zip`
-- Submit via course platform by deadline
+### Suggested Packaging:
+- Keep all materials in one well-organized repository or archive
+- Use a clear project name such as `phase18_low_code_assignment/`
+- Make it easy for another learner or reviewer to run the app and inspect the results
 
 ---
 
-## ✅ Evaluation Rubric
+## ✅ Self-Review Guide
 
 | Component | Points | Criteria |
 |-----------|--------|----------|
@@ -334,7 +334,7 @@ A: Use model compression, reduce features, or use Git LFS for large files.
 A: Aim for < 30 seconds initial load, < 2 seconds per prediction.
 
 **Q: Can I work in a group?**  
-A: Check with your instructor. Usually individual work is required.
+A: Individual work is the cleanest path. If you collaborate, keep ownership of the model, interface, and deployment decisions explicit.
 
 **Q: What if deployment fails?**  
 A: Check logs, verify requirements.txt, test locally first, ask for help.
@@ -363,24 +363,22 @@ A: Check logs, verify requirements.txt, test locally first, ask for help.
 
 ---
 
-## 🏆 Grading Timeline
+## 🏆 Suggested Build Timeline
 
-- **Week 1:** Dataset selection and EDA
-- **Week 2:** Model training and evaluation
-- **Week 3:** Interface development
-- **Week 4:** Deployment and documentation
-- **Final:** Submit complete project
+- **Stage 1:** Dataset selection and EDA
+- **Stage 2:** Model training and evaluation
+- **Stage 3:** Interface development
+- **Stage 4:** Deployment and documentation
 
-**Late Submission:** -10% per day, up to 3 days
+Use the stages above as a pacing guide if you are studying independently.
 
 ---
 
 ## 📧 Getting Help
 
-- **Office Hours:** [Specify times]
-- **Discussion Forum:** [Link]
-- **Email:** [Instructor email]
-- **Technical Issues:** Include error logs and screenshots
+- **Discussion Forum:** [GitHub Discussions](https://github.com/zero-to-ai/discussions)
+- **Technical Issues:** Include logs, screenshots, deployment errors, and your `requirements.txt`.
+- **Best workflow:** Test locally before pushing to Hugging Face Spaces.
 
 ---
 

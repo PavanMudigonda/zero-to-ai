@@ -4,6 +4,8 @@ Notebooks covering the Stanford CS229 ML theory and algorithms course.
 
 **Source PDF:** [cs229.pdf](cs229.pdf)
 
+This folder is the bridge from math foundations to core ML algorithms. Use it when you want to understand how the math turns into modeling choices, error analysis, and learning behavior.
+
 ## Notebooks
 
 | # | Notebook | Topics |
@@ -36,7 +38,19 @@ Notebooks covering the Stanford CS229 ML theory and algorithms course.
 
 Follow the numbered sequence (01-15). X01-X02 are supplementary.
 
+## How To Use This Folder Well
+
+- Work through the numbered sequence instead of skipping directly to fashionable topics.
+- Pay special attention to optimization, regularization, learning theory, and ML strategy because those ideas transfer across the entire repo.
+- Use this folder to connect equations to algorithm behavior, not just to memorize model names.
+
 ## Related
 
 - [mml-book/](../mml-book/) — deeper math foundations
 - [islp-book/](../islp-book/) — statistical learning perspective on similar topics
+
+## What Comes Next
+
+- Continue to [../islp-book/README.md](../islp-book/README.md) if you want a more statistical interpretation of similar methods.
+- Continue to [../advanced/README.md](../advanced/README.md) if you want deeper theory after this layer.
+- Return to [../../02-data-science/README.md](../../02-data-science/README.md) or [../../06-neural-networks/README.md](../../06-neural-networks/README.md) to apply the ideas more concretely.

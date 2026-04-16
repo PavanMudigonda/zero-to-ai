@@ -49,3 +49,9 @@ This module should help you answer a practical question: when does running model
 - A lightweight OpenAI-compatible local serving layer
 - A Mac-first MLX workflow for Apple Silicon laptops
 - A benchmark that compares Ollama, llama.cpp, and vLLM on the same model
+
+## What Comes Next
+
+- Continue to [../30-inference-optimization/README.md](../30-inference-optimization/README.md) for serving and performance tuning concepts.
+- Continue to [../09-mlops/README.md](../09-mlops/README.md) if you want deployment and monitoring discipline.
+- Continue to [../15-ai-agents/README.md](../15-ai-agents/README.md) if you want local tool-using systems on top of open models.

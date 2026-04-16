@@ -1,6 +1,6 @@
 # Assignment: Secure AI System Implementation
 
-**Total Points: 100**  
+**Scope:** capstone-style secure-system build with optional extra depth  
 **Estimated Time: 8-12 hours**
 
 ## Overview
@@ -18,27 +18,27 @@ Build a complete, production-ready AI system with comprehensive security measure
 
 ## Assignment Structure
 
-### Part 1: Secure Chatbot Backend (30 points)
+### Part 1: Secure Chatbot Backend
 
 Build a secure backend for an AI chatbot with all safety measures.
 
 **Requirements:**
 
-1. **Input Validation (10 points)**
+1. **Input Validation**
    - Implement InputValidator class from prompt security notebook
    - Detect at least 10 injection patterns
    - Calculate risk scores for inputs
    - Log suspicious inputs
    - Reject high-risk inputs with appropriate messages
 
-2. **Secure Prompt Architecture (10 points)**
+2. **Secure Prompt Architecture**
    - Create immutable system prompt with security rules
    - Implement role boundaries
    - Add forbidden topics list
    - Use structured message format
    - Prevent prompt leakage
 
-3. **Multi-Layer Defense (10 points)**
+3. **Multi-Layer Defense**
    - Chain validation → sanitization → moderation → PII detection
    - Implement fail-safe behavior
    - Add comprehensive logging
@@ -47,28 +47,28 @@ Build a secure backend for an AI chatbot with all safety measures.
 
 **Deliverable:** `secure_chatbot.py` with complete implementation
 
-**Evaluation Criteria:**
-- All validation layers functional (4 points)
-- Security rules properly enforced (3 points)
-- Logging comprehensive (2 points)
-- Error handling robust (1 point)
+**Self-check:**
+- All validation layers functional
+- Security rules properly enforced
+- Logging comprehensive
+- Error handling robust
 
 ---
 
-### Part 2: Content Moderation Pipeline (20 points)
+### Part 2: Content Moderation Pipeline
 
 Implement production-grade content moderation.
 
 **Requirements:**
 
-1. **Multi-Source Moderation (10 points)**
+1. **Multi-Source Moderation**
    - Integrate OpenAI Moderation API
    - Add Detoxify ML model
    - Implement custom keyword filters
    - Combine results with weighted scoring
    - Support configurable thresholds
 
-2. **Moderation Policy Engine (10 points)**
+2. **Moderation Policy Engine**
    - Define actions per category/severity: allow, warn, block, escalate
    - Implement user warning system
    - Create escalation workflow
@@ -77,29 +77,29 @@ Implement production-grade content moderation.
 
 **Deliverable:** `moderation_pipeline.py`
 
-**Evaluation Criteria:**
-- All moderation sources integrated (5 points)
-- Policy engine flexible and correct (5 points)
-- Statistics tracking accurate (3 points)
-- Performance acceptable (<500ms) (2 points)
-- Documentation clear (5 points)
+**Self-check:**
+- All moderation sources integrated
+- Policy engine flexible and correct
+- Statistics tracking accurate
+- Performance acceptable (<500ms)
+- Documentation clear
 
 ---
 
-### Part 3: PII Protection System (20 points)
+### Part 3: PII Protection System
 
 Build comprehensive PII detection and anonymization.
 
 **Requirements:**
 
-1. **PII Detection (10 points)**
+1. **PII Detection**
    - Regex patterns for email, phone, SSN, credit card, IP, DOB
    - Microsoft Presidio integration
    - Custom recognizers for domain-specific PII
    - Confidence scoring
    - Support for multiple languages (bonus)
 
-2. **Anonymization & Compliance (10 points)**
+2. **Anonymization & Compliance**
    - Implement all strategies: replace, mask, hash, pseudonymize
    - Create retention policies
    - GDPR compliance checks (legal basis, consent)
@@ -108,29 +108,29 @@ Build comprehensive PII detection and anonymization.
 
 **Deliverable:** `pii_protection.py`
 
-**Evaluation Criteria:**
-- Detection accuracy >95% (5 points)
-- Anonymization preserves utility (5 points)
-- Compliance framework complete (5 points)
-- Audit trail comprehensive (3 points)
-- Performance optimized (2 points)
+**Self-check:**
+- Detection accuracy is strong enough for the chosen use case
+- Anonymization preserves utility
+- Compliance framework is complete
+- Audit trail is comprehensive
+- Performance is acceptable for the intended workflow
 
 ---
 
-### Part 4: Bias Detection & Mitigation (15 points)
+### Part 4: Bias Detection & Mitigation
 
 Test and mitigate bias in an ML model.
 
 **Requirements:**
 
-1. **Bias Testing (8 points)**
+1. **Bias Testing**
    - Choose a classification dataset with protected attributes
    - Train baseline model
    - Calculate demographic parity, equalized odds
    - Visualize bias metrics
    - Test multiple fairness definitions
 
-2. **Mitigation Implementation (7 points)**
+2. **Mitigation Implementation**
    - Implement at least 2 mitigation strategies (pre/in/post-processing)
    - Compare fairness metrics before/after
    - Measure accuracy trade-offs
@@ -139,29 +139,29 @@ Test and mitigate bias in an ML model.
 
 **Deliverable:** Jupyter notebook `bias_mitigation.ipynb`
 
-**Evaluation Criteria:**
-- Baseline analysis thorough (4 points)
-- Mitigation reduces bias significantly (5 points)
-- Trade-off analysis clear (3 points)
-- Visualizations effective (2 points)
-- Recommendations justified (1 point)
+**Self-check:**
+- Baseline analysis is thorough
+- Mitigation reduces bias meaningfully
+- Trade-off analysis is clear
+- Visualizations are effective
+- Recommendations are justified
 
 ---
 
-### Part 5: Red Team Assessment (15 points)
+### Part 5: Red Team Assessment
 
 Conduct red team test on your secure system.
 
 **Requirements:**
 
-1. **Test Execution (10 points)**
+1. **Test Execution**
    - Test all 9 attack vectors from red team notebook
    - Document each test with: prompt, response, success/failure, evidence
    - Calculate success rate and risk score
    - Test both before and after security implementation
    - Compare vulnerability counts
 
-2. **Remediation Report (5 points)**
+2. **Remediation Report**
    - List all discovered vulnerabilities
    - Assign severity (Critical/High/Medium/Low)
    - Provide remediation steps
@@ -170,19 +170,19 @@ Conduct red team test on your secure system.
 
 **Deliverable:** `redteam_report.md` with complete findings
 
-**Evaluation Criteria:**
-- All attack vectors tested (5 points)
-- Documentation complete (3 points)
-- Remediation recommendations actionable (4 points)
-- Report professionally formatted (3 points)
+**Self-check:**
+- All attack vectors tested
+- Documentation complete
+- Remediation recommendations actionable
+- Report professionally formatted
 
 ---
 
-## Submission Requirements
+## Deliverables
 
 ### File Structure
 ```
-phase18-assignment/
+phase19-assignment/
 ├── secure_chatbot.py
 ├── moderation_pipeline.py
 ├── pii_protection.py
@@ -228,20 +228,19 @@ Each component must include:
 
 ---
 
-## Grading Rubric
+## Self-Review Guide
 
-| Component | Points | Criteria |
-|-----------|--------|----------|
-| **Part 1: Secure Chatbot** | 30 | Validation (10), Prompts (10), Defense layers (10) |
-| **Part 2: Moderation** | 20 | Multi-source (10), Policy engine (10) |
-| **Part 3: PII Protection** | 20 | Detection (10), Anonymization & compliance (10) |
-| **Part 4: Bias Mitigation** | 15 | Testing (8), Mitigation (7) |
-| **Part 5: Red Team** | 15 | Execution (10), Report (5) |
-| **Code Quality** | 5 | Style, tests, documentation |
-| **Bonus** | +10 | See bonus opportunities below |
-| **Total** | 100 | (110 with bonus) |
+| Component | Relative Emphasis | Criteria |
+|-----------|-------------------|----------|
+| **Part 1: Secure Chatbot** | High | Validation, prompts, defense layers |
+| **Part 2: Moderation** | High | Multi-source moderation, policy engine |
+| **Part 3: PII Protection** | High | Detection, anonymization, compliance |
+| **Part 4: Bias Mitigation** | Medium | Testing, mitigation, trade-off analysis |
+| **Part 5: Red Team** | High | Execution, reporting, remediation |
+| **Code Quality** | Medium | Style, tests, documentation |
+| **Optional Extensions** | Extra depth | See bonus opportunities below |
 
-### Bonus Opportunities (+10 points max)
+### Optional Stretch Opportunities
 
 - **Streaming Support (+3)** - Real-time content moderation for streamed responses
 - **Multi-Language PII (+3)** - PII detection for 3+ languages
@@ -347,9 +346,9 @@ print(metadata)  # {'PERSON_1': 'John', 'EMAIL_1': 'joh...com', ...}
 
 ---
 
-## Submission Checklist
+## Final Checklist
 
-Before submitting, verify:
+Before you consider the project complete, verify:
 
 - [ ] All 5 parts complete
 - [ ] Code runs without errors
@@ -364,30 +363,28 @@ Before submitting, verify:
 
 ---
 
-## Academic Integrity
+## Project Integrity
 
-- This is an individual assignment
+- Default to individual work
 - You may use documentation, tutorials, and AI assistants
-- You must understand and be able to explain all code you submit
-- Copying from classmates or online sources without attribution is prohibited
-- Cite all external resources used
+- You must understand and be able to explain all code you include in the project
+- Cite external resources and clearly distinguish reused components from your own work
 
 ---
 
 ## Support
 
-- **Office Hours:** Check course schedule
-- **Discussion Forum:** Post questions (no code solutions)
-- **Email:** instructor@university.edu (24-48hr response time)
-- **Due Date:** See course calendar
+- **Discussion Forum:** [GitHub Discussions](https://github.com/zero-to-ai/discussions)
+- **Best help request:** Include the attack case, observed behavior, expected safe behavior, and any logs.
+- **Suggested pacing:** Treat this as a capstone-style build after prompt engineering, evaluation, and debugging.
 
 ---
 
-## Grading Timeline
+## Suggested Review Flow
 
-- **Submission Deadline:** End of week
-- **Auto-grading:** Within 24 hours (tests, coverage, style)
-- **Manual Review:** Within 1 week (code quality, design, report)
+- Run your own tests first
+- Re-check the red-team report after fixes
+- Review whether each security layer still works when combined with the others
 - **Final Grade Posted:** Within 10 days
 
 Good luck! 🚀🔒

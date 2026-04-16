@@ -1,5 +1,8 @@
 # Real-Time & Streaming AI
 
+> **Status:** This phase is currently an introduction, not one of the repo's deepest modules yet.
+> Use it to learn the core patterns, then pair it with MLOps, local LLMs, or multimodal work for stronger projects.
+
 ## Overview
 Learn how to build real-time AI applications with streaming responses, WebSocket connections, and progressive loading.
 
@@ -31,6 +34,12 @@ By the end of this phase, you will be able to:
 - Basic knowledge of async/await
 - Familiarity with web technologies
 - Completed Phases 1-10
+
+## How To Use This Phase Right Now
+
+1. Learn the transport patterns first: SSE, WebSockets, and when WebRTC enters the picture.
+2. Build one small streaming project before optimizing everything.
+3. Treat this phase as a systems-pattern module that complements [../09-mlops/README.md](../09-mlops/README.md), [../13-multimodal/README.md](../13-multimodal/README.md), and [../14-local-llms/README.md](../14-local-llms/README.md).
 
 ## Course Content
 
@@ -276,7 +285,7 @@ async def streaming_rag(query):
 ### Issue: Memory leaks
 **Solution:** Close connections properly, cleanup event listeners
 
-## Next Steps
+## What Comes Next
 
 After completing this phase:
 1. Review Phase 19 (AI Safety) for securing streaming apps

@@ -14,7 +14,7 @@ Nessa tarefa você irá escrever o seu próprio estudo de caso refletindo um des
 
 
 
-## Rubrica
+## Guia de Autoavaliacao
 
 Exemplar | Adequado | Precisa melhorar
 --- | --- | -- |

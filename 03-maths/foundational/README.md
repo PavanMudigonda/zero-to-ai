@@ -2,6 +2,8 @@
 
 Core mathematical building blocks for machine learning. Start here if you're new to the math side.
 
+This is the default entry point for the math section. Use it to get just enough mathematical fluency for the rest of the curriculum before you decide whether you need deeper theory.
+
 ## Notebooks
 
 | # | Notebook | Topics |
@@ -35,6 +37,12 @@ Core mathematical building blocks for machine learning. Start here if you're new
 - Going into neural nets? → 07 Neural Network Math → 12 Optimization
 - Going into Bayesian ML? → 06 Statistical Inference
 - Going into sequence models? → 11 Markov Models
+
+## How To Use This Folder Well
+
+- Complete the essential first pass before branching into specialized notebooks.
+- Focus on understanding what the math is doing in ML systems, not just reproducing derivations.
+- Use these notebooks as targeted reinforcement when later phases expose a specific gap.
 
 ## Next Steps
 

@@ -4,10 +4,56 @@ sd_hide_title: true
 
 # Zero to AI
 
+<!-- JSON-LD structured data for Google rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Zero to AI — Free AI/ML Course",
+  "description": "Self-paced open-source curriculum with 950+ Jupyter notebooks covering Python, deep learning, LLMs, RAG, AI agents, prompt engineering, fine-tuning, MLOps, evaluation, and advanced research topics.",
+  "url": "https://zero-to-ai.dev/",
+  "provider": {
+    "@type": "Person",
+    "name": "Pavan Mudigonda",
+    "url": "https://github.com/PavanMudigonda"
+  },
+  "educationalLevel": "Beginner to Advanced",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "license": "https://opensource.org/licenses/MIT",
+  "coursePrerequisites": "Basic Python knowledge and high school mathematics",
+  "numberOfCredits": 0,
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "PT10H/week for 4-12 months"
+  },
+  "about": [
+    "Machine Learning",
+    "Deep Learning",
+    "Large Language Models",
+    "Retrieval-Augmented Generation",
+    "AI Agents",
+    "Prompt Engineering",
+    "MLOps",
+    "Natural Language Processing",
+    "Computer Vision",
+    "Reinforcement Learning"
+  ],
+  "teaches": [
+    "Build production AI applications",
+    "Train and fine-tune language models",
+    "Implement RAG pipelines with vector databases",
+    "Deploy AI agents with function calling and MCP",
+    "Evaluate and red-team AI systems"
+  ]
+}
+</script>
+
 <div class="hero">
-<h1>Zero to AI</h1>
-<p><strong>A comprehensive curriculum from Python fundamentals to production-ready AI systems</strong></p>
-<p>Master machine learning, deep learning, LLMs, RAG, agents, and MLOps through hands-on notebooks and real projects.</p>
+<h1>Zero to AI — Free AI &amp; Machine Learning Course</h1>
+<p><strong>Open-source curriculum with 950+ hands-on Jupyter notebooks — from Python basics to production AI systems</strong></p>
+<p>Learn machine learning, deep learning, LLMs, RAG, AI agents, prompt engineering, fine-tuning, and MLOps through guided projects.</p>
 <div class="hero-badges">
   <a href="https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
   <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github" alt="Open in Codespaces"></a>

@@ -14,6 +14,8 @@ For a surface-level comparison of all AI coding tools, see [00_ai_dev_tools_2026
 **Time:** 1 week | 10-15 hours
 **Outcome:** A fully configured VS Code environment with Copilot agent mode, MCP servers, custom instructions, and model routing
 
+This phase is optional but useful much earlier than Phase 31 for many learners. If AI-assisted development helps you move faster, you can study it in parallel once you are comfortable with Python, git, and the basic repo structure.
+
 ---
 
 ## What You'll Learn
@@ -42,6 +44,10 @@ For a surface-level comparison of all AI coding tools, see [00_ai_dev_tools_2026
 ---
 
 ## Learning Path
+
+Suggested timing:
+- Study early if you actively code every day and want tooling leverage.
+- Study later if you prefer to first understand the core AI concepts before customizing your dev environment.
 
 ### Day 1-2: VS Code AI Setup
 - [ ] Read `01_vscode_ai_setup.md`
@@ -107,6 +113,12 @@ Understanding how to configure these systems is as important as understanding th
 | **08 — RAG** | MCP servers can expose your RAG pipeline as a tool Copilot can call |
 | **15 — AI Agents** | The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does |
 | **18 — Low-Code AI Tools** | Gradio/Streamlit build UIs; this chapter builds developer workflows |
+
+## What Comes Next
+
+- Apply these workflows while working through the rest of the curriculum.
+- Pair this phase with [../15-ai-agents/README.md](../15-ai-agents/README.md) if you want to understand coding agents more deeply.
+- Pair this phase with [../09-mlops/README.md](../09-mlops/README.md) if you want practical repo automation and deployment workflows.
 
 ---
 

@@ -1,6 +1,6 @@
 # Pre-Quiz: Model Evaluation & Metrics
 
-Test your baseline knowledge before starting Phase 15!
+Test your baseline knowledge before starting Phase 16!
 
 **Time:** 10 minutes  
 **Questions:** 10  
@@ -170,12 +170,12 @@ Explanation: The 80% rule (or 4/5ths rule) states that the selection rate for an
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-- **9-10 correct:** Excellent! You have strong foundational knowledge
-- **7-8 correct:** Good! Review a few concepts before starting
-- **5-6 correct:** Moderate. Pay extra attention during Phase 15
-- **0-4 correct:** Review prerequisite materials before Phase 15
+- **9-10 correct:** Strong foundation for this phase.
+- **7-8 correct:** Good baseline; review a few concepts before starting.
+- **5-6 correct:** Moderate baseline; pay extra attention during Phase 16.
+- **0-4 correct:** Review prerequisite materials before Phase 16.
 
 ---
 
@@ -190,4 +190,4 @@ If you scored low, review these topics:
 
 ---
 
-**Ready to start Phase 15? Let's go! 🚀**
+**Ready to start Phase 16? Let's go!**

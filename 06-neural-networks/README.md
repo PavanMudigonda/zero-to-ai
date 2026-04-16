@@ -43,3 +43,9 @@ Companion reading:
 ## Why This Module Matters
 
 If this phase is weak, later phases on fine-tuning, local LLMs, evaluation, and agents become tool memorization. If this phase is strong, the rest of the repo becomes a connected system.
+
+## What Comes Next
+
+- Continue to [../12-llm-finetuning/README.md](../12-llm-finetuning/README.md) if you want to adapt models.
+- Continue to [../14-local-llms/README.md](../14-local-llms/README.md) if you want to run and serve open models yourself.
+- Continue to [../15-ai-agents/README.md](../15-ai-agents/README.md) after you are comfortable with model behavior, tool use, and prompting.

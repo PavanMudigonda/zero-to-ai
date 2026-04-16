@@ -188,12 +188,13 @@ By the end of this phase, you should be able to:
 - **Deploy forecasting systems** that handle real-world challenges
 - **Communicate forecasting results** to stakeholders effectively
 
-## 🚀 What's Next
+## What Comes Next
 
 After mastering time series analysis, you'll be ready for:
 - **Phase 27: Causal Inference** - Understanding cause-and-effect relationships
-- **Phase 28: Federated Learning** - Privacy-preserving distributed learning
-- **Phase 29: Quantum Machine Learning** - Quantum algorithms for ML
+- **Phase 28: Practical Data Science** - Applied forecasting, experimentation, and portfolio work
+- **Phase 29: AI Hardware & LLM Validation** - If your focus is systems, benchmarking, and infrastructure
+- **Phase 24: Advanced Deep Learning** - If you want deeper modeling theory after the applied fundamentals
 
 ## 💡 Pro Tips
 

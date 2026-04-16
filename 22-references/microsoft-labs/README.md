@@ -52,4 +52,11 @@ Model Context Protocol - AI infrastructure standard
 https://github.com/microsoft/IoT-For-Beginners  
 **24 lessons** | Internet of Things, sensors, edge computing, AI at the edge
 
+## What Comes Next
+
+Use these labs when you want extra structured practice:
+
+1. Return to [22-references/README.md](../README.md) if you need a different kind of reference source.
+2. Pick the Microsoft lab that matches the phase you are currently studying instead of trying to consume all of them in parallel.
+
 ---

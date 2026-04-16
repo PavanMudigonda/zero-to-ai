@@ -258,6 +258,14 @@ Probability and statistics is such a broad topic that it deserves its own course
 
 [Small Diabetes Study](assignment.md)
 
+## What Comes Next
+
+This lesson closes the introduction unit. From here:
+
+- Move into [Working With Data](../../2-Working-With-Data/README.md) to apply these concepts to files, databases, and practical data handling.
+- Use the [1-Introduction overview](../README.md) if you want to review the full sequence before continuing.
+- If you need stronger math support, pair this lesson with the repo's broader [maths phase](../../../../../03-maths/README.md) alongside future data-science work.
+
 ## Credits
 
 This lesson has been authored with ♥️ by [Dmitry Soshnikov](http://soshnikov.com)

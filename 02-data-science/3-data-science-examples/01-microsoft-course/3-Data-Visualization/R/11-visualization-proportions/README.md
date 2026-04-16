@@ -185,3 +185,10 @@ Do some research to find more information on this sticky decision.
 ## Assignment
 
 [Try it in Excel](assignment.md)
+
+## What Comes Next
+
+After this R lesson on proportions:
+
+- Continue to [../12-visualization-relationships/README.md](../12-visualization-relationships/README.md).
+- If you want to compare language choices, see the main lesson at [../../11-visualization-proportions/README.md](../../11-visualization-proportions/README.md).

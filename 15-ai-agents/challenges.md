@@ -83,7 +83,7 @@ queries = [
 - ✅ Provides natural language responses
 - ✅ Includes relevant details (temp, humidity, conditions)
 
-### Bonus
+### Optional Stretch
 - Add temperature unit conversion (C ↔ F)
 - Historical weather data
 - Weather recommendations (clothing, activities)
@@ -122,7 +122,7 @@ queries = [
 - ✅ Handles "no results found" gracefully
 - ✅ Summarizes long content effectively
 
-### Bonus
+### Optional Stretch
 - Fact-checking across sources
 - Include images/diagrams
 - Generate bibliography
@@ -194,7 +194,7 @@ from radon.complexity import cc_visit  # Complexity
 from autopep8 import fix_code  # Style fixes
 ```
 
-### Bonus
+### Optional Stretch
 - Suggest specific fixes (not just identify issues)
 - Security vulnerability detection
 - Performance profiling
@@ -297,7 +297,7 @@ class VectorMemory:
         return results['documents'][0]
 ```
 
-### Bonus
+### Optional Stretch
 - Semantic search over memories
 - Automatic fact extraction from conversation
 - Memory importance scoring (forget trivial facts)
@@ -407,7 +407,7 @@ class MultiAgentSystem:
         return self.compile_results()
 ```
 
-### Bonus Challenges
+### Optional Stretch Challenges
 - Add a 4th "Coordinator" agent to manage others
 - Implement voting mechanism for disagreements
 - Parallel execution of independent steps
@@ -499,7 +499,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import networkx as nx  # For dependency graphs
 ```
 
-### Bonus
+### Optional Stretch
 - Web UI for managing tasks
 - Integration with calendar APIs
 - ML-based duration estimation
@@ -570,7 +570,7 @@ class AlertLevel:
 - Disk full → Clean temp files
 - Memory leak → Restart process
 
-### Bonus
+### Optional Stretch
 - Anomaly detection with ML
 - Predictive alerts (issue likely soon)
 - Dashboard visualization
@@ -611,7 +611,7 @@ eval_cases = [
 - ✅ Computes aggregate metrics (pass rate, avg cost, avg latency)
 - ✅ Identifies failure patterns (which tool / step fails most?)
 
-### Bonus
+### Optional Stretch
 - Regression detection: compare two agent versions
 - Red-team safety suite: test for prompt injection, data leakage
 - Cost-accuracy Pareto analysis across different models
@@ -736,7 +736,7 @@ pip install pytest pytest-cov  # Testing
 3. Check your tool schemas (proper JSON?)
 4. Test tools individually
 5. Check agent logs for errors
-6. Ask in Discord/forum with:
+6. Ask in GitHub Discussions with:
    - What you're trying to do
    - What error you're getting
    - Code snippet (relevant parts)

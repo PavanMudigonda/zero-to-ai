@@ -18,7 +18,7 @@ Use some the techniques in this lesson to do your own EDA in the notebook (add c
 - Based on what has been provided so far, does the data seem to provide any evidence of seasonal tipping behavior?
 
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

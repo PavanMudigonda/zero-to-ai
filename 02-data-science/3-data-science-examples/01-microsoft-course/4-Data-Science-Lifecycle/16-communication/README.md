@@ -221,3 +221,11 @@ Review what you've just learned with the Post-Lecture Quiz above!
 ## Assignment
 
 [Market Research](assignment.md)
+
+## What Comes Next
+
+This lesson closes the Data Science Lifecycle section. From here:
+
+- Return to the broader [Data Science for Beginners overview](../README.md) to decide which imported track to study next.
+- Use the repo's main [model evaluation phase](../../../../../16-model-evaluation/README.md) and related later phases when you want to connect communication with stronger measurement and decision-making.
+- Keep revisiting [Data Visualization](../../3-Data-Visualization/README.md) and [Data Ethics](../../1-Introduction/02-ethics/README.md) so your recommendations stay both clear and responsible.

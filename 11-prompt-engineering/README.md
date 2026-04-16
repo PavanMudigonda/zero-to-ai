@@ -49,3 +49,9 @@ This module is most useful when treated as systems design for model interaction,
 - A structured extraction pipeline with validation
 - A multi-step research assistant using ReAct
 - A long-context summarizer that compares chunk-then-summarize vs direct prompting
+
+## What Comes Next
+
+- Continue to [../15-ai-agents/README.md](../15-ai-agents/README.md) if you want tool-using systems.
+- Revisit [../08-rag/README.md](../08-rag/README.md) if you want to improve retrieval prompts and answer synthesis.
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want to measure prompt quality instead of iterating by intuition.

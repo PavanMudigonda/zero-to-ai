@@ -24,7 +24,7 @@ Preencha a seguinte tabela (substitua os domínios de problemas sugeridos pelos 
 | Vacinação | | | | |
 | Produtividade | | | | |
 
-## Rubrica
+## Guia de Autoavaliacao
 
 Exemplar | Adequado | Precisa melhorar
 --- | --- | -- |

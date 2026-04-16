@@ -58,7 +58,7 @@ Value Type:
 
 Source Type: 
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |

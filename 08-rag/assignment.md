@@ -6,13 +6,13 @@ Build a complete Retrieval-Augmented Generation (RAG) system for a real-world us
 
 **Estimated Time:** 8-10 hours  
 **Difficulty:** ⭐⭐⭐⭐ Advanced  
-**Due Date:** 2 weeks from assignment
+**Suggested Pace:** 1-2 weeks after completing the main RAG notebooks
 
 ---
 
 ## 📋 Requirements
 
-### Part 1: Document Processing Pipeline (20 points)
+### Part 1: Document Processing Pipeline
 
 Build a robust document ingestion system:
 
@@ -46,7 +46,7 @@ class DocumentProcessor:
         pass
 ```
 
-### Part 2: Vector Database & Retrieval (25 points)
+### Part 2: Vector Database & Retrieval
 
 Implement advanced retrieval strategies:
 
@@ -95,7 +95,7 @@ class RAGRetriever:
         pass
 ```
 
-### Part 3: Answer Generation (25 points)
+### Part 3: Answer Generation
 
 Create an intelligent answer generator:
 
@@ -146,7 +146,7 @@ class AnswerGenerator:
         pass
 ```
 
-### Part 4: Evaluation & Testing (30 points)
+### Part 4: Evaluation & Testing
 
 Comprehensively evaluate your RAG system:
 
@@ -207,14 +207,14 @@ class RAGEvaluator:
 
 ---
 
-## 📊 Grading Rubric
+## 📊 Self-Review Guide
 
-| Criteria | Exemplary (A: 90-100%) | Proficient (B: 80-89%) | Adequate (C: 70-79%) | Needs Work (D/F: <70%) |
-|----------|---------------------|-------------------|-----------------|-------------------|
-| **Document Processing** (20pts) | Multi-format, semantic chunking, metadata | Good chunking, basic metadata | Simple chunking only | Broken or incomplete |
-| **Retrieval** (25pts) | Hybrid + reranking + one modern upgrade with clear gains | Good retrieval, some reranking | Basic semantic search | Poor retrieval quality |
-| **Generation** (25pts) | Citations, confidence, abstention, high quality answers | Good answers, some citations | Basic answers generated | Poor answer quality |
-| **Evaluation** (30pts) | Comprehensive metrics, >50 test cases, ablation + failure analysis | Good metrics, 30-50 tests | Basic eval, 20-30 tests | Incomplete evaluation |
+| Criteria | Strong | Working | Emerging | Needs revision |
+|----------|--------|---------|----------|----------------|
+| **Document Processing** | Multi-format support, semantic chunking, metadata | Good chunking with basic metadata | Simple chunking only | Broken or incomplete |
+| **Retrieval** | Hybrid plus reranking plus one modern upgrade with clear gains | Good retrieval with some reranking | Basic semantic search | Poor retrieval quality |
+| **Generation** | Citations, confidence, abstention, high-quality answers | Good answers with some citations | Basic answers generated | Poor answer quality |
+| **Evaluation** | Comprehensive metrics, 50+ test cases, ablation and failure analysis | Good metrics with 30-50 test cases | Basic evaluation with 20-30 test cases | Incomplete evaluation |
 
 ---
 
@@ -247,26 +247,26 @@ class RAGEvaluator:
 
 ---
 
-## 🌟 Bonus Challenges (+10 points each, max +40)
+## 🌟 Optional Extensions
 
-### Bonus 1: Conversational RAG (+10)
+### Optional Extension 1: Conversational RAG
 - [ ] Multi-turn conversations with context
 - [ ] Follow-up question handling
 - [ ] Conversation memory management
 - [ ] Context window optimization
 
-### Bonus 2: Advanced Retrieval (+10)
+### Optional Extension 2: Advanced Retrieval
 - [ ] Query expansion with LLMs
 - [ ] Multi-query retrieval
 - [ ] Parent document retrieval
 - [ ] Hypothetical Document Embeddings (HyDE)
 
-### Bonus 5: Reliability Loop (+10)
+### Optional Extension 5: Reliability Loop
 - [ ] Implement CRAG-style retrieval correction or answer verification
 - [ ] Detect low-confidence retrieval and retry with a better query
 - [ ] Route unsupported questions to abstain / follow-up instead of hallucinating
 
-### Bonus 6: Advanced Architecture (+10)
+### Optional Extension 6: Advanced Architecture
 - [ ] RAPTOR, hierarchical retrieval, or GraphRAG prototype
 - [ ] Explain why the architecture helps your dataset
 - [ ] Compare it against your flat-chunk baseline
@@ -283,13 +283,13 @@ If you are unsure what to add beyond baseline RAG, pick one of these:
 4. **Best for noisy corpora:** Contextual compression or relevant-segment extraction.
 5. **Best for high-stakes settings:** Evidence verification, CRAG-style correction, or abstention logic.
 
-### Bonus 3: Deployment (+10)
+### Optional Extension 3: Deployment
 - [ ] FastAPI backend
 - [ ] Gradio/Streamlit frontend
 - [ ] Docker containerization
 - [ ] Deploy to cloud (Hugging Face Spaces/Railway)
 
-### Bonus 4: Monitoring & Analytics (+10)
+### Optional Extension 4: Monitoring & Analytics
 - [ ] Query analytics dashboard
 - [ ] User feedback collection
 - [ ] A/B testing framework
@@ -297,7 +297,7 @@ If you are unsure what to add beyond baseline RAG, pick one of these:
 
 ---
 
-## 📦 Submission Requirements
+## 📦 Deliverables
 
 ### Repository Structure
 ```
@@ -503,8 +503,8 @@ After completing this assignment, you will:
 
 ## 💬 Support
 
-- **Office Hours:** Tuesdays/Thursdays 2-5 PM
 - **Discussion:** [GitHub Discussions](https://github.com/zero-to-ai/discussions)
-- **Email:** instructor@zero-to-ai.com
+- **Best help request:** Include your retrieval setup, evaluation method, and one example failure case.
+- **Recommended order:** Finish the core RAG notebooks before turning this into a larger build.
 
 Good luck building your RAG system! 🚀

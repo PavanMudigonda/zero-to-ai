@@ -277,6 +277,14 @@ Whether you already have structured or unstructured data, using Python you can p
 
 [Perform more detailed data study for the challenges above](assignment.md)
 
+## What Comes Next
+
+After this lesson, the next step is to make your Python workflows more reliable by preparing messy data properly:
+
+- Continue to [Data Preparation](../08-data-preparation/README.md).
+- After finishing this unit, move into the broader [Data Visualization](../../3-Data-Visualization/README.md) section so you can communicate the patterns you discover.
+- If you need more Python practice first, pair this lesson with the repo's main [Python phase](../../../../../01-python/README.md).
+
 ## Credits
 
 This lesson has been authored with ♥️ by [Dmitry Soshnikov](http://soshnikov.com)

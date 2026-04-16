@@ -49,3 +49,8 @@ The book has two parts. Follow Part I (math foundations) first, then Part II (ML
 8. **Lab 08** - PCA (dimensionality reduction)
 9. **Lab 09** - Gaussian Mixtures (density estimation)
 10. **Lab 10** - SVM (classification)
+
+## What Comes Next
+
+- Return to [../README.md](../README.md) if you want the broader MML book track again.
+- Continue into [../../06-neural-networks/README.md](../../06-neural-networks/README.md) or [../../28-practical-data-science/README.md](../../28-practical-data-science/README.md) once the mathematical tools here start to feel usable rather than abstract.

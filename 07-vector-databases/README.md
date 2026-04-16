@@ -34,7 +34,10 @@ This module turns embeddings into something operational. Once you can generate v
 
 ## Good Follow-On Projects
 
-Note: removed paid databases. getting too many sales calls.
+- A local semantic search prototype with Chroma
+- A metadata-heavy retrieval system in Qdrant or Weaviate
+- A benchmark comparing recall, filtering, and latency across two databases
+- A pgvector-backed retrieval API for teams already using PostgreSQL
 
 ### Self-Hosted (Open Source)
 
@@ -49,6 +52,10 @@ Note: removed paid databases. getting too many sales calls.
 | **Redis** | Caching + vectors | C | BSD | Very Fast |
 | **Elasticsearch** | Search + vectors | Java | Apache 2.0/SSPL | Fast |
 | **MongoDB** | Document DB + vectors | C++ | SSPL | Fast |
+
+## What Comes Next
+
+After this phase, move directly to [../08-rag/README.md](../08-rag/README.md). This module gives you the storage and retrieval intuition that RAG depends on.
 
 ---
 
@@ -925,7 +932,7 @@ After completing this module, you will:
 
 ## 🤝 Getting Help
 
-- **Discord Communities**: Pinecone, Weaviate, Qdrant have active Discords
+- **GitHub Discussions**: [zero-to-ai discussions](https://github.com/zero-to-ai/discussions)
 - **GitHub Issues**: For technical problems
 - **Stack Overflow**: Tag with database name
 - **Documentation**: All have excellent docs

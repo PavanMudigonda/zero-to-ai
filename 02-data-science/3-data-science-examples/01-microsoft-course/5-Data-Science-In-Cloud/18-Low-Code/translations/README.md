@@ -1,1 +1,8 @@
 <!--add translations to this folder-->
+
+## What Comes Next
+
+Use this folder only for translated versions of the low-code cloud lesson:
+
+- Return to the main lesson at [../README.md](../README.md) if you are studying the curriculum itself.
+- Keep translation work aligned with the main lesson so quiz links, section order, and learner guidance stay consistent.

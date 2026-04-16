@@ -393,9 +393,9 @@ Complex multi-step business workflows.
 
 ### Communities
 
-- LangChain Discord
-- AutoGen GitHub
-- r/LangChain
+- [GitHub Discussions](https://github.com/zero-to-ai/discussions)
+- [AutoGen GitHub](https://github.com/microsoft/autogen)
+- [r/LangChain](https://reddit.com/r/LangChain)
 
 ---
 
@@ -416,7 +416,11 @@ Before moving forward, you should be able to:
 
 ---
 
-## 🎓 What's Next?
+## What Comes Next
+
+- Continue to [../../16-model-evaluation/README.md](../../16-model-evaluation/README.md) to measure agent quality, tool use, and failure rates more rigorously.
+- Continue to [../../19-ai-safety-redteaming/README.md](../../19-ai-safety-redteaming/README.md) to harden agent systems against misuse and unsafe behavior.
+- Continue to [../../31-ai-powered-dev-tools/README.md](../../31-ai-powered-dev-tools/README.md) if you want stronger coding-agent and developer-workflow context.
 
 **Real-World Applications** →
 - Business process automation

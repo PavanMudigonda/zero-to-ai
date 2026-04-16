@@ -72,3 +72,9 @@ This phase is centered on text embeddings, but production retrieval systems in 2
 
 - [QUICKSTART.md](QUICKSTART.md): fast setup and notebook entry points
 - [embedding_comparison.md](embedding_comparison.md): decision support for local vs hosted embedding stacks
+
+## What Comes Next
+
+- Continue to [../07-vector-databases/README.md](../07-vector-databases/README.md) to learn how embeddings become retrievable infrastructure.
+- Continue to [../08-rag/README.md](../08-rag/README.md) to use embeddings inside full retrieval systems.
+- Continue to [../13-multimodal/README.md](../13-multimodal/README.md) later if you want image-text and cross-modal embedding systems.

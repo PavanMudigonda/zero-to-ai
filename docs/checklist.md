@@ -1,21 +1,21 @@
 # AI/ML Learning Checklist ✅
 
-
+> Use this as a progress tracker after you read `MASTER_STUDY_GUIDE.md`.
+> This checklist is broader than the current quiz system, and some advanced items are intentionally marked as planned.
 
 ## START HERE — Essential Reading (Do This First)
-
 
 - [ ] Done  **[MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)** — Phase-by-phase learning notes, text explanations, and study schedule. Start here.
 - [ ] Done  **[REFERENCES.md](REFERENCES.md)** — All videos, GitHub repos, courses, papers, and tools organized by phase.
 
-
-
 ## 📋 How to Use This Checklist
 
-
+1. Read [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) first and choose a track before checking anything off.
+2. Use this file as a progress tracker, not as a replacement for the study guide or the phase READMEs.
+3. Mark an item done only when you have actually run the material, understood the core idea, and can reuse or explain it.
+4. Skip optional depth when needed. Follow your track priorities first, then come back later for breadth.
 
 ## Phase 0: Glossary & Foundations
-
 
 - [ ] Done  [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md)
 - [ ] Done  [00-course-setup/2026_model_landscape.md](../00-course-setup/2026_model_landscape.md) — frontier models, open-weight models, benchmarks as of 2026
@@ -26,7 +26,6 @@
 
 
 ## Phase 1: Python & Machine Learning (278 notebooks)
-
 
 ### Python Foundations
 - [ ] Done  NumPy tutorials in [02-data-science/1-numpy-examples/](../02-data-science/1-numpy-examples/)

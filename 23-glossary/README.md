@@ -22,3 +22,11 @@ This folder is the vocabulary layer for the rest of the curriculum. Use it to re
 ## Suggested Improvement Path
 
 As the repo grows, this folder should keep absorbing the most overloaded terms from newer LLM and MLOps modules so beginners do not need to infer definitions from context.
+
+## What Comes Next
+
+After a first pass through the glossary:
+
+- Go back to [00-course-setup/README.md](../00-course-setup/README.md) if you are still orienting yourself.
+- Continue to [01-python/README.md](../01-python/README.md) if programming fundamentals are still shaky.
+- Otherwise return to the [master study guide](../docs/MASTER_STUDY_GUIDE.md) and continue with your current phase.

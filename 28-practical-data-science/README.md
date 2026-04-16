@@ -38,3 +38,9 @@ This folder is the transition from studying concepts to performing applied work 
 - Forecasting dashboard with anomaly alerts
 - Recommendation prototype with offline evaluation
 - SQL-to-model pipeline with a short stakeholder-facing writeup
+
+## What Comes Next
+
+- Continue to [../09-mlops/README.md](../09-mlops/README.md) if you want to productionize one of these projects.
+- Continue to [../16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want stronger reporting and comparison discipline.
+- Continue to [../31-ai-powered-dev-tools/README.md](../31-ai-powered-dev-tools/README.md) if you want faster workflows while building portfolio projects.

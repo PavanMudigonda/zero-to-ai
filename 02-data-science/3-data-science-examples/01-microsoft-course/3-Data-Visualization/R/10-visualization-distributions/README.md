@@ -168,4 +168,11 @@ In this lesson, you used `ggplot2` and started working to show more sophisticate
 
 [Apply your skills](assignment.md)
 
+## What Comes Next
+
+After this R lesson on distributions:
+
+- Continue to [../11-visualization-proportions/README.md](../11-visualization-proportions/README.md).
+- Compare with the main lesson at [../../10-visualization-distributions/README.md](../../10-visualization-distributions/README.md) if you want the non-R path alongside it.
+
 

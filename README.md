@@ -1,6 +1,8 @@
-# Zero to AI - Complete Learning Path 🚀
+# Zero to AI — Free AI/ML Course: Python, LLMs, RAG, Agents & Deep Learning
 
-### A comprehensive curriculum teaching everything you need to build production-ready AI systems
+### Open-source curriculum with 950+ hands-on Jupyter notebooks — from Python basics to production AI systems
+
+> **Keywords:** machine learning course, deep learning tutorial, LLM tutorial, RAG tutorial, AI agents, prompt engineering, embeddings, vector databases, model evaluation, MLOps, fine-tuning, reinforcement learning, multimodal AI, AI safety, free AI course, learn AI from scratch, Python machine learning, transformer tutorial, open-source AI curriculum
 
 [![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/graphs/contributors/)
@@ -27,13 +29,48 @@
 
 ## 📊 Course Overview
 
-> **From Zero to AI Mastery** WORK IN PROGRESS. OPEN FOR FEEDBACK.
+> **From Zero to AI Mastery** is still evolving. The core path is already usable, and feedback is welcome as later phases continue to grow.
+
+This repository is best used as a guided curriculum, not as a directory to browse at random. Some phases are mature and portfolio-ready today, while a few later phases are still being filled in.
+
+### What You'll Learn
+
+| Area | Topics | Notebooks |
+|------|--------|-----------|
+| **Python & Data Science** | NumPy, Pandas, Matplotlib, Scikit-learn | 278+ |
+| **Mathematics for ML** | Linear algebra, calculus, statistics, optimization | 40+ |
+| **Tokenization & Embeddings** | tiktoken, SentencePiece, OpenAI, HuggingFace | 20+ |
+| **Deep Learning** | Neural networks, CNNs, RNNs, Transformers from scratch | 45+ |
+| **LLMs & RAG** | Retrieval-Augmented Generation, vector databases, chunking | 20+ |
+| **AI Agents** | Function calling, MCP, OpenAI Agents SDK, LangGraph, multi-agent | 11+ |
+| **Prompt & Context Engineering** | Chain-of-thought, structured outputs, DSPy | 6+ |
+| **Fine-Tuning** | LoRA, QLoRA, PEFT, GRPO, DPO | 12+ |
+| **MLOps & Serving** | Deployment, monitoring, vLLM, quantization | 15+ |
+| **Evaluation & Safety** | LLM-as-judge, red teaming, bias, fairness | 12+ |
+| **Advanced Topics** | GANs, VAEs, RL, causal inference, time series | 60+ |
+
+## ✅ Start Here
+
+If you are new to the repo, use this order:
+
+1. Read [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose your track.
+2. Use [00-course-setup/README.md](00-course-setup/README.md) to get your environment working.
+3. Read [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md) once before diving into the curriculum.
+4. Use [docs/checklist.md](docs/checklist.md) to track progress after you start.
+
+If you are completely new to Python, begin with [01-python/README.md](01-python/README.md) before Phase 2.
 
 ---
 
 ## 🌱 Getting Started
 
 This comprehensive AI/ML curriculum uses progressive numbered modules covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each module includes hands-on notebooks, projects, and practical applications.
+
+Important context for learners:
+- `docs/MASTER_STUDY_GUIDE.md` is the canonical navigation document.
+- `docs/checklist.md` is a progress tracker, not the primary explanation of what to study first.
+- Not every late-stage phase is equally complete yet. Phases such as `30-inference-optimization/` are still actively being built out.
+- Generated folders such as `site/` and `jupyter_execute/` are build artifacts, not the source curriculum.
 
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
@@ -43,15 +80,21 @@ This comprehensive AI/ML curriculum uses progressive numbered modules covering e
 
 ## 🚀 Quick Start
 
+For most learners, the fastest low-friction path is:
+
+1. Install dependencies.
+2. Open [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md).
+3. Pick one track.
+4. Open `00_START_HERE.ipynb` inside each phase you study.
+
 ### Prerequisites
 - Basic Python knowledge (or start with [01-python/](01-python/))
 - High school mathematics
 - A computer (GPU helpful but not required initially)
-- If you are buying new device for the course i suggest below
-  - MacBook Neo (8 GB) - cheaper option
-  - MacBook Air (16 GB) - sufficient for most users
-  - MacBook Pro (16 GB min) - if you are heavy user choose
-- Use Google Colab account or Kaggle Account in addition to your device as per program you are working with
+- If you are buying a new device for this course, prioritize RAM and portability over an expensive GPU at the beginning:
+  - MacBook Air (16 GB) - a practical default for most learners
+  - MacBook Pro (16 GB or more) - useful if you expect heavier local workloads
+- Use a Google Colab or Kaggle account alongside your local machine when a notebook or phase needs more compute
 - 10-15 hours/week
 
 ### Installation (Choose One)
@@ -166,6 +209,21 @@ zero-to-ai/
 ```
 
 **💡 Pro Tip**: Start with `00_START_HERE.ipynb` in each section for guided learning!
+
+## 📌 Completion Notes
+
+- Mature core path: `02-data-science/` through `19-ai-safety-redteaming/`
+- Strong advanced depth: `24-advanced-deep-learning/`, `28-practical-data-science/`
+- Still being expanded: `20-real-time-streaming/`, `21-quizzes/`, `22-references/`, `30-inference-optimization/`
+- Build and publishing output: `site/`, `jupyter_execute/`, `docs/generated/`
+
+## What Comes Next
+
+Once you have oriented yourself in the repo:
+
+1. Use [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose a realistic track instead of trying to do everything at once.
+2. Complete [00-course-setup/README.md](00-course-setup/README.md), then start the first phase in your track.
+3. Open `00_START_HERE.ipynb` inside each phase you study and use [docs/checklist.md](docs/checklist.md) only as a progress tracker.
 
 ---
 

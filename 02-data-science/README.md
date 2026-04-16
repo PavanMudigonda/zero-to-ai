@@ -2,6 +2,8 @@
 
 This folder is the practical base layer for the rest of the repo. If you are not yet comfortable with arrays, DataFrames, plots, train/test splits, and the `fit/predict/transform` workflow, later LLM and deep learning phases will feel harder than they need to.
 
+This is one of the highest-leverage phases in the repo. If this phase is weak, later notebook work turns into library imitation rather than actual understanding.
+
 ## What This Phase Covers
 
 - NumPy for numerical thinking
@@ -38,6 +40,13 @@ This folder is the practical base layer for the rest of the repo. If you are not
   data loading -> cleaning -> feature work -> split -> train -> evaluate -> explain results.
 - Keep notes on leakage, validation mistakes, and metric choice. Those habits matter more than memorizing APIs.
 
+## How To Use This Phase Well
+
+- Treat this as skill-building, not just exposure to libraries.
+- Finish at least one end-to-end tabular workflow before moving on.
+- Use the large scikit-learn folder selectively instead of trying to clear it like a checklist.
+- Revisit this phase later when evaluation, leakage, or debugging issues show up in advanced projects.
+
 ## Suggested Projects
 
 - Iris or wine classification with proper validation
@@ -49,5 +58,7 @@ This folder is the practical base layer for the rest of the repo. If you are not
 After this phase, move to:
 
 1. [03-maths/README.md](../03-maths/README.md)
-2. [04-token/](../04-token/)
-3. [05-embeddings/](../05-embeddings/)
+2. [04-token/README.md](../04-token/README.md)
+3. [05-embeddings/README.md](../05-embeddings/README.md)
+
+If you are still shaky on Python while doing this phase, loop back to [01-python/README.md](../01-python/README.md) alongside the exercises instead of waiting until you are stuck.

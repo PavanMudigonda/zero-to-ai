@@ -164,3 +164,10 @@ Line plots can be simple or quite complex. Do a bit of reading in the [ggplot2 d
 ## Assignment
 
 [Dive into the beehive](assignment.md)
+
+## What Comes Next
+
+After this R lesson on relationship charts:
+
+- Continue to [../13-meaningful-vizualizations/README.md](../13-meaningful-vizualizations/README.md).
+- Compare with the main lesson at [../../12-visualization-relationships/README.md](../../12-visualization-relationships/README.md) if you want the parallel Python-oriented version.

@@ -2,6 +2,8 @@
 
 > **Goal**: Learn to deploy, monitor, and maintain ML models as production systems. This is what separates a data scientist from a machine learning engineer.
 
+This phase is one of the main bridges from learning notebooks to building production-ready systems. If you want hiring leverage, this is one of the most important folders in the repo.
+
 ---
 
 ## Why MLOps Matters for Your Career
@@ -30,6 +32,13 @@ MLOps is consistently one of the top hiring criteria for ML Engineer roles.
 | 7 | [06_ci_cd_pipeline.ipynb](06_ci_cd_pipeline.ipynb) | GitHub Actions for automated ML testing | 60 min |
 | 8 | [07_cloud_deployment.ipynb](07_cloud_deployment.ipynb) | Deploy to AWS/GCP/Azure | 90 min |
 | 9 | [09_llm_infrastructure.ipynb](09_llm_infrastructure.ipynb) | vLLM, TGI, and LLM serving at scale | 60 min |
+
+## How To Use This Phase Well
+
+- Complete at least one full path: experiment tracking -> serving -> containerization -> monitoring.
+- Build one deployable project instead of only reading notebook examples.
+- Treat monitoring and reproducibility as part of the product, not as post-launch cleanup.
+- Pair this phase with a model-building phase you already care about so the operational work stays concrete.
 
 ---
 
@@ -229,3 +238,5 @@ After MLOps, choose your specialization path:
 - **AI Agents** → [15-ai-agents/](../15-ai-agents/)
 - **LLM Fine-tuning** → [12-llm-finetuning/](../12-llm-finetuning/)
 - **Computer Vision** → [10-specializations/computer-vision/](../10-specializations/computer-vision/)
+- **Model Evaluation** → [16-model-evaluation/README.md](../16-model-evaluation/README.md) if you want stronger measurement and regression testing habits
+- **Local LLMs** → [14-local-llms/README.md](../14-local-llms/README.md) if you want to own inference infrastructure directly

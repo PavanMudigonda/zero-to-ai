@@ -1,6 +1,6 @@
 # Post-Quiz: Debugging & Troubleshooting
 
-Test your knowledge after completing Phase 16!
+Test your knowledge after completing Phase 17!
 
 **Time:** 15 minutes  
 **Questions:** 18  
@@ -334,9 +334,9 @@ D) Try every technique and see what works
 
 ---
 
-## Bonus Questions
+## Optional Stretch Questions
 
-### 19. (Bonus) In-place operations (+=, *=) are preferred because they:
+### 19. In-place operations (+=, *=) are preferred because they:
 
 A) Are faster to type  
 B) Use less memory  
@@ -354,7 +354,7 @@ D) Work with more data types
 
 ---
 
-### 20. (Bonus) A calibration curve far from the diagonal indicates:
+### 20. A calibration curve far from the diagonal indicates:
 
 A) Perfect calibration  
 B) Model is well-tuned  
@@ -372,15 +372,15 @@ D) Data leakage
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
 Count your correct answers (out of 18 main questions):
 
-- **16-18 correct:** Excellent! Master level understanding 🎓
-- **13-15 correct:** Great! You've learned the material well ✅
-- **10-12 correct:** Good! Review a few concepts 📚
-- **7-9 correct:** Pass, but review topics you missed ⚠️
-- **0-6 correct:** Review Phase 16 materials 🔄
+- **16-18 correct:** Strong command of the debugging workflow.
+- **13-15 correct:** Good working understanding.
+- **10-12 correct:** Solid start; revisit the weaker areas below.
+- **7-9 correct:** Review the topics you missed before moving on.
+- **0-6 correct:** Rework the notebooks and examples in this phase.
 
 ---
 
@@ -417,7 +417,7 @@ Based on incorrect answers, review:
 ## Next Steps
 
 **If you scored well (13+):**
-- ✅ Move to Phase 17 or tackle advanced challenges
+- ✅ Move to Phase 18 or tackle advanced challenges
 - ✅ Complete the comprehensive assignment
 - ✅ Try Challenge 6 or 7 for expert-level practice
 
@@ -464,4 +464,4 @@ Based on incorrect answers, review:
 
 ---
 
-**Congratulations on completing Phase 16! You're now equipped with essential debugging skills! 🎉**
+**Congratulations on completing Phase 17. You now have a stronger debugging and troubleshooting toolkit.**

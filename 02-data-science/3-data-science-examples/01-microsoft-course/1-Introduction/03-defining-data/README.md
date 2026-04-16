@@ -70,3 +70,11 @@ Kaggle is an excellent source of open datasets. Use the [dataset search tool](ht
 ## Assignment
 
 [Classifying Datasets](assignment.md)
+
+## What Comes Next
+
+After this lesson, finish the introduction unit by building enough statistics intuition to work with real datasets:
+
+- Continue to [Statistics and Probability](../04-stats-and-probability/README.md).
+- After that, start the broader [Working With Data](../../2-Working-With-Data/README.md) section, where these data categories become practical when you load, clean, and inspect actual data.
+- If you want to reinforce the basics first, revisit [Defining Data Science](../01-defining-data-science/README.md) and [Data Ethics](../02-ethics/README.md) so the technical and responsible-use ideas stay connected.

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+title: "Zero to AI: Open-Source AI/ML Curriculum"
+message: "If you use this curriculum in your work, please cite it."
+type: dataset
+authors:
+  - family-names: Mudigonda
+    given-names: Pavan
+    orcid: ""
+repository-code: "https://github.com/PavanMudigonda/zero-to-ai"
+url: "https://zero-to-ai.dev/"
+license: MIT
+keywords:
+  - machine learning
+  - deep learning
+  - artificial intelligence
+  - large language models
+  - retrieval augmented generation
+  - AI agents
+  - prompt engineering
+  - MLOps
+  - Jupyter notebooks
+  - Python
+  - tutorial
+  - curriculum
+  - open education

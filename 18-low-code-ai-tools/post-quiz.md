@@ -1,6 +1,6 @@
 # Post-Quiz: Low-Code AI Tools
 
-**Phase 17: Low-Code AI Tools**  
+**Phase 18: Low-Code AI Tools**  
 **Duration:** 25 minutes  
 **Questions:** 18
 
@@ -8,7 +8,7 @@
 
 ## Instructions
 
-This quiz assesses your understanding after completing Phase 17.
+This quiz assesses your understanding after completing Phase 18.
 
 - Answer all questions
 - Reference course materials if needed
@@ -333,7 +333,7 @@ Pinning exact versions (e.g., `gradio==4.0.0`) ensures reproducible builds and p
 
 ---
 
-## Bonus Questions (Optional, +5 points each)
+## Optional Stretch Questions
 
 ### B1. How would you implement batch predictions in a Gradio app?
 
@@ -386,16 +386,16 @@ Loading models once at startup and caching them prevents reload on every request
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-### Standard Questions (18 questions, 5 points each = 90 points):
-- **16-18 correct (85-100%):** 🏆 Excellent! You've mastered low-code ML tools.
-- **14-15 correct (75-85%):** ✅ Great! Solid understanding.
-- **11-13 correct (60-75%):** 📚 Good! Review challenging topics.
-- **Below 11 (< 60%):** 🔄 Review course materials and retake.
+### Standard Questions (18 questions):
+- **16-18 correct:** Strong command of the low-code workflow.
+- **14-15 correct:** Solid working understanding.
+- **11-13 correct:** Good progress; revisit the weaker sections.
+- **Below 11:** Review the notebooks, then try again.
 
-### Bonus Questions (3 questions, 5 points each = +15 points max):
-- **Total possible:** 105 points
+### Optional Stretch Questions (3 questions):
+- Use these after the main quiz to check explanation depth, not just recall.
 
 ---
 
@@ -460,20 +460,20 @@ If you missed questions in:
 🔄 Review all course materials  
 🔄 Work through notebooks step-by-step  
 🔄 Complete challenges 1-3  
-🔄 Seek help from instructor/community  
+🔄 Post a concrete blocker or deployment issue in GitHub Discussions  
 🔄 Retake quiz after review
 
 ---
 
-## Certificate Eligibility
+## Completion Checklist
 
-To earn Phase 17 completion certificate:
+To treat this phase as completed in your own tracker:
 - Score 80%+ on this quiz
 - Complete assignment (70%+ grade)
 - Finish at least 3 challenges
 
 ---
 
-**Congratulations on completing Phase 17! 🎉**
+**Congratulations on completing Phase 18.**
 
-Keep building amazing ML applications! 🚀
+Keep building practical ML applications.

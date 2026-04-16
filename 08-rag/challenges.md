@@ -417,7 +417,7 @@ Build the best RAG system for a specific domain and prove it!
 - Technical report (methodology + findings)
 - Demo (Gradio/Streamlit app)
 
-### Bonus Points
+### Optional Stretch
 - Open-source your solution
 - Deploy publicly
 - Write blog post about optimizations

@@ -19,3 +19,8 @@ These lessons were written with ☁️ and 💕 by [Maud Levy](https://twitter.c
 
 Data for the Heart Failure Prediction project is sourced from [
 Larxel](https://www.kaggle.com/andrewmvd) on [Kaggle](https://www.kaggle.com/andrewmvd/heart-failure-clinical-data). It is licensed under the [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+
+## What Comes Next
+
+- Continue to [../6-Data-Science-In-Wild/README.md](../6-Data-Science-In-Wild/README.md) for a lighter real-world wrap-up inside the imported curriculum.
+- Jump back to the main Zero to AI [09-mlops/README.md](../../../../09-mlops/README.md) if you want the repo's primary production path instead.

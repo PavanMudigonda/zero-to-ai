@@ -179,3 +179,11 @@ There are several resources available on [Microsoft Learn](https://docs.microsof
 ## Assignment
 
 [Assignment Title](assignment.md)
+
+## What Comes Next
+
+After relational databases, expand your view of how data can be stored and queried:
+
+- Continue to [Non-Relational Data](../06-non-relational/README.md) to compare spreadsheets, document stores, and NoSQL systems with SQL-based workflows.
+- Then move to [Python and the Pandas Library](../07-python/README.md) to start manipulating data directly in code.
+- Finish this section with [Data Preparation](../08-data-preparation/README.md), where raw data becomes analysis-ready.

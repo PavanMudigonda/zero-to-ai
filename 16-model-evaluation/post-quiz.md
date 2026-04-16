@@ -1,6 +1,6 @@
 # Post-Quiz: Model Evaluation & Metrics
 
-Test your knowledge after completing Phase 15!
+Test your knowledge after completing Phase 16!
 
 **Time:** 15 minutes  
 **Questions:** 15  
@@ -300,13 +300,13 @@ Explanation: Faithfulness measures whether the generated answer is grounded in t
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
-- **16-18 correct:** Excellent! Master level understanding 🎓
-- **13-15 correct:** Great! You've learned the material well ✅
-- **10-12 correct:** Good! Review a few concepts 📚
-- **7-9 correct:** Pass, but review topics you missed ⚠️
-- **0-6 correct:** Review Phase 15 materials 🔄
+- **16-18 correct:** Strong command of the evaluation workflow.
+- **13-15 correct:** Good understanding with a few gaps left to tighten.
+- **10-12 correct:** Solid progress; review the weaker concepts below.
+- **7-9 correct:** Revisit the missed topics before moving on.
+- **0-6 correct:** Review the Phase 16 materials and try again.
 
 ---
 
@@ -345,14 +345,14 @@ Based on your incorrect answers, review:
 ## Next Steps
 
 **If you scored well (13+):**
-- ✅ Move to Phase 16: Debugging & Troubleshooting
-- ✅ Complete the Phase 15 assignment
+- ✅ Move to Phase 17: Debugging & Troubleshooting
+- ✅ Complete the Phase 16 assignment
 - ✅ Try advanced challenges
 
 **If you need review (< 13):**
 - 📚 Re-read relevant notebooks
 - 🔄 Redo coding exercises
-- 💬 Discuss with peers/instructor
+- 💬 Write down the concepts that still feel weak and review them deliberately
 - ✍️ Retake quiz after review
 
 ---
@@ -391,4 +391,4 @@ Based on your incorrect answers, review:
 
 ---
 
-**Congratulations on completing Phase 15! You're now equipped to properly evaluate ML models! 🎉**
+**Congratulations on completing Phase 16. You now have a stronger foundation for evaluating ML and AI systems.**

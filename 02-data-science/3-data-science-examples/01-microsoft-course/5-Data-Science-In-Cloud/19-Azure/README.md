@@ -245,6 +245,14 @@ This step should take a few minutes.
 
 ### 3.3 Endpoint consumption
 
+## What Comes Next
+
+After the SDK path, the next step is to place these cloud skills in a broader practical context:
+
+- Continue to [Data Science in the Real World](../../6-Data-Science-In-Wild/20-Real-World-Examples/README.md).
+- Revisit [Low Code or No Code](../18-Low-Code/README.md) if you want to compare the tradeoffs between rapid prototyping and production-oriented workflows.
+- Use the repo's later [MLOps phase](../../../../../09-mlops/README.md) when you want a broader view of deployment, repeatability, and operational maturity.
+
 You consume your endpoint by creating a sample input:
 
 ```python

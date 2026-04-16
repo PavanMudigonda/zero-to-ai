@@ -140,3 +140,11 @@ Want to explore more use cases? Here are a few relevant articles:
 ## Assignment
 
 [Explore A Planetary Computer Dataset](assignment.md)
+
+## What Comes Next
+
+This lesson closes the imported Microsoft data-science course sequence. From here:
+
+- Return to the [Microsoft course overview](../README.md) if you want to revisit any section in order.
+- Continue with the repo's broader [Data Science phase](../../README.md) to move from this imported track into the rest of your Zero to AI material.
+- If you want to deepen one direction, branch into the repo's [maths phase](../../../../../03-maths/README.md), [model evaluation phase](../../../../../16-model-evaluation/README.md), or later applied phases based on your goals.

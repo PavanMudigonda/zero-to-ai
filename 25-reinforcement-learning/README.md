@@ -119,12 +119,13 @@ Reinforcement learning represents a fundamental shift in AI:
 - **Proximal Policy Optimization** (Schulman et al., 2017)
 - **Soft Actor-Critic** (Haarnoja et al., 2018)
 
-## 🚀 Next Steps
+## Next Steps
 
 After completing this phase, you'll be ready for:
-- **Phase 26**: Time Series Analysis & Forecasting
-- **Phase 27**: Causal Inference & Experimental Design
-- **Advanced RL**: Meta-learning, offline RL, RLHF
+- **Phase 24**: Advanced Deep Learning for deeper theory and modern architectures
+- **Phase 27**: Causal Inference if you care about experiments, policy, and decision making
+- **Phase 28**: Practical Data Science for applied projects and interview preparation
+- **Advanced RL work outside this phase**: Meta-learning, offline RL, RLHF
 
 ---
 

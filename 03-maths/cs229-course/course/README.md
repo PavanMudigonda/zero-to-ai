@@ -205,6 +205,12 @@ Cost: J(θ) = -(1/m)Σ[y log(h_θ(x)) + (1-y)log(1-h_θ(x))]
 - Logistic Regression vs GDA
 - When to use generative models
 
+## What Comes Next
+
+- Use these notebooks as a deeper theory-and-implementation branch after the main data-science and maths foundations are in place.
+- Return to [../README.md](../README.md) if you want the broader CS229 course context.
+- Continue into [../../../28-practical-data-science/README.md](../../../28-practical-data-science/README.md) or [../../../24-advanced-deep-learning/README.md](../../../24-advanced-deep-learning/README.md) depending on whether you want applied work or deeper theory next.
+
 ---
 
 #### Lecture 6-7: Support Vector Machines  

@@ -242,3 +242,10 @@ AI news and analysis
 
 **Pro Tip**: Watch at 1.5-2x speed once you get the basics!
 
+## What Comes Next
+
+Use this folder as a supporting reference set, not your primary study order:
+
+1. Return to [22-references/README.md](../README.md) to choose the reference category you actually need.
+2. Pair these videos with the matching phase in the main curriculum so you are reinforcing active study, not collecting resources passively.
+

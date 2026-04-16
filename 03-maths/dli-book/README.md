@@ -5,6 +5,8 @@
 
 This book covers mathematical foundations and interview-style problems for deep learning. Labs below are organized by the book's progressive difficulty levels.
 
+Use this folder as a compact practice layer when you want to sharpen deep-learning intuition quickly. It works well as reinforcement for interviews, revision, or a short math-to-implementation bridge.
+
 ## Labs
 
 | Lab | Topic | Book Chapter | Difficulty |
@@ -37,3 +39,15 @@ This book covers mathematical foundations and interview-style problems for deep 
 4. **Lab 03** - Calculus & Backpropagation (core for training NNs)
 5. **Lab 06** - CNN Feature Extraction (applies NN concepts)
 6. **Lab 05** - Ensemble Methods (advanced techniques)
+
+## How To Use This Folder Well
+
+- Treat these labs as short, focused reinforcement rather than a full standalone curriculum.
+- Use them when you want to turn abstract neural-network math into concrete coding exercises.
+- Revisit the relevant foundational or neural-network phases whenever a lab exposes a deeper gap.
+
+## What Comes Next
+
+- Continue to [../foundational/README.md](../foundational/README.md) if you need broader math support.
+- Continue to [../../06-neural-networks/README.md](../../06-neural-networks/README.md) if you want the main deep-learning phase.
+- Continue to [../../24-advanced-deep-learning/README.md](../../24-advanced-deep-learning/README.md) if these labs confirm you want deeper theory.

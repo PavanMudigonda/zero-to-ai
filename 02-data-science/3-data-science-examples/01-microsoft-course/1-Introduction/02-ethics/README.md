@@ -258,6 +258,14 @@ Courses and books help with understanding core ethics concepts and challenges, w
 * [Data Science Ethics](https://www.coursera.org/learn/data-science-ethics#syllabus) - online course from the University of Michigan.
 * [Ethics Unwrapped](https://ethicsunwrapped.utexas.edu/case-studies) - case studies from the University of Texas.
 
+## What Comes Next
+
+After this lesson, keep the ethics lens with you as you move forward:
+
+- Continue to [Defining Data](../03-defining-data/README.md) to connect ethical questions to concrete data types and data sources.
+- Then study [Statistics and Probability](../04-stats-and-probability/README.md) so you can reason more carefully about data-driven claims.
+- When you finish the introduction lessons, move into [Working With Data](../../2-Working-With-Data/README.md) and keep revisiting this ethics lesson whenever you handle sensitive, biased, or user-generated data.
+
 # Assignment 
 
 [Write A Data Ethics Case Study](assignment.md)

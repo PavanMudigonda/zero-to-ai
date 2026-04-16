@@ -44,3 +44,11 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Credits: Thanks to the original version of this quiz app: https://github.com/arpan45/simple-quiz-vue
+
+## What Comes Next
+
+This folder supports the imported course quizzes rather than the main learning flow:
+
+- Return to the [Microsoft course overview](../README.md) if you are studying the curriculum itself.
+- Use this folder only when you need to maintain quiz translations or run the quiz app locally.
+- For the learner-facing quiz collection in this repo, see the main [21-quizzes/README.md](../../../../21-quizzes/README.md).

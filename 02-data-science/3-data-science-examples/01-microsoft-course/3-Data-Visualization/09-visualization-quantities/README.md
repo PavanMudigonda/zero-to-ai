@@ -202,3 +202,11 @@ This first lesson has given you some information about how to use Matplotlib to 
 ## Assignment
 
 [Lines, Scatters, and Bars](assignment.md)
+
+## What Comes Next
+
+After learning to visualize quantities, continue building your chart selection instincts:
+
+- Move to [Visualizing Distributions](../10-visualization-distributions/README.md) to understand spread, density, and outliers more clearly.
+- Then continue through [Visualizing Proportions](../11-visualization-proportions/README.md) and [Visualizing Relationships](../12-visualization-relationships/README.md) to cover the main comparison patterns.
+- Finish the sequence with [Making Meaningful Visualizations](../13-meaningful-visualizations/README.md), where the emphasis shifts from plotting charts to making better decisions with them.

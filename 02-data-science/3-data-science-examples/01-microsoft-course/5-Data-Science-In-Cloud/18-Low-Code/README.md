@@ -238,6 +238,14 @@ Automated machine learning (AutoML), is the process of automating the time-consu
 Here you can see a detailed description of the best model that AutoML generated. You can also explore other modes generated in the Models tab. Take a few minutes to explore the models in the Explanations (preview button). Once you have chosen the model you want to use (here we will chose the best model selected by autoML), we will see how we can deploy it.
 
 ## 3. Low code/No Code model deployment and endpoint consumption
+
+## What Comes Next
+
+After completing the low-code path:
+
+- Continue to [Azure ML SDK](../19-Azure/README.md) to learn the code-first version of the same workflow.
+- Then move to [Data Science in the Real World](../../6-Data-Science-In-Wild/20-Real-World-Examples/README.md) to reconnect tooling choices with actual use cases and project contexts.
+- If this lesson felt too tool-heavy, revisit the [Introduction to Data Science in the Cloud](../17-Introduction/README.md) first so the service choices make more sense.
 ### 3.1 Model deployment
 
 The automated machine learning interface allows you to deploy the best model as a web service in a few steps. Deployment is the integration of the model so that it can make predictions based on new data and identify potential areas of opportunity. For this project, deployment to a web service means that medical applications will be able to consume the model to be able to make live predictions of their patients risk to get a heart attack.

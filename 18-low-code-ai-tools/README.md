@@ -12,6 +12,8 @@ Low-code AI tools democratize machine learning by enabling developers to build, 
 **Difficulty:** ⭐⭐⭐ Intermediate  
 **Prerequisites:** Phases 1-15, Basic Python, ML model training
 
+This phase is best used as a fast application-building module. It is practical and useful, but it is not meant to replace deeper engineering phases like MLOps, agents, or evaluation.
+
 ---
 
 ## 🎯 Learning Objectives
@@ -330,6 +332,12 @@ predictions = predict_model(best_model, data=test_data)
 ### Deployment Issues
 - **Space won't start:** Check requirements.txt, review build logs
 - **Out of memory:** Reduce model size, use quantization
+
+## What Comes Next
+
+- Continue to [../09-mlops/README.md](../09-mlops/README.md) if you want to productionize what you prototype here.
+- Continue to [../15-ai-agents/README.md](../15-ai-agents/README.md) if you want tool-using applications instead of UI-first wrappers.
+- Continue to [../31-ai-powered-dev-tools/README.md](../31-ai-powered-dev-tools/README.md) if you want faster developer workflows for building and shipping these apps.
 - **Slow cold starts:** Use smaller models, optimize imports
 
 ---
@@ -343,13 +351,13 @@ Test your baseline knowledge: [pre-quiz.md](pre-quiz.md)
 Verify your learning: [post-quiz.md](post-quiz.md)
 
 ### Assignment
-**End-to-End ML Application** (100 points)
+**End-to-End ML Application**
 
 Build and deploy a complete ML application:
-- Train model with AutoML (25 pts)
-- Create Gradio demo (25 pts)
-- Build Streamlit dashboard (25 pts)
-- Deploy to Hugging Face Spaces (25 pts)
+- Train a model with AutoML
+- Create a Gradio demo
+- Build a Streamlit dashboard
+- Deploy to Hugging Face Spaces
 
 Details: [assignment.md](assignment.md)
 
@@ -386,17 +394,17 @@ You've mastered this phase when you can:
 - [AutoML Comparison](https://epistasislab.github.io/tpot/)
 
 ### Community
-- [Gradio Discord](https://discord.gg/gradio)
+- [GitHub Discussions](https://github.com/zero-to-ai/discussions)
 - [Streamlit Forum](https://discuss.streamlit.io/)
-- [Hugging Face Discord](https://discord.gg/huggingface)
+- [Hugging Face Hub Docs](https://huggingface.co/docs/hub/index)
 
 ---
 
 ## 🎯 What's Next?
 
-After completing Phase 17:
+After this phase:
 
-1. **Phase 18:** Production ML Systems
+1. **Next Focus:** MLOps, production evaluation, or deployment-heavy phases
 2. **Advanced Topics:** Custom deployment strategies
 3. **Specializations:** Industry-specific applications
 4. **Projects:** Build your portfolio of deployed apps

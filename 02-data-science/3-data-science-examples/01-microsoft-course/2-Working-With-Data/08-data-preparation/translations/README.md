@@ -1,1 +1,8 @@
 <!--add translations to this folder-->
+
+## What Comes Next
+
+Use this folder only for translated versions of the data-preparation lesson:
+
+- Return to the main lesson at [../README.md](../README.md) if you are studying the material.
+- Keep translated versions synchronized with the source lesson so learners get the same sequence and next-step guidance.

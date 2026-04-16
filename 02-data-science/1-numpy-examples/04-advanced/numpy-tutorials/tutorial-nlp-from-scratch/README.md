@@ -66,3 +66,10 @@ free for the public to use and there are no copyrights reserved.
 | The Hope Speech                                  | Harvey Milk             | [Museum of Fine Arts, Boston](https://www.mfa.org/exhibitions/amalia-pica/transcript-harvey-milks-the-hope-speech)                 |
 | Speech at the time to Thrive Conference          | Ellen Page              | [Huffpost](https://www.huffpost.com/entry/time-to-thrive_b_4794251)                                                  |
 | I have a dream                                   | Martin Luther King      | [Marshall University](https://www.marshall.edu/onemarshallu/i-have-a-dream/)                    |
+
+## What Comes Next
+
+This folder documents the datasets used by the tutorial rather than teaching the workflow itself.
+
+1. Return to the parent tutorial folder and run the actual notebook or exercises that consume these resources.
+2. If you are studying the broader curriculum, move back to the surrounding NumPy or data-science track instead of treating this dataset note as a standalone lesson.

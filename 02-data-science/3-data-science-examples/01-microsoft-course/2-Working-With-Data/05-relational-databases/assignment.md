@@ -53,7 +53,7 @@ Create queries to return the following information:
 1. all airport names with their city and country
 1. all airports in London, United Kingdom
 
-## Rubric
+## Self-Review Guide
 
 | Exemplary | Adequate | Needs Improvement |
 | --------- | -------- | ----------------- |

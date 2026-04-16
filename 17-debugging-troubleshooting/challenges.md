@@ -104,7 +104,7 @@ Download: [UCI Adult Income dataset](https://archive.ics.uci.edu/ml/datasets/adu
 - ✅ Clear visualizations
 - ✅ Quantified improvements
 
-### Bonus (⭐)
+### Optional Stretch (⭐)
 - Detect label noise
 - Create automated data quality report
 - Build data validation pipeline
@@ -171,7 +171,7 @@ for i in range(800000, 1000000):
 - ✅ Results identical to original
 - ✅ Code is readable and documented
 
-### Bonus (⭐)
+### Optional Stretch (⭐)
 - Achieve 50x+ speedup
 - Use line_profiler
 - Create performance visualization
@@ -240,7 +240,7 @@ print(f"Score: {model.score(X, y):.3f}")
 - ✅ Test accuracy >85%
 - ✅ Learning curves look healthy
 
-### Bonus (⭐)
+### Optional Stretch (⭐)
 - Implement early stopping
 - Use GridSearchCV
 - Compare with other models
@@ -303,7 +303,7 @@ Use MNIST digits or similar multi-class dataset
 - ✅ Failure patterns identified
 - ✅ Actionable recommendations
 
-### Bonus (⭐)
+### Optional Stretch (⭐)
 - Implement one improvement
 - Show before/after comparison
 - Create error monitoring dashboard
@@ -370,7 +370,7 @@ Your model works perfectly in development but fails in production. Why?
 - ✅ Monitoring in place
 - ✅ Future prevention strategy
 
-### Bonus (⭐⭐)
+### Optional Stretch (⭐⭐)
 - Implement automated retraining
 - Create A/B testing framework
 - Build model versioning system
@@ -450,7 +450,7 @@ Build a comprehensive debugging toolkit for ML pipelines!
 - ✅ Generates useful reports
 - ✅ Well documented
 
-### Bonus (⭐⭐⭐)
+### Optional Stretch (⭐⭐⭐)
 - Support PyTorch/TensorFlow
 - Add interactive visualizations
 - Create CLI tool

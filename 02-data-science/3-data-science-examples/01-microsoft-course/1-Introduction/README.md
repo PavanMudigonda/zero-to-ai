@@ -15,3 +15,8 @@ In these lessons, you will discover how Data Science is defined and learn about 
 ### Credits
 
 These lessons were written with ❤️ by [Nitya Narasimhan](https://twitter.com/nitya) and [Dmitry Soshnikov](https://twitter.com/shwars).
+
+## What Comes Next
+
+- Continue to [../2-Working-With-Data/README.md](../2-Working-With-Data/README.md) once the definitions, ethics, and statistics basics feel clear.
+- Return to [../README.md](../README.md) if you want the broader imported-course roadmap.

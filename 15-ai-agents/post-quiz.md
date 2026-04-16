@@ -272,18 +272,18 @@ B) They can hallucinate and make mistakes
 
 ---
 
-## Scoring Guide
+## Self-Check Guide
 
 ### Basic Questions (1-10)
-- **0-5 correct:** Review the notebooks - some concepts need reinforcement
-- **6-7 correct:** Good understanding - practice with challenges
-- **8-9 correct:** Strong grasp of concepts - ready for production
-- **10 correct:** Excellent! You've mastered the fundamentals
+- **0-5 correct:** Review the notebooks; some concepts still need reinforcement.
+- **6-7 correct:** Good understanding; practice with challenges next.
+- **8-9 correct:** Strong grasp of concepts and ready for more realistic builds.
+- **10 correct:** Excellent command of the fundamentals.
 
 ### Advanced Questions (11-15)
-- **0-2 correct:** Focus on advanced notebooks and frameworks
-- **3-4 correct:** Solid advanced knowledge - keep practicing
-- **5 correct:** Expert level - ready to build complex agents!
+- **0-2 correct:** Focus on the advanced notebooks and frameworks.
+- **3-4 correct:** Solid advanced knowledge; keep practicing.
+- **5 correct:** Strong advanced understanding and ready for complex agent builds.
 
 ---
 
@@ -316,7 +316,7 @@ Based on your score:
 **If you scored below 5/10:**
 - 🔄 Re-read notebooks from the beginning
 - ✏️ Type out all code examples (don't just read)
-- 🤔 Ask questions in Discord/forums
+- 🤔 Post focused questions in GitHub Discussions or write down the exact point of confusion
 - 📝 Take notes on key concepts
 - 🎯 Focus on notebooks 1-3 first
 

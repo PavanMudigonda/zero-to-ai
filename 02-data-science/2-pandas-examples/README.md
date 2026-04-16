@@ -2,6 +2,8 @@
 
 This directory contains a comprehensive collection of pandas tutorials, exercises, and real-world projects, consolidated from multiple sources and organized for progressive learning.
 
+Use this folder to become comfortable with messy real-world tables. The goal is not just learning pandas syntax. The goal is being able to inspect, clean, join, summarize, and explain tabular data without getting lost.
+
 ## 📁 Directory Structure
 
 ### 01-basics/
@@ -245,6 +247,13 @@ Time: 1-2 hours daily
 Goal: Apply techniques to real-world scenarios
 ```
 
+## How To Use This Folder Well
+
+- Finish one complete cleaning-and-analysis workflow before trying to browse every notebook.
+- Prioritize missing data, grouping, joins, time handling, and validation mistakes because those show up constantly in real projects.
+- Use the exercises for repetition and the real-world projects for synthesis.
+- Return here whenever later phases expose weak data-cleaning or feature-preparation habits.
+
 ---
 
 ## 📊 Content Statistics
@@ -334,6 +343,12 @@ print(df)
    - Use Kaggle datasets for practice
    - Analyze your own data (fitness, finance, etc.)
    - Contribute to open-source projects
+
+## What Comes Next
+
+- Continue to [../4-matplotlib/README.md](../4-matplotlib/README.md) to turn cleaned data into clear plots.
+- Continue to [../5-scikit-learn/README.md](../5-scikit-learn/README.md) to build models on top of the workflows you practice here.
+- Continue to [../../28-practical-data-science/README.md](../../28-practical-data-science/README.md) later when you want more project-oriented applied work.
 
 ---
 

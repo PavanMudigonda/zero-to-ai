@@ -2,6 +2,8 @@
 
 This folder contains practical examples and implementations from Kevin Murphy's "Machine Learning: A Probabilistic Perspective" (MLPP). The book provides a comprehensive introduction to machine learning from a unified probabilistic perspective.
 
+Use this folder when you want a Bayesian and probabilistic view of ML rather than a purely optimization-first or API-first perspective. It is especially useful if uncertainty, latent variables, graphical models, or sampling methods keep showing up in your interests.
+
 ## 📚 Overview
 
 The examples are organized by major topics from the book, focusing on hands-on implementation of key concepts and algorithms.
@@ -74,6 +76,12 @@ pip install numpy scipy matplotlib scikit-learn pandas seaborn
 - Practical examples
 - Exercises
 
+## How To Use This Folder Well
+
+- Start with the foundations and regression/classification sections before jumping to MCMC or graphical models.
+- Focus on probabilistic reasoning, not just on reproducing code.
+- Use this folder when you want deeper intuition for uncertainty, inference, and latent-variable modeling.
+
 ## 📖 Book Reference
 
 Murphy, Kevin P. "Machine Learning: A Probabilistic Perspective." MIT Press, 2012.
@@ -95,6 +103,12 @@ The PDF is available in: [ML-Machine-Learning-A-Probabilistic-Perspective.pdf](M
 - Compare implementations with scikit-learn and other ML libraries
 - Follow the suggested order for foundational concepts, but feel free to explore topics independently
 - Each notebook is self-contained with theory, code, and visualizations
+
+## What Comes Next
+
+- Continue to [../advanced/README.md](../advanced/README.md) if you want research-level probabilistic theory next.
+- Continue to [../islp-book/README.md](../islp-book/README.md) if you want a more classical statistical complement.
+- Return to [../../16-model-evaluation/README.md](../../16-model-evaluation/README.md) or [../../28-practical-data-science/README.md](../../28-practical-data-science/README.md) when you want to connect these ideas to applied work.
 
 ## 📊 Coverage Summary
 

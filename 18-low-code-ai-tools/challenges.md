@@ -1,6 +1,6 @@
 # Challenges: Low-Code AI Tools
 
-**Phase 17: Low-Code AI Tools**
+**Phase 18: Low-Code AI Tools**
 
 Test your skills with these progressive challenges!
 
@@ -27,7 +27,7 @@ Build a simple Gradio interface for any pre-trained Hugging Face model.
 - ✅ Examples work properly
 - ✅ Professional appearance
 
-### Bonus:
+### Optional Stretch:
 - Add multiple models in one interface
 - Include visualization of outputs
 - Add error handling for edge cases
@@ -59,7 +59,7 @@ Create a Streamlit dashboard for exploratory data analysis.
 - ✅ Professional layout
 - ✅ Fast performance (< 2s updates)
 
-### Bonus:
+### Optional Stretch:
 - Add statistical tests
 - Include outlier detection
 - Implement clustering visualization
@@ -92,7 +92,7 @@ Compare 3 AutoML platforms on the same dataset.
 - ✅ Clear winner identified
 - ✅ Insights documented
 
-### Bonus:
+### Optional Stretch:
 - Test on multiple datasets
 - Include cost analysis (compute time)
 - Analyze model complexity
@@ -124,7 +124,7 @@ Build a Gradio interface that lets users choose between multiple models.
 - ✅ Comparison mode works
 - ✅ Performance metrics shown
 
-### Bonus:
+### Optional Stretch:
 - Add SHAP explanations
 - Include model training history
 - Show feature importance per model
@@ -167,7 +167,7 @@ Create a complete deployment pipeline from training to production.
 - ✅ Monitoring dashboard functional
 - ✅ Full documentation
 
-### Bonus:
+### Optional Stretch:
 - Docker containerization
 - Load balancing
 - A/B testing infrastructure
@@ -199,7 +199,7 @@ Build a real-time ML application with streaming data.
 - ✅ Stable performance
 - ✅ Proper error handling
 
-### Bonus:
+### Optional Stretch:
 - Distributed processing
 - Data buffering
 - Concept drift detection
@@ -275,7 +275,7 @@ Build a production-ready ML application with all best practices.
 - ✅ Handles 1000+ requests/min
 - ✅ 99.9% uptime
 
-### Bonus:
+### Optional Stretch:
 - Multi-region deployment
 - ML pipeline orchestration
 - Feature store integration
@@ -408,9 +408,9 @@ Share your solutions and get feedback:
 
 ---
 
-## ✅ Submission Guidelines
+## ✅ Share Your Work
 
-For each challenge, submit:
+For each challenge, try to keep:
 
 1. **Code Repository**
    - Well-organized code

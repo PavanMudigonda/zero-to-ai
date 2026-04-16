@@ -45,3 +45,11 @@ All the topics in this lesson can help identify missing or inconsistent values, 
 ## Assignment
 
 [Exploring for answers](assignment.md)
+
+## What Comes Next
+
+After analyzing the data, the next skill is communicating what you found clearly:
+
+- Continue to [Communication](../16-communication/README.md).
+- Revisit [Data Visualization](../../3-Data-Visualization/README.md) if you want better plots to support your exploratory analysis.
+- When you want to strengthen the technical side of analysis, loop back to [Working With Data](../../2-Working-With-Data/README.md) for more practice with querying, cleaning, and transformation.

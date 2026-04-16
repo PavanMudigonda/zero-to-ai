@@ -891,7 +891,7 @@ Connected Papers builds a graph visualization of papers related to any seed pape
 
 **Pricing**: Free (5 graphs/month), Academic $3/month (unlimited).
 
-### Bonus: Other Research Tools Worth Knowing
+### Optional: Other Research Tools Worth Knowing
 
 | Tool | Purpose | URL |
 |---|---|---|

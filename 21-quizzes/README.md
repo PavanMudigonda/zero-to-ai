@@ -2,7 +2,9 @@
 
 ## Overview
 
-This directory contains pre- and post-quizzes for each phase of the Zero-to-AI course. Quizzes help learners:
+This directory is the quiz hub for the Zero-to-AI course. It does **not** yet contain quizzes for every phase.
+
+Use this folder as a growing assessment library while the wider quiz system is being built out. Quizzes help learners:
 
 - **Assess prior knowledge** before starting a phase (pre-quiz)
 - **Validate learning outcomes** after completing a phase (post-quiz)
@@ -21,32 +23,30 @@ Each quiz contains:
 
 | Phase | Topic | Pre-Quiz | Post-Quiz |
 |-------|-------|----------|-----------|
-| 0 | Prerequisites | ✅ | ✅ |
-| 1 | Python Foundations | ✅ | ✅ |
-| 2 | Math for ML | ✅ | ✅ |
-| 3 | NumPy & Pandas | ✅ | ✅ |
-| 4 | Data Visualization | ✅ | ✅ |
-| 5 | Neural Networks | ✅ | ✅ |
-| 6 | Activation Functions | ✅ | ✅ |
-| 7 | RAG Systems | ✅ | ✅ |
-| 8 | LangChain | ✅ | ✅ |
-| 9 | Vector Databases | ✅ | ✅ |
-| 10 | Prompt Engineering | ✅ | ✅ |
-| 11 | Fine-tuning | ✅ | ✅ |
-| 12 | Deployment | ✅ | ✅ |
-| 13 | Evaluation | ✅ | ✅ |
+| 15 | AI Agents | ✅ | ✅ |
+| 16 | Model Evaluation | ✅ | ✅ |
+| 17 | Debugging & Troubleshooting | ✅ | ✅ |
+| 18 | Low-Code AI Tools | ✅ | ✅ |
+
+## Planned Coverage
+
+The long-term goal is phase-level pre- and post-quizzes across the core curriculum, but that work is still in progress. Until then:
+
+- Treat quizzes as bonus mastery checks where available.
+- Do not assume that a missing quiz means a phase is incomplete.
+- Use assignments, challenges, and notebook exercises as your main self-checks in phases without quizzes.
 
 ## How to Use
 
 ### For Learners
 
 1. **Before starting a phase:**
-   - Take the **pre-quiz** to assess your baseline knowledge
+   - Take the **pre-quiz** if one exists to assess your baseline knowledge
    - Review your results to identify what to focus on
    - Don't worry if you score low - that's expected!
 
 2. **After completing a phase:**
-   - Take the **post-quiz** to validate your learning
+   - Take the **post-quiz** if one exists to validate your learning
    - Compare pre/post scores to measure progress
    - Review incorrect answers for deeper understanding
 
@@ -54,33 +54,21 @@ Each quiz contains:
    - Retake quizzes after revisiting content
    - Aim for 90%+ on post-quizzes before moving forward
 
-### For Instructors
+### For Maintainers
 
-- Use pre-quiz scores to adapt teaching to class needs
-- Track post-quiz scores to measure learning effectiveness
+- Use pre-quiz results to identify weak spots in the curriculum
+- Track post-quiz results to see whether explanations and notebooks are landing
 - Identify common misconceptions from wrong answers
-- Update content based on quiz performance patterns
+- Update quiz wording when content or phase ordering changes
 
 ## Quiz Platforms
 
-Quizzes are available in multiple formats:
+Current quizzes in this folder are Markdown-based. Additional formats may be added later.
 
-### 1. Google Forms (Recommended)
-- **Pros:** Easy to use, automatic grading, analytics
-- **Access:** Links in each phase's README
-
-### 2. Markdown Files
-- **Pros:** Self-paced, offline access
+### Current Format
+- **Markdown Files**
+- **Pros:** Self-paced, easy to edit, works offline
 - **Access:** This directory (`*.md` files)
-
-### 3. Jupyter Notebooks
-- **Pros:** Interactive, code execution
-- **Access:** This directory (`*.ipynb` files)
-
-### 4. Quiz Apps
-- **Kahoot:** Classroom game mode
-- **Quizlet:** Flashcard study mode
-- **Moodle:** LMS integration
 
 ## Quiz Guidelines
 
@@ -121,7 +109,7 @@ Quizzes are available in multiple formats:
 
 ## Quiz Creation Template
 
-For instructors creating new quizzes:
+For maintainers creating new quizzes:
 
 ```markdown
 # Phase X: [Topic] - [Pre/Post] Quiz
@@ -185,8 +173,8 @@ To add/improve quizzes:
 4. Submit pull request with:
    - Quiz markdown file
    - Answer key
-   - Google Form link
-   - Sample analytics
+   - Optional hosted form link if you create one
+   - Sample analytics if available
 
 ## Best Practices
 
@@ -213,4 +201,12 @@ To add/improve quizzes:
 
 ---
 
-**Remember:** Quizzes are learning tools, not gatekeepers. Use them to guide improvement, not discourage learners! 📝✨
+**Remember:** Quizzes are learning tools, not gatekeepers. Use them to guide improvement, not discourage learners.
+
+## What Comes Next
+
+After using the quizzes in this folder:
+
+- Return to the phase you are currently studying and revisit the exact topics you missed.
+- Use assignments, challenges, and notebooks as the main mastery checks when a phase has no quiz yet.
+- Follow the [master study guide](../docs/MASTER_STUDY_GUIDE.md) for overall navigation instead of treating this folder as a separate phase.

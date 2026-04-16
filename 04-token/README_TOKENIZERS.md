@@ -418,7 +418,7 @@ After completing this module:
 ### Community
 
 - [Hugging Face Forum](https://discuss.huggingface.co)
-- [Discord Community](https://discord.gg/hugging-face)
+- [GitHub Discussions](https://github.com/zero-to-ai/discussions)
 - [GitHub Issues](https://github.com/huggingface/tokenizers/issues)
 
 ## ⏱️ Time Estimates

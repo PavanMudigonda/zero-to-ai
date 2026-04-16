@@ -25,13 +25,13 @@ Now study the visualization that is rendered in the browser and answer the follo
  * What are the _limitations_ of the visualization (i.e., what insight did you not get?)
  * If you could get the raw data, what _alternative visualizations_ would you create, and why?
 
-`Bonus Points:`
+`Optional Stretch:`
 Apply for an account - and login when accepted.
  * Use the _Launch Hub_ option to open the raw data in a Notebook.
  * Explore the data interactively, and implement the alternative visualizations you thought of.
  * Now analyze your custom visualizations - were you able to derive the insights you missed before?
 
-## Rubric
+## Self-Review Guide
 
 Exemplary | Adequate | Needs Improvement
 --- | --- | -- |
