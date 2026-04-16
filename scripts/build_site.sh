@@ -97,6 +97,9 @@ mkdir -p "$CURRICULUM_DIR" "$GENERATED_DIR"
 cp -f "$REPO_ROOT/llms.txt" "$DOCS_DIR/_extras/llms.txt" 2>/dev/null || true
 cp -f "$REPO_ROOT/llms-full.txt" "$DOCS_DIR/_extras/llms-full.txt" 2>/dev/null || true
 
+# Copy social preview into _static so OG image is served at /_static/social-preview.svg
+cp -f "$DOCS_DIR/assets/social-preview.svg" "$DOCS_DIR/_static/social-preview.svg" 2>/dev/null || true
+
 for phase in "${PHASES[@]}"; do
   src="${phase%%:*}"
   target="${phase##*:}"

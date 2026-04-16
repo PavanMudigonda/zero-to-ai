@@ -35,6 +35,9 @@ html_meta = {
     "og:type": "website",
     "og:url": "https://zero-to-ai.dev/",
     "og:site_name": "Zero to AI",
+    "og:image": "https://zero-to-ai.dev/_static/social-preview.svg",
+    "og:image:alt": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
+    "og:locale": "en_US",
     # Twitter Card
     "twitter:card": "summary_large_image",
     "twitter:title": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
@@ -42,6 +45,7 @@ html_meta = {
         "Open-source AI/ML curriculum from Python basics to production agents. "
         "950+ hands-on Jupyter notebooks."
     ),
+    "twitter:image": "https://zero-to-ai.dev/_static/social-preview.svg",
 }
 
 # -- General configuration ---------------------------------------------------
