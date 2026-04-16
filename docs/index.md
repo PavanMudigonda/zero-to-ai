@@ -329,6 +329,7 @@ Python, NumPy, Pandas, machine learning, deep learning, transformers, LLMs, RAG,
 :hidden:
 :caption: Roadmaps
 
+Study Guide <MASTER_STUDY_GUIDE>
 Overview <generated/roadmaps/01_overview>
 Core Systems <generated/roadmaps/02_core_systems>
 Advanced Topics <generated/roadmaps/03_advanced_topics>

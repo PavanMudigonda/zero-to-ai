@@ -1,0 +1,34 @@
+﻿2026-04-16T19:23:57.1688547Z Current runner version: '2.333.1'
+2026-04-16T19:23:57.1713174Z ##[group]Runner Image Provisioner
+2026-04-16T19:23:57.1714162Z Hosted Compute Agent
+2026-04-16T19:23:57.1714733Z Version: 20260213.493
+2026-04-16T19:23:57.1715429Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-16T19:23:57.1716246Z Build Date: 2026-02-13T00:28:41Z
+2026-04-16T19:23:57.1716925Z Worker ID: {2baa5be0-e819-4285-a90c-e9b191722b46}
+2026-04-16T19:23:57.1717645Z Azure Region: westcentralus
+2026-04-16T19:23:57.1718293Z ##[endgroup]
+2026-04-16T19:23:57.1719578Z ##[group]Operating System
+2026-04-16T19:23:57.1720136Z Ubuntu
+2026-04-16T19:23:57.1721049Z 24.04.4
+2026-04-16T19:23:57.1721564Z LTS
+2026-04-16T19:23:57.1722055Z ##[endgroup]
+2026-04-16T19:23:57.1722624Z ##[group]Runner Image
+2026-04-16T19:23:57.1723269Z Image: ubuntu-24.04
+2026-04-16T19:23:57.1723817Z Version: 20260406.80.1
+2026-04-16T19:23:57.1724986Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260406.80/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-16T19:23:57.1726737Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260406.80
+2026-04-16T19:23:57.1727742Z ##[endgroup]
+2026-04-16T19:23:57.1728898Z ##[group]GITHUB_TOKEN Permissions
+2026-04-16T19:23:57.1731004Z Contents: read
+2026-04-16T19:23:57.1731620Z Deployments: write
+2026-04-16T19:23:57.1732269Z Metadata: read
+2026-04-16T19:23:57.1732832Z ##[endgroup]
+2026-04-16T19:23:57.1735327Z Secret source: Actions
+2026-04-16T19:23:57.1736136Z Prepare workflow directory
+2026-04-16T19:23:57.2165078Z Prepare all required actions
+2026-04-16T19:23:57.2203275Z Getting action download info
+2026-04-16T19:23:57.6929377Z Download action repository 'actions/checkout@v6.0.2' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-04-16T19:23:57.8280019Z Download action repository 'actions/setup-python@v6.2.0' (SHA:a309ff8b426b58ec0e2a45f0f869d46889d02405)
+2026-04-16T19:23:57.9059737Z Download action repository 'actions/setup-node@v6.3.0' (SHA:53b83947a5a98c8d113130e565377fae1a50d02f)
+2026-04-16T19:23:58.0053895Z Download action repository 'cloudflare/wrangler-action@v3.14.1' (SHA:da0e0dfe58b7a431659754fdf3f186c529afbe65)
+2026-04-16T19:23:58.8323264Z Complete job name: build-and-deploy

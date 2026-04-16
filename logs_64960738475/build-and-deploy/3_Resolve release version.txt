@@ -1,0 +1,13 @@
+﻿2026-04-16T19:24:08.6202619Z ##[group]Run TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+2026-04-16T19:24:08.6203245Z [36;1mTAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")[0m
+2026-04-16T19:24:08.6203626Z [36;1mif [ -z "$TAG" ]; then[0m
+2026-04-16T19:24:08.6203889Z [36;1m  TAG="v0.1.0"[0m
+2026-04-16T19:24:08.6204119Z [36;1mfi[0m
+2026-04-16T19:24:08.6204336Z [36;1mVERSION="${TAG#v}"[0m
+2026-04-16T19:24:08.6204614Z [36;1mecho "version=$VERSION" >> "$GITHUB_OUTPUT"[0m
+2026-04-16T19:24:08.6204937Z [36;1mecho "Resolved version: $VERSION"[0m
+2026-04-16T19:24:08.6231824Z shell: /usr/bin/bash -e {0}
+2026-04-16T19:24:08.6232119Z env:
+2026-04-16T19:24:08.6232362Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-16T19:24:08.6232682Z ##[endgroup]
+2026-04-16T19:24:08.6323281Z Resolved version: 0.1.0

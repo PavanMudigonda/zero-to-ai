@@ -1,0 +1,53 @@
+﻿2026-04-16T19:54:24.3480587Z ##[group]Run cloudflare/wrangler-action@v3.14.1
+2026-04-16T19:54:24.3480944Z with:
+2026-04-16T19:54:24.3481354Z   apiToken: ***
+2026-04-16T19:54:24.3481617Z   accountId: ***
+2026-04-16T19:54:24.3481960Z   command: pages deploy site --project-name=zero-to-ai --commit-dirty=true
+2026-04-16T19:54:24.3482351Z   quiet: false
+2026-04-16T19:54:24.3482554Z env:
+2026-04-16T19:54:24.3482767Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-16T19:54:24.3483114Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-16T19:54:24.3483555Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib/pkgconfig
+2026-04-16T19:54:24.3483972Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-16T19:54:24.3484349Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-16T19:54:24.3484727Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.13/x64
+2026-04-16T19:54:24.3485099Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.13/x64/lib
+2026-04-16T19:54:24.3485424Z ##[endgroup]
+2026-04-16T19:54:24.4309550Z ##[group]🔍 Checking for existing Wrangler installation
+2026-04-16T19:54:24.4352010Z [command]/opt/hostedtoolcache/node/24.14.1/x64/bin/npx --no-install wrangler --version
+2026-04-16T19:54:25.5648453Z npm error npx canceled due to missing packages and no YES option: ["wrangler@4.83.0"]
+2026-04-16T19:54:25.5655976Z npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-04-16T19_54_24_491Z-debug-0.log
+2026-04-16T19:54:25.6134991Z ⚠️ Wrangler not found or version is incompatible. Installing...
+2026-04-16T19:54:25.6135888Z ##[endgroup]
+2026-04-16T19:54:25.6136593Z ##[group]📥 Installing Wrangler
+2026-04-16T19:54:25.6153244Z [command]/opt/hostedtoolcache/node/24.14.1/x64/bin/npm i wrangler@3.90.0
+2026-04-16T19:54:31.4785618Z npm warn deprecated rollup-plugin-inject@3.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-inject.
+2026-04-16T19:54:31.4787150Z npm warn deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
+2026-04-16T19:54:40.5521061Z 
+2026-04-16T19:54:40.5521973Z added 75 packages, and audited 76 packages in 15s
+2026-04-16T19:54:40.5522443Z 
+2026-04-16T19:54:40.5523225Z 11 packages are looking for funding
+2026-04-16T19:54:40.5523707Z   run `npm fund` for details
+2026-04-16T19:54:40.6018202Z 
+2026-04-16T19:54:40.6018901Z 4 vulnerabilities (2 moderate, 2 high)
+2026-04-16T19:54:40.6019305Z 
+2026-04-16T19:54:40.6019447Z To address all issues, run:
+2026-04-16T19:54:40.6019735Z   npm audit fix --force
+2026-04-16T19:54:40.6020628Z 
+2026-04-16T19:54:40.6020751Z Run `npm audit` for details.
+2026-04-16T19:54:40.6422853Z ✅ Wrangler installed
+2026-04-16T19:54:40.6423506Z ##[endgroup]
+2026-04-16T19:54:40.6426679Z ##[group]🚀 Running Wrangler Commands
+2026-04-16T19:54:40.6439551Z [command]/opt/hostedtoolcache/node/24.14.1/x64/bin/npx wrangler pages deploy site --project-name=zero-to-ai --commit-dirty=true
+2026-04-16T19:54:47.4318797Z Uploading... (3501/4106)
+2026-04-16T19:54:49.5512390Z Uploading... (3702/4106)
+2026-04-16T19:54:50.3489371Z Uploading... (3904/4106)
+2026-04-16T19:54:52.8040708Z Uploading... (4106/4106)
+2026-04-16T19:54:52.8041814Z ✨ Success! Uploaded 605 files (3501 already uploaded) (6.15 sec)
+2026-04-16T19:54:52.8042326Z 
+2026-04-16T19:54:53.7144672Z ✨ Uploading _headers
+2026-04-16T19:54:53.7145250Z ✨ Uploading _redirects
+2026-04-16T19:55:00.2919775Z 🌎 Deploying...
+2026-04-16T19:55:11.7571457Z ✨ Deployment complete! Take a peek over at https://c269a3fb.zero-to-ai.pages.dev
+2026-04-16T19:55:11.9463996Z ##[endgroup]
+2026-04-16T19:55:11.9464846Z 🏁 Wrangler Action completed
