@@ -60,4 +60,5 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy site --project-name=zero-to-ai --commit-dirty=true
+          workingDirectory: docs
+          command: pages deploy ../site --project-name=zero-to-ai --commit-dirty=true
