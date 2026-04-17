@@ -4,5 +4,8 @@
   "description": "Node-based CLI dependencies used by the Zero to AI developer tools lessons.",
   "devDependencies": {
     "opencode-ai": "^1.4.3"
+  },
+  "dependencies": {
+    "@pavanmudigonda/pwai": "^0.2.3"
   }
 }
