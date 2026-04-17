@@ -60,5 +60,6 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          wranglerVersion: latest
-          command: pages deploy site --project-name=zero-to-ai --commit-dirty=true
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: "4"
+          command: pages deploy site --project-name=zero-to-ai
