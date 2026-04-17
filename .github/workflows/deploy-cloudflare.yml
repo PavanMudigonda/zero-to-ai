@@ -56,9 +56,9 @@ jobs:
           SITE_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.14.1
+        uses: cloudflare/wrangler-action@v3.15.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: docs
-          command: pages deploy ../site --project-name=zero-to-ai --commit-dirty=true
+          wranglerVersion: latest
+          command: pages deploy site --project-name=zero-to-ai --commit-dirty=true
