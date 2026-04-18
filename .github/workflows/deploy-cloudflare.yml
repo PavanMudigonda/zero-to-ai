@@ -56,6 +56,7 @@ jobs:
           sphinx-build -b html -D release="${SITE_VERSION}" docs site
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
           SITE_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Upload generated site artifact
