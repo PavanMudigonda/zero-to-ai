@@ -1,0 +1,44 @@
+# Cloudflare Pages custom headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# ── Global: security & SEO headers on every response ──────────────
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  X-Robots-Tag: index, follow
+
+# ── Static assets: aggressive caching ─────────────────────────────
+# Sphinx fingerprints CSS/JS with hashes, so long cache is safe
+/_static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Font files
+/_static/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Images
+/_images/*
+  Cache-Control: public, max-age=604800
+
+# ── HTML pages: short cache so updates propagate quickly ──────────
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# ── Sitemap and discovery files: re-fetched frequently ────────────
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+  X-Robots-Tag: noindex
+
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/llms.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
+
+/llms-full.txt
+  Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8

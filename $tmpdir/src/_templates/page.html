@@ -1,0 +1,111 @@
+{% extends "furo/page.html" %}
+
+{% block extrahead %}
+{{ super() }}
+{% include "analytics.html" %}
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  document.querySelectorAll(".theme-toggle").forEach(function(btn) {
+    if (!btn.getAttribute("aria-label")) {
+      btn.setAttribute("aria-label", "Toggle light/dark/auto theme");
+      btn.setAttribute("title", "Toggle light/dark/auto theme");
+    }
+  });
+});
+</script>
+{% endblock %}
+
+{% block footer %}
+{#- Furo's default footer with prev/next nav -#}
+<div class="related-pages">
+  {% if next -%}
+    <a class="next-page" href="{{ next.link|e }}">
+      <div class="page-info">
+        <div class="context">
+          <span>Next</span>
+        </div>
+        <div class="title">{{ next.title }}</div>
+      </div>
+      <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+    </a>
+  {%- endif %}
+  {% if prev -%}
+    <a class="prev-page" href="{{ prev.link|e }}">
+      <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+      <div class="page-info">
+        <div class="context">
+          <span>Previous</span>
+        </div>
+        <div class="title">{{ prev.title }}</div>
+      </div>
+    </a>
+  {%- endif %}
+</div>
+<div class="bottom-of-page">
+  <div class="left-details">
+    {%- if show_copyright %}
+    <div class="copyright">
+      {% trans copyright=copyright|e -%}
+        Copyright &#169; {{ copyright }}
+      {%- endtrans %}
+    </div>
+    {%- endif %}
+    <span class="site-version">v{{ release }}</span>
+  </div>
+  <div class="right-details">
+    {% if theme_footer_icons -%}
+    <div class="icons">
+      {% for icon_dict in theme_footer_icons -%}
+      <a class="muted-link {{ icon_dict.class }}" href="{{ icon_dict.url }}" aria-label="{{ icon_dict.name }}">
+        {{- icon_dict.html -}}
+      </a>
+      {% endfor %}
+    </div>
+    {%- endif %}
+  </div>
+</div>
+{% endblock footer %}
+
+{% block content %}
+<div class="resume-learning-banner" data-resume-learning data-checklist-url="{{ pathto('checklist') }}" data-study-guide-url="{{ pathto('MASTER_STUDY_GUIDE') }}" hidden>
+  <div>
+    <span class="resume-learning-banner__eyebrow">Resume learning</span>
+    <p class="resume-learning-banner__title">Your saved path and progress are available on this device.</p>
+    <p class="resume-learning-banner__copy" data-resume-learning-copy></p>
+    <div class="resume-learning-banner__progress" data-resume-progress hidden>
+      <div class="resume-learning-banner__progress-bar" aria-hidden="true">
+        <span class="resume-learning-banner__progress-fill" data-resume-progress-fill></span>
+      </div>
+      <span class="resume-learning-banner__progress-label" data-resume-progress-label></span>
+    </div>
+    <div class="resume-learning-banner__recent" data-resume-recent hidden>
+      <span class="resume-learning-banner__recent-label">Recently completed</span>
+      <ul class="resume-learning-banner__recent-list" data-resume-recent-list></ul>
+    </div>
+  </div>
+  <div class="resume-learning-banner__actions">
+    <a class="resume-learning-banner__link" href="{{ pathto('checklist') }}" data-resume-checklist-link>Resume checklist</a>
+    <a class="resume-learning-banner__link" href="{{ pathto('MASTER_STUDY_GUIDE') }}" data-study-guide-link>Open study guide</a>
+  </div>
+</div>
+{% if notebook_launchers %}
+<div class="notebook-launchers" role="group" aria-label="Notebook launch options">
+  <span class="notebook-launchers__label">Run this notebook:</span>
+  <a class="notebook-launchers__link notebook-launchers__link--colab"
+     href="{{ notebook_launchers.colab_url }}" target="_blank" rel="noopener">
+    <svg class="notebook-launchers__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M16.9414 4.9757a7.033 7.033 0 0 0-4.9308 2.0646 7.033 7.033 0 0 0-.1232 9.8068l2.395-2.395a3.6455 3.6455 0 0 1 5.1497-5.1478l2.397-2.3989a7.033 7.033 0 0 0-4.8877-1.9297zM7.07 4.9855a7.033 7.033 0 0 0-4.8878 1.9316l2.3911 2.3911a3.6434 3.6434 0 0 1 5.0227.1271l1.7341-2.9737-.0997-.0802A7.033 7.033 0 0 0 7.07 4.9855zm15.0093 2.1721l-2.3892 2.3911a3.6455 3.6455 0 0 1-5.1497 5.1497l-2.4067 2.4068a7.0362 7.0362 0 0 0 9.9456-9.9476zM1.932 7.1674a7.033 7.033 0 0 0-.002 9.6816l2.397-2.397a3.6434 3.6434 0 0 1-.004-4.8916zm7.664 7.4235c-1.38 1.3816-3.5863 1.411-5.0168.1134l-2.397 2.395c2.4693 2.3328 6.263 2.5753 9.0072.5455l.1368-.1115z" fill="#E8710A"/>
+    </svg>
+    Open in Colab
+  </a>
+  <a class="notebook-launchers__link notebook-launchers__link--kaggle"
+     href="{{ notebook_launchers.kaggle_url }}" target="_blank" rel="noopener">
+    <svg class="notebook-launchers__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18.825 23.859c-.022.092-.117.141-.281.141H14.47c-.164 0-.31-.062-.436-.185l-4.99-6.107-1.378 1.266v4.884c0 .164-.082.246-.246.246H4.91c-.164 0-.246-.082-.246-.246V.246C4.664.082 4.746 0 4.91 0h2.51c.164 0 .246.082.246.246v14.254l6.154-6.425c.164-.164.328-.246.492-.246h3.144c.117 0 .2.044.246.133.047.088.04.175-.021.261l-6.561 6.599 6.834 8.645c.071.117.092.211.062.282z" fill="currentColor"/>
+    </svg>
+    Open in Kaggle
+  </a>
+</div>
+{% endif %}
+{{ super() }}
+{% endblock %}

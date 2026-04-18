@@ -113,31 +113,7 @@ html_extra_path = ["_extras"]
 
 # Suppress "document not in any toctree" for curriculum notebooks/sub-pages
 # that are reachable via links but not explicitly listed in toctrees.
-exclude_patterns = [
-    "_build",
-    "Thumbs.db",
-    ".DS_Store",
-    "**/.ipynb_checkpoints",
-    "**/__pycache__",
-    # Title-less documents that generate thousands of warnings
-    "**/_sidebar.md",
-    "**/Untitled.ipynb",
-    "**/Test.ipynb",
-    # Duplicate .md/.ipynb pairs — keep the notebook, drop the markdown
-    "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/assignment.md",
-    "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/assignment.md",
-    "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/assignment.md",
-    # Translation directories — non-English content with broken relative image paths
-    "**/translations",
-    # Source markdown files that are copied into generated/ by build_site.sh
-    # Orphaned docs/ copies of deleted root files
-    "COMPARISON_MATRICES.md",
-    "CONTRIBUTING.md",
-    "LICENSE.md",
-    "REFERENCES.md",
-    "SUPPORT.md",
-    "setup.md",
-]
+exclude_patterns = []
 
 # -- Options for HTML output -------------------------------------------------
 html_theme = "furo"
