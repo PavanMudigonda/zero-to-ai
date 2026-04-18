@@ -19,6 +19,16 @@
 {% set social_image = default_social_image if default_social_image is defined else "https://zero-to-ai.dev/_static/social-preview.svg" %}
 {% set social_image_alt = default_social_image_alt if default_social_image_alt is defined else "Zero to AI social preview" %}
 {% set page_url = pageurl if pageurl is defined else none %}
+{% set repo_url_value = repo_url if repo_url is defined else "https://github.com/PavanMudigonda/zero-to-ai" %}
+{% set author_profile_url = author_url if author_url is defined else repo_url_value %}
+{% set meta_keywords_value = meta_keywords if meta_keywords is defined else "machine learning, deep learning, artificial intelligence, tutorial, course" %}
+{% set page_keywords = meta_keywords_value %}
+{% if pagename == "index" %}
+  {% set page_keywords = page_keywords ~ ", ai course, machine learning course, llm course, learn ai from scratch, generative ai course" %}
+{% elif pagename.startswith("curriculum/") %}
+  {% set page_keywords = page_title ~ ", " ~ page_keywords %}
+{% endif %}
+{% set structured_page_url = page_url if page_url else site_url ~ pathto(pagename) %}
 {% set robots_directive = "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" %}
 {% if pagename in ["search", "genindex", "py-modindex", "404"] %}
   {% set robots_directive = "noindex,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" %}
@@ -26,10 +36,17 @@
 {% set og_type = "website" if pagename == "index" else "article" %}
 <meta name="description" content="{{ page_description|striptags|e }}" />
 <meta name="author" content="{{ author|e }}" />
+<meta name="keywords" content="{{ page_keywords|striptags|e }}" />
 <meta name="robots" content="{{ robots_directive }}" />
 <meta name="googlebot" content="{{ robots_directive }}" />
 {% if google_site_verification is defined and google_site_verification %}
 <meta name="google-site-verification" content="{{ google_site_verification|e }}" />
+{% endif %}
+{% if bing_site_verification is defined and bing_site_verification %}
+<meta name="msvalidate.01" content="{{ bing_site_verification|e }}" />
+{% endif %}
+{% if page_url %}
+<link rel="canonical" href="{{ page_url|e }}" />
 {% endif %}
 <meta property="og:title" content="{{ page_title|e }}" />
 <meta property="og:description" content="{{ page_description|striptags|e }}" />
@@ -45,6 +62,7 @@
 <meta name="twitter:title" content="{{ page_title|e }}" />
 <meta name="twitter:description" content="{{ page_description|striptags|e }}" />
 <meta name="twitter:image" content="{{ social_image|e }}" />
+<meta name="twitter:image:alt" content="{{ social_image_alt|e }}" />
 {% set breadcrumb = namespace(items=[{"name": "Zero to AI", "url": site_url ~ pathto('index') }]) %}
 {% if parents is defined and parents %}
   {% for parent in parents %}
@@ -52,13 +70,40 @@
     {% set breadcrumb.items = breadcrumb.items + [{"name": parent_name, "url": site_url ~ parent.link}] %}
   {% endfor %}
 {% endif %}
-{% if page_url %}
-  {% set breadcrumb.items = breadcrumb.items + [{"name": page_title, "url": page_url}] %}
-{% endif %}
+{% set breadcrumb.items = breadcrumb.items + [{"name": page_title, "url": structured_page_url}] %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ page_title|tojson }},
+  "url": {{ structured_page_url|tojson }},
+  "description": {{ page_description|striptags|tojson }},
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site_name|default(project)|tojson }},
+    "url": {{ site_url|tojson }}
+  },
+  "about": [
+    "Artificial intelligence",
+    "Machine learning",
+    "Large language models",
+    "AI agents"
+  ],
+  "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": {{ social_image|tojson }}
+  },
+  "breadcrumb": {
+    "@id": {{ (structured_page_url ~ "#breadcrumb")|tojson }}
+  }
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
+  "@id": {{ (structured_page_url ~ "#breadcrumb")|tojson }},
   "itemListElement": [
     {%- for crumb in breadcrumb.items %}
     {
@@ -78,7 +123,29 @@
   "@type": "WebSite",
   "name": {{ site_name|default(project)|tojson }},
   "url": {{ site_url|tojson }},
-  "description": {{ page_description|striptags|tojson }}
+  "description": {{ page_description|striptags|tojson }},
+  "about": [
+    "Artificial intelligence course",
+    "Machine learning curriculum",
+    "Large language models",
+    "AI engineering"
+  ],
+  "publisher": {
+    "@type": "Person",
+    "name": {{ author|tojson }},
+    "url": {{ author_profile_url|tojson }},
+    "sameAs": {{ same_as_links|default([repo_url_value, author_profile_url], true)|tojson }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": {{ author|tojson }},
+  "url": {{ author_profile_url|tojson }},
+  "sameAs": {{ same_as_links|default([repo_url_value, author_profile_url], true)|tojson }},
+  "publishingPrinciples": {{ repo_url_value|tojson }}
 }
 </script>
 {% endif %}

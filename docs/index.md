@@ -146,8 +146,8 @@ sd_hide_title: true
 
 <div class="hero">
 <h1>Zero to AI — Free AI &amp; Machine Learning Course</h1>
-<p><strong>Open-source curriculum with 950+ hands-on Jupyter notebooks — from Python basics to production AI systems</strong></p>
-<p>Learn machine learning, deep learning, LLMs, RAG, AI agents, prompt engineering, fine-tuning, and MLOps through guided projects.</p>
+<p><strong>A free AI course and machine learning roadmap with 950+ hands-on Jupyter notebooks — from Python basics to production AI systems</strong></p>
+<p>Learn AI from scratch with a guided, open-source curriculum covering machine learning, deep learning, LLMs, RAG, AI agents, prompt engineering, fine-tuning, and MLOps.</p>
 <div class="hero-badges">
   <a href="https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
   <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github" alt="Open in Codespaces"></a>
@@ -189,7 +189,7 @@ sd_hide_title: true
 
 <div class="section-header">
 <h2>Choose Your Track</h2>
-<p>Pick the path that matches your goals and timeline. The site will remember your choice on this device.</p>
+<p>Pick the machine learning roadmap that matches your goals, background, and timeline. If you want to learn AI from scratch, this is the fastest way to avoid jumping between random tutorials.</p>
 </div>
 
 <div class="track-grid">
@@ -262,7 +262,7 @@ sd_hide_title: true
 
 <div class="section-header">
 <h2>Curriculum</h2>
-<p>31 phases organized from fundamentals to cutting-edge research.</p>
+<p>A complete machine learning roadmap with 31 phases organized from beginner fundamentals to advanced AI research and production systems.</p>
 </div>
 
 ### Foundations
@@ -333,7 +333,7 @@ sd_hide_title: true
 
 <div class="track-card">
 <h3>️ Visual Roadmaps</h3>
-<p>Interactive diagrams showing the full curriculum and how topics connect.</p>
+<p>Interactive machine learning roadmap diagrams showing the full curriculum, recommended order, and how the major AI topics connect.</p>
 <p><a href="generated/roadmaps/01_overview.html">View roadmaps &rarr;</a></p>
 </div>
 
@@ -348,12 +348,16 @@ sd_hide_title: true
 
 Yes. The entire curriculum — 950+ Jupyter notebooks, 31 phases, and 3 learning tracks — is MIT-licensed and free forever. No sign-up, no paywall, no upsell.
 
+If you are looking for a free AI course you can actually use end to end, Zero to AI is designed to be fully accessible in the browser or on your local machine.
+
 </details>
 
 <details>
 <summary><strong>What prerequisites do I need?</strong></summary>
 
 Basic Python knowledge and high school mathematics. If you're new to Python, start with Phase 1 (Python fundamentals) before moving on.
+
+Many learners use this site to learn AI from scratch by starting with the setup, Python, data science, and math phases before moving into LLMs and production AI systems.
 
 </details>
 
@@ -362,12 +366,16 @@ Basic Python knowledge and high school mathematics. If you're new to Python, sta
 
 It depends on your track: the AI Engineer track takes 4–6 months, the Data Scientist track 6–8 months, and the full ML Engineer track 8–12 months at roughly 10 hours per week.
 
+The visual study guide and machine learning roadmap are there to help you pick a realistic path instead of trying to study every topic at once.
+
 </details>
 
 <details>
 <summary><strong>Can I run the notebooks without installing anything?</strong></summary>
 
 Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click — no local setup needed.
+
+That makes the curriculum especially useful if you want a free AI course you can start immediately without spending time on environment setup first.
 
 </details>
 
@@ -474,5 +482,4 @@ curriculum/30-inference-opt/README
 
 curriculum/31-ai-dev-tools/README
 ```
-
 

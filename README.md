@@ -4,7 +4,11 @@ Keywords: machine learning course, deep learning tutorial, llm tutorial, rag tut
 
 # Zero to AI — Free AI/ML Course: Python, LLMs, RAG, Agents & Deep Learning
 
-Comprehensive AI/ML learning path from zero to production. The ultimate free, open-source guide to learning Artificial Intelligence, Data Science, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and AI Agents from scratch to production with 950+ Jupyter notebooks.
+Zero to AI is a free, open-source AI course and machine learning curriculum for learning Python, data science, deep learning, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, fine-tuning, and MLOps through 950+ hands-on Jupyter notebooks.
+
+Use the live site for the guided learning experience at [zero-to-ai.dev](https://zero-to-ai.dev/), and use this GitHub repo as the source curriculum, notebook library, and contribution hub.
+
+Quick links: [Website](https://zero-to-ai.dev/) • [Study Guide](https://zero-to-ai.dev/MASTER_STUDY_GUIDE.html) • [Curriculum Start](https://zero-to-ai.dev/curriculum/00-course-setup/README.html) • [GitHub Repo](https://github.com/PavanMudigonda/zero-to-ai)
 
 [![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/graphs/contributors/)

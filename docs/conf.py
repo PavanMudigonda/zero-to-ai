@@ -10,6 +10,8 @@ release = "0.1.0"
 
 html_baseurl = "https://zero-to-ai.dev/"
 SITE_URL = html_baseurl.rstrip("/")
+REPO_URL = "https://github.com/PavanMudigonda/zero-to-ai"
+AUTHOR_URL = "https://github.com/PavanMudigonda"
 DEFAULT_META_DESCRIPTION = (
     "Zero to AI is a free open-source AI and machine learning course with 950+ "
     "Jupyter notebooks covering Python, deep learning, LLMs, RAG, AI agents, "
@@ -159,13 +161,13 @@ html_theme_options = {
         "color-brand-primary": "#7986cb",
         "color-brand-content": "#7986cb",
     },
-    "source_repository": "https://github.com/PavanMudigonda/zero-to-ai",
+    "source_repository": REPO_URL,
     "source_branch": "main",
     "source_directory": "docs/",
     "footer_icons": [
         {
             "name": "GitHub",
-            "url": "https://github.com/PavanMudigonda/zero-to-ai",
+            "url": REPO_URL,
             "html": '<svg stroke="currentColor" fill="currentColor" stroke-width="0" '
             'viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 '
             "3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-"
@@ -194,6 +196,9 @@ html_context = {
     "google_site_verification": os.environ.get("GOOGLE_SITE_VERIFICATION", ""),
     "bing_site_verification": os.environ.get("BING_SITE_VERIFICATION", ""),
     "meta_keywords": "machine learning, deep learning, artificial intelligence, llm, large language models, rag, retrieval-augmented generation, prompt engineering, ai agents, python, pytorch, tutorial, course",
+    "repo_url": REPO_URL,
+    "author_url": AUTHOR_URL,
+    "same_as_links": [REPO_URL, AUTHOR_URL],
 }
 
 # Google Analytics — inject via Furo's analytics slot (no extra extension needed)
@@ -236,7 +241,7 @@ class _FixNestedTransitions(transforms.Transform):
 # Notebook launcher buttons (Colab / Kaggle) for .ipynb pages
 # ---------------------------------------------------------------------------
 _REPO_NAME = "PavanMudigonda/zero-to-ai"
-_REPO_URL = "https://github.com/" + _REPO_NAME
+_REPO_URL = REPO_URL
 
 # Short docs-dir names → actual repo directory names
 _PHASE_ALIASES = {
