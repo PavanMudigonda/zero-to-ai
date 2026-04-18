@@ -74,6 +74,7 @@ package-lock.json
 # Misc
 .cache/
 .pytest_cache/
+$tmpdir/
 
 # Snyk Security Extension - AI Rules (auto-generated)
 .github/instructions/snyk_rules.instructions.md
