@@ -58,6 +58,13 @@ jobs:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           SITE_VERSION: ${{ steps.version.outputs.version }}
 
+      - name: Upload generated site artifact
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: sphinx-site
+          path: site
+          if-no-files-found: error
+
       - name: Deploy to Cloudflare Pages
         run: wrangler pages deploy site --project-name=zero-to-ai --branch="${GITHUB_REF_NAME}"
         env:
