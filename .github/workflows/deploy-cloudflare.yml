@@ -47,6 +47,9 @@ jobs:
         with:
           node-version: "lts/*"
 
+      - name: Install Wrangler CLI
+        run: npm install --global wrangler@4
+
       - name: Generate Sphinx site
         run: |
           bash scripts/build_site.sh
@@ -56,11 +59,7 @@ jobs:
           SITE_VERSION: ${{ steps.version.outputs.version }}
 
       - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3.15.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          workingDirectory: docs
-          wranglerVersion: "4"
-          command: pages deploy ../site --project-name=zero-to-ai
+        run: wrangler pages deploy site --project-name=zero-to-ai --branch="${GITHUB_REF_NAME}"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
