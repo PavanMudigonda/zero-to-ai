@@ -15,6 +15,38 @@
 3. Mark an item done only when you have actually run the material, understood the core idea, and can reuse or explain it.
 4. Skip optional depth when needed. Follow your track priorities first, then come back later for breadth.
 
+<div class="checklist-track-focus" data-checklist-track-focus>
+<div>
+  <span class="checklist-track-focus__eyebrow">Track-aware checklist</span>
+  <p class="checklist-track-focus__title">No saved learning path found yet.</p>
+  <p class="checklist-track-focus__copy" data-checklist-track-copy>Pick a path on the homepage and this checklist will prioritize the phases that matter most for that track.</p>
+</div>
+<div class="checklist-track-focus__actions">
+  <a class="checklist-track-focus__link" href="index.html#choose-your-track">Choose a path</a>
+  <a class="checklist-track-focus__link" href="MASTER_STUDY_GUIDE.html" data-study-guide-link>Open study guide</a>
+  <button type="button" class="checklist-track-focus__button" data-reset-checklist-progress>Reset saved progress</button>
+  <button type="button" class="checklist-track-focus__button" data-export-checklist-progress>Export progress</button>
+  <button type="button" class="checklist-track-focus__button" data-import-checklist-progress>Import progress</button>
+  <button type="button" class="checklist-track-focus__button" data-clear-learning-data>Clear all local data</button>
+  <input type="file" accept="application/json" data-import-checklist-file hidden>
+</div>
+<p class="checklist-track-focus__progress" data-checklist-progress-summary>Progress is stored only on this device.</p>
+<div class="checklist-track-focus__grid">
+  <div class="checklist-track-focus__panel">
+    <h3>Core phases</h3>
+    <ul data-track-core-list>
+      <li>Saved path recommendations will appear here.</li>
+    </ul>
+  </div>
+  <div class="checklist-track-focus__panel">
+    <h3>Optional depth</h3>
+    <ul data-track-optional-list>
+      <li>Stretch topics will appear here after you choose a path.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
 ## Phase 0: Glossary & Foundations
 
 - [ ] Done  [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md)

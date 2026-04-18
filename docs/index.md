@@ -174,37 +174,90 @@ sd_hide_title: true
 </div>
 </div>
 
+<div class="saved-path-banner" data-saved-track hidden>
+<div>
+  <span class="saved-path-banner__eyebrow">Saved path</span>
+  <p class="saved-path-banner__title">You have not picked a learning path yet.</p>
+  <p class="saved-path-banner__copy" data-saved-track-copy>Choose a track below and the site will remember it on this device.</p>
+</div>
+<div class="saved-path-banner__actions">
+  <a class="saved-path-banner__link" href="curriculum/00-course-setup/README.html">Resume setup</a>
+  <a class="saved-path-banner__link" href="MASTER_STUDY_GUIDE.html" data-study-guide-link>Open study guide</a>
+  <button type="button" class="saved-path-banner__reset" data-clear-track>Clear saved path</button>
+</div>
+</div>
+
 <div class="section-header">
 <h2>Choose Your Track</h2>
-<p>Pick the path that matches your goals and timeline.</p>
+<p>Pick the path that matches your goals and timeline. The site will remember your choice on this device.</p>
 </div>
 
 <div class="track-grid">
 
-<div class="track-card">
+<div class="track-card" data-track-card="ai-engineer">
 <span class="duration">4-6 months</span>
 <h3>AI Engineer</h3>
 <p>LLMs, RAG, agents, deployment. Skip deep math. Build production AI applications fast.</p>
+<p class="track-card__fit"><strong>Best if:</strong> you want to ship useful AI products quickly and learn theory only when it becomes necessary.</p>
 <p><strong>Key phases:</strong> Embeddings, RAG, Prompt Engineering, Agents, MLOps</p>
-<p><a href="curriculum/00-course-setup/README.html">Get started &rarr;</a></p>
+<ol class="track-steps">
+  <li>Finish setup and skim the study guide.</li>
+  <li>Move through Embeddings, RAG, Prompt Engineering, and Agents.</li>
+  <li>Use MLOps and Evaluation to make projects production-ready.</li>
+</ol>
+<div class="track-card__actions">
+  <button type="button" class="track-card__button" data-select-track="ai-engineer">Save this path</button>
+  <a class="track-card__link" href="curriculum/00-course-setup/README.html">Get started &rarr;</a>
+</div>
 </div>
 
-<div class="track-card">
+<div class="track-card" data-track-card="ml-engineer">
 <span class="duration">8-10 months</span>
 <h3>ML Engineer</h3>
 <p>Full foundation plus advanced topics. Deep understanding of models, math, and infrastructure.</p>
+<p class="track-card__fit"><strong>Best if:</strong> you want the strongest end-to-end technical base, including how models work and how systems scale.</p>
 <p><strong>Key phases:</strong> Math, Neural Networks, Fine-tuning, MLOps, Evaluation</p>
-<p><a href="curriculum/00-course-setup/README.html">Get started &rarr;</a></p>
+<ol class="track-steps">
+  <li>Complete setup, Python, Data Science, and Math in sequence.</li>
+  <li>Build depth through Neural Networks, Fine-tuning, and Agents.</li>
+  <li>Finish with MLOps, Evaluation, and inference optimization topics.</li>
+</ol>
+<div class="track-card__actions">
+  <button type="button" class="track-card__button" data-select-track="ml-engineer">Save this path</button>
+  <a class="track-card__link" href="curriculum/00-course-setup/README.html">Get started &rarr;</a>
+</div>
 </div>
 
-<div class="track-card">
+<div class="track-card" data-track-card="data-scientist">
 <span class="duration">6-8 months</span>
 <h3>Data Scientist</h3>
 <p>Statistics, experimentation, classical ML. Strong analytical foundation.</p>
+<p class="track-card__fit"><strong>Best if:</strong> you care more about experimentation, analytics, and model quality than shipping app features fast.</p>
 <p><strong>Key phases:</strong> Statistics, Causal Inference, Time Series, Evaluation</p>
-<p><a href="curriculum/00-course-setup/README.html">Get started &rarr;</a></p>
+<ol class="track-steps">
+  <li>Start with setup, Python refreshers, and Data Science fundamentals.</li>
+  <li>Go deep on Math, model evaluation, and practical analysis work.</li>
+  <li>Round out the path with Time Series and Causal Inference.</li>
+</ol>
+<div class="track-card__actions">
+  <button type="button" class="track-card__button" data-select-track="data-scientist">Save this path</button>
+  <a class="track-card__link" href="curriculum/00-course-setup/README.html">Get started &rarr;</a>
+</div>
 </div>
 
+</div>
+
+<div class="learning-data-note">
+<div>
+  <span class="learning-data-note__eyebrow">How saved progress works</span>
+  <p class="learning-data-note__title">Your learning path and checklist progress stay in this browser.</p>
+  <p class="learning-data-note__copy">No account is required. After you pick a track, the site remembers it locally on this device and uses it to tailor the study guide, checklist, and resume prompts.</p>
+</div>
+<ul class="learning-data-note__list">
+  <li>Use the checklist page to export your progress to JSON before switching browsers or machines.</li>
+  <li>Import that file later to restore your saved path, completed items, and recent history.</li>
+  <li>Use <strong>Clear all local data</strong> on the checklist page if you want a full privacy reset.</li>
+</ul>
 </div>
 
 <div class="section-header">

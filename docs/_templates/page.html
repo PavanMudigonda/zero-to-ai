@@ -67,6 +67,27 @@ document.addEventListener("DOMContentLoaded", function() {
 {% endblock footer %}
 
 {% block content %}
+<div class="resume-learning-banner" data-resume-learning data-checklist-url="{{ pathto('checklist') }}" data-study-guide-url="{{ pathto('MASTER_STUDY_GUIDE') }}" hidden>
+  <div>
+    <span class="resume-learning-banner__eyebrow">Resume learning</span>
+    <p class="resume-learning-banner__title">Your saved path and progress are available on this device.</p>
+    <p class="resume-learning-banner__copy" data-resume-learning-copy></p>
+    <div class="resume-learning-banner__progress" data-resume-progress hidden>
+      <div class="resume-learning-banner__progress-bar" aria-hidden="true">
+        <span class="resume-learning-banner__progress-fill" data-resume-progress-fill></span>
+      </div>
+      <span class="resume-learning-banner__progress-label" data-resume-progress-label></span>
+    </div>
+    <div class="resume-learning-banner__recent" data-resume-recent hidden>
+      <span class="resume-learning-banner__recent-label">Recently completed</span>
+      <ul class="resume-learning-banner__recent-list" data-resume-recent-list></ul>
+    </div>
+  </div>
+  <div class="resume-learning-banner__actions">
+    <a class="resume-learning-banner__link" href="{{ pathto('checklist') }}" data-resume-checklist-link>Resume checklist</a>
+    <a class="resume-learning-banner__link" href="{{ pathto('MASTER_STUDY_GUIDE') }}" data-study-guide-link>Open study guide</a>
+  </div>
+</div>
 {% if notebook_launchers %}
 <div class="notebook-launchers" role="group" aria-label="Notebook launch options">
   <span class="notebook-launchers__label">Run this notebook:</span>

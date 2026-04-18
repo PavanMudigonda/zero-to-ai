@@ -117,6 +117,450 @@
   background: var(--color-background-secondary, #f5f5f5);
 }
 
+.saved-path-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin: 1.5rem 0 2rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid rgba(63, 81, 181, 0.22);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(63, 81, 181, 0.08), rgba(0, 105, 92, 0.08));
+}
+
+.resume-learning-banner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0.95rem 1.1rem;
+  border: 1px solid rgba(0, 105, 92, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 105, 92, 0.08), rgba(63, 81, 181, 0.05));
+}
+
+.resume-learning-banner__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00695c;
+}
+
+.resume-learning-banner__title,
+.resume-learning-banner__copy {
+  margin: 0;
+}
+
+.resume-learning-banner__title {
+  font-size: 0.98rem;
+  font-weight: 700;
+}
+
+.resume-learning-banner__copy {
+  margin-top: 0.2rem;
+  opacity: 0.84;
+}
+
+.resume-learning-banner__progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.7rem;
+}
+
+.resume-learning-banner__progress-bar {
+  position: relative;
+  width: min(220px, 45vw);
+  height: 0.45rem;
+  border-radius: 999px;
+  background: rgba(0, 105, 92, 0.14);
+  overflow: hidden;
+}
+
+.resume-learning-banner__progress-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00695c, #3f51b5);
+  transition: width 0.2s ease;
+}
+
+.resume-learning-banner__progress-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  opacity: 0.82;
+}
+
+.resume-learning-banner__recent {
+  margin-top: 0.75rem;
+}
+
+.resume-learning-banner__recent-label {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.78;
+}
+
+.resume-learning-banner__recent-list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.resume-learning-banner__recent-list li + li {
+  margin-top: 0.25rem;
+}
+
+.resume-learning-banner__recent-list a {
+  text-decoration: none;
+}
+
+.resume-learning-banner__recent-list a:hover {
+  text-decoration: underline;
+}
+
+.resume-learning-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.resume-learning-banner__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.4rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(0, 105, 92, 0.1);
+  font-size: 0.87rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.resume-learning-banner__link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.saved-path-banner__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary, #3f51b5);
+}
+
+.saved-path-banner__title,
+.saved-path-banner__copy {
+  margin: 0;
+}
+
+.saved-path-banner__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.saved-path-banner__copy {
+  margin-top: 0.2rem;
+  opacity: 0.82;
+}
+
+.saved-path-banner__actions,
+.track-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.saved-path-banner__link,
+.track-card__link,
+.track-card__button,
+.saved-path-banner__reset {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.saved-path-banner__link,
+.track-card__link {
+  background: rgba(63, 81, 181, 0.1);
+}
+
+.track-card__button,
+.saved-path-banner__reset {
+  border: 1px solid rgba(63, 81, 181, 0.25);
+  background: transparent;
+  color: var(--color-foreground-primary);
+  cursor: pointer;
+}
+
+.saved-path-banner__link:hover,
+.track-card__link:hover,
+.track-card__button:hover,
+.saved-path-banner__reset:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.track-card.is-active {
+  border-color: var(--color-brand-primary, #3f51b5);
+  box-shadow: 0 12px 28px rgba(63, 81, 181, 0.16);
+}
+
+.track-card__fit {
+  margin-top: 0.75rem;
+}
+
+.track-steps {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.track-steps li + li {
+  margin-top: 0.35rem;
+}
+
+.track-card__actions {
+  margin-top: 1rem;
+}
+
+.track-card__button.is-selected {
+  background: var(--color-brand-primary, #3f51b5);
+  border-color: var(--color-brand-primary, #3f51b5);
+  color: white;
+}
+
+.checklist-track-focus {
+  margin: 1.5rem 0 2rem;
+  padding: 1.2rem;
+  border: 1px solid rgba(63, 81, 181, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(63, 81, 181, 0.06), rgba(0, 105, 92, 0.08));
+}
+
+.checklist-track-focus__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary, #3f51b5);
+}
+
+.checklist-track-focus__title,
+.checklist-track-focus__copy {
+  margin: 0;
+}
+
+.checklist-track-focus__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.checklist-track-focus__copy {
+  margin-top: 0.25rem;
+  opacity: 0.82;
+}
+
+.checklist-track-focus__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.checklist-track-focus__link,
+.checklist-track-focus__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(63, 81, 181, 0.1);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.checklist-track-focus__button {
+  border: 1px solid rgba(63, 81, 181, 0.22);
+  color: var(--color-foreground-primary);
+  cursor: pointer;
+}
+
+.checklist-track-focus__link:hover,
+.checklist-track-focus__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.checklist-track-focus__progress {
+  margin: 0.9rem 0 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.checklist-track-focus__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.checklist-track-focus__panel {
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--color-background-primary, rgba(255, 255, 255, 0.7));
+  border: 1px solid rgba(63, 81, 181, 0.12);
+}
+
+.checklist-track-focus__panel h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.checklist-track-focus__panel ul {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.checklist-track-focus__panel li + li {
+  margin-top: 0.4rem;
+}
+
+.learning-data-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  margin: 1.25rem 0 2rem;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba(0, 105, 92, 0.18);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 105, 92, 0.07), rgba(63, 81, 181, 0.06));
+}
+
+.learning-data-note__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #00695c;
+}
+
+.learning-data-note__title,
+.learning-data-note__copy {
+  margin: 0;
+}
+
+.learning-data-note__title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.learning-data-note__copy {
+  margin-top: 0.25rem;
+  opacity: 0.84;
+}
+
+.learning-data-note__list {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.learning-data-note__list li + li {
+  margin-top: 0.45rem;
+}
+
+.track-highlight-core,
+.track-highlight-optional {
+  position: relative;
+  padding-left: 0.85rem;
+}
+
+.track-highlight-core::before,
+.track-highlight-optional::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 4px;
+  border-radius: 999px;
+}
+
+.track-highlight-core::before {
+  background: linear-gradient(180deg, #3f51b5, #00695c);
+}
+
+.track-highlight-optional::before {
+  background: rgba(63, 81, 181, 0.35);
+}
+
+.track-highlight-label {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  background: rgba(63, 81, 181, 0.12);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  vertical-align: middle;
+}
+
+.track-highlight-label--optional {
+  background: rgba(63, 81, 181, 0.08);
+  opacity: 0.78;
+}
+
+main li.task-list-item {
+  transition: opacity 0.15s ease, background 0.15s ease;
+}
+
+main li.task-list-item input[type="checkbox"] {
+  cursor: pointer;
+}
+
+main li.task-list-item.checklist-item-completed {
+  opacity: 0.72;
+}
+
+main li.task-list-item.checklist-item-completed p,
+main li.task-list-item.checklist-item-completed label,
+main li.task-list-item.checklist-item-completed {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+}
+
 .track-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
@@ -249,6 +693,24 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .saved-path-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .learning-data-note {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-learning-banner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checklist-track-focus {
+    padding: 1rem;
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -274,6 +736,69 @@ body[data-theme="dark"] .hero {
 body[data-theme="dark"] .track-card,
 body[data-theme="dark"] .phase-card {
   border-color: rgba(255, 255, 255, 0.1);
+}
+
+body[data-theme="dark"] .saved-path-banner {
+  border-color: rgba(121, 134, 203, 0.28);
+  background: linear-gradient(135deg, rgba(27, 45, 107, 0.65), rgba(0, 77, 64, 0.3));
+}
+
+body[data-theme="dark"] .resume-learning-banner {
+  border-color: rgba(0, 150, 136, 0.22);
+  background: linear-gradient(135deg, rgba(0, 77, 64, 0.35), rgba(27, 45, 107, 0.45));
+}
+
+body[data-theme="dark"] .resume-learning-banner__eyebrow {
+  color: #26a69a;
+}
+
+body[data-theme="dark"] .resume-learning-banner__link {
+  background: rgba(38, 166, 154, 0.14);
+}
+
+body[data-theme="dark"] .resume-learning-banner__progress-bar {
+  background: rgba(38, 166, 154, 0.16);
+}
+
+body[data-theme="dark"] .saved-path-banner__link,
+body[data-theme="dark"] .track-card__link {
+  background: rgba(121, 134, 203, 0.16);
+}
+
+body[data-theme="dark"] .track-card__button,
+body[data-theme="dark"] .saved-path-banner__reset {
+  border-color: rgba(121, 134, 203, 0.35);
+}
+
+body[data-theme="dark"] .checklist-track-focus {
+  border-color: rgba(121, 134, 203, 0.28);
+  background: linear-gradient(135deg, rgba(27, 45, 107, 0.65), rgba(0, 77, 64, 0.3));
+}
+
+body[data-theme="dark"] .checklist-track-focus__link {
+  background: rgba(121, 134, 203, 0.16);
+}
+
+body[data-theme="dark"] .checklist-track-focus__button {
+  border-color: rgba(121, 134, 203, 0.35);
+}
+
+body[data-theme="dark"] .checklist-track-focus__panel {
+  background: rgba(8, 13, 32, 0.45);
+  border-color: rgba(121, 134, 203, 0.2);
+}
+
+body[data-theme="dark"] .learning-data-note {
+  border-color: rgba(129, 199, 132, 0.2);
+  background: linear-gradient(135deg, rgba(0, 77, 64, 0.3), rgba(27, 45, 107, 0.42));
+}
+
+body[data-theme="dark"] .learning-data-note__eyebrow {
+  color: #81c784;
+}
+
+body[data-theme="dark"] .track-highlight-label {
+  background: rgba(121, 134, 203, 0.18);
 }
 
 body[data-theme="dark"] .notebook-launchers {

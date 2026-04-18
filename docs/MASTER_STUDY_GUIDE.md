@@ -22,6 +22,8 @@ This is the canonical learner navigation document for the repository.
 
 Not every phase is equally important for every role. Pick the track that matches your goal, then follow the priority order.
 
+<div id="track-ai-engineer"></div>
+
 ### Track A: AI Engineer (LLM / Agent / RAG Focus)
 
 **Target roles:** AI Engineer, LLM Engineer, GenAI Engineer, AI Platform Engineer
@@ -43,6 +45,8 @@ Not every phase is equally important for every role. Pick the track that matches
 
 **Optional depth:** `19-ai-safety-redteaming/`, `16-model-evaluation/`, `30-inference-optimization/`, `31-ai-powered-dev-tools/`
 
+<div id="track-ml-engineer"></div>
+
 ### Track B: ML Engineer (Classical ML + Deep Learning)
 
 **Target roles:** ML Engineer, Applied Scientist, ML Platform Engineer
@@ -61,6 +65,8 @@ Not every phase is equally important for every role. Pick the track that matches
 | 10 | Advanced Deep Learning | `24-advanced-deep-learning/` | 20–30 | GANs, VAEs, diffusion, NeRF |
 
 **Optional depth:** `27-causal-inference/`, `29-ai-hardware-llm-validation/`, `30-inference-optimization/`
+
+<div id="track-data-scientist"></div>
 
 ### Track C: Data Scientist (Analysis + ML + Communication)
 
