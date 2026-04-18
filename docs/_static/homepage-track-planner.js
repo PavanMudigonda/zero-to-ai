@@ -798,14 +798,18 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
         writeStoredTrack(track);
-        applySelectedTrack(track);
+        setTimeout(function() {
+          applySelectedTrack(track);
+        }, 0);
       });
     });
 
     if (clearButton) {
       clearButton.addEventListener("click", function () {
         clearStoredTrack();
-        applySelectedTrack(null);
+        setTimeout(function() {
+          applySelectedTrack(null);
+        }, 0);
       });
     }
 
