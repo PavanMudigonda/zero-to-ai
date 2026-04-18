@@ -774,6 +774,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       updateStudyGuideLinks(track);
+      updateResumeLearningWidget(track);
 
       trackCards.forEach(function (card) {
         var isActive = card.getAttribute("data-track-card") === track;
