@@ -9,43 +9,30 @@ author = "Pavan Mudigonda"
 release = "0.1.0"
 
 html_baseurl = "https://zero-to-ai.dev/"
-
-# -- SEO / discoverability --------------------------------------------------
-# Site-wide <meta> tags injected into every page <head>
-html_meta = {
-    "description": (
-        "Zero to AI: free open-source AI/ML course with 950+ Jupyter notebooks. "
-        "Learn Python, deep learning, LLMs, RAG, AI agents, prompt engineering, "
-        "fine-tuning, MLOps, and more — from scratch to production."
+SITE_URL = html_baseurl.rstrip("/")
+DEFAULT_META_DESCRIPTION = (
+    "Zero to AI is a free open-source AI and machine learning course with 950+ "
+    "Jupyter notebooks covering Python, deep learning, LLMs, RAG, AI agents, "
+    "fine-tuning, MLOps, and evaluation."
+)
+DEFAULT_OG_DESCRIPTION = (
+    "Self-paced open-source curriculum with 31 phases and 3 tracks for learning "
+    "AI engineering, machine learning, and data science from scratch to production."
+)
+PAGE_DESCRIPTION_OVERRIDES = {
+    "index": DEFAULT_META_DESCRIPTION,
+    "MASTER_STUDY_GUIDE": (
+        "Choose the right Zero to AI learning track with a phase-by-phase study guide "
+        "for AI Engineer, ML Engineer, and Data Scientist paths."
     ),
-    "keywords": (
-        "AI course, machine learning tutorial, deep learning, LLM, RAG, "
-        "AI agents, prompt engineering, embeddings, vector database, "
-        "fine-tuning, MLOps, Python, PyTorch, Transformers, free AI course, "
-        "open source AI curriculum, learn AI, Jupyter notebooks"
+    "checklist": (
+        "Track your progress across the Zero to AI curriculum with a device-local "
+        "learning checklist, saved path guidance, and export or import support."
     ),
-    "author": "Pavan Mudigonda",
-    "robots": "index, follow",
-    # OpenGraph
-    "og:title": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
-    "og:description": (
-        "Self-paced open-source curriculum: Python, deep learning, LLMs, RAG, "
-        "AI agents, MLOps, evaluation, and more. 31 phases, 3 tracks."
+    "404": (
+        "The page you requested could not be found. Continue exploring the Zero to AI "
+        "curriculum from the main study guide and homepage."
     ),
-    "og:type": "website",
-    "og:url": "https://zero-to-ai.dev/",
-    "og:site_name": "Zero to AI",
-    "og:image": "https://zero-to-ai.dev/_static/social-preview.svg",
-    "og:image:alt": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
-    "og:locale": "en_US",
-    # Twitter Card
-    "twitter:card": "summary_large_image",
-    "twitter:title": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
-    "twitter:description": (
-        "Open-source AI/ML curriculum from Python basics to production agents. "
-        "950+ hands-on Jupyter notebooks."
-    ),
-    "twitter:image": "https://zero-to-ai.dev/_static/social-preview.svg",
 }
 
 # -- General configuration ---------------------------------------------------
@@ -184,12 +171,23 @@ html_theme_options = {
     ],
 }
 
+# Shared template context for analytics and search metadata.
+html_context = {
+    "site_url": SITE_URL,
+    "site_name": project,
+    "site_tagline": "Free AI/ML course with 950+ notebooks",
+    "default_meta_description": DEFAULT_META_DESCRIPTION,
+    "default_og_description": DEFAULT_OG_DESCRIPTION,
+    "default_social_image": f"{SITE_URL}/_static/social-preview.svg",
+    "default_social_image_alt": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
+    "page_description_overrides": PAGE_DESCRIPTION_OVERRIDES,
+    "google_site_verification": os.environ.get("GOOGLE_SITE_VERIFICATION", ""),
+}
+
 # Google Analytics — inject via Furo's analytics slot (no extra extension needed)
 _ga_id = os.environ.get("GOOGLE_ANALYTICS_ID", "")
 if _ga_id:
-    html_context = {
-        "analytics_id": _ga_id,
-    }
+    html_context["analytics_id"] = _ga_id
 
 # -- Intersphinx mapping -----------------------------------------------------
 intersphinx_mapping = {
