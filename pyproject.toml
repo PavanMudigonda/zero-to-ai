@@ -7,6 +7,42 @@ authors = [
 ]
 readme = "README.md"
 requires-python = ">=3.11,<3.15"
+keywords = [
+    "machine-learning",
+    "deep-learning",
+    "artificial-intelligence",
+    "rag",
+    "llm",
+    "ai-agents",
+    "pytorch",
+    "data-science",
+    "neural-networks",
+    "prompt-engineering",
+    "computer-vision",
+    "nlp",
+    "large-language-models",
+    "fine-tuning",
+    "mlops",
+    "python",
+    "transformers",
+    "openai",
+    "embeddings",
+    "vector-database"
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Education",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
 dependencies = [
     # Core ML/DL
     "torch>=2.5.0",

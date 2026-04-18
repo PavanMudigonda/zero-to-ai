@@ -1,10 +1,10 @@
 # Zero to AI
 
-> Free, open-source AI/ML curriculum with 950+ Jupyter notebooks — from Python basics to production AI systems.
+> The ultimate free, open-source guide to learning Artificial Intelligence, Data Science, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and AI Agents from scratch to production with 950+ Jupyter notebooks.
 
 ## About
 
-Zero to AI is a self-paced learning path covering machine learning, deep learning, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, MLOps, model evaluation, fine-tuning, and advanced research topics. It is organized into 31 progressive phases with three suggested tracks: AI Engineer (4-6 months), ML Engineer (8-10 months), and Research Track (10-12 months).
+Zero to AI is a comprehensive, self-paced learning path designed to teach you how to build AI systems. It covers machine learning, deep learning, NLP, computer vision, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, MLOps, model evaluation, fine-tuning, and advanced research topics. It is organized into 31 progressive phases with three suggested tracks: AI Engineer (4-6 months), ML Engineer (8-10 months), and Research Track (10-12 months).
 
 - Website: https://zero-to-ai.dev/
 - GitHub: https://github.com/PavanMudigonda/zero-to-ai
@@ -54,5 +54,22 @@ Python, PyTorch, TensorFlow, Scikit-learn, HuggingFace Transformers, LangChain, 
 
 1. Read docs/MASTER_STUDY_GUIDE.md to choose a track
 2. Complete 00-course-setup for environment setup
-3. Open 00_START_HERE.ipynb in each phase
-4. Use docs/checklist.md to track progress
+5. Open 00_START_HERE.ipynb in each phase
+6. Use docs/checklist.md to track progress
+
+## Frequently Asked Questions
+
+Q: How can I learn AI agents?
+A: You can learn AI agents from scratch in Phase 15. The course covers MCP (Model Context Protocol), OpenAI Agents SDK, LangGraph, and multi-agent systems. You can read more about building AI agents at: https://zero-to-ai.dev/curriculum/15-ai-agents/
+
+Q: Is there a guide for fine-tuning LLMs?
+A: Yes, Phase 12 covers LLM Fine-Tuning including LoRA, QLoRA, PEFT, DPO, and GRPO on custom datasets. Deep dive into fine-tuning here: https://zero-to-ai.dev/curriculum/12-llm-finetuning/
+
+Q: How do I build a RAG system?
+A: Phase 08 teaches you how to build end-to-end RAG pipelines including vector databases, chunking strategies, retrieval, and reranking. Learn how to implement RAG at: https://zero-to-ai.dev/curriculum/08-rag/
+
+Q: How do I learn Prompt Engineering for production?
+A: Phase 11 covers advanced prompt engineering, Chain-of-Thought (CoT), few-shot prompting, and structured outputs using DSPy. Read more: https://zero-to-ai.dev/curriculum/11-prompt-engineering/
+
+Q: Where can I find PyTorch and deep learning tutorials from scratch?
+A: Phase 06 covers Neural Networks, walking you through building Perceptrons to Transformers from scratch using PyTorch. Explore neural networks here: https://zero-to-ai.dev/curriculum/06-neural-networks/

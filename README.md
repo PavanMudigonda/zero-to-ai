@@ -1,8 +1,10 @@
+<!--
+Keywords: machine learning course, deep learning tutorial, llm tutorial, rag tutorial, ai agents, prompt engineering, python ai, pytorch tutorial, transformers, openai api, fine-tuning, mlops, vector databases, nlp, computer vision, data science course, artificial intelligence guide, full stack ai, generative ai course, build ai applications, learn ai from scratch
+-->
+
 # Zero to AI — Free AI/ML Course: Python, LLMs, RAG, Agents & Deep Learning
 
-### Open-source curriculum with 950+ hands-on Jupyter notebooks — from Python basics to production AI systems
-
-> **Keywords:** machine learning course, deep learning tutorial, LLM tutorial, RAG tutorial, AI agents, prompt engineering, embeddings, vector databases, model evaluation, MLOps, fine-tuning, reinforcement learning, multimodal AI, AI safety, free AI course, learn AI from scratch, Python machine learning, transformer tutorial, open-source AI curriculum
+Comprehensive AI/ML learning path from zero to production. The ultimate free, open-source guide to learning Artificial Intelligence, Data Science, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and AI Agents from scratch to production with 950+ Jupyter notebooks.
 
 [![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/master/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/graphs/contributors/)

@@ -2,6 +2,36 @@
   "name": "zero-to-ai-cli-tools",
   "private": true,
   "description": "Node-based CLI dependencies used by the Zero to AI developer tools lessons.",
+  "keywords": [
+    "machine-learning",
+    "deep-learning",
+    "artificial-intelligence",
+    "rag",
+    "llm",
+    "ai-agents",
+    "data-science",
+    "tutorial",
+    "course",
+    "python",
+    "pytorch",
+    "prompt-engineering",
+    "fine-tuning",
+    "openai",
+    "embeddings",
+    "mlops",
+    "nlp",
+    "computer-vision",
+    "vector-database"
+  ],
+  "author": "Pavan Mudigonda <mnpawan@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PavanMudigonda/zero-to-ai.git"
+  },
+  "homepage": "https://zero-to-ai.dev",
+  "bugs": {
+    "url": "https://github.com/PavanMudigonda/zero-to-ai/issues"
+  },
   "devDependencies": {
     "opencode-ai": "^1.4.3"
   },

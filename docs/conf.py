@@ -45,6 +45,16 @@ extensions = [
     "sphinx_design",
     "sphinxcontrib.mermaid",
     "sphinx_sitemap",
+    "sphinxext.opengraph",
+]
+
+# OpenGraph settings
+ogp_site_url = SITE_URL
+ogp_image = f"{SITE_URL}/_static/social-preview.svg"
+ogp_description_length = 300
+ogp_site_name = project
+ogp_custom_meta_tags = [
+    '<meta name="twitter:card" content="summary_large_image" />',
 ]
 
 # Mermaid diagram settings — render client-side via CDN (no mmdc binary needed)
@@ -182,6 +192,8 @@ html_context = {
     "default_social_image_alt": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
     "page_description_overrides": PAGE_DESCRIPTION_OVERRIDES,
     "google_site_verification": os.environ.get("GOOGLE_SITE_VERIFICATION", ""),
+    "bing_site_verification": os.environ.get("BING_SITE_VERIFICATION", ""),
+    "meta_keywords": "machine learning, deep learning, artificial intelligence, llm, large language models, rag, retrieval-augmented generation, prompt engineering, ai agents, python, pytorch, tutorial, course",
 }
 
 # Google Analytics — inject via Furo's analytics slot (no extra extension needed)
