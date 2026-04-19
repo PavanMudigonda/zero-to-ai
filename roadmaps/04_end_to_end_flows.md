@@ -1,4 +1,4 @@
-# Visual Roadmap — Part 4: End-to-End Flows
+# Visual Roadmap - Part 4: End-to-End Flows
 
 > Complete pipelines from raw data to production: project flow, RAG pipeline, document ingestion, LLM training, agentic RAG, idea-to-production, and multimodal.
 
@@ -201,7 +201,7 @@ flowchart TD
 
 ---
 
-## 21. Multimodal — Image + Text → Understanding → Generation
+## 21. Multimodal - Image + Text → Understanding → Generation
 
 How multimodal models process and generate across modalities.
 

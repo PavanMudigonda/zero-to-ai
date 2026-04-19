@@ -53,9 +53,9 @@ For hands-on implementations of each chapter, see [practice-labs/](practice-labs
 
 ## Related
 
-- [cs229-course/](../cs229-course/) — ML algorithms (less math, more applied)
-- [advanced/](../advanced/) — research-level extensions of these topics
-- [mlpp-book/](../mlpp-book/) — probabilistic perspective on ML
+- [cs229-course/](../cs229-course/) - ML algorithms (less math, more applied)
+- [advanced/](../advanced/) - research-level extensions of these topics
+- [mlpp-book/](../mlpp-book/) - probabilistic perspective on ML
 
 ## What Comes Next
 

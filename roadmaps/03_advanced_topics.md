@@ -1,4 +1,4 @@
-# Visual Roadmap — Part 3: Advanced Topics
+# Visual Roadmap - Part 3: Advanced Topics
 
 > Fine-tuning decisions, multimodal AI, inference optimization, and AI safety.
 

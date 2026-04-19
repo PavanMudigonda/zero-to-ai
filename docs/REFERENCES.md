@@ -1,4 +1,4 @@
-# Complete Reference Materials — Videos, Repos, Courses, Papers
+# Complete Reference Materials - Videos, Repos, Courses, Papers
 
 > Curated resources aligned to each learning phase. Free resources are marked with (FREE).
 
@@ -6,7 +6,7 @@
 
 ## How to Use This File
 
-- Don't try to consume all of these — use them as a menu
+- Don't try to consume all of these - use them as a menu
 - For each phase, pick 1-2 video resources and 1-2 repos to study
 - "Must-watch" items are marked with ⭐
 
@@ -116,7 +116,7 @@
 
 | Repo | Stars | Why Study It |
 |------|-------|-------------|
-| [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) | 38k+ | Minimal, readable GPT-2 implementation — must read |
+| [karpathy/nanoGPT](https://github.com/karpathy/nanoGPT) | 38k+ | Minimal, readable GPT-2 implementation - must read |
 | [karpathy/minbpe](https://github.com/karpathy/minbpe) | 10k+ | Minimal BPE tokenizer implementation |
 | [pytorch/tutorials](https://github.com/pytorch/tutorials) | 8k+ | Official PyTorch tutorials |
 | [fastai/fastai](https://github.com/fastai/fastai) | 26k+ | high-level DL library, great for learning patterns |
@@ -206,28 +206,28 @@
 Start with the abstracts and conclusions, read fully for the ones most relevant to your role.
 
 **Foundation papers:**
-- [Attention Is All You Need (2017)](https://arxiv.org/abs/1706.03762) — the Transformer
-- [BERT (2018)](https://arxiv.org/abs/1810.04805) — bidirectional pre-training
-- [Language Models are Few-Shot Learners / GPT-3 (2020)](https://arxiv.org/abs/2005.14165) — scaling + prompting
-- [An Image is Worth 16x16 Words / ViT (2020)](https://arxiv.org/abs/2010.11929) — Vision Transformers
+- [Attention Is All You Need (2017)](https://arxiv.org/abs/1706.03762) - the Transformer
+- [BERT (2018)](https://arxiv.org/abs/1810.04805) - bidirectional pre-training
+- [Language Models are Few-Shot Learners / GPT-3 (2020)](https://arxiv.org/abs/2005.14165) - scaling + prompting
+- [An Image is Worth 16x16 Words / ViT (2020)](https://arxiv.org/abs/2010.11929) - Vision Transformers
 
 **RAG and retrieval:**
-- [Retrieval-Augmented Generation (2020)](https://arxiv.org/abs/2005.11401) — original RAG paper
-- [Precise Zero-Shot Dense Retrieval / HyDE (2022)](https://arxiv.org/abs/2212.10496) — HyDE technique
+- [Retrieval-Augmented Generation (2020)](https://arxiv.org/abs/2005.11401) - original RAG paper
+- [Precise Zero-Shot Dense Retrieval / HyDE (2022)](https://arxiv.org/abs/2212.10496) - HyDE technique
 
 **Fine-tuning and alignment:**
-- [LoRA (2021)](https://arxiv.org/abs/2106.09685) — low-rank adaptation
-- [QLoRA (2023)](https://arxiv.org/abs/2305.14314) — quantized LoRA on consumer hardware
-- [InstructGPT / RLHF (2022)](https://arxiv.org/abs/2203.02155) — training with human feedback
-- [Direct Preference Optimization / DPO (2023)](https://arxiv.org/abs/2305.18290) — alignment without RL
+- [LoRA (2021)](https://arxiv.org/abs/2106.09685) - low-rank adaptation
+- [QLoRA (2023)](https://arxiv.org/abs/2305.14314) - quantized LoRA on consumer hardware
+- [InstructGPT / RLHF (2022)](https://arxiv.org/abs/2203.02155) - training with human feedback
+- [Direct Preference Optimization / DPO (2023)](https://arxiv.org/abs/2305.18290) - alignment without RL
 
 **Agents and tools:**
-- [ReAct: Synergizing Reasoning and Acting (2022)](https://arxiv.org/abs/2210.03629) — ReAct agents
-- [Toolformer (2023)](https://arxiv.org/abs/2302.04761) — teaching LLMs to use tools
+- [ReAct: Synergizing Reasoning and Acting (2022)](https://arxiv.org/abs/2210.03629) - ReAct agents
+- [Toolformer (2023)](https://arxiv.org/abs/2302.04761) - teaching LLMs to use tools
 
 **Prompting:**
-- [Chain-of-Thought Prompting (2022)](https://arxiv.org/abs/2201.11903) — step-by-step reasoning
-- [Large Language Models are Zero-Shot Reasoners (2022)](https://arxiv.org/abs/2205.11916) — "Let's think step by step"
+- [Chain-of-Thought Prompting (2022)](https://arxiv.org/abs/2201.11903) - step-by-step reasoning
+- [Large Language Models are Zero-Shot Reasoners (2022)](https://arxiv.org/abs/2205.11916) - "Let's think step by step"
 
 ---
 
@@ -235,7 +235,7 @@ Start with the abstracts and conclusions, read fully for the ones most relevant 
 
 | Dataset | Use Case | Where to Find |
 |---------|----------|---------------|
-| HuggingFace Datasets Hub | Everything — 100k+ datasets | https://huggingface.co/datasets |
+| HuggingFace Datasets Hub | Everything - 100k+ datasets | https://huggingface.co/datasets |
 | Kaggle Datasets | Competition-grade structured data | https://kaggle.com/datasets |
 | Common Crawl | Web text for LLM training | https://commoncrawl.org |
 | The Pile | Diverse text dataset | https://huggingface.co/datasets/EleutherAI/the_pile |
@@ -291,7 +291,7 @@ Start with the abstracts and conclusions, read fully for the ones most relevant 
 
 ## Phase-to-Resource Mapping
 
-Quick reference — what to use for each phase:
+Quick reference - what to use for each phase:
 
 | Phase | Video | GitHub Repo | Blog/Other |
 |-------|-------|-------------|------------|

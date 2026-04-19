@@ -1,4 +1,4 @@
-# Zero to AI — Complete Reference
+# Zero to AI - Complete Reference
 
 > The ultimate free, open-source guide to learning Artificial Intelligence, Data Science, Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), and AI Agents from scratch to production with 950+ Jupyter notebooks.
 
@@ -18,100 +18,100 @@ License: MIT
 
 ## Detailed Phase Breakdown
 
-### Phase 00 — Course Setup
+### Phase 00 - Course Setup
 Environment setup, 2026 model landscape overview, troubleshooting guide.
 
-### Phase 01 — Python Fundamentals
+### Phase 01 - Python Fundamentals
 Python crash course for learners who need a refresher before data science.
 
-### Phase 02 — Data Science (278 notebooks)
+### Phase 02 - Data Science (278 notebooks)
 NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn. Includes Microsoft Data Science for Beginners course, Kaggle competition notebooks, and real-world projects. Covers data cleaning, EDA, feature engineering, and classical ML algorithms.
 
-### Phase 03 — Mathematics for ML (40+ notebooks)
+### Phase 03 - Mathematics for ML (40+ notebooks)
 Linear algebra, multivariable calculus, probability, statistics, and optimization. Implementations from Mathematics for Machine Learning (MML), Introduction to Statistical Learning (ISLP), Stanford CS229, and 3Blue1Brown visualizations.
 
-### Phase 04 — Tokenization
+### Phase 04 - Tokenization
 How text becomes numbers. Covers tiktoken (OpenAI), SentencePiece (Google), HuggingFace Tokenizers. BPE, WordPiece, Unigram algorithms. Production tokenization pipelines.
 
-### Phase 05 — Embeddings
+### Phase 05 - Embeddings
 Text embeddings with OpenAI, Sentence-Transformers, Cohere. Semantic search, similarity, paraphrase mining. Embedding comparison and evaluation.
 
-### Phase 06 — Neural Networks
+### Phase 06 - Neural Networks
 Build neural networks from scratch. Perceptrons, backpropagation, CNNs, RNNs, LSTMs, attention mechanism, and the Transformer architecture.
 
-### Phase 07 — Vector Databases
+### Phase 07 - Vector Databases
 ChromaDB, Qdrant, Weaviate, Milvus, pgvector. Indexing strategies, hybrid search, metadata filtering, production deployment patterns.
 
-### Phase 08 — RAG (Retrieval-Augmented Generation)
+### Phase 08 - RAG (Retrieval-Augmented Generation)
 End-to-end RAG pipelines. Document loading, chunking strategies, retrieval, reranking, generation. Advanced: corrective RAG, self-RAG, multi-step retrieval, graph RAG.
 
-### Phase 09 — MLOps
+### Phase 09 - MLOps
 Model deployment, monitoring, CI/CD for ML. Experiment tracking, model registries, serving infrastructure.
 
-### Phase 10 — Specializations
+### Phase 10 - Specializations
 Domain-specific tracks: computer vision, NLP, AI agents, each with dedicated notebook sequences.
 
-### Phase 11 — Prompt & Context Engineering
+### Phase 11 - Prompt & Context Engineering
 Chain-of-thought, few-shot, structured outputs with Instructor and DSPy. Context engineering patterns for production LLM applications.
 
-### Phase 12 — LLM Fine-Tuning
+### Phase 12 - LLM Fine-Tuning
 LoRA, QLoRA, PEFT, full fine-tuning. DPO, GRPO for alignment. Practical fine-tuning on custom datasets.
 
-### Phase 13 — Multimodal AI
+### Phase 13 - Multimodal AI
 Vision-language models, audio processing, video understanding. Real-time multimodal pipelines.
 
-### Phase 14 — Local LLMs
+### Phase 14 - Local LLMs
 Run models locally with Ollama, llama.cpp, MLX. Local RAG, model serving, hardware optimization.
 
-### Phase 15 — AI Agents
+### Phase 15 - AI Agents
 Function calling, tool use, MCP (Model Context Protocol), OpenAI Agents SDK, LangGraph. Multi-agent systems, memory, state management, agent evaluation.
 
-### Phase 16 — Model Evaluation
+### Phase 16 - Model Evaluation
 Classification/regression metrics, LLM evaluation, LLM-as-judge, fairness metrics, bias detection, agent evaluation frameworks.
 
-### Phase 17 — Debugging & Troubleshooting
+### Phase 17 - Debugging & Troubleshooting
 Systematic debugging of AI systems. Profiling, data quality issues, model behavior diagnosis.
 
-### Phase 18 — Low-Code AI Tools
+### Phase 18 - Low-Code AI Tools
 Gradio, Streamlit, Hugging Face Spaces, Flowise, Langflow, Dify, AutoML platforms.
 
-### Phase 19 — AI Safety & Red Teaming
+### Phase 19 - AI Safety & Red Teaming
 Adversarial testing, content moderation, PII protection, bias mitigation, jailbreak prevention.
 
-### Phase 20 — Real-Time Streaming
+### Phase 20 - Real-Time Streaming
 Token-by-token streaming, WebSockets, WebRTC, real-time RAG, live voice AI.
 
-### Phase 21 — Quizzes
+### Phase 21 - Quizzes
 Self-assessment questions for each phase.
 
-### Phase 22 — References
+### Phase 22 - References
 Curated external resources: papers, videos, courses, tools by phase.
 
-### Phase 23 — Glossary
+### Phase 23 - Glossary
 Comprehensive AI/ML terminology reference.
 
-### Phase 24 — Advanced Deep Learning (39 notebooks)
+### Phase 24 - Advanced Deep Learning (39 notebooks)
 GANs, VAEs, normalizing flows, diffusion models, NeRF, neural ODEs, Bayesian neural networks, graph neural networks.
 
-### Phase 25 — Reinforcement Learning
+### Phase 25 - Reinforcement Learning
 MDP, Q-learning, deep Q-networks, policy gradients, actor-critic, PPO. RLHF foundations.
 
-### Phase 26 — Time Series Analysis
+### Phase 26 - Time Series Analysis
 ARIMA, Prophet, LSTM forecasting, Transformer-based forecasting, anomaly detection.
 
-### Phase 27 — Causal Inference
+### Phase 27 - Causal Inference
 DAGs, do-calculus, A/B testing, difference-in-differences, instrumental variables, regression discontinuity.
 
-### Phase 28 — Practical Data Science
+### Phase 28 - Practical Data Science
 Interview preparation, end-to-end projects, SQL/data engineering, recommender systems.
 
-### Phase 29 — AI Hardware & LLM Validation
+### Phase 29 - AI Hardware & LLM Validation
 Silicon validation for AMD, NVIDIA, Qualcomm, TPU, Apple Silicon. Datacenter validation, benchmarking.
 
-### Phase 30 — Inference Optimization
+### Phase 30 - Inference Optimization
 KV cache, PagedAttention, vLLM, TensorRT-LLM, quantization (AWQ, GPTQ, INT4/INT8), speculative decoding.
 
-### Phase 31 — AI-Powered Dev Tools
+### Phase 31 - AI-Powered Dev Tools
 VS Code AI setup, MCP deep dive, custom instructions, AI coding tool comparison (Copilot, Cursor, Windsurf, Aider).
 
 ## Frequently Asked Questions

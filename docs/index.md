@@ -9,7 +9,7 @@ sd_hide_title: true
 {
   "@context": "https://schema.org",
   "@type": "Course",
-  "name": "Zero to AI — Free AI/ML Course",
+  "name": "Zero to AI - Free AI/ML Course",
   "description": "Self-paced open-source curriculum with 950+ Jupyter notebooks covering Python, deep learning, LLMs, RAG, AI agents, prompt engineering, fine-tuning, MLOps, evaluation, and advanced research topics.",
   "url": "https://zero-to-ai.dev/",
   "provider": {
@@ -61,7 +61,7 @@ sd_hide_title: true
       "name": "Is Zero to AI really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. The entire curriculum — 950+ Jupyter notebooks, 31 phases, and 3 learning tracks — is MIT-licensed and free forever. No sign-up required."
+        "text": "Yes. The entire curriculum - 950+ Jupyter notebooks, 31 phases, and 3 learning tracks - is MIT-licensed and free forever. No sign-up required."
       }
     },
     {
@@ -85,7 +85,7 @@ sd_hide_title: true
       "name": "Can I run the notebooks in the browser without installing anything?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click — no local setup needed."
+        "text": "Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click - no local setup needed."
       }
     },
     {
@@ -111,20 +111,20 @@ sd_hide_title: true
   "itemListElement": [
     {"@type": "ListItem", "position": 1, "name": "Course Setup", "url": "https://zero-to-ai.dev/curriculum/00-course-setup/README.html"},
     {"@type": "ListItem", "position": 2, "name": "Python Fundamentals", "url": "https://zero-to-ai.dev/curriculum/01-python/README.html"},
-    {"@type": "ListItem", "position": 3, "name": "Data Science — NumPy, Pandas, Scikit-learn", "url": "https://zero-to-ai.dev/curriculum/02-data-science/README.html"},
+    {"@type": "ListItem", "position": 3, "name": "Data Science - NumPy, Pandas, Scikit-learn", "url": "https://zero-to-ai.dev/curriculum/02-data-science/README.html"},
     {"@type": "ListItem", "position": 4, "name": "Mathematics for Machine Learning", "url": "https://zero-to-ai.dev/curriculum/03-maths/README.html"},
-    {"@type": "ListItem", "position": 5, "name": "Tokenization — tiktoken, SentencePiece", "url": "https://zero-to-ai.dev/curriculum/04-token/README.html"},
-    {"@type": "ListItem", "position": 6, "name": "Embeddings — OpenAI, HuggingFace, Sentence-Transformers", "url": "https://zero-to-ai.dev/curriculum/05-embeddings/README.html"},
-    {"@type": "ListItem", "position": 7, "name": "Neural Networks — CNNs, RNNs, Transformers", "url": "https://zero-to-ai.dev/curriculum/06-neural-networks/README.html"},
-    {"@type": "ListItem", "position": 8, "name": "Vector Databases — ChromaDB, Pinecone, Qdrant", "url": "https://zero-to-ai.dev/curriculum/07-vector-databases/README.html"},
-    {"@type": "ListItem", "position": 9, "name": "RAG — Retrieval-Augmented Generation", "url": "https://zero-to-ai.dev/curriculum/08-rag/README.html"},
-    {"@type": "ListItem", "position": 10, "name": "MLOps — Deployment and Monitoring", "url": "https://zero-to-ai.dev/curriculum/09-mlops/README.html"},
+    {"@type": "ListItem", "position": 5, "name": "Tokenization - tiktoken, SentencePiece", "url": "https://zero-to-ai.dev/curriculum/04-token/README.html"},
+    {"@type": "ListItem", "position": 6, "name": "Embeddings - OpenAI, HuggingFace, Sentence-Transformers", "url": "https://zero-to-ai.dev/curriculum/05-embeddings/README.html"},
+    {"@type": "ListItem", "position": 7, "name": "Neural Networks - CNNs, RNNs, Transformers", "url": "https://zero-to-ai.dev/curriculum/06-neural-networks/README.html"},
+    {"@type": "ListItem", "position": 8, "name": "Vector Databases - ChromaDB, Pinecone, Qdrant", "url": "https://zero-to-ai.dev/curriculum/07-vector-databases/README.html"},
+    {"@type": "ListItem", "position": 9, "name": "RAG - Retrieval-Augmented Generation", "url": "https://zero-to-ai.dev/curriculum/08-rag/README.html"},
+    {"@type": "ListItem", "position": 10, "name": "MLOps - Deployment and Monitoring", "url": "https://zero-to-ai.dev/curriculum/09-mlops/README.html"},
     {"@type": "ListItem", "position": 11, "name": "Specializations", "url": "https://zero-to-ai.dev/curriculum/10-specializations/README.html"},
-    {"@type": "ListItem", "position": 12, "name": "Prompt Engineering — Chain-of-Thought, DSPy", "url": "https://zero-to-ai.dev/curriculum/11-prompt-engineering/README.html"},
-    {"@type": "ListItem", "position": 13, "name": "LLM Fine-Tuning — LoRA, QLoRA, PEFT", "url": "https://zero-to-ai.dev/curriculum/12-llm-finetuning/README.html"},
-    {"@type": "ListItem", "position": 14, "name": "Multimodal AI — Vision, Audio", "url": "https://zero-to-ai.dev/curriculum/13-multimodal/README.html"},
-    {"@type": "ListItem", "position": 15, "name": "Local LLMs — Ollama, llama.cpp", "url": "https://zero-to-ai.dev/curriculum/14-local-llms/README.html"},
-    {"@type": "ListItem", "position": 16, "name": "AI Agents — Function Calling, MCP, LangGraph", "url": "https://zero-to-ai.dev/curriculum/15-ai-agents/README.html"},
+    {"@type": "ListItem", "position": 12, "name": "Prompt Engineering - Chain-of-Thought, DSPy", "url": "https://zero-to-ai.dev/curriculum/11-prompt-engineering/README.html"},
+    {"@type": "ListItem", "position": 13, "name": "LLM Fine-Tuning - LoRA, QLoRA, PEFT", "url": "https://zero-to-ai.dev/curriculum/12-llm-finetuning/README.html"},
+    {"@type": "ListItem", "position": 14, "name": "Multimodal AI - Vision, Audio", "url": "https://zero-to-ai.dev/curriculum/13-multimodal/README.html"},
+    {"@type": "ListItem", "position": 15, "name": "Local LLMs - Ollama, llama.cpp", "url": "https://zero-to-ai.dev/curriculum/14-local-llms/README.html"},
+    {"@type": "ListItem", "position": 16, "name": "AI Agents - Function Calling, MCP, LangGraph", "url": "https://zero-to-ai.dev/curriculum/15-ai-agents/README.html"},
     {"@type": "ListItem", "position": 17, "name": "Model Evaluation", "url": "https://zero-to-ai.dev/curriculum/16-model-evaluation/README.html"},
     {"@type": "ListItem", "position": 18, "name": "Debugging & Troubleshooting", "url": "https://zero-to-ai.dev/curriculum/17-debugging/README.html"},
     {"@type": "ListItem", "position": 19, "name": "Low-Code AI Tools", "url": "https://zero-to-ai.dev/curriculum/18-low-code/README.html"},
@@ -133,20 +133,20 @@ sd_hide_title: true
     {"@type": "ListItem", "position": 22, "name": "Quizzes", "url": "https://zero-to-ai.dev/curriculum/21-quizzes/README.html"},
     {"@type": "ListItem", "position": 23, "name": "References", "url": "https://zero-to-ai.dev/curriculum/22-references/README.html"},
     {"@type": "ListItem", "position": 24, "name": "Glossary", "url": "https://zero-to-ai.dev/curriculum/23-glossary/README.html"},
-    {"@type": "ListItem", "position": 25, "name": "Advanced Deep Learning — GANs, VAEs", "url": "https://zero-to-ai.dev/curriculum/24-advanced-dl/README.html"},
+    {"@type": "ListItem", "position": 25, "name": "Advanced Deep Learning - GANs, VAEs", "url": "https://zero-to-ai.dev/curriculum/24-advanced-dl/README.html"},
     {"@type": "ListItem", "position": 26, "name": "Reinforcement Learning", "url": "https://zero-to-ai.dev/curriculum/25-rl/README.html"},
     {"@type": "ListItem", "position": 27, "name": "Time Series Analysis", "url": "https://zero-to-ai.dev/curriculum/26-time-series/README.html"},
     {"@type": "ListItem", "position": 28, "name": "Causal Inference", "url": "https://zero-to-ai.dev/curriculum/27-causal-inference/README.html"},
     {"@type": "ListItem", "position": 29, "name": "Practical Data Science", "url": "https://zero-to-ai.dev/curriculum/28-practical-ds/README.html"},
     {"@type": "ListItem", "position": 30, "name": "AI Hardware & LLM Validation", "url": "https://zero-to-ai.dev/curriculum/29-ai-hardware/README.html"},
-    {"@type": "ListItem", "position": 31, "name": "Inference Optimization — vLLM, Quantization", "url": "https://zero-to-ai.dev/curriculum/30-inference-opt/README.html"}
+    {"@type": "ListItem", "position": 31, "name": "Inference Optimization - vLLM, Quantization", "url": "https://zero-to-ai.dev/curriculum/30-inference-opt/README.html"}
   ]
 }
 </script>
 
 <div class="hero">
-<h1>Zero to AI — Free AI &amp; Machine Learning Course</h1>
-<p><strong>A free AI course and machine learning roadmap with 950+ hands-on Jupyter notebooks — from Python basics to production AI systems</strong></p>
+<h1>Zero to AI - Free AI &amp; Machine Learning Course</h1>
+<p><strong>A free AI course and machine learning roadmap with 950+ hands-on Jupyter notebooks - from Python basics to production AI systems</strong></p>
 <p>Learn AI from scratch with a guided, open-source curriculum covering machine learning, deep learning, LLMs, RAG, AI agents, prompt engineering, fine-tuning, and MLOps.</p>
 <div class="hero-badges">
   <a href="https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
@@ -346,7 +346,7 @@ sd_hide_title: true
 <details>
 <summary><strong>Is Zero to AI really free?</strong></summary>
 
-Yes. The entire curriculum — 950+ Jupyter notebooks, 31 phases, and 3 learning tracks — is MIT-licensed and free forever. No sign-up, no paywall, no upsell.
+Yes. The entire curriculum - 950+ Jupyter notebooks, 31 phases, and 3 learning tracks - is MIT-licensed and free forever. No sign-up, no paywall, no upsell.
 
 If you are looking for a free AI course you can actually use end to end, Zero to AI is designed to be fully accessible in the browser or on your local machine.
 
@@ -373,7 +373,7 @@ The visual study guide and machine learning roadmap are there to help you pick a
 <details>
 <summary><strong>Can I run the notebooks without installing anything?</strong></summary>
 
-Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click — no local setup needed.
+Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click - no local setup needed.
 
 That makes the curriculum especially useful if you want a free AI course you can start immediately without spending time on environment setup first.
 

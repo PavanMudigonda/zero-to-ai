@@ -84,14 +84,14 @@ Reason: flat chunk retrieval does not capture long-range document structure well
 
 If you want a disciplined path through the advanced material, use this order:
 
-1. `02_document_processing.ipynb` — chunking strategies
-2. `07_evaluation.ipynb` — metrics and benchmarking (run this early so you can measure everything that follows)
-3. `08_hyde_reranking.ipynb` — HyDE query expansion + reranking **(self-contained, no API keys)**
-4. `11_corrective_rag.ipynb` — CRAG-style retrieval grading, retry, abstention **(self-contained)**
-5. `12_parent_child_retrieval.ipynb` — chunk-to-parent expansion **(self-contained)**
-6. `13_raptor_retrieval.ipynb` — hierarchical summary-tree retrieval **(self-contained)**
-7. `09_advanced_retrieval.ipynb` — ColBERT, Cohere reranking, full pipeline (requires OpenAI + Cohere API keys)
-8. `10_graphrag_visual_rag.ipynb` — entity-relationship and multimodal retrieval
+1. `02_document_processing.ipynb` - chunking strategies
+2. `07_evaluation.ipynb` - metrics and benchmarking (run this early so you can measure everything that follows)
+3. `08_hyde_reranking.ipynb` - HyDE query expansion + reranking **(self-contained, no API keys)**
+4. `11_corrective_rag.ipynb` - CRAG-style retrieval grading, retry, abstention **(self-contained)**
+5. `12_parent_child_retrieval.ipynb` - chunk-to-parent expansion **(self-contained)**
+6. `13_raptor_retrieval.ipynb` - hierarchical summary-tree retrieval **(self-contained)**
+7. `09_advanced_retrieval.ipynb` - ColBERT, Cohere reranking, full pipeline (requires OpenAI + Cohere API keys)
+8. `10_graphrag_visual_rag.ipynb` - entity-relationship and multimodal retrieval
 9. `challenges.md` / `assignment.md`
 
 Notebooks 3-6 above are **self-contained** (TF-IDF + toy data, no API keys needed) so you can

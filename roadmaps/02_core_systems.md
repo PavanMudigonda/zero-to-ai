@@ -1,4 +1,4 @@
-# Visual Roadmap — Part 2: Core Systems
+# Visual Roadmap - Part 2: Core Systems
 
 > LLM landscape, embeddings, vector search, RAG, agents, multi-agent systems, and MLOps.
 
@@ -103,19 +103,19 @@ flowchart TD
         I --> J[Answer with Citations]
     end
 
-    subgraph "Advanced RAG — Query"
+    subgraph "Advanced RAG - Query"
         L[Query Expansion] --> F
         HY[HyDE - Hypothetical Answers] --> F
     end
 
-    subgraph "Advanced RAG — Retrieval"
+    subgraph "Advanced RAG - Retrieval"
         M[Hybrid Search BM25 + Dense] --> G
         K[Re-ranking / Cross-Encoder] --> G
         PC[Parent-Child Retrieval] --> G
         RAP[RAPTOR - Summary Trees] --> G
     end
 
-    subgraph "Advanced RAG — Control"
+    subgraph "Advanced RAG - Control"
         CR[CRAG - Retrieval Grading] --> H
         N[Agentic RAG] --> I
         GR[GraphRAG] --> G

@@ -1,4 +1,4 @@
-# Master Study Guide — Zero to AI
+# Master Study Guide
 
 > Phase-by-phase learning notes, study schedule, and track recommendations.
 > Read this first, then use [checklist.md](checklist.md) to track your progress.
@@ -10,11 +10,11 @@ This is the canonical learner navigation document for the repository.
 ## How to Use This Guide
 
 1. **Pick your track** below based on your career goal
-2. **Follow the phase order** — each phase builds on the previous
+2. **Follow the phase order** - each phase builds on the previous
 3. **Open `00_START_HERE.ipynb`** in each phase directory for guided entry
 4. **Track progress** in [checklist.md](checklist.md)
 5. **Use [REFERENCES.md](REFERENCES.md)** for supplementary videos, papers, and courses
-6. **Treat later WIP phases honestly** — some advanced modules are still being expanded
+6. **Treat later WIP phases honestly** - some advanced modules are still being expanded
 
 ---
 
@@ -94,7 +94,7 @@ Not every phase is equally important for every role. Pick the track that matches
 ### Phase 0: Course Setup (`00-course-setup/`)
 - Read `2026_model_landscape.md` to understand what models exist today
 - Run `install_dependencies.sh` to set up your environment
-- Bookmark [troubleshooting.md](../00-course-setup/troubleshooting.md) — you will need it
+- Bookmark [troubleshooting.md](../00-course-setup/troubleshooting.md) - you will need it
 
 ### Phase 1: Python (`01-python/`)
 - If new to Python, complete the [Python Bro Code](https://github.com/PavanMudigonda/python-bro-code) course first
@@ -104,14 +104,14 @@ Not every phase is equally important for every role. Pick the track that matches
 ### Phase 2: Data Science (`02-data-science/`)
 - **Start with:** `1-numpy-examples/` → `2-pandas-examples/` → `4-matplotlib/`
 - **Then:** `3-data-science-examples/` for real-world scenarios
-- **Deep dive:** `5-scikit-learn/` has 278 example notebooks — use as a reference library, not a cover-to-cover read
+- **Deep dive:** `5-scikit-learn/` has 278 example notebooks - use as a reference library, not a cover-to-cover read
 - The sub-directory structure can feel complex; follow the numbered order within each
 
 ### Phase 3: Mathematics (`03-maths/`)
-- **Start with:** `foundational/` — 7 notebooks from linear algebra to neural network math
+- **Start with:** `foundational/` - 7 notebooks from linear algebra to neural network math
 - **Then:** `mml-book/` for textbook-aligned exercises
 - **Optional depth:** `islp-book/` (13 notebooks), `cs229-course/`, `advanced/`
-- You don't need to complete all 153 notebooks — focus on `foundational/` first
+- You don't need to complete all 153 notebooks - focus on `foundational/` first
 
 ### Phase 4: Tokenization (`04-token/`)
 - Start with `00_START_HERE.ipynb`
@@ -121,13 +121,13 @@ Not every phase is equally important for every role. Pick the track that matches
 ### Phase 5: Embeddings (`05-embeddings/`)
 - Start with `00_START_HERE.ipynb`
 - Understand that embeddings are the bridge between text and math
-- Practice semantic search — this is the foundation of RAG
+- Practice semantic search - this is the foundation of RAG
 - ~6–8 hours
 
 ### Phase 6: Neural Networks (`06-neural-networks/`)
 - Start with `00_START_HERE.ipynb`
 - Build a neural network from scratch in NumPy before using PyTorch
-- The transformer notebook (05) is the most important — everything after depends on it
+- The transformer notebook (05) is the most important - everything after depends on it
 - ~10–15 hours
 
 ### Phase 7: Vector Databases (`07-vector-databases/`)
@@ -138,7 +138,7 @@ Not every phase is equally important for every role. Pick the track that matches
 ### Phase 8: RAG (`08-rag/`)
 - Start with `00_START_HERE.ipynb`
 - This is the most notebook-rich teaching phase (14 notebooks)
-- Complete the assignment — building a RAG system is an essential portfolio project
+- Complete the assignment - building a RAG system is an essential portfolio project
 - ~12–18 hours
 
 ### Phase 9: MLOps (`09-mlops/`)
@@ -148,7 +148,7 @@ Not every phase is equally important for every role. Pick the track that matches
 - ~10–15 hours
 
 ### Phase 10: Specializations (`10-specializations/`)
-- Hub phase — pick the path matching your track: Computer Vision, NLP, or AI Agents
+- Hub phase - pick the path matching your track: Computer Vision, NLP, or AI Agents
 - Each sub-path has 6 notebooks
 - ~8–12 hours per path
 
@@ -171,14 +171,14 @@ Not every phase is equally important for every role. Pick the track that matches
 
 ### Phase 14: Local LLMs (`14-local-llms/`)
 - Start with `00_START_HERE.ipynb`
-- Install Ollama first — it takes 5 minutes and changes everything
+- Install Ollama first - it takes 5 minutes and changes everything
 - ~6–8 hours
 
 ### Phase 15: AI Agents (`15-ai-agents/`)
 - Start with `00_START_HERE.ipynb`
-- This is the hottest topic in 2026 AI — take your time
+- This is the hottest topic in 2026 AI - take your time
 - Take the pre-quiz before starting, post-quiz after
-- Complete the assignment — building an agent is essential
+- Complete the assignment - building an agent is essential
 - ~12–15 hours
 
 ### Phases 16–19: Evaluation, Debugging, Low-Code, Safety
@@ -193,7 +193,7 @@ Not every phase is equally important for every role. Pick the track that matches
 
 ### Phases 24–27: Advanced Topics
 - Deep Learning (39 notebooks), RL (7), Time Series (7), Causal Inference (7)
-- All have `00_START_HERE.ipynb` — let them guide you
+- All have `00_START_HERE.ipynb` - let them guide you
 - Do these after completing your core track
 
 ### Phase 28: Practical Data Science (`28-practical-data-science/`)
@@ -213,7 +213,7 @@ Not every phase is equally important for every role. Pick the track that matches
 
 ### Phase 31: AI-Powered Dev Tools (`31-ai-powered-dev-tools/`)
 - VS Code + Copilot configuration, MCP deep dive, custom instructions
-- Read `00_ai_dev_tools_2026.md` early — it compares all major coding tools
+- Read `00_ai_dev_tools_2026.md` early - it compares all major coding tools
 - ~10–15 hours
 
 ---
@@ -249,7 +249,7 @@ Halve the timeline above. Add the supplementary phases (16–19) in between core
 3. **Break things on purpose.** Change a hyperparameter, remove a layer, corrupt the data. Understanding failure modes teaches more than success.
 4. **Use the glossary** ([23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md)) whenever you hit an unfamiliar term.
 5. **Ask for help.** Use [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions) if you get stuck.
-6. **Build projects.** Each phase suggests projects at the end — do at least one per phase.
+6. **Build projects.** Each phase suggests projects at the end - do at least one per phase.
 7. **Track your progress.** Print [checklist.md](checklist.md) or check off items as you go.
 
 ---

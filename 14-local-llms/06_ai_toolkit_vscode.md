@@ -1,6 +1,6 @@
 # AI Toolkit for VS Code
 
-The **AI Toolkit** extension (formerly Windows AI Studio) is Microsoft's VS Code extension for browsing, downloading, running, fine-tuning, and evaluating local models — all from the editor.
+The **AI Toolkit** extension (formerly Windows AI Studio) is Microsoft's VS Code extension for browsing, downloading, running, fine-tuning, and evaluating local models - all from the editor.
 
 ---
 
@@ -11,7 +11,7 @@ The **AI Toolkit** extension (formerly Windows AI Studio) is Microsoft's VS Code
 | **Model catalog** | Browse models from Hugging Face and Azure AI Foundry directly in the sidebar |
 | **Local playground** | Chat with downloaded models in an interactive panel inside VS Code |
 | **ONNX Runtime** | Run models locally via ONNX Runtime GenAI (CPU, CUDA, DirectML, Apple Silicon) |
-| **Fine-tuning** | QLoRA fine-tuning with a guided UI — dataset prep, hyperparameters, training |
+| **Fine-tuning** | QLoRA fine-tuning with a guided UI - dataset prep, hyperparameters, training |
 | **Evaluation** | Run promptflow-evals evaluators and view results in the extension |
 | **Model conversion** | Convert Hugging Face models to ONNX format for local inference |
 | **Multi-runtime** | Supports ONNX, GGUF (via llama.cpp), and cloud-hosted endpoints |
@@ -159,7 +159,7 @@ AI Toolkit provides a guided fine-tuning workflow directly in VS Code.
 | Large model (> 13B params) | Only with a strong GPU (24GB+ VRAM) |
 | Quick experiment / proof of concept | Yes |
 | Production training | Use cloud (Azure AI Foundry) |
-| Sensitive data that can't leave the machine | Yes — main advantage |
+| Sensitive data that can't leave the machine | Yes - main advantage |
 
 ---
 
@@ -245,7 +245,7 @@ AI Toolkit models don't directly replace GitHub Copilot's backend. However, you 
 
 | Problem | Fix |
 |---------|-----|
-| Model doesn't appear in sidebar | Check `~/.aitk/models/` directory structure — must be exactly 4 layers deep |
+| Model doesn't appear in sidebar | Check `~/.aitk/models/` directory structure - must be exactly 4 layers deep |
 | Slow inference on macOS | Ensure the ONNX model targets `cpu` or use MLX models via Ollama instead |
 | Out of memory during fine-tuning | Reduce batch size, use INT4 quantization, or switch to a smaller model |
 | Conversion fails | Install latest `onnxruntime_genai` and `transformers` from git main |

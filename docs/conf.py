@@ -10,6 +10,10 @@ release = "0.1.0"
 
 html_baseurl = "https://zero-to-ai.dev/"
 SITE_URL = html_baseurl.rstrip("/")
+# sphinx-sitemap: strip the default /en/ language prefix from sitemap URLs
+sitemap_url_scheme = "{link}"
+# Exclude utility pages from the sitemap
+sitemap_excludes = ["404.html", "search.html", "genindex.html"]
 REPO_URL = "https://github.com/PavanMudigonda/zero-to-ai"
 AUTHOR_URL = "https://github.com/PavanMudigonda"
 DEFAULT_META_DESCRIPTION = (
@@ -47,19 +51,10 @@ extensions = [
     "sphinx_design",
     "sphinxcontrib.mermaid",
     "sphinx_sitemap",
-    "sphinxext.opengraph",
+    # sphinxext.opengraph removed — all OG tags emitted by page.html template
 ]
 
-# OpenGraph settings
-ogp_site_url = SITE_URL
-ogp_image = f"{SITE_URL}/_static/social-preview.svg"
-ogp_description_length = 300
-ogp_site_name = project
-ogp_custom_meta_tags = [
-    '<meta name="twitter:card" content="summary_large_image" />',
-]
-
-# Mermaid diagram settings — render client-side via CDN (no mmdc binary needed)
+# Mermaid diagram settings - render client-side via CDN (no mmdc binary needed)
 mermaid_version = "11"
 mermaid_init_js = "mermaid.initialize({startOnLoad:true});"
 
@@ -122,11 +117,11 @@ exclude_patterns = [
     "**/_sidebar.md",
     "**/Untitled.ipynb",
     "**/Test.ipynb",
-    # Duplicate .md/.ipynb pairs — keep the notebook, drop the markdown
+    # Duplicate .md/.ipynb pairs - keep the notebook, drop the markdown
     "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/assignment.md",
     "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/assignment.md",
     "curriculum/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/assignment.md",
-    # Translation directories — non-English content with broken relative image paths
+    # Translation directories - non-English content with broken relative image paths
     "**/translations",
     # Source markdown files that are copied into generated/ by build_site.sh
     # Orphaned docs/ copies of deleted root files
@@ -141,6 +136,8 @@ exclude_patterns = [
 # -- Options for HTML output -------------------------------------------------
 html_theme = "furo"
 html_title = "Zero to AI"
+# Populate {{ last_updated }} in templates (ISO 8601 for structured data)
+html_last_updated_fmt = "%Y-%m-%dT%H:%M:%S+00:00"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
 html_js_files = [
@@ -190,8 +187,8 @@ html_context = {
     "site_tagline": "Free AI/ML course with 950+ notebooks",
     "default_meta_description": DEFAULT_META_DESCRIPTION,
     "default_og_description": DEFAULT_OG_DESCRIPTION,
-    "default_social_image": f"{SITE_URL}/_static/social-preview.svg",
-    "default_social_image_alt": "Zero to AI — Free AI/ML Course with 950+ Notebooks",
+    "default_social_image": f"{SITE_URL}/_static/social-preview.png",
+    "default_social_image_alt": "Zero to AI - Free AI/ML Course with 950+ Notebooks",
     "page_description_overrides": PAGE_DESCRIPTION_OVERRIDES,
     "google_site_verification": os.environ.get("GOOGLE_SITE_VERIFICATION", ""),
     "bing_site_verification": os.environ.get("BING_SITE_VERIFICATION", ""),
@@ -201,7 +198,7 @@ html_context = {
     "same_as_links": [REPO_URL, AUTHOR_URL],
 }
 
-# Google Analytics — inject via Furo's analytics slot (no extra extension needed)
+# Google Analytics - inject via Furo's analytics slot (no extra extension needed)
 _ga_id = os.environ.get("GOOGLE_ANALYTICS_ID", "")
 if _ga_id:
     html_context["analytics_id"] = _ga_id

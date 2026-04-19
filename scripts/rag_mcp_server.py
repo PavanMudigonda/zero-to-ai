@@ -73,7 +73,7 @@ def search_repo(query: str, n_results: int = 10) -> str:
         filepath = meta.get("filepath", "unknown")
         chunk_idx = meta.get("chunk_index", 0)
         output_parts.append(
-            f"### Result {i + 1} — {filepath} (chunk {chunk_idx}, similarity: {similarity:.3f})\n\n{doc}\n"
+            f"### Result {i + 1} - {filepath} (chunk {chunk_idx}, similarity: {similarity:.3f})\n\n{doc}\n"
         )
 
     header = f"Found {len(output_parts)} results for: \"{query}\"\n\n"

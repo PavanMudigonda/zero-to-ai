@@ -198,7 +198,7 @@ MCP servers are configured in `.vscode/mcp.json` (workspace-scoped) or your user
 }
 ```
 
-**Project-root** (`.mcp.json`) — also supported by Claude Code:
+**Project-root** (`.mcp.json`) - also supported by Claude Code:
 ```json
 {
   "mcpServers": {
@@ -311,4 +311,4 @@ If a server fails to start, check:
 
 ---
 
-*Next: [02_mcp_deep_dive.md](02_mcp_deep_dive.md) — the MCP protocol in depth*
+*Next: [02_mcp_deep_dive.md](02_mcp_deep_dive.md) - the MCP protocol in depth*

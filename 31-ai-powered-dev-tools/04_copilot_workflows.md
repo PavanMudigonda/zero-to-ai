@@ -8,7 +8,7 @@ Practical workflow patterns for real development tasks using Copilot's three mod
 
 | Mode | Trigger | Best for |
 |------|---------|----------|
-| **Completions** | Just type — suggestions appear inline | Boilerplate, repetitive patterns, line-by-line edits |
+| **Completions** | Just type - suggestions appear inline | Boilerplate, repetitive patterns, line-by-line edits |
 | **Chat** | Open Copilot Chat panel (⌘⇧I) | Questions, explanations, planning, code review |
 | **Agent** | @workspace in chat, or agent mode toggle | Multi-file features, refactoring, test generation, debugging |
 
@@ -65,7 +65,7 @@ Agent mode will:
 Select the generated code and ask:
 
 ```
-/explain this retrieval implementation — are there edge cases I'm missing?
+/explain this retrieval implementation - are there edge cases I'm missing?
 ```
 
 ---
@@ -90,7 +90,7 @@ The endpoint was recently refactored. Fix the failing tests to match
 the new endpoint signatures.
 ```
 
-Agent reads the test file, the route file, the schemas, and the error — then fixes the mismatch.
+Agent reads the test file, the route file, the schemas, and the error - then fixes the mismatch.
 
 ### Step 3: Verify
 
@@ -243,7 +243,7 @@ Include:
 
 | Task | Mode | Example prompt |
 |------|------|----------------|
-| Quick fix | Completions | Just type the fix — Copilot suggests the rest |
+| Quick fix | Completions | Just type the fix - Copilot suggests the rest |
 | Explain code | Chat | `/explain` on selection |
 | Find a function | Chat | `@workspace Where is the retry logic?` |
 | New feature | Agent | `Add rate limiting to all /api/ routes...` |
@@ -288,5 +288,5 @@ Good start, but:
 
 ---
 
-*Previous: [03_copilot_instructions_guide.md](03_copilot_instructions_guide.md) — custom instructions for Copilot*
-*Next: [05_build_mcp_server.ipynb](05_build_mcp_server.ipynb) — hands-on: build your own MCP server*
+*Previous: [03_copilot_instructions_guide.md](03_copilot_instructions_guide.md) - custom instructions for Copilot*
+*Next: [05_build_mcp_server.ipynb](05_build_mcp_server.ipynb) - hands-on: build your own MCP server*

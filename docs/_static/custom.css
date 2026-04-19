@@ -879,7 +879,7 @@ body.sidebar-resizing * {
   .sidebar-drawer {
     position: relative;          /* anchor for the handle */
     transition: none;            /* JS adds .sidebar-transitions-ready to enable */
-    /* overflow NOT set here — set only when collapsed/resizing so the
+    /* overflow NOT set here - set only when collapsed/resizing so the
        absolutely-positioned drag handle isn't clipped */
   }
 
@@ -1041,7 +1041,7 @@ body.sidebar-resizing * {
   }
 }
 
-/* Hide handles on mobile — Furo handles mobile sidebars */
+/* Hide handles on mobile - Furo handles mobile sidebars */
 @media (max-width: 63em) {
   .sidebar-resize-handle {
     display: none !important;

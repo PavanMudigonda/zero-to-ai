@@ -16,7 +16,7 @@ Seven configuration primitives control how Copilot behaves in your project. They
 | 6 | [Skills](#6-skills) | `SKILL.md` + assets | `.github/skills/<name>/` | On-demand via `/` picker or auto-discovery |
 | 7 | [Hooks](#7-hooks) | `*.json` | `.github/hooks/` | Deterministic lifecycle events |
 
-**Rule:** Use `copilot-instructions.md` OR `AGENTS.md` for workspace instructions — not both.
+**Rule:** Use `copilot-instructions.md` OR `AGENTS.md` for workspace instructions - not both.
 
 ---
 
@@ -81,7 +81,7 @@ Create `.github/copilot-instructions.md` in your repo root. Automatically includ
 
 ## 2. AGENTS.md
 
-An alternative to `copilot-instructions.md` with **monorepo hierarchy support**. Place `AGENTS.md` at the repo root or in subfolders — the closest file in the directory tree wins.
+An alternative to `copilot-instructions.md` with **monorepo hierarchy support**. Place `AGENTS.md` at the repo root or in subfolders - the closest file in the directory tree wins.
 
 ```
 /AGENTS.md                  # Root defaults
@@ -97,7 +97,7 @@ An alternative to `copilot-instructions.md` with **monorepo hierarchy support**.
 | Monorepo with different stacks per folder | `AGENTS.md` (one per subfolder) |
 | Want cross-editor compatibility | `AGENTS.md` (open standard) |
 
-**Important:** Use one or the other — never both in the same repo.
+**Important:** Use one or the other - never both in the same repo.
 
 ### Example
 
@@ -170,7 +170,7 @@ applyTo: "08-rag/**"
 ### Glob Patterns
 
 ```yaml
-applyTo: "**"                      # Always included (use with caution — burns context)
+applyTo: "**"                      # Always included (use with caution - burns context)
 applyTo: "**/*.py"                 # All Python files
 applyTo: ["src/**", "lib/**"]      # Multiple patterns (OR)
 applyTo: "src/api/**/*.ts"         # Specific folder + extension
@@ -325,7 +325,7 @@ On-demand workflow packages with bundled scripts, templates, and reference docs.
 
 ```
 .github/skills/webapp-testing/
-├── SKILL.md              # Required — must match folder name
+├── SKILL.md              # Required - must match folder name
 ├── scripts/
 │   └── run-tests.sh
 ├── references/
@@ -427,9 +427,9 @@ Deterministic lifecycle automation. Unlike instructions (which guide behavior), 
 ```
 
 The script receives JSON on stdin describing the tool call. It can return:
-- `"permissionDecision": "allow"` — proceed
-- `"permissionDecision": "ask"` — ask user for confirmation
-- `"permissionDecision": "deny"` — block the action
+- `"permissionDecision": "allow"` - proceed
+- `"permissionDecision": "ask"` - ask user for confirmation
+- `"permissionDecision": "deny"` - block the action
 
 ### When to Use Hooks vs Instructions
 
@@ -492,9 +492,9 @@ The agent can only run tests if you tell it how:
 Negative instructions prevent common AI mistakes:
 ```
 ## Do NOT
-- Do not use os.getenv() — use pydantic-settings
-- Do not hardcode secrets — use environment variables
-- Do not add print() for debugging — use logging
+- Do not use os.getenv() - use pydantic-settings
+- Do not hardcode secrets - use environment variables
+- Do not add print() for debugging - use logging
 ```
 
 ### Write Keyword-Rich Descriptions
@@ -507,7 +507,7 @@ Good: `"Test web applications using Playwright. Use for verifying frontend, debu
 
 ### Commit Everything to Version Control
 
-All customization files should be committed to git — instructions, prompts, agents, skills, and hooks. This ensures every team member gets the same Copilot behavior.
+All customization files should be committed to git - instructions, prompts, agents, skills, and hooks. This ensures every team member gets the same Copilot behavior.
 
 ---
 
@@ -516,15 +516,15 @@ All customization files should be committed to git — instructions, prompts, ag
 | Problem | Fix |
 |---------|-----|
 | Copilot ignores instructions | Verify file is at `.github/copilot-instructions.md` (exact path) |
-| Using both AGENTS.md and copilot-instructions.md | Pick one — having both causes conflicts |
+| Using both AGENTS.md and copilot-instructions.md | Pick one - having both causes conflicts |
 | Scoped instructions not applying | Check `applyTo` glob matches the file you're editing |
 | Prompt files not appearing | Ensure they're in `.github/prompts/` with `.prompt.md` extension |
 | Agent not appearing in picker | Check `user-invocable` isn't `false` and `description` is present |
 | Skill not auto-loading | Verify `name` in frontmatter matches folder name exactly |
 | Hooks not firing | Check JSON syntax, `type: "command"`, and file is in `.github/hooks/` |
-| `applyTo: "**"` slowing things down | Too broad — loads on every interaction. Use specific globs |
+| `applyTo: "**"` slowing things down | Too broad - loads on every interaction. Use specific globs |
 | Too much instruction text | Keep under ~2000 words total; Copilot has context limits |
 
 ---
 
-*Next: [04_copilot_workflows.md](04_copilot_workflows.md) — real VS Code + Copilot workflows*
+*Next: [04_copilot_workflows.md](04_copilot_workflows.md) - real VS Code + Copilot workflows*

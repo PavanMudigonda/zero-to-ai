@@ -109,10 +109,10 @@ Understanding how to configure these systems is as important as understanding th
 
 | Phase | Connection |
 |-------|-----------|
-| **00 — AI Dev Tools** | `00_ai_dev_tools_2026.md` compares all AI coding tools; this chapter goes deep on VS Code |
-| **08 — RAG** | MCP servers can expose your RAG pipeline as a tool Copilot can call |
-| **15 — AI Agents** | The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does |
-| **18 — Low-Code AI Tools** | Gradio/Streamlit build UIs; this chapter builds developer workflows |
+| **00 - AI Dev Tools** | `00_ai_dev_tools_2026.md` compares all AI coding tools; this chapter goes deep on VS Code |
+| **08 - RAG** | MCP servers can expose your RAG pipeline as a tool Copilot can call |
+| **15 - AI Agents** | The agent patterns (plan → act → observe → reflect) are exactly what Copilot agent mode does |
+| **18 - Low-Code AI Tools** | Gradio/Streamlit build UIs; this chapter builds developer workflows |
 
 ## What Comes Next
 
@@ -134,4 +134,4 @@ Understanding how to configure these systems is as important as understanding th
 
 ---
 
-*Part of the [Zero to AI](../README.md) curriculum — Phase 31*
+*Part of the [Zero to AI](../README.md) curriculum - Phase 31*

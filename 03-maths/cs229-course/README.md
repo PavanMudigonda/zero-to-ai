@@ -27,7 +27,7 @@ This folder is the bridge from math foundations to core ML algorithms. Use it wh
 | 15 | [Reinforcement Learning](course/15_reinforcement_learning.ipynb) | MDPs, Q-learning, policy gradient |
 | X01 | [Anomaly Detection](course/X01_anomaly_detection.ipynb) | Gaussian-based, isolation forest |
 | X02 | [Recommender Systems](course/X02_recommender_systems.ipynb) | Collaborative filtering, matrix factorization |
-| — | [Practice Problems](course/CS229_PRACTICE.ipynb) | Review exercises across all topics |
+| - | [Practice Problems](course/CS229_PRACTICE.ipynb) | Review exercises across all topics |
 
 ## Prerequisites
 
@@ -46,8 +46,8 @@ Follow the numbered sequence (01-15). X01-X02 are supplementary.
 
 ## Related
 
-- [mml-book/](../mml-book/) — deeper math foundations
-- [islp-book/](../islp-book/) — statistical learning perspective on similar topics
+- [mml-book/](../mml-book/) - deeper math foundations
+- [islp-book/](../islp-book/) - statistical learning perspective on similar topics
 
 ## What Comes Next
 

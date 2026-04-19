@@ -145,7 +145,7 @@ Agent:
 
 ---
 
-#### Option E: Agent Evaluation Pipeline (NEW — see Notebook 10)
+#### Option E: Agent Evaluation Pipeline (NEW - see Notebook 10)
 **Purpose:** Build → Evaluate → Improve an agent using structured eval methods
 
 **Required Tools:**

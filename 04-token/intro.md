@@ -2,9 +2,9 @@
 
 ## What Are Tokens?
 **
-**Tokens** are the fundamental building blocks that language models use to process text. Think of them as the "words" that AI models understand—though they're not exactly words in the traditional sense.
+**Tokens** are the fundamental building blocks that language models use to process text. Think of them as the "words" that AI models understand-though they're not exactly words in the traditional sense.
 
-When you input text like `"Hello, world!"` into an LLM, the model doesn't process it as a continuous string. Instead, it breaks it down into **tokens**—discrete units that can be words, parts of words (subwords), or even individual characters.
+When you input text like `"Hello, world!"` into an LLM, the model doesn't process it as a continuous string. Instead, it breaks it down into **tokens**-discrete units that can be words, parts of words (subwords), or even individual characters.
 
 ## Why Tokens Matter
 
@@ -130,7 +130,7 @@ LLMs have a **context window** measured in tokens, not characters:
 - GPT-4: 8,192 or 32,768 tokens (~6,000-25,000 words)
 - Claude 3: 200,000 tokens (~150,000 words)
 
-This is why token counting matters—it determines how much text the model can process at once.
+This is why token counting matters-it determines how much text the model can process at once.
 
 ### 3. Token IDs
 

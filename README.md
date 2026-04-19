@@ -2,7 +2,7 @@
 Keywords: machine learning course, deep learning tutorial, llm tutorial, rag tutorial, ai agents, prompt engineering, python ai, pytorch tutorial, transformers, openai api, fine-tuning, mlops, vector databases, nlp, computer vision, data science course, artificial intelligence guide, full stack ai, generative ai course, build ai applications, learn ai from scratch
 -->
 
-# Zero to AI — Free AI/ML Course: Python, LLMs, RAG, Agents & Deep Learning
+# Zero to AI - Free AI/ML Course: Python, LLMs, RAG, Agents & Deep Learning
 
 Zero to AI is a free, open-source AI course and machine learning curriculum for learning Python, data science, deep learning, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, fine-tuning, and MLOps through 950+ hands-on Jupyter notebooks.
 
@@ -145,9 +145,9 @@ jupyter notebook
 
 #### Option 3: Cloud (No Installation!)
 
-- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai) — fully automated, all dependencies install via `install_dependencies.sh`
+- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai) - fully automated, all dependencies install via `install_dependencies.sh`
 
-- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main) — then run this in the first cell:
+- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main) - then run this in the first cell:
   ```python
   !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/colab_requirements.txt
   ```
@@ -159,9 +159,9 @@ jupyter notebook
   !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/kaggle_requirements.txt
   ```
 
-- **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) — packages auto-install on first run via `requirements-replit.txt`
+- **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) - packages auto-install on first run via `requirements-replit.txt`
 
-- **github.dev**: Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai) — browser-based editor only (no execution)
+- **github.dev**: Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai) - browser-based editor only (no execution)
 
 ---
 

@@ -1,6 +1,6 @@
 # Computer Vision
 
-Practical computer vision notebooks — from image processing basics to object detection and segmentation.
+Practical computer vision notebooks - from image processing basics to object detection and segmentation.
 
 Use this subtrack when you want applied computer-vision project work inside the practical portfolio phase rather than the broader specialization track.
 

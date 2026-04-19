@@ -257,7 +257,7 @@ Week 3: Advanced & Evaluation
 ├── Day 1-2: Reasoning models in agent loops (Notebook 8)
 ├── Day 3-4: Autonomous agents 2026 (Notebook 9)
 ├── Day 5:   Agent evaluation & safety (Notebook 10)
-└── Day 6-7: Assignment — build, evaluate & deploy
+└── Day 6-7: Assignment - build, evaluate & deploy
 ```
 
 ---

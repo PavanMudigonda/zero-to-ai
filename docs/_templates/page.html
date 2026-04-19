@@ -3,6 +3,7 @@
 {% block extrahead %}
 {{ super() }}
 {% include "analytics.html" %}
+<link rel="icon" href="{{ pathto('_static/favicon.svg', 1) }}" type="image/svg+xml" />
 {% set page_title = title|default(project, true) %}
 {% set description_overrides = page_description_overrides if page_description_overrides is defined else {} %}
 {% set default_description = default_meta_description if default_meta_description is defined else "Zero to AI is a free open-source AI and machine learning course." %}
@@ -16,7 +17,7 @@
     {% set page_description = default_description %}
   {% endif %}
 {% endif %}
-{% set social_image = default_social_image if default_social_image is defined else "https://zero-to-ai.dev/_static/social-preview.svg" %}
+{% set social_image = default_social_image if default_social_image is defined else "https://zero-to-ai.dev/_static/social-preview.png" %}
 {% set social_image_alt = default_social_image_alt if default_social_image_alt is defined else "Zero to AI social preview" %}
 {% set page_url = pageurl if pageurl is defined else none %}
 {% set repo_url_value = repo_url if repo_url is defined else "https://github.com/PavanMudigonda/zero-to-ai" %}
@@ -45,9 +46,6 @@
 {% if bing_site_verification is defined and bing_site_verification %}
 <meta name="msvalidate.01" content="{{ bing_site_verification|e }}" />
 {% endif %}
-{% if page_url %}
-<link rel="canonical" href="{{ page_url|e }}" />
-{% endif %}
 <meta property="og:title" content="{{ page_title|e }}" />
 <meta property="og:description" content="{{ page_description|striptags|e }}" />
 <meta property="og:type" content="{{ og_type }}" />
@@ -57,6 +55,8 @@
 {% endif %}
 <meta property="og:image" content="{{ social_image|e }}" />
 <meta property="og:image:alt" content="{{ social_image_alt|e }}" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:locale" content="en_US" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="{{ page_title|e }}" />
@@ -90,6 +90,7 @@
     "Large language models",
     "AI agents"
   ],
+  "dateModified": {{ last_updated|default("")|tojson }},
   "primaryImageOfPage": {
     "@type": "ImageObject",
     "url": {{ social_image|default("")|tojson }}
@@ -122,6 +123,7 @@
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": {{ site_name|default(project)|tojson }},
+  "alternateName": ["Zero to AI", "0 to AI", "zero-to-ai"],
   "url": {{ site_url|default("")|tojson }},
   "description": {{ page_description|striptags|default("")|tojson }},
   "about": [
@@ -135,6 +137,29 @@
     "name": {{ author|default("")|tojson }},
     "url": {{ author_profile_url|default("")|tojson }},
     "sameAs": {{ same_as_links|default([repo_url_value, author_profile_url], true)|tojson }}
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Zero to AI",
+  "description": "Free open-source AI and machine learning course with 950+ Jupyter notebooks covering Python, deep learning, LLMs, RAG, AI agents, fine-tuning, MLOps, and evaluation.",
+  "url": {{ site_url|default("")|tojson }},
+  "provider": {
+    "@type": "Person",
+    "name": {{ author|default("")|tojson }},
+    "url": {{ author_profile_url|default("")|tojson }}
+  },
+  "educationalLevel": "Beginner to Advanced",
+  "isAccessibleForFree": true,
+  "inLanguage": "en",
+  "numberOfCredits": 31,
+  "hasCourseInstance": {
+    "@type": "CourseInstance",
+    "courseMode": "online",
+    "courseWorkload": "Self-paced"
   }
 }
 </script>

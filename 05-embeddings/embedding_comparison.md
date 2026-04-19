@@ -1,6 +1,6 @@
 # Embedding Models Comparison Guide
 
-> **Last Updated:** April 2026 — Covers latest models including Gemini Embedding, Cohere Embed v4, Jina v4, Voyage 4, and Qwen3-Embedding
+> **Last Updated:** April 2026 - Covers latest models including Gemini Embedding, Cohere Embed v4, Jina v4, Voyage 4, and Qwen3-Embedding
 
 Complete comparison of different embedding approaches: HuggingFace Transformers, Sentence Transformers, OpenAI, and the new wave of multimodal/multilingual API providers.
 
@@ -729,7 +729,7 @@ else:
 1. **Start simple:** Gemini Embedding API (nearly free) or Sentence Transformers (local)
 2. **Test quality:** Compare with your data using MTEB eval before committing
 3. **Consider Matryoshka:** Many 2026 models support dimension reduction (3072 → 768) with minimal quality loss
-4. **Monitor costs:** Track as you scale — Gemini and Voyage 3.5 are the best value APIs
+4. **Monitor costs:** Track as you scale - Gemini and Voyage 3.5 are the best value APIs
 5. **Open-source is competitive:** Qwen3-Embedding and BGE-M3 rival commercial APIs
 6. **Keep options open:** Design for easy model swapping with a common embedding interface
 

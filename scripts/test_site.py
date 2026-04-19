@@ -120,7 +120,7 @@ def test_sidebar_scroll_stability(page):
     # Check scroll position after navigation
     scroll_pos = page.evaluate("document.querySelector('.sidebar-scroll').scrollTop")
     if scroll_pos < 50:
-        return f"FAIL: sidebar scrolled to top ({scroll_pos}px) — flicker likely"
+        return f"FAIL: sidebar scrolled to top ({scroll_pos}px) - flicker likely"
     return f"PASS: sidebar stayed at {scroll_pos}px"
 
 

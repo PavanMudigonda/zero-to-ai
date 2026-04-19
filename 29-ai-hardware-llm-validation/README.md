@@ -2,7 +2,7 @@
 
 ## Overview
 
-Master the end-to-end validation stack for AI accelerators — from bare-metal hardware bring-up to datacenter-scale deployment. 
+Master the end-to-end validation stack for AI accelerators - from bare-metal hardware bring-up to datacenter-scale deployment. 
 
 **Duration:** 45–65 hours (9 sections, 9 detailed guides + exercises)
 
@@ -77,35 +77,35 @@ By the end of this phase, you will be able to:
 ## Learning Path
 
 ### Week 1–2: Hardware & Kernel Foundations
-- [ ] Read `01_hardware_validation.ipynb` — power, thermals, memory, stability
+- [ ] Read `01_hardware_validation.ipynb` - power, thermals, memory, stability
 - [ ] Complete `lab_01_hardware_validation.ipynb`
-- [ ] Read `02_kernel_validation.ipynb` — GEMM, conv, attention, softmax, layernorm
+- [ ] Read `02_kernel_validation.ipynb` - GEMM, conv, attention, softmax, layernorm
 - [ ] Complete `lab_02_kernel_validation.ipynb`
 - [ ] Run stress tests on available GPU (nvidia-smi, rocm-smi)
 - [ ] Write a simple GEMM correctness test comparing GPU vs CPU output
 
 ### Week 3: Framework & Model Validation
-- [ ] Read `03_framework_validation.ipynb` — PyTorch, TensorFlow, ONNX Runtime backends
+- [ ] Read `03_framework_validation.ipynb` - PyTorch, TensorFlow, ONNX Runtime backends
 - [ ] Complete `lab_06_framework_validation.ipynb`
-- [ ] Read `04_model_performance_validation.ipynb` — LLMs, CV, speech
+- [ ] Read `04_model_performance_validation.ipynb` - LLMs, CV, speech
 - [ ] Complete `lab_03_model_performance.ipynb`
 - [ ] Profile a model with `torch.profiler` and compare to baselines
 - [ ] Export a model to ONNX and validate numerical parity
 
 ### Week 4: Pipeline, Distributed & Datacenter
-- [ ] Read `05_e2e_pipeline_validation.ipynb` — data → model → postprocessing
-- [ ] Read `06_distributed_training_validation.ipynb` — NCCL/RCCL, multi-GPU
+- [ ] Read `05_e2e_pipeline_validation.ipynb` - data → model → postprocessing
+- [ ] Read `06_distributed_training_validation.ipynb` - NCCL/RCCL, multi-GPU
 - [ ] Complete `lab_05_distributed_training.ipynb`
-- [ ] Read `07_datacenter_validation.ipynb` — Kubernetes, scheduling, monitoring
+- [ ] Read `07_datacenter_validation.ipynb` - Kubernetes, scheduling, monitoring
 - [ ] Complete `lab_07_gpgpu_backends.ipynb`
 - [ ] Run a multi-GPU training job and validate loss convergence
 
 ### Week 5: Regression, Release & Industry Benchmarks
-- [ ] Read `08_regression_release_validation.ipynb` — baselines, cross-version testing
+- [ ] Read `08_regression_release_validation.ipynb` - baselines, cross-version testing
 - [ ] Complete `lab_04_regression_suite.ipynb`
 - [ ] Build a mini regression suite for a model + driver version matrix
-- [ ] Read `09_benchmarking_industry.ipynb` — AA-SLT, AA-AgentPerf, MLPerf, LMSys Arena
-- [ ] Complete `lab_08_benchmarking.ipynb` — build your own SLT and capacity planner
+- [ ] Read `09_benchmarking_industry.ipynb` - AA-SLT, AA-AgentPerf, MLPerf, LMSys Arena
+- [ ] Complete `lab_08_benchmarking.ipynb` - build your own SLT and capacity planner
 - [ ] Review the interview questions section and practice answers
 
 ---
@@ -147,11 +147,11 @@ pip install prometheus-client              # Metrics export
 ```
 
 **System Tools (installed via package manager):**
-- `nvidia-smi`, `rocm-smi` — GPU monitoring
-- `nvprof`, `nsys`, `ncu` — NVIDIA profilers
-- `rocprof`, `omniperf`, `omnitrace` — AMD profilers
-- `stress-ng`, `memtester` — Hardware stress testing
-- `docker`, `kubectl`, `helm` — Container orchestration
+- `nvidia-smi`, `rocm-smi` - GPU monitoring
+- `nvprof`, `nsys`, `ncu` - NVIDIA profilers
+- `rocprof`, `omniperf`, `omnitrace` - AMD profilers
+- `stress-ng`, `memtester` - Hardware stress testing
+- `docker`, `kubectl`, `helm` - Container orchestration
 
 ## 2026 Hardware Topics To Keep In Scope
 
@@ -238,15 +238,15 @@ It will catch notebook corruption and broken f-strings before they land in the r
 - [Kubernetes Documentation](https://kubernetes.io/docs/)
 
 ### Papers & Talks
-- "Dissecting Batched Group GEMM Kernels on GPUs" — AMD Research
-- "Megatron-LM: Training Multi-Billion Parameter Language Models" — NVIDIA
-- "Mixed Precision Training" — Micikevicius et al. (ICLR 2018)
-- "An Empirical Study of Distributed Training" — Google Brain
+- "Dissecting Batched Group GEMM Kernels on GPUs" - AMD Research
+- "Megatron-LM: Training Multi-Billion Parameter Language Models" - NVIDIA
+- "Mixed Precision Training" - Micikevicius et al. (ICLR 2018)
+- "An Empirical Study of Distributed Training" - Google Brain
 
 ### Community
 - [AMD ROCm GitHub](https://github.com/ROCm)
 - [NVIDIA Developer Forums](https://forums.developer.nvidia.com/)
-- [PyTorch Forums — Hardware](https://discuss.pytorch.org/)
+- [PyTorch Forums - Hardware](https://discuss.pytorch.org/)
 
 ---
 

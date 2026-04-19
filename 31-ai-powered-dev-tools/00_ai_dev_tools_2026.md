@@ -8,8 +8,8 @@ A practical guide to the tools that are reshaping how ML engineers write, debug,
 
 1. [Cursor AI](#1-cursor-ai)
 2. [Windsurf (by Codeium, acquired by OpenAI)](#2-windsurf-by-codeium-acquired-by-openai)
-3. [Aider — Terminal-Native AI Pair Programmer](#3-aider--terminal-native-ai-pair-programmer)
-4. [Claude Code — Anthropic's Official Coding CLI + VS Code Extension](#4-claude-code--anthropics-official-coding-cli--vs-code-extension)
+3. [Aider - Terminal-Native AI Pair Programmer](#3-aider--terminal-native-ai-pair-programmer)
+4. [Claude Code - Anthropic's Official Coding CLI + VS Code Extension](#4-claude-code--anthropics-official-coding-cli--vs-code-extension)
 5. [GitHub Copilot 2025](#5-github-copilot-2025)
 6. [Open-Source Coding Agents: OpenHands, OpenCode, mini-swe-agent, and Lingxi](#6-open-source-coding-agents-openhands-opencode-mini-swe-agent-and-lingxi)
 7. [Comparison Table](#7-comparison-table)
@@ -64,7 +64,7 @@ This quick snapshot highlights what matters most right now for working engineers
 
 ## 1. Cursor AI
 
-**What it is**: A fork of VS Code built around AI as a first-class feature, not a plugin. Cursor replaces the entire editor experience — everything from autocomplete to multi-file editing is AI-native.
+**What it is**: A fork of VS Code built around AI as a first-class feature, not a plugin. Cursor replaces the entire editor experience - everything from autocomplete to multi-file editing is AI-native.
 
 **Valuation**: $9B (Series B, 2025). One of the fastest-growing developer tools companies ever.
 
@@ -90,11 +90,11 @@ Run `Ctrl+Shift+P → Find bugs` to get a structured analysis of potential issue
 
 #### Codebase Context (@ symbols)
 Reference specific parts of your codebase in any prompt:
-- `@codebase` — entire indexed codebase
-- `@filename.py` — specific file
-- `@folder/` — entire directory
-- `@web` — search the web
-- `@docs` — reference indexed documentation
+- `@codebase` - entire indexed codebase
+- `@filename.py` - specific file
+- `@folder/` - entire directory
+- `@web` - search the web
+- `@docs` - reference indexed documentation
 
 ### Setup for ML/AI Projects
 
@@ -149,10 +149,10 @@ This is a PyTorch ML training codebase using Hydra for configuration and WandB f
 - Add: PyTorch docs, HuggingFace docs, your internal confluence/notion
 
 **4. Useful keyboard shortcuts for ML work**:
-- `Ctrl+K` — inline edit (great for modifying a training loop in place)
-- `Ctrl+L` — chat with codebase context
-- `Ctrl+Shift+I` — Composer for multi-file changes
-- `Ctrl+Shift+L` — add current selection to chat
+- `Ctrl+K` - inline edit (great for modifying a training loop in place)
+- `Ctrl+L` - chat with codebase context
+- `Ctrl+Shift+I` - Composer for multi-file changes
+- `Ctrl+Shift+L` - add current selection to chat
 
 ### Pricing
 
@@ -209,7 +209,7 @@ Cascade:
 4. Adds rate limit decorators to each endpoint
 5. Creates Redis configuration in config/
 6. Writes tests in tests/test_rate_limiting.py
-7. Runs pytest — finds one failure
+7. Runs pytest - finds one failure
 8. Fixes the failure
 9. Reports: "Added rate limiting to 12 endpoints. All 47 tests passing."
 ```
@@ -226,7 +226,7 @@ Cascade:
 
 ---
 
-## 3. Aider — Terminal-Native AI Pair Programmer
+## 3. Aider - Terminal-Native AI Pair Programmer
 
 **What it is**: A command-line AI coding assistant that works directly with your git repository. It is the tool of choice for developers who live in the terminal, work on remote servers via SSH, or need to integrate AI coding into CI/CD pipelines.
 
@@ -352,16 +352,16 @@ Since Aider uses pay-per-use API pricing, the cost per task is predictable:
 
 ---
 
-## 4. Claude Code — Anthropic's Official Coding CLI + VS Code Extension
+## 4. Claude Code - Anthropic's Official Coding CLI + VS Code Extension
 
-**What it is**: Anthropic's official AI coding agent, available as a terminal CLI (`claude`) and a native VS Code extension. Unlike Aider (which uses the API externally), Claude Code is built and maintained by Anthropic and is the primary way to get agentic coding with Claude models — including direct access to the latest Opus 4.6, Sonnet 4.6, and Haiku 4.5 models.
+**What it is**: Anthropic's official AI coding agent, available as a terminal CLI (`claude`) and a native VS Code extension. Unlike Aider (which uses the API externally), Claude Code is built and maintained by Anthropic and is the primary way to get agentic coding with Claude models - including direct access to the latest Opus 4.6, Sonnet 4.6, and Haiku 4.5 models.
 
 **Docs**: [docs.anthropic.com/claude-code](https://docs.anthropic.com/en/docs/claude-code/overview)
 
 ### Key Features
 
 #### Agentic Multi-File Editing
-Claude Code reads, edits, and creates files across your repository in a single session. It runs bash commands, executes tests, reads error output, and iterates — without requiring manual approval at every step.
+Claude Code reads, edits, and creates files across your repository in a single session. It runs bash commands, executes tests, reads error output, and iterates - without requiring manual approval at every step.
 
 ```bash
 # Start Claude Code in your repo
@@ -385,7 +385,7 @@ claude mcp add postgres-server
 
 This is the most significant differentiator for ML engineers: connect your experiment tracking (W&B MCP), vector DB, or internal APIs to Claude Code and it can reason about live data while writing code.
 
-#### CLAUDE.md — Persistent Project Instructions
+#### CLAUDE.md - Persistent Project Instructions
 Drop a `CLAUDE.md` file in your repo root to give Claude Code project-level context that persists across every session:
 
 ```markdown
@@ -396,10 +396,10 @@ Drop a `CLAUDE.md` file in your repo root to give Claude Code project-level cont
 - Always use torch.no_grad() in eval loops
 - Checkpoints go in checkpoints/{run_name}/
 - Run: pytest tests/ before marking any task complete
-- Never hardcode hyperparameters — put them in conf/config.yaml
+- Never hardcode hyperparameters - put them in conf/config.yaml
 ```
 
-#### Hooks — Custom Automation Triggers
+#### Hooks - Custom Automation Triggers
 Hooks let you run shell commands in response to Claude Code events (before/after any tool use). Useful for:
 - Auto-running linters after file edits
 - Blocking dangerous commands (e.g., `rm -rf`)
@@ -421,7 +421,7 @@ Hooks let you run shell commands in response to Claude Code events (before/after
 ```
 
 #### Plan Mode
-Before making any changes, Claude Code can enter plan mode: it explores your codebase, designs an implementation strategy, and presents it for approval — then executes once you confirm.
+Before making any changes, Claude Code can enter plan mode: it explores your codebase, designs an implementation strategy, and presents it for approval - then executes once you confirm.
 
 #### VS Code Extension
 The Claude Code VS Code Extension is a **native integration** (not a plugin overlay). It gives you:
@@ -450,7 +450,7 @@ claude
 
 ### Cost
 
-Claude Code uses Anthropic API pricing directly — no separate subscription:
+Claude Code uses Anthropic API pricing directly - no separate subscription:
 
 | Task Type | Model | Estimated Cost |
 |---|---|---|
@@ -486,7 +486,7 @@ Switch models per session: `/model claude-sonnet-4-6` or `/model claude-opus-4-6
 ### Key Features (2025 Updates)
 
 #### Copilot Workspace
-The highest-level Copilot feature: given a GitHub issue, Copilot Workspace plans, implements, and opens a PR — all from the GitHub web interface.
+The highest-level Copilot feature: given a GitHub issue, Copilot Workspace plans, implements, and opens a PR - all from the GitHub web interface.
 
 ```
 Workflow:
@@ -507,19 +507,19 @@ Copilot's response to Cursor Composer. Activated with `Ctrl+Shift+I` in VS Code,
 
 #### Multi-Model Support
 GitHub Copilot now lets you choose your underlying model:
-- **GPT-4o** — fast, good for everyday coding
-- **Claude Sonnet 4** — best for complex reasoning and long contexts
-- **Gemini 2.0 Flash** — fastest option
-- **o3** — best for algorithmic and math-heavy problems
+- **GPT-4o** - fast, good for everyday coding
+- **Claude Sonnet 4** - best for complex reasoning and long contexts
+- **Gemini 2.0 Flash** - fastest option
+- **o3** - best for algorithmic and math-heavy problems
 
 Switch models per conversation with the model picker in the chat panel.
 
 #### Copilot Extensions
 Third-party tools can be added to Copilot as extensions. Current popular ones:
-- **Datadog** — ask about production alerts and logs
-- **Sentry** — diagnose errors directly in VS Code
-- **Docker** — get containerization help
-- **Pieces** — personal code snippet management
+- **Datadog** - ask about production alerts and logs
+- **Sentry** - diagnose errors directly in VS Code
+- **Docker** - get containerization help
+- **Pieces** - personal code snippet management
 
 ### Enterprise Features
 
@@ -712,9 +712,9 @@ Cursor Composer prompt:
 ```
 
 **3. Context files to always include:**
-- `pyproject.toml` or `setup.py` — so Cursor knows your dependencies
-- `conf/config.yaml` — so it knows your Hydra configuration schema
-- `src/__init__.py` — project structure overview
+- `pyproject.toml` or `setup.py` - so Cursor knows your dependencies
+- `conf/config.yaml` - so it knows your Hydra configuration schema
+- `src/__init__.py` - project structure overview
 
 ### Using Aider to Refactor Training Scripts
 
@@ -764,7 +764,7 @@ Windsurf Cascade prompt:
  - Run each notebook to verify it executes without errors"
 ```
 
-Cascade will open each notebook, make the changes, attempt to run cells, and fix any errors it introduces — all without step-by-step approval.
+Cascade will open each notebook, make the changes, attempt to run cells, and fix any errors it introduces - all without step-by-step approval.
 
 ### Custom Rules for AI Development Workflow
 
@@ -799,7 +799,7 @@ When writing code:
 2. Use torch.compile() for performance-critical code paths
 3. Always add gradient clipping (max_norm=1.0) in training loops
 4. Use bfloat16 for mixed precision, not float16
-5. Profile before optimizing — use torch.profiler
+5. Profile before optimizing - use torch.profiler
 ```
 
 ### Recommended Tool Combination for ML Teams
@@ -876,15 +876,15 @@ Example Elicit queries:
 Connected Papers builds a graph visualization of papers related to any seed paper. Nodes are papers, edges represent citation relationships and co-citation similarity. Papers that are frequently cited together cluster together.
 
 **When to use it**:
-- Starting research in a new subfield — find the 10-15 most important papers quickly
-- Writing the related work section of a paper — see what you might have missed
+- Starting research in a new subfield - find the 10-15 most important papers quickly
+- Writing the related work section of a paper - see what you might have missed
 - Finding derivative works of a seminal paper
 - Understanding how a field has evolved (visualized as a "derivative" graph)
 
 **Workflow for ML engineers**:
 1. Find a key paper on arxiv (e.g., "Attention Is All You Need")
 2. Paste the arxiv URL into Connected Papers
-3. Explore the graph — larger nodes = more influential
+3. Explore the graph - larger nodes = more influential
 4. Switch to "Prior Works" view to see foundational papers
 5. Switch to "Derivative Works" view to see what built on this paper
 6. Export the graph as a citation list for your notes
@@ -939,4 +939,4 @@ mini
 
 ---
 
-*Last updated: March 6, 2026. Tool features and pricing change frequently — check the official documentation for the latest information.*
+*Last updated: March 6, 2026. Tool features and pricing change frequently - check the official documentation for the latest information.*

@@ -29,11 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
       optionalPhases: [
         {
           title: "Model Evaluation",
-          headingKey: "Model Evaluation — 16-model-evaluation/"
+          headingKey: "Model Evaluation - 16-model-evaluation/"
         },
         {
           title: "AI Safety & Red Teaming",
-          headingKey: "AI Safety & Red Teaming — 19-ai-safety-redteaming/"
+          headingKey: "AI Safety & Red Teaming - 19-ai-safety-redteaming/"
         }
       ]
     },
@@ -51,11 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
         "Phase 8: MLOps",
         {
           title: "Model Evaluation",
-          headingKey: "Model Evaluation — 16-model-evaluation/"
+          headingKey: "Model Evaluation - 16-model-evaluation/"
         },
         {
           title: "Debugging & Troubleshooting",
-          headingKey: "Debugging & Troubleshooting — 17-debugging-troubleshooting/"
+          headingKey: "Debugging & Troubleshooting - 17-debugging-troubleshooting/"
         },
         "Phase 11: LLM Fine-tuning (12 notebooks) 🔥",
         "Phase 24: Advanced Deep Learning (RESEARCH LEVEL) 🔬",
@@ -78,12 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "Phase 2: Mathematics for ML",
         {
           title: "Low-Code AI Tools",
-          headingKey: "Low-Code AI Tools — 18-low-code-ai-tools/"
+          headingKey: "Low-Code AI Tools - 18-low-code-ai-tools/"
         },
         "Phase 5: Neural Networks",
         {
           title: "Model Evaluation",
-          headingKey: "Model Evaluation — 16-model-evaluation/"
+          headingKey: "Model Evaluation - 16-model-evaluation/"
         },
         "Phase 7: RAG Systems",
         "Phase 10: Prompt Engineering (6 notebooks) 🔥",

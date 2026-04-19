@@ -7,10 +7,10 @@ orphan: true
 > Use this as a progress tracker after you read `MASTER_STUDY_GUIDE.md`.
 > This checklist is broader than the current quiz system, and some advanced items are intentionally marked as planned.
 
-## START HERE — Essential Reading (Do This First)
+## START HERE - Essential Reading (Do This First)
 
-- [ ] Done  **[MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)** — Phase-by-phase learning notes, text explanations, and study schedule. Start here.
-- [ ] Done  **[REFERENCES.md](REFERENCES.md)** — All videos, GitHub repos, courses, papers, and tools organized by phase.
+- [ ] Done  **[MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)** - Phase-by-phase learning notes, text explanations, and study schedule. Start here.
+- [ ] Done  **[REFERENCES.md](REFERENCES.md)** - All videos, GitHub repos, courses, papers, and tools organized by phase.
 
 ## 📋 How to Use This Checklist
 
@@ -54,11 +54,11 @@ orphan: true
 ## Phase 0: Glossary & Foundations
 
 - [ ] Done  [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md)
-- [ ] Done  [00-course-setup/2026_model_landscape.md](../00-course-setup/2026_model_landscape.md) — frontier models, open-weight models, benchmarks as of 2026
-- [ ] Done  [31-ai-powered-dev-tools/00_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) — Cursor, Windsurf, Aider, GitHub Copilot comparison
+- [ ] Done  [00-course-setup/2026_model_landscape.md](../00-course-setup/2026_model_landscape.md) - frontier models, open-weight models, benchmarks as of 2026
+- [ ] Done  [31-ai-powered-dev-tools/00_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) - Cursor, Windsurf, Aider, GitHub Copilot comparison
 - [ ] Familiarize yourself with basic ML concepts
 - [ ] Understand the difference between supervised/unsupervised learning
-- [ ] Done  [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) — choose your learning track (AI Engineer / ML Engineer / Data Scientist)
+- [ ] Done  [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) - choose your learning track (AI Engineer / ML Engineer / Data Scientist)
 
 
 ## Phase 1: Python & Machine Learning (278 notebooks)
@@ -303,7 +303,7 @@ orphan: true
 - [ ] Done  [04_sentiment_analysis.ipynb](../10-specializations/nlp/04_sentiment_analysis.ipynb) - BERT fine-tuning for sentiment
 - [ ] Done  [05_information_extraction.ipynb](../10-specializations/nlp/05_information_extraction.ipynb) - Structured extraction from text
 
-### Path C: AI Agents Specialization (best for AI Engineer roles — pairs with Phase 14)
+### Path C: AI Agents Specialization (best for AI Engineer roles - pairs with Phase 14)
 - [ ] Done  [00_START_HERE.ipynb](../10-specializations/ai-agents/00_START_HERE.ipynb) - Agents specialization overview
 - [ ] Done  [01_function_calling.ipynb](../10-specializations/ai-agents/01_function_calling.ipynb) - Advanced tool/function calling patterns
 - [ ] Done  [02_react_pattern.ipynb](../10-specializations/ai-agents/02_react_pattern.ipynb) - ReAct implementation deep dive
@@ -462,7 +462,7 @@ orphan: true
 ## Supplementary Phases (Do These Alongside or After Core Track)
 
 
-### Model Evaluation — [16-model-evaluation/](../16-model-evaluation/)
+### Model Evaluation - [16-model-evaluation/](../16-model-evaluation/)
 
 
 - [ ] Done  [01_classification_metrics.ipynb](../16-model-evaluation/01_classification_metrics.ipynb) - Precision, recall, F1, ROC-AUC, confusion matrices
@@ -474,7 +474,7 @@ orphan: true
 - [ ] Done  [16-model-evaluation/assignment.md](../16-model-evaluation/assignment.md)
 
 
-### Debugging & Troubleshooting — [17-debugging-troubleshooting/](../17-debugging-troubleshooting/)
+### Debugging & Troubleshooting - [17-debugging-troubleshooting/](../17-debugging-troubleshooting/)
 
 
 - [ ] Done  [01_debugging_workflow.ipynb](../17-debugging-troubleshooting/01_debugging_workflow.ipynb) - Systematic debugging: data → model → serving
@@ -485,7 +485,7 @@ orphan: true
 - [ ] Done  [17-debugging-troubleshooting/README.md](../17-debugging-troubleshooting/README.md)
 
 
-### Low-Code AI Tools — [18-low-code-ai-tools/](../18-low-code-ai-tools/)
+### Low-Code AI Tools - [18-low-code-ai-tools/](../18-low-code-ai-tools/)
 
 
 
@@ -498,7 +498,7 @@ orphan: true
 
 
 
-### AI Safety & Red Teaming — [19-ai-safety-redteaming/](../19-ai-safety-redteaming/)
+### AI Safety & Red Teaming - [19-ai-safety-redteaming/](../19-ai-safety-redteaming/)
 
 
 
@@ -520,9 +520,9 @@ orphan: true
 
 ### Video Courses (50+ channels)
 - [ ] Done  [22-references/videos/](../22-references/videos/)
-- [ ] Done  Stanford CS229 (full course) — see [REFERENCES.md](REFERENCES.md) for direct links
-- [ ] Done  Andrej Karpathy - Build GPT from scratch — see [REFERENCES.md](REFERENCES.md)
-- [ ] Done  3Blue1Brown neural network series — see [REFERENCES.md](REFERENCES.md)
+- [ ] Done  Stanford CS229 (full course) - see [REFERENCES.md](REFERENCES.md) for direct links
+- [ ] Done  Andrej Karpathy - Build GPT from scratch - see [REFERENCES.md](REFERENCES.md)
+- [ ] Done  3Blue1Brown neural network series - see [REFERENCES.md](REFERENCES.md)
 
 ### Cloud Platforms
 - [ ] Done  [22-references/cloud-platforms/](../22-references/cloud-platforms/)
@@ -898,17 +898,17 @@ orphan: true
 ## Career Readiness Milestones
 
 
-- [ ] **Resume Updated** — AI/ML skills section added, projects listed
-- [ ] **LinkedIn Updated** — Headline reflects AI/ML focus, summary updated
-- [ ] **GitHub Polished** — 4+ repos pinned, each with README + demo
-- [ ] **Project 1 Live** — RAG chatbot deployed (HF Spaces / Render)
-- [ ] **Project 2 Live** — Fine-tuned model with evaluation results documented
-- [ ] **Project 3 Live** — MLOps pipeline or AI agent
-- [ ] **Interview Prep** — Practiced 10 core ML concept questions
-- [ ] **Coding Practice** — Solved 20+ pandas/sklearn coding problems
-- [ ] **System Design** — Practiced 3 ML system design scenarios
-- [ ] **Networking** — Connected with 10+ AI engineers on LinkedIn
-- [ ] **Applications Sent** — Applied to 20+ positions
+- [ ] **Resume Updated** - AI/ML skills section added, projects listed
+- [ ] **LinkedIn Updated** - Headline reflects AI/ML focus, summary updated
+- [ ] **GitHub Polished** - 4+ repos pinned, each with README + demo
+- [ ] **Project 1 Live** - RAG chatbot deployed (HF Spaces / Render)
+- [ ] **Project 2 Live** - Fine-tuned model with evaluation results documented
+- [ ] **Project 3 Live** - MLOps pipeline or AI agent
+- [ ] **Interview Prep** - Practiced 10 core ML concept questions
+- [ ] **Coding Practice** - Solved 20+ pandas/sklearn coding problems
+- [ ] **System Design** - Practiced 3 ML system design scenarios
+- [ ] **Networking** - Connected with 10+ AI engineers on LinkedIn
+- [ ] **Applications Sent** - Applied to 20+ positions
 
 
 ## Key Resources Quick Links

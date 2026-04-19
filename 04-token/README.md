@@ -6,7 +6,7 @@
 
 ## Why Tokenization Matters
 
-Every LLM interaction starts with tokenization. When you send a prompt to GPT-4 or Claude, it is first split into tokens — sub-word units that the model actually processes. Understanding tokenization helps you:
+Every LLM interaction starts with tokenization. When you send a prompt to GPT-4 or Claude, it is first split into tokens - sub-word units that the model actually processes. Understanding tokenization helps you:
 
 - **Write better prompts**: Avoid patterns that waste tokens and increase cost
 - **Estimate costs accurately**: APIs charge per token, not per word
@@ -17,7 +17,7 @@ Every LLM interaction starts with tokenization. When you send a prompt to GPT-4 
 
 ---
 
-## Notebooks — Work in This Order
+## Notebooks - Work in This Order
 
 | # | Notebook | What You Learn | Time |
 |---|----------|----------------|------|
@@ -36,16 +36,16 @@ Every LLM interaction starts with tokenization. When you send a prompt to GPT-4 
 
 ### The Three Main Tokenization Algorithms
 
-**BPE (Byte Pair Encoding)** — Used by: GPT-2, GPT-3, GPT-4, RoBERTa
+**BPE (Byte Pair Encoding)** - Used by: GPT-2, GPT-3, GPT-4, RoBERTa
 - Starts with individual bytes/characters
 - Iteratively merges the most frequent pairs
 - Result: common words are single tokens, rare words are split
 
-**WordPiece** — Used by: BERT, DistilBERT
+**WordPiece** - Used by: BERT, DistilBERT
 - Similar to BPE but uses likelihood instead of frequency
 - Unknown words become `##suffix` parts
 
-**SentencePiece / Unigram** — Used by: T5, LLaMA, Mistral, Gemma
+**SentencePiece / Unigram** - Used by: T5, LLaMA, Mistral, Gemma
 - Language-agnostic, treats the text as raw bytes
 - Works well for multilingual models
 
@@ -65,13 +65,13 @@ Larger vocabulary = fewer tokens per sentence = faster inference, but larger emb
 
 ## Reference Guides
 
-- [intro.md](intro.md) — Conceptual introduction to tokenization
-- [huggingface_tokenizers_guide.md](huggingface_tokenizers_guide.md) — Comprehensive HuggingFace guide
-- [README_TOKENIZERS.md](README_TOKENIZERS.md) — HuggingFace tokenizers library deep dive
-- [README_TIKTOKEN.md](README_TIKTOKEN.md) — OpenAI TikToken library guide
-- [04_production_guide.md](04_production_guide.md) — Using tokenizers in production
-- [05_tokenizer_comparison.md](05_tokenizer_comparison.md) — Comparing different tokenizers
-- [06_integration_guide.md](06_integration_guide.md) — Integrating tokenizers into pipelines
+- [intro.md](intro.md) - Conceptual introduction to tokenization
+- [huggingface_tokenizers_guide.md](huggingface_tokenizers_guide.md) - Comprehensive HuggingFace guide
+- [README_TOKENIZERS.md](README_TOKENIZERS.md) - HuggingFace tokenizers library deep dive
+- [README_TIKTOKEN.md](README_TIKTOKEN.md) - OpenAI TikToken library guide
+- [04_production_guide.md](04_production_guide.md) - Using tokenizers in production
+- [05_tokenizer_comparison.md](05_tokenizer_comparison.md) - Comparing different tokenizers
+- [06_integration_guide.md](06_integration_guide.md) - Integrating tokenizers into pipelines
 
 ---
 

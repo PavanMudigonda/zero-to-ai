@@ -146,9 +146,9 @@ Once setup is complete, follow this path:
 |------|----------|
 | `requirements.txt` | Local development (pip) |
 | `environment.yml` | Local development (Conda/Mamba) |
-| `colab_requirements.txt` | Google Colab — skips pre-installed packages |
-| `kaggle_requirements.txt` | Kaggle notebooks — skips pre-installed packages, requires Internet toggle enabled |
-| `requirements-replit.txt` | Replit — auto-installed on run |
+| `colab_requirements.txt` | Google Colab - skips pre-installed packages |
+| `kaggle_requirements.txt` | Kaggle notebooks - skips pre-installed packages, requires Internet toggle enabled |
+| `requirements-replit.txt` | Replit - auto-installed on run |
 | `pyproject.toml` | `uv pip install -e .` or editable installs |
 
 ---

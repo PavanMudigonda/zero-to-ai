@@ -173,7 +173,7 @@ dependencies = [
     "faker>=30.0.0",
     # AutoML & Optimization
     "flaml>=2.3.0",
-    # pycaret requires matplotlib<3.8 and older deps — incompatible with this stack.
+    # pycaret requires matplotlib<3.8 and older deps - incompatible with this stack.
     # Install in a separate env: pip install pycaret==3.3.2
     "optuna>=4.1.0",
     # Low-code UI

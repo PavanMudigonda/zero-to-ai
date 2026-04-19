@@ -330,7 +330,7 @@ Edge deployment runs ML models on end-user devices (phones, IoT devices, embedde
 
 **ELT (Extract, Load, Transform)**
 
-ELT is a modern data integration approach that extracts data, loads it into a destination first (typically cloud data warehouse), then transforms it—leveraging the processing power of modern data warehouses.
+ELT is a modern data integration approach that extracts data, loads it into a destination first (typically cloud data warehouse), then transforms it-leveraging the processing power of modern data warehouses.
 
 **Embeddings**
 
@@ -354,7 +354,7 @@ An epoch is one full pass of the entire training dataset through the learning al
 
 **ETL (Extract, Transform, Load)**
 
-ETL is a data integration process that extracts data from sources, transforms it into the desired format/structure, and loads it into a destination system like a data warehouse—traditional approach where transformation happens before loading.
+ETL is a data integration process that extracts data from sources, transforms it into the desired format/structure, and loads it into a destination system like a data warehouse-traditional approach where transformation happens before loading.
 
 **Experiment Tracking**
 
@@ -772,7 +772,7 @@ Neptune is an ML metadata store and experiment tracking platform that logs, orga
 
 **Network (Neural / Computing Network)**
 
-In AI, a network often refers to a neural network—a computing system of interconnected nodes analogous to neurons, or to the broader computing network of interconnected machines.
+In AI, a network often refers to a neural network-a computing system of interconnected nodes analogous to neurons, or to the broader computing network of interconnected machines.
 
 **NormaliSation (Normalization)**
 

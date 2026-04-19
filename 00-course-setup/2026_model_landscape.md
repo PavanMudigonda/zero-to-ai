@@ -29,12 +29,12 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **Multimodal**: text, images, code, structured data; native computer use
 - **API**: `gpt-5.4` (standard), `gpt-5.4-pro` (max performance, Responses API only)
 - **Pricing**: $2.50/1M input tokens, $15.00/1M output tokens; batch/flex at 50% off
-- **Key new feature**: **tool search** — model dynamically looks up tool definitions at inference time, reducing token use for tool-heavy workflows
+- **Key new feature**: **tool search** - model dynamically looks up tool definitions at inference time, reducing token use for tool-heavy workflows
 - **Variants**: GPT-5.4 (standard), GPT-5.4 Thinking (reasoning mode), GPT-5.4 Pro (max effort)
 - **Best for**: complex reasoning, agentic workflows, long-document analysis, highest-stakes tasks
-- **Intelligence Index rank**: #2 tied (score 57/57 with Gemini 3.1 Pro Preview) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index rank**: #2 tied (score 57/57 with Gemini 3.1 Pro Preview) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 
-### o3 / o4-mini (OpenAI — Reasoning Models)
+### o3 / o4-mini (OpenAI - Reasoning Models)
 
 - **Architecture**: inference-time compute scaling ("thinking" before answering)
 - **o3**: flagship reasoning model; best at math, science, coding competitions
@@ -53,7 +53,7 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **Strengths**: coding, agent workflows, long-form analysis, enterprise safety controls
 - **Best for**: teams needing strong instruction-following and reliable coding/analysis across workloads
 - **API**: see current model IDs in Anthropic platform docs; names evolve quickly across preview/stable variants
-- **Intelligence Index rank**: Opus 4.6 (Adaptive Reasoning, Max Effort) #4 (score 53); Sonnet 4.6 #5 (score 52) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index rank**: Opus 4.6 (Adaptive Reasoning, Max Effort) #4 (score 53); Sonnet 4.6 #5 (score 52) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 
 ### Gemini 3.1 Pro / Gemini 2.5 Family (Google)
 
@@ -64,7 +64,7 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **Strengths**: massive context, strong multimodal and agentic tool use, broad media generation stack
 - **API**: model strings vary by stable/preview/latest aliases in Google AI Studio / Vertex AI
 - **Best for**: large-context analysis, multimodal applications, real-time and voice-enabled agents
-- **Intelligence Index rank**: #1 (score 57) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index rank**: #1 (score 57) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 
 ### Mistral Large 3 (Mistral AI)
 
@@ -82,14 +82,14 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 |-------|-------------------|---------|-------------------------------|-----------|
 | Gemini 3.1 Pro Preview (Google) | **57** (#1) | 1M | $2.00 / $12.00 | Massive context, multimodal, agentic |
 | GPT-5.4 (OpenAI) | **57** (#2) | 1.1M | $2.50 / $15.00 | Computer use, tool search, all-around |
-| GPT-5.3 Codex (OpenAI) | **54** (#3) | — | — | Coding, agentic software tasks |
-| Claude Opus 4.6 (Anthropic) | **53** (#4) | 200K+ | — | Coding, agents, instruction following |
-| Claude Sonnet 4.6 (Anthropic) | **52** (#5) | 200K+ | — | Balanced quality & speed |
-| o3 (OpenAI) | — | 200K | $2.00 / $8.00 | Math, science, reasoning |
-| o4-mini (OpenAI) | — | 128K | Medium | Reasoning, cost-efficient |
-| Mistral Large 3 (Mistral) | — | 128K | Low | Cost-efficient, multilingual, GDPR |
+| GPT-5.3 Codex (OpenAI) | **54** (#3) | - | - | Coding, agentic software tasks |
+| Claude Opus 4.6 (Anthropic) | **53** (#4) | 200K+ | - | Coding, agents, instruction following |
+| Claude Sonnet 4.6 (Anthropic) | **52** (#5) | 200K+ | - | Balanced quality & speed |
+| o3 (OpenAI) | - | 200K | $2.00 / $8.00 | Math, science, reasoning |
+| o4-mini (OpenAI) | - | 128K | Medium | Reasoning, cost-efficient |
+| Mistral Large 3 (Mistral) | - | 128K | Low | Cost-efficient, multilingual, GDPR |
 
-*Intelligence Index scores from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models) — composite of 10 independent benchmarks.*
+*Intelligence Index scores from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models) - composite of 10 independent benchmarks.*
 
 ---
 
@@ -97,9 +97,9 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 
 Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately. The gap with closed models has narrowed dramatically.
 
-### GLM-5 (Zhipu AI) — Top Open-Weight Model
+### GLM-5 (Zhipu AI) - Top Open-Weight Model
 
-- **Intelligence Index rank**: #1 open-weight (score 50) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index rank**: #1 open-weight (score 50) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Key feature**: reasoning mode; strong performance closing gap with frontier closed models
 - **Best for**: production deployments where top open-weight quality is needed
 
@@ -113,7 +113,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 
 - **Maverick**: 400B parameter MoE; flagship, competitive with GPT-5.4 class on many benchmarks
 - **Scout**: 17B active / 109B total MoE; fastest, designed for edge deployment
-- **Context**: up to 10,000,000 tokens (10M — industry record for open-weight)
+- **Context**: up to 10,000,000 tokens (10M - industry record for open-weight)
 - **Multimodal**: native image and text understanding
 - **License**: Llama 4 Community License (commercial use permitted with restrictions)
 - **Download**: `meta-llama/Llama-4-Maverick`, `meta-llama/Llama-4-Scout`
@@ -122,7 +122,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 ### Qwen 3 235B-A22B (Alibaba)
 
 - **Architecture**: 235B total / 22B active parameters (MoE)
-- **Key feature**: hybrid thinking/non-thinking mode — toggle chain-of-thought per request
+- **Key feature**: hybrid thinking/non-thinking mode - toggle chain-of-thought per request
 - **Benchmark**: strong open-source contender; Qwen 3.5 397B A17B now ranks #3 open-weight (Intelligence Index: 45)
 - **Context**: 128K tokens
 - **License**: Apache 2.0 (fully permissive commercial use)
@@ -147,7 +147,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 ### DeepSeek R1 (DeepSeek)
 
 - **Architecture**: 671B MoE with 37B active parameters; trained end-to-end with GRPO reinforcement learning
-- **Training cost**: approximately $6 million — a landmark efficiency achievement
+- **Training cost**: approximately $6 million - a landmark efficiency achievement
 - **Specialization**: reasoning, mathematics, coding, scientific problems
 - **Context**: 128K tokens
 - **License**: MIT (fully permissive, including fine-tuning and commercial use)
@@ -176,7 +176,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 ### Phi-4 (Microsoft)
 
 - **Size**: 14B parameters
-- **Specialization**: STEM — math, science, coding; trained on high-quality synthetic data
+- **Specialization**: STEM - math, science, coding; trained on high-quality synthetic data
 - **License**: MIT (fully permissive)
 - **Download**: `microsoft/phi-4`
 - **Strengths**: punches far above its weight on reasoning and math; excellent for structured outputs
@@ -199,18 +199,18 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 
 | Model | Intelligence Index | Params (active) | Context | License | Best For |
 |-------|-------------------|----------------|---------|---------|----------|
-| GLM-5 (Zhipu AI) | **50** (#1 OW) | — | — | — | Top open-weight quality |
-| Kimi K2.5 (Moonshot) | **47** (#2 OW) | — | — | — | Reasoning, multilingual |
+| GLM-5 (Zhipu AI) | **50** (#1 OW) | - | - | - | Top open-weight quality |
+| Kimi K2.5 (Moonshot) | **47** (#2 OW) | - | - | - | Reasoning, multilingual |
 | Qwen 3.5 397B-A17B | **45** (#3 OW) | 17B active | 128K+ | Apache 2.0 | Latest Qwen reasoning |
-| Llama 4 Maverick | — | 400B MoE | 10M | Llama 4 | Ultra-long context |
-| Llama 4 Scout | — | 17B active | 10M | Llama 4 | Fast, long-context, edge |
-| Qwen 3 235B-A22B | — | 22B active | 128K | Apache 2.0 | Production OSS deployments |
-| Qwen3-Coder-Next | — | 80B class | — | Apache 2.0 | Code and SWE agents |
-| DeepSeek R1 | — | 37B active | 128K | MIT | Reasoning, math, coding |
-| DeepSeek V3.2 | — | 37B active | 128K | MIT | General base model |
-| Gemma 3 27B | — | 27B | 128K | Gemma ToU | Single GPU, multilingual |
-| Phi-4 | — | 14B | 16K | MIT | STEM, math, coding |
-| Phi-4-mini | — | 3.8B | 16K | MIT | On-device, mobile |
+| Llama 4 Maverick | - | 400B MoE | 10M | Llama 4 | Ultra-long context |
+| Llama 4 Scout | - | 17B active | 10M | Llama 4 | Fast, long-context, edge |
+| Qwen 3 235B-A22B | - | 22B active | 128K | Apache 2.0 | Production OSS deployments |
+| Qwen3-Coder-Next | - | 80B class | - | Apache 2.0 | Code and SWE agents |
+| DeepSeek R1 | - | 37B active | 128K | MIT | Reasoning, math, coding |
+| DeepSeek V3.2 | - | 37B active | 128K | MIT | General base model |
+| Gemma 3 27B | - | 27B | 128K | Gemma ToU | Single GPU, multilingual |
+| Phi-4 | - | 14B | 16K | MIT | STEM, math, coding |
+| Phi-4-mini | - | 3.8B | 16K | MIT | On-device, mobile |
 
 *Intelligence Index (OW = open-weight rank) from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models). GLM-5/Kimi K2.5 license/param details subject to provider docs.*
 
@@ -231,7 +231,7 @@ Best when you have limited GPU memory (less than 24GB) or need fast inference.
 | Phi-4-mini | 3.8B | MIT | Strong reasoning for size; MIT license; good for STEM tasks |
 | Gemma 3 4B | 4B | Gemma ToU | Google quality at 4B; 128K context; good multilingual |
 
-**Recommended starter**: `Qwen/Qwen2.5-7B-Instruct` — best quality, Apache 2.0 license, great tokenizer.
+**Recommended starter**: `Qwen/Qwen2.5-7B-Instruct` - best quality, Apache 2.0 license, great tokenizer.
 
 ### Medium Models (8B to 14B parameters)
 
@@ -280,7 +280,7 @@ Do you need Apache 2.0 / MIT license?
 
 ## 4. Key Training Techniques (2025-2026)
 
-### GRPO — Group Relative Policy Optimization
+### GRPO - Group Relative Policy Optimization
 
 - **What it is**: A reinforcement learning algorithm for training reasoning models without a critic network.
 - **Why it matters**: DeepSeek R1 was trained with GRPO, achieving o1-level reasoning at a fraction of the cost. GRPO samples multiple responses per prompt and uses group-relative rewards instead of a value function baseline.
@@ -301,7 +301,7 @@ Parameter-efficient fine-tuning (PEFT) methods that update only a small fraction
 
 **Current best practice**: QLoRA with rsLoRA scaling and rank=16-64 for most fine-tuning tasks.
 
-### DPO / SimPO / KTO — Alignment Without PPO
+### DPO / SimPO / KTO - Alignment Without PPO
 
 Methods for aligning model outputs to human preferences without the complexity of PPO.
 
@@ -313,7 +313,7 @@ Methods for aligning model outputs to human preferences without the complexity o
 
 **Current best practice**: SimPO slightly outperforms DPO in most benchmarks; KTO if you only have thumbs-up/thumbs-down data.
 
-### Unsloth — 2-5x Faster Fine-tuning
+### Unsloth - 2-5x Faster Fine-tuning
 
 - **What it is**: A library that rewrites CUDA kernels for transformer operations to be more memory-efficient and faster.
 - **Speedup**: 2-5x faster training vs standard Hugging Face + PEFT; 50-70% less GPU memory.
@@ -350,7 +350,7 @@ model = FastLanguageModel.get_peft_model(
 
 | Tool | Throughput | Best For | Install |
 |------|-----------|----------|---------|
-| **SGLang** | Highest (~16,200 tok/s H100) | Production API, RAG, agents — RadixAttention caches shared prefixes | `pip install sglang[all]` |
+| **SGLang** | Highest (~16,200 tok/s H100) | Production API, RAG, agents - RadixAttention caches shared prefixes | `pip install sglang[all]` |
 | **vLLM** | Very High (~12,500 tok/s H100) | Production API, multi-LoRA serving, AMD support | `pip install vllm` |
 | **TGI** | High (~9,800 tok/s H100) | HuggingFace ecosystem, Inference Endpoints | Docker |
 | **Ollama** | Medium | Local dev, Apple Silicon, edge, no GPU | Single binary |
@@ -379,7 +379,7 @@ The agent ecosystem has consolidated around a few dominant tools:
 | **LangGraph 1.0** | Graph-based agent orchestration with persistent state | Complex multi-step agents, branching workflows, stateful agents |
 | **LlamaIndex Workflows** | Event-driven agent workflows | RAG-heavy agents, document pipelines |
 
-**Key insight**: MCP has become the standard "USB for AI tools" — build MCP servers once, connect to any MCP-compatible agent framework. In 2026, most enterprise tools (databases, APIs, file systems) have MCP servers available.
+**Key insight**: MCP has become the standard "USB for AI tools" - build MCP servers once, connect to any MCP-compatible agent framework. In 2026, most enterprise tools (databases, APIs, file systems) have MCP servers available.
 
 ### Vector Databases (2025-2026)
 
@@ -445,11 +445,11 @@ A structured learning path for March 2026. Follow this order to build solid foun
 
 **Goal**: Understand what LLMs are and how to use them via API.
 
-1. **Python for AI** — numpy, pandas, matplotlib basics; Jupyter notebooks
-2. **Prompt engineering** — zero-shot, few-shot, chain-of-thought; system prompts
-3. **OpenAI / Anthropic API** — calling GPT-5.4 and Claude Sonnet 4.6; streaming; function calling; computer use
-4. **Tokenization** — how text becomes tokens; tiktoken; why context window size matters
-5. **RAG basics** — chunking documents, embedding models, Chroma, similarity search
+1. **Python for AI** - numpy, pandas, matplotlib basics; Jupyter notebooks
+2. **Prompt engineering** - zero-shot, few-shot, chain-of-thought; system prompts
+3. **OpenAI / Anthropic API** - calling GPT-5.4 and Claude Sonnet 4.6; streaming; function calling; computer use
+4. **Tokenization** - how text becomes tokens; tiktoken; why context window size matters
+5. **RAG basics** - chunking documents, embedding models, Chroma, similarity search
 
 **Milestone**: Build a document Q&A chatbot using RAG with a frontier API model.
 
@@ -457,12 +457,12 @@ A structured learning path for March 2026. Follow this order to build solid foun
 
 **Goal**: Run and understand open-weight models locally and in the cloud.
 
-1. **Hugging Face Transformers** — `pipeline`, `AutoModelForCausalLM`, `AutoTokenizer`
-2. **Running models locally** — Ollama (easiest), then llama.cpp
-3. **Quantization** — understand BF16 vs GPTQ vs AWQ vs GGUF; trade-offs
-4. **Chat templates** — ChatML, Llama 3 template, Qwen template; why they matter
-5. **vLLM / SGLang** — run a production-grade API server; benchmark throughput
-6. **Model selection** — when to use Qwen2.5-7B vs Llama 4 vs Gemma 3; the decision tree above
+1. **Hugging Face Transformers** - `pipeline`, `AutoModelForCausalLM`, `AutoTokenizer`
+2. **Running models locally** - Ollama (easiest), then llama.cpp
+3. **Quantization** - understand BF16 vs GPTQ vs AWQ vs GGUF; trade-offs
+4. **Chat templates** - ChatML, Llama 3 template, Qwen template; why they matter
+5. **vLLM / SGLang** - run a production-grade API server; benchmark throughput
+6. **Model selection** - when to use Qwen2.5-7B vs Llama 4 vs Gemma 3; the decision tree above
 
 **Milestone**: Self-host a Qwen2.5-7B model via SGLang and serve it behind a FastAPI endpoint.
 
@@ -470,13 +470,13 @@ A structured learning path for March 2026. Follow this order to build solid foun
 
 **Goal**: Adapt pre-trained models to specific tasks.
 
-1. **Dataset preparation** — instruction format, chat format; quality over quantity
-2. **LoRA fundamentals** — what low-rank adapters do mathematically; rank, alpha, target modules
-3. **QLoRA with Unsloth** — fine-tune a 7B model in under 4GB VRAM
-4. **SFT (Supervised Fine-Tuning)** — `SFTTrainer` from TRL; data formatting; evaluation during training
-5. **DPO / SimPO alignment** — preference datasets; `DPOTrainer`; when to align vs just SFT
-6. **GRPO for reasoning** — training a model to think step-by-step with RL
-7. **Evaluation** — ROUGE, BERTScore, LLM-as-judge; avoiding eval data contamination
+1. **Dataset preparation** - instruction format, chat format; quality over quantity
+2. **LoRA fundamentals** - what low-rank adapters do mathematically; rank, alpha, target modules
+3. **QLoRA with Unsloth** - fine-tune a 7B model in under 4GB VRAM
+4. **SFT (Supervised Fine-Tuning)** - `SFTTrainer` from TRL; data formatting; evaluation during training
+5. **DPO / SimPO alignment** - preference datasets; `DPOTrainer`; when to align vs just SFT
+6. **GRPO for reasoning** - training a model to think step-by-step with RL
+7. **Evaluation** - ROUGE, BERTScore, LLM-as-judge; avoiding eval data contamination
 
 **Milestone**: Fine-tune Qwen2.5-7B on a domain-specific dataset, align with DPO, and evaluate with an LLM judge.
 
@@ -484,12 +484,12 @@ A structured learning path for March 2026. Follow this order to build solid foun
 
 **Goal**: Build production-grade agentic systems.
 
-1. **Function calling / tool use** — structured outputs, JSON mode; tool definitions
-2. **ReAct agents** — Reason + Act loop; building with OpenAI Agents SDK
-3. **MCP (Model Context Protocol)** — write an MCP server; connect to Claude Desktop / your agent
-4. **Advanced RAG** — hybrid search, reranking (ColBERT, cross-encoders), HyDE, RAPTOR
-5. **LangGraph 1.0** — stateful agents, branching workflows, multi-agent handoffs
-6. **Agentic evaluation** — trajectory evaluation; tool use accuracy; multi-turn benchmarks
+1. **Function calling / tool use** - structured outputs, JSON mode; tool definitions
+2. **ReAct agents** - Reason + Act loop; building with OpenAI Agents SDK
+3. **MCP (Model Context Protocol)** - write an MCP server; connect to Claude Desktop / your agent
+4. **Advanced RAG** - hybrid search, reranking (ColBERT, cross-encoders), HyDE, RAPTOR
+5. **LangGraph 1.0** - stateful agents, branching workflows, multi-agent handoffs
+6. **Agentic evaluation** - trajectory evaluation; tool use accuracy; multi-turn benchmarks
 
 **Milestone**: Build a multi-step research agent using LangGraph + MCP that can search the web, read documents, and write structured reports.
 
@@ -497,12 +497,12 @@ A structured learning path for March 2026. Follow this order to build solid foun
 
 **Goal**: Deploy and maintain AI systems reliably.
 
-1. **Docker + GPU deployment** — containerizing vLLM/SGLang; docker-compose with GPU support
-2. **Monitoring** — structured logging; latency p95/p99; token usage; refusal rate
-3. **Cost optimization** — quantization trade-offs; batching strategies; spot vs on-demand pricing
-4. **Continuous evaluation** — A/B testing model updates; production feedback loops
-5. **Security** — prompt injection defense; PII detection; rate limiting; API key management
-6. **MLflow / Weights & Biases** — experiment tracking; model registry; deployment tracking
+1. **Docker + GPU deployment** - containerizing vLLM/SGLang; docker-compose with GPU support
+2. **Monitoring** - structured logging; latency p95/p99; token usage; refusal rate
+3. **Cost optimization** - quantization trade-offs; batching strategies; spot vs on-demand pricing
+4. **Continuous evaluation** - A/B testing model updates; production feedback loops
+5. **Security** - prompt injection defense; PII detection; rate limiting; API key management
+6. **MLflow / Weights & Biases** - experiment tracking; model registry; deployment tracking
 
 **Milestone**: Deploy your fine-tuned model to a cloud GPU with monitoring, a Docker container, cost tracking, and an A/B testing setup for comparing model versions.
 
@@ -524,4 +524,4 @@ Experiment Tracking Weights & Biases or MLflow
 Observability       Langfuse (open source) or LangSmith
 ```
 
-The pace of change in this field is fast, but the underlying principles — retrieval, fine-tuning, alignment, evaluation, deployment — remain stable. Master the fundamentals and you will adapt quickly as the specific tools evolve.
+The pace of change in this field is fast, but the underlying principles - retrieval, fine-tuning, alignment, evaluation, deployment - remain stable. Master the fundamentals and you will adapt quickly as the specific tools evolve.

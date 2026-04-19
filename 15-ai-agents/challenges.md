@@ -589,10 +589,10 @@ Build an evaluation pipeline that systematically measures agent quality across t
 
 ### Requirements
 Create an evaluation framework with:
-- `EvalCase` — dataclass with `task`, `expected_outcome`, `required_tools`
-- `AgentRunner` — runs the agent and captures the full trajectory
-- `LLMJudge` — scores each trajectory on a 0-5 rubric via a judge prompt
-- `ReportGenerator` — computes pass@1, avg tool calls, avg cost, and failure analysis
+- `EvalCase` - dataclass with `task`, `expected_outcome`, `required_tools`
+- `AgentRunner` - runs the agent and captures the full trajectory
+- `LLMJudge` - scores each trajectory on a 0-5 rubric via a judge prompt
+- `ReportGenerator` - computes pass@1, avg tool calls, avg cost, and failure analysis
 
 ### Test Cases
 ```python

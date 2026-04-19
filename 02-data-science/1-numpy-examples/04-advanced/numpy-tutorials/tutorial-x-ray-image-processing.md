@@ -106,7 +106,7 @@ each notebook cell.
 Let's begin with a simple example using just one X-ray image from the
 ChestX-ray8 dataset.
 
-The file — `00000011_001.png` — has been downloaded for you and saved in the
+The file - `00000011_001.png` - has been downloaded for you and saved in the
 `/tutorial-x-ray-image-processing` folder.
 
 +++
@@ -281,16 +281,16 @@ plt.show()
 To find regions of high spatial frequency (the edges or the edge maps) along the
 horizontal and vertical axes of a 2D X-ray image, you can use the
 [Sobel-Feldman operator (Sobel filter)](https://en.wikipedia.org/wiki/Sobel_operator)
-technique. The Sobel filter applies two 3x3 kernel matrices — one for each axis
-— onto the X-ray through a [convolution](https://en.wikipedia.org/wiki/Kernel_(image_processing)#Convolution).
+technique. The Sobel filter applies two 3x3 kernel matrices - one for each axis
+- onto the X-ray through a [convolution](https://en.wikipedia.org/wiki/Kernel_(image_processing)#Convolution).
 Then, these two points (gradients) are combined using the
 [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) to
 produce a gradient magnitude.
 
 +++
 
-**1.** Use the Sobel filters — ([`scipy.ndimage.sobel()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.sobel.html))
-— on x- and y-axes of the X-ray. Then, calculate the distance between `x` and
+**1.** Use the Sobel filters - ([`scipy.ndimage.sobel()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.sobel.html))
+- on x- and y-axes of the X-ray. Then, calculate the distance between `x` and
 `y` (with the Sobel filters applied to them) using the
 [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) and
 NumPy's [`np.hypot()`](https://numpy.org/doc/stable/reference/generated/numpy.hypot.html)
@@ -351,9 +351,9 @@ filter to remove the noise in an image. In this example, you're using using the
 [Fourier](https://en.wikipedia.org/wiki/Fourier_transform) filter which
 smoothens the X-ray through a [convolution](https://en.wikipedia.org/wiki/Convolution)
 process. Next, you apply the [Prewitt filter](https://en.wikipedia.org/wiki/Prewitt_operator)
-on each of the 2 axes of the image to help detect some of the edges — this will
+on each of the 2 axes of the image to help detect some of the edges - this will
 result in 2 gradient values. Similar to the Sobel filter, the Prewitt operator
-also applies two 3x3 kernel matrices — one for each axis — onto the X-ray
+also applies two 3x3 kernel matrices - one for each axis - onto the X-ray
 through a [convolution](https://en.wikipedia.org/wiki/Kernel_(image_processing)#Convolution).
 In the end, you compute the magnitude between the two gradients using the
 [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythagorean_theorem) and
@@ -362,8 +362,8 @@ the images, as before.
 
 +++
 
-**1.** Use SciPy's Fourier filters — [`scipy.ndimage.fourier_gaussian()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.fourier_gaussian.html)
-— with a small `sigma` value to remove some of the noise from the X-ray. Then,
+**1.** Use SciPy's Fourier filters - [`scipy.ndimage.fourier_gaussian()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.fourier_gaussian.html)
+- with a small `sigma` value to remove some of the noise from the X-ray. Then,
 calculate two gradients using [`scipy.ndimage.prewitt()`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.prewitt.html).
 Next, measure the distance between the gradients using NumPy's `np.hypot()`.
 Finally, [normalize](https://en.wikipedia.org/wiki/Normalization_%28image_processing%29)
@@ -411,7 +411,7 @@ features, you can apply masks with NumPy's
 [`np.where(condition: array_like (bool), x: array_like, y: ndarray)`](https://numpy.org/doc/stable/reference/generated/numpy.where.html)
 that returns `x` when `True` and `y` when `False`.
 
-Identifying regions of interest — certain sets of pixels in an image — can be
+Identifying regions of interest - certain sets of pixels in an image - can be
 useful and masks serve as boolean arrays of the same shape as the original
 image.
 
@@ -446,7 +446,7 @@ plt.show()
 As the pixel intensity distribution suggests, there are many low (between around
 0 and 20) and very high (between around 200 and 240) pixel values.
 
-**3.** You can create different conditional masks with NumPy's `np.where()` —
+**3.** You can create different conditional masks with NumPy's `np.where()` -
 for example, let's have only those values of the image with the pixels exceeding
 a certain threshold:
 

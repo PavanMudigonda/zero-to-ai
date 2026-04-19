@@ -58,13 +58,13 @@ After this module, you should be able to:
 
 ## Agent-Assisted Fine-tuning
 
-Notebook `00_START_HERE.ipynb` (Section 10) covers how coding agents like **OpenHands**, **OpenCode**, and **mini-swe-agent** can automate the engineering side of the fine-tuning pipeline — scaffolding training scripts, debugging OOM errors, generating hyperparameter sweep configs, and writing evaluation harnesses.
+Notebook `00_START_HERE.ipynb` (Section 10) covers how coding agents like **OpenHands**, **OpenCode**, and **mini-swe-agent** can automate the engineering side of the fine-tuning pipeline - scaffolding training scripts, debugging OOM errors, generating hyperparameter sweep configs, and writing evaluation harnesses.
 
 Dataset curation and alignment decisions remain human work. The agents accelerate everything around those decisions.
 
 **Cross-references:**
-- **Phase 15** — [09_autonomous_agents_2026.ipynb](../15-ai-agents/09_autonomous_agents_2026.ipynb) for full coverage of OpenHands, OpenCode, Lingxi, and mini-swe-agent
-- **Phase 31** — [00_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) for installation, comparison, and ML-specific workflows
+- **Phase 15** - [09_autonomous_agents_2026.ipynb](../15-ai-agents/09_autonomous_agents_2026.ipynb) for full coverage of OpenHands, OpenCode, Lingxi, and mini-swe-agent
+- **Phase 31** - [00_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) for installation, comparison, and ML-specific workflows
 
 ## What Comes Next
 

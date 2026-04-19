@@ -1,6 +1,6 @@
 # Zero to AI
 
-> Free, open-source AI/ML curriculum with 950+ Jupyter notebooks — from Python basics to production AI systems.
+> Free, open-source AI/ML curriculum with 950+ Jupyter notebooks - from Python basics to production AI systems.
 
 ## About
 
@@ -15,36 +15,36 @@ Zero to AI is a self-paced learning path covering machine learning, deep learnin
 
 - Phase 00: Course Setup & Orientation
 - Phase 01: Python Fundamentals
-- Phase 02: Data Science — NumPy, Pandas, Scikit-learn (278 notebooks)
-- Phase 03: Mathematics for ML — Linear Algebra, Calculus, Statistics
-- Phase 04: Tokenization — tiktoken, SentencePiece, HuggingFace Tokenizers
-- Phase 05: Embeddings — OpenAI, Sentence-Transformers, Semantic Search
-- Phase 06: Neural Networks — Perceptrons to Transformers from Scratch
-- Phase 07: Vector Databases — Chroma, Qdrant, Weaviate, Milvus, pgvector
-- Phase 08: RAG — Retrieval-Augmented Generation Pipelines
-- Phase 09: MLOps — Deployment, Monitoring, CI/CD
-- Phase 10: Specializations — Computer Vision, NLP, AI Agents
-- Phase 11: Prompt & Context Engineering — CoT, Structured Outputs, DSPy
-- Phase 12: LLM Fine-Tuning — LoRA, QLoRA, PEFT, DPO, GRPO
-- Phase 13: Multimodal AI — Vision, Audio, Video, Real-Time
-- Phase 14: Local LLMs — Ollama, llama.cpp, MLX
-- Phase 15: AI Agents — Function Calling, MCP, OpenAI Agents SDK, LangGraph
-- Phase 16: Model Evaluation — Metrics, Fairness, LLM-as-Judge
+- Phase 02: Data Science - NumPy, Pandas, Scikit-learn (278 notebooks)
+- Phase 03: Mathematics for ML - Linear Algebra, Calculus, Statistics
+- Phase 04: Tokenization - tiktoken, SentencePiece, HuggingFace Tokenizers
+- Phase 05: Embeddings - OpenAI, Sentence-Transformers, Semantic Search
+- Phase 06: Neural Networks - Perceptrons to Transformers from Scratch
+- Phase 07: Vector Databases - Chroma, Qdrant, Weaviate, Milvus, pgvector
+- Phase 08: RAG - Retrieval-Augmented Generation Pipelines
+- Phase 09: MLOps - Deployment, Monitoring, CI/CD
+- Phase 10: Specializations - Computer Vision, NLP, AI Agents
+- Phase 11: Prompt & Context Engineering - CoT, Structured Outputs, DSPy
+- Phase 12: LLM Fine-Tuning - LoRA, QLoRA, PEFT, DPO, GRPO
+- Phase 13: Multimodal AI - Vision, Audio, Video, Real-Time
+- Phase 14: Local LLMs - Ollama, llama.cpp, MLX
+- Phase 15: AI Agents - Function Calling, MCP, OpenAI Agents SDK, LangGraph
+- Phase 16: Model Evaluation - Metrics, Fairness, LLM-as-Judge
 - Phase 17: Debugging & Troubleshooting AI Systems
-- Phase 18: Low-Code AI Tools — Gradio, Streamlit, Flowise, AutoML
+- Phase 18: Low-Code AI Tools - Gradio, Streamlit, Flowise, AutoML
 - Phase 19: AI Safety & Red Teaming
 - Phase 20: Real-Time Streaming AI
 - Phase 21: Quizzes & Self-Assessment
 - Phase 22: References & External Resources
 - Phase 23: AI/ML Glossary
-- Phase 24: Advanced Deep Learning — GANs, VAEs, Diffusion, NeRF (39 notebooks)
-- Phase 25: Reinforcement Learning — MDP, Q-Learning, Policy Gradients
-- Phase 26: Time Series Analysis — ARIMA, Prophet, Transformer Forecasting
-- Phase 27: Causal Inference — DAGs, A/B Testing, Observational Methods
-- Phase 28: Practical Data Science — Interview Prep, End-to-End Projects
-- Phase 29: AI Hardware & LLM Validation — AMD, NVIDIA, Qualcomm, TPU
-- Phase 30: Inference Optimization — KV Cache, vLLM, Quantization
-- Phase 31: AI-Powered Dev Tools — VS Code AI, MCP, Custom Instructions
+- Phase 24: Advanced Deep Learning - GANs, VAEs, Diffusion, NeRF (39 notebooks)
+- Phase 25: Reinforcement Learning - MDP, Q-Learning, Policy Gradients
+- Phase 26: Time Series Analysis - ARIMA, Prophet, Transformer Forecasting
+- Phase 27: Causal Inference - DAGs, A/B Testing, Observational Methods
+- Phase 28: Practical Data Science - Interview Prep, End-to-End Projects
+- Phase 29: AI Hardware & LLM Validation - AMD, NVIDIA, Qualcomm, TPU
+- Phase 30: Inference Optimization - KV Cache, vLLM, Quantization
+- Phase 31: AI-Powered Dev Tools - VS Code AI, MCP, Custom Instructions
 
 ## Key Technologies
 

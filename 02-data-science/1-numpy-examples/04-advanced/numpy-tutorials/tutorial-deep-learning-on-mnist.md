@@ -15,9 +15,9 @@ kernelspec:
 
 This tutorial demonstrates how to build a simple [feedforward neural network](https://en.wikipedia.org/wiki/Feedforward_neural_network) (with one hidden layer) and train it from scratch with NumPy to recognize handwritten digit images.
 
-Your deep learning model — one of the most basic artificial neural networks that resembles the original [multi-layer perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron) — will learn to classify digits from 0 to 9 from the [MNIST](https://en.wikipedia.org/wiki/MNIST_database) dataset. The dataset contains 60,000 training and 10,000 test images and corresponding labels. Each training and test image is of size 784 (or 28x28 pixels) — this will be your input for the neural network.
+Your deep learning model - one of the most basic artificial neural networks that resembles the original [multi-layer perceptron](https://en.wikipedia.org/wiki/Multilayer_perceptron) - will learn to classify digits from 0 to 9 from the [MNIST](https://en.wikipedia.org/wiki/MNIST_database) dataset. The dataset contains 60,000 training and 10,000 test images and corresponding labels. Each training and test image is of size 784 (or 28x28 pixels) - this will be your input for the neural network.
 
-Based on the image inputs and their labels ([supervised learning](https://en.wikipedia.org/wiki/Supervised_learning)), your neural network will be trained to learn their features using forward propagation and backpropagation ([reverse-mode](https://en.wikipedia.org/wiki/Automatic_differentiation#Reverse_accumulation) differentiation). The final output of the network is a vector of 10 scores — one for each handwritten digit image. You will also evaluate how good your model is at classifying the images on the test set.
+Based on the image inputs and their labels ([supervised learning](https://en.wikipedia.org/wiki/Supervised_learning)), your neural network will be trained to learn their features using forward propagation and backpropagation ([reverse-mode](https://en.wikipedia.org/wiki/Automatic_differentiation#Reverse_accumulation) differentiation). The final output of the network is a vector of 10 scores - one for each handwritten digit image. You will also evaluate how good your model is at classifying the images on the test set.
 
 ![Diagram showing operations detailed in this tutorial (The input image
 is passed into a Hidden layer that creates a weighted sum of outputs.
@@ -143,7 +143,7 @@ x_train, y_train, x_test, y_test = (
 )
 ```
 
-**5.** You can confirm that the shape of the image arrays is `(60000, 784)` and `(10000, 784)` for training and test sets, respectively, and the labels — `(60000,)` and `(10000,)`:
+**5.** You can confirm that the shape of the image arrays is `(60000, 784)` and `(10000, 784)` for training and test sets, respectively, and the labels - `(60000,)` and `(10000,)`:
 
 ```{code-cell}
 print(
@@ -226,7 +226,7 @@ print("The data type of training images: {}".format(x_train.dtype))
 print("The data type of test images: {}".format(x_test.dtype))
 ```
 
-**2.** Normalize the arrays by dividing them by 255 (and thus promoting the data type from `uint8` to `float64`) and then assign the train and test image data variables — `x_train` and `x_test` — to `training_images` and `train_labels`, respectively.
+**2.** Normalize the arrays by dividing them by 255 (and thus promoting the data type from `uint8` to `float64`) and then assign the train and test image data variables - `x_train` and `x_test` - to `training_images` and `train_labels`, respectively.
 To reduce the model training and evaluation time in this example, only a subset
 of the training and test images will be used.
 Both `training_images` and `test_images` will contain only 1,000 samples each out
@@ -325,7 +325,7 @@ Afterwards, you will construct the building blocks of a simple deep learning mod
 
 ### Neural network building blocks with NumPy
 
-- _Layers_: These building blocks work as data filters — they process data and learn representations from inputs to better predict the target outputs.
+- _Layers_: These building blocks work as data filters - they process data and learn representations from inputs to better predict the target outputs.
 
     You will use 1 hidden layer in your model to pass the inputs forward (_forward propagation_) and propagate the gradients/error derivatives of a loss function backward (_backpropagation_). These are input, hidden and output layers.
 
@@ -343,7 +343,7 @@ Afterwards, you will construct the building blocks of a simple deep learning mod
 
 - _Regularization_: This [technique](https://en.wikipedia.org/wiki/Regularization_(mathematics)) helps prevent the neural network model from [overfitting](https://en.wikipedia.org/wiki/Overfitting).
 
-    In this example, you will use a method called dropout — [dilution](https://en.wikipedia.org/wiki/Dilution_(neural_networks)) — that randomly sets a number of features in a layer to 0s. You will define it with NumPy's [`Generator.integers()`](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.integers.html) method and apply it to the hidden layer of the network.
+    In this example, you will use a method called dropout - [dilution](https://en.wikipedia.org/wiki/Dilution_(neural_networks)) - that randomly sets a number of features in a layer to 0s. You will define it with NumPy's [`Generator.integers()`](https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.integers.html) method and apply it to the hidden layer of the network.
 
 - _Loss function_: The computation determines the quality of predictions by comparing the image labels (the truth) with the predicted values in the final layer's output.
 
@@ -366,7 +366,7 @@ layer.)](_static/tutorial-deep-learning-on-mnist.png)
 
 - _The input layer_:
 
-    It is the input for the network — the previously preprocessed data that is loaded from `training_images` into `layer_0`.
+    It is the input for the network - the previously preprocessed data that is loaded from `training_images` into `layer_0`.
 
 - _The hidden (middle) layer_:
 
@@ -378,7 +378,7 @@ layer.)](_static/tutorial-deep-learning-on-mnist.png)
 
     `layer_2` ingests the output from `layer_1` and repeats the same "dot multiply" process with `weights_2`.
 
-    The final output returns 10 scores for each of the 0-9 digit labels. The network model ends with a size 10 layer — a 10-dimensional vector.
+    The final output returns 10 scores for each of the 0-9 digit labels. The network model ends with a size 10 layer - a 10-dimensional vector.
 
 - _Forward propagation, backpropagation, training loop_:
 
@@ -424,11 +424,11 @@ def relu2deriv(output):
 
 **3.** Set certain default values of [hyperparameters](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)), such as:
 
-- [_Learning rate_](https://en.wikipedia.org/wiki/Learning_rate): `learning_rate` — helps limit the magnitude of weight updates to prevent them from overcorrecting.
-- _Epochs (iterations)_: `epochs` — the number of complete passes — forward and backward propagations — of the data through the network. This parameter can positively or negatively affect the results. The higher the iterations, the longer the learning process may take. Because this is a computationally intensive task, we have chosen a very low number of epochs (20). To get meaningful results, you should choose a much larger number.
-- _Size of the hidden (middle) layer in a network_: `hidden_size` — different sizes of the hidden layer can affect the results during training and testing.
-- _Size of the input:_ `pixels_per_image` — you have established that the image input is 784 (28x28) (in pixels).
-- _Number of labels_: `num_labels` — indicates the output number for the output layer where the predictions occur for 10 (0 to 9) handwritten digit labels.
+- [_Learning rate_](https://en.wikipedia.org/wiki/Learning_rate): `learning_rate` - helps limit the magnitude of weight updates to prevent them from overcorrecting.
+- _Epochs (iterations)_: `epochs` - the number of complete passes - forward and backward propagations - of the data through the network. This parameter can positively or negatively affect the results. The higher the iterations, the longer the learning process may take. Because this is a computationally intensive task, we have chosen a very low number of epochs (20). To get meaningful results, you should choose a much larger number.
+- _Size of the hidden (middle) layer in a network_: `hidden_size` - different sizes of the hidden layer can affect the results during training and testing.
+- _Size of the input:_ `pixels_per_image` - you have established that the image input is 784 (28x28) (in pixels).
+- _Number of labels_: `num_labels` - indicates the output number for the output layer where the predictions occur for 10 (0 to 9) handwritten digit labels.
 
 ```{code-cell}
 learning_rate = 0.005
@@ -612,7 +612,7 @@ To further enhance and optimize your neural network model, you can consider one 
 - Apply [batch normalization](https://en.wikipedia.org/wiki/Batch_normalization) for faster and more stable training.
 - Tune other parameters, such as the learning rate and hidden layer size.
 
-Building a neural network from scratch with NumPy is a great way to learn more about NumPy and about deep learning. However, for real-world applications you should use specialized frameworks — such as [PyTorch](https://pytorch.org/), [JAX](https://github.com/google/jax), [TensorFlow](https://www.tensorflow.org/guide/tf_numpy) or [MXNet](https://mxnet.apache.org) — that provide NumPy-like APIs, have built-in [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) and GPU support, and are designed for high-performance numerical computing and machine learning.
+Building a neural network from scratch with NumPy is a great way to learn more about NumPy and about deep learning. However, for real-world applications you should use specialized frameworks - such as [PyTorch](https://pytorch.org/), [JAX](https://github.com/google/jax), [TensorFlow](https://www.tensorflow.org/guide/tf_numpy) or [MXNet](https://mxnet.apache.org) - that provide NumPy-like APIs, have built-in [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) and GPU support, and are designed for high-performance numerical computing and machine learning.
 
 Finally, when developing a machine learning model, you should think about potential ethical issues and apply practices to avoid or mitigate those:
 - Document a trained model with a Model Card - see the [Model Cards for Model Reporting paper](https://doi.org/10.1145/3287560.3287596) by Margaret Mitchell et al..

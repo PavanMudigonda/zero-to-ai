@@ -172,7 +172,7 @@ MCP servers can execute arbitrary code. Treat them like any other dependency:
 ### Do
 
 - Pin server versions in `package.json` or requirements files
-- Use `${input:...}` for secrets — never hardcode tokens
+- Use `${input:...}` for secrets - never hardcode tokens
 - Scope filesystem servers to specific directories (not `/`)
 - Review server source code before using in production
 - Use read-only database credentials when possible
@@ -208,8 +208,8 @@ This restricts the filesystem server to only the `data/` directory. The agent ca
 
 ### VS Code
 
-1. Open Command Palette → "MCP: List Servers" — check status
-2. Open Output Panel → select "MCP" from the dropdown — see logs
+1. Open Command Palette → "MCP: List Servers" - check status
+2. Open Output Panel → select "MCP" from the dropdown - see logs
 3. If a server is red, click it to see the error message
 
 ### Common Issues
@@ -273,10 +273,10 @@ Don't build your own when:
 | **MCP** | Protocol standard: any client can connect to any server | Cross-tool, cross-vendor |
 
 MCP builds on function calling and tool use but adds:
-- **Discoverability** — servers advertise their tools, resources, and prompts
-- **Standardization** — same protocol works in VS Code and any MCP-compatible client
-- **Composability** — connect multiple servers simultaneously
+- **Discoverability** - servers advertise their tools, resources, and prompts
+- **Standardization** - same protocol works in VS Code and any MCP-compatible client
+- **Composability** - connect multiple servers simultaneously
 
 ---
 
-*Next: [03_copilot_instructions_guide.md](03_copilot_instructions_guide.md) — custom instructions for Copilot*
+*Next: [03_copilot_instructions_guide.md](03_copilot_instructions_guide.md) - custom instructions for Copilot*

@@ -32,7 +32,7 @@ This example is based on the [code](https://gist.github.com/karpathy/a4166c7fe25
 
 ## Prerequisites
 
-- **OpenAI Gym**: To help with the game environment, you will use [Gym](https://gym.openai.com) — an open-source Python interface [developed by OpenAI](https://arxiv.org/abs/1606.01540) that helps perform RL tasks while supporting many simulation environments.
+- **OpenAI Gym**: To help with the game environment, you will use [Gym](https://gym.openai.com) - an open-source Python interface [developed by OpenAI](https://arxiv.org/abs/1606.01540) that helps perform RL tasks while supporting many simulation environments.
 - **Python and NumPy**: The reader should have some knowledge of Python, NumPy array manipulation, and linear algebra.
 - **Deep learning and deep RL**: You should be familiar with main concepts of [deep learning](https://en.wikipedia.org/wiki/Deep_learning), which are explained in the [Deep learning](http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf) paper published in 2015 by Yann LeCun, Yoshua Bengio, and Geoffrey Hinton, who are regarded as some of the pioneers of the field. The tutorial will try to guide you through the main concepts of deep RL and you will find various literature with links to original sources for your convenience.
 - **Jupyter notebook environments**: Because RL experiments can require high computing power, you can run the tutorial on the cloud for free using [Binder](https://mybinder.org) or [Google Colaboratory](https://colab.research.google.com/notebooks/intro.ipynb) (which offers free limited GPU and TPU acceleration).
@@ -60,7 +60,7 @@ This tutorial can also be run locally in an isolated environment, such as [Virtu
 
 In [_RL_](https://en.wikipedia.org/wiki/Reinforcement_learning), your agent learns from trial and error by interacting with an environment using a so-called policy to gain experience. After taking one action, the agent receives information about its reward (which it may or may not get) and the next observation of the environment. It can then proceed to take another action. This happens over a number of episodes and/or until the task is deemed to be complete.
 
-The agent's policy works by "mapping" the agent's observations to its actions — that is, assigning a presentation of what the agent observes with required actions. The overall goal is usually to optimize the agent's policy such that it maximizes the expected rewards from each observation.
+The agent's policy works by "mapping" the agent's observations to its actions - that is, assigning a presentation of what the agent observes with required actions. The overall goal is usually to optimize the agent's policy such that it maximizes the expected rewards from each observation.
 
 For detailed information about RL, there is an [introductory book](https://web.archive.org/web/20050806080008/http://www.cs.ualberta.ca/~sutton/book/the-book.html) by Richard Sutton and Andrew Barton.
 
@@ -73,13 +73,13 @@ Below is a concise glossary of deep RL terms you may find useful for the remaini
 - In a finite-horizon world, such as a game of Pong, the learning agent can explore (and exploit) the _environment_ over an _episode_. It usually takes many episodes for the agent to learn.
 - The agent interacts with the _environment_ using _actions_.
 - After taking an action, the agent receives some feedback through a _reward_ (if there is one), depending on which action it takes and the _state_ it is in. The state contains information about the environment.
-- The agent's _observation_ is a partial observation of the state — this is the term this tutorial prefers (instead of _state_).
+- The agent's _observation_ is a partial observation of the state - this is the term this tutorial prefers (instead of _state_).
 - The agent can choose an action based on cumulative _rewards_ (also known as the _value function_) and the _policy_. The _cumulative reward function_ estimates the quality of the observations the agent visits using its _policy_.
 - The _policy_ (defined by a neural network) outputs action choices (as (log) probabilities) that should maximize the cumulative rewards from the state the agent is in.
 - The _expected return from an observation_, conditional to the action, is called the _action-value_ function. To provide more weight to shorter-term rewards versus the longer-term ones, you usually use a _discount factor_ (often a floating point number between 0.9 and 0.99).
-- The sequence of actions and states (observations) during each policy "run" by the agent is sometimes referred to as a _trajectory_ — such a sequence yields _rewards_.
+- The sequence of actions and states (observations) during each policy "run" by the agent is sometimes referred to as a _trajectory_ - such a sequence yields _rewards_.
 
-You will train your Pong agent through an "on-policy" method using policy gradients — it's an algorithm belonging to a family of _policy-based_ methods. Policy gradient methods typically update the parameters of the policy with respect to the long-term cumulative reward using [_gradient descent_](https://en.wikipedia.org/wiki/Gradient_descent) that is widely used in machine learning. And, since the goal is to maximize the function (the rewards), not minimize it, the process is also called _gradient ascent_. In other words, you use a policy for the agent to take actions and the objective is to maximize the rewards, which you do by computing the gradients and use them to update the parameters in the policy (neural) network.
+You will train your Pong agent through an "on-policy" method using policy gradients - it's an algorithm belonging to a family of _policy-based_ methods. Policy gradient methods typically update the parameters of the policy with respect to the long-term cumulative reward using [_gradient descent_](https://en.wikipedia.org/wiki/Gradient_descent) that is widely used in machine learning. And, since the goal is to maximize the function (the rewards), not minimize it, the process is also called _gradient ascent_. In other words, you use a policy for the agent to take actions and the objective is to maximize the rewards, which you do by computing the gradients and use them to update the parameters in the policy (neural) network.
 
 ## Set up Pong
 
@@ -113,11 +113,11 @@ print(env.action_space)
 print(env.get_action_meanings())
 ```
 
-There are 6 actions. However, `LEFTFIRE` is actually `LEFT`, `RIGHTFIRE` — `RIGHT`, and `NOOP` — `FIRE`.
+There are 6 actions. However, `LEFTFIRE` is actually `LEFT`, `RIGHTFIRE` - `RIGHT`, and `NOOP` - `FIRE`.
 
-For simplicity, your policy network will have one output — a (log) probability for "moving up" (indexed at `2` or `RIGHT`). The other available action will be indexed at 3 ("move down" or `LEFT`).
+For simplicity, your policy network will have one output - a (log) probability for "moving up" (indexed at `2` or `RIGHT`). The other available action will be indexed at 3 ("move down" or `LEFT`).
 
-**4.** Gym can save videos of the agent's learning in an MP4 format — wrap `Monitor()` around the environment by running the following:
+**4.** Gym can save videos of the agent's learning in an MP4 format - wrap `Monitor()` around the environment by running the following:
 
 ```python
 env = Monitor(env, "./video", force=True)
@@ -129,7 +129,7 @@ While you can perform all kinds of RL experiments in a Jupyter notebook, renderi
 
 In this section you will set up a function to preprocess the input data (game observation) to make it digestible for the neural network, which can only work with inputs that are in a form of tensors (multidimensional arrays) of floating-point type.
 
-Your agent will use the frames from the Pong game — pixels from screen frames — as input-observations for the policy network. The game observation tells the agent about where the ball is before it is fed (with a forward pass) into the neural network (the policy). This is similar to DeepMind's [DQN](https://deepmind.com/research/open-source/dqn) method (which is further discussed in the Appendix).
+Your agent will use the frames from the Pong game - pixels from screen frames - as input-observations for the policy network. The game observation tells the agent about where the ball is before it is fed (with a forward pass) into the neural network (the policy). This is similar to DeepMind's [DQN](https://deepmind.com/research/open-source/dqn) method (which is further discussed in the Appendix).
 
 Pong screen frames are 210x160 pixels over 3 color dimensions (red, green and blue). The arrays are encoded with `uint8` (or 8-bit integers), and these observations are stored on a Gym Box instance.
 
@@ -141,7 +141,7 @@ print(env.observation_space)
 
 In Gym, the agent's actions and observations can be part of the `Box` (n-dimensional) or `Discrete` (fixed-range integers) classes.
 
-**2.** You can view a random observation — one frame — by:
+**2.** You can view a random observation - one frame - by:
 
     1) Setting the random `seed` before initialization (optional).
 
@@ -179,7 +179,7 @@ def frame_preprocessing(observation_frame):
     return observation_frame.astype(float)
 ```
 
-**4.** Preprocess the random frame from earlier to test the function — the input for the policy network is an 80x80 1D image:
+**4.** Preprocess the random frame from earlier to test the function - the input for the policy network is an 80x80 1D image:
 
 ```python
 preprocessed_random_frame = frame_preprocessing(random_frame)
@@ -191,10 +191,10 @@ print(preprocessed_random_frame.shape)
 
 Next, you will define the policy as a simple feedforward network that uses a game observation as an input and outputs an action log probability:
 
-- For the _input_, it will use the Pong video game frames — the preprocessed 1D vectors with 6,400 (80x80) floating point arrays.
+- For the _input_, it will use the Pong video game frames - the preprocessed 1D vectors with 6,400 (80x80) floating point arrays.
 - The _hidden layer_ will compute the weighted sum of inputs using NumPy's dot product function [`np.dot()`](https://numpy.org/doc/stable/reference/generated/numpy.dot.html) for the arrays and then apply a _non-linear activation function_, such as [ReLU](https://en.wikipedia.org/wiki/Rectifier_(neural_networks)).
 - Then, the _output layer_ will perform the matrix-multiplication again of  weight parameters and the hidden layer's output (with [`np.dot()`](https://numpy.org/doc/stable/reference/generated/numpy.dot.html)), and send that information through a [softmax](https://en.wikipedia.org/wiki/Softmax_function) _activation function_.
-- In the end, the policy network will output one action log probability (given that observation) for the agent — the probability for Pong action indexed in the environment at 2 ("moving the racket up").
+- In the end, the policy network will output one action log probability (given that observation) for the agent - the probability for Pong action indexed in the environment at 2 ("moving the racket up").
 
 **1.** Let's instantiate certain parameters for the input, hidden, and output layers, and start setting up the network model.
 
@@ -266,9 +266,9 @@ def sigmoid(x):
 
 ## Set up the update step (backpropagation)
 
-During learning in your deep RL algorithm, you use the action log probabilities (given an observation) and the discounted returns (for example, +1 or -1 in Pong) and perform the _backward pass_ or _backpropagation_ to update the parameters — the policy network's weights.
+During learning in your deep RL algorithm, you use the action log probabilities (given an observation) and the discounted returns (for example, +1 or -1 in Pong) and perform the _backward pass_ or _backpropagation_ to update the parameters - the policy network's weights.
 
-**1.** Let's define the backward pass function (`policy_backward()`) with the help of NumPy's modules for array multiplication — [`np.dot()`](https://numpy.org/doc/stable/reference/generated/numpy.dot.html?highlight=numpy.dot#numpy.dot) (matrix multiplication), [`np.outer()`](https://numpy.org/doc/stable/reference/generated/numpy.outer.html) (outer product computation), and [`np.ravel()`](https://numpy.org/doc/stable/reference/generated/numpy.ravel.html) (to flatten arrays into 1D arrays):
+**1.** Let's define the backward pass function (`policy_backward()`) with the help of NumPy's modules for array multiplication - [`np.dot()`](https://numpy.org/doc/stable/reference/generated/numpy.dot.html?highlight=numpy.dot#numpy.dot) (matrix multiplication), [`np.outer()`](https://numpy.org/doc/stable/reference/generated/numpy.outer.html) (outer product computation), and [`np.ravel()`](https://numpy.org/doc/stable/reference/generated/numpy.ravel.html) (to flatten arrays into 1D arrays):
 
 ```python
 def policy_backward(eph, epdlogp, model):
@@ -298,7 +298,7 @@ drs = []
 
 You will reset these variables manually at the end of each episode during training after they are "full" and reshape with NumPy's [`np.vstack()`](https://numpy.org/doc/stable/reference/generated/numpy.vstack.html). This is demonstrated in the training stage towards the end of the tutorial.
 
-**3.** Next, to perform a gradient ascent when optimizing the agent's policy, it is common to use deep learning _optimizers_ (you're performing optimization with gradients). In this example, you'll use [RMSProp](https://en.wikipedia.org/wiki/Stochastic_gradient_descent#RMSProp) — an adaptive optimization [method](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf). Let's set a discounting factor — a decay rate — for the optimizer:
+**3.** Next, to perform a gradient ascent when optimizing the agent's policy, it is common to use deep learning _optimizers_ (you're performing optimization with gradients). In this example, you'll use [RMSProp](https://en.wikipedia.org/wiki/Stochastic_gradient_descent#RMSProp) - an adaptive optimization [method](http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf). Let's set a discounting factor - a decay rate - for the optimizer:
 
 ```python
 decay_rate = 0.99
@@ -320,7 +320,7 @@ rmsprop_cache = {k: np.zeros_like(v) for k, v in model.items()}
 
 ## Define the discounted rewards (expected return) function
 
-In this section, you will set up a function for computing discounted rewards (`discount_rewards()`) — the expected return from an observation — that uses a 1D array of rewards as inputs (with the help of NumPy's [`np.zeros_like()`](https://numpy.org/doc/stable/reference/generated/numpy.zeros_like.html)) function.
+In this section, you will set up a function for computing discounted rewards (`discount_rewards()`) - the expected return from an observation - that uses a 1D array of rewards as inputs (with the help of NumPy's [`np.zeros_like()`](https://numpy.org/doc/stable/reference/generated/numpy.zeros_like.html)) function.
 
 To provide more weight to shorter-term rewards over longer-term ones, you will use a _discount factor_ (gamma) that is often a floating-point number between 0.9 and 0.99.
 
@@ -348,7 +348,7 @@ This section covers how to set up the training process during which your agent w
 
 The pseudocode for the policy gradient method for Pong:
 
-- Instantiate the policy — your neural network — and randomly initialize the weights in the policy network.
+- Instantiate the policy - your neural network - and randomly initialize the weights in the policy network.
 - Initialize a random observation.
 - Randomly initialize the weights in the policy network.
 - Repeat over a number of episodes:
@@ -564,7 +564,7 @@ A few notes:
 
 ## Next steps
 
-You may notice that training an RL agent takes a long time if you increase the number of episodes from 100 to 500 or 1,000+, depending on the hardware — CPUs and GPUs — you are using for this task.
+You may notice that training an RL agent takes a long time if you increase the number of episodes from 100 to 500 or 1,000+, depending on the hardware - CPUs and GPUs - you are using for this task.
 
 Policy gradient methods can learn a task if you give them a lot of time, and optimization in RL is a challenging problem. Training agents to learn to play Pong or any other task can be sample-inefficient and require a lot of episodes. You may also notice in your training output that even after hundreds of episodes, the rewards may have high variance.
 
@@ -582,16 +582,16 @@ If you want to learn more about deep RL, you should check out the following free
 - Deep RL lectures taught by practitioners at [DeepMind](https://www.youtube.com/c/DeepMind/videos) and [UC Berkeley](https://www.youtube.com/channel/UC4e_-TvgALrwE1dUPvF_UTQ/videos).
 - RL [lectures](https://www.davidsilver.uk/teaching/) taught by [David Silver](https://www.davidsilver.uk) (DeepMind, UCL).
 
-Building a neural network from scratch with NumPy is a great way to learn more about NumPy and about deep learning. However, for real-world applications you should use specialized frameworks — such as [PyTorch](https://pytorch.org/), [JAX](https://github.com/google/jax), [TensorFlow](https://www.tensorflow.org/guide/tf_numpy) or [MXNet](https://mxnet.apache.org) — that provide NumPy-like APIs, have built-in [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) and GPU support, and are designed for high-performance numerical computing and machine learning.
+Building a neural network from scratch with NumPy is a great way to learn more about NumPy and about deep learning. However, for real-world applications you should use specialized frameworks - such as [PyTorch](https://pytorch.org/), [JAX](https://github.com/google/jax), [TensorFlow](https://www.tensorflow.org/guide/tf_numpy) or [MXNet](https://mxnet.apache.org) - that provide NumPy-like APIs, have built-in [automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation) and GPU support, and are designed for high-performance numerical computing and machine learning.
 
 
 ## Appendix
 
 ### Notes on RL and deep RL
 
-- In [supervised](https://en.wikipedia.org/wiki/Supervised_learning) deep learning for tasks, such as image recognition, language translation, or text classification, you're more likely to use a lot of labeled data. However, in RL, agents typically don't receive direct explicit feedback indicating correct or wrong actions — they rely on other signals, such as rewards.
+- In [supervised](https://en.wikipedia.org/wiki/Supervised_learning) deep learning for tasks, such as image recognition, language translation, or text classification, you're more likely to use a lot of labeled data. However, in RL, agents typically don't receive direct explicit feedback indicating correct or wrong actions - they rely on other signals, such as rewards.
 
-- _Deep RL_ combines RL with [deep learning](http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf). The field had its first major success in more complex environments, such as video games, in 2013 — a year after the [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) breakthrough in computer vision. Volodymyr Mnih and colleagues at DeepMind published a research paper called [Playing Atari with deep reinforcement learning](https://arxiv.org/abs/1312.5602) (and [updated](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf) in 2015) that showed that they were able to train an agent that could play several classic games from the Arcade Learning Environment at a human-level. Their RL algorithm — called a deep Q-network (DQN) — used [convolutional layers](https://en.wikipedia.org/wiki/Convolutional_neural_network) in a neural network that approximated [Q learning](https://en.wikipedia.org/wiki/Q-learning) and used [experience replay](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf).
+- _Deep RL_ combines RL with [deep learning](http://www.cs.toronto.edu/~hinton/absps/NatureDeepReview.pdf). The field had its first major success in more complex environments, such as video games, in 2013 - a year after the [AlexNet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf) breakthrough in computer vision. Volodymyr Mnih and colleagues at DeepMind published a research paper called [Playing Atari with deep reinforcement learning](https://arxiv.org/abs/1312.5602) (and [updated](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf) in 2015) that showed that they were able to train an agent that could play several classic games from the Arcade Learning Environment at a human-level. Their RL algorithm - called a deep Q-network (DQN) - used [convolutional layers](https://en.wikipedia.org/wiki/Convolutional_neural_network) in a neural network that approximated [Q learning](https://en.wikipedia.org/wiki/Q-learning) and used [experience replay](https://web.stanford.edu/class/psych209/Readings/MnihEtAlHassibis15NatureControlDeepRL.pdf).
 
 - Unlike the simple policy gradient method that you used in this example, DQN uses a type of "off-policy" _value-based_ method (that approximates Q learning), while the original [AlphaGo](https://www.nature.com/articles/nature24270.epdf?author_access_token=VJXbVjaSHxFoctQQ4p2k4tRgN0jAjWel9jnR3ZoTv0PVW4gB86EEpGqTRDtpIz-2rmo8-KG06gqVobU5NSCFeHILHcVFUeMsbvwS-lxjqQGg98faovwjxeTUgZAUMnRQ) uses policy gradients and [Monte Carlo tree search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search).
 
@@ -605,7 +605,7 @@ Building a neural network from scratch with NumPy is a great way to learn more a
 
 ### How to set up video playback in your Jupyter notebook
 
-- If you're using [**Binder**](https://mybinder.org) — a free Jupyter notebook-based tool — you can set up the Docker image and add `freeglut3-dev`, `xvfb`, and `x11-utils` to the `apt.txt` configuration file to install the initial dependencies. Then, to `binder/environment.yml` under `channels`, add `gym`, `pyvirtualdisplay` and anything else you may need, such as `python=3.7`, `pip`, and `jupyterlab`. Check the following [post](https://towardsdatascience.com/rendering-openai-gym-envs-on-binder-and-google-colab-536f99391cc7) for more information.
+- If you're using [**Binder**](https://mybinder.org) - a free Jupyter notebook-based tool - you can set up the Docker image and add `freeglut3-dev`, `xvfb`, and `x11-utils` to the `apt.txt` configuration file to install the initial dependencies. Then, to `binder/environment.yml` under `channels`, add `gym`, `pyvirtualdisplay` and anything else you may need, such as `python=3.7`, `pip`, and `jupyterlab`. Check the following [post](https://towardsdatascience.com/rendering-openai-gym-envs-on-binder-and-google-colab-536f99391cc7) for more information.
 
 - If you're using [**Google Colaboratory**](https://colab.research.google.com/notebooks/intro.ipynb) (another free Jupyter notebook-based tool), you can enable video playback of the game environments installing and setting up [X virtual frame buffer](https://en.wikipedia.org/wiki/Xvfb)/[Xvfb](https://www.x.org/releases/X11R7.6/doc/man/man1/Xvfb.1.xhtml), [X11](https://en.wikipedia.org/wiki/X_Window_System), [FFmpeg](https://ffmpeg.org), [PyVirtualDisplay](https://github.com/ponty/PyVirtualDisplay), [PyOpenGL](http://pyopengl.sourceforge.net), and other dependencies, as described further below.
 

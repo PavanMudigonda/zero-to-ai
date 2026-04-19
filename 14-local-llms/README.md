@@ -34,7 +34,7 @@ This module should help you answer a practical question: when does running model
 - MLX for Apple Silicon-native training and inference
 - vLLM and SGLang for higher-throughput serving on stronger local GPUs
 - OpenAI-compatible local gateways for app portability across hosted and self-hosted backends
-- **AI Toolkit for VS Code** for model browsing, local playground, fine-tuning (QLoRA), and evaluation — all inside the editor
+- **AI Toolkit for VS Code** for model browsing, local playground, fine-tuning (QLoRA), and evaluation - all inside the editor
 
 ## Study Advice
 

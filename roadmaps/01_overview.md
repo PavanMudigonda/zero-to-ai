@@ -1,4 +1,4 @@
-# Visual Roadmap — Part 1: Overview
+# Visual Roadmap - Part 1: Overview
 
 > Foundational diagrams: the big picture, ML paradigms, deep learning architectures, and the NLP/LLM pipeline.
 

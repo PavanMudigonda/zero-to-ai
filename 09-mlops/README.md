@@ -19,7 +19,7 @@ MLOps is consistently one of the top hiring criteria for ML Engineer roles.
 
 ---
 
-## Notebooks — Work in This Order
+## Notebooks - Work in This Order
 
 | # | Notebook | What You Learn | Time |
 |---|----------|----------------|------|
@@ -65,7 +65,7 @@ flowchart TD
 
 Every training run should be tracked. Track:
 - **Parameters**: learning rate, batch size, model architecture choices
-- **Metrics**: loss, accuracy, F1, AUC — over time, not just final values
+- **Metrics**: loss, accuracy, F1, AUC - over time, not just final values
 - **Artifacts**: the trained model file, tokenizer, feature scaler
 - **Environment**: Python version, library versions (requirements.txt)
 
@@ -136,7 +136,7 @@ Different deployment targets solve different problems. `ONNX Runtime` is a runti
 | Mobile / embedded / offline | ONNX Runtime or TensorFlow Lite |
 | Local-first development | Ollama or llama.cpp |
 
-### Docker for ML — The Essential Pattern
+### Docker for ML - The Essential Pattern
 
 ```dockerfile
 FROM python:3.11-slim
@@ -148,7 +148,7 @@ EXPOSE 8000
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-### Model Monitoring — What to Watch
+### Model Monitoring - What to Watch
 
 - **Data drift**: Input feature distributions shift from training distribution
 - **Concept drift**: The relationship between features and labels changes

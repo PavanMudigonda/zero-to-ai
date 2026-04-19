@@ -1,4 +1,4 @@
-/* Scroll progress bar — shows reading progress at the top of the page */
+/* Scroll progress bar - shows reading progress at the top of the page */
 (function () {
   "use strict";
 
