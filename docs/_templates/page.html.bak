@@ -77,7 +77,7 @@
   "@type": "WebPage",
   "name": {{ page_title|default("")|tojson }},
   "url": {{ structured_page_url|default("")|tojson }},
-  "description": {{ page_description|striptags|default("")|tojson }},
+  "description": {{ page_description|striptags|tojson }},
   "inLanguage": "en",
   "isPartOf": {
     "@type": "WebSite",
@@ -123,7 +123,7 @@
   "@type": "WebSite",
   "name": {{ site_name|default(project)|tojson }},
   "url": {{ site_url|default("")|tojson }},
-  "description": {{ page_description|striptags|default("")|tojson }},
+  "description": {{ page_description|striptags|tojson }},
   "about": [
     "Artificial intelligence course",
     "Machine learning curriculum",
