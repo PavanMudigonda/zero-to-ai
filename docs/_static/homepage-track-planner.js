@@ -798,18 +798,23 @@ document.addEventListener("DOMContentLoaded", function () {
           return;
         }
         writeStoredTrack(track);
-        setTimeout(function() {
-          applySelectedTrack(track);
-        }, 0);
+        // Ensure browser paints the button's :active state before running heavy DOM updates
+        requestAnimationFrame(function() {
+          setTimeout(function() {
+            applySelectedTrack(track);
+          }, 0);
+        });
       });
     });
 
     if (clearButton) {
       clearButton.addEventListener("click", function () {
         clearStoredTrack();
-        setTimeout(function() {
-          applySelectedTrack(null);
-        }, 0);
+        requestAnimationFrame(function() {
+          setTimeout(function() {
+            applySelectedTrack(null);
+          }, 0);
+        });
       });
     }
 

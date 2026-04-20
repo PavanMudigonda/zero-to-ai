@@ -9,8 +9,10 @@
   function updateProgress() {
     var scrollTop = window.scrollY || document.documentElement.scrollTop;
     var docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = progress + "%";
+    var progress = docHeight > 0 ? (scrollTop / docHeight) : 0;
+    
+    // Use transform scaleX (hardware accelerated) instead of animating width (layout thrashing)
+    bar.style.transform = "scaleX(" + progress + ")";
   }
 
   window.addEventListener("scroll", updateProgress, { passive: true });

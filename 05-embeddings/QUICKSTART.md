@@ -8,23 +8,6 @@ You completed Phase 4 (Tokenization) and noticed Phase 5 was missing the connect
 
 ---
 
-## 📦 What's Available
-
-### New Files (Just Added) ⭐
-1. **huggingface_embeddings.py** - Extract embeddings from BERT/RoBERTa (bridges Phase 4!)
-2. **openai_embeddings.py** - Cloud-based embeddings (production alternative)
-3. **embedding_comparison.md** - Choose the right approach (decision guide)
-4. **WHATS_NEW.md** - Detailed explanation of what was added
-5. **README.md** - Updated with new learning path
-
-### Existing Files (Already There)
-6. embeddings_intro.py
-7. semantic_similarity.py
-8. vector_database_demo.py
-9. Other intro files
-
----
-
 ## 🚀 Quick Start (5 minutes)
 
 ### 1. Install Dependencies

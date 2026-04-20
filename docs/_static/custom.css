@@ -1,3 +1,7 @@
+html, body {
+  touch-action: manipulation;
+}
+
 /* Prevent wide tables/code from breaking page layout */
 .main {
   min-width: 0;          /* stop flex child from stretching */
@@ -25,11 +29,13 @@
   top: 0;
   left: 0;
   height: 3px;
-  width: 0%;
+  width: 100%;
+  transform-origin: left center;
+  transform: scaleX(0);
   background: linear-gradient(90deg, var(--color-brand-primary), #00bcd4);
   z-index: 10000;
-  transition: width 0.1s linear;
   pointer-events: none;
+  will-change: transform;
 }
 
 /* Hero section */
@@ -306,6 +312,7 @@
 .saved-path-banner__link,
 .track-card__link {
   background: rgba(63, 81, 181, 0.1);
+  will-change: transform, box-shadow, background-color;
 }
 
 .track-card__button,
@@ -314,6 +321,8 @@
   background: transparent;
   color: var(--color-foreground-primary);
   cursor: pointer;
+  /* Will-change hints the browser to create a composite layer, improving INP */
+  will-change: transform, box-shadow, background-color;
 }
 
 .saved-path-banner__link:hover,
@@ -322,6 +331,16 @@
 .saved-path-banner__reset:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.saved-path-banner__link:active,
+.track-card__link:active,
+.track-card__button:active,
+.saved-path-banner__reset:active {
+  transform: translateY(1px);
+  box-shadow: none;
+  background: rgba(63, 81, 181, 0.2);
+  transition: none !important;
 }
 
 .track-card.is-active {
