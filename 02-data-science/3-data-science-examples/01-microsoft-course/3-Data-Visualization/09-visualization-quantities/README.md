@@ -201,7 +201,7 @@ This bird dataset offers a wealth of information about different types of birds 
 This first lesson has given you some information about how to use Matplotlib to visualize quantities. Do some research around other ways to work with datasets for visualization. [Plotly](https://github.com/plotly/plotly.py) is one that we won't cover in these lessons, so take a look at what it can offer.
 ## Assignment
 
-[Lines, Scatters, and Bars](assignment.md)
+[Lines, Scatters, and Bars](08_assignment.md)
 
 ## What Comes Next
 

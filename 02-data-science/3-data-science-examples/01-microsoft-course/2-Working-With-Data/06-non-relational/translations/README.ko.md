@@ -146,4 +146,4 @@ Cosmos DB 데이터베이스는 "Not Only SQL"의 정의에 부합하며, 여기
 
 ## 과제
 
-[탄산음료 수익](assignment.md)
+[탄산음료 수익](08_assignment.md)

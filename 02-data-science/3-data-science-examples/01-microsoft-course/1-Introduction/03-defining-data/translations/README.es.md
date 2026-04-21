@@ -66,4 +66,4 @@ Kaggle es una fuente excelente de conjuntos de datos abiertos. Usa los [conjunto
 
 ## Assignación
 
-[Clasificación de los conjuntos de datos](../assignment.md)
+[Clasificación de los conjuntos de datos](../08_assignment.md)

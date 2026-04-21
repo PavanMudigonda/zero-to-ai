@@ -178,4 +178,4 @@ WHERE rainfall.year = 2019
 
 ## 과제
 
-[과제](assignment.md)
+[과제](08_assignment.md)

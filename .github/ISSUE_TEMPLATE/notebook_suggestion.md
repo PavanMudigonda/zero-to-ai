@@ -39,8 +39,8 @@ By the end of this notebook, learners will be able to:
 - [e.g., Basic knowledge of LoRA]
 
 **Required Notebooks** (if learners should complete first):
-- [e.g., 5-neural-networks/03_pytorch_fundamentals.ipynb]
-- [e.g., 11-llm-finetuning/03_lora_basics.ipynb]
+- [e.g., 5-neural-networks/05_pytorch_fundamentals.ipynb]
+- [e.g., 11-llm-finetuning/04_lora_basics.ipynb]
 
 **Required Skills**:
 - [ ] Python programming

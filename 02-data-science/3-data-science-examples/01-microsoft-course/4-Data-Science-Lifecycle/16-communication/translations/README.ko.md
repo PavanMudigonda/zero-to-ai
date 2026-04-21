@@ -208,4 +208,4 @@ Emerson이 #2번 접근 방식을 택했다면, 팀 책임자는 Emerson이 의�
 
 ## 과제
 
-[이야기를 들려주세요](assignment.md)
+[이야기를 들려주세요](08_assignment.md)

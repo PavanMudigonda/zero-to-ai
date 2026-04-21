@@ -171,4 +171,4 @@ ax.figure.legend();
 꺾은선 그래프는 단순하거나 매우 복잡할 수 있습니다. [Seaborn 문서](https://seaborn.pydata.org/generated/seaborn.lineplot.html)에서 빌드할 수 있는 다양한 방법을 읽어 보세요. 문서에 나열된 다른 방법을 사용하여 이 강의에서 만든 꺾은선그래프를 향상시키세요.
 ## 과제
 
-[벌집 속으로 뛰어들어라](assignment.md)
+[벌집 속으로 뛰어들어라](08_assignment.md)

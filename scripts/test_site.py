@@ -232,6 +232,7 @@ def main():
         # 3. Sidebar scroll stability
         print("\n[3/7] Testing sidebar scroll stability...")
         scroll_result = test_sidebar_scroll_stability(page)
+        # import sys; sys.exit(0 if "PASS" in scroll_result else 1)
         print(f"  {scroll_result}")
 
         # 4. Resize handles

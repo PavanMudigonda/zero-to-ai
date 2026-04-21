@@ -24,7 +24,7 @@ AI safety and security are critical for production deployments. This phase cover
 
 ## 📖 Notebooks
 
-### 1. [Prompt Security Basics](01_prompt_security.ipynb) (90 min)
+### 1. [Prompt Security Basics](02_prompt_security.ipynb) (90 min)
 Learn to defend against prompt injection and jailbreaking attacks.
 
 **Topics:**
@@ -34,7 +34,7 @@ Learn to defend against prompt injection and jailbreaking attacks.
 - Input validation
 - Output filtering
 
-### 2. [Content Moderation](02_content_moderation.ipynb) (90 min)
+### 2. [Content Moderation](03_content_moderation.ipynb) (90 min)
 Implement robust content filtering systems.
 
 **Topics:**
@@ -44,7 +44,7 @@ Implement robust content filtering systems.
 - NSFW content filtering
 - Multi-language moderation
 
-### 3. [PII Detection & Privacy](03_pii_privacy.ipynb) (75 min)
+### 3. [PII Detection & Privacy](04_pii_privacy.ipynb) (75 min)
 Protect user privacy and comply with regulations.
 
 **Topics:**
@@ -54,7 +54,7 @@ Protect user privacy and comply with regulations.
 - Data retention policies
 - Secure data handling
 
-### 4. [Bias & Fairness](04_bias_fairness.ipynb) (90 min)
+### 4. [Bias & Fairness](05_bias_fairness.ipynb) (90 min)
 Build fair and unbiased AI systems.
 
 **Topics:**
@@ -64,7 +64,7 @@ Build fair and unbiased AI systems.
 - Diverse testing
 - Ethical considerations
 
-### 5. [Red Teaming & Adversarial Testing](05_red_teaming.ipynb) (120 min)
+### 5. [Red Teaming & Adversarial Testing](06_red_teaming.ipynb) (120 min)
 Systematically test your AI systems for vulnerabilities.
 
 **Topics:**
@@ -310,6 +310,6 @@ Track these metrics for your secure AI system:
 
 ---
 
-**Start with:** [Prompt Security Basics](01_prompt_security.ipynb)
+**Start with:** [Prompt Security Basics](02_prompt_security.ipynb)
 
 **Phase 19: AI Safety & Red Teaming** - Build secure, responsible AI systems! 🛡️

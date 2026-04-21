@@ -275,7 +275,7 @@ Whether you already have structured or unstructured data, using Python you can p
 
 ## Assignment
 
-[Perform more detailed data study for the challenges above](assignment.md)
+[Perform more detailed data study for the challenges above](08_assignment.md)
 
 ## What Comes Next
 

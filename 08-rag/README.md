@@ -47,24 +47,24 @@ This is one of the core application-building phases in the repo. It is where emb
 
 ```
 08-rag/
-├── 00_START_HERE.ipynb           # RAG overview and quick demo
-├── 01_basic_rag.ipynb             # Simple RAG from scratch
-├── 02_document_processing.ipynb   # Chunking strategies
-├── 03_langchain_rag.ipynb         # Using LangChain framework
-├── 04_llamaindex_rag.ipynb        # Using LlamaIndex framework
-├── 05_advanced_retrieval.ipynb    # Hybrid search, re-ranking
-├── 06_conversation_rag.ipynb      # Chat with memory
-├── 07_evaluation.ipynb            # RAG evaluation metrics
-├── 08_hyde_reranking.ipynb        # HyDE-style query expansion plus reranking
-├── 08_rag_evaluation_playbook.md  # How to benchmark RAG improvements
-├── 08_rag_technique_selection.md  # How to choose the right RAG upgrade
-├── 09_advanced_retrieval.ipynb    # Parent-child retrieval, ensemble
-├── 10_graphrag_visual_rag.ipynb   # GraphRAG and multimodal RAG
-├── 11_corrective_rag.ipynb        # CRAG-style retrieval grading, retry, abstention
-├── 12_parent_child_retrieval.ipynb # Structured retrieval with chunk-to-parent expansion
-├── 13_raptor_retrieval.ipynb       # RAPTOR-style hierarchical summary-tree retrieval
-├── assignment.md                  # Phase assignment
-├── challenges.md                  # Hands-on challenges
+├── 01_START_HERE.ipynb           # RAG overview and quick demo
+├── 02_basic_rag.ipynb             # Simple RAG from scratch
+├── 03_document_processing.ipynb   # Chunking strategies
+├── 04_langchain_rag.ipynb         # Using LangChain framework
+├── 05_llamaindex_rag.ipynb        # Using LlamaIndex framework
+├── 06_advanced_retrieval.ipynb    # Hybrid search, re-ranking
+├── 07_conversation_rag.ipynb      # Chat with memory
+├── 08_evaluation.ipynb            # RAG evaluation metrics
+├── 09_hyde_reranking.ipynb        # HyDE-style query expansion plus reranking
+├── 10_rag_evaluation_playbook.md  # How to benchmark RAG improvements
+├── 11_rag_technique_selection.md  # How to choose the right RAG upgrade
+├── 12_advanced_retrieval.ipynb    # Parent-child retrieval, ensemble
+├── 13_graphrag_visual_rag.ipynb   # GraphRAG and multimodal RAG
+├── 14_corrective_rag.ipynb        # CRAG-style retrieval grading, retry, abstention
+├── 15_parent_child_retrieval.ipynb # Structured retrieval with chunk-to-parent expansion
+├── 16_raptor_retrieval.ipynb       # RAPTOR-style hierarchical summary-tree retrieval
+├── 08_assignment.md                  # Phase assignment
+├── 10_challenges.md                  # Hands-on challenges
 └── README.md                      # This file
 ```
 
@@ -85,7 +85,7 @@ from your_vector_db import VectorDB  # Chroma, Qdrant, etc.
 from openai import OpenAI
 
 # 1. Index your documents
-# Use any embedding model - see 05-embeddings/embedding_comparison.md for options
+# Use any embedding model - see 05-embeddings/09_embedding_comparison.md for options
 # API: Gemini Embedding (cheapest + best), Voyage 3.5, or OpenAI
 # Local: Qwen3-Embedding, BGE-M3, or all-MiniLM-L6-v2
 model = SentenceTransformer('all-MiniLM-L6-v2')  # local, fast
@@ -172,9 +172,9 @@ This ordering matters. Most weak RAG systems fail because teams jump to advanced
 
 ### Companion guide
 
-Use [08_rag_technique_selection.md](08_rag_technique_selection.md) if you want a compact decision guide for choosing between HyDE, reranking, compression, RAPTOR, CRAG, Self-RAG, and GraphRAG.
+Use [11_rag_technique_selection.md](11_rag_technique_selection.md) if you want a compact decision guide for choosing between HyDE, reranking, compression, RAPTOR, CRAG, Self-RAG, and GraphRAG.
 
-Use [08_rag_evaluation_playbook.md](08_rag_evaluation_playbook.md) if you want a practical framework for benchmarking retrieval quality, answer quality, latency, and failure behavior.
+Use [10_rag_evaluation_playbook.md](10_rag_evaluation_playbook.md) if you want a practical framework for benchmarking retrieval quality, answer quality, latency, and failure behavior.
 
 ## How To Use This Phase Well
 

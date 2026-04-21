@@ -4,13 +4,13 @@ This module turns embeddings into something operational. Once you can generate v
 
 ## Actual Module Contents
 
-1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
-2. [01_vector_db_basics.ipynb](01_vector_db_basics.ipynb)
-3. [02_chroma_guide.ipynb](02_chroma_guide.ipynb)
-4. [03_qdrant_guide.ipynb](03_qdrant_guide.ipynb)
-5. [04_weaviate_guide.ipynb](04_weaviate_guide.ipynb)
-6. [05_milvus_guide.ipynb](05_milvus_guide.ipynb)
-7. [06_aurora_pgvector_guide.ipynb](06_aurora_pgvector_guide.ipynb)
+1. [01_START_HERE.ipynb](01_START_HERE.ipynb)
+2. [02_vector_db_basics.ipynb](02_vector_db_basics.ipynb)
+3. [03_chroma_guide.ipynb](03_chroma_guide.ipynb)
+4. [04_qdrant_guide.ipynb](04_qdrant_guide.ipynb)
+5. [05_weaviate_guide.ipynb](05_weaviate_guide.ipynb)
+6. [06_milvus_guide.ipynb](06_milvus_guide.ipynb)
+7. [07_aurora_pgvector_guide.ipynb](07_aurora_pgvector_guide.ipynb)
 
 ## What To Learn Here
 
@@ -663,35 +663,35 @@ for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
 ## 🎓 Learning Modules
 
 ### Module 1: Basics (2 hours)
-**[01_vector_db_basics.ipynb](01_vector_db_basics.ipynb)**
+**[02_vector_db_basics.ipynb](02_vector_db_basics.ipynb)**
 - What are vector databases
 - Similarity metrics (cosine, L2, dot product)
 - CRUD operations
 - Basic search
 
 ### Module 2: Chroma (1 hour)
-**[02_chroma_guide.ipynb](02_chroma_guide.ipynb)**
+**[03_chroma_guide.ipynb](03_chroma_guide.ipynb)**
 - Local development
 - Auto-embedding
 - Collections
 - Persistence
 
 ### Module 3: Qdrant (1.5 hours)
-**[03_qdrant_guide.ipynb](03_qdrant_guide.ipynb)**
+**[04_qdrant_guide.ipynb](04_qdrant_guide.ipynb)**
 - Qdrant setup (Docker/Cloud)
 - Advanced filtering
 - Batch operations
 - Performance tuning
 
 ### Module 4: Weaviate (1.5 hours)
-**[04_weaviate_guide.ipynb](04_weaviate_guide.ipynb)**
+**[05_weaviate_guide.ipynb](05_weaviate_guide.ipynb)**
 - Weaviate setup (Docker/Cloud)
 - GraphQL queries
 - Hybrid search (vector + keyword)
 - Schema design and modules
 
 ### Module 5: Milvus (2 hours)
-**[05_milvus_guide.ipynb](05_milvus_guide.ipynb)**
+**[06_milvus_guide.ipynb](06_milvus_guide.ipynb)**
 - Milvus/Zilliz Cloud setup
 - Collection schema design
 - Index types (IVF, HNSW)
@@ -699,7 +699,7 @@ for i, (idx, dist) in enumerate(zip(indices[0], distances[0])):
 - Large-scale deployments
 
 ### Module 6: Aurora pgvector (1 hour)
-**[06_aurora_pgvector_guide.ipynb](06_aurora_pgvector_guide.ipynb)**
+**[07_aurora_pgvector_guide.ipynb](07_aurora_pgvector_guide.ipynb)**
 - PostgreSQL integration
 - SQL + vectors
 - Indexes (IVFFlat, HNSW)

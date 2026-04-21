@@ -100,6 +100,41 @@ cp -f "$REPO_ROOT/llms-full.txt" "$DOCS_DIR/_extras/llms-full.txt" 2>/dev/null |
 # Copy social preview into _static so OG image is served at /_static/social-preview.svg
 cp -f "$DOCS_DIR/assets/social-preview.svg" "$DOCS_DIR/_static/social-preview.svg" 2>/dev/null || true
 
+# ---------------------------------------------------------------------------
+# Normalize notebooks in SOURCE first before rsyncing them
+# ---------------------------------------------------------------------------
+export REPO_ROOT
+python3 -c "
+import json, glob, uuid, sys, os
+
+fixed = 0
+for src_dir in ['00-course-setup', '01-python', '02-data-science', '03-maths', '04-token', '05-embeddings', '06-neural-networks', '07-vector-databases', '08-rag', '09-mlops', '10-specializations', '11-prompt-engineering', '12-llm-finetuning', '13-multimodal', '14-local-llms', '15-ai-agents', '16-model-evaluation', '17-debugging-troubleshooting', '18-low-code-ai-tools', '19-ai-safety-redteaming', '20-real-time-streaming', '21-quizzes', '22-references', '23-glossary', '24-advanced-deep-learning', '25-reinforcement-learning', '26-time-series-analysis', '27-causal-inference', '28-practical-data-science', '29-ai-hardware-llm-validation', '30-inference-optimization', '31-ai-powered-dev-tools']:
+    for path in glob.glob(os.path.join(os.environ['REPO_ROOT'], src_dir, '**/*.ipynb'), recursive=True):
+        if '.ipynb_checkpoints' in path: continue
+        try:
+            with open(path) as f:
+                nb = json.load(f)
+        except Exception:
+            continue
+        changed = False
+        for cell in nb.get('cells', []):
+            if 'id' not in cell:
+                cell['id'] = uuid.uuid4().hex[:8]
+                changed = True
+        # Ensure nbformat_minor >= 5 when cells have id fields
+        if nb.get('nbformat') == 4 and nb.get('nbformat_minor', 0) < 5:
+            has_ids = any('id' in cell for cell in nb.get('cells', []))
+            if has_ids:
+                nb['nbformat_minor'] = 5
+                changed = True
+        if changed:
+            with open(path, 'w') as f:
+                json.dump(nb, f, indent=1, ensure_ascii=False)
+                f.write('\n')
+            fixed += 1
+print(f'Normalized {fixed} source notebooks.')
+"
+
 for phase in "${PHASES[@]}"; do
   src="${phase%%:*}"
   target="${phase##*:}"
@@ -115,7 +150,7 @@ import re
 from typing import Optional
 from urllib.parse import urlsplit
 
-repo_root = Path(os.environ["REPO_ROOT"])
+repo_root = Path("")
 docs_dir = Path(os.environ["DOCS_DIR"])
 curriculum_dir = Path(os.environ["CURRICULUM_DIR"])
 generated_dir = Path(os.environ["GENERATED_DIR"])
@@ -275,29 +310,30 @@ def _collect_toctree_entries(directory: Path):
             seen.add(entry)
             entries.append(entry)
 
-    # Root-level markdown files (skip README, it's structural)
-    for md in sorted(directory.glob("*.md")):
-        if md.name == "README.md":
-            continue
-        _add(md.stem)
+    # Collect all items together to sort them purely alphabetically
+    # instead of grouping by extension. This fixes the sequence numbering!
+    items = []
 
-    # Root-level notebooks (deduplicated against .md stems above)
-    for nb in sorted(directory.glob("*.ipynb")):
-        _add(nb.stem)
+    for f in directory.iterdir():
+        if f.is_file() and f.name != "README.md" and f.suffix in [".md", ".ipynb"]:
+            items.append((f.name, f.stem))
+        elif f.is_dir() and f.name not in ["__pycache__", ".ipynb_checkpoints"]:
+            sub_readme = f / "README.md"
+            if sub_readme.exists():
+                items.append((f.name, f"{f.name}/README"))
+            else:
+                first = (
+                    next(iter(sorted(f.glob("*.ipynb"))), None)
+                    or next(iter(sorted(f.glob("*.md"))), None)
+                )
+                if first:
+                    items.append((f.name, f"{f.name}/{first.stem}"))
 
-    # Sub-directories
-    for subdir in sorted(p for p in directory.iterdir() if p.is_dir()):
-        sub_readme = subdir / "README.md"
-        if sub_readme.exists():
-            _add(f"{subdir.name}/README")
-        else:
-            # Pick the first discoverable document as the entry point
-            first = (
-                next(iter(sorted(subdir.glob("*.ipynb"))), None)
-                or next(iter(sorted(subdir.glob("*.md"))), None)
-            )
-            if first:
-                _add(f"{subdir.name}/{first.stem}")
+    # Sort lexicographically so numbers prefix correctly across .md and .ipynb
+    items.sort(key=lambda x: x[0])
+
+    for _, entry in items:
+        _add(entry)
 
     return entries
 
@@ -385,36 +421,5 @@ phase_count=$(find "$CURRICULUM_DIR" -mindepth 1 -maxdepth 1 -type d | wc -l | t
 readme_count=$(find "$CURRICULUM_DIR" -type f -name 'README.md' | wc -l | tr -d ' ')
 nb_count=$(find "$CURRICULUM_DIR" -type f -name '*.ipynb' | wc -l | tr -d ' ')
 
-# ---------------------------------------------------------------------------
-# Normalize notebooks: add missing cell IDs (required by nbformat >= 5.5)
-# ---------------------------------------------------------------------------
-python3 -c "
-import json, glob, uuid, sys
-
-fixed = 0
-for path in glob.glob('$CURRICULUM_DIR/**/*.ipynb', recursive=True):
-    try:
-        with open(path) as f:
-            nb = json.load(f)
-    except Exception:
-        continue
-    changed = False
-    for cell in nb.get('cells', []):
-        if 'id' not in cell:
-            cell['id'] = uuid.uuid4().hex[:8]
-            changed = True
-    # Ensure nbformat_minor >= 5 when cells have id fields (required by schema)
-    if nb.get('nbformat') == 4 and nb.get('nbformat_minor', 0) < 5:
-        has_ids = any('id' in cell for cell in nb.get('cells', []))
-        if has_ids:
-            nb['nbformat_minor'] = 5
-            changed = True
-    if changed:
-        with open(path, 'w') as f:
-            json.dump(nb, f, indent=1, ensure_ascii=False)
-            f.write('\n')
-        fixed += 1
-print(f'Normalized {fixed} notebooks (added missing cell IDs, ensured nbformat_minor >= 5).')
-"
 
 echo "Published $phase_count phases, $readme_count README files, and $nb_count notebooks."

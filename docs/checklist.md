@@ -53,9 +53,9 @@ orphan: true
 
 ## Phase 0: Glossary & Foundations
 
-- [ ] Done  [23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md)
-- [ ] Done  [00-course-setup/2026_model_landscape.md](../00-course-setup/2026_model_landscape.md) - frontier models, open-weight models, benchmarks as of 2026
-- [ ] Done  [31-ai-powered-dev-tools/00_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/00_ai_dev_tools_2026.md) - Cursor, Windsurf, Aider, GitHub Copilot comparison
+- [ ] Done  [23-glossary/01_GLOSSARY.md](../23-glossary/01_GLOSSARY.md)
+- [ ] Done  [00-course-setup/01_model_landscape.md](../00-course-setup/01_model_landscape.md) - frontier models, open-weight models, benchmarks as of 2026
+- [ ] Done  [31-ai-powered-dev-tools/03_ai_dev_tools_2026.md](../31-ai-powered-dev-tools/03_ai_dev_tools_2026.md) - Cursor, Windsurf, Aider, GitHub Copilot comparison
 - [ ] Familiarize yourself with basic ML concepts
 - [ ] Understand the difference between supervised/unsupervised learning
 - [ ] Done  [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md) - choose your learning track (AI Engineer / ML Engineer / Data Scientist)
@@ -138,55 +138,55 @@ orphan: true
 
 
 ### Tokenizer Notebooks
-- [ ] Done  [01_tokenizers_quickstart.ipynb](../04-token/01_tokenizers_quickstart.ipynb)
-- [ ] Done  [02_tokenizers_training.ipynb](../04-token/02_tokenizers_training.ipynb)
-- [ ] Done  [03_advanced_training_methods.ipynb](../04-token/03_advanced_training_methods.ipynb)
-- [ ] Done  [06_pipeline_components.ipynb](../04-token/06_pipeline_components.ipynb)
-- [ ] Done  [sentencepiece_example.ipynb](../04-token/sentencepiece_example.ipynb)
-- [ ] Done  [tiktoken_example.ipynb](../04-token/tiktoken_example.ipynb)
-- [ ] Done  [token_exercises.ipynb](../04-token/token_exercises.ipynb)
-- [ ] Done  [token_exploration.ipynb](../04-token/token_exploration.ipynb)
+- [ ] Done  [03_tokenizers_quickstart.ipynb](../04-token/03_tokenizers_quickstart.ipynb)
+- [ ] Done  [04_tokenizers_training.ipynb](../04-token/04_tokenizers_training.ipynb)
+- [ ] Done  [05_advanced_training_methods.ipynb](../04-token/05_advanced_training_methods.ipynb)
+- [ ] Done  [09_pipeline_components.ipynb](../04-token/09_pipeline_components.ipynb)
+- [ ] Done  [11_sentencepiece_example.ipynb](../04-token/11_sentencepiece_example.ipynb)
+- [ ] Done  [12_tiktoken_example.ipynb](../04-token/12_tiktoken_example.ipynb)
+- [ ] Done  [13_token_exercises.ipynb](../04-token/13_token_exercises.ipynb)
+- [ ] Done  [14_token_exploration.ipynb](../04-token/14_token_exploration.ipynb)
 
 ### Documentation
 - [ ] Done  [README_TOKENIZERS.md](../04-token/README_TOKENIZERS.md)
 - [ ] Done  [README_TIKTOKEN.md](../04-token/README_TIKTOKEN.md)
-- [ ] Done  [huggingface_tokenizers_guide.md](../04-token/huggingface_tokenizers_guide.md)
+- [ ] Done  [10_huggingface_tokenizers_guide.md](../04-token/10_huggingface_tokenizers_guide.md)
 
 
 ## Phase 4: Embeddings (10 notebooks)
 
 
 ### Core Embedding Notebooks
-- [ ] Done  [embeddings_intro.ipynb](../05-embeddings/embeddings_intro.ipynb)
-- [ ] Done  [sentence_transformer_intro.ipynb](../05-embeddings/sentence_transformer_intro.ipynb)
-- [ ] Done  [huggingface_embeddings.ipynb](../05-embeddings/huggingface_embeddings.ipynb)
-- [ ] Done  [openai_embeddings.ipynb](../05-embeddings/openai_embeddings.ipynb)
+- [ ] Done  [02_embeddings_intro.ipynb](../05-embeddings/02_embeddings_intro.ipynb)
+- [ ] Done  [06_sentence_transformer_intro.ipynb](../05-embeddings/06_sentence_transformer_intro.ipynb)
+- [ ] Done  [10_huggingface_embeddings.ipynb](../05-embeddings/10_huggingface_embeddings.ipynb)
+- [ ] Done  [11_openai_embeddings.ipynb](../05-embeddings/11_openai_embeddings.ipynb)
 
 ### Similarity & Search
-- [ ] Done  [semantic_similarity.ipynb](../05-embeddings/semantic_similarity.ipynb)
-- [ ] Done  [semantic_textual_similarity_intro.ipynb](../05-embeddings/semantic_textual_similarity_intro.ipynb)
-- [ ] Done  [semantic_search_intro.ipynb](../05-embeddings/semantic_search_intro.ipynb)
-- [ ] Done  [paraphrase_mining_intro.ipynb](../05-embeddings/paraphrase_mining_intro.ipynb)
+- [ ] Done  [12_semantic_similarity.ipynb](../05-embeddings/12_semantic_similarity.ipynb)
+- [ ] Done  [05_semantic_textual_similarity_intro.ipynb](../05-embeddings/05_semantic_textual_similarity_intro.ipynb)
+- [ ] Done  [04_semantic_search_intro.ipynb](../05-embeddings/04_semantic_search_intro.ipynb)
+- [ ] Done  [03_paraphrase_mining_intro.ipynb](../05-embeddings/03_paraphrase_mining_intro.ipynb)
 
 ### Advanced Topics
-- [ ] Done  [sparse_encoder_intro.ipynb](../05-embeddings/sparse_encoder_intro.ipynb)
-- [ ] Done  [vector_database_demo.ipynb](../05-embeddings/vector_database_demo.ipynb)
+- [ ] Done  [07_sparse_encoder_intro.ipynb](../05-embeddings/07_sparse_encoder_intro.ipynb)
+- [ ] Done  [13_vector_database_demo.ipynb](../05-embeddings/13_vector_database_demo.ipynb)
 
 ### Documentation
 - [ ] Done  [README.md](../05-embeddings/README.md)
-- [ ] Done  [QUICKSTART.md](../05-embeddings/QUICKSTART.md)
+- [ ] Done  [08_QUICKSTART.md](../05-embeddings/08_QUICKSTART.md)
 
 
 ## Phase 5: Neural Networks
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../06-neural-networks/00_START_HERE.ipynb) - Overview and learning path
-- [ ] Done  [01_neural_network_basics.ipynb](../06-neural-networks/01_neural_network_basics.ipynb) - Neurons, layers, activations, forward pass
-- [ ] Done  [02_backpropagation_explained.ipynb](../06-neural-networks/02_backpropagation_explained.ipynb) - Backprop from scratch with NumPy
-- [ ] Done  [03_pytorch_fundamentals.ipynb](../06-neural-networks/03_pytorch_fundamentals.ipynb) - Tensors, autograd, training loop in PyTorch
-- [ ] Done  [04_attention_mechanism.ipynb](../06-neural-networks/04_attention_mechanism.ipynb) - Self-attention, multi-head attention from scratch
-- [ ] Done  [05_transformer_architecture.ipynb](../06-neural-networks/05_transformer_architecture.ipynb) - Full transformer: encoder, decoder, positional encoding
+- [ ] Done  [01_START_HERE.ipynb](../06-neural-networks/01_START_HERE.ipynb) - Overview and learning path
+- [ ] Done  [03_neural_network_basics.ipynb](../06-neural-networks/03_neural_network_basics.ipynb) - Neurons, layers, activations, forward pass
+- [ ] Done  [04_backpropagation_explained.ipynb](../06-neural-networks/04_backpropagation_explained.ipynb) - Backprop from scratch with NumPy
+- [ ] Done  [05_pytorch_fundamentals.ipynb](../06-neural-networks/05_pytorch_fundamentals.ipynb) - Tensors, autograd, training loop in PyTorch
+- [ ] Done  [06_attention_mechanism.ipynb](../06-neural-networks/06_attention_mechanism.ipynb) - Self-attention, multi-head attention from scratch
+- [ ] Done  [07_transformer_architecture.ipynb](../06-neural-networks/07_transformer_architecture.ipynb) - Full transformer: encoder, decoder, positional encoding
 
 ### Math Foundation
 - [ ] Done  [03-maths/foundational/07_neural_network_math.ipynb](../03-maths/foundational/07_neural_network_math.ipynb)
@@ -209,13 +209,13 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../07-vector-databases/00_START_HERE.ipynb)
-- [ ] Done  [01_vector_db_basics.ipynb](../07-vector-databases/01_vector_db_basics.ipynb)
-- [ ] Done  [02_chroma_guide.ipynb](../07-vector-databases/02_chroma_guide.ipynb)
-- [ ] Done  [03_qdrant_guide.ipynb](../07-vector-databases/03_qdrant_guide.ipynb)
-- [ ] Done  [04_weaviate_guide.ipynb](../07-vector-databases/04_weaviate_guide.ipynb)
-- [ ] Done  [05_milvus_guide.ipynb](../07-vector-databases/05_milvus_guide.ipynb)
-- [ ] Done  [06_aurora_pgvector_guide.ipynb](../07-vector-databases/06_aurora_pgvector_guide.ipynb)
+- [ ] Done  [01_START_HERE.ipynb](../07-vector-databases/01_START_HERE.ipynb)
+- [ ] Done  [02_vector_db_basics.ipynb](../07-vector-databases/02_vector_db_basics.ipynb)
+- [ ] Done  [03_chroma_guide.ipynb](../07-vector-databases/03_chroma_guide.ipynb)
+- [ ] Done  [04_qdrant_guide.ipynb](../07-vector-databases/04_qdrant_guide.ipynb)
+- [ ] Done  [05_weaviate_guide.ipynb](../07-vector-databases/05_weaviate_guide.ipynb)
+- [ ] Done  [06_milvus_guide.ipynb](../07-vector-databases/06_milvus_guide.ipynb)
+- [ ] Done  [07_aurora_pgvector_guide.ipynb](../07-vector-databases/07_aurora_pgvector_guide.ipynb)
 
 ### Documentation
 - [ ] Done  [README.md](../07-vector-databases/README.md)
@@ -230,16 +230,16 @@ orphan: true
 
 
 ### Core RAG Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../08-rag/00_START_HERE.ipynb) - RAG overview and pipeline architecture
-- [ ] Done  [01_basic_rag.ipynb](../08-rag/01_basic_rag.ipynb) - Minimal RAG from scratch
-- [ ] Done  [02_document_processing.ipynb](../08-rag/02_document_processing.ipynb) - Chunking strategies and document loaders
-- [ ] Done  [03_langchain_rag.ipynb](../08-rag/03_langchain_rag.ipynb) - RAG with LangChain LCEL
-- [ ] Done  [04_llamaindex_rag.ipynb](../08-rag/04_llamaindex_rag.ipynb) - RAG with LlamaIndex
-- [ ] Done  [05_advanced_retrieval.ipynb](../08-rag/05_advanced_retrieval.ipynb) - HyDE, query expansion, reranking
-- [ ] Done  [06_conversation_rag.ipynb](../08-rag/06_conversation_rag.ipynb) - Multi-turn conversational RAG
-- [ ] Done  [07_evaluation.ipynb](../08-rag/07_evaluation.ipynb) - RAGAS metrics: faithfulness, relevancy, precision
-- [ ] Done  [09_advanced_retrieval.ipynb](../08-rag/09_advanced_retrieval.ipynb) - Parent-child retrieval, multi-vector, ensemble
-- [ ] Done  [10_graphrag_visual_rag.ipynb](../08-rag/10_graphrag_visual_rag.ipynb) - GraphRAG and multimodal RAG
+- [ ] Done  [01_START_HERE.ipynb](../08-rag/01_START_HERE.ipynb) - RAG overview and pipeline architecture
+- [ ] Done  [02_basic_rag.ipynb](../08-rag/02_basic_rag.ipynb) - Minimal RAG from scratch
+- [ ] Done  [03_document_processing.ipynb](../08-rag/03_document_processing.ipynb) - Chunking strategies and document loaders
+- [ ] Done  [04_langchain_rag.ipynb](../08-rag/04_langchain_rag.ipynb) - RAG with LangChain LCEL
+- [ ] Done  [05_llamaindex_rag.ipynb](../08-rag/05_llamaindex_rag.ipynb) - RAG with LlamaIndex
+- [ ] Done  [06_advanced_retrieval.ipynb](../08-rag/06_advanced_retrieval.ipynb) - HyDE, query expansion, reranking
+- [ ] Done  [07_conversation_rag.ipynb](../08-rag/07_conversation_rag.ipynb) - Multi-turn conversational RAG
+- [ ] Done  [08_evaluation.ipynb](../08-rag/08_evaluation.ipynb) - RAGAS metrics: faithfulness, relevancy, precision
+- [ ] Done  [12_advanced_retrieval.ipynb](../08-rag/12_advanced_retrieval.ipynb) - Parent-child retrieval, multi-vector, ensemble
+- [ ] Done  [13_graphrag_visual_rag.ipynb](../08-rag/13_graphrag_visual_rag.ipynb) - GraphRAG and multimodal RAG
 
 ### Documentation
 - [ ] Done  [08-rag/README.md](../08-rag/README.md)
@@ -259,14 +259,14 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../09-mlops/00_START_HERE.ipynb) - MLOps lifecycle overview
-- [ ] Done  [01_experiment_tracking.ipynb](../09-mlops/01_experiment_tracking.ipynb) - MLflow: log params, metrics, artifacts
-- [ ] Done  [02_fastapi_basics.ipynb](../09-mlops/02_fastapi_basics.ipynb) - Build REST API for model serving
-- [ ] Done  [03_model_deployment.ipynb](../09-mlops/03_model_deployment.ipynb) - Package and deploy end-to-end
-- [ ] Done  [04_docker_ml.ipynb](../09-mlops/04_docker_ml.ipynb) - Containerize ML models with Docker
-- [ ] Done  [05_monitoring.ipynb](../09-mlops/05_monitoring.ipynb) - Detect data drift and model degradation
-- [ ] Done  [06_ci_cd_pipeline.ipynb](../09-mlops/06_ci_cd_pipeline.ipynb) - GitHub Actions for ML CI/CD
-- [ ] Done  [07_cloud_deployment.ipynb](../09-mlops/07_cloud_deployment.ipynb) - Deploy to AWS/GCP/Azure
+- [ ] Done  [01_START_HERE.ipynb](../09-mlops/01_START_HERE.ipynb) - MLOps lifecycle overview
+- [ ] Done  [02_experiment_tracking.ipynb](../09-mlops/02_experiment_tracking.ipynb) - MLflow: log params, metrics, artifacts
+- [ ] Done  [03_fastapi_basics.ipynb](../09-mlops/03_fastapi_basics.ipynb) - Build REST API for model serving
+- [ ] Done  [04_model_deployment.ipynb](../09-mlops/04_model_deployment.ipynb) - Package and deploy end-to-end
+- [ ] Done  [05_docker_ml.ipynb](../09-mlops/05_docker_ml.ipynb) - Containerize ML models with Docker
+- [ ] Done  [06_monitoring.ipynb](../09-mlops/06_monitoring.ipynb) - Detect data drift and model degradation
+- [ ] Done  [07_ci_cd_pipeline.ipynb](../09-mlops/07_ci_cd_pipeline.ipynb) - GitHub Actions for ML CI/CD
+- [ ] Done  [08_cloud_deployment.ipynb](../09-mlops/08_cloud_deployment.ipynb) - Deploy to AWS/GCP/Azure
 - [ ] Done  [09_llm_infrastructure.ipynb](../09-mlops/09_llm_infrastructure.ipynb) - vLLM, TGI, LLM serving at scale
 
 ### Documentation
@@ -288,7 +288,7 @@ orphan: true
 - [ ] Done  [10-specializations/README.md](../10-specializations/README.md) for guidance on choosing your path
 
 ### Path A: Computer Vision (best for CV Engineer / Multimodal AI roles)
-- [ ] Done  [00_START_HERE.ipynb](../10-specializations/computer-vision/00_START_HERE.ipynb) - CV overview and roadmap
+- [ ] Done  [01_START_HERE.ipynb](../10-specializations/computer-vision/01_START_HERE.ipynb) - CV overview and roadmap
 - [ ] Done  [01_image_classification.ipynb](../10-specializations/computer-vision/01_image_classification.ipynb) - CNNs, ResNet, EfficientNet with PyTorch
 - [ ] Done  [02_object_detection.ipynb](../10-specializations/computer-vision/02_object_detection.ipynb) - YOLO, Faster R-CNN, bounding boxes
 - [ ] Done  [03_clip_embeddings.ipynb](../10-specializations/computer-vision/03_clip_embeddings.ipynb) - CLIP for zero-shot image classification + search
@@ -296,7 +296,7 @@ orphan: true
 - [ ] Done  [05_multimodal_rag.ipynb](../10-specializations/computer-vision/05_multimodal_rag.ipynb) - RAG over images + text
 
 ### Path B: NLP (best for NLP Engineer / Text AI roles)
-- [ ] Done  [00_START_HERE.ipynb](../10-specializations/nlp/00_START_HERE.ipynb) - NLP overview
+- [ ] Done  [01_START_HERE.ipynb](../10-specializations/nlp/01_START_HERE.ipynb) - NLP overview
 - [ ] Done  [01_ner.ipynb](../10-specializations/nlp/01_ner.ipynb) - Named Entity Recognition with transformers
 - [ ] Done  [02_translation.ipynb](../10-specializations/nlp/02_translation.ipynb) - Sequence-to-sequence translation (MarianMT, Helsinki-NLP)
 - [ ] Done  [03_summarization.ipynb](../10-specializations/nlp/03_summarization.ipynb) - Abstractive summarization with BART/T5
@@ -304,7 +304,7 @@ orphan: true
 - [ ] Done  [05_information_extraction.ipynb](../10-specializations/nlp/05_information_extraction.ipynb) - Structured extraction from text
 
 ### Path C: AI Agents Specialization (best for AI Engineer roles - pairs with Phase 14)
-- [ ] Done  [00_START_HERE.ipynb](../10-specializations/ai-agents/00_START_HERE.ipynb) - Agents specialization overview
+- [ ] Done  [01_START_HERE.ipynb](../10-specializations/ai-agents/01_START_HERE.ipynb) - Agents specialization overview
 - [ ] Done  [01_function_calling.ipynb](../10-specializations/ai-agents/01_function_calling.ipynb) - Advanced tool/function calling patterns
 - [ ] Done  [02_react_pattern.ipynb](../10-specializations/ai-agents/02_react_pattern.ipynb) - ReAct implementation deep dive
 - [ ] Done  [03_langgraph_agents.ipynb](../10-specializations/ai-agents/03_langgraph_agents.ipynb) - Stateful agents with LangGraph
@@ -320,10 +320,10 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../11-prompt-engineering/00_START_HERE.ipynb)
-- [ ] Done  [01_basic_prompting.ipynb](../11-prompt-engineering/01_basic_prompting.ipynb)
-- [ ] Done  [02_chain_of_thought.ipynb](../11-prompt-engineering/02_chain_of_thought.ipynb)
-- [ ] Done  [03_react_prompting.ipynb](../11-prompt-engineering/03_react_prompting.ipynb)
+- [ ] Done  [01_START_HERE.ipynb](../11-prompt-engineering/01_START_HERE.ipynb)
+- [ ] Done  [02_basic_prompting.ipynb](../11-prompt-engineering/02_basic_prompting.ipynb)
+- [ ] Done  [03_chain_of_thought.ipynb](../11-prompt-engineering/03_chain_of_thought.ipynb)
+- [ ] Done  [04_react_prompting.ipynb](../11-prompt-engineering/04_react_prompting.ipynb)
 - [ ] Done  [05_structured_outputs_dspy.ipynb](../11-prompt-engineering/05_structured_outputs_dspy.ipynb) - DSPy: programmatic prompt optimization and structured outputs
 - [ ] Done  [06_long_context_strategies.ipynb](../11-prompt-engineering/06_long_context_strategies.ipynb) - long-context prompting, chunking, and retrieval-aware strategies
 
@@ -344,18 +344,18 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../12-llm-finetuning/00_START_HERE.ipynb) - Overview, decision framework, hardware guide
-- [ ] Done  [01_dataset_preparation.ipynb](../12-llm-finetuning/01_dataset_preparation.ipynb) - Data cleaning, formatting, augmentation
-- [ ] Done  [02_supervised_finetuning.ipynb](../12-llm-finetuning/02_supervised_finetuning.ipynb) - SFT with SFTTrainer, Flash Attention 2
-- [ ] Done  [03_lora_basics.ipynb](../12-llm-finetuning/03_lora_basics.ipynb) - LoRA fundamentals and configuration
-- [ ] Done  [04_qlora_efficient.ipynb](../12-llm-finetuning/04_qlora_efficient.ipynb) - QLoRA, DoRA, RSLoRA deep dive
-- [ ] Done  [05_dpo_alignment.ipynb](../12-llm-finetuning/05_dpo_alignment.ipynb) - DPO, RLHF, alignment techniques
-- [ ] Done  [06_evaluation.ipynb](../12-llm-finetuning/06_evaluation.ipynb) - BLEU, BERTScore, LLM-as-judge, benchmarks
-- [ ] Done  [07_deployment.ipynb](../12-llm-finetuning/07_deployment.ipynb) - vLLM, Ollama, Docker, production serving
-- [ ] Done  [08_grpo_reasoning_training.ipynb](../12-llm-finetuning/08_grpo_reasoning_training.ipynb) - GRPO: training reasoning models (DeepSeek-style)
-- [ ] Done  [09_unsloth_fast_finetuning.ipynb](../12-llm-finetuning/09_unsloth_fast_finetuning.ipynb) - 2-4x faster fine-tuning with Unsloth
-- [ ] Done  [10_quantization_gptq_awq.ipynb](../12-llm-finetuning/10_quantization_gptq_awq.ipynb) - quantization for deployment efficiency
-- [ ] Done  [11_rlhf_constitutional_ai.ipynb](../12-llm-finetuning/11_rlhf_constitutional_ai.ipynb) - RLHF, constitutional AI, and alignment framing
+- [ ] Done  [01_START_HERE.ipynb](../12-llm-finetuning/01_START_HERE.ipynb) - Overview, decision framework, hardware guide
+- [ ] Done  [02_dataset_preparation.ipynb](../12-llm-finetuning/02_dataset_preparation.ipynb) - Data cleaning, formatting, augmentation
+- [ ] Done  [03_supervised_finetuning.ipynb](../12-llm-finetuning/03_supervised_finetuning.ipynb) - SFT with SFTTrainer, Flash Attention 2
+- [ ] Done  [04_lora_basics.ipynb](../12-llm-finetuning/04_lora_basics.ipynb) - LoRA fundamentals and configuration
+- [ ] Done  [05_qlora_efficient.ipynb](../12-llm-finetuning/05_qlora_efficient.ipynb) - QLoRA, DoRA, RSLoRA deep dive
+- [ ] Done  [06_dpo_alignment.ipynb](../12-llm-finetuning/06_dpo_alignment.ipynb) - DPO, RLHF, alignment techniques
+- [ ] Done  [07_evaluation.ipynb](../12-llm-finetuning/07_evaluation.ipynb) - BLEU, BERTScore, LLM-as-judge, benchmarks
+- [ ] Done  [08_deployment.ipynb](../12-llm-finetuning/08_deployment.ipynb) - vLLM, Ollama, Docker, production serving
+- [ ] Done  [09_grpo_reasoning_training.ipynb](../12-llm-finetuning/09_grpo_reasoning_training.ipynb) - GRPO: training reasoning models (DeepSeek-style)
+- [ ] Done  [10_unsloth_fast_finetuning.ipynb](../12-llm-finetuning/10_unsloth_fast_finetuning.ipynb) - 2-4x faster fine-tuning with Unsloth
+- [ ] Done  [11_quantization_gptq_awq.ipynb](../12-llm-finetuning/11_quantization_gptq_awq.ipynb) - quantization for deployment efficiency
+- [ ] Done  [12_rlhf_constitutional_ai.ipynb](../12-llm-finetuning/12_rlhf_constitutional_ai.ipynb) - RLHF, constitutional AI, and alignment framing
 
 ### Documentation
 - [ ] Done  [README.md](../12-llm-finetuning/README.md)
@@ -394,12 +394,12 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../14-local-llms/00_START_HERE.ipynb) - local LLM setup overview and learning path
-- [ ] Done  [01_ollama_quickstart.ipynb](../14-local-llms/01_ollama_quickstart.ipynb) - Ollama setup and first models
+- [ ] Done  [01_START_HERE.ipynb](../14-local-llms/01_START_HERE.ipynb) - local LLM setup overview and learning path
+- [ ] Done  [03_ollama_quickstart.ipynb](../14-local-llms/03_ollama_quickstart.ipynb) - Ollama setup and first models
 - [ ] Done  [02_open_source_models_overview.ipynb](../14-local-llms/02_open_source_models_overview.ipynb) - Model landscape comparison
-- [ ] Done  [03_local_rag_with_ollama.ipynb](../14-local-llms/03_local_rag_with_ollama.ipynb) - Fully local RAG (Ollama + ChromaDB)
-- [ ] Done  [04_llm_server_and_api.ipynb](../14-local-llms/04_llm_server_and_api.ipynb) - vLLM, llama.cpp, OpenAI-compatible servers
-- [ ] Done  [05_speculative_decoding.ipynb](../14-local-llms/05_speculative_decoding.ipynb) - latency reduction and local inference optimization concepts
+- [ ] Done  [04_local_rag_with_ollama.ipynb](../14-local-llms/04_local_rag_with_ollama.ipynb) - Fully local RAG (Ollama + ChromaDB)
+- [ ] Done  [05_llm_server_and_api.ipynb](../14-local-llms/05_llm_server_and_api.ipynb) - vLLM, llama.cpp, OpenAI-compatible servers
+- [ ] Done  [06_speculative_decoding.ipynb](../14-local-llms/06_speculative_decoding.ipynb) - latency reduction and local inference optimization concepts
 
 ### Documentation
 - [ ] Done  [README.md](../14-local-llms/README.md)
@@ -417,22 +417,22 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [01_intro_to_agents.ipynb](../15-ai-agents/01_intro_to_agents.ipynb) - What agents are, ReAct loop, agent anatomy
-- [ ] Done  [02_function_calling.ipynb](../15-ai-agents/02_function_calling.ipynb) - Tool/function calling with OpenAI and Anthropic APIs
-- [ ] Done  [03_react_pattern.ipynb](../15-ai-agents/03_react_pattern.ipynb) - Reasoning + Acting loop implementation
-- [ ] Done  [04_agent_frameworks.ipynb](../15-ai-agents/04_agent_frameworks.ipynb) - LangChain Agents, LangGraph overview
-- [ ] Done  [05_multi_agent_systems.ipynb](../15-ai-agents/05_multi_agent_systems.ipynb) - Orchestrator + worker agents, CrewAI, AutoGen
-- [ ] Done  [06_mcp_model_context_protocol.ipynb](../15-ai-agents/06_mcp_model_context_protocol.ipynb) - MCP: new standard for AI tool integration (2026)
-- [ ] Done  [07_openai_agents_sdk_langgraph.ipynb](../15-ai-agents/07_openai_agents_sdk_langgraph.ipynb) - OpenAI Agents SDK and LangGraph stateful agents
-- [ ] Done  [08_reasoning_models.ipynb](../15-ai-agents/08_reasoning_models.ipynb) - o1, o3, DeepSeek R1 - using reasoning models in agents
-- [ ] Done  [09_autonomous_agents_2026.ipynb](../15-ai-agents/09_autonomous_agents_2026.ipynb) - State of the art: autonomous agents in 2026
+- [ ] Done  [02_intro_to_agents.ipynb](../15-ai-agents/02_intro_to_agents.ipynb) - What agents are, ReAct loop, agent anatomy
+- [ ] Done  [03_function_calling.ipynb](../15-ai-agents/03_function_calling.ipynb) - Tool/function calling with OpenAI and Anthropic APIs
+- [ ] Done  [04_react_pattern.ipynb](../15-ai-agents/04_react_pattern.ipynb) - Reasoning + Acting loop implementation
+- [ ] Done  [05_agent_frameworks.ipynb](../15-ai-agents/05_agent_frameworks.ipynb) - LangChain Agents, LangGraph overview
+- [ ] Done  [06_multi_agent_systems.ipynb](../15-ai-agents/06_multi_agent_systems.ipynb) - Orchestrator + worker agents, CrewAI, AutoGen
+- [ ] Done  [07_mcp_model_context_protocol.ipynb](../15-ai-agents/07_mcp_model_context_protocol.ipynb) - MCP: new standard for AI tool integration (2026)
+- [ ] Done  [08_openai_agents_sdk_langgraph.ipynb](../15-ai-agents/08_openai_agents_sdk_langgraph.ipynb) - OpenAI Agents SDK and LangGraph stateful agents
+- [ ] Done  [09_reasoning_models.ipynb](../15-ai-agents/09_reasoning_models.ipynb) - o1, o3, DeepSeek R1 - using reasoning models in agents
+- [ ] Done  [10_autonomous_agents_2026.ipynb](../15-ai-agents/10_autonomous_agents_2026.ipynb) - State of the art: autonomous agents in 2026
 
 ### Documentation
 - [ ] Done  [15-ai-agents/README.md](../15-ai-agents/README.md)
 
 ### Pre/Post Assessment
-- [ ] Done  [pre-quiz.md](../15-ai-agents/pre-quiz.md) before starting
-- [ ] Done  [post-quiz.md](../15-ai-agents/post-quiz.md) after finishing
+- [ ] Done  [15_pre-quiz.md](../15-ai-agents/15_pre-quiz.md) before starting
+- [ ] Done  [14_post-quiz.md](../15-ai-agents/14_post-quiz.md) after finishing
 
 ### Projects
 - [ ] Build a research agent with web search + calculator + code execution tools
@@ -445,10 +445,10 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [01_streaming_responses.ipynb](../20-real-time-streaming/01_streaming_responses.ipynb) - SSE, OpenAI/Anthropic streaming, TTFT/TPS metrics
-- [ ] Done  [02_websocket_connections.ipynb](../20-real-time-streaming/02_websocket_connections.ipynb) - WebSocket protocol, connection management, auth
-- [ ] Done  [03_real_time_rag.ipynb](../20-real-time-streaming/03_real_time_rag.ipynb) - Streaming RAG, progressive context, citation tracking
-- [ ] Done  [04_production_streaming.ipynb](../20-real-time-streaming/04_production_streaming.ipynb) - Rate limiting, circuit breakers, Prometheus, load testing
+- [ ] Done  [02_streaming_responses.ipynb](../20-real-time-streaming/02_streaming_responses.ipynb) - SSE, OpenAI/Anthropic streaming, TTFT/TPS metrics
+- [ ] Done  [03_websocket_connections.ipynb](../20-real-time-streaming/03_websocket_connections.ipynb) - WebSocket protocol, connection management, auth
+- [ ] Done  [04_real_time_rag.ipynb](../20-real-time-streaming/04_real_time_rag.ipynb) - Streaming RAG, progressive context, citation tracking
+- [ ] Done  [05_production_streaming.ipynb](../20-real-time-streaming/05_production_streaming.ipynb) - Rate limiting, circuit breakers, Prometheus, load testing
 
 ### Documentation
 - [ ] Done  [README.md](../20-real-time-streaming/README.md)
@@ -465,23 +465,23 @@ orphan: true
 ### Model Evaluation - [16-model-evaluation/](../16-model-evaluation/)
 
 
-- [ ] Done  [01_classification_metrics.ipynb](../16-model-evaluation/01_classification_metrics.ipynb) - Precision, recall, F1, ROC-AUC, confusion matrices
-- [ ] Done  [02_regression_metrics.ipynb](../16-model-evaluation/02_regression_metrics.ipynb) - RMSE, MAE, R², residual analysis
-- [ ] Done  [03_llm_evaluation.ipynb](../16-model-evaluation/03_llm_evaluation.ipynb) - BLEU, BERTScore, RAGAS, LLM-as-judge
-- [ ] Done  [04_bias_fairness.ipynb](../16-model-evaluation/04_bias_fairness.ipynb) - Demographic parity, equal opportunity, disparate impact
-- [ ] Done  [05_model_comparison.ipynb](../16-model-evaluation/05_model_comparison.ipynb) - Statistical tests for model comparison (paired t-test, McNemar)
+- [ ] Done  [02_classification_metrics.ipynb](../16-model-evaluation/02_classification_metrics.ipynb) - Precision, recall, F1, ROC-AUC, confusion matrices
+- [ ] Done  [03_regression_metrics.ipynb](../16-model-evaluation/03_regression_metrics.ipynb) - RMSE, MAE, R², residual analysis
+- [ ] Done  [04_llm_evaluation.ipynb](../16-model-evaluation/04_llm_evaluation.ipynb) - BLEU, BERTScore, RAGAS, LLM-as-judge
+- [ ] Done  [05_bias_fairness.ipynb](../16-model-evaluation/05_bias_fairness.ipynb) - Demographic parity, equal opportunity, disparate impact
+- [ ] Done  [06_model_comparison.ipynb](../16-model-evaluation/06_model_comparison.ipynb) - Statistical tests for model comparison (paired t-test, McNemar)
 - [ ] Done  [16-model-evaluation/README.md](../16-model-evaluation/README.md)
-- [ ] Done  [16-model-evaluation/assignment.md](../16-model-evaluation/assignment.md)
+- [ ] Done  [16-model-evaluation/08_assignment.md](../16-model-evaluation/08_assignment.md)
 
 
 ### Debugging & Troubleshooting - [17-debugging-troubleshooting/](../17-debugging-troubleshooting/)
 
 
-- [ ] Done  [01_debugging_workflow.ipynb](../17-debugging-troubleshooting/01_debugging_workflow.ipynb) - Systematic debugging: data → model → serving
-- [ ] Done  [02_data_issues.ipynb](../17-debugging-troubleshooting/02_data_issues.ipynb) - Missing values, class imbalance, label noise, distribution shift
-- [ ] Done  [03_performance_profiling.ipynb](../17-debugging-troubleshooting/03_performance_profiling.ipynb) - CPU/GPU profiling, memory leaks, training speed bottlenecks
-- [ ] Done  [04_model_debugging.ipynb](../17-debugging-troubleshooting/04_model_debugging.ipynb) - Loss curves, gradient issues, overfitting diagnosis
-- [ ] Done  [05_error_analysis.ipynb](../17-debugging-troubleshooting/05_error_analysis.ipynb) - Confusion matrix deep dive, error slicing, failure mode analysis
+- [ ] Done  [02_debugging_workflow.ipynb](../17-debugging-troubleshooting/02_debugging_workflow.ipynb) - Systematic debugging: data → model → serving
+- [ ] Done  [03_data_issues.ipynb](../17-debugging-troubleshooting/03_data_issues.ipynb) - Missing values, class imbalance, label noise, distribution shift
+- [ ] Done  [04_performance_profiling.ipynb](../17-debugging-troubleshooting/04_performance_profiling.ipynb) - CPU/GPU profiling, memory leaks, training speed bottlenecks
+- [ ] Done  [05_model_debugging.ipynb](../17-debugging-troubleshooting/05_model_debugging.ipynb) - Loss curves, gradient issues, overfitting diagnosis
+- [ ] Done  [06_error_analysis.ipynb](../17-debugging-troubleshooting/06_error_analysis.ipynb) - Confusion matrix deep dive, error slicing, failure mode analysis
 - [ ] Done  [17-debugging-troubleshooting/README.md](../17-debugging-troubleshooting/README.md)
 
 
@@ -489,11 +489,11 @@ orphan: true
 
 
 
-- [ ] Done  [01_gradio_basics.ipynb](../18-low-code-ai-tools/01_gradio_basics.ipynb) - Build ML demos in minutes with Gradio
-- [ ] Done  [02_streamlit_apps.ipynb](../18-low-code-ai-tools/02_streamlit_apps.ipynb) - Data apps with Streamlit
-- [ ] Done  [03_huggingface_spaces.ipynb](../18-low-code-ai-tools/03_huggingface_spaces.ipynb) - Deploy your demo for free on HuggingFace Spaces
-- [ ] Done  [04_automl_platforms.ipynb](../18-low-code-ai-tools/04_automl_platforms.ipynb) - AutoML with H2O, AutoSklearn, TPOT
-- [ ] Done  [05_end_to_end_project.ipynb](../18-low-code-ai-tools/05_end_to_end_project.ipynb) - Full project: model → Gradio → HF Spaces deployment
+- [ ] Done  [02_gradio_basics.ipynb](../18-low-code-ai-tools/02_gradio_basics.ipynb) - Build ML demos in minutes with Gradio
+- [ ] Done  [03_streamlit_apps.ipynb](../18-low-code-ai-tools/03_streamlit_apps.ipynb) - Data apps with Streamlit
+- [ ] Done  [04_huggingface_spaces.ipynb](../18-low-code-ai-tools/04_huggingface_spaces.ipynb) - Deploy your demo for free on HuggingFace Spaces
+- [ ] Done  [05_automl_platforms.ipynb](../18-low-code-ai-tools/05_automl_platforms.ipynb) - AutoML with H2O, AutoSklearn, TPOT
+- [ ] Done  [06_end_to_end_project.ipynb](../18-low-code-ai-tools/06_end_to_end_project.ipynb) - Full project: model → Gradio → HF Spaces deployment
 - [ ] Done  [18-low-code-ai-tools/README.md](../18-low-code-ai-tools/README.md)
 
 
@@ -502,13 +502,13 @@ orphan: true
 
 
 
-- [ ] Done  [01_prompt_security.ipynb](../19-ai-safety-redteaming/01_prompt_security.ipynb) - Prompt injection attacks and defenses
-- [ ] Done  [02_content_moderation.ipynb](../19-ai-safety-redteaming/02_content_moderation.ipynb) - Filtering harmful content with classifiers and LLM guards
-- [ ] Done  [03_pii_privacy.ipynb](../19-ai-safety-redteaming/03_pii_privacy.ipynb) - PII detection, redaction, and privacy-preserving ML
-- [ ] Done  [04_bias_fairness.ipynb](../19-ai-safety-redteaming/04_bias_fairness.ipynb) - Bias detection in LLM outputs, debiasing techniques
-- [ ] Done  [05_red_teaming.ipynb](../19-ai-safety-redteaming/05_red_teaming.ipynb) - Systematic red teaming: jailbreaks, adversarial prompts, evaluation
+- [ ] Done  [02_prompt_security.ipynb](../19-ai-safety-redteaming/02_prompt_security.ipynb) - Prompt injection attacks and defenses
+- [ ] Done  [03_content_moderation.ipynb](../19-ai-safety-redteaming/03_content_moderation.ipynb) - Filtering harmful content with classifiers and LLM guards
+- [ ] Done  [04_pii_privacy.ipynb](../19-ai-safety-redteaming/04_pii_privacy.ipynb) - PII detection, redaction, and privacy-preserving ML
+- [ ] Done  [05_bias_fairness.ipynb](../19-ai-safety-redteaming/05_bias_fairness.ipynb) - Bias detection in LLM outputs, debiasing techniques
+- [ ] Done  [06_red_teaming.ipynb](../19-ai-safety-redteaming/06_red_teaming.ipynb) - Systematic red teaming: jailbreaks, adversarial prompts, evaluation
 - [ ] Done  [19-ai-safety-redteaming/README.md](../19-ai-safety-redteaming/README.md)
-- [ ] Done  [19-ai-safety-redteaming/quiz.md](../19-ai-safety-redteaming/quiz.md)
+- [ ] Done  [19-ai-safety-redteaming/09_quiz.md](../19-ai-safety-redteaming/09_quiz.md)
 
 
 ## 🧪 Hands-On Labs
@@ -800,10 +800,10 @@ orphan: true
 
 
 ### Generative Models - Advanced
-- [ ] Done  [01_gan_mathematics.ipynb](../24-advanced-deep-learning/01_gan_mathematics.ipynb) - GAN theory and vanilla implementation
-- [ ] Done  [02_wgan_theory_implementation.ipynb](../24-advanced-deep-learning/02_wgan_theory_implementation.ipynb) - Wasserstein GAN with gradient penalty
-- [ ] Done  [03_variational_autoencoders_advanced.ipynb](../24-advanced-deep-learning/03_variational_autoencoders_advanced.ipynb) - VAE theory, ELBO, β-VAE
-- [ ] Done  [04_neural_ode.ipynb](../24-advanced-deep-learning/04_neural_ode.ipynb) - Neural ODEs and continuous normalizing flows
+- [ ] Done  [02_gan_mathematics.ipynb](../24-advanced-deep-learning/02_gan_mathematics.ipynb) - GAN theory and vanilla implementation
+- [ ] Done  [03_wgan_theory_implementation.ipynb](../24-advanced-deep-learning/03_wgan_theory_implementation.ipynb) - Wasserstein GAN with gradient penalty
+- [ ] Done  [04_variational_autoencoders_advanced.ipynb](../24-advanced-deep-learning/04_variational_autoencoders_advanced.ipynb) - VAE theory, ELBO, β-VAE
+- [ ] Done  [05_neural_ode.ipynb](../24-advanced-deep-learning/05_neural_ode.ipynb) - Neural ODEs and continuous normalizing flows
 
 ### Advanced Topics (To Be Implemented)
 - [ ] Info-GAN and Conditional GANs
@@ -819,13 +819,13 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../25-reinforcement-learning/00_START_HERE.ipynb) - RL fundamentals and overview
-- [ ] Done  [01_markov_decision_processes.ipynb](../25-reinforcement-learning/01_markov_decision_processes.ipynb) - MDP theory and Bellman equations
-- [ ] Done  [02_q_learning.ipynb](../25-reinforcement-learning/02_q_learning.ipynb) - tabular RL and temporal-difference learning
-- [ ] Done  [03_deep_q_networks.ipynb](../25-reinforcement-learning/03_deep_q_networks.ipynb) - function approximation with deep networks
-- [ ] Done  [04_policy_based_methods.ipynb](../25-reinforcement-learning/04_policy_based_methods.ipynb) - policy gradients and actor-critic ideas
-- [ ] Done  [05_advanced_topics_applications.ipynb](../25-reinforcement-learning/05_advanced_topics_applications.ipynb) - broader RL applications and advanced concepts
-- [ ] Done  [06_practical_exercises.ipynb](../25-reinforcement-learning/06_practical_exercises.ipynb) - hands-on RL practice
+- [ ] Done  [01_START_HERE.ipynb](../25-reinforcement-learning/01_START_HERE.ipynb) - RL fundamentals and overview
+- [ ] Done  [02_markov_decision_processes.ipynb](../25-reinforcement-learning/02_markov_decision_processes.ipynb) - MDP theory and Bellman equations
+- [ ] Done  [03_q_learning.ipynb](../25-reinforcement-learning/03_q_learning.ipynb) - tabular RL and temporal-difference learning
+- [ ] Done  [04_deep_q_networks.ipynb](../25-reinforcement-learning/04_deep_q_networks.ipynb) - function approximation with deep networks
+- [ ] Done  [05_policy_based_methods.ipynb](../25-reinforcement-learning/05_policy_based_methods.ipynb) - policy gradients and actor-critic ideas
+- [ ] Done  [06_advanced_topics_applications.ipynb](../25-reinforcement-learning/06_advanced_topics_applications.ipynb) - broader RL applications and advanced concepts
+- [ ] Done  [07_practical_exercises.ipynb](../25-reinforcement-learning/07_practical_exercises.ipynb) - hands-on RL practice
 
 ### Advanced Topics
 - [ ] Policy gradients and actor-critic methods (planned)
@@ -838,13 +838,13 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../26-time-series-analysis/00_START_HERE.ipynb) - Time series fundamentals
-- [ ] Done  [01_time_series_fundamentals.ipynb](../26-time-series-analysis/01_time_series_fundamentals.ipynb) - decomposition, autocorrelation, and forecasting basics
-- [ ] Done  [02_classical_statistical_methods.ipynb](../26-time-series-analysis/02_classical_statistical_methods.ipynb) - ARIMA-style and statistical forecasting methods
-- [ ] Done  [03_facebook_prophet.ipynb](../26-time-series-analysis/03_facebook_prophet.ipynb) - Prophet for business forecasting workflows
-- [ ] Done  [04_deep_learning_time_series.ipynb](../26-time-series-analysis/04_deep_learning_time_series.ipynb) - deep learning approaches for forecasting
-- [ ] Done  [05_advanced_techniques_applications.ipynb](../26-time-series-analysis/05_advanced_techniques_applications.ipynb) - advanced forecasting and applied scenarios
-- [ ] Done  [06_practical_applications_exercises.ipynb](../26-time-series-analysis/06_practical_applications_exercises.ipynb) - hands-on forecasting exercises
+- [ ] Done  [01_START_HERE.ipynb](../26-time-series-analysis/01_START_HERE.ipynb) - Time series fundamentals
+- [ ] Done  [02_time_series_fundamentals.ipynb](../26-time-series-analysis/02_time_series_fundamentals.ipynb) - decomposition, autocorrelation, and forecasting basics
+- [ ] Done  [03_classical_statistical_methods.ipynb](../26-time-series-analysis/03_classical_statistical_methods.ipynb) - ARIMA-style and statistical forecasting methods
+- [ ] Done  [04_facebook_prophet.ipynb](../26-time-series-analysis/04_facebook_prophet.ipynb) - Prophet for business forecasting workflows
+- [ ] Done  [05_deep_learning_time_series.ipynb](../26-time-series-analysis/05_deep_learning_time_series.ipynb) - deep learning approaches for forecasting
+- [ ] Done  [06_advanced_techniques_applications.ipynb](../26-time-series-analysis/06_advanced_techniques_applications.ipynb) - advanced forecasting and applied scenarios
+- [ ] Done  [07_practical_applications_exercises.ipynb](../26-time-series-analysis/07_practical_applications_exercises.ipynb) - hands-on forecasting exercises
 
 ### Advanced Topics
 - [ ] GARCH models for volatility (planned)
@@ -857,13 +857,13 @@ orphan: true
 
 
 ### Core Notebooks
-- [ ] Done  [00_START_HERE.ipynb](../27-causal-inference/00_START_HERE.ipynb) - Causal inference overview
-- [ ] Done  [01_causal_fundamentals.ipynb](../27-causal-inference/01_causal_fundamentals.ipynb) - causal questions, estimands, and foundational ideas
-- [ ] Done  [02_causal_graphs_dags.ipynb](../27-causal-inference/02_causal_graphs_dags.ipynb) - DAGs and causal graphs
-- [ ] Done  [03_experimental_design.ipynb](../27-causal-inference/03_experimental_design.ipynb) - RCT design and analysis
-- [ ] Done  [04_observational_methods.ipynb](../27-causal-inference/04_observational_methods.ipynb) - Propensity scores, matching
-- [ ] Done  [05_advanced_topics_applications.ipynb](../27-causal-inference/05_advanced_topics_applications.ipynb) - advanced topics, confounding, and applied causal analysis
-- [ ] Done  [06_quasi_experimental_designs.ipynb](../27-causal-inference/06_quasi_experimental_designs.ipynb) - RDD, DiD, IV methods
+- [ ] Done  [01_START_HERE.ipynb](../27-causal-inference/01_START_HERE.ipynb) - Causal inference overview
+- [ ] Done  [02_causal_fundamentals.ipynb](../27-causal-inference/02_causal_fundamentals.ipynb) - causal questions, estimands, and foundational ideas
+- [ ] Done  [03_causal_graphs_dags.ipynb](../27-causal-inference/03_causal_graphs_dags.ipynb) - DAGs and causal graphs
+- [ ] Done  [04_experimental_design.ipynb](../27-causal-inference/04_experimental_design.ipynb) - RCT design and analysis
+- [ ] Done  [05_observational_methods.ipynb](../27-causal-inference/05_observational_methods.ipynb) - Propensity scores, matching
+- [ ] Done  [06_advanced_topics_applications.ipynb](../27-causal-inference/06_advanced_topics_applications.ipynb) - advanced topics, confounding, and applied causal analysis
+- [ ] Done  [07_quasi_experimental_designs.ipynb](../27-causal-inference/07_quasi_experimental_designs.ipynb) - RDD, DiD, IV methods
 
 ### Advanced Topics
 - [ ] Mediation analysis (planned)

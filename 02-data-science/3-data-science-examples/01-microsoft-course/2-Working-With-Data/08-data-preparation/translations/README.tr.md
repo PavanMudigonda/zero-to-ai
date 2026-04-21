@@ -332,4 +332,4 @@ Veriyi analiz ve modelleme için hazırlamanın ve veriyi temizlemenin "uygulama
 
 ## Ödev
 
-[Bir Formdaki Verilerin Değerlendirilmesi](../assignment.md)
+[Bir Formdaki Verilerin Değerlendirilmesi](../08_assignment.md)

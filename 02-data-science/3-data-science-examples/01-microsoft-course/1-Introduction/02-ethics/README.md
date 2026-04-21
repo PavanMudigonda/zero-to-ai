@@ -268,4 +268,4 @@ After this lesson, keep the ethics lens with you as you move forward:
 
 # Assignment 
 
-[Write A Data Ethics Case Study](assignment.md)
+[Write A Data Ethics Case Study](08_assignment.md)

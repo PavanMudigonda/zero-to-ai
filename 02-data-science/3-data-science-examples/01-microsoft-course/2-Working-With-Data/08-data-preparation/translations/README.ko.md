@@ -336,4 +336,4 @@ letters	numbers
 
 ## 과제
 
-[특정 양식에서의 데이터 평가](../assignment.md)
+[특정 양식에서의 데이터 평가](../08_assignment.md)

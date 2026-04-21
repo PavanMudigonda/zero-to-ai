@@ -21,14 +21,14 @@ Every LLM interaction starts with tokenization. When you send a prompt to GPT-4 
 
 | # | Notebook | What You Learn | Time |
 |---|----------|----------------|------|
-| 1 | [01_tokenizers_quickstart.ipynb](01_tokenizers_quickstart.ipynb) | HuggingFace tokenizers API, encode/decode, special tokens | 45 min |
-| 2 | [tiktoken_example.ipynb](tiktoken_example.ipynb) | OpenAI's TikToken library, count tokens in prompts | 30 min |
-| 3 | [sentencepiece_example.ipynb](sentencepiece_example.ipynb) | Google's SentencePiece (used in T5, LLaMA) | 30 min |
-| 4 | [02_tokenizers_training.ipynb](02_tokenizers_training.ipynb) | Train a BPE tokenizer on your own data | 60 min |
-| 5 | [03_advanced_training_methods.ipynb](03_advanced_training_methods.ipynb) | WordPiece, Unigram, and special handling | 45 min |
-| 6 | [06_pipeline_components.ipynb](06_pipeline_components.ipynb) | Tokenization as part of the full NLP pipeline | 45 min |
-| 7 | [token_exploration.ipynb](token_exploration.ipynb) | Hands-on exploration and visualization | 30 min |
-| 8 | [token_exercises.ipynb](token_exercises.ipynb) | Practice problems with solutions | 45 min |
+| 1 | [03_tokenizers_quickstart.ipynb](03_tokenizers_quickstart.ipynb) | HuggingFace tokenizers API, encode/decode, special tokens | 45 min |
+| 2 | [12_tiktoken_example.ipynb](12_tiktoken_example.ipynb) | OpenAI's TikToken library, count tokens in prompts | 30 min |
+| 3 | [11_sentencepiece_example.ipynb](11_sentencepiece_example.ipynb) | Google's SentencePiece (used in T5, LLaMA) | 30 min |
+| 4 | [04_tokenizers_training.ipynb](04_tokenizers_training.ipynb) | Train a BPE tokenizer on your own data | 60 min |
+| 5 | [05_advanced_training_methods.ipynb](05_advanced_training_methods.ipynb) | WordPiece, Unigram, and special handling | 45 min |
+| 6 | [09_pipeline_components.ipynb](09_pipeline_components.ipynb) | Tokenization as part of the full NLP pipeline | 45 min |
+| 7 | [14_token_exploration.ipynb](14_token_exploration.ipynb) | Hands-on exploration and visualization | 30 min |
+| 8 | [13_token_exercises.ipynb](13_token_exercises.ipynb) | Practice problems with solutions | 45 min |
 
 ---
 
@@ -65,13 +65,13 @@ Larger vocabulary = fewer tokens per sentence = faster inference, but larger emb
 
 ## Reference Guides
 
-- [intro.md](intro.md) - Conceptual introduction to tokenization
-- [huggingface_tokenizers_guide.md](huggingface_tokenizers_guide.md) - Comprehensive HuggingFace guide
+- [02_intro.md](02_intro.md) - Conceptual introduction to tokenization
+- [10_huggingface_tokenizers_guide.md](10_huggingface_tokenizers_guide.md) - Comprehensive HuggingFace guide
 - [README_TOKENIZERS.md](README_TOKENIZERS.md) - HuggingFace tokenizers library deep dive
 - [README_TIKTOKEN.md](README_TIKTOKEN.md) - OpenAI TikToken library guide
-- [04_production_guide.md](04_production_guide.md) - Using tokenizers in production
-- [05_tokenizer_comparison.md](05_tokenizer_comparison.md) - Comparing different tokenizers
-- [06_integration_guide.md](06_integration_guide.md) - Integrating tokenizers into pipelines
+- [06_production_guide.md](06_production_guide.md) - Using tokenizers in production
+- [07_tokenizer_comparison.md](07_tokenizer_comparison.md) - Comparing different tokenizers
+- [08_integration_guide.md](08_integration_guide.md) - Integrating tokenizers into pipelines
 
 ---
 

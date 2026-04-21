@@ -190,4 +190,4 @@ sns.kdeplot(data=filteredBirds, x="MinLength", y="MaxLength", hue="ConservationS
 
 ## 과제
 
-[기술 적용해보기](assignment.md)
+[기술 적용해보기](08_assignment.md)

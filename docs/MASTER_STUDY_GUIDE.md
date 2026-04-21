@@ -94,7 +94,7 @@ Not every phase is equally important for every role. Pick the track that matches
 ### Phase 0: Course Setup (`00-course-setup/`)
 - Read `2026_model_landscape.md` to understand what models exist today
 - Run `install_dependencies.sh` to set up your environment
-- Bookmark [troubleshooting.md](../00-course-setup/troubleshooting.md) - you will need it
+- Bookmark [02_troubleshooting.md](../00-course-setup/02_troubleshooting.md) - you will need it
 
 ### Phase 1: Python (`01-python/`)
 - If new to Python, complete the [Python Bro Code](https://github.com/PavanMudigonda/python-bro-code) course first
@@ -247,7 +247,7 @@ Halve the timeline above. Add the supplementary phases (16–19) in between core
 1. **Don't try to do everything.** Pick your track, follow the order, skip what your track marks as optional.
 2. **Run every code cell.** Reading notebooks is not the same as running them. Type the code yourself when possible.
 3. **Break things on purpose.** Change a hyperparameter, remove a layer, corrupt the data. Understanding failure modes teaches more than success.
-4. **Use the glossary** ([23-glossary/GLOSSARY.md](../23-glossary/GLOSSARY.md)) whenever you hit an unfamiliar term.
+4. **Use the glossary** ([23-glossary/01_GLOSSARY.md](../23-glossary/01_GLOSSARY.md)) whenever you hit an unfamiliar term.
 5. **Ask for help.** Use [GitHub Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions) if you get stuck.
 6. **Build projects.** Each phase suggests projects at the end - do at least one per phase.
 7. **Track your progress.** Print [checklist.md](checklist.md) or check off items as you go.

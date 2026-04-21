@@ -9,14 +9,14 @@
 1. **Fork & Clone**: Click "Fork" → `git clone https://github.com/YOUR-USERNAME/zero-to-ai.git`
 2. **Install**: Run `./install_dependencies.sh` (uses UV - fastest!)
 3. **Start**: `jupyter notebook` → Open any `.ipynb` file
-4. **Begin Learning**: Read the [Master Study Guide](../docs/MASTER_STUDY_GUIDE.md), skim the [Glossary](../23-glossary/GLOSSARY.md), then open the first phase for your track
+4. **Begin Learning**: Read the [Master Study Guide](../docs/MASTER_STUDY_GUIDE.md), skim the [Glossary](../23-glossary/01_GLOSSARY.md), then open the first phase for your track
 
 **Not ready?** See detailed setup below.
 
 If you are unsure where to go after setup, use this order:
 
 1. [Master Study Guide](../docs/MASTER_STUDY_GUIDE.md)
-2. [Glossary](../23-glossary/GLOSSARY.md)
+2. [Glossary](../23-glossary/01_GLOSSARY.md)
 3. [Python phase](../01-python/README.md) if you need Python fundamentals
 4. The first phase for your chosen track
 
@@ -239,7 +239,7 @@ zero-to-ai/
 
 ### Phase 0: Setup & Prerequisites (You are here!)
 - ✅ Complete this setup guide
-- ✅ Review the [Glossary](../23-glossary/GLOSSARY.md) for terminology
+- ✅ Review the [Glossary](../23-glossary/01_GLOSSARY.md) for terminology
 - ✅ Read the [Master Study Guide](../docs/MASTER_STUDY_GUIDE.md) and choose your track
 - ✅ If new to Python, start with [01-python/](../01-python/)
 
@@ -257,7 +257,7 @@ zero-to-ai/
 
 1. ✅ **Complete Setup**: Ensure your environment is working
 2. ✅ **Choose a Track**: Read the [Master Study Guide](../docs/MASTER_STUDY_GUIDE.md)
-3. ✅ **Review the Glossary**: Read the [Glossary](../23-glossary/GLOSSARY.md) for terminology
+3. ✅ **Review the Glossary**: Read the [Glossary](../23-glossary/01_GLOSSARY.md) for terminology
 4. ✅ **Start Learning**: Begin with [01-python/](../01-python/README.md) if new to Python, otherwise start with the first phase for your chosen track
 5. ✅ **Track Progress**: Use [../docs/checklist.md](../docs/checklist.md) once you begin
 6. ✅ **Join Community**: Connect with other learners for support
@@ -277,7 +277,7 @@ zero-to-ai/
 
 ### Getting Help
 
-1. **Check [troubleshooting.md](./troubleshooting.md)** for detailed solutions
+1. **Check [02_troubleshooting.md](./02_troubleshooting.md)** for detailed solutions
 2. **Search [GitHub Issues](https://github.com/PavanMudigonda/zero-to-ai/issues)**
 3. **Ask in [Discussions](https://github.com/PavanMudigonda/zero-to-ai/discussions)**
 
@@ -291,7 +291,7 @@ Before moving to Lesson 1, ensure:
 - [ ] All dependencies installed (`pip list` shows numpy, pandas, sklearn, etc.)
 - [ ] Jupyter Notebook launches successfully
 - [ ] Can open and run a test notebook
-- [ ] Familiar with the [Glossary](../23-glossary/GLOSSARY.md) terms you will see early on
+- [ ] Familiar with the [Glossary](../23-glossary/01_GLOSSARY.md) terms you will see early on
 - [ ] Reviewed the [Master Study Guide](../docs/MASTER_STUDY_GUIDE.md) or the visual roadmap for your chosen track
 
 ## 🎓 Ready to Start?

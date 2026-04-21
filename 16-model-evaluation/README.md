@@ -24,20 +24,20 @@ By the end of this phase, you will be able to:
 
 ### Notebooks
 
-1. **[Classification Metrics](01_classification_metrics.ipynb)** (90 min)
+1. **[Classification Metrics](02_classification_metrics.ipynb)** (90 min)
    - Accuracy, Precision, Recall, F1-Score
    - ROC curves and AUC
    - Confusion matrices
    - Multi-class metrics
    - Imbalanced datasets
 
-2. **[Regression Metrics](02_regression_metrics.ipynb)** (75 min)
+2. **[Regression Metrics](03_regression_metrics.ipynb)** (75 min)
    - MSE, RMSE, MAE
    - R² and Adjusted R²
    - MAPE and quantile metrics
    - Residual analysis
 
-3. **[LLM Evaluation](03_llm_evaluation.ipynb)** (120 min)
+3. **[LLM Evaluation](04_llm_evaluation.ipynb)** (120 min)
    - Perplexity and cross-entropy
    - BLEU, ROUGE, METEOR scores
    - BERTScore and semantic similarity
@@ -46,13 +46,13 @@ By the end of this phase, you will be able to:
    - LLM-as-judge patterns and pitfalls
    - Pairwise preference evaluation
 
-4. **[Bias & Fairness](04_bias_fairness.ipynb)** (90 min)
+4. **[Bias & Fairness](05_bias_fairness.ipynb)** (90 min)
    - Fairness metrics (demographic parity, equalized odds)
    - Bias detection techniques
    - Mitigation strategies
    - Ethical considerations
 
-5. **[Model Comparison](05_model_comparison.ipynb)** (60 min)
+5. **[Model Comparison](06_model_comparison.ipynb)** (60 min)
    - Statistical significance testing
    - Cross-validation strategies
    - Learning curves
@@ -234,8 +234,8 @@ A: Yes, especially for models affecting people (hiring, lending, healthcare, cri
 
 ## 🏆 Quiz Yourself
 
-Before starting: [Take the Pre-Quiz](pre-quiz.md)  
-After completion: [Take the Post-Quiz](post-quiz.md)
+Before starting: [Take the Pre-Quiz](15_pre-quiz.md)  
+After completion: [Take the Post-Quiz](14_post-quiz.md)
 
 Track your progress and identify areas for deeper study!
 

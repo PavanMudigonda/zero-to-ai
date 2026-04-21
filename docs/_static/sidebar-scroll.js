@@ -1,6 +1,5 @@
 /**
- * Preserve only the left sidebar scroll position across sidebar-driven
- * navigations without touching the main page scroll behavior.
+ * Preserve the sidebar scroll position across sidebar-driven navigations.
  */
 (function () {
   "use strict";
@@ -12,22 +11,22 @@
     return document.querySelector(".sidebar-scroll");
   }
 
-  function save(sidebar) {
+  function save() {
+    var sidebar = getSidebar();
     if (!sidebar) return;
     sessionStorage.setItem(STORAGE_KEY, String(sidebar.scrollTop));
   }
 
   function restore() {
     var sidebar = getSidebar();
+    if (!sidebar) return;
+    
     var raw = sessionStorage.getItem(STORAGE_KEY);
     var fromSidebarNav = sessionStorage.getItem(NAV_KEY) === "1";
 
-    if (!sidebar || raw === null || !fromSidebarNav) {
-      sessionStorage.removeItem(NAV_KEY);
-      return;
+    if (raw === null || !fromSidebarNav) {
+      return; 
     }
-
-    sessionStorage.removeItem(NAV_KEY);
 
     var target = parseInt(raw, 10);
     if (isNaN(target)) return;
@@ -45,37 +44,35 @@
       requestAnimationFrame(function () {
         apply();
         sidebar.style.scrollBehavior = previousBehavior;
+        // Clean up only after we applied the final frame
+        sessionStorage.removeItem(NAV_KEY);
       });
     });
   }
 
-  function listen() {
+  function init() {
     var sidebar = getSidebar();
     if (!sidebar) return;
 
+    restore();
+
     sidebar.addEventListener("click", function (e) {
       var link = e.target.closest("a");
-      if (!link) return;
+      if (!link || !link.href) return;
       sessionStorage.setItem(NAV_KEY, "1");
-      save(sidebar);
+      save();
     }, true);
 
-    window.addEventListener("pagehide", function () {
-      save(sidebar);
-    });
-  }
+    sidebar.addEventListener("scroll", function () {
+      save();
+    }, { passive: true });
 
-  function boot() {
-    restore();
-    listen();
+    window.addEventListener("beforeunload", save);
   }
 
   if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", boot);
+    document.addEventListener("DOMContentLoaded", init);
   } else {
-    boot();
+    init();
   }
-
-  window.addEventListener("pageshow", restore);
-  window.addEventListener("load", restore);
 })();

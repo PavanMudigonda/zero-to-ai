@@ -213,7 +213,7 @@ This bird dataset offers a wealth of information about different types of birds 
 This first lesson has given you some information about how to use `ggplot2`to visualize quantities. Do some research around other ways to work with datasets for visualization. Research and lookout for datasets that you could visualize using other packages like [Lattice](https://stat.ethz.ch/R-manual/R-devel/library/lattice/html/Lattice.html) and [Plotly](https://github.com/plotly/plotly.R#readme)
 
 ## Assignment
-[Lines, Scatters, and Bars](assignment.md)
+[Lines, Scatters, and Bars](08_assignment.md)
 
 ## What Comes Next
 

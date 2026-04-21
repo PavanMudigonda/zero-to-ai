@@ -48,8 +48,8 @@ Links to papers, tutorials, or documentation:
 ## 📚 Connection to Existing Content
 
 How does this relate to existing notebooks in the repository?
-- **Builds on**: [e.g., transformer_architecture.md]
-- **Prerequisites from**: [e.g., 04_attention_mechanism.ipynb]
+- **Builds on**: [e.g., 11_transformer_architecture.md]
+- **Prerequisites from**: [e.g., 06_attention_mechanism.ipynb]
 - **Leads to**: [e.g., advanced RAG techniques]
 
 ## 🛠️ Implementation Ideas (Optional)

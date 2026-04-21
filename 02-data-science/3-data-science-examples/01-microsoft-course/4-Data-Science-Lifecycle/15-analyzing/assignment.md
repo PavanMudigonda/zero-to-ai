@@ -1,6 +1,6 @@
 # Exploring for answers
 
-This is a continuation of the previous lesson's [assignment](../14-Introduction/assignment.md), where we briefly took a look at the data set. Now we will be taking a deeper look at the data.
+This is a continuation of the previous lesson's [assignment](../14-Introduction/08_assignment.md), where we briefly took a look at the data set. Now we will be taking a deeper look at the data.
 
 Again, the question the client wants to know: **Do yellow taxi passengers in New York City tip drivers more in the winter or summer?**
 

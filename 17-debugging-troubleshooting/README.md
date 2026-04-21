@@ -53,35 +53,35 @@ By the end of this phase, you will:
 
 ### Notebooks
 
-1. **[01_debugging_workflow.ipynb](01_debugging_workflow.ipynb)**
+1. **[02_debugging_workflow.ipynb](02_debugging_workflow.ipynb)**
    - ML debugging methodology
    - Sanity checks and baseline models
    - Common pitfalls checklist
    - Debugging tools overview
    - **Duration:** 60-90 minutes
 
-2. **[02_data_issues.ipynb](02_data_issues.ipynb)**
+2. **[03_data_issues.ipynb](03_data_issues.ipynb)**
    - Data quality checks (null values, duplicates, outliers)
    - Label noise detection
    - Distribution shift analysis
    - Feature validation
    - **Duration:** 60-90 minutes
 
-3. **[03_performance_profiling.ipynb](03_performance_profiling.ipynb)**
+3. **[04_performance_profiling.ipynb](04_performance_profiling.ipynb)**
    - CPU profiling with cProfile and line_profiler
    - Memory profiling with memory_profiler
    - Bottleneck identification
    - Optimization strategies
    - **Duration:** 90-120 minutes
 
-4. **[04_model_debugging.ipynb](04_model_debugging.ipynb)**
+4. **[05_model_debugging.ipynb](05_model_debugging.ipynb)**
    - Learning curves and convergence
    - Gradient monitoring
    - Weight initialization issues
    - Overfitting/underfitting diagnosis
    - **Duration:** 90-120 minutes
 
-5. **[05_error_analysis.ipynb](05_error_analysis.ipynb)**
+5. **[06_error_analysis.ipynb](06_error_analysis.ipynb)**
    - Systematic error categorization
    - Per-class performance analysis
    - Failure case analysis
@@ -90,10 +90,10 @@ By the end of this phase, you will:
 
 ### Supporting Materials
 
-- **[assignment.md](assignment.md)** - Comprehensive debugging project
-- **[challenges.md](challenges.md)** - 7 progressive debugging challenges
-- **[pre-quiz.md](pre-quiz.md)** - Baseline knowledge assessment
-- **[post-quiz.md](post-quiz.md)** - Final knowledge verification
+- **[08_assignment.md](08_assignment.md)** - Comprehensive debugging project
+- **[10_challenges.md](10_challenges.md)** - 7 progressive debugging challenges
+- **[15_pre-quiz.md](15_pre-quiz.md)** - Baseline knowledge assessment
+- **[14_post-quiz.md](14_post-quiz.md)** - Final knowledge verification
 
 ---
 

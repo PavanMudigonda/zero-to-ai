@@ -4,13 +4,13 @@ This module should help you answer a practical question: when does running model
 
 ## Actual Module Contents
 
-1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
-2. [01_ollama_quickstart.ipynb](01_ollama_quickstart.ipynb)
+1. [01_START_HERE.ipynb](01_START_HERE.ipynb)
+2. [03_ollama_quickstart.ipynb](03_ollama_quickstart.ipynb)
 3. [02_open_source_models_overview.ipynb](02_open_source_models_overview.ipynb)
-4. [03_local_rag_with_ollama.ipynb](03_local_rag_with_ollama.ipynb)
-5. [04_llm_server_and_api.ipynb](04_llm_server_and_api.ipynb)
-6. [05_speculative_decoding.ipynb](05_speculative_decoding.ipynb)
-7. [06_ai_toolkit_vscode.md](06_ai_toolkit_vscode.md)
+4. [04_local_rag_with_ollama.ipynb](04_local_rag_with_ollama.ipynb)
+5. [05_llm_server_and_api.ipynb](05_llm_server_and_api.ipynb)
+6. [06_speculative_decoding.ipynb](06_speculative_decoding.ipynb)
+7. [07_ai_toolkit_vscode.md](07_ai_toolkit_vscode.md)
 
 ## Recommended Order
 

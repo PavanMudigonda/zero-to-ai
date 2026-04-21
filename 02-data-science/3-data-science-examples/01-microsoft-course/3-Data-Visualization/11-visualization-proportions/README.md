@@ -187,7 +187,7 @@ https://medium.datadriveninvestor.com/data-visualization-done-the-right-way-with
 Do some research to find more information on this sticky decision.
 ## Assignment
 
-[Try it in Excel](assignment.md)
+[Try it in Excel](08_assignment.md)
 
 ## What Comes Next
 

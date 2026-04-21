@@ -158,7 +158,7 @@ Visit [`notebook.ipynb`](/1-Introduction/01-defining-data-science/notebook.ipynb
 ## Assignments
 
 * **Task 1**: Modify the code above to find out related concepts for the fields of **Big Data** and **Machine Learning**
-* **Task 2**: [Think About Data Science Scenarios](assignment.md)
+* **Task 2**: [Think About Data Science Scenarios](08_assignment.md)
 
 ## What Comes Next
 

@@ -69,7 +69,7 @@ Kaggle is an excellent source of open datasets. Use the [dataset search tool](ht
 
 ## Assignment
 
-[Classifying Datasets](assignment.md)
+[Classifying Datasets](08_assignment.md)
 
 ## What Comes Next
 

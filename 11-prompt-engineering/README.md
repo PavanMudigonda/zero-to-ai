@@ -4,13 +4,13 @@ This module is most useful when treated as systems design for model interaction,
 
 ## Actual Module Contents
 
-1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
-2. [01_basic_prompting.ipynb](01_basic_prompting.ipynb)
-3. [02_chain_of_thought.ipynb](02_chain_of_thought.ipynb)
-4. [03_react_prompting.ipynb](03_react_prompting.ipynb)
+1. [01_START_HERE.ipynb](01_START_HERE.ipynb)
+2. [02_basic_prompting.ipynb](02_basic_prompting.ipynb)
+3. [03_chain_of_thought.ipynb](03_chain_of_thought.ipynb)
+4. [04_react_prompting.ipynb](04_react_prompting.ipynb)
 5. [05_structured_outputs_dspy.ipynb](05_structured_outputs_dspy.ipynb)
 6. [06_long_context_strategies.ipynb](06_long_context_strategies.ipynb)
-7. [assignment.md](assignment.md)
+7. [08_assignment.md](08_assignment.md)
 
 ## What To Learn Here
 
@@ -32,9 +32,9 @@ This module is most useful when treated as systems design for model interaction,
 
 ## Recommended Study Order
 
-- Start with [01_basic_prompting.ipynb](01_basic_prompting.ipynb)
-- Move to [02_chain_of_thought.ipynb](02_chain_of_thought.ipynb) for reasoning patterns
-- Study [03_react_prompting.ipynb](03_react_prompting.ipynb) before Phase 15 agents
+- Start with [02_basic_prompting.ipynb](02_basic_prompting.ipynb)
+- Move to [03_chain_of_thought.ipynb](03_chain_of_thought.ipynb) for reasoning patterns
+- Study [04_react_prompting.ipynb](04_react_prompting.ipynb) before Phase 15 agents
 - Use [05_structured_outputs_dspy.ipynb](05_structured_outputs_dspy.ipynb) to connect prompting with reliability
 - Finish with [06_long_context_strategies.ipynb](06_long_context_strategies.ipynb) before deeper RAG and agent work
 

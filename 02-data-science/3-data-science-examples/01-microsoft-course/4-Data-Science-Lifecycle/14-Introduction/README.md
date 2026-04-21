@@ -104,7 +104,7 @@ Applying the Data Science Lifecycle involves multiple roles and tasks, where som
 
 ## Assignment
 
-[Assessing a Dataset](assignment.md)
+[Assessing a Dataset](08_assignment.md)
 
 ## What Comes Next
 

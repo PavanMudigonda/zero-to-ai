@@ -75,7 +75,7 @@ This phase is a strong introduction and project-launch point. It is not yet inte
 
 ```
 13-multimodal/
-├── 00_START_HERE.ipynb                    # Overview & capabilities
+├── 01_START_HERE.ipynb                    # Overview & capabilities
 ├── vision-language/
 │   ├── 01_clip_basics.ipynb               # CLIP fundamentals
 │   ├── 02_vision_language_models.ipynb    # VLMs (LLaVA, GPT-4V)

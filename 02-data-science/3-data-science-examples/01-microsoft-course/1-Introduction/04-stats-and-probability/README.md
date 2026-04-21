@@ -256,7 +256,7 @@ Probability and statistics is such a broad topic that it deserves its own course
 
 ## Assignment
 
-[Small Diabetes Study](assignment.md)
+[Small Diabetes Study](08_assignment.md)
 
 ## What Comes Next
 

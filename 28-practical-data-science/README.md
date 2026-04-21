@@ -10,8 +10,8 @@ This folder is the transition from studying concepts to performing applied work 
 
 ## Recommended Order
 
-1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
-2. [00_INTERVIEW_PREP.ipynb](00_INTERVIEW_PREP.ipynb)
+1. [01_START_HERE.ipynb](01_START_HERE.ipynb)
+2. [02_INTERVIEW_PREP.ipynb](02_INTERVIEW_PREP.ipynb)
 3. Choose one or two tracks below based on your target role
 
 ## Subtracks

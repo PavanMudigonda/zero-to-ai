@@ -157,7 +157,7 @@ Ga naar ['notebook.ipynb'](notebook.ipynb) om de code door te lezen.  Je kunt de
 ## Opdrachten
 
 * **Taak 1**: Wijzig de bovenstaande code om gerelateerde concepten te achterhalen voor de velden **Big Data** en **Machine Learning**
-* **Taak 2**: [Denk na over Data Science-scenario's] (assignment.md)
+* **Taak 2**: [Denk na over Data Science-scenario's] (08_assignment.md)
 
 ## Credits
 

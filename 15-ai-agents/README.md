@@ -45,59 +45,59 @@ By the end of this phase, you will:
 
 ### Notebooks
 
-1. **[01_intro_to_agents.ipynb](01_intro_to_agents.ipynb)**
+1. **[02_intro_to_agents.ipynb](02_intro_to_agents.ipynb)**
    - What are AI agents?
    - Agent architecture
    - Simple agent example
    - Agent design patterns
 
-2. **[02_function_calling.ipynb](02_function_calling.ipynb)**
+2. **[03_function_calling.ipynb](03_function_calling.ipynb)**
    - Tool schema design
    - OpenAI Function Calling API
    - Tool selection strategies
    - Error handling
 
-3. **[03_react_pattern.ipynb](03_react_pattern.ipynb)**
+3. **[04_react_pattern.ipynb](04_react_pattern.ipynb)**
    - ReAct: Reasoning + Acting
    - Chain-of-thought with tools
    - Multi-step problem solving
    - Building a research agent
 
-4. **[04_agent_frameworks.ipynb](04_agent_frameworks.ipynb)**
+4. **[05_agent_frameworks.ipynb](05_agent_frameworks.ipynb)**
    - LangChain agents
    - LangGraph for workflows
    - Managed vs self-hosted agent APIs
    - Open-source framework comparison
    - Interop protocols (MCP, A2A)
 
-5. **[05_multi_agent_systems.ipynb](05_multi_agent_systems.ipynb)**
+5. **[06_multi_agent_systems.ipynb](06_multi_agent_systems.ipynb)**
    - Coordinating multiple agents
    - Agent communication protocols
    - Task delegation
    - Building an agent team
 
-6. **[06_mcp_model_context_protocol.ipynb](06_mcp_model_context_protocol.ipynb)**
+6. **[07_mcp_model_context_protocol.ipynb](07_mcp_model_context_protocol.ipynb)**
    - MCP: the emerging standard for AI tool integration (2026)
    - Connecting LLMs to external tools and data sources
    - Building MCP servers and clients
 
-7. **[07_openai_agents_sdk_langgraph.ipynb](07_openai_agents_sdk_langgraph.ipynb)**
+7. **[08_openai_agents_sdk_langgraph.ipynb](08_openai_agents_sdk_langgraph.ipynb)**
    - OpenAI Agents SDK
    - LangGraph stateful agents
    - Comparing agent frameworks
 
-8. **[08_reasoning_models.ipynb](08_reasoning_models.ipynb)**
+8. **[09_reasoning_models.ipynb](09_reasoning_models.ipynb)**
    - Reasoning-capable models for agent workflows
    - Deliberate planning vs fast-response models
    - When longer thinking improves tool use
 
-9. **[09_autonomous_agents_2026.ipynb](09_autonomous_agents_2026.ipynb)**
+9. **[10_autonomous_agents_2026.ipynb](10_autonomous_agents_2026.ipynb)**
    - State of the art: autonomous agents in 2026
    - OpenHands, OpenCode, Lingxi, mini-swe-agent, and computer-use agents
    - Production patterns and best practices
    - Future directions
 
-10. **[10_agent_evaluation.ipynb](10_agent_evaluation.ipynb)**
+10. **[11_agent_evaluation.ipynb](11_agent_evaluation.ipynb)**
     - Why agent evaluation is hard (non-determinism, side-effects)
     - Four dimensions: task success, trajectory quality, tool correctness, safety
     - Offline eval with LLM-as-Judge scoring
@@ -106,8 +106,8 @@ By the end of this phase, you will:
 
 ### Assignments & Practice
 
-- **[assignment.md](assignment.md)** - Build a production-ready AI agent (6 bonus options incl. MCP & eval)
-- **[challenges.md](challenges.md)** - 9 hands-on challenges (⭐⭐ to ⭐⭐⭐⭐⭐)
+- **[08_assignment.md](08_assignment.md)** - Build a production-ready AI agent (6 bonus options incl. MCP & eval)
+- **[10_challenges.md](10_challenges.md)** - 9 hands-on challenges (⭐⭐ to ⭐⭐⭐⭐⭐)
 
 ### Quizzes
 

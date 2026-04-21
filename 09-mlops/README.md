@@ -23,14 +23,14 @@ MLOps is consistently one of the top hiring criteria for ML Engineer roles.
 
 | # | Notebook | What You Learn | Time |
 |---|----------|----------------|------|
-| 1 | [00_START_HERE.ipynb](00_START_HERE.ipynb) | MLOps overview and the full lifecycle | 30 min |
-| 2 | [01_experiment_tracking.ipynb](01_experiment_tracking.ipynb) | MLflow: log metrics, params, artifacts | 60 min |
-| 3 | [02_fastapi_basics.ipynb](02_fastapi_basics.ipynb) | Build REST API endpoints for model serving | 60 min |
-| 4 | [03_model_deployment.ipynb](03_model_deployment.ipynb) | Package and deploy a model end-to-end | 90 min |
-| 5 | [04_docker_ml.ipynb](04_docker_ml.ipynb) | Containerize ML models with Docker | 90 min |
-| 6 | [05_monitoring.ipynb](05_monitoring.ipynb) | Detect data drift and model degradation | 60 min |
-| 7 | [06_ci_cd_pipeline.ipynb](06_ci_cd_pipeline.ipynb) | GitHub Actions for automated ML testing | 60 min |
-| 8 | [07_cloud_deployment.ipynb](07_cloud_deployment.ipynb) | Deploy to AWS/GCP/Azure | 90 min |
+| 1 | [01_START_HERE.ipynb](01_START_HERE.ipynb) | MLOps overview and the full lifecycle | 30 min |
+| 2 | [02_experiment_tracking.ipynb](02_experiment_tracking.ipynb) | MLflow: log metrics, params, artifacts | 60 min |
+| 3 | [03_fastapi_basics.ipynb](03_fastapi_basics.ipynb) | Build REST API endpoints for model serving | 60 min |
+| 4 | [04_model_deployment.ipynb](04_model_deployment.ipynb) | Package and deploy a model end-to-end | 90 min |
+| 5 | [05_docker_ml.ipynb](05_docker_ml.ipynb) | Containerize ML models with Docker | 90 min |
+| 6 | [06_monitoring.ipynb](06_monitoring.ipynb) | Detect data drift and model degradation | 60 min |
+| 7 | [07_ci_cd_pipeline.ipynb](07_ci_cd_pipeline.ipynb) | GitHub Actions for automated ML testing | 60 min |
+| 8 | [08_cloud_deployment.ipynb](08_cloud_deployment.ipynb) | Deploy to AWS/GCP/Azure | 90 min |
 | 9 | [09_llm_infrastructure.ipynb](09_llm_infrastructure.ipynb) | vLLM, TGI, and LLM serving at scale | 60 min |
 
 ## How To Use This Phase Well

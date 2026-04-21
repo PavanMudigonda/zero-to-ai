@@ -4,7 +4,7 @@
 
 This chapter teaches you how to turn VS Code into a fully AI-native development environment. We go deep on the three systems that make Copilot truly powerful: **agent mode**, **MCP (Model Context Protocol)**, and **custom instructions**.
 
-For a surface-level comparison of all AI coding tools, see [00_ai_dev_tools_2026.md](00_ai_dev_tools_2026.md). This chapter focuses exclusively on VS Code + GitHub Copilot.
+For a surface-level comparison of all AI coding tools, see [03_ai_dev_tools_2026.md](03_ai_dev_tools_2026.md). This chapter focuses exclusively on VS Code + GitHub Copilot.
 
 **Prerequisites:**
 - Comfortable with Python and VS Code
@@ -34,11 +34,11 @@ This phase is optional but useful much earlier than Phase 31 for many learners. 
 ```
 31-ai-powered-dev-tools/
 ├── README.md                           # This file
-├── 01_vscode_ai_setup.md               # Copilot modes, model selection, settings
-├── 02_mcp_deep_dive.md                 # MCP protocol, server catalog, configuration
-├── 03_copilot_instructions_guide.md    # All 7 customization primitives
-├── 04_copilot_workflows.md             # Real VS Code + Copilot workflows
-└── 05_build_mcp_server.ipynb           # Hands-on: build an MCP server in Python
+├── 02_vscode_ai_setup.md               # Copilot modes, model selection, settings
+├── 04_mcp_deep_dive.md                 # MCP protocol, server catalog, configuration
+├── 05_copilot_instructions_guide.md    # All 7 customization primitives
+├── 06_copilot_workflows.md             # Real VS Code + Copilot workflows
+└── 07_build_mcp_server.ipynb           # Hands-on: build an MCP server in Python
 ```
 
 ---

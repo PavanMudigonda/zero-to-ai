@@ -165,7 +165,7 @@ https://medium.com/@EvanSinar/use-animation-to-supercharge-data-visualization-cd
 
 ## Assignment
 
-[Build your own custom visualization](assignment.md)
+[Build your own custom visualization](08_assignment.md)
 
 ## What Comes Next
 

@@ -32,7 +32,7 @@ By the end of this phase, you will:
 ## 📚 Notebooks
 
 ### 1. Introduction to Gradio (90 min)
-**File:** [01_gradio_basics.ipynb](01_gradio_basics.ipynb)
+**File:** [02_gradio_basics.ipynb](02_gradio_basics.ipynb)
 
 Build interactive ML interfaces with just a few lines of code.
 
@@ -54,7 +54,7 @@ Build interactive ML interfaces with just a few lines of code.
 ---
 
 ### 2. Building with Streamlit (90 min)
-**File:** [02_streamlit_apps.ipynb](02_streamlit_apps.ipynb)
+**File:** [03_streamlit_apps.ipynb](03_streamlit_apps.ipynb)
 
 Create data-driven web applications and ML dashboards.
 
@@ -76,7 +76,7 @@ Create data-driven web applications and ML dashboards.
 ---
 
 ### 3. Hugging Face Spaces (75 min)
-**File:** [03_huggingface_spaces.ipynb](03_huggingface_spaces.ipynb)
+**File:** [04_huggingface_spaces.ipynb](04_huggingface_spaces.ipynb)
 
 Deploy and host ML demos on the cloud for free.
 
@@ -98,7 +98,7 @@ Deploy and host ML demos on the cloud for free.
 ---
 
 ### 4. AutoML Platforms (90 min)
-**File:** [04_automl_platforms.ipynb](04_automl_platforms.ipynb)
+**File:** [05_automl_platforms.ipynb](05_automl_platforms.ipynb)
 
 Automate model selection, hyperparameter tuning, and optimization.
 
@@ -120,7 +120,7 @@ Automate model selection, hyperparameter tuning, and optimization.
 ---
 
 ### 5. End-to-End Low-Code Project (120 min)
-**File:** [05_end_to_end_project.ipynb](05_end_to_end_project.ipynb)
+**File:** [06_end_to_end_project.ipynb](06_end_to_end_project.ipynb)
 
 Build a complete ML application from data to deployment.
 
@@ -345,10 +345,10 @@ predictions = predict_model(best_model, data=test_data)
 ## 🎓 Assessment
 
 ### Pre-Quiz
-Test your baseline knowledge: [pre-quiz.md](pre-quiz.md)
+Test your baseline knowledge: [15_pre-quiz.md](15_pre-quiz.md)
 
 ### Post-Quiz
-Verify your learning: [post-quiz.md](post-quiz.md)
+Verify your learning: [14_post-quiz.md](14_post-quiz.md)
 
 ### Assignment
 **End-to-End ML Application**
@@ -359,10 +359,10 @@ Build and deploy a complete ML application:
 - Build a Streamlit dashboard
 - Deploy to Hugging Face Spaces
 
-Details: [assignment.md](assignment.md)
+Details: [08_assignment.md](08_assignment.md)
 
 ### Challenges
-7 progressive challenges from basic demos to production apps: [challenges.md](challenges.md)
+7 progressive challenges from basic demos to production apps: [10_challenges.md](10_challenges.md)
 
 ---
 

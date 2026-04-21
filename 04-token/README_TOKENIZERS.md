@@ -41,7 +41,7 @@ print(output.ids)     # [7592, 1010, 2088, 999]
 
 Start with the comprehensive guide:
 
-**[📘 huggingface_tokenizers_guide.md](./huggingface_tokenizers_guide.md)**
+**[📘 10_huggingface_tokenizers_guide.md](./10_huggingface_tokenizers_guide.md)**
 
 This guide covers:
 
@@ -154,7 +154,7 @@ python 03_advanced_training_methods.py
 
 Learn production-level considerations:
 
-**[🏭 04_production_guide.md](./04_production_guide.md)**
+**[🏭 06_production_guide.md](./06_production_guide.md)**
 
 **Critical Topics:**
 
@@ -169,7 +169,7 @@ Learn production-level considerations:
 
 Understand different algorithms and choose the right one:
 
-**[📊 05_tokenizer_comparison.md](./05_tokenizer_comparison.md)**
+**[📊 07_tokenizer_comparison.md](./07_tokenizer_comparison.md)**
 
 **Comparisons:**
 
@@ -185,7 +185,7 @@ Understand different algorithms and choose the right one:
 
 Connect tokenizers to your ML workflow:
 
-**[🔌 06_integration_guide.md](./06_integration_guide.md)**
+**[🔌 08_integration_guide.md](./08_integration_guide.md)**
 
 **Integrations:**
 
@@ -215,12 +215,12 @@ By the end of this module, you will be able to:
 ```text
 1-token/
 ├── README_TOKENIZERS.md                   # This file - Complete guide
-├── huggingface_tokenizers_guide.md        # Detailed reference (1 hour)
+├── 10_huggingface_tokenizers_guide.md        # Detailed reference (1 hour)
 ├── 01_tokenizers_quickstart.py            # Quick start (30 min)
 ├── 02_tokenizers_training.py              # Training examples (45 min)
 ├── 03_advanced_training_methods.py        # Advanced patterns (45 min)
 │
-├── intro.md                               # Tokenization basics
+├── 02_intro.md                               # Tokenization basics
 ├── tiktoken_example.py                    # tiktoken examples
 ├── token_exploration.py                   # Token analysis
 ├── token_exercises.py                     # Practice exercises
@@ -412,7 +412,7 @@ After completing this module:
 ### Related Topics
 
 - **Phase 5**: [Embeddings Module](../05-embeddings/) - Next in learning path
-- **tiktoken**: [OpenAI's tokenizer](./intro.md) - Alternative approach
+- **tiktoken**: [OpenAI's tokenizer](./02_intro.md) - Alternative approach
 - **SentencePiece**: Google's tokenizer - Another option
 
 ### Community

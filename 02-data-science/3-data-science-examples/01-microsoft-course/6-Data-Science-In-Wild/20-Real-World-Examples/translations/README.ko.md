@@ -145,4 +145,4 @@ AI의 민주화 덕분에, 개발자들은 이제 사용자 경험과 개발 워
   
   ## 과제
 
-[Planetary Computer 데이터 셋 살펴보기](assignment.md)
+[Planetary Computer 데이터 셋 살펴보기](08_assignment.md)

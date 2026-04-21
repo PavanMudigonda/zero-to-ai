@@ -181,4 +181,4 @@ https://medium.datadriveninvestor.com/data-visualization-done-the-right-way-with
 इस चिपचिपे निर्णय के बारे में अधिक जानकारी प्राप्त करने के लिए कुछ शोध करें।
 ## कार्यभार
 
-[इसे एक्सेल में आज़माएं](assignment.md)
+[इसे एक्सेल में आज़माएं](08_assignment.md)

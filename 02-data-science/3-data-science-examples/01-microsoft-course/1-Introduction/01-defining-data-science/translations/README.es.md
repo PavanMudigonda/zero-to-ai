@@ -164,7 +164,7 @@ Visite [`notebook.ipynb`](notebook.ipynb) para leer el código.  También puedes
 ## Tareas
 
 * **Tarea 1**: Modifica el código anterior para encontrar conceptos relacionados para los campos de **Big Data** y **Machine Learning**.
-* **Tarea 2**: [Piensa sobre escenarios de la ciencia de datos](assignment.md)
+* **Tarea 2**: [Piensa sobre escenarios de la ciencia de datos](08_assignment.md)
 
 ## Créditos
 

@@ -166,7 +166,7 @@ In this lesson, you used `ggplot2` and started working to show more sophisticate
 
 ## Assignment
 
-[Apply your skills](assignment.md)
+[Apply your skills](08_assignment.md)
 
 ## What Comes Next
 

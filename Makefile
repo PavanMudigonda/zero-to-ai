@@ -17,6 +17,7 @@ html:
 	bash scripts/build_site.sh
 	$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS)
 	python3 scripts/fix_sitemap.py "$(BUILDDIR)"
+	python3 scripts/fix_broken_assets.py "$(BUILDDIR)"
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)."
 
 livehtml:

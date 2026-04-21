@@ -220,7 +220,7 @@ Review what you've just learned with the Post-Lecture Quiz above!
 
 ## Assignment
 
-[Market Research](assignment.md)
+[Market Research](08_assignment.md)
 
 ## What Comes Next
 

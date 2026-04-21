@@ -44,7 +44,7 @@ All the topics in this lesson can help identify missing or inconsistent values, 
 
 ## Assignment
 
-[Exploring for answers](assignment.md)
+[Exploring for answers](08_assignment.md)
 
 ## What Comes Next
 

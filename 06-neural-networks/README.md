@@ -4,20 +4,20 @@ This module is where the repo shifts from classical ML intuition into modern dee
 
 ## Recommended Order
 
-1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
-2. [01_neural_network_basics.ipynb](01_neural_network_basics.ipynb)
-3. [02_backpropagation_explained.ipynb](02_backpropagation_explained.ipynb)
-4. [03_pytorch_fundamentals.ipynb](03_pytorch_fundamentals.ipynb)
-5. [04_attention_mechanism.ipynb](04_attention_mechanism.ipynb)
-6. [05_transformer_architecture.ipynb](05_transformer_architecture.ipynb)
+1. [01_START_HERE.ipynb](01_START_HERE.ipynb)
+2. [03_neural_network_basics.ipynb](03_neural_network_basics.ipynb)
+3. [04_backpropagation_explained.ipynb](04_backpropagation_explained.ipynb)
+4. [05_pytorch_fundamentals.ipynb](05_pytorch_fundamentals.ipynb)
+5. [06_attention_mechanism.ipynb](06_attention_mechanism.ipynb)
+6. [07_transformer_architecture.ipynb](07_transformer_architecture.ipynb)
 
 Companion reading:
 
-- [intro.md](intro.md)
-- [attention_explained.md](attention_explained.md)
-- [transformer_architecture.md](transformer_architecture.md)
-- [assignment.md](assignment.md)
-- [challenges.md](challenges.md)
+- [02_intro.md](02_intro.md)
+- [09_attention_explained.md](09_attention_explained.md)
+- [11_transformer_architecture.md](11_transformer_architecture.md)
+- [08_assignment.md](08_assignment.md)
+- [10_challenges.md](10_challenges.md)
 
 ## What You Should Be Able To Explain
 
@@ -29,8 +29,8 @@ Companion reading:
 
 ## How To Study This Module
 
-- Spend more time on [02_backpropagation_explained.ipynb](02_backpropagation_explained.ipynb) than on framework syntax.
-- Treat [04_attention_mechanism.ipynb](04_attention_mechanism.ipynb) as the bridge into LLM architecture.
+- Spend more time on [04_backpropagation_explained.ipynb](04_backpropagation_explained.ipynb) than on framework syntax.
+- Treat [06_attention_mechanism.ipynb](06_attention_mechanism.ipynb) as the bridge into LLM architecture.
 - Revisit [03-maths/foundational/07_neural_network_math.ipynb](../03-maths/foundational/07_neural_network_math.ipynb) if gradients feel mechanical instead of intuitive.
 
 ## Suggested Practice

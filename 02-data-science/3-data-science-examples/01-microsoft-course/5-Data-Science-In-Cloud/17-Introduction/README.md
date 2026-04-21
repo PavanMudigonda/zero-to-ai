@@ -96,7 +96,7 @@ Sources:
 
 ## Assignment
 
-[Market Research](assignment.md)
+[Market Research](08_assignment.md)
 
 ## What Comes Next
 

@@ -132,7 +132,7 @@ jupyter notebook
 
 Once setup is complete, follow this path:
 
-1. [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md)
+1. [23-glossary/01_GLOSSARY.md](23-glossary/01_GLOSSARY.md)
 2. [MASTER_STUDY_GUIDE.md](MASTER_STUDY_GUIDE.md)
 3. [checklist.md](checklist.md)
 4. Start with the first phase for your chosen track
@@ -196,7 +196,7 @@ Some notebooks require API keys or database connections. Create a `.env` file:
 # OpenAI (for embeddings notebooks)
 OPENAI_API_KEY=your_key_here
 
-# Aurora PostgreSQL (for 6-vector-databases/06_aurora_pgvector_guide.ipynb)
+# Aurora PostgreSQL (for 6-vector-databases/07_aurora_pgvector_guide.ipynb)
 AURORA_HOST=your-cluster.region.rds.amazonaws.com
 AURORA_PORT=5432
 AURORA_DATABASE=vectordb

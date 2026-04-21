@@ -73,4 +73,4 @@ Kriterler:
 
 ## Ödev
 
-[Veri Setlerini Sınıflandırma](../assignment.md)
+[Veri Setlerini Sınıflandırma](../08_assignment.md)

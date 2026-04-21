@@ -12,7 +12,7 @@ Before asking for help, please check these resources:
 - **[Course Setup Guide](00-course-setup/README.md)** - Installation and environment setup
 - **[Main README](README.md)** - Repository overview and getting started
 - **[Learning Checklist](checklist.md)** - Complete curriculum roadmap
-- **[Glossary](23-glossary/GLOSSARY.md)** - AI/ML terminology
+- **[Glossary](23-glossary/01_GLOSSARY.md)** - AI/ML terminology
 - **[Setup Guide](setup.md)** - Detailed installation instructions
 
 ### Common Issues

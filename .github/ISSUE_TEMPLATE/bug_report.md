@@ -13,7 +13,7 @@ A clear and concise description of what the bug is.
 ## 📍 Location
 
 **Phase**: [e.g., 5-neural-networks]
-**Notebook**: [e.g., 04_attention_mechanism.ipynb]
+**Notebook**: [e.g., 06_attention_mechanism.ipynb]
 **Cell Number**: [e.g., Cell 7]
 
 ## 🔄 Steps to Reproduce

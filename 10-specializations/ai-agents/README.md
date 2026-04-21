@@ -58,7 +58,7 @@ Build autonomous AI systems that can reason, use tools, and collaborate to solve
 
 ```
 ai-agents/
-├── 00_START_HERE.ipynb                # Agent overview & quick demo
+├── 01_START_HERE.ipynb                # Agent overview & quick demo
 ├── 01_function_calling.ipynb          # Tool use basics
 ├── 02_react_pattern.ipynb             # ReAct reasoning loop
 ├── 03_langgraph_agents.ipynb          # LangGraph framework

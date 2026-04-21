@@ -343,4 +343,4 @@ You can go further into Low code/No code AutoML by reading this [documentation](
 
 ## Assignment
 
-[Low code/No code Data Science project on Azure ML](assignment.md)
+[Low code/No code Data Science project on Azure ML](08_assignment.md)

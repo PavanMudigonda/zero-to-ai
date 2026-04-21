@@ -12,21 +12,21 @@ Dense vector representations are the bridge between raw text and everything that
 
 ## Recommended Order
 
-1. [00_START_HERE.ipynb](00_START_HERE.ipynb)
-2. [embeddings_intro.ipynb](embeddings_intro.ipynb)
-3. [semantic_similarity.ipynb](semantic_similarity.ipynb)
-4. [sentence_transformer_intro.ipynb](sentence_transformer_intro.ipynb)
-5. [huggingface_embeddings.ipynb](huggingface_embeddings.ipynb)
-6. [openai_embeddings.ipynb](openai_embeddings.ipynb)
-7. [semantic_search_intro.ipynb](semantic_search_intro.ipynb)
-8. [vector_database_demo.ipynb](vector_database_demo.ipynb)
-9. [embedding_comparison.md](embedding_comparison.md)
+1. [01_START_HERE.ipynb](01_START_HERE.ipynb)
+2. [02_embeddings_intro.ipynb](02_embeddings_intro.ipynb)
+3. [12_semantic_similarity.ipynb](12_semantic_similarity.ipynb)
+4. [06_sentence_transformer_intro.ipynb](06_sentence_transformer_intro.ipynb)
+5. [10_huggingface_embeddings.ipynb](10_huggingface_embeddings.ipynb)
+6. [11_openai_embeddings.ipynb](11_openai_embeddings.ipynb)
+7. [04_semantic_search_intro.ipynb](04_semantic_search_intro.ipynb)
+8. [13_vector_database_demo.ipynb](13_vector_database_demo.ipynb)
+9. [09_embedding_comparison.md](09_embedding_comparison.md)
 
 Optional depth:
 
-- [semantic_textual_similarity_intro.ipynb](semantic_textual_similarity_intro.ipynb)
-- [paraphrase_mining_intro.ipynb](paraphrase_mining_intro.ipynb)
-- [sparse_encoder_intro.ipynb](sparse_encoder_intro.ipynb)
+- [05_semantic_textual_similarity_intro.ipynb](05_semantic_textual_similarity_intro.ipynb)
+- [03_paraphrase_mining_intro.ipynb](03_paraphrase_mining_intro.ipynb)
+- [07_sparse_encoder_intro.ipynb](07_sparse_encoder_intro.ipynb)
 
 ## Learning Goals
 
@@ -70,8 +70,8 @@ This phase is centered on text embeddings, but production retrieval systems in 2
 
 ## Companion Files
 
-- [QUICKSTART.md](QUICKSTART.md): fast setup and notebook entry points
-- [embedding_comparison.md](embedding_comparison.md): decision support for local vs hosted embedding stacks
+- [08_QUICKSTART.md](08_QUICKSTART.md): fast setup and notebook entry points
+- [09_embedding_comparison.md](09_embedding_comparison.md): decision support for local vs hosted embedding stacks
 
 ## What Comes Next
 

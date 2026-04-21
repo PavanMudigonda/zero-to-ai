@@ -40,7 +40,7 @@ What will learners achieve after completing this notebook?
 What should learners know or complete before this notebook?
 
 - Prior knowledge: [e.g., PyTorch basics, attention mechanism]
-- Previous notebooks: [e.g., 04_attention_mechanism.ipynb]
+- Previous notebooks: [e.g., 06_attention_mechanism.ipynb]
 
 ### Content Structure
 Does the notebook include:

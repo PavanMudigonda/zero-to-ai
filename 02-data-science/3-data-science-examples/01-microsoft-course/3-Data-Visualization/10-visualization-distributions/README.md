@@ -200,7 +200,7 @@ In this lesson, you used Matplotlib and started working with Seaborn to show mor
 
 ## Assignment
 
-[Apply your skills](assignment.md)
+[Apply your skills](08_assignment.md)
 
 ## What Comes Next
 

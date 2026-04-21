@@ -277,7 +277,7 @@ df = pd.read_csv('file.csv')
 
 ## 과제
 
-[Perform more detailed data study for the challenges above](../assignment.md)
+[Perform more detailed data study for the challenges above](../08_assignment.md)
 
 ## 크레딧
 

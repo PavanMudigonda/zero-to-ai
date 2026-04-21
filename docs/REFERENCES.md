@@ -295,7 +295,7 @@ Quick reference - what to use for each phase:
 
 | Phase | Video | GitHub Repo | Blog/Other |
 |-------|-------|-------------|------------|
-| 0: Foundations | StatQuest channel | microsoft/ML-For-Beginners | GLOSSARY.md |
+| 0: Foundations | StatQuest channel | microsoft/ML-For-Beginners | 01_GLOSSARY.md |
 | 1: Python/Data Science | StatQuest | scikit-learn/scikit-learn examples | ageron/handson-ml3 |
 | 2: Mathematics | 3Blue1Brown Linear Algebra + Calculus | karpathy/nanoGPT (for context) | Jay Alammar blog |
 | 3: Tokenization | Karpathy: GPT Tokenizer | karpathy/minbpe | HF tokenizers docs |

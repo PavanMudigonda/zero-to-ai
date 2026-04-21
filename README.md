@@ -61,7 +61,7 @@ If you are new to the repo, use this order:
 
 1. Read [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose your track.
 2. Use [00-course-setup/README.md](00-course-setup/README.md) to get your environment working.
-3. Read [23-glossary/GLOSSARY.md](23-glossary/GLOSSARY.md) once before diving into the curriculum.
+3. Read [23-glossary/01_GLOSSARY.md](23-glossary/01_GLOSSARY.md) once before diving into the curriculum.
 4. Use [docs/checklist.md](docs/checklist.md) to track progress after you start.
 
 If you are completely new to Python, begin with [01-python/README.md](01-python/README.md) before Phase 2.

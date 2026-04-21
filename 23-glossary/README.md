@@ -4,7 +4,7 @@ This folder is the vocabulary layer for the rest of the curriculum. Use it to re
 
 ## Start Here
 
-- [GLOSSARY.md](GLOSSARY.md)
+- [01_GLOSSARY.md](01_GLOSSARY.md)
 
 ## How To Use This Folder
 
