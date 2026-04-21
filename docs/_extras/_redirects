@@ -2,3 +2,5 @@
 /curriculum/19-ai-safety-redteaming/* /curriculum/19-ai-safety/:splat 301
 /curriculum/20-real-time-streaming /curriculum/20-streaming/ 301
 /curriculum/20-real-time-streaming/* /curriculum/20-streaming/:splat 301
+/curriculum/12-llm-finetuning/05_dpo_alignment /curriculum/12-llm-finetuning/06_dpo_alignment 301
+/curriculum/12-llm-finetuning/05_dpo_alignment.html /curriculum/12-llm-finetuning/06_dpo_alignment 301
