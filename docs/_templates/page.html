@@ -4,6 +4,7 @@
 {{ super() }}
 {% include "analytics.html" %}
 <link rel="icon" href="{{ pathto('_static/favicon.svg', 1) }}" type="image/svg+xml" />
+<script defer src="{{ pathto('_static/sidebar-sequence.js', 1) }}"></script>
 {% set page_title = title|default(project, true) %}
 {% set description_overrides = page_description_overrides if page_description_overrides is defined else {} %}
 {% set default_description = default_meta_description if default_meta_description is defined else "Zero to AI is a free open-source AI and machine learning course." %}
