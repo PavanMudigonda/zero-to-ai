@@ -300,15 +300,56 @@ for md_file in curriculum_dir.rglob("*.md"):
 # Inject toctree directives so Sphinx discovers sub-sections in the sidebar.
 # ---------------------------------------------------------------------------
 
+def _clean_label(name: str) -> str:
+    """Derive a clean sidebar label from a filename stem like '03_tokenizers_quickstart'.
+
+    Returns e.g. '03. Tokenizers Quickstart' for numbered files, or
+    'Tiktoken' for non-numbered files like 'README_TIKTOKEN'.
+    """
+    import re as _re
+
+    # Common abbreviations that should stay uppercase or have special casing
+    _CASE_FIXES = {
+        "Ai": "AI", "Ml": "ML", "Llm": "LLM", "Llms": "LLMs",
+        "Rag": "RAG", "Mlops": "MLOps", "Mcp": "MCP", "Sdk": "SDK",
+        "Openai": "OpenAI", "Dspy": "DSPy", "Dli": "DLI",
+        "Huggingface": "HuggingFace", "Langraph": "LangGraph",
+        "Langgraph": "LangGraph", "Tiktoken": "TikToken",
+        "Pgvector": "pgvector", "Ds": "DS", "Dl": "DL",
+        "Db": "DB", "Api": "API", "Gpu": "GPU", "Cpu": "CPU",
+        "Islp": "ISLP", "Mlpp": "MLPP", "Mml": "MML",
+        "Slp": "SLP", "Cs229": "CS229", "React": "ReAct",
+        "Sentencepiece": "SentencePiece",
+    }
+
+    def _fix_case(text: str) -> str:
+        for wrong, right in _CASE_FIXES.items():
+            text = _re.sub(r'\b' + wrong + r'\b', right, text)
+        return text
+
+    # Strip 'README_' prefix (e.g. README_TIKTOKEN → TIKTOKEN)
+    cleaned = _re.sub(r'^README_', '', name)
+
+    # Match leading numeric prefix: '03_foo', '03-foo', '03 foo'
+    m = _re.match(r'^(\d+)[_\- ](.+)$', cleaned)
+    if m:
+        num = m.group(1)
+        rest = m.group(2).replace('_', ' ').replace('-', ' ').strip().title()
+        return f"{num}. {_fix_case(rest)}"
+
+    # No numeric prefix — just clean up
+    return _fix_case(cleaned.replace('_', ' ').replace('-', ' ').strip().title())
+
+
 def _collect_toctree_entries(directory: Path):
-    """Return a list of toctree entry strings for documents inside *directory*."""
+    """Return a list of (entry, label) tuples for documents inside *directory*."""
     seen = set()
     entries = []
 
-    def _add(entry: str):
+    def _add(entry: str, label: str):
         if entry not in seen:
             seen.add(entry)
-            entries.append(entry)
+            entries.append((entry, label))
 
     # Collect all items together to sort them purely alphabetically
     # instead of grouping by extension. This fixes the sequence numbering!
@@ -316,24 +357,24 @@ def _collect_toctree_entries(directory: Path):
 
     for f in directory.iterdir():
         if f.is_file() and f.name != "README.md" and f.suffix in [".md", ".ipynb"]:
-            items.append((f.name, f.stem))
+            items.append((f.name, f.stem, _clean_label(f.stem)))
         elif f.is_dir() and f.name not in ["__pycache__", ".ipynb_checkpoints"]:
             sub_readme = f / "README.md"
             if sub_readme.exists():
-                items.append((f.name, f"{f.name}/README"))
+                items.append((f.name, f"{f.name}/README", _clean_label(f.name)))
             else:
                 first = (
                     next(iter(sorted(f.glob("*.ipynb"))), None)
                     or next(iter(sorted(f.glob("*.md"))), None)
                 )
                 if first:
-                    items.append((f.name, f"{f.name}/{first.stem}"))
+                    items.append((f.name, f"{f.name}/{first.stem}", _clean_label(f.name)))
 
     # Sort lexicographically so numbers prefix correctly across .md and .ipynb
     items.sort(key=lambda x: x[0])
 
-    for _, entry in items:
-        _add(entry)
+    for _, entry, label in items:
+        _add(entry, label)
 
     return entries
 
@@ -345,9 +386,9 @@ def inject_toctree(directory: Path):
     if not entries:
         return
 
-    toctree_block = "\n```{toctree}\n:hidden:\n\n"
-    for entry in entries:
-        toctree_block += entry + "\n"
+    toctree_block = "\n```{toctree}\n:hidden:\n:titlesonly:\n\n"
+    for entry, label in entries:
+        toctree_block += f"{label} <{entry}>\n"
     toctree_block += "```\n"
 
     if readme.exists():
