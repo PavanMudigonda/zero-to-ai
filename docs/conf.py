@@ -140,6 +140,8 @@ html_title = "Zero to AI"
 html_last_updated_fmt = "%Y-%m-%dT%H:%M:%S+00:00"
 html_static_path = ["_static"]
 html_css_files = ["custom.css"]
+html_copy_source = False
+html_show_sourcelink = False
 html_js_files = [
     "sidebar-scroll.js",
     "sidebar-toggle.js",

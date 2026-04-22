@@ -1133,3 +1133,15 @@ body.sidebar-resizing * {
   vertical-align: middle;
   margin-top: 0.2em;
 }
+
+/* ── Sidebar depth limit ──
+   Hide deeply nested sidebar entries to keep navigation clean.
+   l1 = Phases, l2 = child pages, l3 = sub-sections (hidden by default) */
+.sidebar-tree .toctree-l3,
+.sidebar-tree .toctree-l4,
+.sidebar-tree .toctree-l5,
+.sidebar-tree .toctree-l6,
+.sidebar-tree .toctree-l7,
+.sidebar-tree .toctree-l8 {
+  display: none;
+}
