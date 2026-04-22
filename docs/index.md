@@ -401,85 +401,85 @@ End-to-End Flows <generated/roadmaps/04_end_to_end_flows>
 :hidden:
 :caption: Foundations
 
-curriculum/00-course-setup/README
-curriculum/01-python/README
-curriculum/02-data-science/README
-curriculum/03-maths/README
+Phase 0 · Course Setup <curriculum/00-course-setup/README>
+Phase 1 · Python Fundamentals <curriculum/01-python/README>
+Phase 2 · Data Science <curriculum/02-data-science/README>
+Phase 3 · Mathematics for ML <curriculum/03-maths/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Core AI
 
-curriculum/04-token/README
-curriculum/05-embeddings/README
-curriculum/06-neural-networks/README
+Phase 4 · Tokenization <curriculum/04-token/README>
+Phase 5 · Embeddings <curriculum/05-embeddings/README>
+Phase 6 · Neural Networks <curriculum/06-neural-networks/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Applied AI
 
-curriculum/07-vector-databases/README
-curriculum/08-rag/README
-curriculum/09-mlops/README
-curriculum/10-specializations/README
+Phase 7 · Vector Databases <curriculum/07-vector-databases/README>
+Phase 8 · RAG <curriculum/08-rag/README>
+Phase 9 · MLOps <curriculum/09-mlops/README>
+Phase 10 · Specializations <curriculum/10-specializations/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Advanced
 
-curriculum/11-prompt-engineering/README
-curriculum/12-llm-finetuning/README
-curriculum/13-multimodal/README
-curriculum/14-local-llms/README
-curriculum/15-ai-agents/README
+Phase 11 · Prompt Engineering <curriculum/11-prompt-engineering/README>
+Phase 12 · LLM Fine-Tuning <curriculum/12-llm-finetuning/README>
+Phase 13 · Multimodal AI <curriculum/13-multimodal/README>
+Phase 14 · Local LLMs <curriculum/14-local-llms/README>
+Phase 15 · AI Agents <curriculum/15-ai-agents/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Supplementary
 
-curriculum/16-model-evaluation/README
-curriculum/17-debugging/README
-curriculum/18-low-code/README
-curriculum/19-ai-safety/README
-curriculum/20-streaming/README
+Phase 16 · Model Evaluation <curriculum/16-model-evaluation/README>
+Phase 17 · Debugging <curriculum/17-debugging/README>
+Phase 18 · Low-Code AI Tools <curriculum/18-low-code/README>
+Phase 19 · AI Safety <curriculum/19-ai-safety/README>
+Phase 20 · Streaming AI <curriculum/20-streaming/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Reference
 
-curriculum/21-quizzes/README
-curriculum/22-references/README
-curriculum/23-glossary/README
+Phase 21 · Quizzes <curriculum/21-quizzes/README>
+Phase 22 · References <curriculum/22-references/README>
+Phase 23 · Glossary <curriculum/23-glossary/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Research
 
-curriculum/24-advanced-dl/README
-curriculum/25-rl/README
-curriculum/26-time-series/README
-curriculum/27-causal-inference/README
+Phase 24 · Advanced Deep Learning <curriculum/24-advanced-dl/README>
+Phase 25 · Reinforcement Learning <curriculum/25-rl/README>
+Phase 26 · Time Series <curriculum/26-time-series/README>
+Phase 27 · Causal Inference <curriculum/27-causal-inference/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Production
 
-curriculum/28-practical-ds/README
-curriculum/29-ai-hardware/README
-curriculum/30-inference-opt/README
+Phase 28 · Practical Data Science <curriculum/28-practical-ds/README>
+Phase 29 · AI Hardware <curriculum/29-ai-hardware/README>
+Phase 30 · Inference Optimization <curriculum/30-inference-opt/README>
 ```
 
 ```{toctree}
 :hidden:
 :caption: Developer Tools
 
-curriculum/31-ai-dev-tools/README
+Phase 31 · AI Dev Tools <curriculum/31-ai-dev-tools/README>
 ```
 
