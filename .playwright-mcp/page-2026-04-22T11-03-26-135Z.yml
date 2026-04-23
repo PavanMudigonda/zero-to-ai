@@ -1,0 +1,677 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#furo-main-content"
+  - generic [ref=e3]:
+    - complementary [ref=e4]:
+      - generic [ref=e6]:
+        - link "Logo Zero to AI" [ref=e7] [cursor=pointer]:
+          - /url: ../../index.html
+          - img "Logo" [ref=e9]
+          - generic [ref=e10]: Zero to AI
+        - search [ref=e11]:
+          - textbox "Search" [ref=e12]
+        - generic [ref=e14]:
+          - heading "Roadmaps" [ref=e15]
+          - list [ref=e16]:
+            - listitem [ref=e17]:
+              - link "Study Guide" [ref=e18] [cursor=pointer]:
+                - /url: ../../MASTER_STUDY_GUIDE.html
+            - listitem [ref=e19]:
+              - link "Overview" [ref=e20] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/01_overview.html
+            - listitem [ref=e21]:
+              - link "Core Systems" [ref=e22] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/02_core_systems.html
+            - listitem [ref=e23]:
+              - link "Advanced Topics" [ref=e24] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/03_advanced_topics.html
+            - listitem [ref=e25]:
+              - link "End-to-End Flows" [ref=e26] [cursor=pointer]:
+                - /url: ../../generated/roadmaps/04_end_to_end_flows.html
+          - heading "Foundations" [ref=e27]
+          - list [ref=e28]:
+            - listitem [ref=e29]:
+              - link "Phase 0 · Course Setup" [ref=e30] [cursor=pointer]:
+                - /url: ../00-course-setup/README.html
+              - img [ref=e33] [cursor=pointer]
+            - listitem [ref=e35]:
+              - link "Phase 1 · Python Fundamentals" [ref=e36] [cursor=pointer]:
+                - /url: ../01-python/README.html
+            - listitem [ref=e37]:
+              - link "Phase 2 · Data Science" [ref=e38] [cursor=pointer]:
+                - /url: ../02-data-science/README.html
+              - img [ref=e41] [cursor=pointer]
+            - listitem [ref=e43]:
+              - link "Phase 3 · Mathematics for ML" [ref=e44] [cursor=pointer]:
+                - /url: ../03-maths/README.html
+              - img [ref=e47] [cursor=pointer]
+          - heading "Core AI" [ref=e49]
+          - list [ref=e50]:
+            - listitem [ref=e51]:
+              - link "Phase 4 · Tokenization" [ref=e52] [cursor=pointer]:
+                - /url: "#"
+              - img [ref=e55] [cursor=pointer]
+              - list [ref=e57]:
+                - listitem [ref=e58]:
+                  - link "01. Start Here" [ref=e59] [cursor=pointer]:
+                    - /url: 01_START_HERE.html
+                - listitem [ref=e60]:
+                  - link "02. Intro" [ref=e61] [cursor=pointer]:
+                    - /url: 02_intro.html
+                - listitem [ref=e62]:
+                  - link "01 Tokenizers Quickstart" [ref=e63] [cursor=pointer]:
+                    - /url: 03_tokenizers_quickstart.html
+                - listitem [ref=e64]:
+                  - link "HuggingFace Tokenizers - Quick Start Examples" [ref=e65] [cursor=pointer]:
+                    - /url: 03_tokenizers_quickstart.html#huggingface-tokenizers-quick-start-examples
+                - listitem [ref=e66]:
+                  - link "02 Tokenizers Training" [ref=e67] [cursor=pointer]:
+                    - /url: 04_tokenizers_training.html
+                - listitem [ref=e68]:
+                  - link "HuggingFace Tokenizers - Training Examples" [ref=e69] [cursor=pointer]:
+                    - /url: 04_tokenizers_training.html#huggingface-tokenizers-training-examples
+                - listitem [ref=e70]:
+                  - link "03 Advanced Training Methods" [ref=e71] [cursor=pointer]:
+                    - /url: 05_advanced_training_methods.html
+                - listitem [ref=e72]:
+                  - link "Advanced Training Methods for Tokenizers" [ref=e73] [cursor=pointer]:
+                    - /url: 05_advanced_training_methods.html#advanced-training-methods-for-tokenizers
+                - listitem [ref=e74]:
+                  - link "06. Production Guide" [ref=e75] [cursor=pointer]:
+                    - /url: 06_production_guide.html
+                - listitem [ref=e76]:
+                  - link "07. Tokenizer Comparison" [ref=e77] [cursor=pointer]:
+                    - /url: 07_tokenizer_comparison.html
+                - listitem [ref=e78]:
+                  - link "08. Integration Guide" [ref=e79] [cursor=pointer]:
+                    - /url: 08_integration_guide.html
+                - listitem [ref=e80]:
+                  - link "Setup" [ref=e81] [cursor=pointer]:
+                    - /url: 09_pipeline_components.html
+                - listitem [ref=e82]:
+                  - 'link "Part 1: Normalization" [ref=e83] [cursor=pointer]':
+                    - /url: 09_pipeline_components.html#part-1-normalization
+                - listitem [ref=e84]:
+                  - 'link "Part 2: Pre-tokenization" [ref=e85] [cursor=pointer]':
+                    - /url: 09_pipeline_components.html#part-2-pre-tokenization
+                - listitem [ref=e86]:
+                  - 'link "Part 3: Post-processing" [ref=e87] [cursor=pointer]':
+                    - /url: 09_pipeline_components.html#part-3-post-processing
+                - listitem [ref=e88]:
+                  - 'link "Part 4: Decoders" [ref=e89] [cursor=pointer]':
+                    - /url: 09_pipeline_components.html#part-4-decoders
+                - listitem [ref=e90]:
+                  - 'link "Part 5: Complete Pipeline Examples" [ref=e91] [cursor=pointer]':
+                    - /url: 09_pipeline_components.html#part-5-complete-pipeline-examples
+                - listitem [ref=e92]:
+                  - link "Summary" [ref=e93] [cursor=pointer]:
+                    - /url: 09_pipeline_components.html#summary
+                - listitem [ref=e94]:
+                  - link "10. HuggingFace Tokenizers Guide" [ref=e95] [cursor=pointer]:
+                    - /url: 10_huggingface_tokenizers_guide.html
+                - listitem [ref=e96]:
+                  - link "11. SentencePiece Example" [ref=e97] [cursor=pointer]:
+                    - /url: 11_sentencepiece_example.html
+                - listitem [ref=e98]:
+                  - link "Tiktoken Example" [ref=e99] [cursor=pointer]:
+                    - /url: 12_tiktoken_example.html
+                - listitem [ref=e100]:
+                  - link "Basic Tokenization Example" [ref=e101] [cursor=pointer]:
+                    - /url: 12_tiktoken_example.html#basic-tokenization-example
+                - listitem [ref=e102]:
+                  - link "Token Exercises" [ref=e103] [cursor=pointer]:
+                    - /url: 13_token_exercises.html
+                - listitem [ref=e104]:
+                  - link "Token Exercises - Interactive Practice" [ref=e105] [cursor=pointer]:
+                    - /url: 13_token_exercises.html#token-exercises-interactive-practice
+                - listitem [ref=e106]:
+                  - link "Token Exploration" [ref=e107] [cursor=pointer]:
+                    - /url: 14_token_exploration.html
+                - listitem [ref=e108]:
+                  - link "Token Exploration - Advanced Examples" [ref=e109] [cursor=pointer]:
+                    - /url: 14_token_exploration.html#token-exploration-advanced-examples
+                - listitem [ref=e110]:
+                  - link "TikToken" [ref=e111] [cursor=pointer]:
+                    - /url: README_TIKTOKEN.html
+                - listitem [ref=e112]:
+                  - link "Tokenizers" [ref=e113] [cursor=pointer]:
+                    - /url: README_TOKENIZERS.html
+            - listitem [ref=e114]:
+              - link "Phase 5 · Embeddings" [ref=e115] [cursor=pointer]:
+                - /url: ../05-embeddings/README.html
+              - img [ref=e118] [cursor=pointer]
+            - listitem [ref=e120]:
+              - link "Phase 6 · Neural Networks" [ref=e121] [cursor=pointer]:
+                - /url: ../06-neural-networks/README.html
+              - img [ref=e124] [cursor=pointer]
+          - heading "Applied AI" [ref=e126]
+          - list [ref=e127]:
+            - listitem [ref=e128]:
+              - link "Phase 7 · Vector Databases" [ref=e129] [cursor=pointer]:
+                - /url: ../07-vector-databases/README.html
+              - img [ref=e132] [cursor=pointer]
+            - listitem [ref=e134]:
+              - link "Phase 8 · RAG" [ref=e135] [cursor=pointer]:
+                - /url: ../08-rag/README.html
+              - img [ref=e138] [cursor=pointer]
+            - listitem [ref=e140]:
+              - link "Phase 9 · MLOps" [ref=e141] [cursor=pointer]:
+                - /url: ../09-mlops/README.html
+              - img [ref=e144] [cursor=pointer]
+            - listitem [ref=e146]:
+              - link "Phase 10 · Specializations" [ref=e147] [cursor=pointer]:
+                - /url: ../10-specializations/README.html
+              - img [ref=e150] [cursor=pointer]
+          - heading "Advanced" [ref=e152]
+          - list [ref=e153]:
+            - listitem [ref=e154]:
+              - link "Phase 11 · Prompt Engineering" [ref=e155] [cursor=pointer]:
+                - /url: ../11-prompt-engineering/README.html
+              - img [ref=e158] [cursor=pointer]
+            - listitem [ref=e160]:
+              - link "Phase 12 · LLM Fine-Tuning" [ref=e161] [cursor=pointer]:
+                - /url: ../12-llm-finetuning/README.html
+              - img [ref=e164] [cursor=pointer]
+            - listitem [ref=e166]:
+              - link "Phase 13 · Multimodal AI" [ref=e167] [cursor=pointer]:
+                - /url: ../13-multimodal/README.html
+              - img [ref=e170] [cursor=pointer]
+            - listitem [ref=e172]:
+              - link "Phase 14 · Local LLMs" [ref=e173] [cursor=pointer]:
+                - /url: ../14-local-llms/README.html
+              - img [ref=e176] [cursor=pointer]
+            - listitem [ref=e178]:
+              - link "Phase 15 · AI Agents" [ref=e179] [cursor=pointer]:
+                - /url: ../15-ai-agents/README.html
+              - img [ref=e182] [cursor=pointer]
+          - heading "Supplementary" [ref=e184]
+          - list [ref=e185]:
+            - listitem [ref=e186]:
+              - link "Phase 16 · Model Evaluation" [ref=e187] [cursor=pointer]:
+                - /url: ../16-model-evaluation/README.html
+              - img [ref=e190] [cursor=pointer]
+            - listitem [ref=e192]:
+              - link "Phase 17 · Debugging" [ref=e193] [cursor=pointer]:
+                - /url: ../17-debugging/README.html
+              - img [ref=e196] [cursor=pointer]
+            - listitem [ref=e198]:
+              - link "Phase 18 · Low-Code AI Tools" [ref=e199] [cursor=pointer]:
+                - /url: ../18-low-code/README.html
+              - img [ref=e202] [cursor=pointer]
+            - listitem [ref=e204]:
+              - link "Phase 19 · AI Safety" [ref=e205] [cursor=pointer]:
+                - /url: ../19-ai-safety/README.html
+              - img [ref=e208] [cursor=pointer]
+            - listitem [ref=e210]:
+              - link "Phase 20 · Streaming AI" [ref=e211] [cursor=pointer]:
+                - /url: ../20-streaming/README.html
+              - img [ref=e214] [cursor=pointer]
+          - heading "Reference" [ref=e216]
+          - list [ref=e217]:
+            - listitem [ref=e218]:
+              - link "Phase 21 · Quizzes" [ref=e219] [cursor=pointer]:
+                - /url: ../21-quizzes/README.html
+              - img [ref=e222] [cursor=pointer]
+            - listitem [ref=e224]:
+              - link "Phase 22 · References" [ref=e225] [cursor=pointer]:
+                - /url: ../22-references/README.html
+              - img [ref=e228] [cursor=pointer]
+            - listitem [ref=e230]:
+              - link "Phase 23 · Glossary" [ref=e231] [cursor=pointer]:
+                - /url: ../23-glossary/README.html
+              - img [ref=e234] [cursor=pointer]
+          - heading "Research" [ref=e236]
+          - list [ref=e237]:
+            - listitem [ref=e238]:
+              - link "Phase 24 · Advanced Deep Learning" [ref=e239] [cursor=pointer]:
+                - /url: ../24-advanced-dl/README.html
+              - img [ref=e242] [cursor=pointer]
+            - listitem [ref=e244]:
+              - link "Phase 25 · Reinforcement Learning" [ref=e245] [cursor=pointer]:
+                - /url: ../25-rl/README.html
+              - img [ref=e248] [cursor=pointer]
+            - listitem [ref=e250]:
+              - link "Phase 26 · Time Series" [ref=e251] [cursor=pointer]:
+                - /url: ../26-time-series/README.html
+              - img [ref=e254] [cursor=pointer]
+            - listitem [ref=e256]:
+              - link "Phase 27 · Causal Inference" [ref=e257] [cursor=pointer]:
+                - /url: ../27-causal-inference/README.html
+              - img [ref=e260] [cursor=pointer]
+          - heading "Production" [ref=e262]
+          - list [ref=e263]:
+            - listitem [ref=e264]:
+              - link "Phase 28 · Practical Data Science" [ref=e265] [cursor=pointer]:
+                - /url: ../28-practical-ds/README.html
+              - img [ref=e268] [cursor=pointer]
+            - listitem [ref=e270]:
+              - link "Phase 29 · AI Hardware" [ref=e271] [cursor=pointer]:
+                - /url: ../29-ai-hardware/README.html
+              - img [ref=e274] [cursor=pointer]
+            - listitem [ref=e276]:
+              - link "Phase 30 · Inference Optimization" [ref=e277] [cursor=pointer]:
+                - /url: ../30-inference-opt/README.html
+              - img [ref=e280] [cursor=pointer]
+          - heading "Developer Tools" [ref=e282]
+          - list [ref=e283]:
+            - listitem [ref=e284]:
+              - link "Phase 31 · AI Dev Tools" [ref=e285] [cursor=pointer]:
+                - /url: ../31-ai-dev-tools/README.html
+              - img [ref=e288] [cursor=pointer]
+      - separator "Resize left sidebar" [ref=e290]:
+        - button "Collapse left sidebar" [ref=e291] [cursor=pointer]: ‹
+    - generic [ref=e292]:
+      - generic [ref=e293]:
+        - generic [ref=e294]:
+          - generic [ref=e295]:
+            - link "View this page" [ref=e297] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/blob/main/docs/curriculum/04-token/README.md?plain=true
+              - img [ref=e298]
+              - generic [ref=e300]: View this page
+            - link "Edit this page" [ref=e302] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai/edit/main/docs/curriculum/04-token/README.md
+              - img [ref=e303]
+              - generic [ref=e305]: Edit this page
+            - button "Toggle Light / Dark / Auto color theme" [ref=e307] [cursor=pointer]:
+              - img [ref=e308]
+            - img [ref=e312] [cursor=pointer]
+          - main [ref=e314]:
+            - generic [ref=e315]:
+              - generic [ref=e316]:
+                - generic [ref=e317]: Resume learning
+                - paragraph [ref=e318]: Your saved path and progress are available on this device.
+                - paragraph
+              - generic [ref=e321]:
+                - link "Resume checklist" [ref=e322] [cursor=pointer]:
+                  - /url: ../../checklist.html
+                - link "Open study guide" [ref=e323] [cursor=pointer]:
+                  - /url: ../../MASTER_STUDY_GUIDE.html
+            - generic [ref=e324]:
+              - heading "Tokenization" [level=1] [ref=e325]
+              - blockquote [ref=e326]:
+                - paragraph [ref=e328]:
+                  - strong [ref=e329]: Goal
+                  - text: ": Understand how text is converted into numbers that language models can process. This is the foundational step before embeddings and neural networks."
+              - generic [ref=e330]:
+                - heading "Why Tokenization Matters" [level=2] [ref=e331]
+                - paragraph [ref=e332]: "Every LLM interaction starts with tokenization. When you send a prompt to GPT-4 or Claude, it is first split into tokens - sub-word units that the model actually processes. Understanding tokenization helps you:"
+                - list [ref=e333]:
+                  - listitem [ref=e334]:
+                    - paragraph [ref=e335]:
+                      - strong [ref=e336]: Write better prompts
+                      - text: ": Avoid patterns that waste tokens and increase cost"
+                  - listitem [ref=e337]:
+                    - paragraph [ref=e338]:
+                      - strong [ref=e339]: Estimate costs accurately
+                      - text: ": APIs charge per token, not per word"
+                  - listitem [ref=e340]:
+                    - paragraph [ref=e341]:
+                      - strong [ref=e342]: Debug model behavior
+                      - text: ": Some languages tokenize less efficiently than English"
+                  - listitem [ref=e343]:
+                    - paragraph [ref=e344]:
+                      - strong [ref=e345]: Build production systems
+                      - text: ": Fast tokenization is critical for throughput"
+                - paragraph [ref=e346]:
+                  - strong [ref=e347]: Key fact
+                  - text: ": “tokenization” is 4 tokens in GPT-4. “Hello” is 1 token. An average English word is ~1.3 tokens."
+              - generic [ref=e348]:
+                - heading "Notebooks - Work in This Order" [level=2] [ref=e349]
+                - table [ref=e351]:
+                  - rowgroup [ref=e352]:
+                    - row "# Notebook What You Learn Time" [ref=e353]:
+                      - columnheader "#" [ref=e354]:
+                        - paragraph [ref=e355]: "#"
+                      - columnheader "Notebook" [ref=e356]:
+                        - paragraph [ref=e357]: Notebook
+                      - columnheader "What You Learn" [ref=e358]:
+                        - paragraph [ref=e359]: What You Learn
+                      - columnheader "Time" [ref=e360]:
+                        - paragraph [ref=e361]: Time
+                  - rowgroup [ref=e362]:
+                    - row "1 03_tokenizers_quickstart.ipynb HuggingFace tokenizers API, encode/decode, special tokens 45 min" [ref=e363]:
+                      - cell "1" [ref=e364]:
+                        - paragraph [ref=e365]: "1"
+                      - cell "03_tokenizers_quickstart.ipynb" [ref=e366]:
+                        - paragraph [ref=e367]:
+                          - link "03_tokenizers_quickstart.ipynb" [ref=e368] [cursor=pointer]:
+                            - /url: 03_tokenizers_quickstart.html
+                      - cell "HuggingFace tokenizers API, encode/decode, special tokens" [ref=e369]:
+                        - paragraph [ref=e370]: HuggingFace tokenizers API, encode/decode, special tokens
+                      - cell "45 min" [ref=e371]:
+                        - paragraph [ref=e372]: 45 min
+                    - row "2 12_tiktoken_example.ipynb OpenAI’s TikToken library, count tokens in prompts 30 min" [ref=e373]:
+                      - cell "2" [ref=e374]:
+                        - paragraph [ref=e375]: "2"
+                      - cell "12_tiktoken_example.ipynb" [ref=e376]:
+                        - paragraph [ref=e377]:
+                          - link "12_tiktoken_example.ipynb" [ref=e378] [cursor=pointer]:
+                            - /url: 12_tiktoken_example.html
+                      - cell "OpenAI’s TikToken library, count tokens in prompts" [ref=e379]:
+                        - paragraph [ref=e380]: OpenAI’s TikToken library, count tokens in prompts
+                      - cell "30 min" [ref=e381]:
+                        - paragraph [ref=e382]: 30 min
+                    - row "3 11_sentencepiece_example.ipynb Google’s SentencePiece (used in T5, LLaMA) 30 min" [ref=e383]:
+                      - cell "3" [ref=e384]:
+                        - paragraph [ref=e385]: "3"
+                      - cell "11_sentencepiece_example.ipynb" [ref=e386]:
+                        - paragraph [ref=e387]:
+                          - link "11_sentencepiece_example.ipynb" [ref=e388] [cursor=pointer]:
+                            - /url: 11_sentencepiece_example.html
+                      - cell "Google’s SentencePiece (used in T5, LLaMA)" [ref=e389]:
+                        - paragraph [ref=e390]: Google’s SentencePiece (used in T5, LLaMA)
+                      - cell "30 min" [ref=e391]:
+                        - paragraph [ref=e392]: 30 min
+                    - row "4 04_tokenizers_training.ipynb Train a BPE tokenizer on your own data 60 min" [ref=e393]:
+                      - cell "4" [ref=e394]:
+                        - paragraph [ref=e395]: "4"
+                      - cell "04_tokenizers_training.ipynb" [ref=e396]:
+                        - paragraph [ref=e397]:
+                          - link "04_tokenizers_training.ipynb" [ref=e398] [cursor=pointer]:
+                            - /url: 04_tokenizers_training.html
+                      - cell "Train a BPE tokenizer on your own data" [ref=e399]:
+                        - paragraph [ref=e400]: Train a BPE tokenizer on your own data
+                      - cell "60 min" [ref=e401]:
+                        - paragraph [ref=e402]: 60 min
+                    - row "5 05_advanced_training_methods.ipynb WordPiece, Unigram, and special handling 45 min" [ref=e403]:
+                      - cell "5" [ref=e404]:
+                        - paragraph [ref=e405]: "5"
+                      - cell "05_advanced_training_methods.ipynb" [ref=e406]:
+                        - paragraph [ref=e407]:
+                          - link "05_advanced_training_methods.ipynb" [ref=e408] [cursor=pointer]:
+                            - /url: 05_advanced_training_methods.html
+                      - cell "WordPiece, Unigram, and special handling" [ref=e409]:
+                        - paragraph [ref=e410]: WordPiece, Unigram, and special handling
+                      - cell "45 min" [ref=e411]:
+                        - paragraph [ref=e412]: 45 min
+                    - row "6 09_pipeline_components.ipynb Tokenization as part of the full NLP pipeline 45 min" [ref=e413]:
+                      - cell "6" [ref=e414]:
+                        - paragraph [ref=e415]: "6"
+                      - cell "09_pipeline_components.ipynb" [ref=e416]:
+                        - paragraph [ref=e417]:
+                          - link "09_pipeline_components.ipynb" [ref=e418] [cursor=pointer]:
+                            - /url: 09_pipeline_components.html
+                      - cell "Tokenization as part of the full NLP pipeline" [ref=e419]:
+                        - paragraph [ref=e420]: Tokenization as part of the full NLP pipeline
+                      - cell "45 min" [ref=e421]:
+                        - paragraph [ref=e422]: 45 min
+                    - row "7 14_token_exploration.ipynb Hands-on exploration and visualization 30 min" [ref=e423]:
+                      - cell "7" [ref=e424]:
+                        - paragraph [ref=e425]: "7"
+                      - cell "14_token_exploration.ipynb" [ref=e426]:
+                        - paragraph [ref=e427]:
+                          - link "14_token_exploration.ipynb" [ref=e428] [cursor=pointer]:
+                            - /url: 14_token_exploration.html
+                      - cell "Hands-on exploration and visualization" [ref=e429]:
+                        - paragraph [ref=e430]: Hands-on exploration and visualization
+                      - cell "30 min" [ref=e431]:
+                        - paragraph [ref=e432]: 30 min
+                    - row "8 13_token_exercises.ipynb Practice problems with solutions 45 min" [ref=e433]:
+                      - cell "8" [ref=e434]:
+                        - paragraph [ref=e435]: "8"
+                      - cell "13_token_exercises.ipynb" [ref=e436]:
+                        - paragraph [ref=e437]:
+                          - link "13_token_exercises.ipynb" [ref=e438] [cursor=pointer]:
+                            - /url: 13_token_exercises.html
+                      - cell "Practice problems with solutions" [ref=e439]:
+                        - paragraph [ref=e440]: Practice problems with solutions
+                      - cell "45 min" [ref=e441]:
+                        - paragraph [ref=e442]: 45 min
+              - generic [ref=e443]:
+                - heading "Key Concepts" [level=2] [ref=e444]
+                - generic [ref=e445]:
+                  - heading "The Three Main Tokenization Algorithms" [level=3] [ref=e446]
+                  - paragraph [ref=e447]:
+                    - strong [ref=e448]: BPE (Byte Pair Encoding)
+                    - text: "- Used by: GPT-2, GPT-3, GPT-4, RoBERTa"
+                  - list [ref=e449]:
+                    - listitem [ref=e450]:
+                      - paragraph [ref=e451]: Starts with individual bytes/characters
+                    - listitem [ref=e452]:
+                      - paragraph [ref=e453]: Iteratively merges the most frequent pairs
+                    - listitem [ref=e454]:
+                      - paragraph [ref=e455]: "Result: common words are single tokens, rare words are split"
+                  - paragraph [ref=e456]:
+                    - strong [ref=e457]: WordPiece
+                    - text: "- Used by: BERT, DistilBERT"
+                  - list [ref=e458]:
+                    - listitem [ref=e459]:
+                      - paragraph [ref=e460]: Similar to BPE but uses likelihood instead of frequency
+                    - listitem [ref=e461]:
+                      - paragraph [ref=e462]:
+                        - text: Unknown words become
+                        - code [ref=e463]: "##suffix"
+                        - text: parts
+                  - paragraph [ref=e464]:
+                    - strong [ref=e465]: SentencePiece / Unigram
+                    - text: "- Used by: T5, LLaMA, Mistral, Gemma"
+                  - list [ref=e466]:
+                    - listitem [ref=e467]:
+                      - paragraph [ref=e468]: Language-agnostic, treats the text as raw bytes
+                    - listitem [ref=e469]:
+                      - paragraph [ref=e470]: Works well for multilingual models
+                - generic [ref=e471]:
+                  - heading "Token Vocabulary Size" [level=3] [ref=e472]
+                  - table [ref=e474]:
+                    - rowgroup [ref=e475]:
+                      - row "Model Vocab Size Algorithm" [ref=e476]:
+                        - columnheader "Model" [ref=e477]:
+                          - paragraph [ref=e478]: Model
+                        - columnheader "Vocab Size" [ref=e479]:
+                          - paragraph [ref=e480]: Vocab Size
+                        - columnheader "Algorithm" [ref=e481]:
+                          - paragraph [ref=e482]: Algorithm
+                    - rowgroup [ref=e483]:
+                      - row "GPT-2 50,257 BPE" [ref=e484]:
+                        - cell "GPT-2" [ref=e485]:
+                          - paragraph [ref=e486]: GPT-2
+                        - cell "50,257" [ref=e487]:
+                          - paragraph [ref=e488]: 50,257
+                        - cell "BPE" [ref=e489]:
+                          - paragraph [ref=e490]: BPE
+                      - row "GPT-4 / TikToken 100,277 BPE" [ref=e491]:
+                        - cell "GPT-4 / TikToken" [ref=e492]:
+                          - paragraph [ref=e493]: GPT-4 / TikToken
+                        - cell "100,277" [ref=e494]:
+                          - paragraph [ref=e495]: 100,277
+                        - cell "BPE" [ref=e496]:
+                          - paragraph [ref=e497]: BPE
+                      - row "BERT 30,522 WordPiece" [ref=e498]:
+                        - cell "BERT" [ref=e499]:
+                          - paragraph [ref=e500]: BERT
+                        - cell "30,522" [ref=e501]:
+                          - paragraph [ref=e502]: 30,522
+                        - cell "WordPiece" [ref=e503]:
+                          - paragraph [ref=e504]: WordPiece
+                      - row "LLaMA 3 128,256 BPE (tiktoken-based)" [ref=e505]:
+                        - cell "LLaMA 3" [ref=e506]:
+                          - paragraph [ref=e507]: LLaMA 3
+                        - cell "128,256" [ref=e508]:
+                          - paragraph [ref=e509]: 128,256
+                        - cell "BPE (tiktoken-based)" [ref=e510]:
+                          - paragraph [ref=e511]: BPE (tiktoken-based)
+                      - row "T5 32,100 SentencePiece" [ref=e512]:
+                        - cell "T5" [ref=e513]:
+                          - paragraph [ref=e514]: T5
+                        - cell "32,100" [ref=e515]:
+                          - paragraph [ref=e516]: 32,100
+                        - cell "SentencePiece" [ref=e517]:
+                          - paragraph [ref=e518]: SentencePiece
+                  - paragraph [ref=e519]: Larger vocabulary = fewer tokens per sentence = faster inference, but larger embedding table.
+              - generic [ref=e520]:
+                - heading "Reference Guides" [level=2] [ref=e521]
+                - list [ref=e522]:
+                  - listitem [ref=e523]:
+                    - paragraph [ref=e524]:
+                      - link "02_intro.md" [ref=e525] [cursor=pointer]:
+                        - /url: 02_intro.html
+                      - text: "- Conceptual introduction to tokenization"
+                  - listitem [ref=e526]:
+                    - paragraph [ref=e527]:
+                      - link "10_huggingface_tokenizers_guide.md" [ref=e528] [cursor=pointer]:
+                        - /url: 10_huggingface_tokenizers_guide.html
+                      - text: "- Comprehensive HuggingFace guide"
+                  - listitem [ref=e529]:
+                    - paragraph [ref=e530]:
+                      - link "README_TOKENIZERS.md" [ref=e531] [cursor=pointer]:
+                        - /url: README_TOKENIZERS.html
+                      - text: "- HuggingFace tokenizers library deep dive"
+                  - listitem [ref=e532]:
+                    - paragraph [ref=e533]:
+                      - link "README_TIKTOKEN.md" [ref=e534] [cursor=pointer]:
+                        - /url: README_TIKTOKEN.html
+                      - text: "- OpenAI TikToken library guide"
+                  - listitem [ref=e535]:
+                    - paragraph [ref=e536]:
+                      - link "06_production_guide.md" [ref=e537] [cursor=pointer]:
+                        - /url: 06_production_guide.html
+                      - text: "- Using tokenizers in production"
+                  - listitem [ref=e538]:
+                    - paragraph [ref=e539]:
+                      - link "07_tokenizer_comparison.md" [ref=e540] [cursor=pointer]:
+                        - /url: 07_tokenizer_comparison.html
+                      - text: "- Comparing different tokenizers"
+                  - listitem [ref=e541]:
+                    - paragraph [ref=e542]:
+                      - link "08_integration_guide.md" [ref=e543] [cursor=pointer]:
+                        - /url: 08_integration_guide.html
+                      - text: "- Integrating tokenizers into pipelines"
+              - generic [ref=e544]:
+                - heading "Practice Projects" [level=2] [ref=e545]
+                - list [ref=e546]:
+                  - listitem [ref=e547]:
+                    - paragraph [ref=e548]:
+                      - strong [ref=e549]: Token Counter Tool
+                      - text: ": Build a CLI tool that counts tokens in any text file for a given model"
+                  - listitem [ref=e550]:
+                    - paragraph [ref=e551]:
+                      - strong [ref=e552]: Tokenization Visualizer
+                      - text: ": Color-code tokens in a Streamlit app"
+                  - listitem [ref=e553]:
+                    - paragraph [ref=e554]:
+                      - strong [ref=e555]: Multilingual Efficiency Analyzer
+                      - text: ": Compare token efficiency across English, Spanish, Chinese, Arabic"
+              - generic [ref=e556]:
+                - heading "What to Learn Next" [level=2] [ref=e557]
+                - paragraph [ref=e558]:
+                  - text: After tokenization, move to
+                  - strong [ref=e559]:
+                    - link "05-embeddings/" [ref=e560] [cursor=pointer]:
+                      - /url: "#../05-embeddings/"
+                  - text: to learn how tokens become meaningful vectors.
+              - generic [ref=e561]:
+                - heading "External Resources" [level=2] [ref=e562]
+                - table [ref=e564]:
+                  - rowgroup [ref=e565]:
+                    - row "Resource Type Link" [ref=e566]:
+                      - columnheader "Resource" [ref=e567]:
+                        - paragraph [ref=e568]: Resource
+                      - columnheader "Type" [ref=e569]:
+                        - paragraph [ref=e570]: Type
+                      - columnheader "Link" [ref=e571]:
+                        - paragraph [ref=e572]: Link
+                  - rowgroup [ref=e573]:
+                    - 'row "Karpathy: Let’s build the GPT Tokenizer Video (90 min) https://www.youtube.com/watch?v=zduSFxRajkE" [ref=e574]':
+                      - 'cell "Karpathy: Let’s build the GPT Tokenizer" [ref=e575]':
+                        - paragraph [ref=e576]: "Karpathy: Let’s build the GPT Tokenizer"
+                      - cell "Video (90 min)" [ref=e577]:
+                        - paragraph [ref=e578]: Video (90 min)
+                      - cell "https://www.youtube.com/watch?v=zduSFxRajkE" [ref=e579]:
+                        - paragraph [ref=e580]:
+                          - link "https://www.youtube.com/watch?v=zduSFxRajkE" [ref=e581] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=zduSFxRajkE
+                    - row "HuggingFace Tokenizers Docs Docs https://huggingface.co/docs/tokenizers" [ref=e582]:
+                      - cell "HuggingFace Tokenizers Docs" [ref=e583]:
+                        - paragraph [ref=e584]: HuggingFace Tokenizers Docs
+                      - cell "Docs" [ref=e585]:
+                        - paragraph [ref=e586]: Docs
+                      - cell "https://huggingface.co/docs/tokenizers" [ref=e587]:
+                        - paragraph [ref=e588]:
+                          - link "https://huggingface.co/docs/tokenizers" [ref=e589] [cursor=pointer]:
+                            - /url: https://huggingface.co/docs/tokenizers
+                    - row "TikToken GitHub Repo https://github.com/openai/tiktoken" [ref=e590]:
+                      - cell "TikToken GitHub" [ref=e591]:
+                        - paragraph [ref=e592]: TikToken GitHub
+                      - cell "Repo" [ref=e593]:
+                        - paragraph [ref=e594]: Repo
+                      - cell "https://github.com/openai/tiktoken" [ref=e595]:
+                        - paragraph [ref=e596]:
+                          - link "https://github.com/openai/tiktoken" [ref=e597] [cursor=pointer]:
+                            - /url: https://github.com/openai/tiktoken
+                    - row "SentencePiece GitHub Repo https://github.com/google/sentencepiece" [ref=e598]:
+                      - cell "SentencePiece GitHub" [ref=e599]:
+                        - paragraph [ref=e600]: SentencePiece GitHub
+                      - cell "Repo" [ref=e601]:
+                        - paragraph [ref=e602]: Repo
+                      - cell "https://github.com/google/sentencepiece" [ref=e603]:
+                        - paragraph [ref=e604]:
+                          - link "https://github.com/google/sentencepiece" [ref=e605] [cursor=pointer]:
+                            - /url: https://github.com/google/sentencepiece
+                    - row "Tiktokenizer (web tool) Tool https://tiktokenizer.vercel.app" [ref=e606]:
+                      - cell "Tiktokenizer (web tool)" [ref=e607]:
+                        - paragraph [ref=e608]: Tiktokenizer (web tool)
+                      - cell "Tool" [ref=e609]:
+                        - paragraph [ref=e610]: Tool
+                      - cell "https://tiktokenizer.vercel.app" [ref=e611]:
+                        - paragraph [ref=e612]:
+                          - link "https://tiktokenizer.vercel.app" [ref=e613] [cursor=pointer]:
+                            - /url: https://tiktokenizer.vercel.app
+        - contentinfo [ref=e614]:
+          - generic [ref=e615]:
+            - link "Next Tokenization - Start Here" [ref=e616] [cursor=pointer]:
+              - /url: 01_START_HERE.html
+              - generic [ref=e617]:
+                - generic [ref=e619]: Next
+                - generic [ref=e620]: Tokenization - Start Here
+              - img [ref=e621]
+            - 'link "Previous Lab 06: Large Language Models" [ref=e623] [cursor=pointer]':
+              - /url: ../03-maths/slp-book/lab_06_large_language_models.html
+              - img [ref=e624]
+              - generic [ref=e626]:
+                - generic [ref=e628]: Previous
+                - generic [ref=e629]: "Lab 06: Large Language Models"
+          - generic [ref=e630]:
+            - generic [ref=e631]:
+              - generic [ref=e632]: Copyright © MIT License 2026, Pavan Mudigonda
+              - generic [ref=e633]: v0.1.0
+            - link "GitHub" [ref=e636] [cursor=pointer]:
+              - /url: https://github.com/PavanMudigonda/zero-to-ai
+              - img [ref=e637]
+      - complementary [ref=e639]:
+        - separator "Resize right sidebar" [ref=e640]:
+          - button "Collapse right sidebar" [ref=e641] [cursor=pointer]: ›
+        - generic [ref=e642]:
+          - generic [ref=e643]: On this page
+          - list [ref=e646]:
+            - listitem [ref=e647]:
+              - list [ref=e648]:
+                - listitem [ref=e649]:
+                  - link "Why Tokenization Matters" [ref=e650] [cursor=pointer]:
+                    - /url: "#why-tokenization-matters"
+                - listitem [ref=e651]:
+                  - link "Notebooks - Work in This Order" [ref=e652] [cursor=pointer]:
+                    - /url: "#notebooks-work-in-this-order"
+                - listitem [ref=e653]:
+                  - link "Key Concepts" [ref=e654] [cursor=pointer]:
+                    - /url: "#key-concepts"
+                  - list [ref=e655]:
+                    - listitem [ref=e656]:
+                      - link "The Three Main Tokenization Algorithms" [ref=e657] [cursor=pointer]:
+                        - /url: "#the-three-main-tokenization-algorithms"
+                    - listitem [ref=e658]:
+                      - link "Token Vocabulary Size" [ref=e659] [cursor=pointer]:
+                        - /url: "#token-vocabulary-size"
+                - listitem [ref=e660]:
+                  - link "Reference Guides" [ref=e661] [cursor=pointer]:
+                    - /url: "#reference-guides"
+                - listitem [ref=e662]:
+                  - link "Practice Projects" [ref=e663] [cursor=pointer]:
+                    - /url: "#practice-projects"
+                - listitem [ref=e664]:
+                  - link "What to Learn Next" [ref=e665] [cursor=pointer]:
+                    - /url: "#what-to-learn-next"
+                - listitem [ref=e666]:
+                  - link "External Resources" [ref=e667] [cursor=pointer]:
+                    - /url: "#external-resources"
+  - button "Expand left sidebar": ›
+  - button "Expand right sidebar": ‹
