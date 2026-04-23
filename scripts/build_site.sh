@@ -316,6 +316,7 @@ def _clean_label(name: str) -> str:
         "Huggingface": "HuggingFace", "Langraph": "LangGraph",
         "Langgraph": "LangGraph", "Tiktoken": "TikToken",
         "Pgvector": "pgvector", "Ds": "DS", "Dl": "DL",
+        "Nlp": "NLP", "Pii": "PII", "Sql": "SQL", "Gpgpu": "GPGPU",
         "Db": "DB", "Api": "API", "Gpu": "GPU", "Cpu": "CPU",
         "Islp": "ISLP", "Mlpp": "MLPP", "Mml": "MML",
         "Slp": "SLP", "Cs229": "CS229", "React": "ReAct",
@@ -413,10 +414,76 @@ def inject_toctree(directory: Path):
         readme.write_text(f"# {title}\n{toctree_block}", encoding="utf-8")
 
 
+def _fix_notebook_heading(nb_path: Path, label: str):
+    """Ensure the first heading in a Jupyter notebook is ``# {label}``.
+
+    Sphinx/Furo uses the page title (first H1) for sidebar labels,
+    ignoring explicit toctree titles.  Patching the H1 ensures the
+    sidebar shows the intended label.
+    """
+    import json as _json
+    try:
+        data = _json.loads(nb_path.read_text(encoding="utf-8"))
+    except Exception:
+        return
+    for cell in data.get("cells", []):
+        if cell.get("cell_type") != "markdown":
+            continue
+        lines = cell["source"]
+        if isinstance(lines, str):
+            lines = lines.split("\n")
+        for i, line in enumerate(lines):
+            stripped = line.lstrip()
+            if stripped.startswith("#"):
+                if stripped.startswith("# ") and not stripped.startswith("## "):
+                    # Already an H1 — replace it
+                    lines[i] = f"# {label}\n"
+                else:
+                    # First heading is H2+ — insert an H1 before it
+                    lines.insert(i, f"# {label}\n\n")
+                cell["source"] = lines
+                nb_path.write_text(
+                    _json.dumps(data, indent=1, ensure_ascii=False) + "\n",
+                    encoding="utf-8",
+                )
+                return
+
+
+def _fix_md_heading(md_path: Path, label: str):
+    """Ensure the first heading in a Markdown file is ``# {label}``."""
+    text = md_path.read_text(encoding="utf-8")
+    import re as _re
+    # Try replacing an existing H1
+    new_text, n = _re.subn(r"^#\s+.+$", f"# {label}", text, count=1, flags=_re.MULTILINE)
+    if n:
+        md_path.write_text(new_text, encoding="utf-8")
+        return
+    # No H1 found — insert one before the first heading of any level
+    m = _re.search(r"^#{2,}\s", text, flags=_re.MULTILINE)
+    if m:
+        md_path.write_text(text[:m.start()] + f"# {label}\n\n" + text[m.start():], encoding="utf-8")
+
+
+def fix_headings_in_directory(directory: Path):
+    """Ensure every document's H1 matches its toctree label."""
+    entries = _collect_toctree_entries(directory)
+    for entry, label in entries:
+        # entry is like "03_tokenizers_quickstart" or "subdir/README"
+        for ext in [".ipynb", ".md"]:
+            candidate = directory / f"{entry}{ext}"
+            if candidate.exists():
+                if ext == ".ipynb":
+                    _fix_notebook_heading(candidate, label)
+                else:
+                    _fix_md_heading(candidate, label)
+                break
+
+
 def inject_toctrees_recursive(directory: Path):
     """Walk *directory* depth-first, injecting toctrees at every level."""
     for subdir in sorted(p for p in directory.iterdir() if p.is_dir()):
         inject_toctrees_recursive(subdir)
+    fix_headings_in_directory(directory)
     inject_toctree(directory)
 
 

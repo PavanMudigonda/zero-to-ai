@@ -286,6 +286,29 @@ def _notebook_page_context(app, pagename, templatename, context, doctree):
     }
 
 
+def _override_furo_navigation(app, pagename, templatename, context, doctree):
+    """Override Furo's sidebar navigation to limit depth.
+
+    Furo's default calls toctree(maxdepth=-1) which includes every heading
+    from every notebook, flooding the sidebar with sub-headings and ignoring
+    explicit toctree labels.  Limiting to maxdepth=2 shows only Phases (l1)
+    and their direct children (l2).
+    """
+    if "toctree" not in context:
+        return
+    from furo.navigation import get_navigation_tree
+
+    toctree_html = context["toctree"](
+        collapse=False,
+        titles_only=True,
+        maxdepth=2,
+        includehidden=True,
+    )
+    context["furo_navigation_tree"] = get_navigation_tree(toctree_html)
+
+
 def setup(app):
     app.add_transform(_FixNestedTransitions)
     app.connect("html-page-context", _notebook_page_context)
+    # Run after Furo's own handler (priority 500) to override its nav tree
+    app.connect("html-page-context", _override_furo_navigation, priority=900)
