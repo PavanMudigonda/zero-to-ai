@@ -374,6 +374,27 @@ def _collect_toctree_entries(directory: Path):
     # Sort lexicographically so numbers prefix correctly across .md and .ipynb
     items.sort(key=lambda x: x[0])
 
+    # Auto-number unnumbered items sequentially after the last numbered item.
+    # This ensures directories like 'audio/', 'vision-language/' get labels
+    # such as '02. Audio', '03. Vision Language' instead of bare names.
+    import re as _re
+    max_num = 0
+    for fname, _, label in items:
+        m = _re.match(r'^(\d+)', fname)
+        if m:
+            max_num = max(max_num, int(m.group(1)))
+
+    for i, (fname, entry, label) in enumerate(items):
+        if not _re.match(r'^(\d+)', fname):
+            # Skip non-document files (e.g. .py, .txt, requirements.txt)
+            if not (Path(directory, fname).is_dir()
+                    or fname.endswith('.md')
+                    or fname.endswith('.ipynb')):
+                continue
+            max_num += 1
+            prefix = f"{max_num:02d}. "
+            items[i] = (fname, entry, prefix + label)
+
     for _, entry, label in items:
         _add(entry, label)
 
