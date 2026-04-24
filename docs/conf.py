@@ -6,7 +6,7 @@ import os
 project = "Zero to AI"
 copyright = "MIT License 2026, Pavan Mudigonda"
 author = "Pavan Mudigonda"
-release = "0.1.0"
+release = os.environ.get("SITE_VERSION", "0.1.0")
 
 html_baseurl = "https://zero-to-ai.dev/"
 SITE_URL = html_baseurl.rstrip("/")

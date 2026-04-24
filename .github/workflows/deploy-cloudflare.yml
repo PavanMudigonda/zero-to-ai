@@ -23,8 +23,17 @@ jobs:
 
       - name: Resolve release version
         id: version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # 1. Try latest published git tag
           TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          # 2. If no tag, fetch the draft release version from Release Drafter
+          if [ -z "$TAG" ]; then
+            TAG=$(gh api repos/${{ github.repository }}/releases \
+              --jq '[.[] | select(.draft==true)] | first | .tag_name // empty' 2>/dev/null || echo "")
+          fi
+          # 3. Fallback
           if [ -z "$TAG" ]; then
             TAG="v0.1.0"
           fi
