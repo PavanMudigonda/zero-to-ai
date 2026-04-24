@@ -269,7 +269,7 @@ sd_hide_title: true
 
 <div class="phase-grid">
 <a class="phase-card" href="curriculum/00-course-setup/README.html"><div class="phase-number">Phase 0</div><div class="phase-title">Course Setup</div></a>
-<a class="phase-card" href="curriculum/01-python/README.html"><div class="phase-number">Phase 1</div><div class="phase-title">Python</div></a>
+<a class="phase-card" href="curriculum/01-python/README.html"><div class="phase-number">Phase 1</div><div class="phase-title">Python Fundamentals</div></a>
 <a class="phase-card" href="curriculum/02-data-science/README.html"><div class="phase-number">Phase 2</div><div class="phase-title">Data Science</div></a>
 <a class="phase-card" href="curriculum/03-maths/README.html"><div class="phase-number">Phase 3</div><div class="phase-title">Mathematics for ML</div></a>
 </div>
@@ -286,7 +286,7 @@ sd_hide_title: true
 
 <div class="phase-grid">
 <a class="phase-card" href="curriculum/07-vector-databases/README.html"><div class="phase-number">Phase 7</div><div class="phase-title">Vector Databases</div></a>
-<a class="phase-card" href="curriculum/08-rag/README.html"><div class="phase-number">Phase 8</div><div class="phase-title">RAG Systems</div></a>
+<a class="phase-card" href="curriculum/08-rag/README.html"><div class="phase-number">Phase 8</div><div class="phase-title">RAG</div></a>
 <a class="phase-card" href="curriculum/09-mlops/README.html"><div class="phase-number">Phase 9</div><div class="phase-title">MLOps</div></a>
 <a class="phase-card" href="curriculum/10-specializations/README.html"><div class="phase-number">Phase 10</div><div class="phase-title">Specializations</div></a>
 </div>
@@ -295,7 +295,7 @@ sd_hide_title: true
 
 <div class="phase-grid">
 <a class="phase-card" href="curriculum/11-prompt-engineering/README.html"><div class="phase-number">Phase 11</div><div class="phase-title">Prompt Engineering</div></a>
-<a class="phase-card" href="curriculum/12-llm-finetuning/README.html"><div class="phase-number">Phase 12</div><div class="phase-title">LLM Fine-tuning</div></a>
+<a class="phase-card" href="curriculum/12-llm-finetuning/README.html"><div class="phase-number">Phase 12</div><div class="phase-title">LLM Fine-Tuning</div></a>
 <a class="phase-card" href="curriculum/13-multimodal/README.html"><div class="phase-number">Phase 13</div><div class="phase-title">Multimodal AI</div></a>
 <a class="phase-card" href="curriculum/14-local-llms/README.html"><div class="phase-number">Phase 14</div><div class="phase-title">Local LLMs</div></a>
 <a class="phase-card" href="curriculum/15-ai-agents/README.html"><div class="phase-number">Phase 15</div><div class="phase-title">AI Agents</div></a>
@@ -445,7 +445,7 @@ Phase 16 · Model Evaluation <curriculum/16-model-evaluation/README>
 Phase 17 · Debugging <curriculum/17-debugging/README>
 Phase 18 · Low-Code AI Tools <curriculum/18-low-code/README>
 Phase 19 · AI Safety <curriculum/19-ai-safety/README>
-Phase 20 · Streaming AI <curriculum/20-streaming/README>
+Phase 20 · Real-Time Streaming <curriculum/20-streaming/README>
 ```
 
 ```{toctree}
