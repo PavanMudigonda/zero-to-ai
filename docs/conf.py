@@ -279,10 +279,15 @@ def _notebook_page_context(app, pagename, templatename, context, doctree):
         + _REPO_NAME + "/blob/main/" + repo_path
     )
     kaggle_url = "https://kaggle.com/kernels/welcome?src=" + blob_url
+    sagemaker_url = (
+        "https://studiolab.sagemaker.aws/import/github/"
+        + _REPO_NAME + "/blob/main/" + repo_path
+    )
 
     context["notebook_launchers"] = {
         "colab_url": colab_url,
         "kaggle_url": kaggle_url,
+        "sagemaker_url": sagemaker_url,
     }
 
 

@@ -85,7 +85,7 @@ sd_hide_title: true
       "name": "Can I run the notebooks in the browser without installing anything?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click - no local setup needed."
+        "text": "Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, SageMaker Studio Lab, or Replit with one click - no local setup needed."
       }
     },
     {
@@ -151,6 +151,7 @@ sd_hide_title: true
 <div class="hero-badges">
   <a href="https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
   <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github" alt="Open in Codespaces"></a>
+  <a href="https://studiolab.sagemaker.aws/import/github/PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/badge/Open%20in-SageMaker%20Studio%20Lab-orange?style=flat&logo=amazon-aws" alt="Open in SageMaker Studio Lab"></a>
   <a href="https://github.com/PavanMudigonda/zero-to-ai"><img src="https://img.shields.io/github/stars/PavanMudigonda/zero-to-ai?style=social" alt="GitHub Stars"></a>
 </div>
 </div>
@@ -373,7 +374,7 @@ The visual study guide and machine learning roadmap are there to help you pick a
 <details>
 <summary><strong>Can I run the notebooks without installing anything?</strong></summary>
 
-Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, or Replit with one click - no local setup needed.
+Yes. Every notebook can be opened in Google Colab, GitHub Codespaces, Kaggle, SageMaker Studio Lab, or Replit with one click - no local setup needed.
 
 That makes the curriculum especially useful if you want a free AI course you can start immediately without spending time on environment setup first.
 

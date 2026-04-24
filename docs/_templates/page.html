@@ -276,6 +276,13 @@ document.addEventListener("DOMContentLoaded", function() {
     </svg>
     Open in Kaggle
   </a>
+  <a class="notebook-launchers__link notebook-launchers__link--sagemaker"
+     href="{{ notebook_launchers.sagemaker_url }}" target="_blank" rel="noopener">
+    <svg class="notebook-launchers__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 3.6a8.4 8.4 0 110 16.8 8.4 8.4 0 010-16.8zm-1.2 4.8v7.2h2.4V8.4h-2.4zm0-3.6v2.4h2.4V4.8h-2.4z" fill="#FF9900"/>
+    </svg>
+    Open in SageMaker Studio Lab
+  </a>
 </div>
 {% endif %}
 {{ super() }}

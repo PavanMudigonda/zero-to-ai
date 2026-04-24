@@ -26,6 +26,7 @@ Quick links: [Website](https://zero-to-ai.dev/) • [Study Guide](https://zero-t
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main)
 [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?style=flat&logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai)
 [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?style=flat&logo=kaggle)](https://www.kaggle.com/code)
+[![Open in SageMaker Studio Lab](https://img.shields.io/badge/Open%20in-SageMaker%20Studio%20Lab-orange?style=flat&logo=amazon-aws)](https://studiolab.sagemaker.aws/import/github/PavanMudigonda/zero-to-ai)
 [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?style=flat&logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai)
 [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?style=flat&logo=github)](https://github.dev/PavanMudigonda/zero-to-ai)
 
@@ -100,7 +101,7 @@ For most learners, the fastest low-friction path is:
 - If you are buying a new device for this course, prioritize RAM and portability over an expensive GPU at the beginning:
   - MacBook Air (16 GB) - a practical default for most learners
   - MacBook Pro (16 GB or more) - useful if you expect heavier local workloads
-- Use a Google Colab or Kaggle account alongside your local machine when a notebook or phase needs more compute
+- Use a Google Colab, Kaggle, or SageMaker Studio Lab account alongside your local machine when a notebook or phase needs more compute
 - 10-15 hours/week
 
 ### Installation (Choose One)
@@ -157,6 +158,11 @@ jupyter notebook
   !git clone https://github.com/PavanMudigonda/zero-to-ai.git
   %cd zero-to-ai
   !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/kaggle_requirements.txt
+  ```
+
+- **SageMaker Studio Lab** (free): Click [![Open in SageMaker Studio Lab](https://img.shields.io/badge/Open%20in-SageMaker%20Studio%20Lab-orange?logo=amazon-aws)](https://studiolab.sagemaker.aws/import/github/PavanMudigonda/zero-to-ai) - sign up for a free account at [studiolab.sagemaker.aws](https://studiolab.sagemaker.aws/), then clone the repo and run:
+  ```python
+  !pip install -q -r requirements.txt
   ```
 
 - **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) - packages auto-install on first run via `requirements-replit.txt`
