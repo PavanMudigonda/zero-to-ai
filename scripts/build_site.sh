@@ -415,53 +415,77 @@ def inject_toctree(directory: Path):
 
 
 def _fix_notebook_heading(nb_path: Path, label: str):
-    """Ensure the first heading in a Jupyter notebook is ``# {label}``.
+    """Ensure the very first content in a Jupyter notebook is ``# {label}``.
 
-    Sphinx/Furo uses the page title (first H1) for sidebar labels,
-    ignoring explicit toctree titles.  Patching the H1 ensures the
-    sidebar shows the intended label.
+    Sphinx/myst-nb uses the first H1 as the page title for sidebar labels.
+    If any text appears before the H1 (e.g. "Part 1: …") myst-nb treats
+    that text as the title instead, flooding the sidebar with paragraphs.
+
+    This function guarantees ``# {label}`` is the absolute first line of
+    the first markdown cell, replacing any existing H1 or prepending one.
     """
     import json as _json
     try:
         data = _json.loads(nb_path.read_text(encoding="utf-8"))
     except Exception:
         return
+
+    # Find the first markdown cell
+    md_cell = None
     for cell in data.get("cells", []):
-        if cell.get("cell_type") != "markdown":
+        if cell.get("cell_type") == "markdown":
+            md_cell = cell
+            break
+
+    if md_cell is None:
+        return
+
+    lines = md_cell["source"]
+    if isinstance(lines, str):
+        lines = lines.split("\n")
+
+    # Check if the first non-empty line is already the correct H1
+    first_nonempty = next((l for l in lines if l.strip()), "")
+    if first_nonempty.strip() == f"# {label}":
+        return  # already correct
+
+    # Remove any existing H1 (first occurrence only) so we don't duplicate
+    new_lines = []
+    h1_removed = False
+    for line in lines:
+        if not h1_removed and line.lstrip().startswith("# ") and not line.lstrip().startswith("## "):
+            h1_removed = True  # drop this line
             continue
-        lines = cell["source"]
-        if isinstance(lines, str):
-            lines = lines.split("\n")
-        for i, line in enumerate(lines):
-            stripped = line.lstrip()
-            if stripped.startswith("#"):
-                if stripped.startswith("# ") and not stripped.startswith("## "):
-                    # Already an H1 — replace it
-                    lines[i] = f"# {label}\n"
-                else:
-                    # First heading is H2+ — insert an H1 before it
-                    lines.insert(i, f"# {label}\n\n")
-                cell["source"] = lines
-                nb_path.write_text(
-                    _json.dumps(data, indent=1, ensure_ascii=False) + "\n",
-                    encoding="utf-8",
-                )
-                return
+        new_lines.append(line)
+
+    # Prepend the correct H1 as the absolute first line
+    md_cell["source"] = [f"# {label}\n", "\n"] + new_lines
+    nb_path.write_text(
+        _json.dumps(data, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
 
 
 def _fix_md_heading(md_path: Path, label: str):
-    """Ensure the first heading in a Markdown file is ``# {label}``."""
+    """Ensure the first heading in a Markdown file is ``# {label}``.
+
+    Guarantees ``# {label}`` appears as the very first content line,
+    mirroring the notebook fix so that Sphinx always picks it up as the
+    page title.
+    """
     text = md_path.read_text(encoding="utf-8")
     import re as _re
-    # Try replacing an existing H1
-    new_text, n = _re.subn(r"^#\s+.+$", f"# {label}", text, count=1, flags=_re.MULTILINE)
-    if n:
-        md_path.write_text(new_text, encoding="utf-8")
-        return
-    # No H1 found — insert one before the first heading of any level
-    m = _re.search(r"^#{2,}\s", text, flags=_re.MULTILINE)
-    if m:
-        md_path.write_text(text[:m.start()] + f"# {label}\n\n" + text[m.start():], encoding="utf-8")
+
+    # Check if the file already starts with the correct H1
+    first_line = text.lstrip().split("\n", 1)[0].strip() if text.strip() else ""
+    if first_line == f"# {label}":
+        return  # already correct
+
+    # Remove any existing H1 (first occurrence) so we don't duplicate
+    text_no_h1, n = _re.subn(r"^#\s+.+\n?", "", text, count=1, flags=_re.MULTILINE)
+
+    # Prepend the correct H1 at the very top
+    md_path.write_text(f"# {label}\n\n" + (text_no_h1 if n else text), encoding="utf-8")
 
 
 def fix_headings_in_directory(directory: Path):
