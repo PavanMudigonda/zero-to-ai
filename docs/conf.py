@@ -296,17 +296,19 @@ def _override_furo_navigation(app, pagename, templatename, context, doctree):
 
     Furo's default calls toctree(maxdepth=-1) which includes every heading
     from every notebook, flooding the sidebar with sub-headings and ignoring
-    explicit toctree labels.  Limiting to maxdepth=2 shows only Phases (l1)
-    and their direct children (l2).
+    explicit toctree labels.  Using titles_only keeps sidebar items to page
+    titles only.  maxdepth=3 allows three levels: Phases (l1), their direct
+    children (l2), and grandchildren (l3) so that clicking a child page
+    still shows its siblings and sub-entries.
     """
     if "toctree" not in context:
         return
     from furo.navigation import get_navigation_tree
 
     toctree_html = context["toctree"](
-        collapse=False,
+        collapse=True,
         titles_only=True,
-        maxdepth=2,
+        maxdepth=3,
         includehidden=True,
     )
     context["furo_navigation_tree"] = get_navigation_tree(toctree_html)
