@@ -1136,9 +1136,10 @@ body.sidebar-resizing * {
 
 /* ── Sidebar depth limit ──
    Hide deeply nested sidebar entries to keep navigation clean.
-   l1 = Phases, l2 = child pages, l3+ = hidden entirely.
-   Anchor links (sub-headings within a page) at l2 are also hidden. */
-.sidebar-tree .toctree-l3,
+   l1 = Phases, l2 = child pages, l3 = grandchildren (shown when
+   collapse=True keeps only the active branch open).
+   l4+ = hidden entirely.
+   Anchor links (sub-headings within a page) at l2/l3 are also hidden. */
 .sidebar-tree .toctree-l4,
 .sidebar-tree .toctree-l5,
 .sidebar-tree .toctree-l6,
@@ -1146,7 +1147,8 @@ body.sidebar-resizing * {
 .sidebar-tree .toctree-l8 {
   display: none;
 }
-/* Hide sub-heading anchors that leak to l2 (href contains #) */
-.sidebar-tree li.toctree-l2:has(> a[href*="#"]) {
+/* Hide sub-heading anchors that leak to l2/l3 (href contains #) */
+.sidebar-tree li.toctree-l2:has(> a[href*="#"]),
+.sidebar-tree li.toctree-l3:has(> a[href*="#"]) {
   display: none;
 }
