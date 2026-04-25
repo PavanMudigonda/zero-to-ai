@@ -1,0 +1,772 @@
+# SQL Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [SQL Basics](#sql-basics)
+2. [Data Definition Language (DDL)](#data-definition-language-ddl)
+3. [Data Manipulation Language (DML)](#data-manipulation-language-dml)
+4. [Queries](#queries)
+5. [Joins](#joins)
+6. [Aggregation](#aggregation)
+7. [Subqueries](#subqueries)
+8. [Indexes](#indexes)
+9. [Transactions](#transactions)
+10. [Performance](#performance)
+11. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## SQL Basics
+
+### 1. Data Types
+```sql
+-- Numeric
+INT, INTEGER        -- Whole numbers
+BIGINT              -- Large integers
+DECIMAL(10,2)       -- Fixed precision (10 digits, 2 decimals)
+NUMERIC(10,2)       -- Same as DECIMAL
+FLOAT, DOUBLE       -- Floating point
+
+-- String
+CHAR(10)            -- Fixed length (padded with spaces)
+VARCHAR(255)        -- Variable length
+TEXT                -- Large text
+ENUM('S','M','L')   -- Predefined values
+
+-- Date/Time
+DATE                -- YYYY-MM-DD
+TIME                -- HH:MM:SS
+DATETIME            -- YYYY-MM-DD HH:MM:SS
+TIMESTAMP           -- Auto-updating timestamp
+
+-- Boolean
+BOOLEAN             -- TRUE/FALSE (stored as 1/0)
+
+-- Others
+JSON                -- JSON documents
+BLOB                -- Binary data
+UUID                -- Universally unique identifier
+```
+
+---
+
+## Data Definition Language (DDL)
+
+### 2. Create Table
+```sql
+-- Basic table
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Table with foreign key
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL DEFAULT 1,
+    total_price DECIMAL(10,2) NOT NULL,
+    status ENUM('pending', 'completed', 'cancelled') DEFAULT 'pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Table with composite primary key
+CREATE TABLE user_roles (
+    user_id INT,
+    role_id INT,
+    granted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (user_id, role_id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (role_id) REFERENCES roles(id)
+);
+```
+
+### 3. Alter Table
+```sql
+-- Add column
+ALTER TABLE users ADD COLUMN phone VARCHAR(20);
+
+-- Modify column
+ALTER TABLE users MODIFY COLUMN username VARCHAR(100);
+
+-- Drop column
+ALTER TABLE users DROP COLUMN phone;
+
+-- Add constraint
+ALTER TABLE users ADD CONSTRAINT chk_email CHECK (email LIKE '%@%');
+
+-- Add foreign key
+ALTER TABLE orders ADD CONSTRAINT fk_user 
+    FOREIGN KEY (user_id) REFERENCES users(id);
+
+-- Drop constraint
+ALTER TABLE orders DROP FOREIGN KEY fk_user;
+
+-- Rename table
+ALTER TABLE users RENAME TO customers;
+RENAME TABLE old_name TO new_name;
+```
+
+### 4. Drop & Truncate
+```sql
+-- Drop table (delete table and all data)
+DROP TABLE IF EXISTS users;
+
+-- Truncate (delete all rows, keep structure)
+TRUNCATE TABLE users;
+```
+
+### 5. Constraints
+```sql
+-- Primary Key
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    name VARCHAR(100)
+);
+
+-- Unique
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE
+);
+
+-- Not Null
+CREATE TABLE orders (
+    id INT PRIMARY KEY,
+    user_id INT NOT NULL
+);
+
+-- Check constraint
+CREATE TABLE products (
+    id INT PRIMARY KEY,
+    price DECIMAL(10,2) CHECK (price > 0),
+    stock INT CHECK (stock >= 0)
+);
+
+-- Default value
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    status VARCHAR(20) DEFAULT 'active',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Foreign key with actions
+CREATE TABLE orders (
+    id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+        ON DELETE CASCADE      -- Delete orders when user deleted
+        ON UPDATE CASCADE      -- Update orders when user id changes
+);
+```
+
+---
+
+## Data Manipulation Language (DML)
+
+### 6. Insert
+```sql
+-- Insert single row
+INSERT INTO users (username, email, password_hash)
+VALUES ('john_doe', 'john@example.com', 'hash123');
+
+-- Insert multiple rows
+INSERT INTO users (username, email, password_hash) VALUES
+    ('alice', 'alice@example.com', 'hash1'),
+    ('bob', 'bob@example.com', 'hash2'),
+    ('charlie', 'charlie@example.com', 'hash3');
+
+-- Insert from another table
+INSERT INTO archived_orders
+SELECT * FROM orders WHERE created_at < '2022-01-01';
+
+-- Insert or ignore (skip if duplicate)
+INSERT IGNORE INTO users (username, email, password_hash)
+VALUES ('john_doe', 'john@example.com', 'hash123');
+
+-- Insert on duplicate key update
+INSERT INTO users (id, username, email) VALUES (1, 'john', 'john@example.com')
+ON DUPLICATE KEY UPDATE email = 'john@example.com';
+```
+
+### 7. Update
+```sql
+-- Update single column
+UPDATE users SET email = 'newemail@example.com' WHERE id = 1;
+
+-- Update multiple columns
+UPDATE users 
+SET email = 'new@example.com', updated_at = NOW() 
+WHERE id = 1;
+
+-- Update with calculation
+UPDATE products SET price = price * 1.1 WHERE category = 'electronics';
+
+-- Update all rows
+UPDATE users SET status = 'active';
+
+-- Update with join
+UPDATE orders o
+JOIN users u ON o.user_id = u.id
+SET o.status = 'cancelled'
+WHERE u.status = 'inactive';
+```
+
+### 8. Delete
+```sql
+-- Delete specific rows
+DELETE FROM users WHERE id = 1;
+
+-- Delete with condition
+DELETE FROM orders WHERE status = 'cancelled' AND created_at < '2022-01-01';
+
+-- Delete all rows
+DELETE FROM temp_table;
+
+-- Delete with join
+DELETE o FROM orders o
+JOIN users u ON o.user_id = u.id
+WHERE u.status = 'deleted';
+
+-- Limit delete
+DELETE FROM logs ORDER BY created_at ASC LIMIT 1000;
+```
+
+---
+
+## Queries
+
+### 9. Select
+```sql
+-- Select all columns
+SELECT * FROM users;
+
+-- Select specific columns
+SELECT id, username, email FROM users;
+
+-- Select with alias
+SELECT 
+    id AS user_id,
+    username AS login,
+    email
+FROM users;
+
+-- Select with WHERE
+SELECT * FROM users WHERE status = 'active';
+
+-- Multiple conditions
+SELECT * FROM users 
+WHERE status = 'active' AND created_at > '2023-01-01';
+
+-- OR condition
+SELECT * FROM products 
+WHERE category = 'electronics' OR category = 'computers';
+
+-- IN clause
+SELECT * FROM users WHERE id IN (1, 2, 3, 5, 8);
+
+-- BETWEEN
+SELECT * FROM orders 
+WHERE created_at BETWEEN '2023-01-01' AND '2023-12-31';
+
+-- LIKE (pattern matching)
+SELECT * FROM users WHERE email LIKE '%@gmail.com';
+SELECT * FROM products WHERE name LIKE 'Phone%';
+SELECT * FROM users WHERE username LIKE 'a%e';  -- Starts with 'a', ends with 'e'
+
+-- NOT LIKE
+SELECT * FROM users WHERE email NOT LIKE '%@spam.com';
+
+-- IS NULL / IS NOT NULL
+SELECT * FROM users WHERE phone IS NULL;
+SELECT * FROM users WHERE phone IS NOT NULL;
+```
+
+### 10. Sorting & Limiting
+```sql
+-- ORDER BY (ascending)
+SELECT * FROM users ORDER BY created_at ASC;
+
+-- ORDER BY (descending)
+SELECT * FROM users ORDER BY created_at DESC;
+
+-- Multiple columns
+SELECT * FROM products ORDER BY category ASC, price DESC;
+
+-- LIMIT
+SELECT * FROM users LIMIT 10;
+
+-- LIMIT with OFFSET (pagination)
+SELECT * FROM users LIMIT 10 OFFSET 20;  -- Skip 20, take 10
+SELECT * FROM users LIMIT 20, 10;        -- Same (MySQL syntax)
+
+-- Top N
+SELECT * FROM products ORDER BY price DESC LIMIT 5;
+```
+
+### 11. DISTINCT
+```sql
+-- Unique values
+SELECT DISTINCT country FROM users;
+
+-- Count unique
+SELECT COUNT(DISTINCT country) FROM users;
+
+-- Multiple columns
+SELECT DISTINCT country, city FROM users;
+```
+
+---
+
+## Joins
+
+### 12. Inner Join
+```sql
+-- Returns only matching rows from both tables
+SELECT 
+    o.id AS order_id,
+    u.username,
+    o.total_price
+FROM orders o
+INNER JOIN users u ON o.user_id = u.id;
+
+-- Multiple joins
+SELECT 
+    o.id,
+    u.username,
+    p.name AS product_name,
+    o.quantity
+FROM orders o
+INNER JOIN users u ON o.user_id = u.id
+INNER JOIN products p ON o.product_id = p.id;
+```
+
+### 13. Left Join
+```sql
+-- Returns all rows from left table, matching rows from right (NULL if no match)
+SELECT 
+    u.id,
+    u.username,
+    o.id AS order_id,
+    o.total_price
+FROM users u
+LEFT JOIN orders o ON u.user_id = o.user_id;
+
+-- Find users with no orders
+SELECT u.id, u.username
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id
+WHERE o.id IS NULL;
+```
+
+### 14. Right Join
+```sql
+-- Returns all rows from right table, matching rows from left
+SELECT 
+    u.username,
+    o.id AS order_id
+FROM orders o
+RIGHT JOIN users u ON o.user_id = u.id;
+```
+
+### 15. Full Outer Join
+```sql
+-- Returns all rows when there's a match in either table
+-- MySQL doesn't support FULL OUTER JOIN, use UNION
+SELECT u.id, u.username, o.id AS order_id
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id
+UNION
+SELECT u.id, u.username, o.id AS order_id
+FROM users u
+RIGHT JOIN orders o ON u.id = o.user_id;
+```
+
+### 16. Self Join
+```sql
+-- Join table to itself
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(100),
+    manager_id INT
+);
+
+-- Find employees and their managers
+SELECT 
+    e.name AS employee,
+    m.name AS manager
+FROM employees e
+LEFT JOIN employees m ON e.manager_id = m.id;
+```
+
+---
+
+## Aggregation
+
+### 17. Aggregate Functions
+```sql
+-- COUNT
+SELECT COUNT(*) FROM users;
+SELECT COUNT(DISTINCT country) FROM users;
+
+-- SUM
+SELECT SUM(total_price) FROM orders;
+SELECT SUM(quantity * price) AS total_revenue FROM order_items;
+
+-- AVG
+SELECT AVG(price) FROM products;
+
+-- MIN / MAX
+SELECT MIN(price), MAX(price) FROM products;
+
+-- String aggregation (MySQL)
+SELECT GROUP_CONCAT(username) FROM users;
+```
+
+### 18. GROUP BY
+```sql
+-- Count orders per user
+SELECT user_id, COUNT(*) AS order_count
+FROM orders
+GROUP BY user_id;
+
+-- Total sales per product
+SELECT product_id, SUM(total_price) AS total_sales
+FROM orders
+GROUP BY product_id
+ORDER BY total_sales DESC;
+
+-- Average order value per user
+SELECT user_id, AVG(total_price) AS avg_order_value
+FROM orders
+GROUP BY user_id;
+
+-- Multiple columns
+SELECT country, city, COUNT(*) AS user_count
+FROM users
+GROUP BY country, city
+ORDER BY user_count DESC;
+```
+
+### 19. HAVING
+```sql
+-- Filter aggregated results (like WHERE, but after GROUP BY)
+SELECT user_id, COUNT(*) AS order_count
+FROM orders
+GROUP BY user_id
+HAVING COUNT(*) > 5;
+
+-- Users with total spending > 1000
+SELECT user_id, SUM(total_price) AS total_spent
+FROM orders
+GROUP BY user_id
+HAVING SUM(total_price) > 1000;
+
+-- Combined WHERE and HAVING
+SELECT user_id, COUNT(*) AS order_count
+FROM orders
+WHERE status = 'completed'
+GROUP BY user_id
+HAVING COUNT(*) > 3;
+```
+
+---
+
+## Subqueries
+
+### 20. Subqueries in WHERE
+```sql
+-- Find users who placed orders
+SELECT * FROM users
+WHERE id IN (SELECT DISTINCT user_id FROM orders);
+
+-- Find products more expensive than average
+SELECT * FROM products
+WHERE price > (SELECT AVG(price) FROM products);
+
+-- Users with no orders
+SELECT * FROM users
+WHERE id NOT IN (SELECT user_id FROM orders);
+```
+
+### 21. Subqueries in FROM
+```sql
+-- Use subquery as a table
+SELECT avg_price.category, avg_price.average
+FROM (
+    SELECT category, AVG(price) AS average
+    FROM products
+    GROUP BY category
+) AS avg_price
+WHERE avg_price.average > 100;
+```
+
+### 22. Correlated Subqueries
+```sql
+-- Find users who spent more than their country's average
+SELECT u1.id, u1.username, u1.country
+FROM users u1
+WHERE (
+    SELECT SUM(o.total_price)
+    FROM orders o
+    WHERE o.user_id = u1.id
+) > (
+    SELECT AVG(total)
+    FROM (
+        SELECT SUM(o2.total_price) AS total
+        FROM orders o2
+        JOIN users u2 ON o2.user_id = u2.id
+        WHERE u2.country = u1.country
+        GROUP BY u2.id
+    ) AS country_avg
+);
+```
+
+---
+
+## Indexes
+
+### 23. Create Index
+```sql
+-- Single column index
+CREATE INDEX idx_username ON users(username);
+
+-- Multi-column index
+CREATE INDEX idx_user_created ON users(user_id, created_at);
+
+-- Unique index
+CREATE UNIQUE INDEX idx_email ON users(email);
+
+-- Show indexes
+SHOW INDEX FROM users;
+
+-- Drop index
+DROP INDEX idx_username ON users;
+```
+
+### 24. Index Best Practices
+```sql
+-- Index columns used in WHERE, JOIN, ORDER BY
+CREATE INDEX idx_status ON orders(status);
+CREATE INDEX idx_created ON orders(created_at);
+
+-- Composite index (order matters)
+CREATE INDEX idx_user_status ON orders(user_id, status);
+-- Good for: WHERE user_id = ? AND status = ?
+-- OK for:   WHERE user_id = ?
+-- Bad for:  WHERE status = ?
+
+-- Don't over-index
+-- Indexes slow down INSERT/UPDATE/DELETE
+
+-- Use EXPLAIN to check query execution
+EXPLAIN SELECT * FROM orders WHERE status = 'pending';
+```
+
+---
+
+## Transactions
+
+### 25. Transaction Basics
+```sql
+-- Start transaction
+START TRANSACTION;
+-- or
+BEGIN;
+
+-- Make changes
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE id = 2;
+
+-- Commit (save changes)
+COMMIT;
+
+-- Rollback (undo changes)
+ROLLBACK;
+```
+
+### 26. ACID Properties
+```
+Atomicity:   All or nothing (transaction commits or rolls back entirely)
+Consistency: Data integrity maintained
+Isolation:   Transactions don't interfere with each other
+Durability:  Committed data persists
+```
+
+### 27. Isolation Levels
+```sql
+-- Set isolation level
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+-- Example transaction
+START TRANSACTION;
+SELECT * FROM accounts WHERE id = 1 FOR UPDATE;  -- Lock row
+UPDATE accounts SET balance = balance - 100 WHERE id = 1;
+COMMIT;
+```
+
+---
+
+## Performance
+
+### 28. EXPLAIN
+```sql
+-- Analyze query execution
+EXPLAIN SELECT * FROM orders WHERE status = 'pending';
+
+-- Output columns:
+-- type: ALL (full table scan), index, range, ref, const
+-- possible_keys: Indexes MySQL can use
+-- key: Index actually used
+-- rows: Estimated rows scanned
+
+-- Look for:
+-- type = ALL (bad, full table scan)
+-- rows = high number (inefficient)
+-- Using filesort (sorting without index)
+-- Using temporary (creating temp table)
+```
+
+### 29. Query Optimization
+```sql
+-- Bad: Select all columns
+SELECT * FROM users;
+
+-- Good: Select only needed columns
+SELECT id, username FROM users;
+
+-- Bad: Function on indexed column
+SELECT * FROM orders WHERE YEAR(created_at) = 2023;
+
+-- Good: Range query
+SELECT * FROM orders WHERE created_at >= '2023-01-01' AND created_at < '2024-01-01';
+
+-- Bad: Leading wildcard
+SELECT * FROM users WHERE username LIKE '%john';
+
+-- Good: Trailing wildcard
+SELECT * FROM users WHERE username LIKE 'john%';
+
+-- Use LIMIT for large results
+SELECT * FROM logs ORDER BY created_at DESC LIMIT 100;
+
+-- Use index hints (if needed)
+SELECT * FROM users USE INDEX (idx_username) WHERE username = 'john';
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Design Database Schema
+```sql
+-- E-commerce database
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE products (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(200) NOT NULL,
+    description TEXT,
+    price DECIMAL(10,2) NOT NULL CHECK (price > 0),
+    stock INT DEFAULT 0 CHECK (stock >= 0),
+    category_id INT,
+    FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE orders (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    status ENUM('pending', 'processing', 'shipped', 'delivered', 'cancelled') DEFAULT 'pending',
+    total DECIMAL(10,2) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE order_items (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL CHECK (quantity > 0),
+    price DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (order_id) REFERENCES orders(id) ON DELETE CASCADE,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+-- Indexes
+CREATE INDEX idx_user_created ON orders(user_id, created_at);
+CREATE INDEX idx_product_category ON products(category_id);
+CREATE INDEX idx_order_status ON orders(status);
+```
+
+### Scenario 2: Complex Query
+```sql
+-- Find top 10 customers by total spending in last 6 months
+SELECT 
+    u.id,
+    u.email,
+    COUNT(o.id) AS order_count,
+    SUM(o.total) AS total_spent
+FROM users u
+JOIN orders o ON u.id = o.user_id
+WHERE o.created_at >= DATE_SUB(NOW(), INTERVAL 6 MONTH)
+    AND o.status = 'delivered'
+GROUP BY u.id, u.email
+ORDER BY total_spent DESC
+LIMIT 10;
+
+-- Products never ordered
+SELECT p.id, p.name
+FROM products p
+LEFT JOIN order_items oi ON p.id = oi.product_id
+WHERE oi.id IS NULL;
+
+-- Monthly revenue report
+SELECT 
+    DATE_FORMAT(created_at, '%Y-%m') AS month,
+    COUNT(*) AS order_count,
+    SUM(total) AS revenue
+FROM orders
+WHERE status = 'delivered'
+    AND created_at >= '2023-01-01'
+GROUP BY month
+ORDER BY month;
+```
+
+### Scenario 3: Optimize Slow Query
+```sql
+-- Slow query
+SELECT * FROM orders WHERE YEAR(created_at) = 2023;
+
+-- Optimized
+SELECT * FROM orders 
+WHERE created_at >= '2023-01-01' AND created_at < '2024-01-01';
+
+-- Add index
+CREATE INDEX idx_created_at ON orders(created_at);
+
+-- Check performance
+EXPLAIN SELECT * FROM orders 
+WHERE created_at >= '2023-01-01' AND created_at < '2024-01-01';
+```
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview  
+**Last Updated**: February 15, 2026  
+**Total Concepts**: 100+ SQL operations

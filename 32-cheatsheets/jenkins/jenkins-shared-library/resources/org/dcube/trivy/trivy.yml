@@ -1,0 +1,23 @@
+cache-dir: /tmp/trivy-cache
+format: template
+timeout: 10m
+exit-code: 1
+severity:
+  - CRITICAL
+scan:
+  skip-dirs:
+    - /lib64
+    - /lib
+    - /usr/lib
+    - /usr/include
+  scanners:
+    - vuln
+    - secret
+vulnerability:
+  ignore-unfixed: true
+pkg:
+  types:
+    - os
+    - library
+db:
+  skip-update: false

@@ -1,0 +1,46 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: resource-demo
+spec:
+  containers:
+  
+  # Example 1: Web application (bursty traffic)
+  - name: webapp
+    image: nginx:1.21
+    resources:
+      requests:
+        cpu: 250m        # Guaranteed 0.25 cores
+        memory: 256Mi    # Guaranteed 256 MB
+      limits:
+        cpu: 1000m       # Can burst up to 1 core
+        memory: 512Mi    # Killed if uses more than 512 MB
+  
+  # Example 2: Background worker (steady load)
+  - name: worker
+    image: worker:1.0
+    resources:
+      requests:
+        cpu: 500m
+        memory: 512Mi
+      limits:
+        cpu: 500m        # Same as request = no bursting
+        memory: 512Mi    # Predictable usage
+
+---
+# What happens:
+#
+# Scheduling:
+# - Kubernetes finds a node with 750m CPU and 768Mi memory available
+# - Pod is scheduled there
+#
+# Runtime:
+# - webapp can use up to 1 core if node has capacity
+# - worker is limited to exactly 0.5 cores
+# - If webapp tries to use > 512Mi memory → OOMKilled → pod restarts
+# - If webapp tries to use > 1 core → CPU throttled (slowed down, not killed)
+#
+# Quality of Service (QoS) classes:
+# - Guaranteed: requests = limits for all resources
+# - Burstable: requests < limits (this pod)
+# - BestEffort: no requests/limits set (lowest priority)

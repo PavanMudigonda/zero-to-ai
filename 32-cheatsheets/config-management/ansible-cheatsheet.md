@@ -1,0 +1,820 @@
+# Ansible Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [Ansible Basics](#ansible-basics)
+2. [Inventory](#inventory)
+3. [Ad-Hoc Commands](#ad-hoc-commands)
+4. [Playbooks](#playbooks)
+5. [Variables](#variables)
+6. [Conditionals & Loops](#conditionals--loops)
+7. [Handlers](#handlers)
+8. [Roles](#roles)
+9. [Ansible Vault](#ansible-vault)
+10. [Modules](#modules)
+11. [Templates](#templates)
+12. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## Ansible Basics
+
+### 1. Installation
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install ansible
+
+# RHEL/CentOS
+sudo yum install ansible
+
+# macOS
+brew install ansible
+
+# Python pip
+pip install ansible
+
+# Verify
+ansible --version
+```
+
+### 2. Configuration
+```bash
+# ansible.cfg (priority order)
+1. ANSIBLE_CONFIG environment variable
+2. ./ansible.cfg (in current directory)
+3. ~/.ansible.cfg (home directory)
+4. /etc/ansible/ansible.cfg (default)
+
+# Example ansible.cfg
+[defaults]
+inventory = ./inventory
+host_key_checking = False
+retry_files_enabled = False
+forks = 20
+
+[privilege_escalation]
+become = True
+become_method = sudo
+become_user = root
+become_ask_pass = False
+```
+
+---
+
+## Inventory
+
+### 3. Static Inventory
+```ini
+# inventory/hosts (INI format)
+[webservers]
+web1.example.com
+web2.example.com ansible_host=10.0.0.2
+web3.example.com ansible_host=10.0.0.3 ansible_port=2222
+
+[databases]
+db1.example.com
+db2.example.com
+
+[production:children]
+webservers
+databases
+
+[all:vars]
+ansible_user=admin
+ansible_ssh_private_key_file=~/.ssh/id_rsa
+
+[webservers:vars]
+http_port=80
+max_clients=200
+```
+
+### 4. YAML Inventory
+```yaml
+# inventory/hosts.yml
+all:
+  children:
+    webservers:
+      hosts:
+        web1.example.com:
+        web2.example.com:
+          ansible_host: 10.0.0.2
+        web3.example.com:
+          ansible_host: 10.0.0.3
+          ansible_port: 2222
+      vars:
+        http_port: 80
+        max_clients: 200
+    databases:
+      hosts:
+        db1.example.com:
+        db2.example.com:
+  vars:
+    ansible_user: admin
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa
+```
+
+### 5. Dynamic Inventory
+```bash
+# List hosts
+ansible-inventory --list
+ansible-inventory --graph
+
+# AWS EC2 dynamic inventory (using plugin)
+# inventory/aws_ec2.yml
+plugin: aws_ec2
+regions:
+  - us-east-1
+keyed_groups:
+  - key: tags.Environment
+    prefix: env
+```
+
+---
+
+## Ad-Hoc Commands
+
+### 6. Basic Commands
+```bash
+# Ping all hosts
+ansible all -m ping
+
+# Ping specific group
+ansible webservers -m ping
+
+# Check uptime
+ansible all -a "uptime"
+
+# Run as sudo
+ansible all -a "systemctl status nginx" --become
+
+# Use specific user
+ansible all -a "whoami" -u admin
+
+# Limit to specific hosts
+ansible all -m ping --limit web1.example.com
+ansible all -m ping --limit "web1.example.com,web2.example.com"
+```
+
+### 7. Common Ad-Hoc Operations
+```bash
+# Install package
+ansible webservers -m apt -a "name=nginx state=present" --become
+
+# Restart service
+ansible webservers -m service -a "name=nginx state=restarted" --become
+
+# Copy file
+ansible all -m copy -a "src=/local/file dest=/remote/file mode=0644"
+
+# Create directory
+ansible all -m file -a "path=/opt/app state=directory mode=0755" --become
+
+# Fetch file from remote
+ansible all -m fetch -a "src=/etc/hosts dest=/tmp/hosts"
+
+# Check disk space
+ansible all -a "df -h"
+
+# Gather facts
+ansible all -m setup
+ansible all -m setup -a "filter=ansible_distribution*"
+```
+
+---
+
+## Playbooks
+
+### 8. Basic Playbook Structure
+```yaml
+# playbook.yml
+---
+- name: Configure web servers
+  hosts: webservers
+  become: yes
+  
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: present
+        update_cache: yes
+    
+    - name: Start nginx service
+      service:
+        name: nginx
+        state: started
+        enabled: yes
+    
+    - name: Copy index.html
+      copy:
+        src: files/index.html
+        dest: /var/www/html/index.html
+        mode: '0644'
+```
+
+### 9. Run Playbooks
+```bash
+# Run playbook
+ansible-playbook playbook.yml
+
+# Check syntax
+ansible-playbook playbook.yml --syntax-check
+
+# Dry run
+ansible-playbook playbook.yml --check
+
+# Verbose output
+ansible-playbook playbook.yml -v
+ansible-playbook playbook.yml -vvv
+
+# Limit to specific hosts
+ansible-playbook playbook.yml --limit web1.example.com
+
+# Tags
+ansible-playbook playbook.yml --tags="install"
+ansible-playbook playbook.yml --skip-tags="install"
+
+# Start at specific task
+ansible-playbook playbook.yml --start-at-task="Install nginx"
+```
+
+---
+
+## Variables
+
+### 10. Define Variables
+```yaml
+# In playbook
+---
+- name: Example
+  hosts: webservers
+  vars:
+    http_port: 80
+    server_name: example.com
+  
+  tasks:
+    - name: Configure nginx
+      template:
+        src: nginx.conf.j2
+        dest: /etc/nginx/nginx.conf
+
+# In separate file
+# vars/main.yml
+http_port: 80
+server_name: example.com
+
+# Use in playbook
+---
+- name: Example
+  hosts: webservers
+  vars_files:
+    - vars/main.yml
+```
+
+### 11. Variable Precedence
+```bash
+# Lowest to highest precedence:
+1. role defaults
+2. inventory file/script group vars
+3. inventory group_vars/all
+4. inventory group_vars/*
+5. playbook group_vars/all
+6. playbook group_vars/*
+7. inventory file/script host vars
+8. inventory host_vars/*
+9. playbook host_vars/*
+10. host facts
+11. play vars
+12. play vars_prompt
+13. play vars_files
+14. role vars
+15. block vars
+16. task vars
+17. extra vars (-e option)
+```
+
+### 12. Registered Variables
+```yaml
+- name: Get service status
+  command: systemctl status nginx
+  register: nginx_status
+  ignore_errors: yes
+
+- name: Show status
+  debug:
+    msg: "{{ nginx_status.stdout }}"
+
+- name: Conditional on result
+  service:
+    name: nginx
+    state: started
+  when: nginx_status.rc != 0
+```
+
+---
+
+## Conditionals & Loops
+
+### 13. Conditionals
+```yaml
+- name: Install package on Debian
+  apt:
+    name: nginx
+    state: present
+  when: ansible_os_family == "Debian"
+
+- name: Install package on RedHat
+  yum:
+    name: nginx
+    state: present
+  when: ansible_os_family == "RedHat"
+
+- name: Multiple conditions
+  service:
+    name: nginx
+    state: started
+  when:
+    - ansible_os_family == "Debian"
+    - ansible_distribution_version == "20.04"
+
+- name: OR condition
+  debug:
+    msg: "Development or staging"
+  when: environment == "dev" or environment == "staging"
+```
+
+### 14. Loops
+```yaml
+# Simple loop
+- name: Install multiple packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - nginx
+    - git
+    - curl
+
+# Loop with dictionary
+- name: Create users
+  user:
+    name: "{{ item.name }}"
+    state: present
+    groups: "{{ item.groups }}"
+  loop:
+    - { name: 'john', groups: 'developers' }
+    - { name: 'jane', groups: 'admins' }
+
+# Loop with_items (legacy)
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - nginx
+    - git
+
+# Loop over dict
+- name: Configure firewall
+  ufw:
+    rule: allow
+    port: "{{ item.value }}"
+    proto: tcp
+  loop: "{{ lookup('dict', ports) }}"
+  vars:
+    ports:
+      http: 80
+      https: 443
+```
+
+---
+
+## Handlers
+
+### 15. Handlers
+```yaml
+---
+- name: Configure web server
+  hosts: webservers
+  
+  tasks:
+    - name: Copy nginx config
+      copy:
+        src: nginx.conf
+        dest: /etc/nginx/nginx.conf
+      notify: restart nginx
+    
+    - name: Install package
+      apt:
+        name: nginx-extras
+        state: present
+      notify:
+        - restart nginx
+        - reload nginx
+  
+  handlers:
+    - name: restart nginx
+      service:
+        name: nginx
+        state: restarted
+    
+    - name: reload nginx
+      service:
+        name: nginx
+        state: reloaded
+```
+
+---
+
+## Roles
+
+### 16. Create Role
+```bash
+# Generate role structure
+ansible-galaxy init nginx
+
+# Role directory structure:
+nginx/
+├── defaults/        # Default variables
+│   └── main.yml
+├── files/          # Static files
+├── handlers/       # Handlers
+│   └── main.yml
+├── meta/           # Role metadata
+│   └── main.yml
+├── tasks/          # Main tasks
+│   └── main.yml
+├── templates/      # Jinja2 templates
+├── tests/          # Test playbooks
+│   └── test.yml
+└── vars/           # Other variables
+    └── main.yml
+```
+
+### 17. Use Roles
+```yaml
+# playbook.yml
+---
+- name: Configure servers
+  hosts: webservers
+  roles:
+    - common
+    - nginx
+    - { role: database, when: "'databases' in group_names" }
+
+# With variables
+- name: Configure servers
+  hosts: webservers
+  roles:
+    - role: nginx
+      vars:
+        http_port: 8080
+```
+
+### 18. Install Roles from Galaxy
+```bash
+# Install role
+ansible-galaxy install geerlingguy.nginx
+
+# Install from requirements
+# requirements.yml
+---
+roles:
+  - name: geerlingguy.nginx
+    version: 3.1.2
+  - src: https://github.com/user/role
+    name: custom_role
+
+ansible-galaxy install -r requirements.yml
+
+# List installed roles
+ansible-galaxy list
+
+# Remove role
+ansible-galaxy remove geerlingguy.nginx
+```
+
+---
+
+## Ansible Vault
+
+### 19. Vault Operations
+```bash
+# Create encrypted file
+ansible-vault create secrets.yml
+
+# Edit encrypted file
+ansible-vault edit secrets.yml
+
+# Encrypt existing file
+ansible-vault encrypt vars.yml
+
+# Decrypt file
+ansible-vault decrypt secrets.yml
+
+# View encrypted file
+ansible-vault view secrets.yml
+
+# Change password
+ansible-vault rekey secrets.yml
+
+# Encrypt string
+ansible-vault encrypt_string 'secret_password' --name 'db_password'
+```
+
+### 20. Use Vaulted Files
+```bash
+# Run playbook with vault
+ansible-playbook playbook.yml --ask-vault-pass
+
+# Use password file
+ansible-playbook playbook.yml --vault-password-file ~/.vault_pass
+
+# Multiple vault passwords
+ansible-playbook playbook.yml --vault-id dev@prompt --vault-id prod@~/.vault_pass_prod
+```
+
+---
+
+## Modules
+
+### 21. File Modules
+```yaml
+# Copy file
+- copy:
+    src: /local/file
+    dest: /remote/file
+    owner: root
+    group: root
+    mode: '0644'
+
+# Template (Jinja2)
+- template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    backup: yes
+
+# Create file/directory
+- file:
+    path: /opt/app
+    state: directory
+    mode: '0755'
+
+# Create symlink
+- file:
+    src: /usr/local/app/current
+    dest: /usr/local/app/releases/v1.0
+    state: link
+
+# Fetch file from remote
+- fetch:
+    src: /etc/hosts
+    dest: /tmp/hosts
+    flat: yes
+```
+
+### 22. Package Modules
+```yaml
+# Generic package module
+- package:
+    name: nginx
+    state: present
+
+# APT (Debian/Ubuntu)
+- apt:
+    name: nginx
+    state: present
+    update_cache: yes
+    cache_valid_time: 3600
+
+# YUM/DNF (RHEL/CentOS)
+- yum:
+    name: nginx
+    state: latest
+
+# Multiple packages
+- apt:
+    name:
+      - nginx
+      - git
+      - curl
+    state: present
+```
+
+### 23. Service Modules
+```yaml
+- service:
+    name: nginx
+    state: started
+    enabled: yes
+
+# Systemd
+- systemd:
+    name: nginx
+    state: restarted
+    daemon_reload: yes
+    enabled: yes
+```
+
+---
+
+## Templates
+
+### 24. Jinja2 Templates
+```jinja2
+# templates/nginx.conf.j2
+server {
+    listen {{ http_port }};
+    server_name {{ server_name }};
+    
+    {% if enable_ssl %}
+    listen 443 ssl;
+    ssl_certificate {{ ssl_cert_path }};
+    ssl_certificate_key {{ ssl_key_path }};
+    {% endif %}
+    
+    {% for location in locations %}
+    location {{ location.path }} {
+        proxy_pass {{ location.backend }};
+    }
+    {% endfor %}
+}
+
+# Variables and filters
+{{ variable | default('default_value') }}
+{{ variable | upper }}
+{{ variable | lower }}
+{{ list_var | join(', ') }}
+{{ dict_var | to_json }}
+{{ dict_var | to_yaml }}
+```
+
+### 25. Use Templates
+```yaml
+- name: Configure nginx
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    owner: root
+    group: root
+    mode: '0644'
+    backup: yes
+    validate: 'nginx -t -c %s'
+  notify: restart nginx
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Deploy Application Stack
+```yaml
+---
+- name: Deploy LAMP stack
+  hosts: webservers
+  become: yes
+  
+  vars:
+    mysql_root_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256...
+  
+  tasks:
+    - name: Install packages
+      apt:
+        name:
+          - apache2
+          - mysql-server
+          - php
+          - php-mysql
+        state: present
+        update_cache: yes
+    
+    - name: Start services
+      service:
+        name: "{{ item }}"
+        state: started
+        enabled: yes
+      loop:
+        - apache2
+        - mysql
+    
+    - name: Deploy application
+      git:
+        repo: 'https://github.com/user/app.git'
+        dest: /var/www/html
+        version: main
+      notify: restart apache
+  
+  handlers:
+    - name: restart apache
+      service:
+        name: apache2
+        state: restarted
+```
+
+### Scenario 2: Zero-Downtime Deployment
+```yaml
+---
+- name: Rolling deployment
+  hosts: webservers
+  serial: 1  # One host at a time
+  
+  pre_tasks:
+    - name: Remove from load balancer
+      local_action:
+        module: uri
+        url: "http://loadbalancer/api/remove/{{ inventory_hostname }}"
+        method: POST
+  
+  tasks:
+    - name: Deploy new version
+      copy:
+        src: app-v2.0.tar.gz
+        dest: /opt/app/
+    
+    - name: Extract archive
+      unarchive:
+        src: /opt/app/app-v2.0.tar.gz
+        dest: /opt/app/
+        remote_src: yes
+    
+    - name: Restart application
+      systemd:
+        name: myapp
+        state: restarted
+    
+    - name: Wait for service
+      wait_for:
+        port: 8080
+        delay: 5
+        timeout: 60
+  
+  post_tasks:
+    - name: Add back to load balancer
+      local_action:
+        module: uri
+        url: "http://loadbalancer/api/add/{{ inventory_hostname }}"
+        method: POST
+    
+    - name: Smoke test
+      uri:
+        url: "http://{{ inventory_hostname }}:8080/health"
+        status_code: 200
+```
+
+### Scenario 3: Security Hardening
+```yaml
+---
+- name: Security hardening
+  hosts: all
+  become: yes
+  
+  tasks:
+    - name: Update all packages
+      apt:
+        upgrade: dist
+        update_cache: yes
+    
+    - name: Disable root login
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: '^PermitRootLogin'
+        line: 'PermitRootLogin no'
+      notify: restart sshd
+    
+    - name: Configure firewall
+      ufw:
+        rule: "{{ item.rule }}"
+        port: "{{ item.port }}"
+        proto: "{{ item.proto }}"
+      loop:
+        - { rule: 'allow', port: '22', proto: 'tcp' }
+        - { rule: 'allow', port: '80', proto: 'tcp' }
+        - { rule: 'allow', port: '443', proto: 'tcp' }
+    
+    - name: Enable firewall
+      ufw:
+        state: enabled
+    
+    - name: Install fail2ban
+      apt:
+        name: fail2ban
+        state: present
+    
+    - name: Enable automatic security updates
+      apt:
+        name: unattended-upgrades
+        state: present
+  
+  handlers:
+    - name: restart sshd
+      service:
+        name: sshd
+        state: restarted
+```
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview  
+**Last Updated**: February 15, 2026  
+**Total Commands**: 80+ Ansible operations

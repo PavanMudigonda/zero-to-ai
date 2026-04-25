@@ -1,0 +1,81 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: affinity-demo
+spec:
+  
+  # Node Affinity: Prefer certain nodes
+  affinity:
+    
+    # Schedule based on node labels
+    nodeAffinity:
+      
+      # REQUIRED: Must match these rules
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: kubernetes.io/os
+            operator: In
+            values:
+            - linux
+          - key: node-type
+            operator: In
+            values:
+            - compute
+            - gpu
+      
+      # PREFERRED: Try to match, but not required
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        preference:
+          matchExpressions:
+          - key: disktype
+            operator: In
+            values:
+            - ssd
+      - weight: 50
+        preference:
+          matchExpressions:
+          - key: zone
+            operator: In
+            values:
+            - us-east-1a
+    
+    # Pod Affinity: Run near other pods
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchLabels:
+            app: database
+        topologyKey: kubernetes.io/hostname
+    
+    # Pod Anti-Affinity: Don't run near other pods
+    podAntiAffinity:
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchLabels:
+              app: affinity-demo  # Don't run on same node as myself
+          topologyKey: kubernetes.io/hostname
+  
+  containers:
+  - name: app
+    image: nginx:1.21
+
+---
+# Use cases:
+#
+# Node Affinity:
+# - Run GPU workloads on GPU nodes
+# - Run compute-heavy jobs on high-CPU nodes
+# - Keep production pods on production nodes
+#
+# Pod Affinity:
+# - Run web app near cache (low latency)
+# - Run app near database
+#
+# Pod Anti-Affinity:
+# - Spread replicas across nodes (high availability)
+# - Don't run two database masters on same node
+# - Separate production and dev workloads

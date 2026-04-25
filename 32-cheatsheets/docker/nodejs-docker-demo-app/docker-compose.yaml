@@ -1,0 +1,66 @@
+services:
+  my-app:
+    container_name: my-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    environment:
+      - MONGO_DB_USERNAME=admin
+      - MONGO_DB_PWD=password
+    depends_on:
+      - mongodb
+    networks:
+      - mongo-network
+      
+  mongodb:
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=user-account
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mongo-network
+      
+  mongo-express:
+    image: mongo-express:latest
+    restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
+    ports:
+      - 8081:8081
+    networks:
+      - mongo-network
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+    depends_on:
+      - mongodb
+      
+volumes:
+  mongo-data:
+    driver: local
+
+networks:
+  mongo-network:
+    driver: bridge
+# # Stop any running containers first
+# docker-compose down
+
+# # Build and start all services
+# docker-compose up -d
+
+# # View logs
+# docker-compose logs -f
+
+# # Access the application:
+# # - App: http://localhost:3000
+# # - Mongo Express: http://localhost:8081
+
+# To stop everything:
+
+# docker-compose down

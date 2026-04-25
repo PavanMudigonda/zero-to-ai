@@ -1,0 +1,869 @@
+@Library('jenkins-shared-library@v1.0.0') _  // Pin to version, not branch
+
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.9-eclipse-temurin-17'
+            args '''
+                -v $HOME/.m2:/root/.m2'
+            '''
+        }
+    }
+
+    // Pipeline options
+    options {
+        timestamps()
+        timeout(time: 60, unit: 'MINUTES')
+        buildDiscarder(logRotator(
+            numToKeepStr: '10',
+            artifactNumToKeepStr: '5'
+        ))
+        disableConcurrentBuilds()  // Prevent parallel builds
+    }
+
+    // Environment variables
+    environment {
+        DOCKER_REGISTRY = credentials('docker-registry-url')
+        APP_NAME = 'myapp'
+        IMAGE_TAG = "${DOCKER_REGISTRY}/${APP_NAME}:${BUILD_NUMBER}"
+        DEPLOY_ENV = 'development'
+        BUILD_VERSION = "${env.BUILD_NUMBER}"
+    }
+
+    // Parameters (for parameterized builds)
+    parameters {
+        string(name: 'BRANCH_NAME', defaultValue: 'main', description: 'Branch to build')
+        choice(name: 'ENVIRONMENT', choices: ['dev', 'staging', 'prod'], description: 'Target environment')
+        booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests?')
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Environment Info') {
+            steps {
+                echo "=== Build Information ==="
+                echo "Job Name: ${env.JOB_NAME}"
+                echo "Build Number: ${env.BUILD_NUMBER}"
+                echo "Build Version: ${env.BUILD_VERSION}"
+                echo "Workspace: ${env.WORKSPACE}"
+                echo "Node Name: ${env.NODE_NAME}"
+                echo "======================="
+
+                // Show environment variable
+                echo "Application Name: ${env.APP_NAME}"
+                echo "Target Environment: ${params.ENVIRONMENT}"
+            }
+        }
+
+        stage('Build & Test') {
+            steps {
+                maven('clean verify')
+            }
+            post {
+                always {
+                    junit testResults: '**/target/surefire-reports/*.xml',
+                          allowEmptyResults: true
+                    jacoco(
+                        execPattern: '**/target/jacoco.exec',
+                        classPattern: '**/target/classes',
+                        sourcePattern: '**/src/main/java'
+                    )
+                }
+            }
+        }
+
+        stage('Static Code Analysis') {
+            steps {
+                script {
+                    // Example: SonarQube
+                    withSonarQubeEnv('SonarQube') {
+                        maven('sonar:sonar')
+                    }
+                }
+            }
+        }
+
+        stage('Security Scans') {
+            parallel {
+                stage('Trivy FS Scan') {
+                    steps {
+                        trivyScan(
+                            scanType: 'fs',
+                            target: '.',
+                            severity: 'HIGH,CRITICAL'
+                        )
+                    }
+                }
+                stage('Checkov IaC Scan') {
+                    when {
+                        expression { fileExists('terraform/') || fileExists('*.tf') }
+                    }
+                    steps {
+                        checkovScan(
+                            directory: '.',
+                            framework: 'terraform'
+                        )
+                    }
+                }
+                stage('OWASP Dependency Check') {
+                    steps {
+                        script {
+                            dependencyCheck(
+                                additionalArguments: '--scan target/',
+                                odcInstallation: 'OWASP-DC'
+                            )
+                            dependencyCheckPublisher(
+                                pattern: '**/dependency-check-report.xml'
+                            )
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                    branch pattern: 'release/.*', comparator: 'REGEXP'
+                }
+            }
+            steps {
+                script {
+                    retry(3) {
+                        kaniko(
+                            dockerfile: 'Dockerfile',
+                            context: '.',
+                            destination: env.IMAGE_TAG,
+                            buildArgs: [
+                                "BUILD_NUMBER=${BUILD_NUMBER}",
+                                "GIT_COMMIT=${GIT_COMMIT}"
+                            ]
+                        )
+                    }
+                }
+            }
+        }
+
+        stage('Trivy Image Scan') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                }
+            }
+            steps {
+                trivyScan(
+                    scanType: 'image',
+                    target: env.IMAGE_TAG,
+                    severity: 'HIGH,CRITICAL',
+                    exitCode: 1  // Fail on critical issues
+                )
+            }
+        }
+
+        stage('Conditional - Deploy to Dev') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                script {
+                    echo "Deploying ${env.IMAGE_TAG} to development"
+                    // Add your deployment logic here
+                }
+            }
+        }
+
+        stage('Conditional - Deploy to Production') {
+            when {
+                branch 'main'
+            }
+            steps {
+                input(
+                    message: 'Deploy to production?',
+                    ok: 'Deploy',
+                    submitter: 'release-managers,devops-team'
+                )
+                script {
+                    echo "Deploying ${env.IMAGE_TAG} to production"
+                    // Add your deployment logic here
+                }
+            }
+        }
+
+        stage('Using Shared Library Functions') {
+            steps {
+                script {
+                    echo '=== Shared Library Function Examples ==='
+
+                    // Example 1: HelloWorld function
+                    // This calls a custom class from src/org/dcube/build/
+                    echo 'Example 1: HelloWorld function'
+                    // HelloWorld('path/to/solution')
+
+                    // Example 2: Git Checkout
+                    // This uses the gitCheckout function from vars/
+                    echo 'Example 2: Git Checkout with shared library'
+                    // gitCheckout(
+                    //     url: 'https://github.com/your-org/your-repo.git',
+                    //     branch: 'main'
+                    // )
+
+                    // Example 3: Maven Build
+                    // Calls maven.build() from vars/maven.groovy
+                    echo 'Example 3: Maven build using shared library'
+                    // maven.build()  // Runs: mvn clean install -DskipTests
+
+                    // Example 4: Maven Test
+                    echo 'Example 4: Maven test using shared library'
+                    // maven.test()  // Runs: mvn test
+
+                    // Example 5: Kaniko Build (Docker build without Docker daemon)
+                    echo 'Example 5: Kaniko build'
+                    // kaniko.build()  // Builds image and saves as tar
+
+                    // Example 6: Kaniko Push to Registry
+                    echo 'Example 6: Kaniko push to registry'
+                    // kaniko.push(
+                    //     'your-registry/your-app',
+                    //     'v1.0.0',
+                    //     'docker-registry-credentials'
+                    // )
+
+                    // Example 7: Trivy Security Scan for Docker Image
+                    echo 'Example 7: Trivy scan for Docker image'
+                    // trivyScan.docker('myapp', 'latest')
+
+                    // Example 8: Trivy Security Scan for Kaniko tar
+                    echo 'Example 8: Trivy scan for Kaniko build'
+                    // trivyScan.kaniko()
+
+                    // Example 9: Email Notification
+                    echo 'Example 9: Email notification'
+                    // emailNotification(
+                    //     to: 'team@company.com',
+                    //     subject: 'Build Status',
+                    //     body: 'Build completed successfully'
+                    // )
+
+                    // Example 10: Trivy Notification
+                    echo 'Example 10: Trivy notification'
+                    // trivyNotification(
+                    //     status: 'SUCCESS',
+                    //     message: 'Security scan passed'
+                    // )
+                }
+            }
+        }
+
+        stage('Real Shared Library Usage Examples') {
+            steps {
+                script {
+                    echo '=== Complete Real-World Examples ==='
+                }
+            }
+        }
+
+        stage('Example: Complete Java Build Pipeline') {
+            steps {
+                script {
+                    echo '--- Java Application Build with Shared Library ---'
+
+                    // Step 1: Checkout code
+                    echo 'Step 1: Checkout repository'
+                    // gitCheckout(
+                    //     url: 'https://github.com/your-org/java-app.git',
+                    //     branch: env.BRANCH_NAME ?: 'main'
+                    // )
+
+                    // Step 2: Build with Maven
+                    echo 'Step 2: Build with Maven'
+                    // maven.build()
+
+                    // Step 3: Run tests
+                    echo 'Step 3: Run unit tests'
+                    // maven.test()
+
+                    // Step 4: Build Docker image with Kaniko
+                    echo 'Step 4: Build Docker image'
+                    // kaniko.build()
+
+                    // Step 5: Scan with Trivy
+                    echo 'Step 5: Security scan with Trivy'
+                    // def scanResult = trivyScan.kaniko()
+                    // if (scanResult == 0) {
+                    //     echo 'Security scan passed'
+                    // } else {
+                    //     error 'Security vulnerabilities found'
+                    // }
+
+                    // Step 6: Push to registry (only on main branch)
+                    echo 'Step 6: Push to registry'
+                    // if (env.BRANCH_NAME == 'main') {
+                    //     kaniko.push(
+                    //         "${DOCKER_REGISTRY}/${APP_NAME}",
+                    //         "${BUILD_NUMBER}",
+                    //         'docker-hub-credentials'
+                    //     )
+                    // }
+
+                    // Step 7: Send notification
+                    echo 'Step 7: Send success notification'
+                    // emailNotification(
+                    //     to: 'dev-team@company.com',
+                    //     subject: "Build Success: ${env.JOB_NAME} #${BUILD_NUMBER}",
+                    //     body: "Build completed successfully for branch ${env.BRANCH_NAME}"
+                    // )
+                }
+            }
+        }
+
+        stage('Example: Infrastructure as Code Pipeline') {
+            steps {
+                script {
+                    echo '--- Terraform Pipeline with Shared Library ---'
+
+                    // Step 1: Checkout IaC repository
+                    echo 'Step 1: Checkout Terraform code'
+                    // gitCheckout(
+                    //     url: 'https://github.com/your-org/infrastructure.git',
+                    //     branch: 'main'
+                    // )
+
+                    // Step 2: Terraform lint
+                    echo 'Step 2: Lint Terraform files'
+                    // tfLint()
+
+                    // Step 3: Checkov security scan
+                    echo 'Step 3: Security scan with Checkov'
+                    // checkovScan(
+                    //     directory: './terraform',
+                    //     framework: 'terraform'
+                    // )
+
+                    // Step 4: Terraform plan
+                    echo 'Step 4: Terraform plan'
+                    // terraform(
+                    //     action: 'plan',
+                    //     workspace: params.ENVIRONMENT
+                    // )
+
+                    // Step 5: Terraform apply (with approval)
+                    echo 'Step 5: Terraform apply'
+                    // input(message: 'Apply Terraform changes?', ok: 'Apply')
+                    // terraform(
+                    //     action: 'apply',
+                    //     workspace: params.ENVIRONMENT,
+                    //     autoApprove: true
+                    // )
+
+                    // Step 6: Send notification
+                    echo 'Step 6: Send deployment notification'
+                    // emailNotification(
+                    //     to: 'devops-team@company.com',
+                    //     subject: "Infrastructure Updated: ${params.ENVIRONMENT}",
+                    //     body: "Terraform applied successfully in ${params.ENVIRONMENT}"
+                    // )
+                }
+            }
+        }
+
+        stage('Example: Multi-Service Build') {
+            steps {
+                script {
+                    echo '--- Building Multiple Services ---'
+
+                    def services = ['frontend', 'backend', 'api']
+
+                    services.each { service ->
+                        echo "Building ${service}..."
+
+                        // For each service:
+                        // 1. Change to service directory
+                        // dir(service) {
+                        //     // 2. Build with Maven
+                        //     maven.build()
+                        //
+                        //     // 3. Build Docker image
+                        //     kaniko.build()
+                        //
+                        //     // 4. Scan image
+                        //     trivyScan.kaniko()
+                        //
+                        //     // 5. Push to registry
+                        //     kaniko.push(
+                        //         "${DOCKER_REGISTRY}/${service}",
+                        //         "${BUILD_NUMBER}",
+                        //         'docker-registry-creds'
+                        //     )
+                        // }
+                    }
+
+                    echo 'All services built successfully'
+                }
+            }
+        }
+
+        stage('Example: Conditional Shared Library Usage') {
+            steps {
+                script {
+                    echo '--- Conditional Library Function Calls ---'
+
+                    // Example: Run different scans based on file presence
+
+                    // Check for Dockerfile and scan
+                    if (fileExists('Dockerfile')) {
+                        echo 'Dockerfile found - running Hadolint'
+                        // hadoLint()  // Lints Dockerfile
+                    }
+
+                    // Check for Terraform files and scan
+                    if (fileExists('main.tf') || fileExists('terraform/')) {
+                        echo 'Terraform files found - running TFLint and Checkov'
+                        // tfLint()
+                        // checkovScan(directory: '.', framework: 'terraform')
+                    }
+
+                    // Check for pom.xml and build
+                    if (fileExists('pom.xml')) {
+                        echo 'Maven project detected - running Maven build'
+                        // maven.build()
+                        // maven.test()
+                    }
+
+                    // Conditional notifications
+                    if (currentBuild.result == 'SUCCESS') {
+                        echo 'Sending success notification'
+                        // trivyNotification(
+                        //     status: 'SUCCESS',
+                        //     message: 'All checks passed'
+                        // )
+                    } else if (currentBuild.result == 'FAILURE') {
+                        echo 'Sending failure notification'
+                        // trivyNotification(
+                        //     status: 'FAILURE',
+                        //     message: 'Build failed - please check logs'
+                        // )
+                        // emailNotification(
+                        //     to: 'alerts@company.com',
+                        //     subject: 'Build Failed',
+                        //     body: 'Immediate attention required'
+                        // )
+                    }
+                }
+            }
+        }
+
+        stage('Example: Error Handling with Shared Library') {
+            steps {
+                script {
+                    echo '--- Error Handling with Library Functions ---'
+
+                    try {
+                        // Attempt to build
+                        echo 'Attempting Maven build...'
+                        // maven.build()
+
+                        // If successful, continue
+                        echo 'Build successful, running tests...'
+                        // maven.test()
+
+                    } catch (Exception e) {
+                        // Handle build failure
+                        echo "Build failed: ${e.message}"
+
+                        // Send failure notification
+                        // emailNotification(
+                        //     to: 'dev-team@company.com',
+                        //     subject: 'Build Failed',
+                        //     body: "Build error: ${e.message}"
+                        // )
+
+                        // Re-throw to fail the build
+                        throw e
+                    } finally {
+                        // Always send status notification
+                        echo 'Sending final status notification...'
+                        // trivyNotification(
+                        //     status: currentBuild.result ?: 'SUCCESS',
+                        //     message: "Build completed with status: ${currentBuild.result}"
+                        // )
+                    }
+                }
+            }
+        }
+
+        stage('Example: Parallel Builds with Shared Library') {
+            steps {
+                script {
+                    echo '--- Parallel Execution Example ---'
+
+                    parallel(
+                        'Maven Build': {
+                            echo 'Building Java application...'
+                            // maven.build()
+                        },
+                        'Dockerfile Lint': {
+                            echo 'Linting Dockerfile...'
+                            // hadoLint()
+                        },
+                        'Terraform Lint': {
+                            echo 'Linting Terraform...'
+                            // tfLint()
+                        },
+                        'Security Scan': {
+                            echo 'Running Checkov scan...'
+                            // checkovScan(directory: '.', framework: 'terraform')
+                        }
+                    )
+
+                    echo 'All parallel tasks completed'
+                }
+            }
+        }
+
+        stage('Shell Script Examples') {
+            steps {
+                script {
+                    echo '=== Shell Script Examples ==='
+
+                    // Basic shell command
+                    sh 'echo "Hello from shell!"'
+
+                    // Multiple commands
+                    sh '''
+                        echo "Running multiple commands"
+                        pwd
+                        ls -la
+                        echo "Current user: $(whoami)"
+                    '''
+
+                    // Capture output
+                    def output = sh(script: 'date +%Y-%m-%d', returnStdout: true).trim()
+                    echo "Current date: ${output}"
+
+                    // Check exit status
+                    def status = sh(script: 'echo "Testing exit code"', returnStatus: true)
+                    echo "Exit status: ${status}"
+
+                    // Using environment variables
+                    sh '''
+                        echo "Build Number: ${BUILD_NUMBER}"
+                        echo "Workspace: ${WORKSPACE}"
+                        echo "Job Name: ${JOB_NAME}"
+                    '''
+
+                    // File operations
+                    sh '''
+                        echo "Creating test file"
+                        echo "Build ${BUILD_NUMBER}" > build-info.txt
+                        cat build-info.txt
+                    '''
+
+                    // Conditional execution
+                    sh '''
+                        if [ -f "pom.xml" ]; then
+                            echo "Maven project detected"
+                        elif [ -f "build.gradle" ]; then
+                            echo "Gradle project detected"
+                        else
+                            echo "Build system not detected"
+                        fi
+                    '''
+
+                    // Loop example
+                    sh '''
+                        echo "Listing important files:"
+                        for file in pom.xml build.gradle package.json Dockerfile; do
+                            if [ -f "$file" ]; then
+                                echo "  ✓ Found: $file"
+                            fi
+                        done
+                    '''
+
+                    // Using arrays and processing
+                    sh '''
+                        echo "System Information:"
+                        echo "  OS: $(uname -s)"
+                        echo "  Kernel: $(uname -r)"
+                        echo "  Architecture: $(uname -m)"
+                    '''
+
+                    // Error handling in shell
+                    sh '''
+                        set -e  # Exit on error
+                        echo "This will run"
+                        # Uncomment to test error handling:
+                        # false  # This would fail the build
+                        echo "This runs if no error"
+                    '''
+                }
+            }
+        }
+
+        stage('PowerShell Examples') {
+            when {
+                expression { isUnix() == false }  // Only on Windows
+            }
+            steps {
+                script {
+                    echo '=== PowerShell Examples ==='
+
+                    // Basic PowerShell command
+                    powershell 'Write-Host "Hello from PowerShell!"'
+
+                    // Multiple commands
+                    powershell '''
+                        Write-Host "Running multiple PowerShell commands"
+                        Get-Location
+                        Get-ChildItem
+                        Write-Host "Current user: $env:USERNAME"
+                    '''
+
+                    // Capture output
+                    def psOutput = powershell(script: 'Get-Date -Format yyyy-MM-dd', returnStdout: true).trim()
+                    echo "Current date from PowerShell: ${psOutput}"
+
+                    // Check exit status
+                    def psStatus = powershell(script: 'Write-Host "Testing"; exit 0', returnStatus: true)
+                    echo "PowerShell exit status: ${psStatus}"
+
+                    // Using environment variables
+                    powershell '''
+                        Write-Host "Build Number: $env:BUILD_NUMBER"
+                        Write-Host "Workspace: $env:WORKSPACE"
+                        Write-Host "Job Name: $env:JOB_NAME"
+                    '''
+
+                    // File operations
+                    powershell '''
+                        Write-Host "Creating test file"
+                        "Build $env:BUILD_NUMBER" | Out-File -FilePath build-info.txt
+                        Get-Content build-info.txt
+                    '''
+
+                    // Conditional execution
+                    powershell '''
+                        if (Test-Path "pom.xml") {
+                            Write-Host "Maven project detected"
+                        } elseif (Test-Path "build.gradle") {
+                            Write-Host "Gradle project detected"
+                        } else {
+                            Write-Host "Build system not detected"
+                        }
+                    '''
+
+                    // Loop example
+                    powershell '''
+                        Write-Host "Listing important files:"
+                        $files = @("pom.xml", "build.gradle", "package.json", "Dockerfile")
+                        foreach ($file in $files) {
+                            if (Test-Path $file) {
+                                Write-Host "  ✓ Found: $file"
+                            }
+                        }
+                    '''
+
+                    // System information
+                    powershell '''
+                        Write-Host "System Information:"
+                        Write-Host "  OS: $([System.Environment]::OSVersion.Platform)"
+                        Write-Host "  Version: $([System.Environment]::OSVersion.Version)"
+                        Write-Host "  Machine: $env:COMPUTERNAME"
+                        Write-Host "  Processor: $env:PROCESSOR_ARCHITECTURE"
+                    '''
+
+                    // Error handling
+                    powershell '''
+                        $ErrorActionPreference = "Stop"  # Stop on error
+                        Write-Host "This will run"
+                        # Uncomment to test error handling:
+                        # throw "Test error"  # This would fail the build
+                        Write-Host "This runs if no error"
+                    '''
+                }
+            }
+        }
+
+        stage('Cross-Platform Shell Examples') {
+            steps {
+                script {
+                    echo '=== Cross-Platform Examples ==='
+
+                    // Detect OS and run appropriate command
+                    if (isUnix()) {
+                        sh '''
+                            echo "Running on Unix/Linux/Mac"
+                            echo "Shell: $SHELL"
+                            echo "Home: $HOME"
+                        '''
+                    } else {
+                        powershell '''
+                            Write-Host "Running on Windows"
+                            Write-Host "Shell: PowerShell"
+                            Write-Host "Home: $env:USERPROFILE"
+                        '''
+                    }
+
+                    // Using bat for Windows CMD (alternative to PowerShell)
+                    if (!isUnix()) {
+                        bat '''
+                            echo Running batch script on Windows
+                            echo User: %USERNAME%
+                            dir
+                        '''
+                    }
+                }
+            }
+        }
+
+        stage('Advanced Shell Techniques') {
+            steps {
+                script {
+                    echo '=== Advanced Shell Techniques ==='
+
+                    // Using shebang for specific shell
+                    sh '''#!/bin/bash
+                        echo "Using bash explicitly"
+                        # Bash-specific features
+                        declare -a array=("item1" "item2" "item3")
+                        for item in "${array[@]}"; do
+                            echo "  - $item"
+                        done
+                    '''
+
+                    // Here document
+                    sh '''
+                        cat << 'EOF' > config.txt
+Build Number: ${BUILD_NUMBER}
+Environment: ${DEPLOY_ENV}
+Application: ${APP_NAME}
+EOF
+                        echo "Generated config:"
+                        cat config.txt
+                    '''
+
+                    // Running script from file
+                    sh '''
+                        # Create a reusable script
+                        cat > my-script.sh << 'SCRIPT'
+#!/bin/bash
+echo "This is a reusable script"
+echo "Args: $@"
+SCRIPT
+                        chmod +x my-script.sh
+                        ./my-script.sh arg1 arg2
+                    '''
+
+                    // JSON processing with jq (if available)
+                    sh '''
+                        echo '{"name":"myapp","version":"1.0"}' > app.json
+                        if command -v jq >/dev/null 2>&1; then
+                            echo "App name: $(jq -r '.name' app.json)"
+                            echo "Version: $(jq -r '.version' app.json)"
+                        else
+                            echo "jq not available, showing raw JSON:"
+                            cat app.json
+                        fi
+                    '''
+
+                    // Working with timestamps
+                    sh '''
+                        START_TIME=$(date +%s)
+                        echo "Starting task..."
+                        sleep 1
+                        END_TIME=$(date +%s)
+                        DURATION=$((END_TIME - START_TIME))
+                        echo "Task completed in ${DURATION} seconds"
+                    '''
+
+                    // Using functions
+                    sh '''
+                        log_message() {
+                            echo "[$(date +%Y-%m-%d\ %H:%M:%S)] $1"
+                        }
+
+                        log_message "Starting process"
+                        log_message "Process step 1"
+                        log_message "Process completed"
+                    '''
+
+                    // Parallel execution in shell
+                    sh '''
+                        echo "Running parallel tasks..."
+                        (sleep 1; echo "Task 1 done") &
+                        (sleep 1; echo "Task 2 done") &
+                        (sleep 1; echo "Task 3 done") &
+                        wait
+                        echo "All parallel tasks completed"
+                    '''
+                }
+            }
+        }
+    }
+
+    // Post-build actions
+    post {
+        always {
+            script {
+                def status = currentBuild.result ?: 'SUCCESS'
+                def emoji = status == 'SUCCESS' ? '✅' : '❌'
+
+                echo "Build finished with status: ${status}"
+                echo "Duration: ${currentBuild.durationString}"
+
+                emailNotification(
+                    to: 'team@company.com',
+                    subject: "${emoji} Build ${status}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                    body: """
+                        Build: ${env.BUILD_URL}
+                        Branch: ${env.BRANCH_NAME}
+                        Commit: ${env.GIT_COMMIT}
+                        Status: ${status}
+                        Duration: ${currentBuild.durationString}
+                    """.stripIndent(),
+                    attachLogs: status != 'SUCCESS'
+                )
+            }
+        }
+        success {
+            script {
+                echo '✅ Build completed successfully!'
+                if (env.BRANCH_NAME == 'main') {
+                    trivyNotification(
+                        status: 'SUCCESS',
+                        message: "Production deployment completed: ${env.IMAGE_TAG}"
+                    )
+                }
+            }
+        }
+        failure {
+            script {
+                echo '❌ Build failed!'
+                trivyNotification(
+                    status: 'FAILURE',
+                    message: "Build failed at stage: ${env.STAGE_NAME}"
+                )
+            }
+        }
+        unstable {
+            echo '⚠️  Build is unstable'
+        }
+        cleanup {
+            echo 'Cleaning up workspace...'
+            cleanWs(
+                deleteDirs: true,
+                patterns: [
+                    [pattern: '**/target/**', type: 'INCLUDE'],
+                    [pattern: '**/.m2/**', type: 'EXCLUDE']
+                ]
+            )
+        }
+    }
+}

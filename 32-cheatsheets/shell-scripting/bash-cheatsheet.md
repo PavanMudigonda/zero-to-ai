@@ -1,0 +1,1710 @@
+# Bash Scripting Commands Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [Basic Commands & Navigation](#basic-commands--navigation)
+2. [File Operations](#file-operations)
+3. [Text Processing](#text-processing)
+4. [Variables & Data Types](#variables--data-types)
+5. [Conditional Statements](#conditional-statements)
+6. [Loops](#loops)
+7. [Functions](#functions)
+8. [Arrays](#arrays)
+9. [String Manipulation](#string-manipulation)
+10. [Process Management](#process-management)
+11. [Networking](#networking)
+12. [File Permissions](#file-permissions)
+13. [Archive & Compression](#archive--compression)
+14. [Search & Find](#search--find)
+15. [Input/Output Redirection](#inputoutput-redirection)
+16. [Here Documents](#here-documents)
+17. [Command Substitution](#command-substitution)
+18. [Regular Expressions](#regular-expressions)
+19. [Debugging](#debugging)
+20. [Error Handling](#error-handling)
+21. [Script Optimization](#script-optimization)
+22. [Advanced Bash Features](#advanced-bash-features)
+23. [Bash Best Practices](#bash-best-practices)
+24. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## Basic Commands & Navigation
+
+### 1. Print Current Directory
+```bash
+pwd
+```
+
+### 2. Change Directory
+```bash
+cd /path/to/directory
+cd ~              # Home directory
+cd ..             # Parent directory
+cd -              # Previous directory
+```
+
+### 3. List Files
+```bash
+ls -la            # Detailed list with hidden files
+ls -lh            # Human-readable sizes
+ls -lrt           # Sort by modification time (oldest first)
+ls -S             # Sort by file size
+```
+
+### 4. Echo Command
+```bash
+echo "Hello World"
+echo -n "No newline"
+echo -e "Line1\nLine2"    # Enable escape sequences
+```
+
+### 5. Command History
+```bash
+history           # Show command history
+!!                # Execute last command
+!n                # Execute command number n
+!string           # Execute last command starting with 'string'
+history | grep keyword
+```
+
+---
+
+## File Operations
+
+### 6. Create Files
+```bash
+touch file.txt
+touch file{1..10}.txt    # Create multiple files
+```
+
+### 7. Create Directories
+```bash
+mkdir directory
+mkdir -p parent/child/grandchild    # Create nested directories
+```
+
+### 8. Copy Files
+```bash
+cp source.txt destination.txt
+cp -r source_dir/ dest_dir/          # Recursive copy
+cp -p file.txt backup.txt            # Preserve attributes
+cp -v file.txt dest/                 # Verbose output
+```
+
+### 9. Move/Rename Files
+```bash
+mv oldname.txt newname.txt
+mv file.txt /new/location/
+mv *.txt /destination/
+```
+
+### 10. Remove Files
+```bash
+rm file.txt
+rm -f file.txt           # Force removal
+rm -r directory/         # Recursive removal
+rm -rf directory/        # Force recursive removal
+rm -i file.txt           # Interactive (confirm before delete)
+```
+
+### 11. View File Content
+```bash
+cat file.txt             # Display entire file
+head -n 10 file.txt      # First 10 lines
+tail -n 10 file.txt      # Last 10 lines
+tail -f log.txt          # Follow file updates
+less file.txt            # Page through file
+more file.txt            # Page through file (basic)
+```
+
+### 12. File Information
+```bash
+file document.pdf        # Determine file type
+stat file.txt            # Detailed file statistics
+wc -l file.txt           # Count lines
+wc -w file.txt           # Count words
+wc -c file.txt           # Count bytes
+```
+
+---
+
+## Text Processing
+
+### 13. grep - Search Text
+```bash
+grep "pattern" file.txt
+grep -i "pattern" file.txt              # Case-insensitive
+grep -r "pattern" directory/            # Recursive search
+grep -n "pattern" file.txt              # Show line numbers
+grep -v "pattern" file.txt              # Invert match (exclude)
+grep -E "pattern1|pattern2" file.txt    # Extended regex (OR)
+grep -A 5 "pattern" file.txt            # Show 5 lines after match
+grep -B 5 "pattern" file.txt            # Show 5 lines before match
+grep -C 5 "pattern" file.txt            # Show 5 lines before and after
+```
+
+### 14. sed - Stream Editor
+```bash
+sed 's/old/new/' file.txt               # Replace first occurrence
+sed 's/old/new/g' file.txt              # Replace all occurrences
+sed -i 's/old/new/g' file.txt           # In-place editing
+sed -n '10,20p' file.txt                # Print lines 10-20
+sed '/pattern/d' file.txt               # Delete lines matching pattern
+sed '5d' file.txt                       # Delete line 5
+sed 's/^/prefix/' file.txt              # Add prefix to each line
+```
+
+### 15. awk - Text Processing
+```bash
+awk '{print $1}' file.txt               # Print first column
+awk '{print $1, $3}' file.txt           # Print columns 1 and 3
+awk -F: '{print $1}' /etc/passwd        # Custom delimiter
+awk 'NR==10' file.txt                   # Print line 10
+awk 'NR>=10 && NR<=20' file.txt         # Print lines 10-20
+awk '{sum+=$1} END {print sum}'         # Sum column 1
+awk 'length($0) > 80' file.txt          # Lines longer than 80 chars
+```
+
+### 16. cut - Extract Columns
+```bash
+cut -d',' -f1 file.csv                  # Extract first field (CSV)
+cut -c1-10 file.txt                     # Extract characters 1-10
+cut -f2,4 file.tsv                      # Extract fields 2 and 4
+```
+
+### 17. sort - Sort Lines
+```bash
+sort file.txt                            # Alphabetical sort
+sort -r file.txt                         # Reverse sort
+sort -n file.txt                         # Numeric sort
+sort -u file.txt                         # Unique sorted lines
+sort -k2 file.txt                        # Sort by column 2
+sort -t',' -k3 file.csv                  # CSV sort by column 3
+```
+
+### 18. uniq - Remove Duplicates
+```bash
+uniq file.txt                            # Remove adjacent duplicates
+uniq -c file.txt                         # Count occurrences
+uniq -d file.txt                         # Show only duplicates
+uniq -u file.txt                         # Show only unique lines
+```
+
+### 19. tr - Translate Characters
+```bash
+tr 'a-z' 'A-Z' < file.txt               # Lowercase to uppercase
+tr -d '[:digit:]' < file.txt            # Delete digits
+tr -s ' ' < file.txt                    # Squeeze multiple spaces
+echo "hello" | tr 'a-z' 'A-Z'           # HELLO
+```
+
+### 20. paste - Merge Lines
+```bash
+paste file1.txt file2.txt               # Merge files side by side
+paste -d',' file1.txt file2.txt         # CSV merge
+paste -s file.txt                       # Serialize (all lines in one)
+```
+
+---
+
+## Variables & Data Types
+
+### 21. Variable Assignment
+```bash
+name="John"
+age=30
+readonly PI=3.14                        # Read-only variable
+```
+
+### 22. Variable Usage
+```bash
+echo $name
+echo ${name}                            # Recommended
+echo "Hello $name"
+```
+
+### 23. Command Output in Variable
+```bash
+current_date=$(date)
+files_count=$(ls | wc -l)
+```
+
+### 24. Environment Variables
+```bash
+export PATH=$PATH:/new/path
+export DATABASE_URL="postgres://..."
+echo $HOME
+echo $USER
+echo $SHELL
+printenv                                # Show all env vars
+```
+
+### 25. Special Variables
+```bash
+$0      # Script name
+$1-$9   # Positional parameters
+$#      # Number of parameters
+$@      # All parameters as separate words
+$*      # All parameters as single word
+$?      # Exit status of last command
+$$      # Current process ID
+$!      # PID of last background job
+```
+
+### 26. Default Values
+```bash
+${var:-default}        # Use default if var is unset
+${var:=default}        # Assign default if var is unset
+${var:+alternative}    # Use alternative if var is set
+${var:?error_msg}      # Exit with error if var is unset
+```
+
+---
+
+## Conditional Statements
+
+### 27. If Statement
+```bash
+if [ condition ]; then
+    echo "True"
+fi
+```
+
+### 28. If-Else
+```bash
+if [ $age -gt 18 ]; then
+    echo "Adult"
+else
+    echo "Minor"
+fi
+```
+
+### 29. If-Elif-Else
+```bash
+if [ $score -ge 90 ]; then
+    echo "A"
+elif [ $score -ge 80 ]; then
+    echo "B"
+else
+    echo "C"
+fi
+```
+
+### 30. File Test Operators
+```bash
+[ -f file.txt ]        # File exists and is regular file
+[ -d directory ]       # Directory exists
+[ -e path ]            # Path exists
+[ -r file.txt ]        # File is readable
+[ -w file.txt ]        # File is writable
+[ -x script.sh ]       # File is executable
+[ -s file.txt ]        # File is not empty
+[ -L link ]            # Is symbolic link
+```
+
+### 31. String Comparison
+```bash
+[ "$str1" = "$str2" ]          # Strings are equal
+[ "$str1" != "$str2" ]         # Strings are not equal
+[ -z "$str" ]                  # String is empty
+[ -n "$str" ]                  # String is not empty
+```
+
+### 32. Numeric Comparison
+```bash
+[ $a -eq $b ]          # Equal
+[ $a -ne $b ]          # Not equal
+[ $a -gt $b ]          # Greater than
+[ $a -ge $b ]          # Greater than or equal
+[ $a -lt $b ]          # Less than
+[ $a -le $b ]          # Less than or equal
+```
+
+### 33. Logical Operators
+```bash
+[ condition1 ] && [ condition2 ]    # AND
+[ condition1 ] || [ condition2 ]    # OR
+[ ! condition ]                     # NOT
+```
+
+### 34. Case Statement
+```bash
+case $variable in
+    pattern1)
+        echo "Pattern 1"
+        ;;
+    pattern2)
+        echo "Pattern 2"
+        ;;
+    *)
+        echo "Default"
+        ;;
+esac
+```
+
+---
+
+## Loops
+
+### 35. For Loop - List
+```bash
+for item in apple banana cherry; do
+    echo $item
+done
+```
+
+### 36. For Loop - Range
+```bash
+for i in {1..10}; do
+    echo $i
+done
+
+for i in {0..100..10}; do    # Step by 10
+    echo $i
+done
+```
+
+### 37. For Loop - C-Style
+```bash
+for ((i=0; i<10; i++)); do
+    echo $i
+done
+```
+
+### 38. For Loop - Files
+```bash
+for file in *.txt; do
+    echo "Processing $file"
+done
+```
+
+### 39. While Loop
+```bash
+counter=0
+while [ $counter -lt 10 ]; do
+    echo $counter
+    ((counter++))
+done
+```
+
+### 40. Until Loop
+```bash
+counter=0
+until [ $counter -ge 10 ]; do
+    echo $counter
+    ((counter++))
+done
+```
+
+### 41. Read File Line by Line
+```bash
+while IFS= read -r line; do
+    echo "$line"
+done < file.txt
+```
+
+### 42. Loop Control
+```bash
+for i in {1..10}; do
+    if [ $i -eq 5 ]; then
+        continue    # Skip iteration
+    fi
+    if [ $i -eq 8 ]; then
+        break       # Exit loop
+    fi
+    echo $i
+done
+```
+
+---
+
+## Functions
+
+### 43. Function Definition
+```bash
+function greet() {
+    echo "Hello $1"
+}
+
+# Alternative syntax
+greet() {
+    echo "Hello $1"
+}
+```
+
+### 44. Function with Return Value
+```bash
+add() {
+    local result=$(($1 + $2))
+    echo $result
+}
+
+sum=$(add 5 3)
+echo $sum    # 8
+```
+
+### 45. Function with Return Code
+```bash
+is_valid() {
+    if [ $1 -gt 0 ]; then
+        return 0    # Success
+    else
+        return 1    # Failure
+    fi
+}
+
+if is_valid 5; then
+    echo "Valid"
+fi
+```
+
+### 46. Local Variables
+```bash
+my_function() {
+    local local_var="I'm local"
+    global_var="I'm global"
+}
+```
+
+### 47. Function with Multiple Returns
+```bash
+get_user_info() {
+    echo "John"
+    echo "30"
+    echo "john@example.com"
+}
+
+IFS=$'\n' read -r -d '' name age email < <(get_user_info)
+```
+
+---
+
+## Arrays
+
+### 48. Array Declaration
+```bash
+fruits=("apple" "banana" "cherry")
+numbers=(1 2 3 4 5)
+declare -a array_name
+```
+
+### 49. Access Array Elements
+```bash
+echo ${fruits[0]}           # First element
+echo ${fruits[@]}           # All elements
+echo ${fruits[*]}           # All elements as single word
+echo ${#fruits[@]}          # Array length
+```
+
+### 50. Add to Array
+```bash
+fruits+=("orange")          # Append element
+fruits[3]="grape"           # Set by index
+```
+
+### 51. Iterate Over Array
+```bash
+for fruit in "${fruits[@]}"; do
+    echo $fruit
+done
+
+# With index
+for i in "${!fruits[@]}"; do
+    echo "Index $i: ${fruits[$i]}"
+done
+```
+
+### 52. Array Slicing
+```bash
+echo ${fruits[@]:1:2}       # Elements from index 1, length 2
+echo ${fruits[@]:2}         # Elements from index 2 to end
+```
+
+### 53. Associative Arrays (Hash/Dictionary)
+```bash
+declare -A user
+user[name]="John"
+user[age]=30
+user[email]="john@example.com"
+
+echo ${user[name]}
+echo ${user[@]}             # All values
+echo ${!user[@]}            # All keys
+```
+
+---
+
+## String Manipulation
+
+### 54. String Length
+```bash
+str="Hello World"
+echo ${#str}                # 11
+```
+
+### 55. Substring Extraction
+```bash
+echo ${str:0:5}             # "Hello" - from index 0, length 5
+echo ${str:6}               # "World" - from index 6 to end
+echo ${str: -5}             # "World" - last 5 characters
+```
+
+### 56. String Replace
+```bash
+echo ${str/World/Universe}  # Replace first occurrence
+echo ${str//o/O}            # Replace all occurrences
+```
+
+### 57. String Remove Pattern
+```bash
+filename="document.pdf"
+echo ${filename%.pdf}       # Remove shortest match from end: "document"
+echo ${filename%.*}         # "document"
+echo ${filename#*.}         # Remove shortest match from start: "pdf"
+```
+
+### 58. Upper/Lowercase
+```bash
+str="Hello World"
+echo ${str^^}               # HELLO WORLD (uppercase)
+echo ${str,,}               # hello world (lowercase)
+echo ${str^}                # Hello World (capitalize first char)
+```
+
+### 59. String Concatenation
+```bash
+first="Hello"
+last="World"
+full="$first $last"
+full="${first} ${last}"
+```
+
+---
+
+## Process Management
+
+### 60. Background Jobs
+```bash
+command &                   # Run in background
+jobs                        # List background jobs
+fg %1                       # Bring job 1 to foreground
+bg %1                       # Resume job 1 in background
+```
+
+### 61. Process Information
+```bash
+ps aux                      # All processes
+ps aux | grep process_name
+pgrep process_name          # Find process ID by name
+pidof process_name
+```
+
+### 62. Kill Processes
+```bash
+kill PID                    # Terminate process
+kill -9 PID                 # Force kill
+killall process_name        # Kill all instances
+pkill pattern               # Kill by pattern
+```
+
+### 63. Process Priority
+```bash
+nice -n 10 command          # Run with lower priority
+renice -n 5 -p PID          # Change priority
+```
+
+### 64. Timeout Command
+```bash
+timeout 10s command         # Kill after 10 seconds
+timeout 5m long_task.sh     # Kill after 5 minutes
+```
+
+### 65. Wait for Process
+```bash
+command &
+wait $!                     # Wait for last background job
+
+wait                        # Wait for all background jobs
+```
+
+---
+
+## Networking
+
+### 66. Curl - HTTP Requests
+```bash
+curl https://api.example.com
+curl -X POST https://api.example.com/data
+curl -H "Content-Type: application/json" -d '{"key":"value"}' URL
+curl -o output.html https://example.com
+curl -I https://example.com              # Headers only
+curl -L https://example.com              # Follow redirects
+```
+
+### 67. Wget - Download Files
+```bash
+wget https://example.com/file.zip
+wget -O newname.zip https://example.com/file.zip
+wget -c https://example.com/file.zip     # Resume download
+wget -r https://example.com              # Recursive download
+```
+
+### 68. Network Information
+```bash
+ifconfig                    # Network interfaces (deprecated)
+ip addr                     # IP addresses
+ip route                    # Routing table
+netstat -tuln              # Listening ports
+ss -tuln                   # Socket statistics (modern)
+```
+
+### 69. DNS Lookup
+```bash
+nslookup example.com
+dig example.com
+host example.com
+```
+
+### 70. Ping & Trace
+```bash
+ping -c 4 example.com       # Send 4 packets
+traceroute example.com
+tracepath example.com
+```
+
+### 71. Port Scanning
+```bash
+nc -zv example.com 80       # Check if port 80 is open
+nmap -p 80,443 example.com
+telnet example.com 80
+```
+
+---
+
+## File Permissions
+
+### 72. View Permissions
+```bash
+ls -l file.txt
+stat file.txt
+```
+
+### 73. Change Permissions (chmod)
+```bash
+chmod 755 file.sh           # rwxr-xr-x
+chmod u+x file.sh           # Add execute for user
+chmod g-w file.txt          # Remove write for group
+chmod o=r file.txt          # Set others to read-only
+chmod -R 755 directory/     # Recursive
+```
+
+### 74. Change Owner (chown)
+```bash
+chown user file.txt
+chown user:group file.txt
+chown -R user:group directory/
+```
+
+### 75. Change Group (chgrp)
+```bash
+chgrp group file.txt
+chgrp -R group directory/
+```
+
+### 76. Special Permissions
+```bash
+chmod u+s file              # Set SUID
+chmod g+s directory         # Set SGID
+chmod +t directory          # Set sticky bit
+```
+
+### 77. Default Permissions (umask)
+```bash
+umask                       # View current umask
+umask 022                   # Set umask
+```
+
+---
+
+## Archive & Compression
+
+### 78. tar - Archive
+```bash
+tar -cvf archive.tar files/             # Create archive
+tar -xvf archive.tar                    # Extract archive
+tar -tvf archive.tar                    # List contents
+tar -czvf archive.tar.gz files/         # Create compressed (gzip)
+tar -xzvf archive.tar.gz                # Extract compressed
+tar -cjvf archive.tar.bz2 files/        # Create compressed (bzip2)
+tar -C /destination -xvf archive.tar    # Extract to directory
+```
+
+### 79. gzip - Compress
+```bash
+gzip file.txt               # Compress (creates file.txt.gz)
+gzip -d file.txt.gz         # Decompress
+gunzip file.txt.gz          # Decompress
+gzip -k file.txt            # Keep original file
+```
+
+### 80. zip/unzip
+```bash
+zip archive.zip file1.txt file2.txt
+zip -r archive.zip directory/
+unzip archive.zip
+unzip -l archive.zip        # List contents
+unzip archive.zip -d /path/ # Extract to directory
+```
+
+### 81. bzip2
+```bash
+bzip2 file.txt
+bunzip2 file.txt.bz2
+```
+
+---
+
+## Search & Find
+
+### 82. find - Search Files
+```bash
+find /path -name "*.txt"
+find . -type f -name "file.txt"         # Files only
+find . -type d -name "dirname"          # Directories only
+find . -mtime -7                        # Modified in last 7 days
+find . -size +100M                      # Larger than 100MB
+find . -user username                   # Owned by user
+find . -perm 755                        # Specific permissions
+```
+
+### 83. find with Actions
+```bash
+find . -name "*.log" -delete            # Delete files
+find . -name "*.txt" -exec cat {} \;    # Execute command
+find . -type f -exec chmod 644 {} \;    # Change permissions
+find . -name "*.bak" -exec rm {} \;     # Remove backups
+```
+
+### 84. locate - Fast Search
+```bash
+locate filename
+updatedb                    # Update locate database (requires sudo)
+```
+
+### 85. which - Find Command Location
+```bash
+which python
+which -a python             # All occurrences in PATH
+```
+
+### 86. whereis - Locate Binary/Man Page
+```bash
+whereis python
+whereis -b python           # Binary only
+whereis -m python           # Man page only
+```
+
+---
+
+## Input/Output Redirection
+
+### 87. Output Redirection
+```bash
+command > file.txt          # Overwrite file
+command >> file.txt         # Append to file
+command 2> error.log        # Redirect stderr
+command &> output.log       # Redirect stdout and stderr
+command > /dev/null         # Discard output
+```
+
+### 88. Input Redirection
+```bash
+command < input.txt
+command << EOF              # Here document
+line 1
+line 2
+EOF
+```
+
+### 89. Pipelines
+```bash
+command1 | command2
+ls -l | grep ".txt"
+ps aux | grep nginx | awk '{print $2}'
+```
+
+### 90. tee - Output to File and stdout
+```bash
+command | tee output.txt
+command | tee -a output.txt             # Append
+command 2>&1 | tee output.log           # Include stderr
+```
+
+---
+
+## Here Documents
+
+### 91. Basic Here Document
+```bash
+cat << EOF > file.txt
+Line 1
+Line 2
+Variable: $VAR
+EOF
+```
+
+### 92. Here Document without Variable Expansion
+```bash
+cat << 'EOF' > file.txt
+Line 1
+Variable will not expand: $VAR
+EOF
+```
+
+### 93. Here Strings
+```bash
+grep "pattern" <<< "$string"
+base64 <<< "encode this"
+```
+
+---
+
+## Command Substitution
+
+### 94. Command Substitution (Modern)
+```bash
+result=$(command)
+current_date=$(date +%Y-%m-%d)
+file_count=$(ls | wc -l)
+```
+
+### 95. Command Substitution (Legacy)
+```bash
+result=`command`            # Backticks (deprecated)
+```
+
+### 96. Arithmetic Expansion
+```bash
+echo $((5 + 3))             # 8
+((counter++))
+result=$((10 * 20))
+```
+
+---
+
+## Regular Expressions
+
+### 97. grep with Regex
+```bash
+grep "^start" file.txt                  # Lines starting with
+grep "end$" file.txt                    # Lines ending with
+grep "[0-9]" file.txt                   # Contains digit
+grep "^[A-Z]" file.txt                  # Starts with uppercase
+grep -E "color|colour" file.txt         # Alternation
+```
+
+### 98. sed with Regex
+```bash
+sed 's/[0-9]\{3\}-[0-9]\{4\}/REDACTED/g' # Phone numbers
+sed 's/^[[:space:]]*//' file.txt        # Remove leading whitespace
+```
+
+### 99. Pattern Matching
+```bash
+[[ $string =~ ^[0-9]+$ ]] && echo "Number"
+[[ $email =~ ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$ ]]
+```
+
+---
+
+## Debugging
+
+### 100. Debug Mode
+```bash
+bash -x script.sh           # Execute with trace
+set -x                      # Enable debugging
+set +x                      # Disable debugging
+```
+
+### 101. Verbose Mode
+```bash
+bash -v script.sh
+set -v                      # Enable verbose
+set +v                      # Disable verbose
+```
+
+### 102. Syntax Check
+```bash
+bash -n script.sh           # Check syntax without execution
+shellcheck script.sh        # Static analysis tool
+```
+
+### 103. Exit on Error
+```bash
+set -e                      # Exit on any error
+set -u                      # Exit on undefined variable
+set -o pipefail             # Exit on pipe failure
+set -euo pipefail           # Combine all safety options
+```
+
+### 104. Trap Errors
+```bash
+trap 'echo "Error on line $LINENO"' ERR
+trap 'cleanup' EXIT         # Run cleanup on exit
+```
+
+---
+
+## Error Handling
+
+### 105. Check Command Success
+```bash
+if command; then
+    echo "Success"
+else
+    echo "Failed"
+fi
+```
+
+### 106. Exit Status
+```bash
+command
+if [ $? -eq 0 ]; then
+    echo "Success"
+fi
+```
+
+### 107. Short-circuit Evaluation
+```bash
+command && echo "Success" || echo "Failed"
+mkdir /tmp/test && cd /tmp/test || exit 1
+```
+
+### 108. Custom Error Messages
+```bash
+command || { echo "Error: command failed" >&2; exit 1; }
+```
+
+---
+
+## Script Optimization
+
+### 109. Parallel Execution
+```bash
+command1 &
+command2 &
+wait                        # Wait for all background jobs
+```
+
+### 110. xargs - Parallel Processing
+```bash
+cat files.txt | xargs -P 4 -I {} process {}
+find . -name "*.txt" | xargs -P 8 -I {} gzip {}
+```
+
+### 111. Performance Measurement
+```bash
+time command
+time { command1; command2; }
+```
+
+### 112. Efficient Loops
+```bash
+# Avoid: for i in $(cat file)
+# Use: while read line
+while IFS= read -r line; do
+    echo "$line"
+done < file.txt
+```
+
+---
+
+## Advanced Bash Features
+
+### 113. Brace Expansion
+```bash
+echo {A..Z}                             # A B C ... Z
+echo {1..10}                            # 1 2 3 ... 10
+mkdir -p project/{src,test,docs}
+cp file.txt{,.bak}                      # file.txt file.txt.bak
+```
+
+### 114. Parameter Expansion
+```bash
+${var#pattern}              # Remove shortest match from start
+${var##pattern}             # Remove longest match from start
+${var%pattern}              # Remove shortest match from end
+${var%%pattern}             # Remove longest match from end
+${var/pattern/replacement}  # Replace first occurrence
+${var//pattern/replacement} # Replace all occurrences
+```
+
+### 115. Process Substitution
+```bash
+diff <(command1) <(command2)
+while read line; do
+    echo $line
+done < <(command)
+```
+
+### 116. Named Pipes (FIFO)
+```bash
+mkfifo mypipe
+command1 > mypipe &
+command2 < mypipe
+```
+
+### 117. Coprocesses
+```bash
+coproc my_proc { command; }
+echo "data" >&${my_proc[1]}
+read result <&${my_proc[0]}
+```
+
+### 118. Subshells
+```bash
+(cd /tmp && command)        # Changes directory in subshell only
+{ command1; command2; }     # Execute in current shell
+```
+
+### 119. Signal Handling
+```bash
+trap 'cleanup' INT TERM EXIT
+trap 'echo "Received SIGUSR1"' SIGUSR1
+```
+
+### 120. Random Numbers
+```bash
+echo $RANDOM               # Random number 0-32767
+echo $(($RANDOM % 100))    # Random number 0-99
+```
+
+---
+
+## Advanced Commands
+
+### 121. xargs - Build Command Lines
+```bash
+echo "file1 file2" | xargs rm
+find . -name "*.txt" | xargs grep "pattern"
+cat urls.txt | xargs -n 1 curl
+```
+
+### 122. jq - JSON Processing
+```bash
+echo '{"name":"John","age":30}' | jq '.name'
+curl api.example.com | jq '.data[] | {id, name}'
+jq -r '.items[].name' data.json
+```
+
+### 123. Column Formatting
+```bash
+column -t file.txt          # Align columns
+mount | column -t
+```
+
+### 124. Watch Command
+```bash
+watch -n 5 command          # Run every 5 seconds
+watch -d command            # Highlight differences
+```
+
+### 125. Screen/Tmux
+```bash
+screen                      # New session
+screen -r                   # Reattach
+tmux new -s session_name
+tmux attach -t session_name
+```
+
+### 126. rsync - Sync Files
+```bash
+rsync -av source/ destination/
+rsync -avz --progress source/ user@host:/path/
+rsync -av --delete source/ destination/    # Mirror
+rsync -av --exclude='*.log' source/ dest/
+```
+
+### 127. ln - Create Links
+```bash
+ln -s target link_name      # Symbolic link
+ln target link_name         # Hard link
+```
+
+### 128. Date/Time Operations
+```bash
+date +%Y-%m-%d              # 2026-02-15
+date +%s                    # Unix timestamp
+date -d "yesterday"
+date -d "next monday"
+date -d "@1234567890"       # From timestamp
+```
+
+### 129. Math Operations
+```bash
+echo "scale=2; 10/3" | bc   # 3.33
+echo "sqrt(16)" | bc        # 4
+expr 5 + 3                  # 8
+```
+
+### 130. Base64 Encoding
+```bash
+echo "text" | base64        # Encode
+echo "dGV4dAo=" | base64 -d # Decode
+```
+
+---
+
+## Networking Advanced
+
+### 131. SSH Operations
+```bash
+ssh user@host
+ssh user@host "command"                 # Remote command
+ssh -i key.pem user@host
+ssh -L 8080:localhost:80 user@host     # Port forwarding
+scp file.txt user@host:/path/
+```
+
+### 132. Network Testing
+```bash
+nc -l 8080                  # Listen on port
+echo "test" | nc host 8080  # Send data
+curl -w "@curl-format.txt" https://example.com
+```
+
+---
+
+## File System Operations
+
+### 133. Disk Usage
+```bash
+df -h                       # Disk space
+du -sh directory/           # Directory size
+du -h --max-depth=1         # First level subdirectories
+```
+
+### 134. inode Information
+```bash
+df -i                       # Inode usage
+ls -i file.txt              # File inode number
+```
+
+### 135. Mount Operations
+```bash
+mount                       # List mounts
+mount /dev/sdb1 /mnt       # Mount device
+umount /mnt                # Unmount
+```
+
+---
+
+## Security
+
+### 136. Checksums
+```bash
+md5sum file.txt
+sha256sum file.txt
+sha512sum file.txt
+md5sum -c checksums.txt     # Verify
+```
+
+### 137. File Encryption
+```bash
+openssl enc -aes-256-cbc -in file.txt -out file.enc
+openssl enc -aes-256-cbc -d -in file.enc -out file.txt
+```
+
+### 138. Password Generation
+```bash
+openssl rand -base64 32
+head /dev/urandom | tr -dc A-Za-z0-9 | head -c 16
+```
+
+---
+
+## System Information
+
+### 139. System Info
+```bash
+uname -a                    # System information
+hostname                    # Hostname
+uptime                      # System uptime
+whoami                      # Current user
+id                          # User and group IDs
+```
+
+### 140. Resource Usage
+```bash
+top                         # Process monitor
+htop                        # Enhanced top
+free -h                     # Memory usage
+vmstat                      # Virtual memory stats
+iostat                      # CPU and I/O stats
+```
+
+### 141. Users & Groups
+```bash
+w                           # Who is logged in
+who                         # Show logged users
+last                        # Last logins
+groups username             # User's groups
+id username                 # User details
+```
+
+---
+
+## Package Management
+
+### 142. APT (Debian/Ubuntu)
+```bash
+apt update
+apt upgrade
+apt install package_name
+apt remove package_name
+apt search keyword
+```
+
+### 143. YUM/DNF (RedHat/CentOS)
+```bash
+yum update
+yum install package_name
+yum remove package_name
+dnf install package_name
+```
+
+### 144. Snap
+```bash
+snap install package_name
+snap list
+snap remove package_name
+```
+
+---
+
+## Logging
+
+### 145. System Logs
+```bash
+tail -f /var/log/syslog
+journalctl -f               # Follow systemd logs
+journalctl -u service_name  # Service logs
+journalctl --since "1 hour ago"
+```
+
+### 146. Logger Command
+```bash
+logger "Log message"
+logger -p user.error "Error message"
+```
+
+---
+
+## Cron Jobs
+
+### 147. Crontab Operations
+```bash
+crontab -e                  # Edit crontab
+crontab -l                  # List cron jobs
+crontab -r                  # Remove crontab
+
+# Cron syntax: minute hour day month weekday command
+# 0 2 * * * /path/to/script.sh    # Daily at 2 AM
+# */5 * * * * command              # Every 5 minutes
+# 0 0 * * 0 command                # Weekly on Sunday
+```
+
+---
+
+## Environment Setup
+
+### 148. Shell Configuration
+```bash
+source ~/.bashrc            # Reload configuration
+alias ll='ls -la'           # Create alias
+unalias ll                  # Remove alias
+```
+
+### 149. Path Management
+```bash
+export PATH=$PATH:/new/path
+echo $PATH | tr ':' '\n'    # List PATH directories
+```
+
+### 150. Shell Options
+```bash
+set -o noclobber            # Prevent file overwrite with >
+set +o noclobber            # Allow file overwrite
+shopt -s dotglob            # Include hidden files in *
+```
+
+---
+
+## Bash Best Practices
+
+### 151. Script Header
+```bash
+#!/bin/bash
+set -euo pipefail
+IFS=$'\n\t'
+
+# Script: name.sh
+# Description: What it does
+# Author: Your Name
+# Date: 2026-02-15
+```
+
+### 152. Input Validation
+```bash
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <argument>" >&2
+    exit 1
+fi
+```
+
+### 153. Use Functions
+```bash
+main() {
+    # Main logic here
+}
+
+# Call main function
+main "$@"
+```
+
+### 154. Quote Variables
+```bash
+# Good
+echo "$var"
+cp "$source" "$destination"
+
+# Bad (can break with spaces)
+echo $var
+cp $source $destination
+```
+
+### 155. Use [[ ]] over [ ]
+```bash
+# Modern (supports &&, ||, regex)
+if [[ $var =~ ^[0-9]+$ ]]; then
+    echo "Number"
+fi
+
+# Legacy
+if [ "$var" = "value" ]; then
+    echo "Match"
+fi
+```
+
+---
+
+## Common Patterns
+
+### 156. Configuration File Parsing
+```bash
+while IFS='=' read -r key value; do
+    [[ $key =~ ^#.*$ ]] && continue    # Skip comments
+    declare "$key=$value"
+done < config.ini
+```
+
+### 157. Menu System
+```bash
+PS3="Select option: "
+options=("Option 1" "Option 2" "Quit")
+select opt in "${options[@]}"; do
+    case $opt in
+        "Option 1") echo "Selected 1"; break;;
+        "Option 2") echo "Selected 2"; break;;
+        "Quit") break;;
+        *) echo "Invalid option";;
+    esac
+done
+```
+
+### 158. Progress Bar
+```bash
+for i in {1..100}; do
+    echo -ne "\rProgress: $i%"
+    sleep 0.1
+done
+echo
+```
+
+### 159. Lock File Pattern
+```bash
+LOCKFILE=/var/lock/script.lock
+if [ -e "$LOCKFILE" ]; then
+    echo "Script already running"
+    exit 1
+fi
+trap "rm -f $LOCKFILE" EXIT
+touch $LOCKFILE
+```
+
+### 160. Argument Parsing
+```bash
+while getopts "f:v" opt; do
+    case $opt in
+        f) file=$OPTARG;;
+        v) verbose=1;;
+        *) echo "Usage: $0 [-f file] [-v]" >&2; exit 1;;
+    esac
+done
+shift $((OPTIND-1))
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Find and Delete Old Log Files
+**Question**: Delete log files older than 30 days in /var/log
+
+```bash
+find /var/log -name "*.log" -mtime +30 -delete
+
+# Or with confirmation
+find /var/log -name "*.log" -mtime +30 -exec rm -i {} \;
+
+# Or move to archive
+find /var/log -name "*.log" -mtime +30 -exec mv {} /archive/ \;
+```
+
+### Scenario 2: Monitor Disk Space and Alert
+**Question**: Script that sends alert when disk usage exceeds 80%
+
+```bash
+#!/bin/bash
+threshold=80
+usage=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+
+if [ $usage -gt $threshold ]; then
+    echo "Disk usage is ${usage}% - exceeds threshold!" | \
+        mail -s "Disk Alert" admin@example.com
+fi
+```
+
+### Scenario 3: Bulk File Renaming
+**Question**: Rename all .txt files to .backup
+
+```bash
+for file in *.txt; do
+    mv "$file" "${file%.txt}.backup"
+done
+
+# Or using rename command
+rename 's/\.txt$/.backup/' *.txt
+```
+
+### Scenario 4: Process CPU Usage
+**Question**: Find top 10 CPU-consuming processes
+
+```bash
+ps aux --sort=-%cpu | head -11
+# Or
+top -bn1 | head -n 20
+```
+
+### Scenario 5: Extract and Count
+**Question**: Count unique IP addresses in access log
+
+```bash
+awk '{print $1}' access.log | sort | uniq -c | sort -rn
+
+# Or with cut
+cut -d' ' -f1 access.log | sort | uniq -c | sort -rn
+```
+
+### Scenario 6: Backup Script
+**Question**: Create automated backup with timestamp
+
+```bash
+#!/bin/bash
+backup_dir="/backup"
+source_dir="/data"
+timestamp=$(date +%Y%m%d_%H%M%S)
+backup_file="${backup_dir}/backup_${timestamp}.tar.gz"
+
+tar -czf "$backup_file" "$source_dir"
+
+# Keep only last 7 backups
+ls -t ${backup_dir}/backup_*.tar.gz | tail -n +8 | xargs rm -f
+```
+
+### Scenario 7: Health Check Script
+**Question**: Check if service is running and restart if down
+
+```bash
+#!/bin/bash
+service_name="nginx"
+
+if ! systemctl is-active --quiet $service_name; then
+    echo "Service $service_name is down, restarting..."
+    systemctl restart $service_name
+    
+    sleep 5
+    
+    if systemctl is-active --quiet $service_name; then
+        echo "Service restarted successfully"
+    else
+        echo "Failed to restart service" | \
+            mail -s "Service Alert" admin@example.com
+    fi
+fi
+```
+
+### Scenario 8: Log Rotation
+**Question**: Implement simple log rotation
+
+```bash
+#!/bin/bash
+logfile="/var/log/app.log"
+max_size=104857600  # 100MB in bytes
+
+if [ -f "$logfile" ]; then
+    size=$(stat -f%z "$logfile" 2>/dev/null || stat -c%s "$logfile")
+    
+    if [ $size -gt $max_size ]; then
+        timestamp=$(date +%Y%m%d_%H%M%S)
+        mv "$logfile" "${logfile}.${timestamp}"
+        gzip "${logfile}.${timestamp}"
+        touch "$logfile"
+    fi
+fi
+```
+
+### Scenario 9: User Activity Report
+**Question**: Generate report of user logins
+
+```bash
+#!/bin/bash
+echo "User Login Report - $(date)"
+echo "================================"
+last -F | awk '{print $1}' | sort | uniq -c | sort -rn
+echo "================================"
+echo "Currently logged in:"
+who
+```
+
+### Scenario 10: Deployment Script
+**Question**: Deploy application with rollback capability
+
+```bash
+#!/bin/bash
+set -euo pipefail
+
+app_dir="/opt/myapp"
+backup_dir="/opt/backup"
+timestamp=$(date +%Y%m%d_%H%M%S)
+
+# Backup current version
+cp -r "$app_dir" "${backup_dir}/app_${timestamp}"
+
+# Deploy new version
+trap 'echo "Deployment failed, rolling back..."; \
+      rm -rf "$app_dir"; \
+      cp -r "${backup_dir}/app_${timestamp}" "$app_dir"' ERR
+
+git pull origin main
+npm install --production
+npm run build
+systemctl restart myapp
+
+echo "Deployment successful"
+
+# Cleanup old backups (keep last 5)
+ls -t ${backup_dir}/app_* | tail -n +6 | xargs rm -rf
+```
+
+---
+
+## Key Interview Topics
+
+### 1. Error Handling Best Practices
+- Always use `set -euo pipefail`
+- Check command exit codes
+- Use trap for cleanup
+- Validate input parameters
+- Quote all variables
+
+### 2. Performance Optimization
+- Avoid unnecessary commands in loops
+- Use built-in Bash features instead of external commands
+- Parallel processing with & and wait
+- Use while read instead of for with command substitution
+
+### 3. Security Considerations
+- Never store passwords in scripts
+- Use environment variables for sensitive data
+- Validate and sanitize user input
+- Use absolute paths
+- Set proper file permissions
+
+### 4. Common Pitfalls
+- Word splitting (not quoting variables)
+- Parsing ls output (use find with -print0)
+- Using $(cat file) instead of while read
+- Not handling spaces in filenames
+- Using == instead of = in [ ] tests
+
+### 5. Script Portability
+- Use #!/bin/bash or #!/usr/bin/env bash
+- Avoid bashisms if targeting /bin/sh
+- Check command availability before use
+- Handle different OS variations
+
+---
+
+## Quick Reference
+
+### File Test Operators
+```
+-e  exists
+-f  regular file
+-d  directory
+-L  symbolic link
+-r  readable
+-w  writable
+-x  executable
+-s  not empty
+-nt newer than
+-ot older than
+```
+
+### String Operators
+```
+=   equal
+!=  not equal
+-z  empty
+-n  not empty
+<   less than (in [[]])
+>   greater than (in [[]])
+```
+
+### Numeric Operators
+```
+-eq  equal
+-ne  not equal
+-lt  less than
+-le  less than or equal
+-gt  greater than
+-ge  greater than or equal
+```
+
+### Special Parameters
+```
+$0   Script name
+$1-$9  Arguments
+$#   Argument count
+$@   All arguments (separate)
+$*   All arguments (single)
+$?   Exit status
+$$   Process ID
+$!   Last background PID
+```
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview
+**Last Updated**: February 15, 2026

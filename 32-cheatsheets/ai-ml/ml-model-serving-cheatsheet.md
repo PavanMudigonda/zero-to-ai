@@ -1,0 +1,581 @@
+# ML Model Serving & Deployment Cheatsheet
+
+> Patterns and tools for deploying ML models to production—from FastAPI to Triton.
+
+---
+
+## Table of Contents
+
+- [Serving Options Overview](#serving-options-overview)
+- [FastAPI Model Server](#fastapi-model-server)
+- [TorchServe](#torchserve)
+- [TensorFlow Serving](#tensorflow-serving)
+- [NVIDIA Triton Inference Server](#nvidia-triton-inference-server)
+- [BentoML](#bentoml)
+- [Model Optimization for Serving](#model-optimization-for-serving)
+- [Deployment Patterns](#deployment-patterns)
+- [Load Testing ML Endpoints](#load-testing-ml-endpoints)
+- [Interview Scenarios](#interview-scenarios)
+
+---
+
+## Serving Options Overview
+
+| Tool | Best For | GPU Support | Multi-Model | Complexity |
+|------|----------|-------------|-------------|------------|
+| **FastAPI** | Prototyping, simple models | Manual | Manual | Low |
+| **TorchServe** | PyTorch models | Yes | Yes | Medium |
+| **TF Serving** | TensorFlow models | Yes | Yes | Medium |
+| **Triton** | Multi-framework, high perf | Yes | Yes | High |
+| **BentoML** | Rapid packaging & deploy | Yes | Yes | Low-Medium |
+| **vLLM** | LLM serving | Yes | No | Medium |
+
+---
+
+## FastAPI Model Server
+
+### Basic Inference API
+
+```python
+# serve.py
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+import torch
+import joblib
+import numpy as np
+
+app = FastAPI(title="ML Model API")
+
+# Load model once at startup
+model = None
+
+@app.on_event("startup")
+def load_model():
+    global model
+    model = joblib.load("model/model.joblib")
+
+class PredictionRequest(BaseModel):
+    features: list[list[float]]
+
+class PredictionResponse(BaseModel):
+    predictions: list[float]
+    model_version: str = "v1.0"
+
+@app.post("/predict", response_model=PredictionResponse)
+def predict(request: PredictionRequest):
+    try:
+        features = np.array(request.features)
+        predictions = model.predict(features).tolist()
+        return PredictionResponse(predictions=predictions)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
+
+@app.get("/health")
+def health():
+    return {"status": "healthy", "model_loaded": model is not None}
+```
+
+```bash
+# Run the server
+uvicorn serve:app --host 0.0.0.0 --port 8000 --workers 4
+
+# Test
+curl -X POST http://localhost:8000/predict \
+  -H "Content-Type: application/json" \
+  -d '{"features": [[1.0, 2.0, 3.0, 4.0]]}'
+```
+
+### Dockerfile for FastAPI Model
+
+```dockerfile
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY model/ /app/model/
+COPY serve.py .
+
+EXPOSE 8000
+CMD ["uvicorn", "serve:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "4"]
+```
+
+---
+
+## TorchServe
+
+### Package Model
+
+```bash
+# Create model archive
+torch-model-archiver \
+  --model-name my_model \
+  --version 1.0 \
+  --model-file model.py \
+  --serialized-file model_weights.pth \
+  --handler handler.py \
+  --export-path model_store/
+
+# Custom handler (handler.py)
+```
+
+```python
+# handler.py
+from ts.torch_handler.base_handler import BaseHandler
+import torch
+import json
+
+class MyHandler(BaseHandler):
+    def preprocess(self, data):
+        inputs = []
+        for row in data:
+            input_data = row.get("data") or row.get("body")
+            if isinstance(input_data, (bytes, bytearray)):
+                input_data = json.loads(input_data)
+            inputs.append(torch.tensor(input_data["features"]))
+        return torch.stack(inputs)
+
+    def inference(self, data):
+        with torch.no_grad():
+            return self.model(data)
+
+    def postprocess(self, inference_output):
+        return inference_output.tolist()
+```
+
+```bash
+# Start TorchServe
+torchserve --start \
+  --model-store model_store \
+  --models my_model=my_model.mar \
+  --ncs
+
+# Inference
+curl http://localhost:8080/predictions/my_model \
+  -H "Content-Type: application/json" \
+  -d '{"features": [1.0, 2.0, 3.0, 4.0]}'
+
+# Management API
+curl http://localhost:8081/models                    # List models
+curl http://localhost:8081/models/my_model            # Model details
+curl -X PUT "http://localhost:8081/models/my_model?min_worker=2&max_worker=4"  # Scale
+
+# Stop
+torchserve --stop
+```
+
+### TorchServe Config
+
+```properties
+# config.properties
+inference_address=http://0.0.0.0:8080
+management_address=http://0.0.0.0:8081
+metrics_address=http://0.0.0.0:8082
+number_of_netty_threads=4
+job_queue_size=100
+model_store=model_store
+load_models=all
+default_workers_per_model=4
+```
+
+---
+
+## TensorFlow Serving
+
+```bash
+# Pull TF Serving image
+docker pull tensorflow/serving:latest-gpu
+
+# Serve a SavedModel
+docker run -p 8501:8501 \
+  -v "$(pwd)/saved_model:/models/my_model/1" \
+  -e MODEL_NAME=my_model \
+  tensorflow/serving:latest-gpu
+
+# REST API prediction
+curl -X POST http://localhost:8501/v1/models/my_model:predict \
+  -H "Content-Type: application/json" \
+  -d '{"instances": [[1.0, 2.0, 3.0, 4.0]]}'
+
+# gRPC prediction (faster)
+pip install tensorflow-serving-api
+```
+
+```python
+# gRPC client
+import grpc
+import tensorflow as tf
+from tensorflow_serving.apis import predict_pb2, prediction_service_pb2_grpc
+
+channel = grpc.insecure_channel("localhost:8500")
+stub = prediction_service_pb2_grpc.PredictionServiceStub(channel)
+
+request = predict_pb2.PredictRequest()
+request.model_spec.name = "my_model"
+request.model_spec.signature_name = "serving_default"
+request.inputs["input"].CopyFrom(
+    tf.make_tensor_proto([[1.0, 2.0, 3.0, 4.0]])
+)
+
+response = stub.Predict(request, timeout=10.0)
+```
+
+### Multi-Model Serving Config
+
+```
+# models.config
+model_config_list {
+  config {
+    name: "model_a"
+    base_path: "/models/model_a"
+    model_platform: "tensorflow"
+  }
+  config {
+    name: "model_b"
+    base_path: "/models/model_b"
+    model_platform: "tensorflow"
+  }
+}
+```
+
+```bash
+docker run -p 8501:8501 \
+  -v "$(pwd)/models:/models" \
+  -v "$(pwd)/models.config:/models/models.config" \
+  tensorflow/serving \
+  --model_config_file=/models/models.config
+```
+
+---
+
+## NVIDIA Triton Inference Server
+
+### Model Repository Structure
+
+```
+model_repository/
+├── pytorch_model/
+│   ├── config.pbtxt
+│   └── 1/
+│       └── model.pt
+├── onnx_model/
+│   ├── config.pbtxt
+│   └── 1/
+│       └── model.onnx
+└── ensemble/
+    ├── config.pbtxt
+    └── 1/
+```
+
+### Config Files
+
+```protobuf
+# pytorch_model/config.pbtxt
+name: "pytorch_model"
+platform: "pytorch_libtorch"
+max_batch_size: 64
+input [{
+  name: "INPUT0"
+  data_type: TYPE_FP32
+  dims: [4]
+}]
+output [{
+  name: "OUTPUT0"
+  data_type: TYPE_FP32
+  dims: [1]
+}]
+instance_group [{
+  count: 2
+  kind: KIND_GPU
+}]
+dynamic_batching {
+  preferred_batch_size: [8, 16, 32]
+  max_queue_delay_microseconds: 100
+}
+```
+
+### Launch Triton
+
+```bash
+# Run Triton server
+docker run --gpus all --rm \
+  -p 8000:8000 -p 8001:8001 -p 8002:8002 \
+  -v $(pwd)/model_repository:/models \
+  nvcr.io/nvidia/tritonserver:24.01-py3 \
+  tritonserver --model-repository=/models
+
+# Check server health
+curl http://localhost:8000/v2/health/ready
+
+# Model metadata
+curl http://localhost:8000/v2/models/pytorch_model
+
+# Inference (HTTP)
+curl -X POST http://localhost:8000/v2/models/pytorch_model/infer \
+  -H "Content-Type: application/json" \
+  -d '{
+    "inputs": [{
+      "name": "INPUT0",
+      "shape": [1, 4],
+      "datatype": "FP32",
+      "data": [1.0, 2.0, 3.0, 4.0]
+    }]
+  }'
+```
+
+### Triton Python Client
+
+```python
+import tritonclient.http as httpclient
+import numpy as np
+
+client = httpclient.InferenceServerClient(url="localhost:8000")
+
+# Create input
+inputs = [httpclient.InferInput("INPUT0", [1, 4], "FP32")]
+inputs[0].set_data_from_numpy(np.array([[1.0, 2.0, 3.0, 4.0]], dtype=np.float32))
+
+# Create output
+outputs = [httpclient.InferRequestedOutput("OUTPUT0")]
+
+# Infer
+result = client.infer("pytorch_model", inputs, outputs=outputs)
+prediction = result.as_numpy("OUTPUT0")
+```
+
+---
+
+## BentoML
+
+### Define and Save a Model
+
+```python
+import bentoml
+from sklearn.ensemble import RandomForestClassifier
+
+# Train model
+model = RandomForestClassifier().fit(X_train, y_train)
+
+# Save to BentoML model store
+saved_model = bentoml.sklearn.save_model("fraud_detector", model)
+print(f"Model saved: {saved_model.tag}")
+```
+
+### Create Service
+
+```python
+# service.py
+import bentoml
+import numpy as np
+from bentoml.io import NumpyNdarray, JSON
+
+runner = bentoml.sklearn.get("fraud_detector:latest").to_runner()
+svc = bentoml.Service("fraud_detection_service", runners=[runner])
+
+@svc.api(input=NumpyNdarray(), output=JSON())
+async def predict(input_data: np.ndarray) -> dict:
+    result = await runner.predict.async_run(input_data)
+    return {"predictions": result.tolist()}
+```
+
+```bash
+# Serve locally
+bentoml serve service:svc --reload
+
+# Build a Bento (package)
+bentoml build
+
+# Containerize
+bentoml containerize fraud_detection_service:latest
+
+# Run container
+docker run -p 3000:3000 fraud_detection_service:latest
+```
+
+### bentofile.yaml
+
+```yaml
+service: "service:svc"
+labels:
+  team: ml-engineering
+include:
+  - "*.py"
+python:
+  packages:
+    - scikit-learn
+    - numpy
+docker:
+  python_version: "3.11"
+```
+
+---
+
+## Model Optimization for Serving
+
+### ONNX Export & Optimization
+
+```python
+import torch
+import onnx
+import onnxruntime as ort
+
+# Export PyTorch model to ONNX
+dummy_input = torch.randn(1, 4)
+torch.onnx.export(
+    model,
+    dummy_input,
+    "model.onnx",
+    input_names=["input"],
+    output_names=["output"],
+    dynamic_axes={"input": {0: "batch_size"}, "output": {0: "batch_size"}},
+)
+
+# Optimize ONNX model
+from onnxruntime.transformers import optimizer
+optimized = optimizer.optimize_model("model.onnx")
+optimized.save_model_to_file("model_optimized.onnx")
+
+# Inference with ONNX Runtime
+session = ort.InferenceSession("model_optimized.onnx",
+                                providers=["CUDAExecutionProvider"])
+result = session.run(None, {"input": np.array([[1.0, 2.0, 3.0, 4.0]], dtype=np.float32)})
+```
+
+### Quantization
+
+```python
+# PyTorch dynamic quantization
+import torch.quantization
+
+quantized_model = torch.quantization.quantize_dynamic(
+    model,
+    {torch.nn.Linear},
+    dtype=torch.qint8,
+)
+
+# ONNX Runtime quantization
+from onnxruntime.quantization import quantize_dynamic, QuantType
+
+quantize_dynamic(
+    "model.onnx",
+    "model_quantized.onnx",
+    weight_type=QuantType.QInt8,
+)
+```
+
+---
+
+## Deployment Patterns
+
+### Blue-Green Deployment
+
+```bash
+# Azure ML: Deploy new version as "green"
+az ml online-deployment create --name green --endpoint my-endpoint -f deployment-v2.yml
+
+# Test green deployment
+az ml online-endpoint invoke --name my-endpoint --deployment-name green --request-file test.json
+
+# Shift traffic gradually
+az ml online-endpoint update --name my-endpoint --traffic "blue=90 green=10"
+az ml online-endpoint update --name my-endpoint --traffic "blue=50 green=50"
+az ml online-endpoint update --name my-endpoint --traffic "blue=0 green=100"
+
+# Delete old deployment
+az ml online-deployment delete --name blue --endpoint my-endpoint --yes
+```
+
+### Canary Deployment (Kubernetes)
+
+```yaml
+# canary-ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: model-canary
+  annotations:
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "10"
+spec:
+  rules:
+    - host: model.example.com
+      http:
+        paths:
+          - path: /predict
+            pathType: Prefix
+            backend:
+              service:
+                name: model-v2
+                port:
+                  number: 8080
+```
+
+### A/B Testing with Shadow Mode
+
+```python
+# Shadow mode: send traffic to both models, only return v1 response
+from fastapi import FastAPI, BackgroundTasks
+import httpx
+
+app = FastAPI()
+
+@app.post("/predict")
+async def predict(request: dict, background_tasks: BackgroundTasks):
+    # Primary model (returns response)
+    result_v1 = model_v1.predict(request["features"])
+
+    # Shadow model (async, doesn't affect response)
+    background_tasks.add_task(shadow_predict, request)
+
+    return {"prediction": result_v1}
+
+async def shadow_predict(request):
+    result_v2 = model_v2.predict(request["features"])
+    # Log for comparison
+    log_comparison(request, result_v1=result_v1, result_v2=result_v2)
+```
+
+---
+
+## Load Testing ML Endpoints
+
+### Locust Load Test
+
+```python
+# locustfile.py
+from locust import HttpUser, task, between
+import json
+
+class MLModelUser(HttpUser):
+    wait_time = between(0.1, 0.5)
+
+    @task
+    def predict(self):
+        payload = {
+            "features": [[1.0, 2.0, 3.0, 4.0]]
+        }
+        self.client.post(
+            "/predict",
+            json=payload,
+            headers={"Content-Type": "application/json"},
+        )
+```
+
+```bash
+# Run load test
+locust -f locustfile.py --host=http://localhost:8000 \
+  --users 100 --spawn-rate 10 --run-time 5m --headless
+```
+
+---
+
+## Interview Scenarios
+
+**Q: How do you choose a model serving framework?**
+> Consider: (1) framework compatibility (PyTorch → TorchServe, TF → TF Serving), (2) performance requirements (Triton for highest throughput with dynamic batching), (3) deployment complexity (BentoML/FastAPI for simplicity), (4) multi-model needs (Triton supports mixed frameworks), (5) team expertise.
+
+**Q: How do you handle model versioning in production?**
+> Use a model registry (MLflow, cloud-native) for version management. Deploy with blue-green or canary strategies. Keep at least 2 versions ready for instant rollback. Tag models with metadata (training data version, metrics, commit hash). Automate promotion through staging → production gates.
+
+**Q: How do you optimize inference latency?**
+> Layers: (1) model optimization—quantization (INT8), pruning, distillation, ONNX conversion, (2) serving optimization—dynamic batching, GPU utilization, model warmup, (3) infrastructure—right-size GPU, place endpoints close to users, use gRPC over REST, (4) caching—cache frequent predictions, use embedding caches.
