@@ -32,6 +32,14 @@ jobs:
         working-directory: ./next-docs
         run: npm ci
 
+      - name: Cache Next.js build artifacts
+        uses: actions/cache@v4
+        with:
+          path: next-docs/.next/cache
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-${{ hashFiles('next-docs/**/*.ts', 'next-docs/**/*.tsx', 'next-docs/**/*.mdx') }}
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-
+
       - name: Build Next.js site
         working-directory: ./next-docs
         run: npm run build
