@@ -22,9 +22,10 @@ export default withNextra({
     // Deep override @theguild/remark-mermaid import injection
     // to map to our custom ZoomableMermaid instead.
     // Using the 'webpack' object provided by next.js options.
+    // Strict match ^@theguild...$ to avoid circular import when ZoomableMermaid imports the real base module.
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
-        /@theguild\/remark-mermaid\/mermaid/,
+        /^@theguild\/remark-mermaid\/mermaid$/,
         new URL('./src/components/ZoomableMermaid.tsx', import.meta.url).pathname
       )
     );
