@@ -1,3 +1,3 @@
 export default {
-  "04": "1. 04",
+  "04.07-Customizing-Colorbars": "1. 04.07 Customizing Colorbars",
 }

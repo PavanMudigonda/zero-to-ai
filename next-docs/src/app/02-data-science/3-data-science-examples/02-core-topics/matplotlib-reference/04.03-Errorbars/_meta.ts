@@ -1,3 +1,3 @@
 export default {
-  "04": "1. 04",
+  "04.03-Errorbars": "1. 04.03 Errorbars",
 }

@@ -19,8 +19,9 @@ export default withNextra({
       config.resolve.alias = {};
     }
     
-    // Deep override Nextra & @theguild/remark-mermaid import injection
-    // to map to our custom ZoomableMermaid instead
+    // Deep override @theguild/remark-mermaid import injection
+    // to map to our custom ZoomableMermaid instead.
+    // Using the 'webpack' object provided by next.js options.
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
         /@theguild\/remark-mermaid\/mermaid/,

@@ -1,3 +1,4 @@
 export default {
-  README: "2. Readme",
+  "README.hi": "1. Readme.hi",
+  "README.ko": "2. Readme.ko",
 }

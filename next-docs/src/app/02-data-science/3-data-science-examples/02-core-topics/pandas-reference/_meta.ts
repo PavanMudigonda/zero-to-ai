@@ -1,4 +1,17 @@
 export default {
-  "03": "14. 03",
+  "03.00-Introduction-to-Pandas": "1. 03.00 Introduction To Pandas",
+  "03.01-Introducing-Pandas-Objects": "2. 03.01 Introducing Pandas Objects",
+  "03.02-Data-Indexing-and-Selection": "3. 03.02 Data Indexing And Selection",
+  "03.03-Operations-in-Pandas": "4. 03.03 Operations In Pandas",
+  "03.04-Missing-Values": "5. 03.04 Missing Values",
+  "03.05-Hierarchical-Indexing": "6. 03.05 Hierarchical Indexing",
+  "03.06-Concat-And-Append": "7. 03.06 Concat And Append",
+  "03.07-Merge-and-Join": "8. 03.07 Merge And Join",
+  "03.08-Aggregation-and-Grouping": "9. 03.08 Aggregation And Grouping",
+  "03.09-Pivot-Tables": "10. 03.09 Pivot Tables",
+  "03.10-Working-With-Strings": "11. 03.10 Working With Strings",
+  "03.11-Working-with-Time-Series": "12. 03.11 Working With Time Series",
+  "03.12-Performance-Eval-and-Query": "13. 03.12 Performance Eval And Query",
+  "03.13-Further-Resources": "14. 03.13 Further Resources",
   pandas: "15. Pandas",
 }

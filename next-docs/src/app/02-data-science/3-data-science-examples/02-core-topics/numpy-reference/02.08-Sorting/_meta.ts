@@ -1,3 +1,3 @@
 export default {
-  "02": "1. 02",
+  "02.08-Sorting": "1. 02.08 Sorting",
 }

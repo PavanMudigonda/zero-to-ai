@@ -1,3 +1,3 @@
 export default {
-  "04": "1. 04",
+  "04.08-Multiple-Subplots": "1. 04.08 Multiple Subplots",
 }

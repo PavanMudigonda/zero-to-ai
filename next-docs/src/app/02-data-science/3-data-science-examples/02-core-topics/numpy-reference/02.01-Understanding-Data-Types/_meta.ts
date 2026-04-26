@@ -1,3 +1,3 @@
 export default {
-  "02": "1. 02",
+  "02.01-Understanding-Data-Types": "1. 02.01 Understanding Data Types",
 }
