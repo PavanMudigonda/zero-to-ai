@@ -1,6 +1,7 @@
 'use client';
 
-import { Mermaid as BaseMermaid } from 'nextra/components';
+// Directly import the original compiled Mermaid file to bypass any aliases
+import { Mermaid as BaseMermaid } from '@theguild/remark-mermaid/dist/mermaid.js';
 import { useEffect, useState } from 'react';
 
 type ZoomableMermaidProps = {
@@ -18,12 +19,13 @@ const toolbarButtonStyle = {
   padding: '0.45rem 0.65rem'
 } as const;
 
-export default function ZoomableMermaid({ chart }: ZoomableMermaidProps) {
+export function Mermaid({ chart }: ZoomableMermaidProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const [zoom, setZoom] = useState(1);
 
   useEffect(() => {
     if (!isExpanded) {
+      setZoom(1);
       return;
     }
 
@@ -82,7 +84,10 @@ export default function ZoomableMermaid({ chart }: ZoomableMermaidProps) {
             inset: 0,
             padding: '2rem',
             position: 'fixed',
-            zIndex: 1000
+            zIndex: 1000,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
           }}
         >
           <div
@@ -93,64 +98,72 @@ export default function ZoomableMermaid({ chart }: ZoomableMermaidProps) {
               boxShadow: '0 24px 80px rgba(0,0,0,0.35)',
               display: 'flex',
               flexDirection: 'column',
-              height: '100%',
-              margin: '0 auto',
-              maxWidth: 'min(96vw, 1400px)'
+              height: '90vh',
+              width: '90vw',
+              overflow: 'hidden',
+              position: 'relative'
             }}
           >
             <div
               style={{
                 alignItems: 'center',
+                background: 'var(--nextra-bg, #fff)',
                 borderBottom: '1px solid var(--nextra-border, rgba(0,0,0,0.12))',
                 display: 'flex',
                 gap: '0.5rem',
-                justifyContent: 'space-between',
-                padding: '1rem'
+                justifyContent: 'flex-end',
+                padding: '1rem',
+                zIndex: 10
               }}
             >
-              <strong style={{ fontSize: '0.95rem' }}>Mermaid diagram</strong>
-              <div style={{ alignItems: 'center', display: 'flex', gap: '0.5rem' }}>
-                <button
-                  type="button"
-                  style={toolbarButtonStyle}
-                  onClick={() => setZoom((value) => Math.max(0.6, value - 0.2))}
-                  disabled={zoomOutDisabled}
-                >
-                  -
-                </button>
-                <span style={{ fontSize: '0.9rem', minWidth: '4.5rem', textAlign: 'center' }}>
-                  {Math.round(zoom * 100)}%
-                </span>
-                <button
-                  type="button"
-                  style={toolbarButtonStyle}
-                  onClick={() => setZoom((value) => Math.min(2.4, value + 0.2))}
-                  disabled={zoomInDisabled}
-                >
-                  +
-                </button>
-                <button type="button" style={toolbarButtonStyle} onClick={() => setZoom(1)}>
-                  Reset
-                </button>
-                <button type="button" style={toolbarButtonStyle} onClick={() => setIsExpanded(false)}>
-                  Close
-                </button>
-              </div>
+              <button
+                type="button"
+                style={{ ...toolbarButtonStyle, opacity: zoomOutDisabled ? 0.5 : 1 }}
+                disabled={zoomOutDisabled}
+                onClick={() => setZoom((z) => Math.max(0.2, z - 0.2))}
+              >
+                -
+              </button>
+              <button
+                type="button"
+                style={toolbarButtonStyle}
+                onClick={() => setZoom(1)}
+              >
+                Reset
+              </button>
+              <button
+                type="button"
+                style={{ ...toolbarButtonStyle, opacity: zoomInDisabled ? 0.5 : 1 }}
+                disabled={zoomInDisabled}
+                onClick={() => setZoom((z) => Math.min(3, z + 0.2))}
+              >
+                +
+              </button>
+              <div style={{ width: '1rem' }} />
+              <button
+                type="button"
+                style={toolbarButtonStyle}
+                onClick={() => setIsExpanded(false)}
+              >
+                Close
+              </button>
             </div>
+            
             <div
-              className="zoomable-mermaid-render"
               style={{
                 flex: 1,
                 overflow: 'auto',
-                padding: '1.5rem'
+                padding: '2rem',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'flex-start'
               }}
             >
               <div
                 style={{
-                  minHeight: '100%',
                   transform: `scale(${zoom})`,
                   transformOrigin: 'top center',
-                  width: zoom > 1 ? `${100 / zoom}%` : '100%'
+                  transition: 'transform 0.2s ease-out'
                 }}
               >
                 <BaseMermaid chart={chart} />
@@ -162,3 +175,6 @@ export default function ZoomableMermaid({ chart }: ZoomableMermaidProps) {
     </>
   );
 }
+
+// Preserve backwards default export just in case
+export default Mermaid;

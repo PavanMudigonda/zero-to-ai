@@ -14,6 +14,16 @@ export default withNextra({
     unoptimized: true,
   },
   webpack(config) {
+    if (!config.resolve.alias) {
+      config.resolve.alias = {};
+    }
+    // Deep override Nextra & @theguild/remark-mermaid import injection
+    // to map to our custom ZoomableMermaid instead
+    config.resolve.alias['@theguild/remark-mermaid/mermaid$'] = new URL(
+      './src/components/ZoomableMermaid.tsx',
+      import.meta.url
+    ).pathname;
+
     config.module.rules.push({
       test: /\.ipynb$/,
       type: 'json',
