@@ -1,14 +1,15 @@
 import sys
 import json
+import argparse
 from pathlib import Path
 
-def convert(mdx_path, ipynb_path):
+def mdx_to_ipynb(mdx_path, ipynb_path):
     mdx = Path(mdx_path)
     if not mdx.exists():
-        print(f"Does not exist: {mdx}")
+        print(f"Error: {mdx} does not exist.")
         return
 
-    content = mdx.read_text()
+    content = mdx.read_text(encoding="utf-8")
     
     # Strip any next.js frontmatter
     if content.startswith("---"):
@@ -43,30 +44,63 @@ def convert(mdx_path, ipynb_path):
     
     out = Path(ipynb_path)
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(notebook, indent=1))
-    print(f"Created: {out}")
+    out.write_text(json.dumps(notebook, indent=1), encoding="utf-8")
+    print(f"Successfully converted MDX to IPYNB: {out}")
 
-# 1. 00-course-setup index
-convert(
-    "/Users/pavanmudigonda/code/zero-to-ai/next-docs/src/app/00-course-setup/page.mdx",
-    "/Users/pavanmudigonda/code/zero-to-ai/jupyter-notebooks/00-course-setup.ipynb"
-)
+def ipynb_to_mdx(ipynb_path, mdx_path):
+    ipynb = Path(ipynb_path)
+    if not ipynb.exists():
+        print(f"Error: {ipynb} does not exist.")
+        return
 
-# 2. 01_model_landscape
-convert(
-    "/Users/pavanmudigonda/code/zero-to-ai/next-docs/src/app/00-course-setup/01_model_landscape/page.mdx",
-    "/Users/pavanmudigonda/code/zero-to-ai/jupyter-notebooks/00-course-setup/01_model_landscape.ipynb"
-)
+    notebook = json.loads(ipynb.read_text(encoding="utf-8"))
+    
+    mdx_content = []
+    
+    for cell in notebook.get("cells", []):
+        source = "".join(cell.get("source", []))
+        if not source.strip():
+            continue
+            
+        if cell["cell_type"] == "markdown":
+            mdx_content.append(source)
+        elif cell["cell_type"] == "code":
+            mdx_content.append(f"```python\n{source}\n```")
+            
+        mdx_content.append("\n\n")
+        
+    out = Path(mdx_path)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text("".join(mdx_content).strip() + "\n", encoding="utf-8")
+    print(f"Successfully converted IPYNB to MDX: {out}")
 
-# 3. 02_troubleshooting
-convert(
-    "/Users/pavanmudigonda/code/zero-to-ai/next-docs/src/app/00-course-setup/02_troubleshooting/page.mdx",
-    "/Users/pavanmudigonda/code/zero-to-ai/jupyter-notebooks/00-course-setup/02_troubleshooting.ipynb"
-)
+def main():
+    parser = argparse.ArgumentParser(description="Convert between MDX and IPYNB formats")
+    parser.add_argument("input_file", help="Input file path (.mdx or .ipynb)")
+    parser.add_argument("output_file", nargs='?', help="Output file path (optional, will auto-generate if omitted)")
+    
+    args = parser.parse_args()
+    
+    input_path = Path(args.input_file)
+    
+    if args.output_file:
+        output_path = Path(args.output_file)
+    else:
+        if input_path.suffix.lower() == '.mdx':
+            output_path = input_path.with_suffix('.ipynb')
+        elif input_path.suffix.lower() == '.ipynb':
+            output_path = input_path.with_suffix('.mdx')
+        else:
+            print("Error: Input file must be .mdx or .ipynb")
+            sys.exit(1)
+            
+    if input_path.suffix.lower() == '.mdx' and output_path.suffix.lower() == '.ipynb':
+        mdx_to_ipynb(input_path, output_path)
+    elif input_path.suffix.lower() == '.ipynb' and output_path.suffix.lower() == '.mdx':
+        ipynb_to_mdx(input_path, output_path)
+    else:
+        print("Error: Unsupported conversion direction. Must be .mdx -> .ipynb or .ipynb -> .mdx")
+        sys.exit(1)
 
-# 4. 01-python index
-convert(
-    "/Users/pavanmudigonda/code/zero-to-ai/next-docs/src/app/01-python/page.mdx",
-    "/Users/pavanmudigonda/code/zero-to-ai/jupyter-notebooks/01-python.ipynb"
-)
-
+if __name__ == "__main__":
+    main()

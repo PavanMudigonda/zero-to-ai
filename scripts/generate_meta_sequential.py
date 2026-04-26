@@ -44,7 +44,7 @@ def main():
                     continue
                 
             orig_name = item
-            if '.' in item:
+            if item_path.is_file() and '.' in item:
                 # Provide the chunk before the extension as the route segment
                 orig_name = item.rsplit('.', 1)[0]
                 
