@@ -14,5 +14,4 @@ export default {
   "13_multiple_testing": "13. Multiple Testing",
   PRACTICE_EXERCISES: "14. Practice Exercises",
   statistics_fundamentals: "15. Statistics Fundamentals",
-  statistics_probability: "16. Statistics Probability",
 }

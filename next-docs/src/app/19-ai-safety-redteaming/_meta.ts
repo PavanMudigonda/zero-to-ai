@@ -6,6 +6,5 @@ export default {
   "05_bias_fairness": "5. Bias Fairness",
   "06_red_teaming": "6. Red Teaming",
   "07_assignment": "7. Assignment",
-  "08_challenges": "8. Challenges",
-  "09_quiz": "9. Quiz",
+  "09_quiz": "8. Quiz",
 }

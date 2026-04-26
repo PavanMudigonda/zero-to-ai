@@ -1,3 +1,3 @@
 export default {
-  README: "8. Readme",
+  README: "7. Readme",
 }
