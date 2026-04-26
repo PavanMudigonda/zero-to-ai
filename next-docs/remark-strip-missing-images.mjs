@@ -1,17 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const IMAGE_EXTENSIONS = new Set([
-  '.apng',
-  '.avif',
-  '.gif',
-  '.jpeg',
-  '.jpg',
-  '.png',
-  '.svg',
-  '.webp'
-]);
-
 function isLocalUrl(url) {
   return url && !/^(?:[a-z]+:)?\/\//i.test(url) && !/^(?:mailto:|tel:|javascript:|data:|#)/i.test(url);
 }
@@ -39,18 +28,14 @@ function replaceMissingImages(node, filePath) {
 
   if (node.type === 'image' && typeof node.url === 'string' && isLocalUrl(node.url)) {
     const target = normalizeTarget(node.url);
-    const extension = path.extname(target).toLowerCase();
+    const resolvedPath = resolveImagePath(target, filePath);
 
-    if (IMAGE_EXTENSIONS.has(extension)) {
-      const resolvedPath = resolveImagePath(target, filePath);
-
-      if (resolvedPath && !fs.existsSync(resolvedPath)) {
-        node.type = 'text';
-        node.value = node.alt || 'Image unavailable in this repo snapshot.';
-        delete node.url;
-        delete node.title;
-        delete node.alt;
-      }
+    if (resolvedPath && !fs.existsSync(resolvedPath)) {
+      node.type = 'text';
+      node.value = node.alt || 'Image unavailable in this repo snapshot.';
+      delete node.url;
+      delete node.title;
+      delete node.alt;
     }
   }
 
