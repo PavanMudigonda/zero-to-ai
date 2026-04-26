@@ -1,7 +1,7 @@
 'use client';
 
-// Directly import the original compiled Mermaid file to bypass any aliases
-import { Mermaid as BaseMermaid } from '@theguild/remark-mermaid/dist/mermaid.js';
+// Bypass alias by directly referencing the exact file
+import { Mermaid as BaseMermaid } from '../../node_modules/@theguild/remark-mermaid/dist/mermaid.js';
 import { useEffect, useState } from 'react';
 
 type ZoomableMermaidProps = {
