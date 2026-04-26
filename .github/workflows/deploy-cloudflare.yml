@@ -42,7 +42,9 @@ jobs:
 
       - name: Build Next.js site
         working-directory: ./next-docs
-        run: npm run build
+        run: |
+          rm -rf .next out
+          npm run build
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}

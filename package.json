@@ -33,9 +33,6 @@
     "url": "https://github.com/PavanMudigonda/zero-to-ai/issues"
   },
   "devDependencies": {
-    "opencode-ai": "^1.4.3"
-  },
-  "dependencies": {
-    "@pavanmudigonda/pwai": "^0.2.3"
+    "opencode-ai": "^1.14.25"
   }
 }

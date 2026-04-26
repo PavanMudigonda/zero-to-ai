@@ -1,0 +1,2536 @@
+Missing targets grouped by file: 296 files, 1943 unique targets
+
+src/app/00-course-setup/02_troubleshooting/page.mdx
+  L428,431 [quoted] large_file.csv
+  L436 [quoted] file.csv
+  L462 [quoted] file.txt
+
+src/app/00-course-setup/page.mdx
+  L12,19,242,260,294 [markdown] ../23-glossary/01_GLOSSARY.md
+  L12,18,29,243,259,295 [markdown] ../docs/MASTER_STUDY_GUIDE.md
+  L20,261 [markdown] ../01-python/README.md
+  L247,301 [markdown] ../02-data-science/README.md
+  L248 [markdown] ../03-maths/README.md
+  L262 [markdown] ../docs/checklist.md
+  L280 [markdown] ./02_troubleshooting.md
+  L307 [markdown] ../README.md
+
+src/app/01-python/page.mdx
+  L63 [markdown] ../docs/checklist.md
+  L64 [markdown] ../docs/MASTER_STUDY_GUIDE.md
+  L65 [markdown] ../docs/setup.md
+
+src/app/02-data-science/1-numpy-examples/04-advanced/numpy-tutorials/pairing/page.mdx
+  L213 [markdown] _static/01-classic.gif
+  L219 [markdown] _static/02-jupyterlab.gif
+
+src/app/02-data-science/1-numpy-examples/04-advanced/numpy-tutorials/save-load-arrays/page.mdx
+  L94,124 [quoted] x_y-squared.npz
+  L185,216 [quoted] x_y-squared.csv
+
+src/app/02-data-science/1-numpy-examples/04-advanced/numpy-tutorials/tutorial-ma/page.mdx
+  L77 [quoted] who_covid_19_sit_rep_time_series.csv
+
+src/app/02-data-science/1-numpy-examples/04-advanced/numpy-tutorials/tutorial-x-ray-image-processing/page.mdx
+  L121 [quoted] 00000011_001.png
+  L188 [quoted] xray_image.gif
+
+src/app/02-data-science/1-numpy-examples/page.mdx
+  L245 [markdown] ../2-pandas-examples/README.md
+  L246 [markdown] ../4-matplotlib/README.md
+  L247 [markdown] ../../05-embeddings/README.md
+
+src/app/02-data-science/2-pandas-examples/page.mdx
+  L349 [markdown] ../4-matplotlib/README.md
+  L350 [markdown] ../5-scikit-learn/README.md
+  L351 [markdown] ../../28-practical-data-science/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/page.mdx
+  L48,169 [attr/markdown/quoted] ../../2-Working-With-Data/README.md
+  L64 [attr/quoted] ../../3-Data-Visualization/README.md
+  L150 [bare] /1-Introduction/01-defining-data-science/notebook.ipynb
+  L161 [markdown] 08_assignment.md
+  L167 [markdown] ../02-ethics/README.md
+  L168 [markdown] ../03-defining-data/README.md
+  L169 [markdown] ../04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/solution/assignment/page.mdx
+  L23 [markdown] ../../04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/translations/README.es/page.mdx
+  L53 [attr/quoted] ../../../2-Working-With-Data/README.md
+  L69 [attr/quoted] ../../../3-Data-Visualization/README.md
+  L156 [markdown] notebook.ipynb
+  L167 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/translations/README.hi/page.mdx
+  L48 [attr/quoted] ../../2-Working-With-Data/README.md
+  L64 [attr/quoted] ../../3-Data-Visualization/README.md
+  L147 [bare/markdown] /1-Introduction/01-defining-data-science/images/ds_wordcloud.png
+  L149 [bare] /1-Introduction/01-defining-data-science/notebook.ipynb
+  L160 [markdown] assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/translations/README.ko/page.mdx
+  L64 [markdown] ../../../3-Data-Visualization/README.md
+  L148 [bare/markdown] ../images/ds_wordcloud.png
+  L150 [bare/markdown] ../notebook.ipynb
+  L161 [markdown] ./assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/translations/README.nl/page.mdx
+  L49 [quoted] ../../../2-Working-With-Data/README.md
+  L65 [attr/quoted] ../../../3-Data-Visualization/README.md
+  L149 [bare/markdown] ../images/ds_wordcloud.png
+  L151 [markdown/quoted] notebook.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/01-defining-data-science/translations/README.pt-br/page.mdx
+  L48 [attr/quoted] ../../../2-Working-With-Data/README.md
+  L64 [attr/quoted] ../../../3-Data-Visualization/README.md
+  L148 [bare/markdown] ../images/ds_wordcloud.png
+  L150 [bare/markdown] ../notebook.ipynb
+  L161 [markdown] assignment.pt-br.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/assignment/page.mdx
+  L5,9 [markdown] README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/page.mdx
+  L3 [bare] ../../sketchnotes/02-Ethics.png
+  L265 [markdown] ../03-defining-data/README.md
+  L266 [markdown] ../04-stats-and-probability/README.md
+  L267 [markdown] ../../2-Working-With-Data/README.md
+  L271 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/README.hi/page.mdx
+  L3 [bare] ../../../sketchnotes/02-Ethics.png
+  L259 [markdown] assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/02-Ethics.png
+  L263 [markdown] ./assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/README.nl/page.mdx
+  L3 [bare] ../../../sketchnotes/02-Ethics.png
+  L259 [markdown] /assignment.nl.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/README.pt-br/page.mdx
+  L3 [bare] ../../../sketchnotes/02-Ethics.png
+  L262 [markdown] assignment.pt-br.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/README.ru/page.mdx
+  L3 [bare] ../../../sketchnotes/02-Ethics.png
+  L273 [markdown] assignment.ru.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/assignment.hi/page.mdx
+  L5,9 [markdown] README.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/assignment.nl/page.mdx
+  L5,9 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/assignment.pt-br/page.mdx
+  L5,9 [markdown] README.pt-br.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/02-ethics/translations/assignment.ru/page.mdx
+  L5,9 [markdown] README.ru.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/page.mdx
+  L3 [bare] ../../sketchnotes/03-DefiningData.png
+  L72 [markdown] 08_assignment.md
+  L78 [markdown] ../04-stats-and-probability/README.md
+  L79 [markdown] ../../2-Working-With-Data/README.md
+  L80 [markdown] ../01-defining-data-science/README.md
+  L80 [markdown] ../02-ethics/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/03-DefiningData.png
+  L69 [markdown] ../08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/translations/README.hi/page.mdx
+  L2 [bare] ../../../sketchnotes/03-DefiningData.png
+  L63 [markdown] assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/03-DefiningData.png
+  L69 [markdown] ./assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/translations/README.pt-br/page.mdx
+  L3 [bare] ../../../sketchnotes/03-DefiningData.png
+  L39 [markdown] ../../../2-Working-With-Data
+  L67 [markdown] assignment.pt-br.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/translations/README.ru/page.mdx
+  L3 [bare] ../../../sketchnotes/03-DefiningData.png
+  L49 [markdown] ../../../2-Working-With-Data
+  L76 [markdown] assignment.ru.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/03-defining-data/translations/README.tr/page.mdx
+  L3 [bare] ../../../sketchnotes/03-DefiningData.png
+  L48 [markdown] ../../../2-Working-With-Data
+  L76 [markdown] ../08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/translations/assignment.ko/page.mdx
+  L14 [markdown] assignment.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/translations/assignment.pt-br/page.mdx
+  L14 [markdown] assignment.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/04-stats-and-probability/translations/assignment.ru/page.mdx
+  L14 [bare/markdown] ../assignment.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+  L20 [markdown] ../2-Working-With-Data/README.md
+  L21 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.es/page.mdx
+  L11 [markdown] ../01-defining-data-science/README.md
+  L12 [markdown] ../02-ethics/README.md
+  L13 [markdown] ../03-defining-data/translations/README.es.md
+  L14 [markdown] ../04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.fa/page.mdx
+  L12 [markdown] ../01-defining-data-science/README.md
+  L13 [markdown] ../02-ethics/README.md
+  L14 [markdown] ../03-defining-data/README.md
+  L15 [markdown] ../04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.fr/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.hi/page.mdx
+  L8 [markdown] 01-defining-data-science/README.md
+  L9 [markdown] 02-ethics/README.md
+  L10 [markdown] 03-defining-data/README.md
+  L11 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.it/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.ko/page.mdx
+  L9 [markdown] ../01-defining-data-science/translations/README.ko.md
+  L10 [markdown] ../02-ethics/translations/README.ko.md
+  L11 [markdown] ../03-defining-data/translations/README.ko.md
+  L12 [markdown] ../04-stats-and-probability/translations/README.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.ne/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.nl/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.pt-br/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.ru/page.mdx
+  L9 [markdown] 01-defining-data-science/README.md
+  L10 [markdown] 02-ethics/README.md
+  L11 [markdown] 03-defining-data/README.md
+  L12 [markdown] 04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/1-Introduction/translations/README.zh-cn/page.mdx
+  L9 [markdown] ../01-defining-data-science/README.md
+  L10 [markdown] ../02-ethics/README.md
+  L11 [markdown] ../03-defining-data/README.md
+  L12 [markdown] ../04-stats-and-probability/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/05-relational-databases/page.mdx
+  L3 [bare] ../../sketchnotes/05-RelationalData.png
+  L181 [markdown] 08_assignment.md
+  L187 [markdown] ../06-non-relational/README.md
+  L188 [markdown] ../07-python/README.md
+  L189 [markdown] ../08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/05-relational-databases/translations/README.hi/page.mdx
+  L3 [bare] /sketchnotes/05-RelationalData.png
+  L179 [markdown] assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/05-relational-databases/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/05-RelationalData.png
+  L181 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/05-relational-databases/translations/page.mdx
+  L7 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/06-non-relational/page.mdx
+  L3 [bare] ../../sketchnotes/06-NoSQL.png
+  L15 [markdown] images/parts-of-spreadsheet.png
+  L27 [markdown] images/formula-excel.png
+  L31 [markdown] images/function-excel.png
+  L39 [markdown] images/kv-db.png
+  L45 [markdown] images/graph-db.png
+  L50 [markdown] images/columnar-db.png
+  L59,158 [markdown] ../05-relational-databases/README.md
+  L84 [markdown] images/cosmosdb-emulator-explorer.png
+  L88 [markdown] images/cosmosdb-emulator-persons.png
+  L98 [markdown] images/cosmosdb-emulator-persons-query.png
+  L150 [markdown] 08_assignment.md
+  L156 [markdown] ../07-python/README.md
+  L157 [markdown] ../08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/06-non-relational/translations/README.hi/page.mdx
+  L3 [bare] ../../../sketchnotes/06-NoSQL.png
+  L15 [bare/markdown] ../images/parts-of-spreadsheet.png
+  L27 [bare/markdown] ../images/formula-excel.png
+  L31 [bare/markdown] ../images/function-excel.png
+  L39 [bare/markdown] ../images/kv-db.png
+  L44 [bare/markdown] ../images/graph-db.png
+  L49 [bare/markdown] ../images/columnar-db.png
+  L57 [markdown] ../../05-relational-databases/README.md
+  L82 [bare/markdown] ../images/cosmosdb-emulator-explorer.png
+  L86 [bare/markdown] ../images/cosmosdb-emulator-persons.png
+  L96 [bare/markdown] ../images/cosmosdb-emulator-persons-query.png
+  L148 [markdown] assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/06-non-relational/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/06-NoSQL.png
+  L15 [bare/markdown] ../images/parts-of-spreadsheet.png
+  L27 [bare/markdown] ../images/formula-excel.png
+  L31 [bare/markdown] ../images/function-excel.png
+  L39 [bare/markdown] ../images/kv-db.png
+  L45 [bare/markdown] ../images/graph-db.png
+  L50 [bare/markdown] ../images/columnar-db.png
+  L58 [markdown] ../../05-relational-databases/README.md
+  L83 [bare/markdown] ../images/cosmosdb-emulator-explorer.png
+  L88 [bare/markdown] ../images/cosmosdb-emulator-persons.png
+  L98 [bare/markdown] ../images/cosmosdb-emulator-persons-query.png
+  L149 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/06-non-relational/translations/assignment.hi/page.mdx
+  L5 [markdown] ../CocaColaCo.xlsx
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/07-python/page.mdx
+  L3 [bare] ../../sketchnotes/07-WorkWithPython.png
+  L7 [markdown] images/video-ds-python.png
+  L57 [markdown] notebook.ipynb
+  L69 [markdown] images/timeseries-1.png
+  L80 [markdown] images/timeseries-2.png
+  L89 [markdown] images/timeseries-3.png
+  L198 [quoted] file.csv
+  L215 [markdown] notebook-covidspread.ipynb
+  L217 [markdown] images/covidspread.png
+  L237 [markdown] notebook-papers.ipynb
+  L239 [markdown] images/covidtreat.png
+  L278 [markdown] 08_assignment.md
+  L284 [markdown] ../08-data-preparation/README.md
+  L285 [markdown] ../../3-Data-Visualization/README.md
+  L286 [markdown] ../../../../../01-python/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/07-python/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/07-WorkWithPython.png
+  L7 [bare/markdown] ../images/video-ds-python.png
+  L57 [markdown] notebook.ipynb
+  L69 [bare/markdown] ../images/timeseries-1.png
+  L80 [bare/markdown] ../images/timeseries-2.png
+  L89 [bare/markdown] ../images/timeseries-3.png
+  L198 [quoted] file.csv
+  L217 [bare/markdown] ../images/covidspread.png
+  L237 [markdown] notebook-papers.ipynb
+  L239 [bare/markdown] ../images/covidtreat.png
+  L280 [markdown] ../08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/page.mdx
+  L3 [bare] ../../sketchnotes/08-DataPreparation.png
+  L11 [markdown] notebook.ipynb
+  L335 [markdown] 08_assignment.md
+  L341 [markdown] ../../3-Data-Visualization/README.md
+  L342 [markdown] ../07-python/README.md
+  L343 [markdown] ../../4-Data-Science-Lifecycle/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/08-DataPreparation.png
+  L11 [bare/markdown] ../notebook.ipynb
+  L34 [markdown] ../../07-python/translations/README.ko.md
+  L339 [markdown] ../08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/translations/README.tr/page.mdx
+  L3 [bare] ../../../sketchnotes/08-DataPreparation.png
+  L11 [bare/markdown] ../notebook.ipynb
+  L335 [markdown] ../08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/08-data-preparation/translations/page.mdx
+  L7 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/page.mdx
+  L3 [markdown] images/data-love.jpg
+  L9 [markdown] 05-relational-databases/README.md
+  L10 [markdown] 06-non-relational/README.md
+  L11 [markdown] 07-python/README.md
+  L12 [markdown] 08-data-preparation/README.md
+  L20 [markdown] ../3-Data-Visualization/README.md
+  L21 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.es/page.mdx
+  L3 [bare/markdown] ../images/data-love.jpg
+  L11 [markdown] ../05-relational-databases/translations/README.es.md
+  L12 [markdown] ../06-non-relational/README.md
+  L13 [markdown] ../07-python/README.md
+  L14 [markdown] ../08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.fr/page.mdx
+  L3 [markdown] images/data-love.jpg
+  L10 [markdown] 05-relational-databases/README.md
+  L11 [markdown] 06-non-relational/README.md
+  L12 [markdown] 07-python/README.md
+  L13 [markdown] 08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.hi/page.mdx
+  L3 [bare/markdown] ../images/data-love.jpg
+  L11 [markdown] ../05-relational-databases/README.md
+  L12 [markdown] ../06-non-relational/README.md
+  L13 [markdown] ../07-python/README.md
+  L14 [markdown] ../08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.ko/page.mdx
+  L3 [bare/markdown] ../images/data-love.jpg
+  L10 [markdown] ../05-relational-databases/translations/README.ko.md
+  L11 [markdown] ../06-non-relational/translations/README.ko.md
+  L12 [markdown] ../07-python/translations/README.ko.md
+  L13 [markdown] ../08-data-preparation/translations/README.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.ne/page.mdx
+  L3 [markdown] images/data-love.jpg
+  L9 [markdown] 05-relational-databases/README.md
+  L10 [markdown] 06-non-relational/README.md
+  L11 [markdown] 07-python/README.md
+  L12 [markdown] 08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.nl/page.mdx
+  L3 [markdown] images/data-love.jpg
+  L9 [markdown] 05-relational-databases/README.md
+  L10 [markdown] 06-non-relational/README.md
+  L11 [markdown] 07-python/README.md
+  L12 [markdown] 08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.ru/page.mdx
+  L3 [bare/markdown] ../images/data-love.jpg
+  L10 [markdown] 05-relational-databases/README.md
+  L11 [markdown] 06-non-relational/README.md
+  L12 [markdown] 07-python/README.md
+  L13 [markdown] 08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/2-Working-With-Data/translations/README.zh-cn/page.mdx
+  L3 [bare/markdown] ../images/data-love.jpg
+  L10 [markdown] ../05-relational-databases/README.md
+  L11 [markdown] ../06-non-relational/README.md
+  L12 [markdown] ../07-python/README.md
+  L13 [markdown] ../08-data-preparation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/09-visualization-quantities/page.mdx
+  L3 [bare] ../../sketchnotes/09-Visualizing-Quantities.png
+  L35 [bare/quoted] ../../data/birds.csv
+  L55 [markdown] images/max-wingspan-02.png
+  L75 [markdown] images/max-wingspan-labels-02.png
+  L97 [markdown] images/labeled-wingspan-02.png
+  L117 [markdown] images/scatterplot-wingspan-02.png
+  L143 [markdown] images/full-data-bar-02.png
+  L158 [markdown] images/category-counts-02.png
+  L174 [markdown] images/category-length-02.png
+  L192 [markdown] images/superimposed-02.png
+  L204 [markdown] 08_assignment.md
+  L210 [markdown] ../10-visualization-distributions/README.md
+  L211 [markdown] ../11-visualization-proportions/README.md
+  L211 [markdown] ../12-visualization-relationships/README.md
+  L212 [markdown] ../13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/09-visualization-quantities/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/09-Visualizing-Quantities.png
+  L35 [bare/quoted] ../../data/birds.csv
+  L55 [bare/markdown] ../images/max-wingspan.png
+  L75 [bare/markdown] ../images/max-wingspan-labels.png
+  L98 [bare/markdown] ../images/labeled-wingspan.png
+  L118 [bare/markdown] ../images/scatterplot-wingspan.png
+  L144 [bare/markdown] ../images/full-data-bar.png
+  L159 [bare/markdown] ../images/category-counts.png
+  L175 [bare/markdown] ../images/category-length.png
+  L193 [bare/markdown] ../images/superimposed.png
+  L206 [markdown] assignment.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/09-visualization-quantities/translations/README.hi/page.mdx
+  L3 [bare] ../../sketchnotes/09-Visualizing-Quantities.png
+  L35 [bare/quoted] ../../data/birds.csv
+  L55 [markdown] images/max-wingspan.png
+  L75 [markdown] images/max-wingspan-labels.png
+  L97 [markdown] images/labeled-wingspan.png
+  L117 [markdown] images/scatterplot-wingspan.png
+  L143 [markdown] images/full-data-bar.png
+  L158 [markdown] images/category-counts.png
+  L174 [markdown] images/category-length.png
+  L192 [markdown] images/superimposed.png
+  L204 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/09-visualization-quantities/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/09-Visualizing-Quantities.png
+  L35 [bare/quoted] ../../data/birds.csv
+  L55 [bare/markdown] ../images/max-wingspan.png
+  L75 [bare/markdown] ../images/max-wingspan-labels.png
+  L96 [bare/markdown] ../images/labeled-wingspan.png
+  L116 [bare/markdown] ../images/scatterplot-wingspan.png
+  L142 [bare/markdown] ../images/full-data-bar.png
+  L157 [bare/markdown] ../images/category-counts.png
+  L173 [bare/markdown] ../images/category-length.png
+  L191 [bare/markdown] ../images/superimposed.png
+  L203 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/09-visualization-quantities/translations/README.pt-br/page.mdx
+  L3 [bare] ../../../sketchnotes/09-Visualizing-Quantities.png
+  L35 [bare/quoted] ../../data/birds.csv
+  L56 [bare/markdown] ../images/max-wingspan.png
+  L76 [bare/markdown] ../images/max-wingspan-labels.png
+  L99 [bare/markdown] ../images/labeled-wingspan.png
+  L120 [bare/markdown] ../images/scatterplot-wingspan.png
+  L148 [bare/markdown] ../images/full-data-bar.png
+  L163 [bare/markdown] ../images/category-counts.png
+  L179 [bare/markdown] ../images/category-length.png
+  L198 [bare/markdown] ../images/superimposed.png
+  L212 [markdown] assignment.pt-br.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/10-visualization-distributions/page.mdx
+  L3 [bare] ../../sketchnotes/10-Visualizing-Distributions.png
+  L19 [bare/quoted] ../../data/birds.csv
+  L43 [markdown] images/scatter-wb.png
+  L54 [markdown] images/dist1-wb.png
+  L62 [markdown] images/dist2-wb.png
+  L73 [markdown] images/dist3-wb.png
+  L90 [markdown] images/2D-wb.png
+  L129 [markdown] images/histogram-conservation-wb.png
+  L147 [markdown] images/density1.png
+  L157 [markdown] images/density2.png
+  L165 [markdown] images/density3.png
+  L179 [markdown] images/density4.png
+  L187 [markdown] images/multi.png
+  L203 [markdown] 08_assignment.md
+  L209 [markdown] ../11-visualization-proportions/README.md
+  L210 [markdown] ../12-visualization-relationships/README.md
+  L211 [markdown] ../09-visualization-quantities/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/10-visualization-distributions/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/10-Visualizing-Distributions.png
+  L19 [bare/quoted] ../../data/birds.csv
+  L44 [bare/markdown] ../images/dist1.png
+  L52 [bare/markdown] ../images/dist2.png
+  L63 [bare/markdown] ../images/dist3.png
+  L80 [bare/markdown] ../images/2D.png
+  L119 [bare/markdown] ../images/histogram-conservation.png
+  L137 [bare/markdown] ../images/density1.png
+  L147 [bare/markdown] ../images/density2.png
+  L155 [bare/markdown] ../images/density3.png
+  L169 [bare/markdown] ../images/density4.png
+  L177 [bare/markdown] ../images/multi.png
+  L193 [markdown] assignment.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/10-visualization-distributions/translations/README.hi/page.mdx
+  L3 [bare] ../../sketchnotes/10-Visualizing-Distributions.png
+  L19 [bare/quoted] ../../data/birds.csv
+  L43 [markdown] images/dist1.png
+  L51 [markdown] images/dist2.png
+  L62 [markdown] images/dist3.png
+  L79 [markdown] images/2D.png
+  L118 [markdown] images/histogram-conservation.png
+  L135 [markdown] images/density1.png
+  L145 [markdown] images/density2.png
+  L153 [markdown] images/density3.png
+  L167 [markdown] images/density4.png
+  L175 [markdown] images/multi.png
+  L191 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/10-visualization-distributions/translations/README.ko/page.mdx
+  L3 [bare] ../../sketchnotes/10-Visualizing-Distributions.png
+  L19 [bare/quoted] ../../data/birds.csv
+  L43 [markdown] images/dist1.png
+  L51 [markdown] images/dist2.png
+  L62 [markdown] images/dist3.png
+  L79 [markdown] images/2D.png
+  L119 [markdown] images/histogram-conservation.png
+  L137 [markdown] images/density1.png
+  L147 [markdown] images/density2.png
+  L155 [markdown] images/density3.png
+  L169 [markdown] images/density4.png
+  L177 [markdown] images/multi.png
+  L193 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/10-visualization-distributions/translations/README.pt-br/page.mdx
+  L3 [bare] ../../../sketchnotes/10-Visualizing-Distributions.png
+  L19 [bare/quoted] ../../data/birds.csv
+  L46 [bare/markdown] ../images/dist1.png
+  L55 [bare/markdown] ../images/dist2.png
+  L66 [bare/markdown] ../images/dist3.png
+  L84 [bare/markdown] ../images/2D.png
+  L124 [bare/markdown] ../images/histogram-conservation.png
+  L142 [bare/markdown] ../images/density1.png
+  L152 [bare/markdown] ../images/density2.png
+  L160 [bare/markdown] ../images/density3.png
+  L174 [bare/markdown] ../images/density4.png
+  L182 [bare/markdown] ../images/multi.png
+  L198 [markdown] assignment.pt-br.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/11-visualization-proportions/page.mdx
+  L3 [bare] ../../sketchnotes/11-Visualizing-Proportions.png
+  L24 [bare/quoted] ../../data/mushrooms.csv
+  L87 [markdown] images/pie1-wb.png
+  L117 [markdown] images/donut-wb.png
+  L164 [markdown] images/waffle.png
+  L190 [markdown] 08_assignment.md
+  L196 [markdown] ../12-visualization-relationships/README.md
+  L197 [markdown] ../13-meaningful-visualizations/README.md
+  L198 [markdown] ../09-visualization-quantities/README.md
+  L198 [markdown] ../10-visualization-distributions/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/11-visualization-proportions/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/11-Visualizing-Proportions.png
+  L24 [bare/quoted] ../../data/mushrooms.csv
+  L80 [bare/markdown] ../images/pie1.png
+  L110 [bare/markdown] ../images/donut.png
+  L157 [bare/markdown] ../images/waffle.png
+  L183 [markdown] assignment.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/11-visualization-proportions/translations/README.hi/page.mdx
+  L3 [bare] ../../sketchnotes/11-Visualizing-Proportions.png
+  L25 [bare/quoted] ../../data/mushrooms.csv
+  L82 [markdown] images/pie1.png
+  L112 [markdown] images/donut.png
+  L159 [markdown] images/waffle.png
+  L184 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/12-visualization-relationships/page.mdx
+  L3 [bare] ../../sketchnotes/12-Visualizing-Relationships.png
+  L27 [bare/quoted] ../../data/honey.csv
+  L46 [markdown] images/scatter1.png
+  L55 [markdown] images/scatter2.png
+  L85 [markdown] images/scatter3.png
+  L100 [markdown] images/line1.png
+  L110 [markdown] images/line2.png
+  L134 [markdown] images/facet.png
+  L157 [markdown] images/dual-line.png
+  L174 [markdown] 08_assignment.md
+  L180 [markdown] ../13-meaningful-visualizations/README.md
+  L181 [markdown] ../../4-Data-Science-Lifecycle/README.md
+  L182 [markdown] ../09-visualization-quantities/README.md
+  L182 [markdown] ../10-visualization-distributions/README.md
+  L182 [markdown] ../11-visualization-proportions/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/12-visualization-relationships/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/12-Visualizing-Relationships.png
+  L27 [bare/quoted] ../../data/honey.csv
+  L46 [bare/markdown] ../images/scatter1.png
+  L55 [bare/markdown] ../images/scatter2.png
+  L84 [bare/markdown] ../images/scatter3.png
+  L99 [bare/markdown] ../images/line1.png
+  L109 [bare/markdown] ../images/line2.png
+  L133 [bare/markdown] ../images/facet.png
+  L156 [bare/markdown] ../images/dual-line.png
+  L173 [markdown] assignment.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/12-visualization-relationships/translations/README.hi/page.mdx
+  L3 [bare] ../../sketchnotes/12-Visualizing-Relationships.png
+  L27 [bare/quoted] ../../data/honey.csv
+  L46 [markdown] images/scatter1.png
+  L55 [markdown] images/scatter2.png
+  L85 [markdown] images/scatter3.png
+  L156 [markdown] images/dual-line.png
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/12-visualization-relationships/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/12-Visualizing-Relationships.png
+  L27 [bare/quoted] ../../data/honey.csv
+  L46 [bare/markdown] ../images/scatter1.png
+  L55 [bare/markdown] ../images/scatter2.png
+  L85 [bare/markdown] ../images/scatter3.png
+  L100 [bare/markdown] ../images/line1.png
+  L110 [bare/markdown] ../images/line2.png
+  L134 [bare/markdown] ../images/facet.png
+  L157 [bare/markdown] ../images/dual-line.png
+  L174 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/13-meaningful-visualizations/page.mdx
+  L3 [bare] ../../sketchnotes/13-MeaningfulViz.png
+  L41 [bare/markdown] ./images/tornado.png
+  L47 [markdown] images/bad-chart-1.png
+  L51 [markdown] images/bad-chart-2.jpg
+  L55 [markdown] images/bad-chart-3.jpg
+  L59 [markdown] images/bad-chart-4.jpg
+  L94 [markdown] images/3d.png
+  L100 [markdown] images/busing.png
+  L110 [markdown] images/liaisons.png
+  L168 [markdown] 08_assignment.md
+  L174 [markdown] ../../4-Data-Science-Lifecycle/README.md
+  L176 [markdown] ../../1-Introduction/02-ethics/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/13-meaningful-visualizations/solution/page.mdx
+  L32 [markdown] ../README.md
+  L33 [markdown] ../starter/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/13-meaningful-visualizations/starter/page.mdx
+  L32 [markdown] ../README.md
+  L33 [markdown] ../solution/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/13-meaningful-visualizations/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/13-MeaningfulViz.png
+  L41 [bare/markdown] .././images/tornado.png
+  L47 [bare/markdown] ../images/bad-chart-1.png
+  L51 [bare/markdown] ../images/bad-chart-2.jpg
+  L55 [bare/markdown] ../images/bad-chart-3.jpg
+  L59 [bare/markdown] ../images/bad-chart-4.jpg
+  L94 [bare/markdown] ../images/3d.png
+  L100 [bare/markdown] ../images/busing.png
+  L110 [bare/markdown] ../images/liaisons.png
+  L167 [markdown] assignment.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/13-meaningful-visualizations/translations/README.hi/page.mdx
+  L3 [bare] ../../sketchnotes/13-MeaningfulViz.png
+  L42 [bare/markdown] ./images/tornado.png
+  L48 [markdown] images/bad-chart-1.png
+  L52 [markdown] images/bad-chart-2.jpg
+  L56 [markdown] images/bad-chart-3.jpg
+  L60 [markdown] images/bad-chart-4.jpg
+  L95 [markdown] images/3d.png
+  L101 [markdown] images/busing.png
+  L110 [markdown] images/liaisons.png
+  L168 [markdown] assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/R/09-visualization-quantities/page.mdx
+  L37 [bare/quoted] ../../data/birds.csv
+  L60 [markdown] images/MaxWingspan-lineplot.png
+  L78 [markdown] images/MaxWingspan-lineplot-improved.png
+  L94 [markdown] images/MaxWingspan-scatterplot.png
+  L113 [markdown] images/MaxWingspan-scatterplot-improved.png
+  L154 [markdown] images/stacked-bar-chart.png
+  L169 [markdown] images/category-length.png
+  L192 [markdown] images/comparingdata.png
+  L204 [markdown] images/superimposed-values.png
+  L216 [markdown] 08_assignment.md
+  L222 [markdown] ../10-visualization-distributions/README.md
+  L223 [markdown] ../../09-visualization-quantities/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/R/10-visualization-distributions/page.mdx
+  L19 [bare/quoted] ../../data/birds.csv
+  L39 [markdown] images/max-length-per-order.png
+  L50 [markdown] images/distribution-over-the-entire-dataset.png
+  L58 [markdown] images/distribution-30bins.png
+  L70 [markdown] images/filtered-histogram.png
+  L84 [markdown] images/2d-plot.png
+  L115 [markdown] images/wingspan-conservation-collation.png
+  L129 [markdown] images/density-plot.png
+  L137 [markdown] images/bodymass-smooth.png
+  L145 [markdown] images/less-smooth-bodymass.png
+  L155 [markdown] images/bodymass-per-order.png
+  L169 [markdown] 08_assignment.md
+  L175 [markdown] ../11-visualization-proportions/README.md
+  L176 [markdown] ../../10-visualization-distributions/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/R/11-visualization-proportions/page.mdx
+  L3 [bare] ../../../sketchnotes/11-Visualizing-Proportions.png
+  L22 [bare/quoted] ../../data/mushrooms.csv
+  L91 [markdown] images/pie1-wb.png
+  L126 [markdown] images/donut-wb.png
+  L163 [markdown] images/waffle.png
+  L187 [markdown] 08_assignment.md
+  L193 [markdown] ../12-visualization-relationships/README.md
+  L194 [markdown] ../../11-visualization-proportions/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/R/12-visualization-relationships/page.mdx
+  L3 [bare] ../../../sketchnotes/12-Visualizing-Relationships.png
+  L24 [bare/quoted] ../../data/honey.csv
+  L46 [markdown] images/scatter1.png
+  L56 [markdown] images/scatter2.png
+  L88 [markdown] images/scatter3.png
+  L103 [markdown] images/line1.png
+  L111 [markdown] images/line2.png
+  L131 [markdown] images/facet.png
+  L149 [markdown] images/dual-line.png
+  L166 [markdown] 08_assignment.md
+  L172 [markdown] ../13-meaningful-vizualizations/README.md
+  L173 [markdown] ../../12-visualization-relationships/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/R/13-meaningful-vizualizations/page.mdx
+  L3 [bare] ../../../sketchnotes/13-MeaningfulViz.png
+  L41 [bare/markdown] ./images/tornado.png
+  L47 [markdown] images/bad-chart-1.png
+  L51 [markdown] images/bad-chart-2.jpg
+  L55 [markdown] images/bad-chart-3.jpg
+  L59 [markdown] images/bad-chart-4.jpg
+  L94 [markdown] images/3d.png
+  L100 [markdown] images/busing.png
+  L110 [markdown] images/liaisons.png
+  L168 [markdown] 08_assignment.md
+  L175 [markdown] ../../13-meaningful-visualizations/README.md
+  L176 [markdown] ../../../4-Data-Science-Lifecycle/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/page.mdx
+  L3 [bare/markdown] ./images/bee.jpg
+  L13 [markdown] 09-visualization-quantities/README.md
+  L14 [markdown] 10-visualization-distributions/README.md
+  L15 [markdown] 11-visualization-proportions/README.md
+  L16 [markdown] 12-visualization-relationships/README.md
+  L17 [markdown] 13-meaningful-visualizations/README.md
+  L33 [markdown] ../4-Data-Science-Lifecycle/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.es/page.mdx
+  L3 [bare/markdown] ../images/bee.jpg
+  L11 [markdown] ../09-visualization-quantities/translations/README.es.md
+  L12 [markdown] ../10-visualization-distributions/translations/README.es.md
+  L13 [markdown] ../11-visualization-proportions/translations/README.es.md
+  L14 [markdown] ../12-visualization-relationships/translations/README.es.md
+  L15 [markdown] ../13-meaningful-visualizations/translations/README.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.ko/page.mdx
+  L3 [bare/markdown] ../images/bee.jpg
+  L12 [markdown] ../09-visualization-quantities/README.md
+  L13 [markdown] ../10-visualization-distributions/README.md
+  L14 [markdown] ../11-visualization-proportions/README.md
+  L15 [markdown] ../12-visualization-relationships/README.md
+  L16 [markdown] ../13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.ne/page.mdx
+  L3 [bare/markdown] ./images/bee.jpg
+  L10 [markdown] 09-visualization-quantities/README.md
+  L11 [markdown] 10-visualization-distributions/README.md
+  L12 [markdown] 11-visualization-proportions/README.md
+  L13 [markdown] 12-visualization-relationships/README.md
+  L14 [markdown] 13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.nl/page.mdx
+  L3 [bare/markdown] ./images/bee.jpg
+  L11 [markdown] 09-visualization-quantities/README.md
+  L12 [markdown] 10-visualization-distributions/README.md
+  L13 [markdown] 11-visualization-proportions/README.md
+  L14 [markdown] 12-visualization-relationships/README.md
+  L15 [markdown] 13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.pt-br/page.mdx
+  L3 [bare/markdown] ./../images/bee.jpg
+  L12 [markdown] ../09-visualization-quantities/translations/README.pt-br.md
+  L13 [markdown] ../10-visualization-distributions/translations/README.pt-br.md
+  L14 [markdown] ../11-visualization-proportions/README.md
+  L15 [markdown] ../12-visualization-relationships/README.md
+  L16 [markdown] ../13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.ru/page.mdx
+  L3 [bare/markdown] ../images/bee.jpg
+  L13 [markdown] 09-visualization-quantities/README.md
+  L14 [markdown] 10-visualization-distributions/README.md
+  L15 [markdown] 11-visualization-proportions/README.md
+  L16 [markdown] 12-visualization-relationships/README.md
+  L17 [markdown] 13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/3-Data-Visualization/translations/README.zh-cn/page.mdx
+  L3 [bare/markdown] ../images/bee.jpg
+  L12 [markdown] ../09-visualization-quantities/README.md
+  L13 [markdown] ../10-visualization-distributions/README.md
+  L14 [markdown] ../11-visualization-proportions/README.md
+  L15 [markdown] ../12-visualization-relationships/README.md
+  L16 [markdown] ../13-meaningful-visualizations/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/14-Introduction/assignment/page.mdx
+  L7 [bare/markdown] ../../data/taxi.csv
+  L7 [markdown] Readme.md
+  L9 [markdown] notebook.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/14-Introduction/page.mdx
+  L3 [bare] ../../sketchnotes/14-DataScience-Lifecycle.png
+  L20 [bare/markdown] ./images/data-science-lifecycle.jpg
+  L93 [bare/markdown] ./images/CRISP-DM.png
+  L93 [bare/markdown] ./images/tdsp-lifecycle2.png
+  L107 [markdown] 08_assignment.md
+  L113 [markdown] ../15-analyzing/README.md
+  L114 [markdown] ../16-communication/README.md
+  L115 [markdown] ../../2-Working-With-Data/README.md
+  L115 [markdown] ../../3-Data-Visualization/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/14-Introduction/translations/assignment.ko/page.mdx
+  L7 [bare/markdown] ../../data/taxi.csv
+  L7 [markdown] Readme.md
+  L9 [markdown] notebook.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/14-Introduction/translations/assignment.zh-cn/page.mdx
+  L7 [bare/markdown] ../../../data/taxi.csv
+  L7 [markdown] ../Readme.md
+  L9 [bare/markdown] ../notebook.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/page.mdx
+  L3 [bare] ../../sketchnotes/15-Analyzing.png
+  L13 [markdown] notebook.ipynb
+  L40 [bare/markdown] /2-Working-With-Data/08-data-preparation/notebook.ipynb
+  L47 [markdown] 08_assignment.md
+  L53 [markdown] ../16-communication/README.md
+  L54 [markdown] ../../3-Data-Visualization/README.md
+  L55 [markdown] ../../2-Working-With-Data/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/15-Analyzing.png
+  L13 [bare/markdown] ../notebook.ipynb
+  L37 [markdown] 3-Data-Visualization/README.md
+  L40 [markdown] 2-Working-With-Data\08-data-preparation/notebook.ipynb
+  L46 [markdown] assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/translations/assignment.hi/page.mdx
+  L3 [markdown] ..\14-Introduction\assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/translations/assignment.ko/page.mdx
+  L3 [markdown] ..\14-Introduction\assignment.md
+  L7 [markdown] README.ko.md
+  L11 [bare/markdown] ../assignment.ipynb
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/15-analyzing/translations/assignment.ne/page.mdx
+  L3 [markdown] ..\14-Introduction\assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/16-communication/page.mdx
+  L3 [bare] ../../sketchnotes/16-Communicating.png
+  L223 [markdown] 08_assignment.md
+  L229 [markdown] ../README.md
+  L230 [markdown] ../../../../../16-model-evaluation/README.md
+  L231 [markdown] ../../1-Introduction/02-ethics/README.md
+  L231 [markdown] ../../3-Data-Visualization/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/16-communication/translations/README.hi/page.mdx
+  L3 [bare] ../..//sketchnotes/16-Communicating.png
+  L211 [markdown] ../08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/16-communication/translations/README.ko/page.mdx
+  L3 [bare] ../../sketchnotes/16-Communicating.png
+  L211 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/page.mdx
+  L3 [markdown] images/communication.jpg
+  L10 [markdown] 14-Introduction/README.md
+  L11 [markdown] 15-analyzing/README.md
+  L12 [markdown] 16-communication/README.md
+  L20 [markdown] ../5-Data-Science-In-Cloud/README.md
+  L21 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/translations/README.hi/page.mdx
+  L2 [bare/markdown] ../images/communication.jpg
+  L8 [markdown] ../14-Introduction/README.md
+  L9 [markdown] ../15-analyzing/README.md
+  L10 [markdown] ../16-communication/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/translations/README.ne/page.mdx
+  L3 [markdown] images/communication.jpg
+  L11 [markdown] 14-Introduction/README.md
+  L12 [markdown] 15-Analyzing/README.md
+  L13 [markdown] 16-communication/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/translations/README.pt-br/page.mdx
+  L3 [bare/markdown] ../images/communication.jpg
+  L10 [markdown] 14-Introduction/README.md
+  L11 [markdown] 15-Analyzing/README.md
+  L12 [markdown] 16-communication/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/translations/README.ru/page.mdx
+  L3 [bare/markdown] ../images/communication.jpg
+  L10 [markdown] 14-Introduction/README.md
+  L11 [markdown] 15-Analyzing/README.md
+  L12 [markdown] 16-communication/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/4-Data-Science-Lifecycle/translations/README.zh-cn/page.mdx
+  L3 [bare/markdown] ../images/communication.jpg
+  L10 [markdown] ../14-Introduction/README.md
+  L11 [markdown] ../15-Analyzing/README.md
+  L12 [markdown] ../16-communication/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/17-Introduction/page.mdx
+  L3 [bare] ../../sketchnotes/17-DataScience-Cloud.png
+  L99 [markdown] 08_assignment.md
+  L105 [markdown] ../18-Low-Code/README.md
+  L106 [markdown] ../19-Azure/README.md
+  L107 [markdown] ../../4-Data-Science-Lifecycle/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/17-Introduction/translations/README.hi/page.mdx
+  L3 [bare] ../../../sketchnotes/17-DataScience-Cloud.png
+  L100 [markdown] ./assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/17-Introduction/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/17-DataScience-Cloud.png
+  L99 [markdown] ./assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/17-Introduction/translations/README.ne/page.mdx
+  L3 [bare] ../../../sketchnotes/17-DataScience-Cloud.png
+  L101 [markdown] ./assignment.hi.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/18-Low-Code/page.mdx
+  L3 [bare] ../../sketchnotes/18-DataScience-Cloud.png
+  L55 [markdown] images/project-schema.PNG
+  L108 [markdown] images/workspace-1.PNG
+  L112 [markdown] images/workspace-2.PNG
+  L116 [markdown] images/workspace-3.PNG
+  L128 [markdown] images/workspace-4.PNG
+  L134 [markdown] images/workspace-5.PNG
+  L138 [markdown] images/workspace-6.PNG
+  L186 [markdown] images/cluster-1.PNG
+  L191 [markdown] images/cluster-2.PNG
+  L197 [markdown] images/cluster-3.PNG
+  L205 [markdown] images/dataset-1.PNG
+  L209 [markdown] images/dataset-2.PNG
+  L213 [markdown] images/dataset-3.PNG
+  L224 [markdown] images/aml-1.PNG
+  L228 [markdown] images/aml-2.PNG
+  L232 [markdown] images/aml-3.PNG
+  L236 [markdown] images/aml-4.PNG
+  L246 [markdown] ../19-Azure/README.md
+  L247 [markdown] ../../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L248 [markdown] ../17-Introduction/README.md
+  L255 [markdown] images/deploy-1.PNG
+  L259 [markdown] images/deploy-2.PNG
+  L263 [markdown] images/deploy-3.PNG
+  L273 [markdown] images/consumption-1.PNG
+  L346 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/18-Low-Code/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/18-DataScience-Cloud.png
+  L55 [markdown] ../images/project-schema.PNG
+  L108 [markdown] ../images/workspace-1.PNG
+  L112 [markdown] ../images/workspace-2.PNG
+  L116 [markdown] ../images/workspace-3.PNG
+  L128 [markdown] ../images/workspace-4.PNG
+  L134 [markdown] ../images/workspace-5.PNG
+  L138 [markdown] ../images/workspace-6.PNG
+  L186 [markdown] ../images/cluster-1.PNG
+  L191 [markdown] ../images/cluster-2.PNG
+  L197 [markdown] ../images/cluster-3.PNG
+  L205 [markdown] ../images/dataset-1.PNG
+  L209 [markdown] ../images/dataset-2.PNG
+  L213 [markdown] ../images/dataset-3.PNG
+  L224 [markdown] ../images/aml-1.PNG
+  L228 [markdown] ../images/aml-2.PNG
+  L232 [markdown] ../images/aml-3.PNG
+  L236 [markdown] ../images/aml-4.PNG
+  L247 [markdown] ../images/deploy-1.PNG
+  L251 [markdown] ../images/deploy-2.PNG
+  L255 [markdown] ../images/deploy-3.PNG
+  L265 [markdown] ../images/consumption-1.PNG
+  L338 [markdown] ./assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/18-Low-Code/translations/page.mdx
+  L7 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/19-Azure/page.mdx
+  L3 [bare] ../../sketchnotes/19-DataScience-Cloud.png
+  L49,55,62,79,253 [markdown] ../18-Low-Code/README.md
+  L51 [markdown] images/project-schema.PNG
+  L68 [markdown] images/compute-instance-1.PNG
+  L83 [markdown] notebook.ipynb
+  L91 [markdown] images/notebook-1.PNG
+  L94 [markdown] images/notebook-2.PNG
+  L252 [markdown] ../../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L254 [markdown] ../../../../../09-mlops/README.md
+  L307 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/19-Azure/translations/README.ko/page.mdx
+  L3 [bare] ../../../sketchnotes/19-DataScience-Cloud.png
+  L49,55,62,79 [markdown] ../../18-Low-Code/translations/README.ko.md
+  L51 [markdown] ../images/project-schema.PNG
+  L68 [markdown] ../images/compute-instance-1.PNG
+  L83 [bare/markdown] ../notebook.ipynb
+  L91 [markdown] ../images/notebook-1.PNG
+  L94 [markdown] ../images/notebook-2.PNG
+  L299 [markdown] ./assignment.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/page.mdx
+  L3 [markdown] images/cloud-picture.jpg
+  L9 [markdown] 19-Azure/images/project-schema.PNG
+  L13 [markdown] 17-Introduction/README.md
+  L14 [markdown] 18-Low-Code/README.md
+  L15 [markdown] 19-Azure/README.md
+  L25 [markdown] ../6-Data-Science-In-Wild/README.md
+  L26 [markdown] ../../../../09-mlops/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/translations/README.hi/page.mdx
+  L3 [bare/markdown] ../images/cloud-picture.jpg
+  L9 [markdown] ../19-Azure/images/project-schema.PNG
+  L13 [markdown] ../17-Introduction/README.md
+  L14 [markdown] ../18-Low-Code/README.md
+  L15 [markdown] ../19-Azure/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/translations/README.ko/page.mdx
+  L3 [bare/markdown] ../images/cloud-picture.jpg
+  L9 [markdown] ../19-Azure/images/project-schema.PNG
+  L14 [markdown] ../18-Low-Code/translations/README.ko.md
+  L15 [markdown] ../19-Azure/translations/README.ko.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/translations/README.ne/page.mdx
+  L3 [markdown] images/cloud-picture.jpg
+  L9 [markdown] 19-Azure/images/project-schema.PNG
+  L12 [markdown] १७-परिचय/README.md
+  L13 [markdown] १८-निम्न-कोड्/README.md
+  L14 [markdown] 19-Azure/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/translations/README.ru/page.mdx
+  L3 [bare/markdown] ../images/cloud-picture.jpg
+  L9 [markdown] ../19-Azure/images/project-schema.PNG
+  L13 [markdown] 17-Introduction/README.md
+  L14 [markdown] 18-Low-Code/README.md
+  L15 [markdown] 19-Azure/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/5-Data-Science-In-Cloud/translations/README.zh-cn/page.mdx
+  L3 [bare/markdown] ../images/cloud-picture.jpg
+  L9 [markdown] ../19-Azure/images/project-schema.PNG
+  L13 [markdown] 17-Introduction/README.md
+  L14 [markdown] 18-Low-Code/README.md
+  L15 [markdown] 19-Azure/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/20-Real-World-Examples/assignment/page.mdx
+  L18 [markdown] images/planetary-computer-explorer.png
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/20-Real-World-Examples/page.mdx
+  L3 [bare] ../../sketchnotes/20-DataScience-RealWorld.png
+  L33 [bare/markdown] ./images/data-science-applications.png
+  L39 [bare] ../../sketchnotes/20-DataScience-Research.png
+  L71 [bare] ../../sketchnotes/20-DataScience-Humanities.png
+  L95 [bare] ../../sketchnotes/20-DataScience-Sustainability.png
+  L142 [markdown] 08_assignment.md
+  L148 [markdown] ../README.md
+  L149 [markdown] ../../README.md
+  L150 [markdown] ../../../../../03-maths/README.md
+  L150 [markdown] ../../../../../16-model-evaluation/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/20-Real-World-Examples/translations/README.es/page.mdx
+  L3 [bare] ../../../sketchnotes/20-DataScience-RealWorld.png
+  L33 [bare/markdown] ../images/data-science-applications.png
+  L39 [bare] ../../../sketchnotes/20-DataScience-Research.png
+  L72 [bare] ../../../sketchnotes/20-DataScience-Humanities.png
+  L96 [bare] ../../../sketchnotes/20-DataScience-Sustainability.png
+  L144 [markdown] assignment.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/20-Real-World-Examples/translations/README.ko/page.mdx
+  L3 [bare] ../../sketchnotes/20-DataScience-RealWorld.png
+  L35 [bare/markdown] ../images/data-science-applications.png
+  L41 [bare] ../../sketchnotes/20-DataScience-Research.png
+  L70 [bare] ../../../sketchnotes/20-DataScience-Humanities.png
+  L94 [bare] ../../../sketchnotes/20-DataScience-Sustainability.png
+  L148 [markdown] 08_assignment.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/20-Real-World-Examples/translations/assignment.es/page.mdx
+  L17 [bare/markdown] ../images/planetary-computer-explorer.png
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/20-Real-World-Examples/translations/assignment.ko/page.mdx
+  L15 [markdown] images/Planetary-Computer-Explorer.png
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/page.mdx
+  L7 [markdown] 20-Real-World-Examples/README.md
+  L15 [markdown] ../README.md
+  L16 [markdown] ../../../../03-maths/README.md
+  L16 [markdown] ../../../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/translations/README.es/page.mdx
+  L7 [markdown] ../20-Real-World-Examples/translations/README.es.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/translations/README.hi/page.mdx
+  L7 [markdown] ../20-Real-World-Examples/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/translations/README.ko/page.mdx
+  L7 [markdown] ../20-Real-World-Examples/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/translations/README.np/page.mdx
+  L7 [markdown] ../20-Real-World-Examples/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/translations/README.ru/page.mdx
+  L7 [markdown] ../20-Real-World-Examples/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/6-Data-Science-In-Wild/translations/README.zh-cn/page.mdx
+  L7 [markdown] ../20-Real-World-Examples/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.fa/page.mdx
+  L28 [markdown] ../for-teachers.md
+  L42 [markdown] ../CODE_OF_CONDUCT.md
+  L42 [markdown] ../CONTRIBUTING.md
+  L42,99 [markdown] ../TRANSLATIONS.md
+  L68 [markdown] ../1-Introduction/01-defining-data-science/README.md
+  L68,69,70,71 [markdown] ../1-Introduction/README.md
+  L69 [markdown] ../1-Introduction/02-ethics/README.md
+  L70 [markdown] ../1-Introduction/03-defining-data/README.md
+  L71 [markdown] ../1-Introduction/04-stats-and-probability/README.md
+  L72 [markdown] ../2-Working-With-Data/05-relational-databases/README.md
+  L72,73,74,75 [markdown] ../2-Working-With-Data/README.md
+  L73 [markdown] ../2-Working-With-Data/06-non-relational/README.md
+  L74 [markdown] ../2-Working-With-Data/07-python/README.md
+  L75 [markdown] ../2-Working-With-Data/08-data-preparation/README.md
+  L76 [markdown] ../3-Data-Visualization/09-visualization-quantities/README.md
+  L76,77,78,79,80 [markdown] ../3-Data-Visualization/README.md
+  L77 [markdown] ../3-Data-Visualization/10-visualization-distributions/README.md
+  L78 [markdown] ../3-Data-Visualization/11-visualization-proportions/README.md
+  L79 [markdown] ../3-Data-Visualization/12-visualization-relationships/README.md
+  L80 [markdown] ../3-Data-Visualization/13-meaningful-visualizations/README.md
+  L81 [markdown] ../4-Data-Science-Lifecycle/14-Introduction/README.md
+  L81,82,83 [markdown] ../4-Data-Science-Lifecycle/README.md
+  L82 [markdown] ../4-Data-Science-Lifecycle/15-Analyzing/README.md
+  L83 [markdown] ../4-Data-Science-Lifecycle/16-Communication/README.md
+  L84 [markdown] ../5-Data-Science-In-Cloud/17-Introduction/README.md
+  L84,85,86 [markdown] ../5-Data-Science-In-Cloud/README.md
+  L85 [markdown] ../5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L86 [markdown] ../5-Data-Science-In-Cloud/19-Azure/README.md
+  L87 [markdown] ../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L87 [markdown] ../6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.fr/page.mdx
+  L25 [markdown] ../for-teachers.md
+  L38 [markdown] ../CODE_OF_CONDUCT.md
+  L38 [markdown] ../CONTRIBUTING.md
+  L38,95 [markdown] ../TRANSLATIONS.md
+  L64 [markdown] ../1-Introduction/01-defining-data-science/README.md
+  L64,65,66,67 [markdown] ../1-Introduction/README.md
+  L65 [markdown] ../1-Introduction/02-ethics/README.md
+  L66 [markdown] ../1-Introduction/03-defining-data/README.md
+  L67 [markdown] ../1-Introduction/04-stats-and-probability/README.md
+  L68 [markdown] ../2-Working-With-Data/05-relational-databases/README.md
+  L68,69,70,71 [markdown] ../2-Working-With-Data/README.md
+  L69 [markdown] ../2-Working-With-Data/06-non-relational/README.md
+  L70 [markdown] ../2-Working-With-Data/07-python/README.md
+  L71 [markdown] ../2-Working-With-Data/08-data-preparation/README.md
+  L72 [markdown] ../3-Data-Visualization/09-visualization-quantities/README.md
+  L72,73,74,75,76 [markdown] ../3-Data-Visualization/README.md
+  L73 [markdown] ../3-Data-Visualization/10-visualization-distributions/README.md
+  L74 [markdown] ../3-Data-Visualization/11-visualization-proportions/README.md
+  L75 [markdown] ../3-Data-Visualization/12-visualization-relationships/README.md
+  L76 [markdown] ../3-Data-Visualization/13-meaningful-visualizations/README.md
+  L77 [markdown] ../4-Data-Science-Lifecycle/14-Introduction/README.md
+  L77,78,79 [markdown] ../4-Data-Science-Lifecycle/README.md
+  L78 [markdown] ../4-Data-Science-Lifecycle/15-Analyzing/README.md
+  L79 [markdown] ../4-Data-Science-Lifecycle/16-Communication/README.md
+  L80 [markdown] ../5-Data-Science-In-Cloud/17-Introduction/README.md
+  L80,81,82 [markdown] ../5-Data-Science-In-Cloud/README.md
+  L81 [markdown] ../5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L82 [markdown] ../5-Data-Science-In-Cloud/19-Azure/README.md
+  L83 [markdown] ../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L83 [markdown] ../6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.ko/page.mdx
+  L26 [markdown] for-teachers.md
+  L43 [markdown] CODE_OF_CONITION.md
+  L43 [markdown] CONTRIBUTING.md
+  L43,101 [markdown] TRANSLATIONS.md
+  L68 [markdown] 1-Introduction/01-defining-data-science/README.md
+  L68,69,70,71 [markdown] 1-Introduction/README.md
+  L69 [markdown] 1-Introduction/02-ethics/README.md
+  L70 [markdown] 1-Introduction/03-defining-data/README.md
+  L71 [markdown] 1-Introduction/04-stats-and-probability/README.md
+  L72 [markdown] 2-Working-With-Data/05-relational-databases/README.md
+  L72,73,74,75 [markdown] 2-Working-With-Data/README.md
+  L73 [markdown] 2-Working-With-Data/06-non-relational/README.md
+  L74 [markdown] 2-Working-With-Data/07-python/README.md
+  L75 [markdown] 2-Working-With-Data/08-data-preparation/README.md
+  L76 [markdown] 3-Data-Visualization/09-visualization-quantities/README.md
+  L76,77,78,79,80 [markdown] 3-Data-Visualization/README.md
+  L77 [markdown] 3-Data-Visualization/10-visualization-distributions/README.md
+  L78 [markdown] 3-Data-Visualization/11-visualization-proportions/README.md
+  L79 [markdown] 3-Data-Visualization/12-visualization-relationships/README.md
+  L80 [markdown] 3-Data-Visualization/13-meaningful-visualizations/README.md
+  L81 [markdown] 4-Data-Science-Lifecycle/14-Introduction/README.md
+  L81,82,83 [markdown] 4-Data-Science-Lifecycle/README.md
+  L82 [markdown] 4-Data-Science-Lifecycle/15-analyzing/README.md
+  L83 [markdown] 4-Data-Science-Lifecycle/16-communication/README.md
+  L84 [markdown] 5-Data-Science-In-Cloud/17-Introduction/README.md
+  L84,85,86 [markdown] 5-Data-Science-In-Cloud/README.md
+  L85 [markdown] 5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L86 [markdown] 5-Data-Science-In-Cloud/19-Azure/README.md
+  L87 [markdown] 6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L87 [markdown] 6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.ne/page.mdx
+  L15 [markdown] for-teachers.md
+  L30 [markdown] CODE_OF_CONDUCT.md
+  L30 [markdown] CONTRIBUTING.md
+  L30,90 [markdown] TRANSLATIONS.md
+  L57 [markdown] 1-Introduction/01-defining-data-science/README.md
+  L57,58,59,60 [markdown] 1-Introduction/README.md
+  L58 [markdown] 1-Introduction/02-ethics/README.md
+  L59 [markdown] 1-Introduction/03-defining-data/README.md
+  L60 [markdown] 1-Introduction/04-stats-and-probability/README.md
+  L61 [markdown] 2-Working-With-Data/05-relational-databases/README.md
+  L61,62,63,64 [markdown] 2-Working-With-Data/README.md
+  L62 [markdown] 2-Working-With-Data/06-non-relational/README.md
+  L63 [markdown] 2-Working-With-Data/07-python/README.md
+  L64 [markdown] 2-Working-With-Data/08-data-preparation/README.md
+  L65 [markdown] 3-Data-Visualization/09-visualization-quantities/README.md
+  L65,66,67,68,69 [markdown] 3-Data-Visualization/README.md
+  L66 [markdown] 3-Data-Visualization/10-visualization-distributions/README.md
+  L67 [markdown] 3-Data-Visualization/11-visualization-proportions/README.md
+  L68 [markdown] 3-Data-Visualization/12-visualization-relationships/README.md
+  L69 [markdown] 3-Data-Visualization/13-meaningful-visualizations/README.md
+  L70 [markdown] 4-Data-Science-Lifecycle/14-Introduction/README.md
+  L70,71,72 [markdown] 4-Data-Science-Lifecycle/README.md
+  L71 [markdown] 4-Data-Science-Lifecycle/15-Analyzing/README.md
+  L72 [markdown] 4-Data-Science-Lifecycle/16-Communication/README.md
+  L73 [markdown] 5-Data-Science-In-Cloud/17-Introduction/README.md
+  L73,74,75 [markdown] 5-Data-Science-In-Cloud/README.md
+  L74 [markdown] 5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L75 [markdown] 5-Data-Science-In-Cloud/19-Azure/README.md
+  L76 [markdown] 6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L76 [markdown] 6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.nl/page.mdx
+  L28 [markdown] for-teachers.md
+  L45 [markdown] CODE_OF_CONDUCT.md
+  L45 [markdown] CONTRIBUTING.md
+  L45,105 [markdown] TRANSLATIONS.md
+  L72 [markdown] 1-Introduction/01-defining-data-science/README.md
+  L72,73,74,75 [markdown] 1-Introduction/README.md
+  L73 [markdown] 1-Introduction/02-ethics/README.md
+  L74 [markdown] 1-Introduction/03-defining-data/README.md
+  L75 [markdown] 1-Introduction/04-stats-and-probability/README.md
+  L76 [markdown] 2-Working-With-Data/05-relational-databases/README.md
+  L76,77,78,79 [markdown] 2-Working-With-Data/README.md
+  L77 [markdown] 2-Working-With-Data/06-non-relational/README.md
+  L78 [markdown] 2-Working-With-Data/07-python/README.md
+  L79 [markdown] 2-Working-With-Data/08-data-preparation/README.md
+  L80 [markdown] 3-Data-Visualization/09-visualization-quantities/README.md
+  L80,81,82,83,84 [markdown] 3-Data-Visualization/README.md
+  L81 [markdown] 3-Data-Visualization/10-visualization-distributions/README.md
+  L82 [markdown] 3-Data-Visualization/11-visualization-proportions/README.md
+  L83 [markdown] 3-Data-Visualization/12-visualization-relationships/README.md
+  L84 [markdown] 3-Data-Visualization/13-meaningful-visualizations/README.md
+  L85 [markdown] 4-Data-Science-Lifecycle/14-Introduction/README.md
+  L85,86,87 [markdown] 4-Data-Science-Lifecycle/README.md
+  L86 [markdown] 4-Data-Science-Lifecycle/15-analyzing/README.md
+  L87 [markdown] 4-Data-Science-Lifecycle/16-communication/README.md
+  L88 [markdown] 5-Data-Science-In-Cloud/17-Introduction/README.md
+  L88,89,90 [markdown] 5-Data-Science-In-Cloud/README.md
+  L89 [markdown] 5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L90 [markdown] 5-Data-Science-In-Cloud/19-Azure/README.md
+  L91 [markdown] 6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L91 [markdown] 6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.pt-br/page.mdx
+  L31 [markdown] for-teachers.md
+  L44 [markdown] CODE_OF_CONDUCT.md
+  L44 [markdown] CONTRIBUTING.md
+  L44,101 [markdown] TRANSLATIONS.md
+  L70 [markdown] 1-Introduction/01-defining-data-science/README.md
+  L70,71,72 [markdown] 1-Introduction/README.md
+  L71 [markdown] 1-introdução/02-ethics/README.md
+  L72 [markdown] 1-introdução/03-defining-data/README.md
+  L73 [markdown] 1-introdução/04-stats-and-probability/README.md
+  L73 [markdown] 1-introdução/README.md
+  L74 [markdown] 2-Working-With-Data/05-relational-databases/README.md
+  L74,75,76,77 [markdown] 2-Working-With-Data/README.md
+  L75 [markdown] 2-Working-With-Data/06-non-relational/README.md
+  L76 [markdown] 2-Working-With-Data/07-python/README.md
+  L77 [markdown] 2-Working-With-Data/08-data-preparation/README.md
+  L78 [markdown] 3-Data-Visualization/09-visualization-quantities/README.md
+  L78,79,80,81,82 [markdown] 3-Data-Visualization/README.md
+  L79 [markdown] 3-Data-Visualization/10-visualization-distributions/README.md
+  L80 [markdown] 3-Data-Visualization/11-visualization-proportions/README.md
+  L81 [markdown] 3-Data-Visualization/12-visualization-relationships/README.md
+  L82 [markdown] 3-Data-Visualization/13-meaningful-visualizations/README.md
+  L83 [markdown] 4-Data-Science-Lifecycle/14-introdução/README.md
+  L83,84,85 [markdown] 4-Data-Science-Lifecycle/README.md
+  L84 [markdown] 4-Data-Science-Lifecycle/15-Analyzing/README.md
+  L85 [markdown] 4-Data-Science-Lifecycle/16-Communication/README.md
+  L86 [markdown] 5-Data-Science-In-Cloud/17-introdução/README.md
+  L86,87,88 [markdown] 5-Data-Science-In-Cloud/README.md
+  L87 [markdown] 5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L88 [markdown] 5-Data-Science-In-Cloud/19-Azure/README.md
+  L89 [markdown] 6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L89 [markdown] 6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.pt-pt/page.mdx
+  L27 [markdown] for-teachers.md
+  L46 [markdown] CODE_OF_CONDUCT.md
+  L46 [markdown] CONTRIBUTING.md
+  L46 [markdown] TRANSLATIONS.md
+  L72 [markdown] ../1-Introduction/01-defining-data-science/README.md
+  L72,74,75 [markdown] ../1-Introduction/README.md
+  L73 [markdown] ../1-Introduction/02-ethics/README.md
+  L73 [markdown] 1-Introduction/README.md
+  L74 [markdown] ../1-Introduction/03-defining-data/README.md
+  L75 [markdown] ../1-Introduction/04-stats-and-probability/README.md
+  L76 [markdown] ../2-Working-With-Data/05-relational-databases/README.md
+  L76,77,78,79 [markdown] ../2-Working-With-Data/README.md
+  L77 [markdown] ../2-Working-With-Data/06-non-relational/README.md
+  L78 [markdown] ../2-Working-With-Data/07-python/README.md
+  L79 [markdown] ../2-Working-With-Data/08-data-preparation/README.md
+  L80 [markdown] ../3-Data-Visualization/09-visualization-quantities/README.md
+  L80,81,82,83,84 [markdown] ../3-Data-Visualization/README.md
+  L81 [markdown] ../3-Data-Visualization/10-visualization-distributions/README.md
+  L82 [markdown] ../3-Data-Visualization/11-visualization-proportions/README.md
+  L83 [markdown] ../3-Data-Visualization/12-visualization-relationships/README.md
+  L84 [markdown] ../3-Data-Visualization/13-meaningful-visualizations/README.md
+  L85 [markdown] ../4-Data-Science-Lifecycle/14-Introduction/README.md
+  L85,86,87 [markdown] ../4-Data-Science-Lifecycle/README.md
+  L86 [markdown] ../4-Data-Science-Lifecycle/15-analyzing/README.md
+  L87 [markdown] ../4-Data-Science-Lifecycle/16-communication/README.md
+  L88 [markdown] ../5-Data-Science-In-Cloud/17-Introduction/README.md
+  L88,89,90 [markdown] ../5-Data-Science-In-Cloud/README.md
+  L89 [markdown] ../5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L90 [markdown] ../5-Data-Science-In-Cloud/19-Azure/README.md
+  L91 [markdown] ../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L91 [markdown] ../6-Data-Science-In-Wild/README.md
+  L101 [markdown] ../TRANSLATIONS.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.ru/page.mdx
+  L25 [markdown] for-teachers.md
+  L39 [markdown] CODE_OF_CONDUCT.md
+  L39 [markdown] CONTRIBUTING.md
+  L39,99 [markdown] TRANSLATIONS.md
+  L65 [markdown] 1-Introduction/01-defining-data-science/translations/README.ru.md
+  L65,66,67,68 [markdown] 1-Introduction/translations/README.ru.md
+  L66 [markdown] 1-Introduction/02-ethics/translations/README.ru.md
+  L67 [markdown] 1-Introduction/03-defining-data/translations/README.ru.md
+  L68 [markdown] 1-Introduction/04-stats-and-probability/translations/README.ru.md
+  L69 [markdown] 2-Working-With-Data/05-relational-databases/translations/README.ru.md
+  L69,70,71,72 [markdown] 2-Working-With-Data/translations/README.ru.md
+  L70 [markdown] 2-Working-With-Data/06-non-relational/translations/README.ru.md
+  L71 [markdown] 2-Working-With-Data/07-python/translations/README.ru.md
+  L72 [markdown] 2-Working-With-Data/08-data-preparation/translations/README.ru.md
+  L73 [markdown] 3-Data-Visualization/09-visualization-quantities/translations/README.ru.md
+  L73,74,75,76,77 [markdown] 3-Data-Visualization/translations/README.ru.md
+  L74 [markdown] 3-Data-Visualization/10-visualization-distributions/translations/README.ru.md
+  L75 [markdown] 3-Data-Visualization/11-visualization-proportions/translations/README.ru.md
+  L76 [markdown] 3-Data-Visualization/12-visualization-relationships/translations/README.ru.md
+  L77 [markdown] 3-Data-Visualization/13-meaningful-visualizations/translations/README.ru.md
+  L78 [markdown] 4-Data-Science-Lifecycle/14-Introduction/translations/README.ru.md
+  L78,79,80 [markdown] 4-Data-Science-Lifecycle/translations/README.ru.md
+  L79 [markdown] 4-Data-Science-Lifecycle/15-Analyzing/translations/README.ru.md
+  L80 [markdown] 4-Data-Science-Lifecycle/16-Communication/translations/README.ru.md
+  L81 [markdown] 5-Data-Science-In-Cloud/17-Introduction/translations/README.ru.md
+  L81,82,83 [markdown] 5-Data-Science-In-Cloud/translations/README.ru.md
+  L82 [markdown] 5-Data-Science-In-Cloud/18-Low-Code/translations/README.ru.md
+  L83 [markdown] 5-Data-Science-In-Cloud/19-Azure/translations/README.ru.md
+  L84 [markdown] 6-Data-Science-In-Wild/20-Real-World-Examples/translations/README.ru.md
+  L84 [markdown] 6-Data-Science-In-Wild/translations/README.ru.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.tr/page.mdx
+  L26 [markdown] ../for-teachers.md
+  L43 [markdown] ../CODE_OF_CONDUCT.md
+  L43 [markdown] ../CONTRIBUTING.md
+  L43 [markdown] ../TRANSLATIONS.md
+  L68 [markdown] ../1-Introduction/01-defining-data-science/README.md
+  L68,69,70,71 [markdown] ../1-Introduction/README.md
+  L69 [markdown] ../1-Introduction/02-ethics/README.md
+  L70 [markdown] ../1-Introduction/03-defining-data/README.md
+  L71 [markdown] ../1-Introduction/04-stats-and-probability/README.md
+  L72 [markdown] ../2-Working-With-Data/05-relational-databases/README.md
+  L72,73,74,75 [markdown] ../2-Working-With-Data/README.md
+  L73 [markdown] ../2-Working-With-Data/06-non-relational/README.md
+  L74 [markdown] ../2-Working-With-Data/07-python/README.md
+  L75 [markdown] ../2-Working-With-Data/08-data-preparation/README.md
+  L76 [markdown] ../3-Data-Visualization/09-visualization-quantities/README.md
+  L76,77,78,79,80 [markdown] ../3-Data-Visualization/README.md
+  L77 [markdown] ../3-Data-Visualization/10-visualization-distributions/README.md
+  L78 [markdown] ../3-Data-Visualization/11-visualization-proportions/README.md
+  L79 [markdown] ../3-Data-Visualization/12-visualization-relationships/README.md
+  L80 [markdown] ../3-Data-Visualization/13-meaningful-visualizations/README.md
+  L81 [markdown] ../4-Data-Science-Lifecycle/14-Introduction/README.md
+  L81,82,83 [markdown] ../4-Data-Science-Lifecycle/README.md
+  L82 [markdown] ../4-Data-Science-Lifecycle/15-analyzing/README.md
+  L83 [markdown] ../4-Data-Science-Lifecycle/16-communication/README.md
+  L84 [markdown] ../5-Data-Science-In-Cloud/17-Introduction/README.md
+  L84,85,86 [markdown] ../5-Data-Science-In-Cloud/README.md
+  L85 [markdown] ../5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L86 [markdown] ../5-Data-Science-In-Cloud/19-Azure/README.md
+  L87 [markdown] ../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L87 [markdown] ../6-Data-Science-In-Wild/README.md
+  L99 [markdown] TRANSLATIONS.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.zh-cn/page.mdx
+  L15 [markdown] ../for-teachers.md
+  L28 [markdown] ../CODE_OF_CONDUCT.md
+  L28 [markdown] ../CONTRIBUTING.md
+  L28,86 [markdown] ../TRANSLATIONS.md
+  L53 [markdown] ../1-Introduction/01-defining-data-science/README.md
+  L53,54,55,56 [markdown] ../1-Introduction/translations/README.zh-cn.md
+  L54 [markdown] ../1-Introduction/02-ethics/README.md
+  L55 [markdown] ../1-Introduction/03-defining-data/README.md
+  L56 [markdown] ../1-Introduction/04-stats-and-probability/README.md
+  L57 [markdown] ../2-Working-With-Data/05-relational-databases/README.md
+  L57,58,59,60 [markdown] ../2-Working-With-Data/translations/README.zh-cn.md
+  L58 [markdown] ../2-Working-With-Data/06-non-relational/README.md
+  L59 [markdown] ../2-Working-With-Data/07-python/README.md
+  L60 [markdown] ../2-Working-With-Data/08-data-preparation/README.md
+  L61 [markdown] ../3-Data-Visualization/09-visualization-quantities/README.md
+  L61,62,63,64,65 [markdown] ../3-Data-Visualization/translations/README.zh-cn.md
+  L62 [markdown] ../3-Data-Visualization/10-visualization-distributions/README.md
+  L63 [markdown] ../3-Data-Visualization/11-visualization-proportions/README.md
+  L64 [markdown] ../3-Data-Visualization/12-visualization-relationships/README.md
+  L65 [markdown] ../3-Data-Visualization/13-meaningful-visualizations/README.md
+  L66 [markdown] ../4-Data-Science-Lifecycle/14-Introduction/README.md
+  L66,67,68 [markdown] ../4-Data-Science-Lifecycle/translations/README.zh-cn.md
+  L67 [markdown] ../4-Data-Science-Lifecycle/15-Analyzing/README.md
+  L68 [markdown] ../4-Data-Science-Lifecycle/16-Communication/README.md
+  L69 [markdown] ../5-Data-Science-In-Cloud/17-Introduction/README.md
+  L69,70,71 [markdown] ../5-Data-Science-In-Cloud/translations/README.zh-cn.md
+  L70 [markdown] ../5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L71 [markdown] ../5-Data-Science-In-Cloud/19-Azure/README.md
+  L72 [markdown] ../6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L72 [markdown] ../6-Data-Science-In-Wild/translations/README.zh-cn.md
+  L82 [bare/markdown] ../pdf/readme.pdf
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/docs/_sidebar/page.mdx
+  L2 [markdown] ../1-Introduction/01-defining-data-science/README.md
+  L3 [markdown] ../1-Introduction/02-ethics/README.md
+  L4 [markdown] ../1-Introduction/03-defining-data/README.md
+  L5 [markdown] ../1-Introduction/04-stats-and-probability/README.md
+  L7 [markdown] ../2-Working-With-Data/05-relational-databases/README.md
+  L8 [markdown] ../2-Working-With-Data/06-non-relational/README.md
+  L9 [markdown] ../2-Working-With-Data/07-python/README.md
+  L10 [markdown] ../2-Working-With-Data/08-data-preparation/README.md
+  L12 [markdown] ../3-Data-Visualization/09-visualization-quantities/README.md
+  L13 [markdown] ../3-Data-Visualization/10-visualization-distributions/README.md
+  L14 [markdown] ../3-Data-Visualization/11-visualization-proportions/README.md
+  L15 [markdown] ../3-Data-Visualization/12-visualization-relationships/README.md
+  L16 [markdown] ../3-Data-Visualization/13-meaningful-visualizations/README.md
+  L18 [markdown] ../4-Data-Science-Lifecycle/14-Introduction/README.md
+  L19 [markdown] ../4-Data-Science-Lifecycle/15-analyzing/README.md
+  L20 [markdown] ../4-Data-Science-Lifecycle/16-communication/README.md
+  L22 [markdown] ../5-Data-Science-In-Cloud/17-Introduction/README.md
+  L23 [markdown] ../5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L24 [markdown] ../5-Data-Science-In-Cloud/19-Azure/README.md
+  L26 [markdown] ../6-Data-Science-In-Wild/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/for-teachers/page.mdx
+  L25 [markdown] ./sketchnotes/
+  L27 [bare/markdown] ./pdf/readme.pdf
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/page.mdx
+  L48 [markdown] for-teachers.md
+  L65 [markdown] CODE_OF_CONDUCT.md
+  L65 [markdown] CONTRIBUTING.md
+  L65,142 [markdown] TRANSLATIONS.md
+  L91 [markdown] 1-Introduction/01-defining-data-science/README.md
+  L91,92,93,94,166 [markdown] 1-Introduction/README.md
+  L92 [markdown] 1-Introduction/02-ethics/README.md
+  L93 [markdown] 1-Introduction/03-defining-data/README.md
+  L94 [markdown] 1-Introduction/04-stats-and-probability/README.md
+  L95 [markdown] 2-Working-With-Data/05-relational-databases/README.md
+  L95,96,97,98 [markdown] 2-Working-With-Data/README.md
+  L96 [markdown] 2-Working-With-Data/06-non-relational/README.md
+  L97 [markdown] 2-Working-With-Data/07-python/README.md
+  L98 [markdown] 2-Working-With-Data/08-data-preparation/README.md
+  L99 [markdown] 3-Data-Visualization/09-visualization-quantities/README.md
+  L99,100,101,102,103 [markdown] 3-Data-Visualization/README.md
+  L100 [markdown] 3-Data-Visualization/10-visualization-distributions/README.md
+  L101 [markdown] 3-Data-Visualization/11-visualization-proportions/README.md
+  L102 [markdown] 3-Data-Visualization/12-visualization-relationships/README.md
+  L103 [markdown] 3-Data-Visualization/13-meaningful-visualizations/README.md
+  L104 [markdown] 4-Data-Science-Lifecycle/14-Introduction/README.md
+  L104,105,106 [markdown] 4-Data-Science-Lifecycle/README.md
+  L105 [markdown] 4-Data-Science-Lifecycle/15-analyzing/README.md
+  L106 [markdown] 4-Data-Science-Lifecycle/16-communication/README.md
+  L107 [markdown] 5-Data-Science-In-Cloud/17-Introduction/README.md
+  L107,108,109 [markdown] 5-Data-Science-In-Cloud/README.md
+  L108 [markdown] 5-Data-Science-In-Cloud/18-Low-Code/README.md
+  L109 [markdown] 5-Data-Science-In-Cloud/19-Azure/README.md
+  L110 [markdown] 6-Data-Science-In-Wild/20-Real-World-Examples/README.md
+  L110 [markdown] 6-Data-Science-In-Wild/README.md
+  L168 [markdown] ../../README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/quiz-app/page.mdx
+  L52 [markdown] ../README.md
+  L54 [markdown] ../../../../21-quizzes/README.md
+
+src/app/02-data-science/3-data-science-examples/01-microsoft-course/sketchnotes/page.mdx
+  L7 [markdown] ../README.md
+
+src/app/02-data-science/3-data-science-examples/02-core-topics/page.mdx
+  L12 [markdown] ../README.md
+  L13 [markdown] ../03-machine-learning/README.md
+
+src/app/02-data-science/3-data-science-examples/03-machine-learning/page.mdx
+  L12 [markdown] ../04-deep-learning/README.md
+  L13 [markdown] ../../README.md
+
+src/app/02-data-science/3-data-science-examples/04-deep-learning/page.mdx
+  L12 [markdown] ../05-reference-notebooks/README.md
+  L13 [markdown] ../../../../06-neural-networks/README.md
+
+src/app/02-data-science/3-data-science-examples/04-deep-learning/tensorflow-keras/keras-tutorial/deep_learning_models/page.mdx
+  L11 [bare] /.keras/keras.json
+  L28,48,68 [quoted] elephant.jpg
+
+src/app/02-data-science/3-data-science-examples/05-reference-notebooks/page.mdx
+  L12 [markdown] ../README.md
+  L13 [markdown] ../../../README.md
+
+src/app/02-data-science/3-data-science-examples/page.mdx
+  L8,13 [markdown] /Users/pavanmudigonda/code/zero-to-ai/02-data-science/README.md
+  L14 [markdown] /Users/pavanmudigonda/code/zero-to-ai/03-maths/README.md
+
+src/app/02-data-science/4-matplotlib/page.mdx
+  L22 [markdown] ../5-scikit-learn/README.md
+  L23 [markdown] ../../16-model-evaluation/README.md
+  L24 [markdown] ../2-pandas-examples/README.md
+
+src/app/02-data-science/5-scikit-learn/page.mdx
+  L23 [markdown] ../../03-maths/README.md
+  L24 [markdown] ../../09-mlops/README.md
+  L25 [markdown] ../../28-practical-data-science/README.md
+
+src/app/02-data-science/page.mdx
+  L60 [markdown] ../03-maths/README.md
+  L61 [markdown] ../04-token/README.md
+  L62 [markdown] ../05-embeddings/README.md
+  L64 [markdown] ../01-python/README.md
+
+src/app/03-maths/3blue1brown/calculus/page.mdx
+  L12 [markdown] ../differential-equations/README.md
+  L13 [markdown] ../README.md
+
+src/app/03-maths/3blue1brown/differential-equations/page.mdx
+  L12 [markdown] ../neural-networks/README.md
+  L13 [markdown] ../README.md
+
+src/app/03-maths/3blue1brown/linear-algebra/page.mdx
+  L8,12 [markdown] ../README.md
+  L13 [markdown] ../../foundational/README.md
+  L13 [markdown] ../../mml-book/README.md
+
+src/app/03-maths/3blue1brown/neural-networks/page.mdx
+  L12 [markdown] ../README.md
+  L13 [markdown] ../../../../06-neural-networks/README.md
+
+src/app/03-maths/3blue1brown/page.mdx
+  L94 [markdown] ../foundational/README.md
+  L95 [markdown] ../mml-book/README.md
+  L96 [markdown] ../cs229-course/README.md
+
+src/app/03-maths/advanced/page.mdx
+  L15 [markdown] 01_introduction_learning_theory.ipynb
+  L16 [markdown] 02_concentration_inequalities.ipynb
+  L17 [markdown] 03_rademacher_complexity.ipynb
+  L18 [markdown] 04_pac_bayes_theory.ipynb
+  L19 [markdown] 05_neural_tangent_kernel.ipynb
+  L25 [markdown] 06_variational_inference.ipynb
+  L26 [markdown] 07_bayesian_nonparametrics.ipynb
+  L27 [markdown] 08_expectation_maximization.ipynb
+  L28 [markdown] 09_gradient_descent_convergence.ipynb
+  L34 [markdown] 10_state_space_models.ipynb
+  L35 [markdown] 11_copula_theory.ipynb
+  L36 [markdown] 12_determinantal_point_processes.ipynb
+  L37 [markdown] 13_johnson_lindenstrauss.ipynb
+  L38 [markdown] 14_duality_theory.ipynb
+  L39 [markdown] 15_conjugate_gradients.ipynb
+  L40 [markdown] 16_matrix_concentration_inequalities.ipynb
+  L69 [markdown] ../../24-advanced-deep-learning/README.md
+  L70 [markdown] ../../28-practical-data-science/README.md
+  L71 [markdown] ../README.md
+
+src/app/03-maths/cs229-course/course/page.mdx
+  L29 [markdown] 01_linear_regression.ipynb
+  L65 [markdown] 03_locally_weighted_regression.ipynb
+  L102 [markdown] 04_logistic_regression.ipynb
+  L152,260 [markdown] 07_regularization.ipynb
+  L178 [markdown] 05_generative_models.ipynb
+  L211 [markdown] ../README.md
+  L212 [markdown] ../../../24-advanced-deep-learning/README.md
+  L212 [markdown] ../../../28-practical-data-science/README.md
+  L217 [markdown] 06_svm.ipynb
+  L300 [markdown] 10_neural_networks_basics.ipynb
+  L326 [markdown] 11_neural_networks_advanced.ipynb
+  L346 [markdown] 13_clustering.ipynb
+  L366 [markdown] 14_dimensionality_reduction.ipynb
+  L386 [markdown] X01_anomaly_detection.ipynb
+  L406 [markdown] 08_learning_theory.ipynb
+  L466 [markdown] 09_decision_trees.ipynb
+  L554 [markdown] 12_ml_strategy.ipynb
+  L577 [markdown] X02_recommender_systems.ipynb
+  L594 [markdown] 15_reinforcement_learning.ipynb
+  L807 [markdown] CS229_PRACTICE.ipynb
+
+src/app/03-maths/cs229-course/page.mdx
+  L5 [markdown] cs229.pdf
+  L13 [markdown] course/01_linear_regression.ipynb
+  L14 [markdown] course/02_gradient_descent.ipynb
+  L15 [markdown] course/03_locally_weighted_regression.ipynb
+  L16 [markdown] course/04_logistic_regression.ipynb
+  L17 [markdown] course/05_generative_models.ipynb
+  L18 [markdown] course/06_svm.ipynb
+  L19 [markdown] course/07_regularization.ipynb
+  L20 [markdown] course/08_learning_theory.ipynb
+  L21 [markdown] course/09_decision_trees.ipynb
+  L22 [markdown] course/10_neural_networks_basics.ipynb
+  L23 [markdown] course/11_neural_networks_advanced.ipynb
+  L24 [markdown] course/12_ml_strategy.ipynb
+  L25 [markdown] course/13_clustering.ipynb
+  L26 [markdown] course/14_dimensionality_reduction.ipynb
+  L27 [markdown] course/15_reinforcement_learning.ipynb
+  L28 [markdown] course/X01_anomaly_detection.ipynb
+  L29 [markdown] course/X02_recommender_systems.ipynb
+  L30 [markdown] course/CS229_PRACTICE.ipynb
+  L54 [markdown] ../islp-book/README.md
+  L55 [markdown] ../advanced/README.md
+  L56 [markdown] ../../02-data-science/README.md
+  L56 [markdown] ../../06-neural-networks/README.md
+
+src/app/03-maths/dli-book/page.mdx
+  L3 [markdown] 2201.00650v2.pdf
+  L14 [markdown] lab_01_logistic_regression.ipynb
+  L15 [markdown] lab_02_information_theory.ipynb
+  L16 [markdown] lab_03_calculus_backprop.ipynb
+  L17 [markdown] lab_04_probability_bayesian.ipynb
+  L18 [markdown] lab_05_ensemble_methods.ipynb
+  L19 [markdown] lab_06_cnn_feature_extraction.ipynb
+  L51 [markdown] ../foundational/README.md
+  L52 [markdown] ../../06-neural-networks/README.md
+  L53 [markdown] ../../24-advanced-deep-learning/README.md
+
+src/app/03-maths/foundational/page.mdx
+  L11 [markdown] 00_python_ml_libraries.ipynb
+  L12 [markdown] 01_linear_algebra_fundamentals.ipynb
+  L13 [markdown] 02_calculus_derivatives.ipynb
+  L14 [markdown] 03_probability_statistics.ipynb
+  L15 [markdown] 04_gradient_descent.ipynb
+  L16 [markdown] 05_information_theory.ipynb
+  L17 [markdown] 06_statistical_inference.ipynb
+  L18 [markdown] 07_neural_network_math.ipynb
+  L19 [markdown] 08_advanced_linear_algebra.ipynb
+  L20 [markdown] 09_math_architecture_analytical_vs_numerical.ipynb
+  L21 [markdown] 10_ai_foundations_control_theory.ipynb
+  L22 [markdown] 11_markov_models_hmm.ipynb
+  L23 [markdown] 12_optimization_from_scratch_adam.ipynb
+
+src/app/03-maths/islp-book/page.mdx
+  L16,616,630,724 [markdown] PRACTICE_EXERCISES.ipynb
+  L751 [markdown] ../mlpp-book/README.md
+  L752 [markdown] ../advanced/README.md
+  L753 [markdown] ../../16-model-evaluation/README.md
+  L753 [markdown] ../../28-practical-data-science/README.md
+
+src/app/03-maths/ml-problem/page.mdx
+  L5 [markdown] ml-problem.pdf
+  L17 [markdown] ../README.md
+  L18 [markdown] ../../28-practical-data-science/README.md
+  L19 [markdown] ../../16-model-evaluation/README.md
+
+src/app/03-maths/mlpp-book/page.mdx
+  L89 [markdown] ML-Machine-Learning-A-Probabilistic-Perspective.pdf
+  L109 [markdown] ../advanced/README.md
+  L110 [markdown] ../islp-book/README.md
+  L111 [markdown] ../../16-model-evaluation/README.md
+  L111 [markdown] ../../28-practical-data-science/README.md
+
+src/app/03-maths/mml-book/page.mdx
+  L5 [markdown] mml-book.pdf
+  L13 [markdown] course/01_linear_algebra.ipynb
+  L14 [markdown] course/02_analytic_geometry.ipynb
+  L15 [markdown] course/03_matrix_decompositions.ipynb
+  L16 [markdown] course/04_vector_calculus.ipynb
+  L17 [markdown] course/05_probability.ipynb
+  L18 [markdown] course/06_optimization.ipynb
+  L19 [markdown] course/07_linear_regression.ipynb
+  L20 [markdown] course/08_pca.ipynb
+  L21 [markdown] course/09_gmm.ipynb
+  L22 [markdown] course/10_svm.ipynb
+  L28 [markdown] exercises/mml_exercises_part1.ipynb
+  L29 [markdown] exercises/mml_exercises_part2.ipynb
+  L30 [markdown] exercises/mml_solutions_part1.ipynb
+  L31 [markdown] exercises/mml_solutions_part2.ipynb
+  L62 [markdown] ../cs229-course/README.md
+  L63 [markdown] ../advanced/README.md
+  L64 [markdown] ../mlpp-book/README.md
+
+src/app/03-maths/mml-book/practice-labs/page.mdx
+  L12 [markdown] lab_01_linear_algebra.ipynb
+  L13 [markdown] lab_02_analytic_geometry.ipynb
+  L14 [markdown] lab_03_matrix_decompositions.ipynb
+  L15 [markdown] lab_04_vector_calculus.ipynb
+  L16 [markdown] lab_05_probability_distributions.ipynb
+  L17 [markdown] lab_06_optimization.ipynb
+  L18 [markdown] lab_07_linear_regression.ipynb
+  L19 [markdown] lab_08_pca.ipynb
+  L20 [markdown] lab_09_gaussian_mixtures.ipynb
+  L21 [markdown] lab_10_svm.ipynb
+  L55 [markdown] ../README.md
+  L56 [markdown] ../../06-neural-networks/README.md
+  L56 [markdown] ../../28-practical-data-science/README.md
+
+src/app/03-maths/page.mdx
+  L37,78 [markdown] foundational/01_linear_algebra_fundamentals.ipynb
+  L38,79 [markdown] foundational/02_calculus_derivatives.ipynb
+  L39,80 [markdown] foundational/03_probability_statistics.ipynb
+  L40,81 [markdown] foundational/04_gradient_descent.ipynb
+  L41,82 [markdown] foundational/05_information_theory.ipynb
+  L42 [markdown] foundational/06_statistical_inference.ipynb
+  L43,87 [markdown] foundational/07_neural_network_math.ipynb
+  L69,78 [markdown] foundational/08_advanced_linear_algebra.ipynb
+  L70 [markdown] foundational/12_optimization_from_scratch_adam.ipynb
+  L78 [markdown] mml-book/course/01_linear_algebra.ipynb
+  L78 [markdown] mml-book/practice-labs/lab_01_linear_algebra.ipynb
+  L79 [markdown] mml-book/course/04_vector_calculus.ipynb
+  L79 [markdown] mml-book/practice-labs/lab_04_vector_calculus.ipynb
+  L80,89 [markdown] dli-book/lab_04_probability_bayesian.ipynb
+  L80 [markdown] mlpp-book/01_probability_fundamentals.ipynb
+  L80 [markdown] mml-book/course/05_probability.ipynb
+  L80 [markdown] mml-book/practice-labs/lab_05_probability_distributions.ipynb
+  L81 [markdown] advanced/09_gradient_descent_convergence.ipynb
+  L81 [markdown] cs229-course/course/02_gradient_descent.ipynb
+  L81 [markdown] mml-book/course/06_optimization.ipynb
+  L81 [markdown] mml-book/practice-labs/lab_06_optimization.ipynb
+  L82 [markdown] dli-book/lab_02_information_theory.ipynb
+  L83 [markdown] cs229-course/course/01_linear_regression.ipynb
+  L83 [markdown] islp-book/03_linear_regression.ipynb
+  L83,89 [markdown] mml-book/course/07_linear_regression.ipynb
+  L83 [markdown] mml-book/practice-labs/lab_07_linear_regression.ipynb
+  L84 [markdown] cs229-course/course/04_logistic_regression.ipynb
+  L84 [markdown] dli-book/lab_01_logistic_regression.ipynb
+  L84 [markdown] islp-book/04_classification.ipynb
+  L85 [markdown] cs229-course/course/06_svm.ipynb
+  L85 [markdown] islp-book/09_support_vector_machines.ipynb
+  L85 [markdown] mml-book/course/10_svm.ipynb
+  L85 [markdown] mml-book/practice-labs/lab_10_svm.ipynb
+  L86 [markdown] cs229-course/course/14_dimensionality_reduction.ipynb
+  L86 [markdown] mml-book/course/08_pca.ipynb
+  L86 [markdown] mml-book/practice-labs/lab_08_pca.ipynb
+  L87 [markdown] cs229-course/course/10_neural_networks_basics.ipynb
+  L87 [markdown] islp-book/10_deep_learning.ipynb
+  L87 [markdown] slp-book/lab_04_neural_networks.ipynb
+  L88 [markdown] slp-book/lab_05_transformers_attention.ipynb
+  L89 [markdown] advanced/07_bayesian_nonparametrics.ipynb
+  L89 [markdown] mlpp-book/04_bayesian_statistics.ipynb
+  L90 [markdown] cs229-course/course/13_clustering.ipynb
+  L90 [markdown] mlpp-book/11_mixture_models_em.ipynb
+  L90 [markdown] mml-book/course/09_gmm.ipynb
+  L90 [markdown] mml-book/practice-labs/lab_09_gaussian_mixtures.ipynb
+  L98 [markdown] mml-book/mml-book.pdf
+  L99 [markdown] cs229-course/cs229.pdf
+  L100 [markdown] islp-book/ISLP.pdf
+  L101 [markdown] mlpp-book/ML-Machine-Learning-A-Probabilistic-Perspective.pdf
+  L102 [markdown] dli-book/2201.00650v2.pdf
+  L103 [markdown] slp-book/ed3book_jan26.pdf
+  L104 [markdown] ml-problem/ml-problem.pdf
+  L125 [markdown] ../04-token/README.md
+  L126 [markdown] ../05-embeddings/README.md
+  L127 [markdown] ../06-neural-networks/README.md
+
+src/app/03-maths/slp-book/page.mdx
+  L3 [markdown] ed3book_jan26.pdf
+  L14 [markdown] lab_01_words_tokens.ipynb
+  L15 [markdown] lab_02_ngram_language_models.ipynb
+  L16 [markdown] lab_03_word_embeddings.ipynb
+  L17 [markdown] lab_04_neural_networks.ipynb
+  L18 [markdown] lab_05_transformers_attention.ipynb
+  L19 [markdown] lab_06_large_language_models.ipynb
+  L51 [markdown] ../../04-token/README.md
+  L51 [markdown] ../../05-embeddings/README.md
+  L52 [markdown] ../../08-rag/README.md
+  L53 [markdown] ../../12-llm-finetuning/README.md
+
+src/app/04-token/02_intro/page.mdx
+  L304 [markdown] ../05-embeddings/
+  L307 [markdown] ../23-glossary/01_GLOSSARY.md
+
+src/app/04-token/07_tokenizer_comparison/page.mdx
+  L50,83,115,145 [quoted] data.txt
+
+src/app/04-token/10_huggingface_tokenizers_guide/page.mdx
+  L73,386,755 [quoted] data/train.txt
+  L73,386 [quoted] data/valid.txt
+  L77,94 [quoted] my-tokenizer.json
+  L386 [quoted] data/test.txt
+  L390 [quoted] bpe-tokenizer.json
+  L427,801 [quoted] data/corpus.txt
+  L441 [quoted] bert-wordpiece.json
+  L503 [quoted] bert-base-uncased-vocab.txt
+  L898 [quoted] data/english.txt
+  L899 [quoted] data/spanish.txt
+  L900 [quoted] data/chinese.txt
+  L901 [quoted] data/arabic.txt
+  L977 [quoted] data/books.txt
+  L978 [quoted] data/news.txt
+  L979 [quoted] data/wikipedia.txt
+  L980 [quoted] data/conversations.txt
+  L1009,1012,1015 [quoted] tokenizer.json
+  L1039 [quoted] large_file.txt
+
+src/app/04-token/README_TOKENIZERS/page.mdx
+  L44 [markdown] ./10_huggingface_tokenizers_guide.md
+  L74 [markdown] ./01_tokenizers_quickstart.py
+  L102 [markdown] ./02_tokenizers_training.py
+  L129 [markdown] ./03_advanced_training_methods.py
+  L157 [markdown] ./06_production_guide.md
+  L172 [markdown] ./07_tokenizer_comparison.md
+  L188 [markdown] ./08_integration_guide.md
+  L293 [quoted] my-tokenizer.json
+  L310 [quoted] data.txt
+  L414 [markdown] ../05-embeddings/
+  L415 [markdown] ./02_intro.md
+
+src/app/04-token/page.mdx
+  L24 [markdown] 03_tokenizers_quickstart.ipynb
+  L25 [markdown] 12_tiktoken_example.ipynb
+  L26 [markdown] 11_sentencepiece_example.ipynb
+  L27 [markdown] 04_tokenizers_training.ipynb
+  L28 [markdown] 05_advanced_training_methods.ipynb
+  L29 [markdown] 09_pipeline_components.ipynb
+  L30 [markdown] 14_token_exploration.ipynb
+  L31 [markdown] 13_token_exercises.ipynb
+  L68 [markdown] 02_intro.md
+  L69 [markdown] 10_huggingface_tokenizers_guide.md
+  L70 [markdown] README_TOKENIZERS.md
+  L71 [markdown] README_TIKTOKEN.md
+  L72 [markdown] 06_production_guide.md
+  L73 [markdown] 07_tokenizer_comparison.md
+  L74 [markdown] 08_integration_guide.md
+
+src/app/05-embeddings/page.mdx
+  L15 [markdown] 01_START_HERE.ipynb
+  L16 [markdown] 02_embeddings_intro.ipynb
+  L17 [markdown] 12_semantic_similarity.ipynb
+  L18 [markdown] 06_sentence_transformer_intro.ipynb
+  L19 [markdown] 10_huggingface_embeddings.ipynb
+  L20 [markdown] 11_openai_embeddings.ipynb
+  L21 [markdown] 04_semantic_search_intro.ipynb
+  L22 [markdown] 13_vector_database_demo.ipynb
+  L23,74 [markdown] 09_embedding_comparison.md
+  L27 [markdown] 05_semantic_textual_similarity_intro.ipynb
+  L28 [markdown] 03_paraphrase_mining_intro.ipynb
+  L29 [markdown] 07_sparse_encoder_intro.ipynb
+  L73 [markdown] 08_QUICKSTART.md
+  L78 [markdown] ../07-vector-databases/README.md
+  L79 [markdown] ../08-rag/README.md
+  L80 [markdown] ../13-multimodal/README.md
+
+src/app/06-neural-networks/page.mdx
+  L7 [markdown] 01_START_HERE.ipynb
+  L8 [markdown] 03_neural_network_basics.ipynb
+  L9,32 [markdown] 04_backpropagation_explained.ipynb
+  L10 [markdown] 05_pytorch_fundamentals.ipynb
+  L11,33 [markdown] 06_attention_mechanism.ipynb
+  L12 [markdown] 07_transformer_architecture.ipynb
+  L16 [markdown] 02_intro.md
+  L17 [markdown] 09_attention_explained.md
+  L18 [markdown] 11_transformer_architecture.md
+  L19 [markdown] 08_assignment.md
+  L20 [markdown] 10_challenges.md
+  L34 [bare/markdown] ../03-maths/foundational/07_neural_network_math.ipynb
+  L49 [markdown] ../12-llm-finetuning/README.md
+  L50 [markdown] ../14-local-llms/README.md
+  L51 [markdown] ../15-ai-agents/README.md
+
+src/app/07-vector-databases/page.mdx
+  L7 [markdown] 01_START_HERE.ipynb
+  L8,666 [markdown] 02_vector_db_basics.ipynb
+  L9,673 [markdown] 03_chroma_guide.ipynb
+  L10,680 [markdown] 04_qdrant_guide.ipynb
+  L11,687 [markdown] 05_weaviate_guide.ipynb
+  L12,694 [markdown] 06_milvus_guide.ipynb
+  L13,702 [markdown] 07_aurora_pgvector_guide.ipynb
+  L58 [markdown] ../08-rag/README.md
+
+src/app/08-rag/page.mdx
+  L175 [markdown] 11_rag_technique_selection.md
+  L177 [markdown] 10_rag_evaluation_playbook.md
+  L433 [markdown] ../09-mlops/README.md
+  L434 [markdown] ../11-prompt-engineering/README.md
+  L435 [markdown] ../15-ai-agents/README.md
+  L436 [markdown] ../16-model-evaluation/README.md
+
+src/app/09-mlops/page.mdx
+  L26 [markdown] 01_START_HERE.ipynb
+  L27 [markdown] 02_experiment_tracking.ipynb
+  L28 [markdown] 03_fastapi_basics.ipynb
+  L29 [markdown] 04_model_deployment.ipynb
+  L30 [markdown] 05_docker_ml.ipynb
+  L31 [markdown] 06_monitoring.ipynb
+  L32 [markdown] 07_ci_cd_pipeline.ipynb
+  L33 [markdown] 08_cloud_deployment.ipynb
+  L34 [markdown] 09_llm_infrastructure.ipynb
+  L241 [markdown] ../16-model-evaluation/README.md
+  L242 [markdown] ../14-local-llms/README.md
+
+src/app/10-specializations/ai-agents/page.mdx
+  L421 [markdown] ../../16-model-evaluation/README.md
+  L422 [markdown] ../../19-ai-safety-redteaming/README.md
+  L423 [markdown] ../../31-ai-powered-dev-tools/README.md
+
+src/app/10-specializations/computer-vision/page.mdx
+  L64 [markdown] ../../13-multimodal/README.md
+  L65 [markdown] ../../28-practical-data-science/README.md
+  L66 [markdown] ../../24-advanced-deep-learning/README.md
+
+src/app/10-specializations/nlp/page.mdx
+  L64 [markdown] ../../12-llm-finetuning/README.md
+  L65 [markdown] ../../15-ai-agents/README.md
+  L66 [markdown] ../../28-practical-data-science/README.md
+
+src/app/10-specializations/page.mdx
+  L199 [markdown] ../15-ai-agents/README.md
+  L199 [markdown] ../16-model-evaluation/README.md
+  L199 [markdown] ../19-ai-safety-redteaming/README.md
+  L200 [markdown] ../24-advanced-deep-learning/README.md
+  L201 [markdown] ../28-practical-data-science/README.md
+
+src/app/11-prompt-engineering/page.mdx
+  L7 [markdown] 01_START_HERE.ipynb
+  L8,35 [markdown] 02_basic_prompting.ipynb
+  L9,36 [markdown] 03_chain_of_thought.ipynb
+  L10,37 [markdown] 04_react_prompting.ipynb
+  L11,38 [markdown] 05_structured_outputs_dspy.ipynb
+  L12,39 [markdown] 06_long_context_strategies.ipynb
+  L13 [markdown] 08_assignment.md
+  L55 [markdown] ../15-ai-agents/README.md
+  L56 [markdown] ../08-rag/README.md
+  L57 [markdown] ../16-model-evaluation/README.md
+
+src/app/12-llm-finetuning/page.mdx
+  L9 [markdown] 01_START_HERE.ipynb
+  L10 [markdown] 02_dataset_preparation.ipynb
+  L11 [markdown] 03_supervised_finetuning.ipynb
+  L12 [markdown] 04_lora_basics.ipynb
+  L13 [markdown] 05_qlora_efficient.ipynb
+  L14 [markdown] 06_dpo_alignment.ipynb
+  L15,39 [markdown] 07_evaluation.ipynb
+  L16 [markdown] 08_deployment.ipynb
+  L17 [markdown] 09_grpo_reasoning_training.ipynb
+  L18 [markdown] 10_unsloth_fast_finetuning.ipynb
+  L19 [markdown] 11_quantization_gptq_awq.ipynb
+  L20 [markdown] 12_rlhf_constitutional_ai.ipynb
+  L47,73 [markdown] ../09-mlops/README.md
+  L66 [bare/markdown] ../15-ai-agents/10_autonomous_agents_2026.ipynb
+  L67 [markdown] ../31-ai-powered-dev-tools/03_ai_dev_tools_2026.md
+  L71 [markdown] ../16-model-evaluation/README.md
+  L72 [markdown] ../14-local-llms/README.md
+  L72 [markdown] ../30-inference-optimization/README.md
+
+src/app/13-multimodal/audio/page.mdx
+  L11,16 [markdown] ../../20-real-time-streaming/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../15-ai-agents/README.md
+
+src/app/13-multimodal/image-generation/page.mdx
+  L11,16 [markdown] ../../10-specializations/computer-vision/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../28-practical-data-science/README.md
+
+src/app/13-multimodal/page.mdx
+  L107 [quoted] photo.jpg
+  L166 [quoted] audio.mp3
+  L193 [quoted] output.png
+  L226 [markdown] ../20-real-time-streaming/README.md
+  L227 [markdown] ../24-advanced-deep-learning/README.md
+  L228 [markdown] ../28-practical-data-science/README.md
+
+src/app/13-multimodal/vision-language/page.mdx
+  L11 [markdown] ../../08-rag/README.md
+  L15 [markdown] ../README.md
+  L16 [markdown] ../../10-specializations/computer-vision/README.md
+  L17 [markdown] ../../20-real-time-streaming/README.md
+
+src/app/14-local-llms/07_ai_toolkit_vscode/page.mdx
+  L195 [attr/quoted] test_data.jsonl
+  L261 [markdown] ../31-ai-powered-dev-tools/04_mcp_deep_dive.md
+
+src/app/14-local-llms/page.mdx
+  L7 [markdown] 01_START_HERE.ipynb
+  L8 [markdown] 03_ollama_quickstart.ipynb
+  L9 [markdown] 02_open_source_models_overview.ipynb
+  L10 [markdown] 04_local_rag_with_ollama.ipynb
+  L11 [markdown] 05_llm_server_and_api.ipynb
+  L12 [markdown] 06_speculative_decoding.ipynb
+  L13 [markdown] 07_ai_toolkit_vscode.md
+  L55 [markdown] ../30-inference-optimization/README.md
+  L56 [markdown] ../09-mlops/README.md
+  L57 [markdown] ../15-ai-agents/README.md
+
+src/app/15-ai-agents/13_challenges/page.mdx
+  L264,268 [quoted] memory.json
+
+src/app/15-ai-agents/page.mdx
+  L48 [markdown] 02_intro_to_agents.ipynb
+  L54 [markdown] 03_function_calling.ipynb
+  L60 [markdown] 04_react_pattern.ipynb
+  L66 [markdown] 05_agent_frameworks.ipynb
+  L73 [markdown] 06_multi_agent_systems.ipynb
+  L79 [markdown] 07_mcp_model_context_protocol.ipynb
+  L84 [markdown] 08_openai_agents_sdk_langgraph.ipynb
+  L89 [markdown] 09_reasoning_models.ipynb
+  L94 [markdown] 10_autonomous_agents_2026.ipynb
+  L100 [markdown] 11_agent_evaluation.ipynb
+  L109 [markdown] 08_assignment.md
+  L110 [markdown] 10_challenges.md
+  L289 [markdown] ../16-model-evaluation/README.md
+  L290 [markdown] ../19-ai-safety-redteaming/README.md
+  L291 [markdown] ../31-ai-powered-dev-tools/README.md
+
+src/app/16-model-evaluation/page.mdx
+  L27 [markdown] 02_classification_metrics.ipynb
+  L34 [markdown] 03_regression_metrics.ipynb
+  L40 [markdown] 04_llm_evaluation.ipynb
+  L49 [markdown] 05_bias_fairness.ipynb
+  L55 [markdown] 06_model_comparison.ipynb
+  L237 [markdown] 15_pre-quiz.md
+  L238 [markdown] 14_post-quiz.md
+
+src/app/17-debugging-troubleshooting/07_assignment/page.mdx
+  L230 [quoted] your_dataset.csv
+
+src/app/17-debugging-troubleshooting/page.mdx
+  L56 [markdown] 02_debugging_workflow.ipynb
+  L63 [markdown] 03_data_issues.ipynb
+  L70 [markdown] 04_performance_profiling.ipynb
+  L77 [markdown] 05_model_debugging.ipynb
+  L84 [markdown] 06_error_analysis.ipynb
+  L93 [markdown] 08_assignment.md
+  L94 [markdown] 10_challenges.md
+  L95 [markdown] 15_pre-quiz.md
+  L96 [markdown] 14_post-quiz.md
+
+src/app/18-low-code-ai-tools/page.mdx
+  L35 [markdown] 02_gradio_basics.ipynb
+  L57 [markdown] 03_streamlit_apps.ipynb
+  L79 [markdown] 04_huggingface_spaces.ipynb
+  L101 [markdown] 05_automl_platforms.ipynb
+  L123 [markdown] 06_end_to_end_project.ipynb
+  L281 [quoted] data.csv
+  L338 [markdown] ../09-mlops/README.md
+  L339 [markdown] ../15-ai-agents/README.md
+  L340 [markdown] ../31-ai-powered-dev-tools/README.md
+  L348 [markdown] 15_pre-quiz.md
+  L351 [markdown] 14_post-quiz.md
+  L362 [markdown] 08_assignment.md
+  L365 [markdown] 10_challenges.md
+
+src/app/19-ai-safety-redteaming/page.mdx
+  L27,313 [markdown] 02_prompt_security.ipynb
+  L37 [markdown] 03_content_moderation.ipynb
+  L47 [markdown] 04_pii_privacy.ipynb
+  L57 [markdown] 05_bias_fairness.ipynb
+  L67 [markdown] 06_red_teaming.ipynb
+  L223 [markdown] ../16-model-evaluation/README.md
+  L224 [markdown] ../20-real-time-streaming/README.md
+  L225 [markdown] ../31-ai-powered-dev-tools/README.md
+
+src/app/20-real-time-streaming/page.mdx
+  L42 [markdown] ../09-mlops/README.md
+  L42 [markdown] ../13-multimodal/README.md
+  L42 [markdown] ../14-local-llms/README.md
+
+src/app/21-quizzes/page.mdx
+  L212 [markdown] ../docs/MASTER_STUDY_GUIDE.md
+
+src/app/22-references/microsoft-labs/page.mdx
+  L59 [markdown] ../README.md
+
+src/app/22-references/page.mdx
+  L7,18,103 [markdown] microsoft-labs/README.md
+  L20,30,103 [markdown] videos/README.md
+  L32,41 [markdown] cloud-platforms/README.md
+  L110 [markdown] ../docs/MASTER_STUDY_GUIDE.md
+
+src/app/23-glossary/page.mdx
+  L7 [markdown] 01_GLOSSARY.md
+  L30 [markdown] ../00-course-setup/README.md
+  L31 [markdown] ../01-python/README.md
+  L32 [markdown] ../docs/MASTER_STUDY_GUIDE.md
+
+src/app/24-advanced-deep-learning/page.mdx
+  L277 [markdown] ../28-practical-data-science/README.md
+  L278 [markdown] ../29-ai-hardware-llm-validation/README.md
+  L279 [markdown] ../12-llm-finetuning/README.md
+  L279 [markdown] ../13-multimodal/README.md
+
+src/app/27-causal-inference/page.mdx
+  L310 [markdown] ../28-practical-data-science/README.md
+  L311 [markdown] ../16-model-evaluation/README.md
+  L312 [markdown] ../29-ai-hardware-llm-validation/README.md
+
+src/app/28-practical-data-science/computer-vision/page.mdx
+  L11,16 [markdown] ../../10-specializations/computer-vision/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../09-mlops/README.md
+
+src/app/28-practical-data-science/deep-learning-nlp/page.mdx
+  L11 [markdown] ../../08-rag/README.md
+  L11,16 [markdown] ../../12-llm-finetuning/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../15-ai-agents/README.md
+
+src/app/28-practical-data-science/machine-learning/page.mdx
+  L11,16 [markdown] ../../09-mlops/README.md
+  L11 [markdown] ../../16-model-evaluation/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../29-ai-hardware-llm-validation/README.md
+
+src/app/28-practical-data-science/page.mdx
+  L13 [markdown] 01_START_HERE.ipynb
+  L14 [markdown] 02_INTERVIEW_PREP.ipynb
+  L44 [markdown] ../09-mlops/README.md
+  L45 [markdown] ../16-model-evaluation/README.md
+  L46 [markdown] ../31-ai-powered-dev-tools/README.md
+
+src/app/28-practical-data-science/python-data-science/page.mdx
+  L11 [markdown] ../../02-data-science/README.md
+  L15 [markdown] ../README.md
+  L16 [markdown] ../machine-learning/README.md
+  L17 [markdown] ../../16-model-evaluation/README.md
+
+src/app/28-practical-data-science/recommender-causal/page.mdx
+  L11,16 [markdown] ../../27-causal-inference/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../16-model-evaluation/README.md
+
+src/app/28-practical-data-science/solutions/page.mdx
+  L15 [markdown] ../README.md
+  L16 [markdown] ../../16-model-evaluation/README.md
+  L17 [markdown] ../../09-mlops/README.md
+
+src/app/28-practical-data-science/sql-data-engineering/page.mdx
+  L11 [markdown] ../../02-data-science/README.md
+  L11,16 [markdown] ../../09-mlops/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../28-practical-data-science/python-data-science/README.md
+
+src/app/28-practical-data-science/statistics-mlops/page.mdx
+  L11,16 [markdown] ../../09-mlops/README.md
+  L11,17 [markdown] ../../16-model-evaluation/README.md
+  L15 [markdown] ../README.md
+
+src/app/28-practical-data-science/time-series-forecasting/page.mdx
+  L11,16 [markdown] ../../26-time-series-analysis/README.md
+  L15 [markdown] ../README.md
+  L17 [markdown] ../../09-mlops/README.md
+
+src/app/30-inference-optimization/page.mdx
+  L63 [markdown] ../09-mlops/README.md
+  L64 [markdown] ../14-local-llms/README.md
+  L65 [markdown] ../29-ai-hardware-llm-validation/README.md
+
+src/app/31-ai-powered-dev-tools/02_vscode_ai_setup/page.mdx
+  L314 [markdown] 04_mcp_deep_dive.md
+
+src/app/31-ai-powered-dev-tools/03_ai_dev_tools_2026/page.mdx
+  L410 [bare] /.claude/settings.json
+
+src/app/31-ai-powered-dev-tools/04_mcp_deep_dive/page.mdx
+  L241 [markdown] 07_build_mcp_server.ipynb
+  L282 [markdown] 05_copilot_instructions_guide.md
+
+src/app/31-ai-powered-dev-tools/05_copilot_instructions_guide/page.mdx
+  L359 [markdown] ./scripts/run-tests.sh
+  L530 [markdown] 06_copilot_workflows.md
+
+src/app/31-ai-powered-dev-tools/06_copilot_workflows/page.mdx
+  L291 [markdown] 05_copilot_instructions_guide.md
+  L292 [markdown] 07_build_mcp_server.ipynb
+
+src/app/31-ai-powered-dev-tools/page.mdx
+  L7 [markdown] 03_ai_dev_tools_2026.md
+  L120 [markdown] ../15-ai-agents/README.md
+  L121 [markdown] ../09-mlops/README.md
+  L137 [markdown] ../README.md
+
+src/app/32-cheatsheets/ai-ml/ai-cloud-services-cheatsheet/page.mdx
+  L493 [quoted] pipeline.json
+
+src/app/32-cheatsheets/ai-ml/data-pipelines-cheatsheet/page.mdx
+  L142 [quoted] az ml online-deployment create --name blue --endpoint prod -f deploy.yml
+  L241 [quoted] data/train.parquet
+  L242 [quoted] data/test.parquet
+  L313 [quoted] data/training_data.parquet
+
+src/app/32-cheatsheets/ai-ml/experiment-tracking-cheatsheet/page.mdx
+  L74 [quoted] confusion_matrix.png
+  L75 [quoted] config.yaml
+  L136 [quoted] data/train.csv
+  L142 [quoted] data/test.csv
+
+src/app/32-cheatsheets/ai-ml/mlops-cheatsheet/page.mdx
+  L319 [quoted] data/customer_stats.parquet
+  L383 [bare/quoted] /tmp/processed.csv
+  L400 [quoted] gs://bucket/data.csv
+  L404 [quoted] pipeline.yaml
+  L447 [quoted] deployment.yml
+
+src/app/32-cheatsheets/ai-ml/page.mdx
+  L15 [markdown] mlops-cheatsheet.md
+  L16 [markdown] ai-cloud-services-cheatsheet.md
+  L17 [markdown] gpu-compute-cheatsheet.md
+  L18 [markdown] ml-model-serving-cheatsheet.md
+  L19 [markdown] experiment-tracking-cheatsheet.md
+  L20 [markdown] data-pipelines-cheatsheet.md
+  L56 [markdown] ../docker/docker-commands-cheatsheet.md
+  L57 [markdown] ../k8s/kubectl-commands-cheatsheet.md
+  L58 [markdown] ../cloud/aws-cli-cheatsheet.md
+  L58 [markdown] ../cloud/azure-cli-cheatsheet.md
+  L58 [markdown] ../cloud/gcp-gcloud-cheatsheet.md
+  L59 [markdown] ../cloud/terraform-commands-cheatsheet.md
+  L60 [markdown] ../github-actions/github-actions-cheatsheet.md
+
+src/app/32-cheatsheets/cloud/aws-cli-cheatsheet/page.mdx
+  L28 [quoted] awscliv2.zip
+
+src/app/32-cheatsheets/cloud/azure-cli-cheatsheet/page.mdx
+  L232,269 [bare] /path/to/file.txt
+
+src/app/32-cheatsheets/cloud/gcp-gcloud-cheatsheet/page.mdx
+  L1504 [bare] /path/to/secret.txt
+
+src/app/32-cheatsheets/cloud/terraform-commands-cheatsheet/page.mdx
+  L2011 [bare/quoted] /path/to/key.json
+
+src/app/32-cheatsheets/devops-interviews/docker/docker-volume-cross-platform-consistency/page.mdx
+  L13 [bare] /var/lib/docker/volumes/myvol/_data/hello.txt
+  L19,23 [bare] /data/hello.txt
+
+src/app/32-cheatsheets/devops-interviews/docker/storage-driver-performance-fuse-overlayfs/page.mdx
+  L13 [bare] /etc/docker/daemon.json
+
+src/app/32-cheatsheets/devops-interviews/git/view-unique-commits-between-branch-and-origin/page.mdx
+  L13,25 [bare/quoted] /home/interview/unique-commits.txt
+
+src/app/32-cheatsheets/devops-interviews/kubernetes/configmap-reload-with-sidecar/page.mdx
+  L28 [bare] /home/interview/watcher.yaml
+
+src/app/32-cheatsheets/devops-interviews/kubernetes/fix-job-with-serviceaccount-and-rbac-permission-issues/page.mdx
+  L9 [bare] /home/interview/data-loader-job.yaml
+
+src/app/32-cheatsheets/devops-interviews/kubernetes/job-failure/page.mdx
+  L9 [bare] /home/interview/fail-job.yaml
+
+src/app/32-cheatsheets/devops-interviews/kubernetes/traffic-splitting-with-native-kubernetes/page.mdx
+  L24 [bare] /home/interview/deployment.yaml
+
+src/app/32-cheatsheets/devops-interviews/linux/analyzing-log-partition-usage/page.mdx
+  L13 [bare] /home/devops/varlog_filesystem_info.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/diagnose-nginx-cpu-bottleneck/page.mdx
+  L13 [bare] /home/devops/solution.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/discover-unexpected-background-jobs/page.mdx
+  L13,17 [bare] /home/devops/recent_processes.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/fix-inode-exhaustion-issue/page.mdx
+  L13,17 [bare] /home/interview/inode_usage.txt
+  L13,24 [bare] /home/interview/problem_directory.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/log-file-volume-assessment/page.mdx
+  L13 [bare] /home/devops/large_log_count.txt
+  L13 [bare] /home/devops/log_count.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/monitoring-process-ownership/page.mdx
+  L13 [bare] /home/devops/solution.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/purge-empty-folders/page.mdx
+  L24,30 [bare] /tmp/active_project/file.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/rapid-disk-growth-on-var/page.mdx
+  L13,29 [bare] /home/devops/file_processes.txt
+  L13,18 [bare] /home/devops/largest_var_files.txt
+  L13,37 [bare] /home/devops/logrotate_status.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/recursive-keyword-finder/page.mdx
+  L11,23 [bare] /home/devops/error_logs.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/tracing-log-file-writes/page.mdx
+  L13 [bare] /home/devops/excessive_log_process.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/track-forking-process-hierarchies/page.mdx
+  L13,19 [bare] /home/devops/process_tree_report.txt
+
+src/app/32-cheatsheets/devops-interviews/linux/upload-safe-file-partitioning/page.mdx
+  L20,29,30,31,32 [bare] /tmp/app/uploads/video.mp4
+
+src/app/32-cheatsheets/devops-interviews/linux/uptime-and-load-average-audit/page.mdx
+  L13,19 [bare] /home/devops/loadavg.txt
+  L13,17 [bare] /home/devops/uptime.txt
+
+src/app/32-cheatsheets/devops-interviews/networking/inspecting-http-traffic-flow/page.mdx
+  L13,37 [bare] /tmp/http_summary.txt
+
+src/app/32-cheatsheets/devops-interviews/networking/network-packet-loss-diagnosis/page.mdx
+  L13,17 [bare] /tmp/network_diagnostics.txt
+
+src/app/32-cheatsheets/devops-interviews/networking/network-socket-usage-analysis/page.mdx
+  L12 [bare] /tmp/active_tcp.txt
+
+src/app/32-cheatsheets/devops-interviews/page.mdx
+  L6 [attr/quoted] pht.png
+  L43 [markdown] linux/managing-high-io-processes.md
+  L44 [markdown] linux/analyzing-log-partition-usage.md
+  L45 [markdown] linux/using-unmounted-partitions.md
+  L46 [markdown] linux/tracing-log-file-writes.md
+  L47 [markdown] networking/nginx-rate-limit-calculation.md
+  L48 [markdown] linux/debug-ssh-lockout.md
+  L49 [markdown] networking/validating-network-routes.md
+  L50 [markdown] networking/validating-dns-consistency.md
+  L51 [markdown] networking/network-packet-loss-diagnosis.md
+  L52 [markdown] networking/network-port-service-cleanup.md
+  L53 [markdown] networking/temporary-route-configuration.md
+  L54 [markdown] networking/inspecting-http-traffic-flow.md
+  L55 [markdown] linux/trace-process-service-ownership.md
+  L56 [markdown] linux/manage-service-failure-recovery.md
+  L57 [markdown] linux/update-aws-configs.md
+  L58 [markdown] linux/handling-large-log-archives.md
+  L59 [markdown] linux/monitoring-process-ownership.md
+  L60 [markdown] linux/uptime-and-load-average-audit.md
+  L61 [markdown] linux/port-conflict-resolution.md
+  L62 [markdown] linux/diagnose-nginx-cpu-bottleneck.md
+  L63 [markdown] linux/cpu-resource-management-priority.md
+  L64 [markdown] linux/track-forking-process-hierarchies.md
+  L65 [markdown] linux/discover-unexpected-background-jobs.md
+  L66 [markdown] linux/rapid-disk-growth-on-var.md
+  L67 [markdown] linux/purge-empty-folders.md
+  L68 [markdown] linux/log-file-volume-assessment.md
+  L69 [markdown] linux/recursive-keyword-finder.md
+  L70 [markdown] linux/recursive-database-file-backup.md
+  L71 [markdown] linux/sorted-log-aggregation.md
+  L72 [markdown] linux/automated-archive-and-retention.md
+  L73 [markdown] linux/real-time-log-timestamping.md
+  L74 [markdown] linux/upload-safe-file-partitioning.md
+  L75 [markdown] networking/network-socket-usage-analysis.md
+  L76 [markdown] networking/forward-traffic-between-ports.md
+  L77 [markdown] linux/fix-inode-exhaustion-issue.md
+  L78 [markdown] linux/detect-memory-leak-by-monitoring-rss.md
+  L79 [markdown] security/fix-https-certificate-error.md
+  L80 [markdown] linux/throttle-high-io-process.md
+  L81 [markdown] networking/fix-port-exhaustion-for-high-speed-scraper.md
+  L82 [markdown] docker/optimize-dockerfile.md
+  L83 [markdown] docker/insecure-container-root-user.md
+  L84 [markdown] docker/docker-network-configuration-fix.md
+  L85 [markdown] docker/container-cpu-limit-configuration.md
+  L86 [markdown] docker/memory-limit-and-oom-killer.md
+  L87 [markdown] docker/graceful-shutdown-with-sigterm-handling.md
+  L88 [markdown] docker/log-rotation-size-limit-configuration.md
+  L89 [markdown] docker/docker-multi-architecture-image.md
+  L90 [markdown] docker/docker-binary-architecture.md
+  L91 [markdown] docker/storage-driver-performance-fuse-overlayfs.md
+  L92 [markdown] docker/docker-volume-cross-platform-consistency.md
+  L93 [markdown] git/rebase-feature-branch-onto-correct-base.md
+  L94 [markdown] git/restore-file-to-previous-version.md
+  L95 [markdown] git/view-unique-commits-between-branch-and-origin.md
+  L96 [markdown] git/create-an-annotated-tag.md
+  L97 [markdown] git/update-submodule-to-latest-commit.md
+  L98 [markdown] git/convert-remote-from-https-to-ssh.md
+  L99 [markdown] git/rebase-feature-branch.md
+  L100 [markdown] git/stash-work-fix-bug-restore-and-update.md
+  L101 [markdown] git/apply-specific-stash-from-multiple-stashes.md
+  L102 [markdown] git/remove-last-commit-and-discard-changes.md
+  L103 [markdown] git/shallow-clone-limited-to-latest-commit.md
+  L104 [markdown] git/checkout-single-file-from-another-branch.md
+  L105 [markdown] git/remove-file-from-entire-git-history.md
+  L106 [markdown] git/rebase-branch-with-reversed-commit-order.md
+  L107 [markdown] git/merge-repositories-preserving-both-histories.md
+  L108 [markdown] git/fix-repository-with-unrelated-histories.md
+  L109 [markdown] git/stage-only-specific-files.md
+  L110 [markdown] git/undo-commits-but-keep-changes.md
+  L111 [markdown] git/stash-work-fix-bug-resume.md
+  L112 [markdown] git/merge-feature-branch-and-delete.md
+  L113 [markdown] git/cherry-pick-specific-commit.md
+  L114 [markdown] git/recover-lost-commits-from-detached-head.md
+  L115 [markdown] kubernetes/crashing-misconfigured-pod.md
+  L116 [markdown] kubernetes/image-pull-backoff-secrets.md
+  L117 [markdown] kubernetes/cronjob-schedule-misconfiguration.md
+  L118 [markdown] kubernetes/create-namespace.md
+  L119 [markdown] kubernetes/pod-with-readiness-probe.md
+  L120 [markdown] kubernetes/pod-viewer-access.md
+  L121 [markdown] kubernetes/multi-key-configmap.md
+  L122 [markdown] kubernetes/pod-with-resource-limits.md
+  L123 [markdown] kubernetes/traffic-splitting-with-native-kubernetes.md
+  L124 [markdown] kubernetes/configmap-reload-with-sidecar.md
+  L125 [markdown] kubernetes/job-failure.md
+  L126 [markdown] kubernetes/dynamic-volume-expansion.md
+  L127 [markdown] kubernetes/multi-tenant-namespace-isolation.md
+  L128 [markdown] kubernetes/implement-statefulset-with-stable-dns.md
+  L129 [markdown] kubernetes/dns-based-service-discovery.md
+  L130 [markdown] kubernetes/custom-resource-definition-setup.md
+  L131 [markdown] kubernetes/crd-schema-validation.md
+  L132 [markdown] kubernetes/storageclass-and-pvc-expansion.md
+  L133 [markdown] kubernetes/oomkilled-pod-analysis-fix.md
+  L134 [markdown] kubernetes/fix-job-with-serviceaccount-and-rbac-permission-issues.md
+  L135 [markdown] kubernetes/secure-internal-service-communication.md
+  L136 [markdown] programming/docker-image-tagging-with-commit-sha.md
+  L137 [markdown] programming/pr-test-gate.md
+  L138 [markdown] programming/github-actions-matrix-build-strategy.md
+  L139 [markdown] programming/multi-job-workflow-with-artifact-handoff.md
+  L140 [markdown] programming/path-based-workflow-execution.md
+  L141 [markdown] programming/reusable-workflow-with-input-parameters.md
+  L142 [markdown] programming/github-actions-timeout-enforcement.md
+  L143 [markdown] programming/job-dependency-enforcement.md
+  L144 [markdown] programming/github-actions-retry-logic.md
+  L145 [markdown] programming/environment-gated-deployment.md
+  L146 [markdown] programming/automated-rollback-on-deployment-failure-with-values-file-restoration.md
+  L147 [markdown] programming/automated-gitops-promotion.md
+
+src/app/32-cheatsheets/devops-interviews/programming/automated-gitops-promotion/page.mdx
+  L18 [bare] /home/interview/repo-a/.github/workflows/promote.yml
+
+src/app/32-cheatsheets/docker/docker-commands-cheatsheet/page.mdx
+  L1452 [bare] /etc/docker/daemon.json
+  L2737 [bare] /app/package.json
+
+src/app/32-cheatsheets/git/git-cheatsheet/page.mdx
+  L643 [quoted] rm -f passwords.txt
+  L965 [quoted] git rm --cached --ignore-unmatch secrets.txt
+
+src/app/32-cheatsheets/github-actions/github-actions-cheatsheet/page.mdx
+  L744,753 [bare] ./.github/workflows/reusable-deploy.yml
+  L904 [bare/quoted] ./coverage/coverage-summary.json
+  L1075 [quoted] ✅ SBOM generated: sbom.json
+  L1800 [bare] ./dist/app.zip
+
+src/app/32-cheatsheets/github-cli/github-cli-cheatsheet/page.mdx
+  L407 [bare] ./new-asset.zip
+
+src/app/32-cheatsheets/monitoring/prometheus-grafana-cheatsheet/page.mdx
+  L22 [bare] /etc/prometheus/prometheus.yml
+  L22 [bare] /path/to/prometheus.yml
+
+src/app/32-cheatsheets/networking/networking-fundamentals-cheatsheet/page.mdx
+  L533 [quoted] @curl-format.txt
+
+src/app/32-cheatsheets/shell-scripting/bash-cheatsheet/page.mdx
+  L560 [quoted] document.pdf
+  L772 [quoted] file.txt
+  L1173 [quoted] @curl-format.txt
+
+src/app/32-cheatsheets/shell-scripting/json-cheatsheet/page.mdx
+  L443,538,541 [quoted] data.json
+  L462,557,560 [quoted] output.json
+  L547 [bare/quoted] ./data.json
+  L961 [quoted] data.csv
+  L1035 [quoted] file1.json
+  L1035 [quoted] file2.json
+  L1073 [quoted] nested.json
+
+src/app/32-cheatsheets/shell-scripting/powershell-cheatsheet/page.mdx
+  L103 [quoted] file.txt
+  L779,780 [quoted] file.zip
+  L1575 [quoted] $backupFolder.zip
+
+src/app/32-cheatsheets/shell-scripting/python-devops-cheatsheet/page.mdx
+  L38,63 [bare/quoted] /tmp/output.txt
+  L74 [bare/quoted] /archive/old.txt
+  L74,77 [bare/quoted] /tmp/old.txt
+  L215 [quoted] report.pdf
+  L242 [quoted] config.json
+  L246 [quoted] output.json
+  L259 [quoted] config.yaml
+  L270 [quoted] output.yaml
+  L342,345,361,479,480 [quoted] local.txt
+  L342,345,362 [quoted] remote.txt
+  L353 [quoted] old-file.txt
+  L390 [quoted] function.zip
+  L479,480 [bare/quoted] /remote/path/file.txt
+
+src/app/32-cheatsheets/shell-scripting/yaml-cheatsheet/page.mdx
+  L503,594,643,1071 [quoted] config.yaml
+  L519 [quoted] file.yaml
+  L542,619,684 [quoted] output.yaml
+  L1418 [quoted] file1.yaml
+  L1419 [quoted] file2.yaml
+
+src/app/33-roadmaps/01_overview/page.mdx
+  L143 [markdown] 02_core_systems.md
+
+src/app/33-roadmaps/02_core_systems/page.mdx
+  L220 [markdown] 01_overview.md
+  L220 [markdown] 03_advanced_topics.md
+
+src/app/33-roadmaps/03_advanced_topics/page.mdx
+  L110 [markdown] 02_core_systems.md
+  L110 [markdown] 04_end_to_end_flows.md
+
+src/app/33-roadmaps/04_end_to_end_flows/page.mdx
+  L232 [markdown] 03_advanced_topics.md
