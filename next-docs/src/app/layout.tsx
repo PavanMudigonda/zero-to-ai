@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layout, Navbar } from 'nextra-theme-docs';
+import { Layout, Navbar, ThemeSwitch } from 'nextra-theme-docs';
 import { Head, Search } from 'nextra/components';
 import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
@@ -26,7 +26,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     <Navbar
       logo={<b style={{ fontSize: '1.2rem', letterSpacing: '-0.02em' }}>🚀 Zero to AI</b>}
       projectLink="https://github.com/PavanMudigonda/zero-to-ai"
-    />
+    >
+      <ThemeSwitch />
+    </Navbar>
   );
   
   const footer = (
@@ -44,6 +46,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           pageMap={pageMap}
           navbar={navbar}
           footer={footer}
+          nextThemes={{ defaultTheme: 'light' }}
           docsRepositoryBase="https://github.com/PavanMudigonda/zero-to-ai/tree/main/next-docs/src/app"
           editLink="Edit this page on GitHub"
           sidebar={{ defaultMenuCollapseLevel: 1, autoCollapse: true }}
