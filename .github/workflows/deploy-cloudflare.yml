@@ -42,10 +42,10 @@ jobs:
 
       - name: Allocate swap space
         run: |
-          sudo fallocate -l 8G /swapfile
-          sudo chmod 600 /swapfile
-          sudo mkswap /swapfile
-          sudo swapon /swapfile
+          sudo fallocate -l 8G /swapfile-new
+          sudo chmod 600 /swapfile-new
+          sudo mkswap /swapfile-new
+          sudo swapon /swapfile-new
 
       - name: Build Next.js site
         working-directory: ./next-docs
