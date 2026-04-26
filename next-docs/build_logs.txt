@@ -1,0 +1,11 @@
+
+> next-docs@0.1.0 build
+> next build
+
+  ▲ Next.js 14.2.35
+  - Experiments (use with caution):
+    · turbo
+
+   Creating an optimized production build ...
+(node:88608) Warning: `--localstorage-file` was provided without a valid path
+(Use `node --trace-warnings ...` to show where the warning was created)
