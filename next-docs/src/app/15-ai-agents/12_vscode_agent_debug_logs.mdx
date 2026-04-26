@@ -1,0 +1,74 @@
+---
+title: "Understanding VS Code Chat & Agent Debug Logs"
+description: "How to read and analyze VS Code Copilot Chat and Agent structured JSON debug logs for troubleshooting your AI tools."
+---
+
+# Troubleshooting AI Agents in VS Code
+
+When building or interacting with AI Agents, tools, and Model Context Protocol (MCP) servers within VS Code, you may sometimes encounter unexpected behavior. Perhaps a tool wasn't called, an agent wasn't loaded, or the LLM request took too long. 
+
+VS Code's Copilot Chat provides highly structured backend **Debug Logs** (in `.json` and `.jsonl` formats). Analyzing these files allows you to lift the hood and see exactly what the AI was thinking, what prompts it received, and how it routed tool calling.
+
+## Locating the Debug Logs
+
+When you request debug logs or encounter complex session traces (such as OpenTelemetry spans or raw `.jsonl` files), they are usually located in the session storage directories of Copilot Chat. 
+
+A typical session directory contains:
+
+- `main.jsonl` — The primary conversation log; always start here.
+- `models.json` — A snapshot of available models (with their caps, features, and token limits) at the start of the session.
+- `system_prompt_0.json` — The full, untruncated system prompt sent to the model.
+- `tools_0.json` — The JSON schema defining all tool capabilities sent to the LLM.
+- `runSubagent-<name>.jsonl` — Dedicated logs for autonomous sub-agents that spun off their own tool-calling loops.
+
+## Reading the Event Hierarchy (`main.jsonl`)
+
+The logs are heavily structured. Each line in `main.jsonl` is a JSON object representing a specific telemetry event. The events form a tree connected by `spanId` and `parentSpanId`.
+
+### 1. Discovery Events (`"type": "discovery"`)
+These happen at the very beginning of your session or when you reload the window. They show VS Code discovering and loading your `*.instructions.md`, `*.agent.md`, or custom `SKILL.md` files context.
+```json
+{"type":"discovery","name":"Load Agents","status":"ok","attrs":{"details":"Resolved 3 agents in 0.0ms | loaded: [Plan, Ask, Explore]"}}
+```
+
+### 2. User Messages (`"type": "user_message"`)
+This simply records the raw text you sent in the chat input.
+```json
+{"type":"user_message","spanId":"000000f","attrs":{"content":"List the current directory"}}
+```
+
+### 3. LLM Requests (`"type": "llm_request"`)
+This span captures the exact round-trip to the model provider (like `gpt-4o` or `claude-3.5-sonnet`). It includes the Time To First Token (`ttft`), `inputTokens`, and `outputTokens`. 
+```json
+{"type":"llm_request","name":"chat:gpt-4o","status":"ok","attrs":{"model":"gpt-4o","inputTokens":15025,"outputTokens":126,"ttft":1987}}
+```
+
+### 4. Agent Responses (`"type": "agent_response"`)
+If you have "Thinking" mode on, or if the model relies heavily on chain-of-thought, it will be captured here alongside the `response` payload.
+```json
+{"type":"agent_response","status":"ok","attrs":{"response":"[...]","reasoning":"The user wants me to list files. I will use the run_in_terminal tool."}}
+```
+
+### 5. Tool Calls (`"type": "tool_call"`)
+Because LLMs cannot perform actions natively, they return an intent. The agent framework parses that intent and attempts to run the corresponding tool (e.g., `run_in_terminal`, `read_file`, or an MCP tool).
+```json
+{"type":"tool_call","name":"run_in_terminal","status":"error","attrs":{"args":"{\"command\":\"ls -la\"}","error":"A native exception occurred"}}
+```
+> **Pro Tip:** Look for `"status": "error"` on `tool_call` lines if an agent keeps getting stuck in a loop.
+
+## Tooling Strategy for Parsing
+
+Because these log files can grow quickly, opening them inside the editor isn't always efficient. Instead, you can use CLI tools like **`jq`** and **`grep`** to filter them:
+
+* **Find all errors:**  
+  `grep '"status":"error"' main.jsonl`
+* **Find long-running network calls (> 5 seconds):** 
+  `jq -c 'select(.dur > 5000)' main.jsonl`
+* **Count the types of events that occurred:**  
+  `jq -r '.type' main.jsonl | sort | uniq -c | sort -rn`
+
+### OpenTelemetry Spans
+
+Some versions of the logs (like the one you encountered: `agent-debug-log-b132e839-4222-4e73-89a1-84d09455dec2.json`) will be exported in the **OpenTelemetry (OTel)** format. 
+
+These contain the same conceptual properties but wrapped in `resourceSpans` and `scopeSpans`. You'll see arrays of `attributes` containing `key/value` pairs instead of flat JSON properties. The underlying debugging methodology remains identical: trace the `user_message` to the `llm_request`, read the `agent_response`'s tool intents, and verify the `tool_call` succeeded!
