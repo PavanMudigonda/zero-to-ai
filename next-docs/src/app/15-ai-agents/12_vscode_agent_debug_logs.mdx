@@ -1,64 +1,96 @@
 ---
-title: "Understanding VS Code Chat & Agent Debug Logs"
-description: "How to read and analyze VS Code Copilot Chat and Agent structured JSON debug logs for troubleshooting your AI tools."
+title: "Understanding AI Agent Debug Logs (Cursor, VS Code, Cline & More)"
+description: "How to read and analyze structured JSON debug logs for troubleshooting your AI tools across VS Code, Cursor, Cline, Claude Code, and Google AntiGravity."
 ---
 
-# Troubleshooting AI Agents in VS Code
+# Troubleshooting AI Agents Across IDEs
 
-When building or interacting with AI Agents, tools, and Model Context Protocol (MCP) servers within VS Code, you may sometimes encounter unexpected behavior. Perhaps a tool wasn't called, an agent wasn't loaded, or the LLM request took too long. 
+When building or interacting with AI Agents, tools, and Model Context Protocol (MCP) servers within your editor, you may sometimes encounter unexpected behavior. Perhaps a tool wasn't called, an agent wasn't loaded, or the LLM request took too long. 
 
-VS Code's Copilot Chat provides highly structured backend **Debug Logs** (in `.json` and `.jsonl` formats). Analyzing these files allows you to lift the hood and see exactly what the AI was thinking, what prompts it received, and how it routed tool calling.
+Different AI-native editors and extensions provide highly structured backend **Debug Logs**. Analyzing these files allows you to lift the hood and see exactly what the AI was thinking, what prompts it received, and how it routed tool calling. Here is how to debug agents in major developer setups.
 
-## Locating the Debug Logs
+---
 
-When you request debug logs or encounter complex session traces (such as OpenTelemetry spans or raw `.jsonl` files), they are usually located in the session storage directories of Copilot Chat. 
+## 1. VS Code (Copilot Chat)
 
-A typical session directory contains:
+VS Code's Copilot Chat provides highly structured backend **Debug Logs** in `.json` and `.jsonl` formats.
 
+### Locating the Debug Logs
+When you request debug logs or encounter complex session traces, they are located in the session storage directory:
 - `main.jsonl` — The primary conversation log; always start here.
-- `models.json` — A snapshot of available models (with their caps, features, and token limits) at the start of the session.
 - `system_prompt_0.json` — The full, untruncated system prompt sent to the model.
 - `tools_0.json` — The JSON schema defining all tool capabilities sent to the LLM.
-- `runSubagent-<name>.jsonl` — Dedicated logs for autonomous sub-agents that spun off their own tool-calling loops.
+- `runSubagent-<name>.jsonl` — Dedicated logs for autonomous sub-agents.
 
-## Reading the Event Hierarchy (`main.jsonl`)
+### Reading the Event Hierarchy (`main.jsonl`)
+Each line is a JSON object representing a specific telemetry event:
+- **`"type": "discovery"`** — AI reading your `*.instructions.md` or `.agent.md` files context.
+- **`"type": "llm_request"`** — Captures the exact round-trip to the model provider (like `gpt-4o`). Includes Time To First Token (`ttft`), `inputTokens`, and `outputTokens`. 
+- **`"type": "tool_call"`** — The agent framework parsing LLM intent and executing the function. Look for `"status": "error"` here if the AI gets stuck in a loop trying to run a terminal command.
 
-The logs are heavily structured. Each line in `main.jsonl` is a JSON object representing a specific telemetry event. The events form a tree connected by `spanId` and `parentSpanId`.
+*Note: You may also encounter OpenTelemetry (OTel) formats exported by VS Code, which wraps these same conceptual properties into `resourceSpans` and `scopeSpans`.*
 
-### 1. Discovery Events (`"type": "discovery"`)
-These happen at the very beginning of your session or when you reload the window. They show VS Code discovering and loading your `*.instructions.md`, `*.agent.md`, or custom `SKILL.md` files context.
-```json
-{"type":"discovery","name":"Load Agents","status":"ok","attrs":{"details":"Resolved 3 agents in 0.0ms | loaded: [Plan, Ask, Explore]"}}
-```
+## 2. Cursor
 
-### 2. User Messages (`"type": "user_message"`)
-This simply records the raw text you sent in the chat input.
-```json
-{"type":"user_message","spanId":"000000f","attrs":{"content":"List the current directory"}}
-```
+Cursor, being a fork of VS Code imbued with AI, has its own custom infrastructure for the Composer and chat systems.
 
-### 3. LLM Requests (`"type": "llm_request"`)
-This span captures the exact round-trip to the model provider (like `gpt-4o` or `claude-3.5-sonnet`). It includes the Time To First Token (`ttft`), `inputTokens`, and `outputTokens`. 
-```json
-{"type":"llm_request","name":"chat:gpt-4o","status":"ok","attrs":{"model":"gpt-4o","inputTokens":15025,"outputTokens":126,"ttft":1987}}
-```
+### Locating the Debug Logs
+Cursor stores its background agent actions within the application user data.
+- **Mac:** `~/Library/Application Support/Cursor/logs/` or `~/Library/Application Support/Cursor/User/workspaceStorage/`
+- Look for `composer.json` or `chat.jsonl` traces.
 
-### 4. Agent Responses (`"type": "agent_response"`)
-If you have "Thinking" mode on, or if the model relies heavily on chain-of-thought, it will be captured here alongside the `response` payload.
-```json
-{"type":"agent_response","status":"ok","attrs":{"response":"[...]","reasoning":"The user wants me to list files. I will use the run_in_terminal tool."}}
-```
+### Analyzing Cursor Behavior
+Cursor's logs are heavily optimized around its "Shadow Workspace" and multi-file context tracking:
+- **Context Collection:** You will see discrete spans where Cursor's retriever searches your codebase (`"action": "semsearch"` or `"action": "ripgrep"`).
+- **Apply/Diff Spans:** When Composer generates code, it logs exact diff applications. If Cursor fails to apply a codeblock, check for `"apply_error"` indicating a mismatch between the AI's patch and your current file state.
 
-### 5. Tool Calls (`"type": "tool_call"`)
-Because LLMs cannot perform actions natively, they return an intent. The agent framework parses that intent and attempts to run the corresponding tool (e.g., `run_in_terminal`, `read_file`, or an MCP tool).
-```json
-{"type":"tool_call","name":"run_in_terminal","status":"error","attrs":{"args":"{\"command\":\"ls -la\"}","error":"A native exception occurred"}}
-```
-> **Pro Tip:** Look for `"status": "error"` on `tool_call` lines if an agent keeps getting stuck in a loop.
+## 3. Cline 
 
-## Tooling Strategy for Parsing
+Cline is an open-source autonomous agent extension for VS Code that operates directly in your workspace.
 
-Because these log files can grow quickly, opening them inside the editor isn't always efficient. Instead, you can use CLI tools like **`jq`** and **`grep`** to filter them:
+### Locating the Debug Logs
+Cline maintains a highly transparent `/cline_mcp` or `.cline` directory depending on your setup, and logs heavily to the VS Code Output panel.
+- **Output Panel:** Open View -> Output, and select "Cline" from the dropdown. This streams raw API payloads.
+- **Task History:** Cline persists all tasks and thoughts to `~/Library/Application Support/Code/User/globalStorage/saoudrizwan.claude-dev/tasks/`.
+
+### Analyzing Cline Logs
+Cline logs the exact API payload sent to Anthropic (or OpenAI/OpenRouter):
+- **Tool Use JSON:** You will see `<use_tool>` XML blocks or OpenAI tool call schemas.
+- **Environment Constraints:** Cline specifically logs the file sizes and line limits it restricts the AI to for token savings. 
+- **Token Usage:** Constantly appended to each turn.
+
+## 4. Claude Code
+
+Anthropic's native terminal agent (`claude-code`) is explicitly built around the terminal and local file system.
+
+### Locating the Debug Logs
+- Running Claude Code with the verbose flag `claude --verbose` outputs tool calls directly to `stdout`.
+- Internal state/logs are typically stored in `~/.claude/` or `.claude.json` local config files.
+
+### Analyzing Claude Code Logs
+Anthropic favors structural XML outputs and native MCP (Model Context Protocol).
+- **MCP Initialization:** Logs will show exactly which MCP servers (e.g., `sqlite`, `fetch`, `github`) successfully spun up and connected.
+- **Bash Execution:** You'll see raw `bash` executions and exactly what `stderr` the commands resulted in, allowing you to see why Claude Code pivoted its strategy.
+
+## 5. Google AntiGravity
+
+Google AntiGravity (Google's highly advanced AI-native development IDE) operates on continuous streaming architectures and predictive coding models.
+
+### Locating the Debug Logs
+AntiGravity's architecture abstracts much of the typical API roundtrip, utilizing local embedded models coupled with cloud RPCs.
+- Navigate to the **AntiGravity Dev Console** (usually `Cmd+Shift+D` or via `~/.antigravity/logs/session_grpc.log`).
+
+### Analyzing AntiGravity Logs
+Instead of standard JSON tool calls, AntiGravity logs rely on bidirectional gRPC streams:
+- **`Prediction_Frames`:** Logs tracking what the speculative decoding engine is predicting.
+- **`Context_Inject`:** Identifying which Google Workspace documents, GCP resources, or cloud git repos were automatically injected into the working context without explicit tool calls.
+- **`Operation_Commit`:** The success/failure state of AntiGravity's autonomous autonomous multi-file refactors.
+
+---
+
+## Tooling Strategy for Parsing JSON/JSONL
+
+Because standard AI log files (like `main.jsonl`) can grow quickly, opening them inside the editor isn't always efficient. Use CLI tools like **`jq`** and **`grep`**:
 
 * **Find all errors:**  
   `grep '"status":"error"' main.jsonl`
@@ -66,9 +98,3 @@ Because these log files can grow quickly, opening them inside the editor isn't a
   `jq -c 'select(.dur > 5000)' main.jsonl`
 * **Count the types of events that occurred:**  
   `jq -r '.type' main.jsonl | sort | uniq -c | sort -rn`
-
-### OpenTelemetry Spans
-
-Some versions of the logs (like the one you encountered: `agent-debug-log-b132e839-4222-4e73-89a1-84d09455dec2.json`) will be exported in the **OpenTelemetry (OTel)** format. 
-
-These contain the same conceptual properties but wrapped in `resourceSpans` and `scopeSpans`. You'll see arrays of `attributes` containing `key/value` pairs instead of flat JSON properties. The underlying debugging methodology remains identical: trace the `user_message` to the `llm_request`, read the `agent_response`'s tool intents, and verify the `tool_call` succeeded!
