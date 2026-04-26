@@ -14,15 +14,17 @@ export default withNextra({
     unoptimized: true,
   },
   transpilePackages: ['@theguild/remark-mermaid'],
+  experimental: {
+    cpus: 1,
+    workerThreads: false,
+    memoryBasedWorkersCount: true,
+    webpackBuildWorker: false,
+  },
   webpack(config, { webpack }) {
     if (!config.resolve.alias) {
       config.resolve.alias = {};
     }
     
-    // Deep override @theguild/remark-mermaid import injection
-    // to map to our custom ZoomableMermaid instead.
-    // Using the 'webpack' object provided by next.js options.
-    // Strict match ^@theguild...$ to avoid circular import when ZoomableMermaid imports the real base module.
     config.plugins.push(
       new webpack.NormalModuleReplacementPlugin(
         /^@theguild\/remark-mermaid\/mermaid$/,
