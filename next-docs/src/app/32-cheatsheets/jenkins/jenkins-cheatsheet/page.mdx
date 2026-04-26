@@ -1,0 +1,1277 @@
+# Jenkins Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [Jenkins Basics](#jenkins-basics)
+2. [Declarative Pipeline](#declarative-pipeline)
+3. [Scripted Pipeline](#scripted-pipeline)
+4. [Shared Libraries](#shared-libraries)
+5. [Credentials & Security](#credentials--security)
+6. [Distributed Builds](#distributed-builds)
+7. [Docker Integration](#docker-integration)
+8. [Kubernetes Integration](#kubernetes-integration)
+9. [Plugins](#plugins)
+10. [Best Practices](#best-practices)
+11. [Troubleshooting](#troubleshooting)
+12. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## Jenkins Basics
+
+### 1. Installation
+```bash
+# Docker (Quick Start)
+docker run -p 8080:8080 -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  jenkins/jenkins:lts
+
+# Docker Compose
+version: '3.8'
+services:
+  jenkins:
+    image: jenkins/jenkins:lts
+    privileged: true
+    user: root
+    ports:
+      - 8080:8080
+      - 50000:50000
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+# Ubuntu/Debian
+wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+sudo apt update
+sudo apt install jenkins
+
+# Start Jenkins
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+
+# Get initial admin password
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+### 2. Configuration as Code (JCasC)
+```yaml
+# jenkins.yaml
+jenkins:
+  systemMessage: "Jenkins configured automatically by JCasC"
+  numExecutors: 5
+  mode: NORMAL
+  securityRealm:
+    local:
+      allowsSignup: false
+      users:
+        - id: "admin"
+          password: "${ADMIN_PASSWORD}"
+  authorizationStrategy:
+    globalMatrix:
+      permissions:
+        - "Overall/Administer:admin"
+        - "Overall/Read:authenticated"
+
+credentials:
+  system:
+    domainCredentials:
+      - credentials:
+          - usernamePassword:
+              scope: GLOBAL
+              id: "github-token"
+              username: "jenkins-bot"
+              password: "${GITHUB_TOKEN}"
+          - string:
+              scope: GLOBAL
+              id: "slack-token"
+              secret: "${SLACK_TOKEN}"
+
+unclassified:
+  location:
+    url: https://jenkins.example.com
+  slack:
+    teamDomain: "myteam"
+    tokenCredentialId: "slack-token"
+```
+
+### 3. Jenkins CLI
+```bash
+# Download CLI
+wget http://localhost:8080/jnlpJars/jenkins-cli.jar
+
+# List jobs
+java -jar jenkins-cli.jar -s http://localhost:8080 -auth admin:password list-jobs
+
+# Build job
+java -jar jenkins-cli.jar -s http://localhost:8080 -auth admin:password build MyJob
+
+# Get job config
+java -jar jenkins-cli.jar -s http://localhost:8080 -auth admin:password get-job MyJob > job.xml
+
+# Create job from config
+java -jar jenkins-cli.jar -s http://localhost:8080 -auth admin:password create-job NewJob &lt; job.xml
+
+# Install plugin
+java -jar jenkins-cli.jar -s http://localhost:8080 -auth admin:password install-plugin git
+
+# Safe restart
+java -jar jenkins-cli.jar -s http://localhost:8080 -auth admin:password safe-restart
+```
+
+---
+
+## Declarative Pipeline
+
+### 4. Basic Declarative Pipeline
+```groovy
+pipeline {
+    agent any
+    
+    environment {
+        APP_NAME = 'myapp'
+        VERSION = '1.0.0'
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/user/repo.git',
+                    credentialsId: 'github-token'
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                sh 'kubectl apply -f k8s/'
+            }
+        }
+    }
+    
+    post {
+        success {
+            echo 'Pipeline succeeded!'
+            slackSend channel: '#deployments',
+                      color: 'good',
+                      message: "Build ${env.BUILD_NUMBER} succeeded"
+        }
+        failure {
+            echo 'Pipeline failed!'
+            slackSend channel: '#deployments',
+                      color: 'danger',
+                      message: "Build ${env.BUILD_NUMBER} failed"
+        }
+        always {
+            cleanWs()
+        }
+    }
+}
+```
+
+### 5. Advanced Declarative Pipeline
+```groovy
+pipeline {
+    agent {
+        kubernetes {
+            yaml '''
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    jenkins: agent
+spec:
+  containers:
+  - name: docker
+    image: docker:20.10
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+  - name: kubectl
+    image: bitnami/kubectl:latest
+    command:
+    - cat
+    tty: true
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+'''
+        }
+    }
+    
+    parameters {
+        choice(name: 'ENVIRONMENT', choices: ['dev', 'staging', 'production'], description: 'Deployment environment')
+        booleanParam(name: 'RUN_TESTS', defaultValue: true, description: 'Run tests?')
+        string(name: 'BRANCH', defaultValue: 'main', description: 'Git branch')
+    }
+    
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        timeout(time: 1, unit: 'HOURS')
+        timestamps()
+        disableConcurrentBuilds()
+    }
+    
+    triggers {
+        cron('H 2 * * *')  // Daily at 2 AM
+        pollSCM('H/5 * * * *')  // Poll every 5 minutes
+    }
+    
+    environment {
+        DOCKER_REGISTRY = 'docker.io'
+        IMAGE_NAME = "${DOCKER_REGISTRY}/myapp"
+        VERSION = "${env.BUILD_NUMBER}"
+    }
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Build') {
+            steps {
+                container('docker') {
+                    script {
+                        docker.build("${IMAGE_NAME}:${VERSION}")
+                    }
+                }
+            }
+        }
+        
+        stage('Test') {
+            when {
+                expression { params.RUN_TESTS == true }
+            }
+            parallel {
+                stage('Unit Tests') {
+                    steps {
+                        sh 'npm run test:unit'
+                    }
+                }
+                stage('Integration Tests') {
+                    steps {
+                        sh 'npm run test:integration'
+                    }
+                }
+                stage('Security Scan') {
+                    steps {
+                        sh 'trivy image ${IMAGE_NAME}:${VERSION}'
+                    }
+                }
+            }
+        }
+        
+        stage('Push Image') {
+            steps {
+                container('docker') {
+                    script {
+                        docker.withRegistry('', 'docker-hub-credentials') {
+                            docker.image("${IMAGE_NAME}:${VERSION}").push()
+                            docker.image("${IMAGE_NAME}:${VERSION}").push('latest')
+                        }
+                    }
+                }
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                container('kubectl') {
+                    sh """
+                        kubectl set image deployment/myapp \
+                          myapp=${IMAGE_NAME}:${VERSION} \
+                          -n ${params.ENVIRONMENT}
+                        kubectl rollout status deployment/myapp -n ${params.ENVIRONMENT}
+                    """
+                }
+            }
+        }
+    }
+    
+    post {
+        success {
+            emailext(
+                subject: "✅ Build ${env.BUILD_NUMBER} Succeeded",
+                body: "Deployment to ${params.ENVIRONMENT} completed successfully.",
+                to: 'team@example.com'
+            )
+        }
+        failure {
+            emailext(
+                subject: "❌ Build ${env.BUILD_NUMBER} Failed",
+                body: "Check console output at ${env.BUILD_URL}console",
+                to: 'team@example.com'
+            )
+        }
+        always {
+            junit '**/test-results/*.xml'
+            archiveArtifacts artifacts: 'build/**', allowEmptyArchive: true
+            cleanWs()
+        }
+    }
+}
+```
+
+### 6. Pipeline Directives
+```groovy
+pipeline {
+    // Agent
+    agent any
+    agent none
+    agent { label 'linux' }
+    agent { docker 'maven:3.8-openjdk-11' }
+    agent {
+        kubernetes {
+            yaml """..."""
+        }
+    }
+    
+    // Tools
+    tools {
+        maven 'Maven-3.8'
+        jdk 'JDK-11'
+        nodejs 'NodeJS-16'
+    }
+    
+    // Options
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        timeout(time: 1, unit: 'HOURS')
+        timestamps()
+        disableConcurrentBuilds()
+        skipDefaultCheckout()
+        retry(3)
+    }
+    
+    // Triggers
+    triggers {
+        cron('H H(0-3) * * *')         // Daily between 12-3 AM
+        pollSCM('H/15 * * * *')        // Every 15 minutes
+        upstream(upstreamProjects: 'job1,job2', threshold: hudson.model.Result.SUCCESS)
+    }
+    
+    // Parameters
+    parameters {
+        string(name: 'VERSION', defaultValue: '1.0', description: 'Version')
+        text(name: 'DESCRIPTION', defaultValue: '', description: 'Release notes')
+        booleanParam(name: 'DEPLOY', defaultValue: false, description: 'Deploy?')
+        choice(name: 'ENV', choices: ['dev', 'staging', 'prod'], description: 'Environment')
+        password(name: 'PASSWORD', defaultValue: '', description: 'Password')
+        file(name: 'CONFIG', description: 'Upload config file')
+    }
+    
+    // Environment
+    environment {
+        APP_NAME = 'myapp'
+        CREDENTIALS = credentials('my-credentials-id')
+        PATH = "${tool 'Maven'}/bin:${env.PATH}"
+    }
+    
+    // When conditions
+    when {
+        branch 'main'
+        environment name: 'DEPLOY', value: 'true'
+        expression { return params.ENV == 'production' }
+        allOf {
+            branch 'main'
+            environment name: 'DEPLOY', value: 'true'
+        }
+        anyOf {
+            branch 'main'
+            branch 'develop'
+        }
+        not {
+            branch 'feature/*'
+        }
+        changeRequest()  // Pull request
+        tag pattern: "release-\\d+", comparator: "REGEXP"
+    }
+    
+    // Input
+    input {
+        message "Deploy to production?"
+        ok "Deploy"
+        submitter "admin,release-manager"
+        parameters {
+            string(name: 'VERSION', description: 'Version to deploy')
+        }
+    }
+}
+```
+
+---
+
+## Scripted Pipeline
+
+### 7. Basic Scripted Pipeline
+```groovy
+node {
+    stage('Checkout') {
+        git branch: 'main', url: 'https://github.com/user/repo.git'
+    }
+    
+    stage('Build') {
+        sh 'mvn clean package'
+    }
+    
+    stage('Test') {
+        sh 'mvn test'
+    }
+    
+    stage('Deploy') {
+        if (env.BRANCH_NAME == 'main') {
+            sh 'kubectl apply -f k8s/'
+        }
+    }
+}
+```
+
+### 8. Advanced Scripted Pipeline
+```groovy
+node('docker') {
+    def app
+    def version = "${env.BUILD_NUMBER}"
+    
+    try {
+        stage('Checkout') {
+            checkout scm
+        }
+        
+        stage('Build') {
+            app = docker.build("myapp:${version}")
+        }
+        
+        stage('Test') {
+            parallel(
+                'Unit Tests': {
+                    sh 'npm run test:unit'
+                },
+                'Integration Tests': {
+                    sh 'npm run test:integration'
+                },
+                'Lint': {
+                    sh 'npm run lint'
+                }
+            )
+        }
+        
+        stage('Push') {
+            docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                app.push("${version}")
+                app.push("latest")
+            }
+        }
+        
+        stage('Deploy') {
+            input message: 'Deploy to production?', ok: 'Deploy'
+            
+            sh """
+                kubectl set image deployment/myapp \
+                  myapp=myapp:${version} \
+                  -n production
+                kubectl rollout status deployment/myapp -n production
+            """
+        }
+        
+        currentBuild.result = 'SUCCESS'
+        
+    } catch (Exception e) {
+        currentBuild.result = 'FAILURE'
+        throw e
+    } finally {
+        stage('Cleanup') {
+            cleanWs()
+        }
+        
+        stage('Notify') {
+            if (currentBuild.result == 'SUCCESS') {
+                slackSend color: 'good', message: "Build ${version} succeeded"
+            } else {
+                slackSend color: 'danger', message: "Build ${version} failed"
+            }
+        }
+    }
+}
+```
+
+---
+
+## Shared Libraries
+
+### 9. Shared Library Structure
+```
+vars/
+  buildDockerImage.groovy
+  deployToKubernetes.groovy
+  sendNotification.groovy
+src/
+  org/
+    company/
+      Utils.groovy
+      Docker.groovy
+resources/
+  config/
+    pipeline-config.yaml
+```
+
+### 10. Shared Library - vars/buildDockerImage.groovy
+```groovy
+#!/usr/bin/env groovy
+
+def call(Map config) {
+    def imageName = config.imageName ?: 'myapp'
+    def version = config.version ?: env.BUILD_NUMBER
+    def registry = config.registry ?: 'docker.io'
+    def credentialsId = config.credentialsId ?: 'docker-hub-credentials'
+    
+    def fullImageName = "${registry}/${imageName}:${version}"
+    
+    stage('Build Docker Image') {
+        echo "Building ${fullImageName}"
+        sh "docker build -t ${fullImageName} ."
+    }
+    
+    stage('Push Docker Image') {
+        docker.withRegistry("https://${registry}", credentialsId) {
+            sh "docker push ${fullImageName}"
+            
+            if (config.pushLatest) {
+                sh "docker tag ${fullImageName} ${registry}/${imageName}:latest"
+                sh "docker push ${registry}/${imageName}:latest"
+            }
+        }
+    }
+    
+    return fullImageName
+}
+```
+
+### 11. Using Shared Library
+```groovy
+// Jenkinsfile
+@Library('my-shared-library@main') _
+
+pipeline {
+    agent any
+    
+    stages {
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+        
+        stage('Build & Push') {
+            steps {
+                script {
+                    def image = buildDockerImage(
+                        imageName: 'mycompany/myapp',
+                        version: "${env.BUILD_NUMBER}",
+                        registry: 'docker.io',
+                        credentialsId: 'docker-hub-credentials',
+                        pushLatest: true
+                    )
+                    
+                    echo "Built image: ${image}"
+                }
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                script {
+                    deployToKubernetes(
+                        namespace: 'production',
+                        deployment: 'myapp',
+                        image: image
+                    )
+                }
+            }
+        }
+    }
+    
+    post {
+        always {
+            sendNotification(
+                status: currentBuild.result,
+                channel: '#deployments'
+            )
+        }
+    }
+}
+```
+
+### 12. Shared Library - src/org/company/Docker.groovy
+```groovy
+package org.company
+
+class Docker implements Serializable {
+    def script
+    
+    Docker(script) {
+        this.script = script
+    }
+    
+    def build(String imageName, String tag = 'latest') {
+        script.sh "docker build -t ${imageName}:${tag} ."
+        return "${imageName}:${tag}"
+    }
+    
+    def push(String image, String registry = 'docker.io', String credentialsId) {
+        script.docker.withRegistry("https://${registry}", credentialsId) {
+            script.sh "docker push ${image}"
+        }
+    }
+    
+    def scan(String image) {
+        script.sh "trivy image ${image}"
+    }
+}
+```
+
+---
+
+## Credentials & Security
+
+### 13. Managing Credentials
+```groovy
+// Username/Password
+withCredentials([usernamePassword(
+    credentialsId: 'github-credentials',
+    usernameVariable: 'GIT_USER',
+    passwordVariable: 'GIT_PASS'
+)]) {
+    sh 'git clone https://${GIT_USER}:${GIT_PASS}@github.com/user/repo.git'
+}
+
+// SSH Key
+withCredentials([sshUserPrivateKey(
+    credentialsId: 'ssh-key',
+    keyFileVariable: 'SSH_KEY'
+)]) {
+    sh 'ssh -i ${SSH_KEY} user@server "deployment-script.sh"'
+}
+
+// Secret Text
+withCredentials([string(
+    credentialsId: 'api-token',
+    variable: 'API_TOKEN'
+)]) {
+    sh 'curl -H "Authorization: Bearer ${API_TOKEN}" https://api.example.com'
+}
+
+// Secret File
+withCredentials([file(
+    credentialsId: 'kubeconfig',
+    variable: 'KUBECONFIG'
+)]) {
+    sh 'kubectl --kubeconfig=${KUBECONFIG} get pods'
+}
+
+// Multiple credentials
+withCredentials([
+    usernamePassword(credentialsId: 'docker-hub', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS'),
+    string(credentialsId: 'slack-token', variable: 'SLACK_TOKEN')
+]) {
+    sh '''
+        docker login -u ${DOCKER_USER} -p ${DOCKER_PASS}
+        curl -X POST -H "Authorization: Bearer ${SLACK_TOKEN}" ...
+    '''
+}
+```
+
+### 14. Script Security
+```groovy
+// Groovy sandbox restrictions
+@NonCPS
+def parseJson(String json) {
+    return new groovy.json.JsonSlurper().parseText(json)
+}
+
+// Approved signatures
+// Jenkins > Manage Jenkins > In-process Script Approval
+
+// Use @Library for untrusted code
+@Library('approved-library') _
+
+// Avoid user input in shell commands
+def userInput = input message: 'Version?', parameters: [string(name: 'VERSION')]
+// Don't do: sh "deploy.sh ${userInput}"
+// Do: sh "deploy.sh '${userInput.replaceAll('[^A-Za-z0-9.-]', '')}'"
+```
+
+---
+
+## Distributed Builds
+
+### 15. Agent Configuration
+```groovy
+// Static agent
+pipeline {
+    agent {
+        label 'linux && docker'
+    }
+}
+
+// Docker agent
+pipeline {
+    agent {
+        docker {
+            image 'maven:3.8-openjdk-11'
+            args '-v $HOME/.m2:/root/.m2'
+        }
+    }
+}
+
+// Different agents per stage
+pipeline {
+    agent none
+    stages {
+        stage('Build') {
+            agent { label 'linux' }
+            steps {
+                sh 'make build'
+            }
+        }
+        stage('Deploy') {
+            agent { label 'deployment-server' }
+            steps {
+                sh 'make deploy'
+            }
+        }
+    }
+}
+
+// Kubernetes agent
+pipeline {
+    agent {
+        kubernetes {
+            yaml """
+apiVersion: v1
+kind: Pod
+spec:
+  containers:
+  - name: maven
+    image: maven:3.8-openjdk-11
+    command:
+    - cat
+    tty: true
+  - name: docker
+    image: docker:20.10
+    command:
+    - cat
+    tty: true
+    volumeMounts:
+    - name: docker-sock
+      mountPath: /var/run/docker.sock
+  volumes:
+  - name: docker-sock
+    hostPath:
+      path: /var/run/docker.sock
+"""
+        }
+    }
+    stages {
+        stage('Build') {
+            steps {
+                container('maven') {
+                    sh 'mvn clean package'
+                }
+            }
+        }
+        stage('Docker Build') {
+            steps {
+                container('docker') {
+                    sh 'docker build -t myapp .'
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## Docker Integration
+
+### 16. Docker Pipeline Plugin
+```groovy
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    // Build image
+                    def app = docker.build("myapp:${env.BUILD_NUMBER}")
+                    
+                    // Run container
+                    app.inside {
+                        sh 'npm test'
+                    }
+                    
+                    // Push image
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker-credentials') {
+                        app.push("${env.BUILD_NUMBER}")
+                        app.push("latest")
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Multi-stage build
+stage('Build Images') {
+    parallel {
+        stage('App Image') {
+            steps {
+                script {
+                    docker.build("myapp:${env.BUILD_NUMBER}", "-f Dockerfile.app .")
+                }
+            }
+        }
+        stage('Test Image') {
+            steps {
+                script {
+                    docker.build("myapp-test:${env.BUILD_NUMBER}", "-f Dockerfile.test .")
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## Kubernetes Integration
+
+### 17. Deploy to Kubernetes
+```groovy
+pipeline {
+    agent {
+        kubernetes {
+            yaml """
+apiVersion: v1
+kind: Pod
+spec:
+  serviceAccountName: jenkins
+  containers:
+  - name: kubectl
+    image: bitnami/kubectl:latest
+    command:
+    - cat
+    tty: true
+"""
+        }
+    }
+    
+    stages {
+        stage('Deploy') {
+            steps {
+                container('kubectl') {
+                    sh '''
+                        kubectl apply -f k8s/
+                        kubectl set image deployment/myapp myapp=myapp:${BUILD_NUMBER}
+                        kubectl rollout status deployment/myapp
+                    '''
+                }
+            }
+        }
+        
+        stage('Verify') {
+            steps {
+                container('kubectl') {
+                    sh '''
+                        kubectl get pods
+                        kubectl get svc
+                        kubectl describe deployment myapp
+                    '''
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## Plugins
+
+### 18. Essential Plugins
+```
+Pipeline Plugins:
+- Pipeline
+- Pipeline: Stage View
+- Pipeline: Multibranch
+- Pipeline: GitHub Groovy Libraries
+
+Source Control:
+- Git
+- GitHub
+- GitHub Branch Source
+- Bitbucket
+
+Build Tools:
+- Maven Integration
+- Gradle
+- NodeJS
+
+Containers:
+- Docker Pipeline
+- Kubernetes
+- Amazon ECR
+
+Notifications:
+- Slack Notification
+- Email Extension
+- Mailer
+
+Security:
+- OWASP Dependency-Check
+- Sonarqube Scanner
+- Credentials Binding
+
+Utilities:
+- Blue Ocean
+- Configuration as Code
+- Job DSL
+- AnsiColor
+- Timestamper
+```
+
+---
+
+## Best Practices
+
+### 19. Pipeline Best Practices
+```groovy
+// ✅ Good practices
+pipeline {
+    agent any
+    
+    // Use options
+    options {
+        buildDiscarder(logRotator(numToKeepStr: '10'))
+        timeout(time: 1, unit: 'HOURS')
+        timestamps()
+    }
+    
+    // Use environment variables
+    environment {
+        APP_NAME = 'myapp'
+        REGISTRY = credentials('docker-registry')
+    }
+    
+    stages {
+        // Clear stage names
+        stage('Build Application') {
+            steps {
+                // Use script block sparingly
+                script {
+                    def version = readFile('VERSION').trim()
+                    env.VERSION = version
+                }
+                sh 'make build'
+            }
+        }
+        
+        // Parallel stages
+        stage('Test') {
+            parallel {
+                stage('Unit Tests') {
+                    steps {
+                        sh 'npm run test:unit'
+                    }
+                }
+                stage('Integration Tests') {
+                    steps {
+                        sh 'npm run test:integration'
+                    }
+                }
+            }
+        }
+    }
+    
+    // Always cleanup
+    post {
+        always {
+            junit '**/test-results/*.xml'
+            cleanWs()
+        }
+    }
+}
+
+// ❌ Avoid
+// - Hardcoded credentials
+// - Overly complex Groovy in pipeline
+// - No error handling
+// - Missing cleanup
+// - No build history management
+```
+
+---
+
+## Troubleshooting
+
+### 20. Common Issues
+```groovy
+// Debug pipeline
+pipeline {
+    agent any
+    stages {
+        stage('Debug') {
+            steps {
+                // Print all environment variables
+                sh 'env | sort'
+                
+                // Echo current workspace
+                echo "Workspace: ${env.WORKSPACE}"
+                
+                // Check file permissions
+                sh 'ls -la'
+                
+                // Verify tools
+                sh 'which docker'
+                sh 'docker --version'
+            }
+        }
+    }
+}
+
+// Replay pipeline (UI feature)
+// Build > Replay > Edit Groovy script > Run
+
+// View console output
+// Build > Console Output
+
+// Check pipeline syntax
+// Pipeline Syntax > Declarative Directive Generator
+
+// Script console (Admin only)
+// Manage Jenkins > Script Console
+println Jenkins.instance.pluginManager.plugins
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Multi-Branch Pipeline
+```groovy
+// Jenkinsfile
+pipeline {
+    agent any
+    
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                sh 'npm test'
+            }
+        }
+        
+        stage('Deploy') {
+            when {
+                anyOf {
+                    branch 'main'
+                    branch 'develop'
+                }
+            }
+            steps {
+                script {
+                    def environment = env.BRANCH_NAME == 'main' ? 'production' : 'staging'
+                    sh """
+                        kubectl set image deployment/myapp \
+                          myapp=myapp:${env.BUILD_NUMBER} \
+                          -n ${environment}
+                    """
+                }
+            }
+        }
+    }
+}
+```
+
+### Scenario 2: Blue-Green Deployment
+```groovy
+pipeline {
+    agent any
+    
+    environment {
+        VERSION = "${env.BUILD_NUMBER}"
+        BLUE_PORT = '8080'
+        GREEN_PORT = '8081'
+    }
+    
+    stages {
+        stage('Deploy to Green') {
+            steps {
+                sh """
+                    docker run -d --name myapp-green-${VERSION} \
+                      -p ${GREEN_PORT}:80 \
+                      myapp:${VERSION}
+                """
+            }
+        }
+        
+        stage('Health Check Green') {
+            steps {
+                script {
+                    def healthCheck = sh(
+                        script: "curl -f http://localhost:${GREEN_PORT}/health",
+                        returnStatus: true
+                    )
+                    if (healthCheck != 0) {
+                        error "Health check failed"
+                    }
+                }
+            }
+        }
+        
+        stage('Switch Traffic') {
+            input {
+                message "Switch to green?"
+                ok "Switch"
+            }
+            steps {
+                sh """
+                    # Update load balancer to point to green
+                    kubectl patch service myapp -p '{"spec":{"selector":{"version":"green"}}}'
+                """
+            }
+        }
+        
+        stage('Cleanup Blue') {
+            steps {
+                sh 'docker stop myapp-blue || true'
+                sh 'docker rm myapp-blue || true'
+            }
+        }
+    }
+}
+```
+
+### Scenario 3: Matrix Build
+```groovy
+pipeline {
+    agent none
+    
+    stages {
+        stage('Build Matrix') {
+            matrix {
+                agent {
+                    label "${OS}"
+                }
+                axes {
+                    axis {
+                        name 'OS'
+                        values 'linux', 'windows', 'mac'
+                    }
+                    axis {
+                        name 'BROWSER'
+                        values 'chrome', 'firefox', 'safari'
+                    }
+                }
+                excludes {
+                    exclude {
+                        axis {
+                            name 'OS'
+                            values 'linux'
+                        }
+                        axis {
+                            name 'BROWSER'
+                            values 'safari'
+                        }
+                    }
+                }
+                stages {
+                    stage('Build') {
+                        steps {
+                            echo "Building on ${OS} with ${BROWSER}"
+                            sh 'npm run build'
+                        }
+                    }
+                    stage('Test') {
+                        steps {
+                            sh "npm run test:${BROWSER}"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
+---
+
+## Migration to GitHub Actions
+
+### 21. Comparison & Migration Strategy
+```groovy
+// Jenkins Declarative
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'npm install'
+                sh 'npm run build'
+            }
+        }
+    }
+}
+```
+
+```yaml
+# GitHub Actions equivalent
+name: CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build
+        run: |
+          npm install
+          npm run build
+```
+
+**Migration Approach:**
+1. Use GitHub Actions Importer for automated conversion
+2. Migrate simple pipelines first (60% auto-convertible)
+3. Refactor shared libraries to reusable workflows
+4. Replace Jenkins plugins with GitHub Actions
+5. Parallel run for validation period
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview  
+**Last Updated**: February 15, 2026  
+**Total Commands**: 100+ Jenkins operations

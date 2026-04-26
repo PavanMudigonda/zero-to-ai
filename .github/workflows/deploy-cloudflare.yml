@@ -1,4 +1,4 @@
-name: Deploy Sphinx to Cloudflare Pages
+name: Deploy Next.js to Cloudflare Pages
 
 on:
   push:
@@ -21,62 +21,30 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Resolve release version
-        id: version
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # 1. Try latest published git tag
-          TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
-          # 2. If no tag, fetch the draft release version from Release Drafter
-          if [ -z "$TAG" ]; then
-            TAG=$(gh api repos/${{ github.repository }}/releases \
-              --jq '[.[] | select(.draft==true)] | first | .tag_name // empty' 2>/dev/null || echo "")
-          fi
-          # 3. Fallback
-          if [ -z "$TAG" ]; then
-            TAG="v0.1.0"
-          fi
-          VERSION="${TAG#v}"
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-          echo "Resolved version: $VERSION"
-
-      - name: Setup Python
-        uses: actions/setup-python@v6.2.0
+      - name: Setup Node.js
+        uses: actions/setup-node@v6.4.0
         with:
-          python-version: "3.12"
-          cache: pip
-          cache-dependency-path: requirements-docs.txt
+          node-version: "20"
+          cache: 'npm'
+          cache-dependency-path: 'next-docs/package-lock.json'
 
       - name: Install dependencies
-        run: pip install -r requirements-docs.txt
+        working-directory: ./next-docs
+        run: npm ci
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6.3.0
-        with:
-          node-version: "lts/*"
-
-      - name: Install Wrangler CLI
-        run: npm install --global wrangler@4
-
-      - name: Generate Sphinx site
-        run: |
-          bash scripts/build_site.sh
-          sphinx-build -b html -D release="${SITE_VERSION}" docs site
+      - name: Build Next.js site
+        working-directory: ./next-docs
+        run: npm run build
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
-          SITE_VERSION: ${{ steps.version.outputs.version }}
-
-      - name: Upload generated site artifact
-        uses: actions/upload-artifact@v7.0.1
-        with:
-          name: sphinx-site
-          path: site
-          if-no-files-found: error
 
       - name: Deploy to Cloudflare Pages
-        run: wrangler pages deploy site --project-name=zero-to-ai --branch="${GITHUB_REF_NAME}"
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: zero-to-ai
+          directory: next-docs/out
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}

@@ -1,1 +1,0 @@
-This example shows how you parameterize your shared library, and use conditional code block.

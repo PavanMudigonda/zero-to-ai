@@ -1,0 +1,1654 @@
+# PowerShell Commands Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [Basic Commands](#basic-commands)
+2. [File & Directory Operations](#file--directory-operations)
+3. [Variables & Data Types](#variables--data-types)
+4. [Pipeline & Filtering](#pipeline--filtering)
+5. [Conditional Logic](#conditional-logic)
+6. [Loops](#loops)
+7. [Functions](#functions)
+8. [Arrays & Collections](#arrays--collections)
+9. [Hash Tables](#hash-tables)
+10. [String Manipulation](#string-manipulation)
+11. [Object Operations](#object-operations)
+12. [Process Management](#process-management)
+13. [Service Management](#service-management)
+14. [Network Operations](#network-operations)
+15. [File System Operations](#file-system-operations)
+16. [Registry Operations](#registry-operations)
+17. [Event Log Management](#event-log-management)
+18. [Error Handling](#error-handling)
+19. [Modules & Snap-ins](#modules--snap-ins)
+20. [Remote Management](#remote-management)
+21. [Active Directory](#active-directory)
+22. [Azure PowerShell](#azure-powershell)
+23. [Docker & Container Management](#docker--container-management)
+24. [AWS PowerShell](#aws-powershell)
+25. [Best Practices](#best-practices)
+26. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## Basic Commands
+
+### 1. Get Command Help
+```powershell
+Get-Help Get-Process
+Get-Help Get-Process -Full
+Get-Help Get-Process -Examples
+Get-Help Get-Process -Online
+Get-Help about_*                    # List about topics
+```
+
+### 2. Get Command Aliases
+```powershell
+Get-Alias
+Get-Alias ls
+Get-Alias -Definition Get-ChildItem
+```
+
+### 3. Command Discovery
+```powershell
+Get-Command                         # All commands
+Get-Command *Service*               # Search commands
+Get-Command -Module ActiveDirectory
+Get-Command -Verb Get
+Get-Command -Noun Process
+```
+
+### 4. Output & Display
+```powershell
+Write-Host "Message"
+Write-Output "Output"
+Write-Warning "Warning"
+Write-Error "Error"
+Write-Verbose "Verbose" -Verbose
+Write-Debug "Debug" -Debug
+```
+
+### 5. Clear Screen
+```powershell
+Clear-Host
+cls                                 # Alias
+```
+
+---
+
+## File & Directory Operations
+
+### 6. List Files & Directories
+```powershell
+Get-ChildItem
+Get-ChildItem -Path C:\              # Specific path
+Get-ChildItem -Recurse               # Recursive
+Get-ChildItem -Hidden                # Hidden files
+Get-ChildItem -File                  # Files only
+Get-ChildItem -Directory             # Directories only
+Get-ChildItem -Filter *.txt
+Get-ChildItem -Include *.log -Recurse
+Get-ChildItem -Exclude *.bak
+```
+
+### 7. Navigate Directories
+```powershell
+Set-Location C:\Path
+cd C:\Path                           # Alias
+Push-Location C:\Temp                # Save location
+Pop-Location                         # Return to saved
+```
+
+### 8. Create Files & Directories
+```powershell
+New-Item -ItemType File -Name "file.txt"
+New-Item -ItemType Directory -Name "folder"
+New-Item -Path C:\Temp\test.txt -Force
+mkdir NewFolder                      # Alias
+```
+
+### 9. Copy Files & Directories
+```powershell
+Copy-Item source.txt destination.txt
+Copy-Item -Path C:\Source -Destination C:\Dest -Recurse
+Copy-Item *.txt C:\Destination
+cp source.txt dest.txt               # Alias
+```
+
+### 10. Move/Rename Files
+```powershell
+Move-Item old.txt new.txt
+Move-Item C:\Source\file.txt C:\Destination\
+Rename-Item old.txt new.txt
+mv old.txt new.txt                   # Alias
+```
+
+### 11. Remove Files & Directories
+```powershell
+Remove-Item file.txt
+Remove-Item folder -Recurse
+Remove-Item -Path C:\Temp\* -Force
+rm file.txt                          # Alias
+```
+
+### 12. View File Content
+```powershell
+Get-Content file.txt
+Get-Content file.txt -Head 10        # First 10 lines
+Get-Content file.txt -Tail 10        # Last 10 lines
+Get-Content file.txt -Wait           # Like tail -f
+cat file.txt                         # Alias
+type file.txt                        # Alias
+```
+
+### 13. Write to File
+```powershell
+Set-Content -Path file.txt -Value "Content"
+Add-Content -Path file.txt -Value "More content"
+"Content" | Out-File file.txt
+"Content" | Out-File file.txt -Append
+```
+
+### 14. File Properties
+```powershell
+Get-Item file.txt
+Get-ItemProperty file.txt
+(Get-Item file.txt).Length          # File size
+(Get-Item file.txt).LastWriteTime
+Test-Path file.txt                  # Check if exists
+```
+
+---
+
+## Variables & Data Types
+
+### 15. Variable Assignment
+```powershell
+$name = "John"
+$age = 30
+$PI = 3.14
+```
+
+### 16. Variable Types
+```powershell
+[string]$name = "John"
+[int]$age = 30
+[double]$price = 99.99
+[bool]$isActive = $true
+[datetime]$date = Get-Date
+[array]$numbers = 1,2,3,4,5
+```
+
+### 17. Variable Scope
+```powershell
+$global:var = "Global"
+$script:var = "Script"
+$local:var = "Local"
+$private:var = "Private"
+```
+
+### 18. Automatic Variables
+```powershell
+$PSVersionTable                     # PowerShell version
+$HOME                               # User home directory
+$PWD                                # Current directory
+$_                                  # Current pipeline object
+$?                                  # Last command success
+$LASTEXITCODE                       # Last exit code
+$args                               # Function arguments
+$null                               # Null value
+```
+
+### 19. Environment Variables
+```powershell
+$env:PATH
+$env:COMPUTERNAME
+$env:USERNAME
+Get-ChildItem Env:                  # All env variables
+[Environment]::SetEnvironmentVariable("VAR", "value", "User")
+```
+
+### 20. Constants
+```powershell
+Set-Variable -Name PI -Value 3.14 -Option Constant
+New-Variable -Name MAX -Value 100 -Option ReadOnly
+```
+
+---
+
+## Pipeline & Filtering
+
+### 21. Where-Object (Filtering)
+```powershell
+Get-Process | Where-Object {$_.CPU -gt 100}
+Get-Service | Where-Object Status -eq 'Running'
+Get-ChildItem | Where-Object Length -gt 1MB
+Get-Process | ? {$_.Name -like "chrome*"}    # Alias
+```
+
+### 22. Select-Object (Projection)
+```powershell
+Get-Process | Select-Object Name, CPU
+Get-Process | Select-Object -First 10
+Get-Process | Select-Object -Last 5
+Get-Process | Select-Object -Unique Name
+Get-Process | Select-Object -Property *     # All properties
+Get-Process | select Name, CPU              # Alias
+```
+
+### 23. Sort-Object
+```powershell
+Get-Process | Sort-Object CPU
+Get-Process | Sort-Object CPU -Descending
+Get-ChildItem | Sort-Object Length, Name
+Get-Process | sort CPU                      # Alias
+```
+
+### 24. Group-Object
+```powershell
+Get-Process | Group-Object Name
+Get-Service | Group-Object Status
+Get-ChildItem | Group-Object Extension
+```
+
+### 25. Measure-Object
+```powershell
+Get-Process | Measure-Object
+Get-ChildItem | Measure-Object -Property Length -Sum
+Get-Content file.txt | Measure-Object -Line -Word -Character
+```
+
+### 26. ForEach-Object
+```powershell
+Get-Process | ForEach-Object {$_.Kill()}
+1..10 | ForEach-Object {$_ * 2}
+Get-ChildItem | % {$_.Name}                 # Alias
+```
+
+### 27. Tee-Object
+```powershell
+Get-Process | Tee-Object -FilePath process.txt | Sort-Object CPU
+```
+
+---
+
+## Conditional Logic
+
+### 28. If Statement
+```powershell
+if ($age -gt 18) {
+    Write-Host "Adult"
+}
+```
+
+### 29. If-Else
+```powershell
+if ($age -ge 18) {
+    Write-Host "Adult"
+} else {
+    Write-Host "Minor"
+}
+```
+
+### 30. If-ElseIf-Else
+```powershell
+if ($score -ge 90) {
+    Write-Host "A"
+} elseif ($score -ge 80) {
+    Write-Host "B"
+} else {
+    Write-Host "C"
+}
+```
+
+### 31. Switch Statement
+```powershell
+switch ($value) {
+    1 { "One" }
+    2 { "Two" }
+    3 { "Three" }
+    default { "Other" }
+}
+
+switch -Wildcard ($string) {
+    "*.txt" { "Text file" }
+    "*.log" { "Log file" }
+    default { "Unknown" }
+}
+```
+
+### 32. Comparison Operators
+```powershell
+-eq     # Equal
+-ne     # Not equal
+-gt     # Greater than
+-ge     # Greater than or equal
+-lt     # Less than
+-le     # Less than or equal
+-like   # Wildcard match
+-notlike
+-match  # Regex match
+-notmatch
+-contains
+-notcontains
+-in
+-notin
+```
+
+### 33. Logical Operators
+```powershell
+-and
+-or
+-not
+!
+-xor
+```
+
+---
+
+## Loops
+
+### 34. ForEach Loop
+```powershell
+foreach ($item in $collection) {
+    Write-Host $item
+}
+
+foreach ($file in Get-ChildItem) {
+    $file.Name
+}
+```
+
+### 35. For Loop
+```powershell
+for ($i = 0; $i -lt 10; $i++) {
+    Write-Host $i
+}
+```
+
+### 36. While Loop
+```powershell
+$i = 0
+while ($i -lt 10) {
+    Write-Host $i
+    $i++
+}
+```
+
+### 37. Do-While Loop
+```powershell
+$i = 0
+do {
+    Write-Host $i
+    $i++
+} while ($i -lt 10)
+```
+
+### 38. Do-Until Loop
+```powershell
+$i = 0
+do {
+    Write-Host $i
+    $i++
+} until ($i -ge 10)
+```
+
+### 39. Loop Control
+```powershell
+foreach ($i in 1..10) {
+    if ($i -eq 5) { continue }      # Skip iteration
+    if ($i -eq 8) { break }         # Exit loop
+    Write-Host $i
+}
+```
+
+---
+
+## Functions
+
+### 40. Basic Function
+```powershell
+function Get-Greeting {
+    Write-Host "Hello, World!"
+}
+
+Get-Greeting
+```
+
+### 41. Function with Parameters
+```powershell
+function Get-Sum {
+    param($a, $b)
+    return $a + $b
+}
+
+$result = Get-Sum 5 3
+```
+
+### 42. Advanced Function
+```powershell
+function Get-UserInfo {
+    [CmdletBinding()]
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$UserName,
+        
+        [Parameter()]
+        [int]$Age = 0
+    )
+    
+    Write-Output "User: $UserName, Age: $Age"
+}
+```
+
+### 43. Function with Pipeline Support
+```powershell
+function Get-SquareRoot {
+    [CmdletBinding()]
+    param(
+        [Parameter(ValueFromPipeline=$true)]
+        [double]$Number
+    )
+    
+    process {
+        [Math]::Sqrt($Number)
+    }
+}
+
+16, 25, 36 | Get-SquareRoot
+```
+
+### 44. Validate Parameters
+```powershell
+function Set-Age {
+    param(
+        [ValidateRange(0,120)]
+        [int]$Age,
+        
+        [ValidateSet("Male","Female","Other")]
+        [string]$Gender,
+        
+        [ValidatePattern("^\d{3}-\d{2}-\d{4}$")]
+        [string]$SSN
+    )
+}
+```
+
+---
+
+## Arrays & Collections
+
+### 45. Create Arrays
+```powershell
+$array = @(1, 2, 3, 4, 5)
+$fruits = @("apple", "banana", "cherry")
+$empty = @()
+$range = 1..10
+```
+
+### 46. Access Array Elements
+```powershell
+$array[0]                           # First element
+$array[-1]                          # Last element
+$array[0..2]                        # Range
+$array.Count                        # Array length
+```
+
+### 47. Modify Arrays
+```powershell
+$array += 6                         # Add element
+$array = $array + @(7, 8)          # Add multiple
+$array = $array | Where-Object {$_ -ne 3}  # Remove element
+```
+
+### 48. Array Operations
+```powershell
+$array -contains 5                  # Check if contains
+$array -join ", "                   # Join to string
+$array | Sort-Object
+$array | Get-Unique
+```
+
+### 49. ArrayList (Dynamic)
+```powershell
+$list = New-Object System.Collections.ArrayList
+$list.Add("item1")
+$list.AddRange(@("item2", "item3"))
+$list.Remove("item1")
+$list.Count
+```
+
+### 50. Multidimensional Arrays
+```powershell
+$matrix = @(
+    @(1, 2, 3),
+    @(4, 5, 6),
+    @(7, 8, 9)
+)
+$matrix[0][1]                       # Access element
+```
+
+---
+
+## Hash Tables
+
+### 51. Create Hash Table
+```powershell
+$hash = @{
+    Name = "John"
+    Age = 30
+    Email = "john@example.com"
+}
+```
+
+### 52. Access Hash Table
+```powershell
+$hash["Name"]
+$hash.Name
+$hash.Keys
+$hash.Values
+$hash.Count
+```
+
+### 53. Modify Hash Table
+```powershell
+$hash["City"] = "New York"          # Add key
+$hash.Remove("Email")               # Remove key
+$hash.ContainsKey("Name")           # Check if exists
+```
+
+### 54. Iterate Hash Table
+```powershell
+foreach ($key in $hash.Keys) {
+    Write-Host "$key : $($hash[$key])"
+}
+
+$hash.GetEnumerator() | ForEach-Object {
+    Write-Host "$($_.Key) : $($_.Value)"
+}
+```
+
+### 55. Ordered Hash Table
+```powershell
+$ordered = [ordered]@{
+    First = 1
+    Second = 2
+    Third = 3
+}
+```
+
+---
+
+## String Manipulation
+
+### 56. String Operations
+```powershell
+$str = "Hello World"
+$str.Length
+$str.ToUpper()
+$str.ToLower()
+$str.Contains("World")
+$str.StartsWith("Hello")
+$str.EndsWith("World")
+```
+
+### 57. Substring
+```powershell
+$str.Substring(0, 5)                # "Hello"
+$str.Substring(6)                   # "World"
+```
+
+### 58. String Replace
+```powershell
+$str.Replace("World", "PowerShell")
+$str -replace "World", "PowerShell"
+$str -replace "\s+", "-"            # Regex replace
+```
+
+### 59. String Split & Join
+```powershell
+$str.Split(" ")
+$str -split " "
+$words -join ", "
+```
+
+### 60. String Formatting
+```powershell
+$name = "John"
+$age = 30
+"Name: $name, Age: $age"            # String interpolation
+"Name: {0}, Age: {1}" -f $name, $age    # Format operator
+[string]::Format("Name: {0}", $name)
+```
+
+### 61. Multiline Strings (Here-String)
+```powershell
+$text = @"
+Line 1
+Line 2
+Line 3
+"@
+```
+
+### 62. Trim Strings
+```powershell
+"  text  ".Trim()
+"  text  ".TrimStart()
+"  text  ".TrimEnd()
+```
+
+---
+
+## Object Operations
+
+### 63. Create Custom Objects
+```powershell
+$obj = [PSCustomObject]@{
+    Name = "John"
+    Age = 30
+    Email = "john@example.com"
+}
+```
+
+### 64. Add Properties
+```powershell
+$obj | Add-Member -MemberType NoteProperty -Name "City" -Value "NYC"
+$obj | Add-Member -MemberType ScriptProperty -Name "Info" -Value {
+    "$($this.Name) - $($this.Age)"
+}
+```
+
+### 65. Object Properties
+```powershell
+$obj | Get-Member
+$obj.PSObject.Properties
+$obj.PSObject.Methods
+```
+
+### 66. Convert Objects
+```powershell
+$obj | ConvertTo-Json
+$obj | ConvertTo-Csv
+$obj | ConvertTo-Html
+$obj | ConvertTo-Xml
+$json | ConvertFrom-Json
+$csv | ConvertFrom-Csv
+```
+
+### 67. Export/Import Objects
+```powershell
+$data | Export-Csv data.csv
+$data | Import-Csv data.csv
+$data | Export-Clixml data.xml
+$data | Import-Clixml data.xml
+```
+
+---
+
+## Process Management
+
+### 68. Get Processes
+```powershell
+Get-Process
+Get-Process -Name chrome
+Get-Process -Id 1234
+Get-Process | Where-Object CPU -gt 100
+```
+
+### 69. Start Process
+```powershell
+Start-Process notepad
+Start-Process "C:\Program.exe" -ArgumentList "/arg1", "/arg2"
+Start-Process cmd -Verb RunAs        # Run as administrator
+Start-Process -FilePath "script.ps1" -NoNewWindow
+```
+
+### 70. Stop Process
+```powershell
+Stop-Process -Name chrome
+Stop-Process -Id 1234
+Stop-Process -Name chrome -Force
+Get-Process chrome | Stop-Process
+```
+
+### 71. Wait for Process
+```powershell
+Wait-Process -Name notepad
+Wait-Process -Id 1234
+```
+
+### 72. Process Information
+```powershell
+Get-Process | Select-Object Name, CPU, Memory
+(Get-Process chrome).Count
+Get-Process | Sort-Object CPU -Descending | Select-Object -First 10
+```
+
+---
+
+## Service Management
+
+### 73. Get Services
+```powershell
+Get-Service
+Get-Service -Name wuauserv
+Get-Service -DisplayName "Windows Update"
+Get-Service | Where-Object Status -eq 'Running'
+```
+
+### 74. Start/Stop Services
+```powershell
+Start-Service -Name wuauserv
+Stop-Service -Name wuauserv
+Restart-Service -Name wuauserv
+Suspend-Service -Name wuauserv
+Resume-Service -Name wuauserv
+```
+
+### 75. Service Properties
+```powershell
+Set-Service -Name wuauserv -StartupType Automatic
+Set-Service -Name wuauserv -StartupType Manual
+Set-Service -Name wuauserv -StartupType Disabled
+```
+
+### 76. New Service
+```powershell
+New-Service -Name "MyService" -BinaryPathName "C:\Path\service.exe"
+```
+
+---
+
+## Network Operations
+
+### 77. Test Connection
+```powershell
+Test-Connection google.com
+Test-Connection -ComputerName 192.168.1.1 -Count 4
+Test-Connection google.com -Quiet         # Returns $true/$false
+```
+
+### 78. Web Requests
+```powershell
+Invoke-WebRequest https://api.example.com
+Invoke-RestMethod https://api.example.com/data
+(Invoke-WebRequest https://example.com).Content
+```
+
+### 79. Download Files
+```powershell
+Invoke-WebRequest -Uri "https://example.com/file.zip" -OutFile "file.zip"
+Start-BitsTransfer -Source "https://example.com/file.zip" -Destination "file.zip"
+```
+
+### 80. DNS Lookup
+```powershell
+Resolve-DnsName google.com
+Resolve-DnsName -Name google.com -Type A
+Resolve-DnsName -Name google.com -Type MX
+```
+
+### 81. Network Adapter Information
+```powershell
+Get-NetAdapter
+Get-NetIPAddress
+Get-NetIPConfiguration
+Get-NetRoute
+```
+
+### 82. Port Testing
+```powershell
+Test-NetConnection google.com -Port 443
+Test-NetConnection -ComputerName server -Port 3389
+(Test-NetConnection google.com -Port 443).TcpTestSucceeded
+```
+
+### 83. Network Statistics
+```powershell
+Get-NetTCPConnection
+Get-NetTCPConnection -State Established
+Get-NetTCPConnection -LocalPort 80
+```
+
+---
+
+## File System Operations
+
+### 84. Get Drives
+```powershell
+Get-PSDrive
+Get-PSDrive -PSProvider FileSystem
+Get-Volume
+```
+
+### 85. Disk Information
+```powershell
+Get-Disk
+Get-Partition
+Get-Volume
+Get-PhysicalDisk
+```
+
+### 86. Calculate Folder Size
+```powershell
+(Get-ChildItem C:\Folder -Recurse | Measure-Object -Property Length -Sum).Sum / 1GB
+```
+
+### 87. Find Large Files
+```powershell
+Get-ChildItem -Recurse | Where-Object {$_.Length -gt 100MB} | 
+    Sort-Object Length -Descending
+```
+
+### 88. File Permissions (ACL)
+```powershell
+Get-Acl C:\Folder
+$acl = Get-Acl C:\Folder
+$permission = "DOMAIN\User","FullControl","Allow"
+$rule = New-Object System.Security.AccessControl.FileSystemAccessRule $permission
+$acl.SetAccessRule($rule)
+Set-Acl C:\Folder $acl
+```
+
+---
+
+## Registry Operations
+
+### 89. Read Registry
+```powershell
+Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion"
+Get-ItemPropertyValue -Path "HKCU:\Software\MyApp" -Name "Setting"
+```
+
+### 90. Write Registry
+```powershell
+New-Item -Path "HKCU:\Software\MyApp"
+New-ItemProperty -Path "HKCU:\Software\MyApp" -Name "Setting" -Value "Value"
+Set-ItemProperty -Path "HKCU:\Software\MyApp" -Name "Setting" -Value "NewValue"
+```
+
+### 91. Delete Registry
+```powershell
+Remove-ItemProperty -Path "HKCU:\Software\MyApp" -Name "Setting"
+Remove-Item -Path "HKCU:\Software\MyApp" -Recurse
+```
+
+---
+
+## Event Log Management
+
+### 92. Get Event Logs
+```powershell
+Get-EventLog -LogName System -Newest 10
+Get-EventLog -LogName Application -EntryType Error
+Get-EventLog -LogName Security -After (Get-Date).AddDays(-1)
+```
+
+### 93. Get WinEvent (Advanced)
+```powershell
+Get-WinEvent -LogName Application
+Get-WinEvent -FilterHashtable @{
+    LogName='System'
+    Level=2
+    StartTime=(Get-Date).AddDays(-7)
+}
+```
+
+### 94. Write Event Log
+```powershell
+Write-EventLog -LogName Application -Source "MyApp" -EventID 1000 -Message "Test"
+```
+
+### 95. Export Event Log
+```powershell
+Get-EventLog -LogName System | Export-Csv events.csv
+Get-WinEvent -LogName System | ConvertTo-Json | Out-File events.json
+```
+
+---
+
+## Error Handling
+
+### 96. Try-Catch-Finally
+```powershell
+try {
+    Get-Content NonExistentFile.txt
+} catch {
+    Write-Error "An error occurred: $_"
+} finally {
+    Write-Host "Cleanup"
+}
+```
+
+### 97. Try-Catch with Specific Exceptions
+```powershell
+try {
+    1/0
+} catch [System.DivideByZeroException] {
+    Write-Error "Cannot divide by zero"
+} catch {
+    Write-Error "Unknown error: $_"
+}
+```
+
+### 98. Error Preferences
+```powershell
+$ErrorActionPreference = "Stop"          # Stop on error
+$ErrorActionPreference = "Continue"      # Continue on error (default)
+$ErrorActionPreference = "SilentlyContinue"  # Suppress errors
+Get-Process NonExistent -ErrorAction SilentlyContinue
+```
+
+### 99. Throw Errors
+```powershell
+throw "Custom error message"
+throw New-Object System.ArgumentException("Invalid argument")
+```
+
+### 100. Error Variable
+```powershell
+Get-Process NonExistent -ErrorVariable MyError -ErrorAction SilentlyContinue
+$MyError
+$Error[0]                               # Last error
+$Error.Clear()                          # Clear error history
+```
+
+---
+
+## Modules & Snap-ins
+
+### 101. Get Modules
+```powershell
+Get-Module
+Get-Module -ListAvailable
+Get-Module -Name ActiveDirectory
+```
+
+### 102. Import Module
+```powershell
+Import-Module ActiveDirectory
+Import-Module -Name MyModule -Force
+```
+
+### 103. Remove Module
+```powershell
+Remove-Module ActiveDirectory
+```
+
+### 104. Find Modules (PowerShell Gallery)
+```powershell
+Find-Module -Name Az
+Find-Module -Tag Azure
+```
+
+### 105. Install Module
+```powershell
+Install-Module -Name Az -Scope CurrentUser
+Install-Module -Name Pester -Force
+Update-Module -Name Az
+```
+
+### 106. Create Module
+```powershell
+New-ModuleManifest -Path MyModule.psd1
+```
+
+---
+
+## Remote Management
+
+### 107. Enter Remote Session
+```powershell
+Enter-PSSession -ComputerName Server01
+Enter-PSSession -ComputerName Server01 -Credential (Get-Credential)
+Exit-PSSession
+```
+
+### 108. Invoke Command Remotely
+```powershell
+Invoke-Command -ComputerName Server01 -ScriptBlock { Get-Service }
+Invoke-Command -ComputerName Server01,Server02 -ScriptBlock { Get-Process }
+Invoke-Command -ComputerName Server01 -FilePath C:\Scripts\script.ps1
+```
+
+### 109. Remote Session Management
+```powershell
+$session = New-PSSession -ComputerName Server01
+Invoke-Command -Session $session -ScriptBlock { Get-Process }
+Remove-PSSession $session
+Get-PSSession
+```
+
+### 110. Enable PowerShell Remoting
+```powershell
+Enable-PSRemoting -Force
+Set-Item WSMan:\localhost\Client\TrustedHosts -Value "Server01"
+Test-WSMan Server01
+```
+
+### 111. Copy Files Remotely
+```powershell
+$session = New-PSSession -ComputerName Server01
+Copy-Item -Path C:\Local\file.txt -Destination C:\Remote\ -ToSession $session
+Copy-Item -Path C:\Remote\file.txt -Destination C:\Local\ -FromSession $session
+```
+
+---
+
+## Active Directory
+
+### 112. Get AD Users
+```powershell
+Get-ADUser -Filter *
+Get-ADUser -Identity johndoe
+Get-ADUser -Filter {Enabled -eq $true}
+Get-ADUser -Filter {Department -eq "IT"} -Properties *
+```
+
+### 113. Create AD User
+```powershell
+New-ADUser -Name "John Doe" -SamAccountName johndoe -UserPrincipalName johndoe@domain.com
+```
+
+### 114. Modify AD User
+```powershell
+Set-ADUser -Identity johndoe -Department "Engineering"
+Set-ADUser -Identity johndoe -Enabled $true
+```
+
+### 115. Remove AD User
+```powershell
+Remove-ADUser -Identity johndoe -Confirm:$false
+```
+
+### 116. Get AD Groups
+```powershell
+Get-ADGroup -Filter *
+Get-ADGroup -Identity "Domain Admins"
+Get-ADGroupMember -Identity "Domain Admins"
+```
+
+### 117. Add User to Group
+```powershell
+Add-ADGroupMember -Identity "IT Staff" -Members johndoe
+Remove-ADGroupMember -Identity "IT Staff" -Members johndoe
+```
+
+### 118. Get AD Computers
+```powershell
+Get-ADComputer -Filter *
+Get-ADComputer -Filter {OperatingSystem -like "*Server*"}
+```
+
+---
+
+## Azure PowerShell
+
+### 119. Connect to Azure
+```powershell
+Connect-AzAccount
+Connect-AzAccount -Tenant "tenant-id"
+Disconnect-AzAccount
+```
+
+### 120. Azure Subscription
+```powershell
+Get-AzSubscription
+Set-AzContext -Subscription "subscription-name"
+```
+
+### 121. Azure Resource Groups
+```powershell
+Get-AzResourceGroup
+New-AzResourceGroup -Name "MyRG" -Location "EastUS"
+Remove-AzResourceGroup -Name "MyRG"
+```
+
+### 122. Azure Virtual Machines
+```powershell
+Get-AzVM
+Get-AzVM -Name "MyVM" -ResourceGroupName "MyRG"
+Start-AzVM -Name "MyVM" -ResourceGroupName "MyRG"
+Stop-AzVM -Name "MyVM" -ResourceGroupName "MyRG"
+Restart-AzVM -Name "MyVM" -ResourceGroupName "MyRG"
+```
+
+### 123. Azure Storage
+```powershell
+Get-AzStorageAccount
+New-AzStorageAccount -Name "mystorageaccount" -ResourceGroupName "MyRG" -Location "EastUS" -SkuName Standard_LRS
+```
+
+### 124. Azure Web Apps
+```powershell
+Get-AzWebApp
+New-AzWebApp -Name "MyWebApp" -ResourceGroupName "MyRG" -Location "EastUS"
+Restart-AzWebApp -Name "MyWebApp" -ResourceGroupName "MyRG"
+```
+
+---
+
+## Docker & Container Management
+
+### 125. Docker Containers
+```powershell
+docker ps                               # List running containers
+docker ps -a                            # List all containers
+docker run -d nginx                     # Run container
+docker stop container_id
+docker start container_id
+docker rm container_id
+```
+
+### 126. Docker Images
+```powershell
+docker images
+docker pull nginx:latest
+docker rmi image_id
+docker build -t myapp .
+```
+
+### 127. Docker Volumes
+```powershell
+docker volume ls
+docker volume create myvolume
+docker volume rm myvolume
+```
+
+---
+
+## AWS PowerShell
+
+### 128. AWS Configuration
+```powershell
+Set-AWSCredential -AccessKey "key" -SecretKey "secret" -StoreAs MyProfile
+Initialize-AWSDefaultConfiguration -ProfileName MyProfile -Region us-east-1
+```
+
+### 129. EC2 Instances
+```powershell
+Get-EC2Instance
+Start-EC2Instance -InstanceId i-1234567890abcdef0
+Stop-EC2Instance -InstanceId i-1234567890abcdef0
+```
+
+### 130. S3 Operations
+```powershell
+Get-S3Bucket
+New-S3Bucket -BucketName my-bucket
+Write-S3Object -BucketName my-bucket -File file.txt
+Read-S3Object -BucketName my-bucket -Key file.txt -File downloaded.txt
+```
+
+---
+
+## Advanced Features
+
+### 131. Scheduled Tasks
+```powershell
+$action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-File C:\script.ps1"
+$trigger = New-ScheduledTaskTrigger -Daily -At 2am
+Register-ScheduledTask -TaskName "MyTask" -Action $action -Trigger $trigger
+```
+
+### 132. WMI Queries
+```powershell
+Get-WmiObject -Class Win32_OperatingSystem
+Get-WmiObject -Class Win32_ComputerSystem
+Get-WmiObject -Query "SELECT * FROM Win32_Service WHERE State='Running'"
+Get-CimInstance -ClassName Win32_OperatingSystem        # Modern alternative
+```
+
+### 133. Performance Counters
+```powershell
+Get-Counter '\Processor(_Total)\% Processor Time'
+Get-Counter '\Memory\Available MBytes'
+```
+
+### 134. Jobs (Background Tasks)
+```powershell
+Start-Job -ScriptBlock { Get-Process }
+Get-Job
+Receive-Job -Id 1
+Remove-Job -Id 1
+Wait-Job -Id 1
+```
+
+### 135. Transcription
+```powershell
+Start-Transcript -Path C:\log.txt
+# ... commands ...
+Stop-Transcript
+```
+
+### 136. Execution Policy
+```powershell
+Get-ExecutionPolicy
+Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy Bypass -Scope Process       # Current session only
+```
+
+### 137. Profile Scripts
+```powershell
+$PROFILE                                # Profile path
+Test-Path $PROFILE
+New-Item -Path $PROFILE -Type File -Force
+notepad $PROFILE
+```
+
+### 138. Code Signing
+```powershell
+$cert = Get-ChildItem Cert:\CurrentUser\My -CodeSigningCert
+Set-AuthenticodeSignature -FilePath script.ps1 -Certificate $cert
+```
+
+### 139. XML Processing
+```powershell
+[xml]$xml = Get-Content config.xml
+$xml.root.element
+$xml.SelectNodes("//node")
+```
+
+### 140. JSON Processing
+```powershell
+$json = Get-Content data.json | ConvertFrom-Json
+$json.property
+$obj | ConvertTo-Json -Depth 10
+```
+
+---
+
+## Best Practices
+
+### 141. Script Template
+```powershell
+&lt;#
+.SYNOPSIS
+    Brief description
+.DESCRIPTION
+    Detailed description
+.PARAMETER Name
+    Parameter description
+.EXAMPLE
+    Example usage
+#>
+
+[CmdletBinding()]
+param(
+    [Parameter(Mandatory=$true)]
+    [string]$Name
+)
+
+Set-StrictMode -Version Latest
+$ErrorActionPreference = "Stop"
+
+try {
+    # Main logic here
+} catch {
+    Write-Error "Error: $_"
+    exit 1
+}
+```
+
+### 142. Parameter Validation
+```powershell
+param(
+    [ValidateNotNullOrEmpty()]
+    [string]$Name,
+    
+    [ValidateRange(1,100)]
+    [int]$Age,
+    
+    [ValidateSet("Dev","Test","Prod")]
+    [string]$Environment,
+    
+    [ValidateScript({Test-Path $_})]
+    [string]$Path
+)
+```
+
+### 143. Splatting Parameters
+```powershell
+$params = @{
+    ComputerName = "Server01"
+    Credential = Get-Credential
+    ScriptBlock = { Get-Service }
+}
+Invoke-Command @params
+```
+
+### 144. Progress Bars
+```powershell
+$items = 1..100
+$i = 0
+foreach ($item in $items) {
+    $i++
+    Write-Progress -Activity "Processing" -Status "$i of $($items.Count)" -PercentComplete (($i / $items.Count) * 100)
+    Start-Sleep -Milliseconds 50
+}
+```
+
+### 145. Comment-Based Help
+```powershell
+&lt;#
+.SYNOPSIS
+    Get user information
+.DESCRIPTION
+    Retrieves detailed user information from Active Directory
+.PARAMETER UserName
+    The username to query
+.EXAMPLE
+    Get-UserInfo -UserName "johndoe"
+.NOTES
+    Author: Your Name
+    Date: 2026-02-15
+#>
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Find Large Files
+**Question**: Find all files larger than 1GB in C:\Data
+
+```powershell
+Get-ChildItem -Path C:\Data -Recurse -File | 
+    Where-Object {$_.Length -gt 1GB} | 
+    Sort-Object Length -Descending | 
+    Select-Object FullName, @{N='SizeGB';E={[math]::Round($_.Length/1GB,2)}}
+```
+
+### Scenario 2: Service Monitoring Script
+**Question**: Monitor service and restart if stopped
+
+```powershell
+$serviceName = "MyService"
+$service = Get-Service -Name $serviceName
+
+if ($service.Status -ne 'Running') {
+    Start-Service -Name $serviceName
+    Start-Sleep -Seconds 5
+    
+    $service = Get-Service -Name $serviceName
+    if ($service.Status -eq 'Running') {
+        Write-Host "Service restarted successfully"
+        Send-MailMessage -To "admin@example.com" -Subject "Service Restarted" -Body "Service $serviceName was restarted"
+    } else {
+        Write-Error "Failed to restart service"
+    }
+}
+```
+
+### Scenario 3: Bulk User Creation
+**Question**: Create multiple AD users from CSV
+
+```powershell
+$users = Import-Csv users.csv
+
+foreach ($user in $users) {
+    $params = @{
+        Name = $user.FullName
+        SamAccountName = $user.UserName
+        UserPrincipalName = "$($user.UserName)@domain.com"
+        AccountPassword = (ConvertTo-SecureString "TempPass123!" -AsPlainText -Force)
+        Enabled = $true
+        Department = $user.Department
+        Title = $user.Title
+    }
+    
+    try {
+        New-ADUser @params
+        Write-Host "Created user: $($user.UserName)" -ForegroundColor Green
+    } catch {
+        Write-Warning "Failed to create $($user.UserName): $_"
+    }
+}
+```
+
+### Scenario 4: Disk Space Report
+**Question**: Generate disk space report for all servers
+
+```powershell
+$servers = Get-Content servers.txt
+$report = foreach ($server in $servers) {
+    try {
+        Get-WmiObject Win32_LogicalDisk -ComputerName $server -Filter "DriveType=3" | 
+            Select-Object @{N='Server';E={$server}}, 
+                         DeviceID, 
+                         @{N='SizeGB';E={[math]::Round($_.Size/1GB,2)}},
+                         @{N='FreeGB';E={[math]::Round($_.FreeSpace/1GB,2)}},
+                         @{N='PercentFree';E={[math]::Round(($_.FreeSpace/$_.Size)*100,2)}}
+    } catch {
+        [PSCustomObject]@{
+            Server = $server
+            DeviceID = "N/A"
+            SizeGB = 0
+            FreeGB = 0
+            PercentFree = 0
+        }
+    }
+}
+
+$report | Export-Csv disk_report.csv -NoTypeInformation
+$report | Where-Object {$_.PercentFree -lt 20} | Format-Table -AutoSize
+```
+
+### Scenario 5: Log Cleanup Script
+**Question**: Delete log files older than 30 days
+
+```powershell
+$path = "C:\Logs"
+$days = 30
+$date = (Get-Date).AddDays(-$days)
+
+Get-ChildItem -Path $path -Recurse -Filter "*.log" | 
+    Where-Object {$_.LastWriteTime -lt $date} | 
+    ForEach-Object {
+        Write-Host "Deleting: $($_.FullName)"
+        Remove-Item $_.FullName -Force
+    }
+```
+
+### Scenario 6: Azure VM Inventory
+**Question**: List all Azure VMs with their status
+
+```powershell
+Connect-AzAccount
+
+$vms = Get-AzVM -Status
+$report = $vms | Select-Object @{N='Name';E={$_.Name}},
+                              @{N='ResourceGroup';E={$_.ResourceGroupName}},
+                              @{N='Location';E={$_.Location}},
+                              @{N='PowerState';E={($_.PowerState -split ' ')[1]}},
+                              @{N='Size';E={$_.HardwareProfile.VmSize}}
+
+$report | Export-Csv azure_vms.csv -NoTypeInformation
+$report | Format-Table -AutoSize
+```
+
+### Scenario 7: Password Expiration Report
+**Question**: Find AD users with passwords expiring in 7 days
+
+```powershell
+$daysToExpire = 7
+$maxPasswordAge = (Get-ADDefaultDomainPasswordPolicy).MaxPasswordAge.Days
+$expireDate = (Get-Date).AddDays($daysToExpire)
+
+Get-ADUser -Filter {Enabled -eq $true -and PasswordNeverExpires -eq $false} -Properties PasswordLastSet, EmailAddress | 
+    Where-Object {
+        $_.PasswordLastSet -ne $null
+    } | 
+    ForEach-Object {
+        $expiry = $_.PasswordLastSet.AddDays($maxPasswordAge)
+        if ($expiry -le $expireDate -and $expiry -gt (Get-Date)) {
+            [PSCustomObject]@{
+                UserName = $_.SamAccountName
+                Email = $_.EmailAddress
+                ExpiryDate = $expiry
+                DaysLeft = ($expiry - (Get-Date)).Days
+            }
+        }
+    } | 
+    Sort-Object DaysLeft | 
+    Export-Csv expiring_passwords.csv -NoTypeInformation
+```
+
+### Scenario 8: Website Monitoring
+**Question**: Monitor multiple websites and send alerts
+
+```powershell
+$websites = @(
+    "https://www.google.com",
+    "https://www.microsoft.com",
+    "https://www.github.com"
+)
+
+foreach ($site in $websites) {
+    try {
+        $response = Invoke-WebRequest -Uri $site -TimeoutSec 10 -UseBasicParsing
+        if ($response.StatusCode -eq 200) {
+            Write-Host "$site is UP (Status: $($response.StatusCode))" -ForegroundColor Green
+        } else {
+            Write-Warning "$site returned status: $($response.StatusCode)"
+        }
+    } catch {
+        Write-Error "$site is DOWN - Error: $_"
+        # Send alert email
+        Send-MailMessage -To "admin@example.com" -Subject "Website Down: $site" -Body "Error: $_"
+    }
+}
+```
+
+### Scenario 9: Certificate Expiration Check
+**Question**: Check SSL certificate expiration
+
+```powershell
+function Test-CertificateExpiration {
+    param([string]$URL)
+    
+    try {
+        $req = [Net.HttpWebRequest]::Create($URL)
+        $req.GetResponse() | Out-Null
+        $cert = $req.ServicePoint.Certificate
+        $expiry = [DateTime]::Parse($cert.GetExpirationDateString())
+        $daysLeft = ($expiry - (Get-Date)).Days
+        
+        [PSCustomObject]@{
+            URL = $URL
+            Expiry = $expiry
+            DaysLeft = $daysLeft
+            Status = if ($daysLeft -lt 30) { "WARNING" } else { "OK" }
+        }
+    } catch {
+        [PSCustomObject]@{
+            URL = $URL
+            Expiry = "N/A"
+            DaysLeft = 0
+            Status = "ERROR"
+        }
+    }
+}
+
+$sites = @("https://google.com", "https://microsoft.com")
+$sites | ForEach-Object { Test-CertificateExpiration $_ } | Format-Table -AutoSize
+```
+
+### Scenario 10: Automated Backup Script
+**Question**: Backup files with retention policy
+
+```powershell
+param(
+    [string]$SourcePath = "C:\Data",
+    [string]$BackupPath = "D:\Backups",
+    [int]$RetentionDays = 7
+)
+
+$timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
+$backupFolder = Join-Path $BackupPath "Backup_$timestamp"
+
+try {
+    # Create backup
+    Write-Host "Starting backup..."
+    Copy-Item -Path $SourcePath -Destination $backupFolder -Recurse
+    
+    # Compress backup
+    $zipFile = "$backupFolder.zip"
+    Compress-Archive -Path $backupFolder -DestinationPath $zipFile
+    Remove-Item -Path $backupFolder -Recurse -Force
+    
+    Write-Host "Backup completed: $zipFile" -ForegroundColor Green
+    
+    # Cleanup old backups
+    $cutoffDate = (Get-Date).AddDays(-$RetentionDays)
+    Get-ChildItem -Path $BackupPath -Filter "Backup_*.zip" | 
+        Where-Object {$_.LastWriteTime -lt $cutoffDate} | 
+        ForEach-Object {
+            Write-Host "Removing old backup: $($_.Name)"
+            Remove-Item $_.FullName -Force
+        }
+        
+} catch {
+    Write-Error "Backup failed: $_"
+    exit 1
+}
+```
+
+---
+
+## PowerShell Core (Cross-Platform)
+
+### 146. Linux Commands on PowerShell Core
+```powershell
+# PowerShell 7+ on Linux/Mac
+Get-Process
+Get-ChildItem /var/log
+sudo pwsh                           # Run as root
+```
+
+### 147. SSH from PowerShell
+```powershell
+ssh user@server
+ssh -i keyfile.pem user@server
+```
+
+---
+
+## Quick Reference
+
+### Comparison Operators
+```
+-eq     Equal
+-ne     Not equal
+-gt     Greater than
+-ge     Greater than or equal
+-lt     Less than
+-le     Less than or equal
+-like   Wildcard comparison
+-match  Regex match
+-contains  Array contains value
+-in     Value in array
+```
+
+### Common Aliases
+```
+ls      Get-ChildItem
+cd      Set-Location
+pwd     Get-Location
+cat     Get-Content
+cp      Copy-Item
+mv      Move-Item
+rm      Remove-Item
+mkdir   New-Item -ItemType Directory
+```
+
+### Exit Codes
+```
+0       Success
+1-255   Error codes
+$LASTEXITCODE to check last exit code
+```
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview
+**Last Updated**: February 15, 2026

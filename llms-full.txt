@@ -4,7 +4,7 @@
 
 ## Repository Overview
 
-Zero to AI is a comprehensive, self-paced learning path designed to teach you how to build AI systems. It covers machine learning, deep learning, NLP, computer vision, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, MLOps, model evaluation, fine-tuning, and advanced research topics. It is organized into 31 progressive phases.
+Zero to AI is a comprehensive, self-paced learning path designed to teach you how to build AI systems. It covers machine learning, deep learning, NLP, computer vision, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, MLOps, model evaluation, fine-tuning, and advanced research topics. It is organized into 33 progressive phases.
 
 The curriculum is organized into three tracks:
 - **AI Engineer Track** (4-6 months): Embeddings, RAG, prompt engineering, agents, deployment
@@ -113,6 +113,9 @@ KV cache, PagedAttention, vLLM, TensorRT-LLM, quantization (AWQ, GPTQ, INT4/INT8
 
 ### Phase 31 - AI-Powered Dev Tools
 VS Code AI setup, MCP deep dive, custom instructions, AI coding tool comparison (Copilot, Cursor, Windsurf, Aider).
+
+### Phase 32 - Cheatsheets
+Quick references for common AI/ML, Cloud, and DevOps tasks.
 
 ## Frequently Asked Questions
 

@@ -1,0 +1,1097 @@
+# AWS CLI Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [AWS CLI Setup](#aws-cli-setup)
+2. [IAM](#iam)
+3. [EC2](#ec2)
+4. [S3](#s3)
+5. [EBS & Snapshots](#ebs--snapshots)
+6. [VPC](#vpc)
+7. [ELB & ALB](#elb--alb)
+8. [Auto Scaling](#auto-scaling)
+9. [RDS](#rds)
+10. [Lambda](#lambda)
+11. [ECS & ECR](#ecs--ecr)
+12. [EKS](#eks)
+13. [CloudWatch](#cloudwatch)
+14. [CloudFormation](#cloudformation)
+15. [Systems Manager](#systems-manager)
+16. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## AWS CLI Setup
+
+### 1. Install AWS CLI
+```bash
+# Linux
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+# macOS
+brew install awscli
+
+# Verify
+aws --version
+```
+
+### 2. Configure CLI
+```bash
+aws configure
+# AWS Access Key ID: YOUR_KEY
+# AWS Secret Access Key: YOUR_SECRET
+# Default region: us-east-1
+# Default output: json
+
+# Named profiles
+aws configure --profile production
+aws --profile production s3 ls
+
+# List configurations
+aws configure list
+cat ~/.aws/credentials
+cat ~/.aws/config
+```
+
+### 3. Set Region & Output
+```bash
+export AWS_DEFAULT_REGION=us-east-1
+export AWS_PROFILE=production
+export AWS_DEFAULT_OUTPUT=json  # or table, text, yaml
+```
+
+---
+
+## IAM
+
+### 4. Users
+```bash
+# List users
+aws iam list-users
+
+# Create user
+aws iam create-user --user-name john
+
+# Delete user
+aws iam delete-user --user-name john
+
+# Add user to group
+aws iam add-user-to-group --user-name john --group-name developers
+```
+
+### 5. Groups
+```bash
+# List groups
+aws iam list-groups
+
+# Create group
+aws iam create-group --group-name developers
+
+# Delete group
+aws iam delete-group --group-name developers
+```
+
+### 6. Roles
+```bash
+# List roles
+aws iam list-roles
+
+# Create role
+aws iam create-role --role-name MyRole --assume-role-policy-document file://trust-policy.json
+
+# Attach policy to role
+aws iam attach-role-policy --role-name MyRole --policy-arn arn:aws:iam::aws:policy/ReadOnlyAccess
+
+# Delete role
+aws iam delete-role --role-name MyRole
+```
+
+### 7. Policies
+```bash
+# List policies
+aws iam list-policies --scope Local
+
+# Create policy
+aws iam create-policy --policy-name MyPolicy --policy-document file://policy.json
+
+# Attach policy to user
+aws iam attach-user-policy --user-name john --policy-arn arn:aws:iam::123456:policy/MyPolicy
+
+# Get policy version
+aws iam get-policy-version --policy-arn arn --version-id v1
+```
+
+### 8. Access Keys
+```bash
+# Create access key
+aws iam create-access-key --user-name john
+
+# List access keys
+aws iam list-access-keys --user-name john
+
+# Delete access key
+aws iam delete-access-key --user-name john --access-key-id AKIAEXAMPLE
+```
+
+---
+
+## EC2
+
+### 9. List Instances
+```bash
+# All instances
+aws ec2 describe-instances
+
+# Running instances only
+aws ec2 describe-instances --filters "Name=instance-state-name,Values=running"
+
+# Specific instance
+aws ec2 describe-instances --instance-ids i-1234567890abcdef0
+
+# Output specific fields
+aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId,State.Name,InstanceType]' --output table
+```
+
+### 10. Start/Stop Instances
+```bash
+# Start instance
+aws ec2 start-instances --instance-ids i-1234567890abcdef0
+
+# Stop instance
+aws ec2 stop-instances --instance-ids i-1234567890abcdef0
+
+# Reboot instance
+aws ec2 reboot-instances --instance-ids i-1234567890abcdef0
+
+# Terminate instance
+aws ec2 terminate-instances --instance-ids i-1234567890abcdef0
+```
+
+### 11. Launch Instance
+```bash
+aws ec2 run-instances \
+  --image-id ami-0c55b159cbfafe1f0 \
+  --instance-type t2.micro \
+  --key-name MyKeyPair \
+  --security-group-ids sg-12345678 \
+  --subnet-id subnet-12345678 \
+  --count 1 \
+  --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=MyServer}]'
+```
+
+### 12. Key Pairs
+```bash
+# Create key pair
+aws ec2 create-key-pair --key-name MyKeyPair --query 'KeyMaterial' --output text > MyKeyPair.pem
+chmod 400 MyKeyPair.pem
+
+# List key pairs
+aws ec2 describe-key-pairs
+
+# Delete key pair
+aws ec2 delete-key-pair --key-name MyKeyPair
+```
+
+### 13. Security Groups
+```bash
+# List security groups
+aws ec2 describe-security-groups
+
+# Create security group
+aws ec2 create-security-group --group-name MySecurityGroup --description "My security group" --vpc-id vpc-12345678
+
+# Add ingress rule
+aws ec2 authorize-security-group-ingress --group-id sg-12345678 --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+# Add egress rule
+aws ec2 authorize-security-group-egress --group-id sg-12345678 --protocol tcp --port 443 --cidr 0.0.0.0/0
+
+# Revoke rule
+aws ec2 revoke-security-group-ingress --group-id sg-12345678 --protocol tcp --port 22 --cidr 0.0.0.0/0
+
+# Delete security group
+aws ec2 delete-security-group --group-id sg-12345678
+```
+
+### 14. AMIs
+```bash
+# List AMIs
+aws ec2 describe-images --owners self
+
+# Create AMI from instance
+aws ec2 create-image --instance-id i-1234567890abcdef0 --name "My AMI" --description "My AMI description"
+
+# Copy AMI to another region
+aws ec2 copy-image --source-region us-east-1 --source-image-id ami-12345678 --name "Copied AMI" --region us-west-2
+
+# Deregister AMI
+aws ec2 deregister-image --image-id ami-12345678
+```
+
+---
+
+## S3
+
+### 15. List Buckets
+```bash
+# List all buckets
+aws s3 ls
+
+# List bucket contents
+aws s3 ls s3://mybucket/
+aws s3 ls s3://mybucket/path/ --recursive
+aws s3 ls s3://mybucket/ --human-readable --summarize
+```
+
+### 16. Create/Delete Buckets
+```bash
+# Create bucket
+aws s3 mb s3://mybucket
+
+# Delete empty bucket
+aws s3 rb s3://mybucket
+
+# Delete bucket and all contents
+aws s3 rb s3://mybucket --force
+```
+
+### 17. Upload/Download Files
+```bash
+# Upload file
+aws s3 cp file.txt s3://mybucket/
+aws s3 cp file.txt s3://mybucket/path/file.txt
+
+# Download file
+aws s3 cp s3://mybucket/file.txt file.txt
+
+# Upload directory
+aws s3 cp localdir/ s3://mybucket/path/ --recursive
+
+# Download directory
+aws s3 cp s3://mybucket/path/ localdir/ --recursive
+```
+
+### 18. Sync Files
+```bash
+# Sync local to S3
+aws s3 sync localdir/ s3://mybucket/path/
+
+# Sync S3 to local
+aws s3 sync s3://mybucket/path/ localdir/
+
+# Sync with delete
+aws s3 sync localdir/ s3://mybucket/ --delete
+
+# Exclude/include patterns
+aws s3 sync localdir/ s3://mybucket/ --exclude "*.tmp" --include "*.txt"
+```
+
+### 19. S3 Permissions
+```bash
+# Make object public
+aws s3api put-object-acl --bucket mybucket --key file.txt --acl public-read
+
+# Set bucket policy
+aws s3api put-bucket-policy --bucket mybucket --policy file://policy.json
+
+# Get bucket policy
+aws s3api get-bucket-policy --bucket mybucket
+
+# Enable versioning
+aws s3api put-bucket-versioning --bucket mybucket --versioning-configuration Status=Enabled
+
+# Enable encryption
+aws s3api put-bucket-encryption --bucket mybucket --server-side-encryption-configuration '{
+  "Rules": [{
+    "ApplyServerSideEncryptionByDefault": {
+      "SSEAlgorithm": "AES256"
+    }
+  }]
+}'
+```
+
+### 20. S3 Lifecycle
+```bash
+# Put lifecycle configuration
+aws s3api put-bucket-lifecycle-configuration --bucket mybucket --lifecycle-configuration file://lifecycle.json
+
+# Get lifecycle configuration
+aws s3api get-bucket-lifecycle-configuration --bucket mybucket
+```
+
+---
+
+## EBS & Snapshots
+
+### 21. List Volumes
+```bash
+# List all volumes
+aws ec2 describe-volumes
+
+# Specific volume
+aws ec2 describe-volumes --volume-ids vol-12345678
+
+# Filter by state
+aws ec2 describe-volumes --filters "Name=status,Values=available"
+```
+
+### 22. Create/Attach/Detach Volumes
+```bash
+# Create volume
+aws ec2 create-volume --size 100 --availability-zone us-east-1a --volume-type gp3
+
+# Attach volume
+aws ec2 attach-volume --volume-id vol-12345678 --instance-id i-12345678 --device /dev/sdf
+
+# Detach volume
+aws ec2 detach-volume --volume-id vol-12345678
+
+# Delete volume
+aws ec2 delete-volume --volume-id vol-12345678
+```
+
+### 23. Snapshots
+```bash
+# Create snapshot
+aws ec2 create-snapshot --volume-id vol-12345678 --description "My snapshot"
+
+# List snapshots
+aws ec2 describe-snapshots --owner-ids self
+
+# Copy snapshot to another region
+aws ec2 copy-snapshot --source-region us-east-1 --source-snapshot-id snap-12345678 --destination-region us-west-2
+
+# Delete snapshot
+aws ec2 delete-snapshot --snapshot-id snap-12345678
+
+# Create volume from snapshot
+aws ec2 create-volume --snapshot-id snap-12345678 --availability-zone us-east-1a
+```
+
+---
+
+## VPC
+
+### 24. VPC Operations
+```bash
+# List VPCs
+aws ec2 describe-vpcs
+
+# Create VPC
+aws ec2 create-vpc --cidr-block 10.0.0.0/16
+
+# Delete VPC
+aws ec2 delete-vpc --vpc-id vpc-12345678
+
+# Enable DNS hostnames
+aws ec2 modify-vpc-attribute --vpc-id vpc-12345678 --enable-dns-hostnames
+```
+
+### 25. Subnets
+```bash
+# List subnets
+aws ec2 describe-subnets
+
+# Create subnet
+aws ec2 create-subnet --vpc-id vpc-12345678 --cidr-block 10.0.1.0/24 --availability-zone us-east-1a
+
+# Delete subnet
+aws ec2 delete-subnet --subnet-id subnet-12345678
+```
+
+### 26. Internet Gateway
+```bash
+# Create IGW
+aws ec2 create-internet-gateway
+
+# Attach IGW to VPC
+aws ec2 attach-internet-gateway --internet-gateway-id igw-12345678 --vpc-id vpc-12345678
+
+# Detach IGW
+aws ec2 detach-internet-gateway --internet-gateway-id igw-12345678 --vpc-id vpc-12345678
+
+# Delete IGW
+aws ec2 delete-internet-gateway --internet-gateway-id igw-12345678
+```
+
+### 27. Route Tables
+```bash
+# List route tables
+aws ec2 describe-route-tables
+
+# Create route table
+aws ec2 create-route-table --vpc-id vpc-12345678
+
+# Create route
+aws ec2 create-route --route-table-id rtb-12345678 --destination-cidr-block 0.0.0.0/0 --gateway-id igw-12345678
+
+# Associate route table with subnet
+aws ec2 associate-route-table --route-table-id rtb-12345678 --subnet-id subnet-12345678
+
+# Delete route table
+aws ec2 delete-route-table --route-table-id rtb-12345678
+```
+
+### 28. NAT Gateway
+```bash
+# Create NAT gateway
+aws ec2 create-nat-gateway --subnet-id subnet-12345678 --allocation-id eipalloc-12345678
+
+# Delete NAT gateway
+aws ec2 delete-nat-gateway --nat-gateway-id nat-12345678
+```
+
+---
+
+## ELB & ALB
+
+### 29. Load Balancers
+```bash
+# List load balancers (v2 - ALB/NLB)
+aws elbv2 describe-load-balancers
+
+# Create application load balancer
+aws elbv2 create-load-balancer \
+  --name my-alb \
+  --subnets subnet-12345678 subnet-87654321 \
+  --security-groups sg-12345678
+
+# Delete load balancer
+aws elbv2 delete-load-balancer --load-balancer-arn arn:aws:...
+
+# List classic load balancers
+aws elb describe-load-balancers
+```
+
+### 30. Target Groups
+```bash
+# Create target group
+aws elbv2 create-target-group \
+  --name my-targets \
+  --protocol HTTP \
+  --port 80 \
+  --vpc-id vpc-12345678
+
+# Register targets
+aws elbv2 register-targets --target-group-arn arn:aws:... --targets Id=i-12345678 Id=i-87654321
+
+# Deregister targets
+aws elbv2 deregister-targets --target-group-arn arn:aws:... --targets Id=i-12345678
+
+# Check target health
+aws elbv2 describe-target-health --target-group-arn arn:aws:...
+```
+
+### 31. Listeners
+```bash
+# Create listener
+aws elbv2 create-listener \
+  --load-balancer-arn arn:aws:... \
+  --protocol HTTP \
+  --port 80 \
+  --default-actions Type=forward,TargetGroupArn=arn:aws:...
+
+# Delete listener
+aws elbv2 delete-listener --listener-arn arn:aws:...
+```
+
+---
+
+## Auto Scaling
+
+### 32. Launch Templates
+```bash
+# Create launch template
+aws ec2 create-launch-template \
+  --launch-template-name my-template \
+  --version-description v1 \
+  --launch-template-data file://template-data.json
+
+# List launch templates
+aws ec2 describe-launch-templates
+
+# Delete launch template
+aws ec2 delete-launch-template --launch-template-id lt-12345678
+```
+
+### 33. Auto Scaling Groups
+```bash
+# Create auto scaling group
+aws autoscaling create-auto-scaling-group \
+  --auto-scaling-group-name my-asg \
+  --launch-template LaunchTemplateId=lt-12345678 \
+  --min-size 2 \
+  --max-size 10 \
+  --desired-capacity 4 \
+  --vpc-zone-identifier "subnet-12345678,subnet-87654321"
+
+# Update auto scaling group
+aws autoscaling update-auto-scaling-group \
+  --auto-scaling-group-name my-asg \
+  --min-size 3 \
+  --desired-capacity 5
+
+# Delete auto scaling group
+aws autoscaling delete-auto-scaling-group --auto-scaling-group-name my-asg --force-delete
+
+# List auto scaling groups
+aws autoscaling describe-auto-scaling-groups
+```
+
+### 34. Scaling Policies
+```bash
+# Create target tracking policy
+aws autoscaling put-scaling-policy \
+  --auto-scaling-group-name my-asg \
+  --policy-name cpu-target-tracking \
+  --policy-type TargetTrackingScaling \
+  --target-tracking-configuration file://config.json
+
+# Delete scaling policy
+aws autoscaling delete-policy --auto-scaling-group-name my-asg --policy-name my-policy
+```
+
+---
+
+## RDS
+
+### 35. DB Instances
+```bash
+# List db instances
+aws rds describe-db-instances
+
+# Create db instance
+aws rds create-db-instance \
+  --db-instance-identifier mydb \
+  --db-instance-class db.t3.micro \
+  --engine mysql \
+  --master-username admin \
+  --master-user-password MyPass123 \
+  --allocated-storage 20
+
+# Delete db instance
+aws rds delete-db-instance --db-instance-identifier mydb --skip-final-snapshot
+
+# Create final snapshot before delete
+aws rds delete-db-instance --db-instance-identifier mydb --final-db-snapshot-identifier mydb-final-snapshot
+```
+
+### 36. DB Snapshots
+```bash
+# Create snapshot
+aws rds create-db-snapshot --db-instance-identifier mydb --db-snapshot-identifier mydb-snapshot
+
+# List snapshots
+aws rds describe-db-snapshots
+
+# Restore from snapshot
+aws rds restore-db-instance-from-db-snapshot \
+  --db-instance-identifier mydb-restored \
+  --db-snapshot-identifier mydb-snapshot
+
+# Delete snapshot
+aws rds delete-db-snapshot --db-snapshot-identifier mydb-snapshot
+```
+
+---
+
+## Lambda
+
+### 37. Functions
+```bash
+# List functions
+aws lambda list-functions
+
+# Create function
+aws lambda create-function \
+  --function-name my-function \
+  --runtime python3.9 \
+  --handler lambda_function.lambda_handler \
+  --role arn:aws:iam::123456:role/lambda-role \
+  --zip-file fileb://function.zip
+
+# Update function code
+aws lambda update-function-code --function-name my-function --zip-file fileb://function.zip
+
+# Invoke function
+aws lambda invoke --function-name my-function output.txt
+
+# Delete function
+aws lambda delete-function --function-name my-function
+```
+
+### 38. Function Configuration
+```bash
+# Update environment variables
+aws lambda update-function-configuration \
+  --function-name my-function \
+  --environment Variables={KEY1=value1,KEY2=value2}
+
+# Update timeout
+aws lambda update-function-configuration --function-name my-function --timeout 30
+
+# Update memory
+aws lambda update-function-configuration --function-name my-function --memory-size 512
+```
+
+---
+
+## ECS & ECR
+
+### 39. ECR Repositories
+```bash
+# Create repository
+aws ecr create-repository --repository-name my-app
+
+# List repositories
+aws ecr describe-repositories
+
+# Get login password
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 123456.dkr.ecr.us-east-1.amazonaws.com
+
+# Push image
+docker tag my-app:latest 123456.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
+docker push 123456.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
+
+# Delete repository
+aws ecr delete-repository --repository-name my-app --force
+```
+
+### 40. ECS Clusters
+```bash
+# Create cluster
+aws ecs create-cluster --cluster-name my-cluster
+
+# List clusters
+aws ecs list-clusters
+
+# Delete cluster
+aws ecs delete-cluster --cluster my-cluster
+```
+
+### 41. ECS Services & Tasks
+```bash
+# Register task definition
+aws ecs register-task-definition --cli-input-json file://task-definition.json
+
+# Create service
+aws ecs create-service \
+  --cluster my-cluster \
+  --service-name my-service \
+  --task-definition my-task:1 \
+  --desired-count 2
+
+# Update service
+aws ecs update-service --cluster my-cluster --service my-service --desired-count 4
+
+# List services
+aws ecs list-services --cluster my-cluster
+
+# Delete service
+aws ecs delete-service --cluster my-cluster --service my-service --force
+```
+
+---
+
+## EKS
+
+### 42. EKS Clusters
+```bash
+# Create cluster
+aws eks create-cluster \
+  --name my-cluster \
+  --role-arn arn:aws:iam::123456:role/eks-cluster-role \
+  --resources-vpc-config subnetIds=subnet-12345,subnet-67890,securityGroupIds=sg-12345
+
+# List clusters
+aws eks list-clusters
+
+# Describe cluster
+aws eks describe-cluster --name my-cluster
+
+# Update kubeconfig
+aws eks update-kubeconfig --name my-cluster --region us-east-1
+
+# Delete cluster
+aws eks delete-cluster --name my-cluster
+```
+
+### 43. Node Groups
+```bash
+# Create node group
+aws eks create-nodegroup \
+  --cluster-name my-cluster \
+  --nodegroup-name my-nodes \
+  --subnets subnet-12345 subnet-67890 \
+  --instance-types t3.medium \
+  --scaling-config minSize=2,maxSize=4,desiredSize=2 \
+  --node-role arn:aws:iam::123456:role/eks-node-role
+
+# List node groups
+aws eks list-nodegroups --cluster-name my-cluster
+
+# Delete node group
+aws eks delete-nodegroup --cluster-name my-cluster --nodegroup-name my-nodes
+```
+
+---
+
+## CloudWatch
+
+### 44. Logs
+```bash
+# List log groups
+aws logs describe-log-groups
+
+# Create log group
+aws logs create-log-group --log-group-name /aws/lambda/my-function
+
+# Delete log group
+aws logs delete-log-group --log-group-name /aws/lambda/my-function
+
+# Filter log events
+aws logs filter-log-events --log-group-name /aws/lambda/my-function --filter-pattern "ERROR"
+
+# Get log events
+aws logs get-log-events --log-group-name /aws/lambda/my-function --log-stream-name 2024/01/01/stream
+```
+
+### 45. Metrics & Alarms
+```bash
+# List metrics
+aws cloudwatch list-metrics --namespace AWS/EC2
+
+# Put metric data
+aws cloudwatch put-metric-data --namespace MyApp --metric-name Requests --value 100
+
+# Create alarm
+aws cloudwatch put-metric-alarm \
+  --alarm-name high-cpu \
+  --alarm-description "Alarm when CPU exceeds 80%" \
+  --metric-name CPUUtilization \
+  --namespace AWS/EC2 \
+  --statistic Average \
+  --period 300 \
+  --threshold 80 \
+  --comparison-operator GreaterThanThreshold \
+  --evaluation-periods 2
+
+# List alarms
+aws cloudwatch describe-alarms
+
+# Delete alarm
+aws cloudwatch delete-alarms --alarm-names high-cpu
+```
+
+---
+
+## CloudFormation
+
+### 46. Stacks
+```bash
+# Create stack
+aws cloudformation create-stack --stack-name my-stack --template-body file://template.yaml --parameters file://params.json
+
+# Update stack
+aws cloudformation update-stack --stack-name my-stack --template-body file://template.yaml
+
+# Delete stack
+aws cloudformation delete-stack --stack-name my-stack
+
+# List stacks
+aws cloudformation list-stacks --stack-status-filter CREATE_COMPLETE
+
+# Describe stack
+aws cloudformation describe-stacks --stack-name my-stack
+
+# Get stack events
+aws cloudformation describe-stack-events --stack-name my-stack
+```
+
+### 47. Stack Resources
+```bash
+# List stack resources
+aws cloudformation list-stack-resources --stack-name my-stack
+
+# Describe stack resource
+aws cloudformation describe-stack-resource --stack-name my-stack --logical-resource-id MyEC2Instance
+```
+
+---
+
+## Systems Manager
+
+### 48. Parameter Store
+```bash
+# Put parameter
+aws ssm put-parameter --name /myapp/db/password --value "secret123" --type SecureString
+
+# Get parameter
+aws ssm get-parameter --name /myapp/db/password --with-decryption
+
+# List parameters
+aws ssm describe-parameters
+
+# Delete parameter
+aws ssm delete-parameter --name /myapp/db/password
+```
+
+### 49. Session Manager
+```bash
+# Start session
+aws ssm start-session --target i-1234567890abcdef0
+
+# Send command
+aws ssm send-command \
+  --document-name "AWS-RunShellScript" \
+  --targets "Key=instanceids,Values=i-1234567890abcdef0" \
+  --parameters 'commands=["uptime","df -h"]'
+
+# Get command invocation
+aws ssm get-command-invocation --command-id cmd-12345 --instance-id i-12345
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Launch Web Server
+**Question**: Launch EC2 instance with web server accessible on port 80.
+
+```bash
+# Create security group
+SG_ID=$(aws ec2 create-security-group \
+  --group-name web-sg \
+  --description "Web server security group" \
+  --vpc-id vpc-12345 \
+  --query 'GroupId' --output text)
+
+# Add rules
+aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 80 --cidr 0.0.0.0/0
+aws ec2 authorize-security-group-ingress --group-id $SG_ID --protocol tcp --port 22 --cidr YOUR_IP/32
+
+# Launch instance with user data
+aws ec2 run-instances \
+  --image-id ami-0c55b159cbfafe1f0 \
+  --instance-type t2.micro \
+  --key-name MyKey \
+  --security-group-ids $SG_ID \
+  --user-data '#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Hello from AWS</h1>" > /var/www/html/index.html'
+```
+
+### Scenario 2: Sync Logs to S3
+**Question**: Automatically sync application logs to S3 every hour.
+
+```bash
+# Create S3 bucket
+aws s3 mb s3://my-app-logs-bucket
+
+# Create IAM role for EC2
+# Add policy to allow S3 upload
+
+# Install AWS CLI on EC2 instance
+# Create cron job
+crontab -e
+# Add:
+0 * * * * aws s3 sync /var/log/myapp/ s3://my-app-logs-bucket/$(hostname)/$(date +\%Y-\%m-\%d)/ --delete
+
+# Or use lifecycle policy to expire old logs
+cat > lifecycle.json &lt;&lt; 'EOF'
+{
+  "Rules": [{
+    "Id": "DeleteOldLogs",
+    "Status": "Enabled",
+    "Prefix": "",
+    "Expiration": {
+      "Days": 30
+    }
+  }]
+}
+EOF
+
+aws s3api put-bucket-lifecycle-configuration --bucket my-app-logs-bucket --lifecycle-configuration file://lifecycle.json
+```
+
+### Scenario 3: Auto Scaling Based on CPU
+**Question**: Set up auto scaling that adds instances when CPU > 70%.
+
+```bash
+# Create launch template
+aws ec2 create-launch-template \
+  --launch-template-name web-template \
+  --version-description v1 \
+  --launch-template-data '{
+    "ImageId": "ami-0c55b159cbfafe1f0",
+    "InstanceType": "t2.micro",
+    "KeyName": "MyKey",
+    "SecurityGroupIds": ["sg-12345"]
+  }'
+
+# Create auto scaling group
+aws autoscaling create-auto-scaling-group \
+  --auto-scaling-group-name web-asg \
+  --launch-template LaunchTemplateName=web-template \
+  --min-size 2 \
+  --max-size 6 \
+  --desired-capacity 2 \
+  --target-group-arns arn:aws:elasticloadbalancing:... \
+  --vpc-zone-identifier "subnet-123,subnet-456"
+
+# Create scaling policy
+aws autoscaling put-scaling-policy \
+  --auto-scaling-group-name web-asg \
+  --policy-name cpu-scale-out \
+  --policy-type TargetTrackingScaling \
+  --target-tracking-configuration '{
+    "PredefinedMetricSpecification": {
+      "PredefinedMetricType": "ASGAverageCPUUtilization"
+    },
+    "TargetValue": 70.0
+  }'
+```
+
+### Scenario 4: Disaster Recovery - Backup Strategy
+**Question**: Implement automated backup for EBS volumes.
+
+```bash
+# Tag volumes to backup
+aws ec2 create-tags --resources vol-12345 --tags Key=Backup,Value=Daily
+
+# Create Lambda function to create snapshots
+# IAM role with EC2 snapshot permissions
+
+# Create EventBridge rule to trigger Lambda daily
+aws events put-rule \
+  --name daily-snapshot \
+  --schedule-expression "cron(0 2 * * ? *)"
+
+# Add Lambda as target
+aws events put-targets \
+  --rule daily-snapshot \
+  --targets "Id"="1","Arn"="arn:aws:lambda:us-east-1:123456:function:snapshot-function"
+
+# Lambda function code (Python):
+import boto3
+from datetime import datetime
+
+def lambda_handler(event, context):
+    ec2 = boto3.client('ec2')
+    
+    # Get volumes with Backup=Daily tag
+    volumes = ec2.describe_volumes(
+        Filters=[{'Name': 'tag:Backup', 'Values': ['Daily']}]
+    )
+    
+    for volume in volumes['Volumes']:
+        volume_id = volume['VolumeId']
+        description = f"Backup of {volume_id} on {datetime.now()}"
+        
+        snapshot = ec2.create_snapshot(
+            VolumeId=volume_id,
+            Description=description
+        )
+        
+        print(f"Created snapshot {snapshot['SnapshotId']} for {volume_id}")
+    
+    # Delete snapshots older than 7 days
+    snapshots = ec2.describe_snapshots(OwnerIds=['self'])
+    # ... deletion logic
+```
+
+### Scenario 5: Multi-Region Deployment
+**Question**: Deploy application in us-east-1 and us-west-2 with Route53 failover.
+
+```bash
+# Deploy to us-east-1
+aws --region us-east-1 cloudformation create-stack --stack-name app-east --template-body file://app.yaml
+
+# Deploy to us-west-2
+aws --region us-west-2 cloudformation create-stack --stack-name app-west --template-body file://app.yaml
+
+# Get load balancer DNS names
+EAST_LB=$(aws --region us-east-1 elbv2 describe-load-balancers --names app-lb --query 'LoadBalancers[0].DNSName' --output text)
+WEST_LB=$(aws --region us-west-2 elbv2 describe-load-balancers --names app-lb --query 'LoadBalancers[0].DNSName' --output text)
+
+# Create health check
+HC_ID=$(aws route53 create-health-check \
+  --caller-reference $(date +%s) \
+  --health-check-config IPAddress=$EAST_LB_IP,Port=80,Type=HTTP,ResourcePath=/health \
+  --query 'HealthCheck.Id' --output text)
+
+# Create Route53 records with failover
+aws route53 change-resource-record-sets --hosted-zone-id Z123 --change-batch '{
+  "Changes": [{
+    "Action": "CREATE",
+    "ResourceRecordSet": {
+      "Name": "app.example.com",
+      "Type": "A",
+      "SetIdentifier": "Primary",
+      "Failover": "PRIMARY",
+      "AliasTarget": {
+        "HostedZoneId": "Z123",
+        "DNSName": "'$EAST_LB'",
+        "EvaluateTargetHealth": true
+      },
+      "HealthCheckId": "'$HC_ID'"
+    }
+  }, {
+    "Action": "CREATE",
+    "ResourceRecordSet": {
+      "Name": "app.example.com",
+      "Type": "A",
+      "SetIdentifier": "Secondary",
+      "Failover": "SECONDARY",
+      "AliasTarget": {
+        "HostedZoneId": "Z456",
+        "DNSName": "'$WEST_LB'",
+        "EvaluateTargetHealth": true
+      }
+    }
+  }]
+}'
+```
+
+---
+
+## Quick Reference
+
+### Common Query Patterns
+```bash
+# Extract specific fields
+--query 'Instances[*].[InstanceId,State.Name]' --output table
+--query 'Reservations[].Instances[].[InstanceId,PublicIpAddress]' --output text
+
+# Filter results
+--filters "Name=tag:Environment,Values=production"
+--filters "Name=instance-state-name,Values=running"
+
+# Output formats
+--output json    # Default
+--output table   # Formatted table
+--output text    # Tab-delimited
+--output yaml    # YAML format
+```
+
+### Cost Optimization
+```bash
+# Find unused EBS volumes
+aws ec2 describe-volumes --filters Name=status,Values=available
+
+# Find unattached EIPs
+aws ec2 describe-addresses --query 'Addresses[?AssociationId==null].[PublicIp]'
+
+# Find old snapshots
+aws ec2 describe-snapshots --owner-ids self --query 'Snapshots[?StartTime&lt;=`2024-01-01`]'
+```
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview  
+**Last Updated**: February 15, 2026  
+**Total Commands**: 120+ AWS CLI commands

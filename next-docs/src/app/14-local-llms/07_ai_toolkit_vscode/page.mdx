@@ -1,0 +1,261 @@
+# AI Toolkit for VS Code
+
+The **AI Toolkit** extension (formerly Windows AI Studio) is Microsoft's VS Code extension for browsing, downloading, running, fine-tuning, and evaluating local models - all from the editor.
+
+---
+
+## 1. What AI Toolkit Does
+
+| Capability | Details |
+|-----------|---------|
+| **Model catalog** | Browse models from Hugging Face and Azure AI Foundry directly in the sidebar |
+| **Local playground** | Chat with downloaded models in an interactive panel inside VS Code |
+| **ONNX Runtime** | Run models locally via ONNX Runtime GenAI (CPU, CUDA, DirectML, Apple Silicon) |
+| **Fine-tuning** | QLoRA fine-tuning with a guided UI - dataset prep, hyperparameters, training |
+| **Evaluation** | Run promptflow-evals evaluators and view results in the extension |
+| **Model conversion** | Convert Hugging Face models to ONNX format for local inference |
+| **Multi-runtime** | Supports ONNX, GGUF (via llama.cpp), and cloud-hosted endpoints |
+
+---
+
+## 2. Installation
+
+1. Open VS Code
+2. Go to Extensions (`Cmd+Shift+X`)
+3. Search for **"AI Toolkit"** (publisher: Microsoft)
+4. Click **Install**
+
+The extension adds an AI Toolkit icon to the Activity Bar (left sidebar).
+
+---
+
+## 3. Browsing and Downloading Models
+
+### From the Model Catalog
+
+1. Click the AI Toolkit icon in the sidebar
+2. Browse **Popular Models** or search by name
+3. Click a model card to see details: size, architecture, quantization options
+4. Click **Download** to pull the model locally
+
+### Where Models Are Stored
+
+Models are downloaded to the AI Toolkit working directory:
+
+| Platform | Path |
+|----------|------|
+| macOS/Linux | `~/.aitk/models/` |
+| Windows | `%USERPROFILE%\.aitk\models\` |
+
+Directory structure follows a 4-layer convention:
+```
+~/.aitk/models/{publisher}/{model-name}/{runtime}/{display-name}
+```
+
+Example:
+```
+~/.aitk/models/microsoft/Phi-4-mini/cpu/phi4-mini-int4
+```
+
+### Model Formats
+
+| Format | Runtime | When to use |
+|--------|---------|-------------|
+| **ONNX** | ONNX Runtime GenAI | Best integration with AI Toolkit, broadest hardware support |
+| **GGUF** | llama.cpp | Already have GGUF models from Ollama or LM Studio |
+| **Cloud** | API endpoint | Model too large for local hardware |
+
+---
+
+## 4. Using the Local Playground
+
+Once a model is downloaded:
+
+1. Select it in the AI Toolkit sidebar
+2. Click **Load in Playground**
+3. Chat with the model in the interactive panel
+
+### Playground Features
+
+- **System prompt**: Set a custom system message
+- **Temperature / Top-p**: Adjust generation parameters
+- **Token limit**: Control response length
+- **Multi-turn**: Maintains conversation context
+
+### Playground vs. Ollama
+
+| Feature | AI Toolkit Playground | Ollama |
+|---------|----------------------|--------|
+| UI | Built into VS Code | Terminal or separate UI |
+| Format | ONNX (primary) | GGUF |
+| Runtime | ONNX Runtime GenAI | llama.cpp |
+| API | Not exposed by default | OpenAI-compatible API |
+| Fine-tuning | Built-in UI | Requires separate workflow |
+| Model catalog | Integrated in sidebar | `ollama pull <model>` |
+
+**When to use each:** Ollama if you want a local OpenAI-compatible API (see `04_llm_server_and_api.ipynb`). AI Toolkit if you want a GUI-first experience with fine-tuning and evaluation built in.
+
+---
+
+## 5. Model Conversion to ONNX
+
+To run a Hugging Face model in AI Toolkit, convert it to ONNX format:
+
+### Setup
+
+```bash
+conda create -n model_builder python==3.11 -y
+conda activate model_builder
+pip install onnx torch onnxruntime_genai transformers
+```
+
+### Convert
+
+```bash
+python -m onnxruntime_genai.models.builder \
+  -m /path/to/hf/model \
+  -p int4 \
+  -e cpu \
+  -o ~/.aitk/models/publisher/model-name/cpu/display-name \
+  -c /tmp/conversion-cache \
+  --extra_options include_prompt_templates=1
+```
+
+### Precision × Runtime Combinations
+
+| Precision | Runtime | Use case |
+|-----------|---------|----------|
+| INT4 | CPU | Laptops, low memory |
+| FP16 | CUDA | NVIDIA GPUs |
+| FP16 | DirectML | AMD/Intel GPUs on Windows |
+| FP32 | CPU | Maximum accuracy, slow |
+
+---
+
+## 6. Fine-Tuning with QLoRA
+
+AI Toolkit provides a guided fine-tuning workflow directly in VS Code.
+
+### Steps
+
+1. Select a model in the sidebar → **Fine-tune**
+2. **Prepare dataset**: Upload JSONL training data
+3. **Configure**: Set LoRA rank, learning rate, epochs, batch size
+4. **Train**: Runs locally using your GPU (or CPU with longer times)
+5. **Evaluate**: Compare base model vs. fine-tuned model side by side
+
+### Dataset Format
+
+```jsonl
+{"messages": [{"role": "system", "content": "You are a helpful assistant."}, {"role": "user", "content": "What is RAG?"}, {"role": "assistant", "content": "RAG stands for Retrieval-Augmented Generation..."}]}
+{"messages": [{"role": "user", "content": "Explain embeddings"}, {"role": "assistant", "content": "Embeddings are dense vector representations..."}]}
+```
+
+### When to Fine-Tune Locally
+
+| Scenario | Fine-tune locally? |
+|----------|-------------------|
+| Small model (&lt; 7B params) | Yes |
+| Large model (> 13B params) | Only with a strong GPU (24GB+ VRAM) |
+| Quick experiment / proof of concept | Yes |
+| Production training | Use cloud (Azure AI Foundry) |
+| Sensitive data that can't leave the machine | Yes - main advantage |
+
+---
+
+## 7. Evaluation
+
+AI Toolkit integrates with `promptflow-evals` to evaluate model quality.
+
+### Built-in Evaluators
+
+| Evaluator | Measures |
+|-----------|----------|
+| `GroundednessEvaluator` | Are responses grounded in provided context? |
+| `RelevanceEvaluator` | Are responses relevant to the question? |
+| `CoherenceEvaluator` | Is the response logically coherent? |
+| `FluencyEvaluator` | Is the language fluent and natural? |
+| `SimilarityEvaluator` | How similar is the response to ground truth? |
+| `F1ScoreEvaluator` | Token-level F1 against ground truth |
+
+### Running an Evaluation
+
+1. Prepare a JSONL dataset with questions and ground truth
+2. Select a model in AI Toolkit → **Evaluate**
+3. Choose evaluators and configure the judge model
+4. View results in the extension panel
+
+### Example Evaluation Script
+
+```python
+from promptflow.evals.evaluators import SimilarityEvaluator, F1ScoreEvaluator
+from promptflow.evals import evaluate
+
+results = evaluate(
+    data="test_data.jsonl",
+    evaluators={
+        "similarity": SimilarityEvaluator(model_config=model_config),
+        "f1": F1ScoreEvaluator(),
+    },
+    target=my_model_function,
+)
+```
+
+---
+
+## 8. AI Toolkit vs. Other Local LLM Tools
+
+| Feature | AI Toolkit | Ollama | LM Studio | vLLM |
+|---------|-----------|--------|-----------|------|
+| **UI** | VS Code sidebar | CLI | Desktop app | CLI/API |
+| **Primary format** | ONNX | GGUF | GGUF | HF/AWQ |
+| **Fine-tuning** | Built-in (QLoRA) | No | No | No |
+| **Evaluation** | Built-in | No | No | No |
+| **API server** | No | Yes (OpenAI-compatible) | Yes (OpenAI-compatible) | Yes (OpenAI-compatible) |
+| **Model catalog** | HF + Azure AI | Ollama library | HF | HF |
+| **Best for** | Experiment + fine-tune | Quick local API | GUI exploration | Production serving |
+
+---
+
+## 9. Practical Workflow
+
+### Exploring a New Model
+
+```
+1. Browse catalog in AI Toolkit sidebar
+2. Download a quantized ONNX variant
+3. Test in playground with sample prompts
+4. If quality is good → serve via Ollama or vLLM for your app
+5. If quality is poor → fine-tune with QLoRA in AI Toolkit
+6. Evaluate fine-tuned model against baseline
+7. Export and serve the improved model
+```
+
+### Connecting AI Toolkit to Copilot
+
+AI Toolkit models don't directly replace GitHub Copilot's backend. However, you can:
+
+- Use AI Toolkit to explore and evaluate models before deploying them as an API
+- Serve a local model via Ollama or vLLM, then connect it as a custom endpoint
+- Use fine-tuned models for domain-specific tasks (code review, doc generation) alongside Copilot for general coding
+
+---
+
+## 10. Troubleshooting
+
+| Problem | Fix |
+|---------|-----|
+| Model doesn't appear in sidebar | Check `~/.aitk/models/` directory structure - must be exactly 4 layers deep |
+| Slow inference on macOS | Ensure the ONNX model targets `cpu` or use MLX models via Ollama instead |
+| Out of memory during fine-tuning | Reduce batch size, use INT4 quantization, or switch to a smaller model |
+| Conversion fails | Install latest `onnxruntime_genai` and `transformers` from git main |
+| Playground shows gibberish | Model may need `include_prompt_templates=1` during conversion |
+
+---
+
+## Next Steps
+
+- Try `01_ollama_quickstart.ipynb` for an API-first approach to local models
+- See `03_local_rag_with_ollama.ipynb` for building a local RAG system
+- See `05_speculative_decoding.ipynb` for inference optimization
+- For connecting local models to your coding workflow, see [31-ai-powered-dev-tools/04_mcp_deep_dive.md](../31-ai-powered-dev-tools/04_mcp_deep_dive.md)

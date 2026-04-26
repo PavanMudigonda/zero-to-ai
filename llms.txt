@@ -4,7 +4,7 @@
 
 ## About
 
-Zero to AI is a comprehensive, self-paced learning path designed to teach you how to build AI systems. It covers machine learning, deep learning, NLP, computer vision, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, MLOps, model evaluation, fine-tuning, and advanced research topics. It is organized into 31 progressive phases with three suggested tracks: AI Engineer (4-6 months), ML Engineer (8-10 months), and Research Track (10-12 months).
+Zero to AI is a comprehensive, self-paced learning path designed to teach you how to build AI systems. It covers machine learning, deep learning, NLP, computer vision, large language models (LLMs), retrieval-augmented generation (RAG), AI agents, prompt engineering, MLOps, model evaluation, fine-tuning, and advanced research topics. It is organized into 33 progressive phases with three suggested tracks: AI Engineer (4-6 months), ML Engineer (8-10 months), and Research Track (10-12 months).
 
 - Website: https://zero-to-ai.dev/
 - GitHub: https://github.com/PavanMudigonda/zero-to-ai
@@ -45,6 +45,7 @@ Zero to AI is a comprehensive, self-paced learning path designed to teach you ho
 - Phase 29: AI Hardware & LLM Validation - AMD, NVIDIA, Qualcomm, TPU
 - Phase 30: Inference Optimization - KV Cache, vLLM, Quantization
 - Phase 31: AI-Powered Dev Tools - VS Code AI, MCP, Custom Instructions
+- Phase 32: Cheatsheets - AI/ML, Cloud, DevOps reference
 
 ## Key Technologies
 

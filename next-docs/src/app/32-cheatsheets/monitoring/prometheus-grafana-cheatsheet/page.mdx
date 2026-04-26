@@ -1,0 +1,744 @@
+# Prometheus & Grafana Cheatsheet - Lead DevOps Architect Interview Prep
+
+## Table of Contents
+1. [Prometheus Basics](#prometheus-basics)
+2. [Metrics & Exporters](#metrics--exporters)
+3. [PromQL](#promql)
+4. [Alerting](#alerting)
+5. [Service Discovery](#service-discovery)
+6. [Grafana Basics](#grafana-basics)
+7. [Grafana Dashboards](#grafana-dashboards)
+8. [Kubernetes Monitoring](#kubernetes-monitoring)
+9. [Best Practices](#best-practices)
+10. [Interview Scenarios](#interview-scenarios)
+
+---
+
+## Prometheus Basics
+
+### 1. Installation
+```bash
+# Docker
+docker run -p 9090:9090 -v /path/to/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
+
+# Kubernetes (using Helm)
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+helm install prometheus prometheus-community/kube-prometheus-stack
+
+# Binary
+wget https://github.com/prometheus/prometheus/releases/download/v2.40.0/prometheus-2.40.0.linux-amd64.tar.gz
+tar xvfz prometheus-*.tar.gz
+cd prometheus-*
+./prometheus --config.file=prometheus.yml
+```
+
+### 2. Configuration
+```yaml
+# prometheus.yml
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    cluster: 'production'
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets:
+          - 'alertmanager:9093'
+
+# Load rules
+rule_files:
+  - 'alerts/*.yml'
+  - 'rules/*.yml'
+
+# Scrape configurations
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets:
+        - 'node1:9100'
+        - 'node2:9100'
+        labels:
+          env: 'production'
+
+  - job_name: 'kubernetes-pods'
+    kubernetes_sd_configs:
+      - role: pod
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+        action: keep
+        regex: true
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_path]
+        action: replace
+        target_label: __metrics_path__
+        regex: (.+)
+      - source_labels: [__address__, __meta_kubernetes_pod_annotation_prometheus_io_port]
+        action: replace
+        regex: ([^:]+)(?::\d+)?;(\d+)
+        replacement: $1:$2
+        target_label: __address__
+```
+
+---
+
+## Metrics & Exporters
+
+### 3. Metric Types
+```
+Counter:
+- Only increases (or resets to zero)
+- Examples: http_requests_total, errors_total
+- Use rate() or increase() to query
+
+Gauge:
+- Can go up or down
+- Examples: cpu_usage, memory_usage, active_connections
+- Use as-is or with avg_over_time()
+
+Histogram:
+- Samples observations (buckets)
+- Examples: http_request_duration_seconds
+- Provides _bucket, _sum, _count
+- Use histogram_quantile() for percentiles
+
+Summary:
+- Similar to histogram
+- Client-side quantiles
+- Cannot aggregate across instances
+```
+
+### 4. Node Exporter
+```bash
+# Install node_exporter
+wget https://github.com/prometheus/node_exporter/releases/download/v1.5.0/node_exporter-1.5.0.linux-amd64.tar.gz
+tar xvfz node_exporter-*.tar.gz
+cd node_exporter-*
+./node_exporter
+
+# As systemd service
+sudo tee /etc/systemd/system/node_exporter.service &lt;&lt; EOF
+[Unit]
+Description=Node Exporter
+After=network.target
+
+[Service]
+User=node_exporter
+ExecStart=/usr/local/bin/node_exporter
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+sudo systemctl daemon-reload
+sudo systemctl start node_exporter
+sudo systemctl enable node_exporter
+
+# Metrics available at http://localhost:9100/metrics
+```
+
+### 5. Application Metrics (Python)
+```python
+from prometheus_client import Counter, Gauge, Histogram, start_http_server
+import time
+import random
+
+# Metrics
+requests_total = Counter('http_requests_total', 'Total HTTP requests', ['method', 'endpoint', 'status'])
+active_connections = Gauge('active_connections', 'Active connections')
+request_duration = Histogram('http_request_duration_seconds', 'HTTP request duration', ['endpoint'])
+
+# Increment counter
+requests_total.labels(method='GET', endpoint='/api/users', status='200').inc()
+
+# Set gauge
+active_connections.set(42)
+active_connections.inc()  # Increment
+active_connections.dec()  # Decrement
+
+# Observe histogram
+with request_duration.labels(endpoint='/api/users').time():
+    time.sleep(random.uniform(0.1, 0.5))
+
+# Start metrics server
+start_http_server(8000)  # Metrics at http://localhost:8000/metrics
+```
+
+### 6. Common Exporters
+```
+node_exporter (9100):     System metrics (CPU, memory, disk, network)
+blackbox_exporter (9115): Probe endpoints (HTTP, TCP, ICMP)
+postgres_exporter (9187): PostgreSQL metrics
+redis_exporter (9121):    Redis metrics
+nginx_exporter (9113):    Nginx metrics
+mysql_exporter (9104):    MySQL metrics
+elasticsearch_exporter:   Elasticsearch metrics
+```
+
+---
+
+## PromQL
+
+### 7. Basic Queries
+```promql
+# Instant vector (current value)
+http_requests_total
+
+# Filter by label
+http_requests_total{method="GET"}
+http_requests_total{method="GET", status="200"}
+
+# Regex match
+http_requests_total{endpoint=~"/api/.*"}
+http_requests_total{status!~"5.."}
+
+# Range vector (time series over period)
+http_requests_total[5m]
+http_requests_total{method="GET"}[1h]
+```
+
+### 8. Functions
+```promql
+# Rate (per-second rate over period)
+rate(http_requests_total[5m])
+
+# Increase (total increase over period)
+increase(http_requests_total[1h])
+
+# irate (instant rate - last 2 points)
+irate(http_requests_total[5m])
+
+# Sum
+sum(rate(http_requests_total[5m]))
+
+# Sum by label
+sum by(method) (rate(http_requests_total[5m]))
+sum by(method, endpoint) (rate(http_requests_total[5m]))
+
+# Average
+avg(node_cpu_seconds_total)
+avg by(instance) (rate(node_cpu_seconds_total[5m]))
+
+# Max/Min
+max(node_memory_MemAvailable_bytes)
+min(node_memory_MemAvailable_bytes)
+
+# Count
+count(up == 1)  # Number of up targets
+```
+
+### 9. Aggregation
+```promql
+# CPU usage by instance
+100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+
+# Memory usage percentage
+(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100
+
+# Disk usage percentage
+(node_filesystem_size_bytes - node_filesystem_free_bytes) / node_filesystem_size_bytes * 100
+
+# Network traffic (bytes/sec)
+rate(node_network_receive_bytes_total[5m])
+rate(node_network_transmit_bytes_total[5m])
+
+# HTTP error rate
+sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m])) * 100
+
+# Request latency (95th percentile)
+histogram_quantile(0.95, sum by(le) (rate(http_request_duration_seconds_bucket[5m])))
+```
+
+### 10. Advanced Queries
+```promql
+# Top 5 endpoints by request count
+topk(5, sum by(endpoint) (rate(http_requests_total[5m])))
+
+# Bottom 3 instances by memory
+bottomk(3, node_memory_MemAvailable_bytes)
+
+# Predict disk full time (linear regression)
+predict_linear(node_filesystem_free_bytes[1h], 4*3600) &lt; 0
+
+# Absent (alert if metric missing)
+absent(up{job="critical-service"})
+
+# Changes (number of times value changed)
+changes(node_memory_MemAvailable_bytes[1h])
+
+# Delta (difference between first and last)
+delta(node_cpu_seconds_total[5m])
+
+# Deriv (per-second derivative)
+deriv(node_memory_MemFree_bytes[5m])
+
+# Time functions
+time()
+day_of_week()
+hour()
+```
+
+---
+
+## Alerting
+
+### 11. Alerting Rules
+```yaml
+# alerts/rules.yml
+groups:
+  - name: instance_alerts
+    interval: 30s
+    rules:
+      - alert: InstanceDown
+        expr: up == 0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Instance {{ $labels.instance }} down"
+          description: "{{ $labels.instance }} has been down for more than 5 minutes."
+
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage on {{ $labels.instance }}"
+          description: "CPU usage is {{ $value }}% on {{ $labels.instance }}"
+
+      - alert: HighMemoryUsage
+        expr: (1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100 > 90
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High memory usage on {{ $labels.instance }}"
+          description: "Memory usage is {{ $value }}%"
+
+      - alert: DiskSpaceLow
+        expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes) * 100 &lt; 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Disk space low on {{ $labels.instance }}"
+          description: "Disk {{ $labels.mountpoint }} has {{ $value }}% free space"
+
+      - alert: HighErrorRate
+        expr: sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m])) > 0.05
+        for: 10m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High error rate"
+          description: "Error rate is {{ $value | humanizePercentage }}"
+```
+
+### 12. Alertmanager Configuration
+```yaml
+# alertmanager.yml
+global:
+  resolve_timeout: 5m
+  slack_api_url: 'https://hooks.slack.com/services/XXX/YYY/ZZZ'
+
+route:
+  receiver: 'default'
+  group_by: ['alertname', 'cluster']
+  group_wait: 10s
+  group_interval: 10s
+  repeat_interval: 12h
+  
+  routes:
+    - match:
+        severity: critical
+      receiver: 'pagerduty'
+      continue: true
+    
+    - match:
+        severity: warning
+      receiver: 'slack'
+
+receivers:
+  - name: 'default'
+    email_configs:
+      - to: 'devops@example.com'
+        from: 'alertmanager@example.com'
+        smarthost: 'smtp.gmail.com:587'
+        auth_username: 'alertmanager@example.com'
+        auth_password: 'password'
+
+  - name: 'slack'
+    slack_configs:
+      - channel: '#alerts'
+        title: '{{ .GroupLabels.alertname }}'
+        text: '{{ range .Alerts }}{{ .Annotations.description }}{{ end }}'
+
+  - name: 'pagerduty'
+    pagerduty_configs:
+      - service_key: 'your-pagerduty-key'
+
+inhibit_rules:
+  - source_match:
+      severity: 'critical'
+    target_match:
+      severity: 'warning'
+    equal: ['alertname', 'instance']
+```
+
+---
+
+## Service Discovery
+
+### 13. Kubernetes Service Discovery
+```yaml
+scrape_configs:
+  # Scrape pods
+  - job_name: 'kubernetes-pods'
+    kubernetes_sd_configs:
+      - role: pod
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_annotation_prometheus_io_scrape]
+        action: keep
+        regex: true
+
+  # Scrape services
+  - job_name: 'kubernetes-services'
+    kubernetes_sd_configs:
+      - role: service
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_service_annotation_prometheus_io_scrape]
+        action: keep
+        regex: true
+
+  # Scrape nodes
+  - job_name: 'kubernetes-nodes'
+    kubernetes_sd_configs:
+      - role: node
+    relabel_configs:
+      - action: labelmap
+        regex: __meta_kubernetes_node_label_(.+)
+```
+
+### 14. Pod Annotations for Scraping
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8080"
+    prometheus.io/path: "/metrics"
+spec:
+  containers:
+    - name: app
+      image: myapp:latest
+      ports:
+        - containerPort: 8080
+```
+
+---
+
+## Grafana Basics
+
+### 15. Installation
+```bash
+# Docker
+docker run -d -p 3000:3000 --name=grafana grafana/grafana
+
+# Kubernetes (using Helm)
+helm install grafana grafana/grafana
+
+# Get admin password
+kubectl get secret grafana -o jsonpath="{.data.admin-password}" | base64 --decode
+
+# Access Grafana
+http://localhost:3000
+# Default: admin / admin
+```
+
+### 16. Add Prometheus Data Source
+```
+1. Settings (gear icon) -> Data Sources
+2. Add data source -> Prometheus
+3. URL: http://prometheus:9090
+4. Access: Server (default) or Browser
+5. Save & Test
+```
+
+---
+
+## Grafana Dashboards
+
+### 17. Create Dashboard
+```
+1. Create -> Dashboard
+2. Add Panel
+3. Query:
+   - Select metric: node_cpu_seconds_total
+   - Legend: {{ mode }}
+   - Transform: rate 5m
+4. Visualization: Time series, Gauge, Stat, Bar chart, etc.
+5. Panel options:
+   - Title
+   - Description
+   - Transparent background
+6. Display options:
+   - Unit: percent (0-100)
+   - Min/Max
+   - Decimals
+7. Thresholds:
+   - 80: yellow
+   - 90: red
+```
+
+### 18. Common Dashboard Queries
+```promql
+# CPU Usage
+100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+
+# Memory Usage
+(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100
+
+# Disk Usage
+(node_filesystem_size_bytes - node_filesystem_free_bytes) / node_filesystem_size_bytes * 100
+
+# Network I/O
+rate(node_network_receive_bytes_total[5m])
+rate(node_network_transmit_bytes_total[5m])
+
+# Request Rate
+sum(rate(http_requests_total[5m])) by (endpoint)
+
+# Error Rate
+sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m])) * 100
+
+# Latency (p95)
+histogram_quantile(0.95, sum by(le) (rate(http_request_duration_seconds_bucket[5m])))
+
+# Pod Count
+count(kube_pod_info)
+
+# Container CPU
+rate(container_cpu_usage_seconds_total[5m])
+
+# Container Memory
+container_memory_usage_bytes
+```
+
+### 19. Variables
+```
+Dashboard Settings -> Variables -> Add Variable
+
+Name: instance
+Type: Query
+Data source: Prometheus
+Query: label_values(node_cpu_seconds_total, instance)
+Refresh: On Dashboard Load
+
+Use in queries:
+rate(node_cpu_seconds_total{instance="$instance"}[5m])
+
+Use in panel title:
+CPU Usage - $instance
+```
+
+### 20. Alerting in Grafana
+```
+Panel -> Alert tab
+
+Conditions:
+WHEN avg() OF query(A, 5m, now) IS ABOVE 80
+
+Notifications:
+Send to: Slack, Email, PagerDuty, Webhook
+
+Message:
+CPU usage is {{ $value }}% on {{ $labels.instance }}
+```
+
+---
+
+## Kubernetes Monitoring
+
+### 21. ServiceMonitor (Prometheus Operator)
+```yaml
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: myapp
+  labels:
+    app: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  endpoints:
+    - port: metrics
+      interval: 30s
+      path: /metrics
+```
+
+### 22. PodMonitor
+```yaml
+apiVersion: monitoring.coreos.com/v1
+kind: PodMonitor
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  podMetricsEndpoints:
+    - port: metrics
+      interval: 30s
+```
+
+---
+
+## Best Practices
+
+### 23. Metric Naming
+```
+Pattern: <namespace>_<name>_<unit>
+
+Good:
+http_requests_total
+http_request_duration_seconds
+process_cpu_seconds_total
+node_memory_MemAvailable_bytes
+
+Bad:
+HttpRequestsCount
+request_time_ms (use seconds)
+memoryAvailable (unclear unit)
+
+Labels:
+- Cardinality matters (avoid high-cardinality labels like user_id, timestamp)
+- Use consistent label names
+- Keep label values bounded
+```
+
+### 24. Recording Rules
+```yaml
+# rules/aggregations.yml
+groups:
+  - name: cpu_rules
+    interval: 30s
+    rules:
+      - record: instance:cpu_usage:rate5m
+        expr: 100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+
+      - record: job:http_requests:rate5m
+        expr: sum by(job) (rate(http_requests_total[5m]))
+
+      - record: job:http_error_rate:rate5m
+        expr: sum by(job) (rate(http_requests_total{status=~"5.."}[5m])) / sum by(job) (rate(http_requests_total[5m]))
+
+# Use in queries:
+instance:cpu_usage:rate5m
+```
+
+---
+
+## Interview Scenarios
+
+### Scenario 1: Monitor Application Performance
+```yaml
+# Application metrics
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+  annotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "8080"
+    prometheus.io/path: "/metrics"
+spec:
+  selector:
+    app: myapp
+  ports:
+    - port: 8080
+      name: metrics
+
+---
+# ServiceMonitor
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  endpoints:
+    - port: metrics
+      interval: 15s
+
+---
+# Alerts
+groups:
+  - name: myapp_alerts
+    rules:
+      - alert: HighLatency
+        expr: histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m])) > 1
+        for: 5m
+        annotations:
+          summary: "High latency on {{ $labels.instance }}"
+
+      - alert: HighErrorRate
+        expr: rate(http_requests_total{status=~"5.."}[5m]) / rate(http_requests_total[5m]) > 0.01
+        for: 10m
+```
+
+### Scenario 2: Infrastructure Monitoring
+```promql
+# Grafana Dashboard Queries
+
+# CPU Panel
+100 - (avg by(instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+
+# Memory Panel
+(1 - (node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes)) * 100
+
+# Disk I/O Panel
+rate(node_disk_read_bytes_total[5m])
+rate(node_disk_written_bytes_total[5m])
+
+# Network Panel
+rate(node_network_receive_bytes_total{device!~"lo|docker0|veth.*"}[5m])
+rate(node_network_transmit_bytes_total{device!~"lo|docker0|veth.*"}[5m])
+
+# Load Average Panel
+node_load1
+node_load5
+node_load15
+```
+
+### Scenario 3: Alert on Predicted Disk Full
+```yaml
+groups:
+  - name: disk_alerts
+    rules:
+      - alert: DiskWillFillIn4Hours
+        expr: predict_linear(node_filesystem_free_bytes[1h], 4*3600) &lt; 0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Disk will be full in 4 hours on {{ $labels.instance }}"
+          description: "Filesystem {{ $labels.mountpoint }} will run out of space"
+```
+
+---
+
+**Prepared for**: Lead DevOps Architect Interview  
+**Last Updated**: February 15, 2026  
+**Total Commands**: 80+ monitoring operations
