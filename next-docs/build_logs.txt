@@ -7,34 +7,3 @@
     · turbo
 
    Creating an optimized production build ...
-(node:88608) Warning: `--localstorage-file` was provided without a valid path
-(Use `node --trace-warnings ...` to show where the warning was created)
-Failed to compile.
-
-./src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.ne/page.mdx
-Module not found: Can't resolve 'screenshot.png'
-
-https://nextjs.org/docs/messages/module-not-found
-
-./src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.nl/page.mdx
-Module not found: Can't resolve 'ds-for-beginners.gif'
-
-https://nextjs.org/docs/messages/module-not-found
-
-./src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.pt-pt/page.mdx
-Module not found: Can't resolve '../ds-for-beginners.gif'
-
-https://nextjs.org/docs/messages/module-not-found
-
-./src/app/02-data-science/3-data-science-examples/01-microsoft-course/TRANSLATIONS/README.tr/page.mdx
-Module not found: Can't resolve '../ds-for-beginners.gif'
-
-https://nextjs.org/docs/messages/module-not-found
-
-./src/app/02-data-science/3-data-science-examples/01-microsoft-course/page.mdx
-Module not found: Can't resolve './sketchnotes/00-Title.png'
-
-https://nextjs.org/docs/messages/module-not-found
-
-
-> Build failed because of webpack errors

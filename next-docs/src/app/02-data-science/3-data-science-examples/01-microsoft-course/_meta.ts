@@ -10,8 +10,7 @@ export default {
   SECURITY: "9. Security",
   SUPPORT: "10. Support",
   TRANSLATIONS: "11. Translations",
-  docs: "12. Docs",
-  "for-teachers": "13. For Teachers",
-  "quiz-app": "14. Quiz App",
-  sketchnotes: "15. Sketchnotes",
+  "for-teachers": "12. For Teachers",
+  "quiz-app": "13. Quiz App",
+  sketchnotes: "14. Sketchnotes",
 }
