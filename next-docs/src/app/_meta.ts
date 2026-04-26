@@ -1,7 +1,7 @@
 export default {
   "index": {
     "title": "Home"
-}
+  },
   "00-course-setup": "1. Course Setup",
   "01-python": "2. Python",
   "02-data-science": "3. Data Science",

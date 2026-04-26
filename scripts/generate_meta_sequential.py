@@ -87,7 +87,7 @@ def main():
                 f.write("export default {\n")
                 for key, value in meta_dict.items():
                     if isinstance(value, dict):
-                        f.write(f'  "{key}": {json.dumps(value, indent=4)}\n')
+                        f.write(f'  "{key}": {json.dumps(value, indent=4).replace("}", "  }")},\n')
                     else:
                         safe_key = f'"{key}"' if not key.isidentifier() else key
                         safe_value = value.replace('"', '\\"')
