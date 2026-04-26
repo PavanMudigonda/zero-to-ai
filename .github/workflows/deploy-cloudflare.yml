@@ -40,6 +40,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-
 
+      - name: Allocate swap space
+        run: |
+          sudo fallocate -l 8G /swapfile
+          sudo chmod 600 /swapfile
+          sudo mkswap /swapfile
+          sudo swapon /swapfile
+
       - name: Build Next.js site
         working-directory: ./next-docs
         run: |
