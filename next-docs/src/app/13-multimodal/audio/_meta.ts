@@ -1,8 +1,4 @@
 export default {
-  "01_whisper_speech_recognition": {
-    "title": "1. Whisper Speech Recognition"
-  },
-  "02_text_to_speech": {
-    "title": "2. Text to Speech"
-  }
-};
+  "01_whisper_speech_recognition": "1. Whisper Speech Recognition",
+  "02_text_to_speech": "2. Text To Speech",
+}

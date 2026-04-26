@@ -1,5 +1,0 @@
-export default {
-  "03_supervised_finetuning": {
-    "title": "1. Supervised Finetuning"
-  }
-};

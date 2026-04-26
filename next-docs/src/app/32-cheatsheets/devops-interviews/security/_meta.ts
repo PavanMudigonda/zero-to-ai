@@ -1,5 +1,3 @@
 export default {
-  "fix-https-certificate-error": {
-    "title": "1. Fix Https Certificate Error"
-  }
-};
+  "fix-https-certificate-error": "1. Fix Https Certificate Error",
+}

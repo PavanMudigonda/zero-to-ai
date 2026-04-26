@@ -1,5 +1,3 @@
 export default {
-  "dream": {
-    "title": "1. Dream"
-  }
-};
+  dream: "1. Dream",
+}

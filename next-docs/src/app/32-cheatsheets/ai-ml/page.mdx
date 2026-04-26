@@ -4,7 +4,7 @@
 
 ## Why This Chapter?
 
-Most AI/ML courses teach you to build models in Jupyter notebooks—but shipping models to production requires **cloud infrastructure, MLOps pipelines, GPU management, and DevOps practices** tailored for ML workloads. This chapter bridges that gap.
+Most AI/ML courses teach you to build models in Jupyter notebooks-but shipping models to production requires **cloud infrastructure, MLOps pipelines, GPU management, and DevOps practices** tailored for ML workloads. This chapter bridges that gap.
 
 ---
 
@@ -112,4 +112,4 @@ curl -X POST https://my-endpoint.region.inference.ml.azure.com/score \
 > Use spot/preemptible instances for fault-tolerant training (with checkpointing), right-size GPU selection (don't use A100 for small models), auto-shutdown idle instances, reserved instances for predictable workloads, and multi-GPU training to reduce wall-clock time.
 
 **Q: What's the difference between batch and real-time inference?**
-> Batch: process large datasets on schedule (cost-efficient, high-throughput). Real-time: single predictions via API with low latency (&lt; 100ms). Choose based on business requirements—recommendation engines often use batch, chatbots need real-time.
+> Batch: process large datasets on schedule (cost-efficient, high-throughput). Real-time: single predictions via API with low latency (&lt; 100ms). Choose based on business requirements-recommendation engines often use batch, chatbots need real-time.

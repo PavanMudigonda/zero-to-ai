@@ -1,11 +1,5 @@
 export default {
-  "assignment": {
-    "title": "1. Assignment"
-  },
-  "notebook": {
-    "title": "2. Notebook"
-  },
-  "translations": {
-    "title": "3. Translations"
-  }
-};
+  assignment: "1. Assignment",
+  notebook: "2. Notebook",
+  translations: "3. Translations",
+}

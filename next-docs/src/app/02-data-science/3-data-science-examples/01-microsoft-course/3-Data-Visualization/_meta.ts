@@ -1,23 +1,9 @@
 export default {
-  "09-visualization-quantities": {
-    "title": "1. Visualization Quantities"
-  },
-  "10-visualization-distributions": {
-    "title": "2. Visualization Distributions"
-  },
-  "11-visualization-proportions": {
-    "title": "3. Visualization Proportions"
-  },
-  "12-visualization-relationships": {
-    "title": "4. Visualization Relationships"
-  },
-  "13-meaningful-visualizations": {
-    "title": "5. Meaningful Visualizations"
-  },
-  "R": {
-    "title": "6. R"
-  },
-  "translations": {
-    "title": "7. Translations"
-  }
-};
+  "09-visualization-quantities": "1. 09 Visualization Quantities",
+  "10-visualization-distributions": "2. 10 Visualization Distributions",
+  "11-visualization-proportions": "3. 11 Visualization Proportions",
+  "12-visualization-relationships": "4. 12 Visualization Relationships",
+  "13-meaningful-visualizations": "5. 13 Meaningful Visualizations",
+  R: "6. R",
+  translations: "7. Translations",
+}

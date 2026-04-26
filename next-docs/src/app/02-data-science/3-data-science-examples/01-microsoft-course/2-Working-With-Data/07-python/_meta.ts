@@ -1,20 +1,8 @@
 export default {
-  "R": {
-    "title": "1. R"
-  },
-  "assignment": {
-    "title": "2. Assignment"
-  },
-  "notebook": {
-    "title": "3. Notebook"
-  },
-  "notebook-covidspread": {
-    "title": "4. Notebook Covidspread"
-  },
-  "notebook-papers": {
-    "title": "5. Notebook Papers"
-  },
-  "translations": {
-    "title": "6. Translations"
-  }
-};
+  R: "1. R",
+  assignment: "2. Assignment",
+  notebook: "3. Notebook",
+  "notebook-covidspread": "4. Notebook Covidspread",
+  "notebook-papers": "5. Notebook Papers",
+  translations: "6. Translations",
+}

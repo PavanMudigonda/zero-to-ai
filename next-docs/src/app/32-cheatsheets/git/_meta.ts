@@ -1,5 +1,3 @@
 export default {
-  "git-cheatsheet": {
-    "title": "1. Git Cheatsheet"
-  }
-};
+  "git-cheatsheet": "1. Git Cheatsheet",
+}

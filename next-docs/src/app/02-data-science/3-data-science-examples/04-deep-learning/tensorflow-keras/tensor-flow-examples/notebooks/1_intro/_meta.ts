@@ -1,5 +1,3 @@
 export default {
-  "basic_operations": {
-    "title": "1. Basic Operations"
-  }
-};
+  basic_operations: "1. Basic Operations",
+}

@@ -1,86 +1,30 @@
 export default {
-  "100_Numpy_exercises": {
-    "title": "1. Numpy Exercises"
-  },
-  "100_Numpy_random": {
-    "title": "2. Numpy Random"
-  },
-  "10_Random_sampling": {
-    "title": "3. Random Sampling"
-  },
-  "10_Random_sampling_Solutions": {
-    "title": "4. Random Sampling Solutions"
-  },
-  "11_Set_routines": {
-    "title": "5. Set Routines"
-  },
-  "11_Set_routines_Solutions": {
-    "title": "6. Set Routines Solutions"
-  },
-  "12_Sorting_searching_and_counting": {
-    "title": "7. Sorting Searching and Counting"
-  },
-  "12_Sorting_searching_and_counting_Solutions": {
-    "title": "8. Sorting Searching and Counting Solutions"
-  },
-  "13_Statistics": {
-    "title": "9. Statistics"
-  },
-  "13_Statistics_solutions": {
-    "title": "10. Statistics Solutions"
-  },
-  "1_Array_creation_routines": {
-    "title": "11. Array Creation Routines"
-  },
-  "1_Array_creation_routines_Solution": {
-    "title": "12. Array Creation Routines Solution"
-  },
-  "2_Array_manipulation_routines": {
-    "title": "13. Array Manipulation Routines"
-  },
-  "2_Array_manipulation_routines_Solutions": {
-    "title": "14. Array Manipulation Routines Solutions"
-  },
-  "3_String_operations": {
-    "title": "15. String Operations"
-  },
-  "3_String_operations_solutions": {
-    "title": "16. String Operations Solutions"
-  },
-  "4_Numpy-specific_help_functions": {
-    "title": "17. Numpy Specific Help Functions"
-  },
-  "4_Numpy-specific_help_functions_Solutions": {
-    "title": "18. Numpy Specific Help Functions Solutions"
-  },
-  "5_Input_and_Output": {
-    "title": "19. Input and Output"
-  },
-  "5_Input_and_Output_Solutions": {
-    "title": "20. Input and Output Solutions"
-  },
-  "6_Linear_algebra": {
-    "title": "21. Linear Algebra"
-  },
-  "6_Linear_algebra_Solutions": {
-    "title": "22. Linear Algebra Solutions"
-  },
-  "7_Discrete_Fourier_Transform": {
-    "title": "23. Discrete Fourier Transform"
-  },
-  "7_Discrete_Fourier_Transform_solutions": {
-    "title": "24. Discrete Fourier Transform Solutions"
-  },
-  "8_Logic_functions": {
-    "title": "25. Logic Functions"
-  },
-  "8_Logic_functions_Solutions": {
-    "title": "26. Logic Functions Solutions"
-  },
-  "9_Mathematical_functions": {
-    "title": "27. Mathematical Functions"
-  },
-  "9_Mathematical_functions_solutions": {
-    "title": "28. Mathematical Functions Solutions"
-  }
-};
+  "1_Array_creation_routines": "1. Array Creation Routines",
+  "1_Array_creation_routines_Solution": "2. Array Creation Routines Solution",
+  "2_Array_manipulation_routines": "3. Array Manipulation Routines",
+  "2_Array_manipulation_routines_Solutions": "4. Array Manipulation Routines Solutions",
+  "3_String_operations": "5. String Operations",
+  "3_String_operations_solutions": "6. String Operations Solutions",
+  "4_Numpy-specific_help_functions": "7. Numpy Specific Help Functions",
+  "4_Numpy-specific_help_functions_Solutions": "8. Numpy Specific Help Functions Solutions",
+  "5_Input_and_Output": "9. Input And Output",
+  "5_Input_and_Output_Solutions": "10. Input And Output Solutions",
+  "6_Linear_algebra": "11. Linear Algebra",
+  "6_Linear_algebra_Solutions": "12. Linear Algebra Solutions",
+  "7_Discrete_Fourier_Transform": "13. Discrete Fourier Transform",
+  "7_Discrete_Fourier_Transform_solutions": "14. Discrete Fourier Transform Solutions",
+  "8_Logic_functions": "15. Logic Functions",
+  "8_Logic_functions_Solutions": "16. Logic Functions Solutions",
+  "9_Mathematical_functions": "17. Mathematical Functions",
+  "9_Mathematical_functions_solutions": "18. Mathematical Functions Solutions",
+  "10_Random_sampling": "19. Random Sampling",
+  "10_Random_sampling_Solutions": "20. Random Sampling Solutions",
+  "11_Set_routines": "21. Set Routines",
+  "11_Set_routines_Solutions": "22. Set Routines Solutions",
+  "12_Sorting_searching_and_counting": "23. Sorting Searching And Counting",
+  "12_Sorting_searching_and_counting_Solutions": "24. Sorting Searching And Counting Solutions",
+  "13_Statistics": "25. Statistics",
+  "13_Statistics_solutions": "26. Statistics Solutions",
+  "100_Numpy_exercises": "27. Numpy Exercises",
+  "100_Numpy_random": "28. Numpy Random",
+}

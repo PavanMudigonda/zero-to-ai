@@ -1,17 +1,7 @@
 export default {
-  "01-basics": {
-    "title": "1. Basics"
-  },
-  "02-intermediate": {
-    "title": "2. Intermediate"
-  },
-  "03-exercises": {
-    "title": "3. Exercises"
-  },
-  "04-advanced": {
-    "title": "4. Advanced"
-  },
-  "START_HERE": {
-    "title": "5. Start Here"
-  }
-};
+  "01-basics": "1. 01 Basics",
+  "02-intermediate": "2. 02 Intermediate",
+  "03-exercises": "3. 03 Exercises",
+  "04-advanced": "4. 04 Advanced",
+  START_HERE: "5. Start Here",
+}

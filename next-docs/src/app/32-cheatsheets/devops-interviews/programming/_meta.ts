@@ -1,38 +1,14 @@
 export default {
-  "automated-gitops-promotion": {
-    "title": "1. Automated Gitops Promotion"
-  },
-  "automated-rollback-on-deployment-failure-with-values-file-restoration": {
-    "title": "2. Automated Rollback On Deployment Failure with Values File Restoration"
-  },
-  "docker-image-tagging-with-commit-sha": {
-    "title": "3. Docker Image Tagging with Commit Sha"
-  },
-  "environment-gated-deployment": {
-    "title": "4. Environment Gated Deployment"
-  },
-  "github-actions-matrix-build-strategy": {
-    "title": "5. Github Actions Matrix Build Strategy"
-  },
-  "github-actions-retry-logic": {
-    "title": "6. Github Actions Retry Logic"
-  },
-  "github-actions-timeout-enforcement": {
-    "title": "7. Github Actions Timeout Enforcement"
-  },
-  "job-dependency-enforcement": {
-    "title": "8. Job Dependency Enforcement"
-  },
-  "multi-job-workflow-with-artifact-handoff": {
-    "title": "9. Multi Job Workflow with Artifact Handoff"
-  },
-  "path-based-workflow-execution": {
-    "title": "10. Path Based Workflow Execution"
-  },
-  "pr-test-gate": {
-    "title": "11. Pr Test Gate"
-  },
-  "reusable-workflow-with-input-parameters": {
-    "title": "12. Reusable Workflow with Input Parameters"
-  }
-};
+  "automated-gitops-promotion": "1. Automated Gitops Promotion",
+  "automated-rollback-on-deployment-failure-with-values-file-restoration": "2. Automated Rollback On Deployment Failure With Values File Restoration",
+  "docker-image-tagging-with-commit-sha": "3. Docker Image Tagging With Commit Sha",
+  "environment-gated-deployment": "4. Environment Gated Deployment",
+  "github-actions-matrix-build-strategy": "5. Github Actions Matrix Build Strategy",
+  "github-actions-retry-logic": "6. Github Actions Retry Logic",
+  "github-actions-timeout-enforcement": "7. Github Actions Timeout Enforcement",
+  "job-dependency-enforcement": "8. Job Dependency Enforcement",
+  "multi-job-workflow-with-artifact-handoff": "9. Multi Job Workflow With Artifact Handoff",
+  "path-based-workflow-execution": "10. Path Based Workflow Execution",
+  "pr-test-gate": "11. Pr Test Gate",
+  "reusable-workflow-with-input-parameters": "12. Reusable Workflow With Input Parameters",
+}

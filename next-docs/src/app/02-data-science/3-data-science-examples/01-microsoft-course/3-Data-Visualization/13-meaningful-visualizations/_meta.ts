@@ -1,14 +1,6 @@
 export default {
-  "assignment": {
-    "title": "1. Assignment"
-  },
-  "solution": {
-    "title": "2. Solution"
-  },
-  "starter": {
-    "title": "3. Starter"
-  },
-  "translations": {
-    "title": "4. Translations"
-  }
-};
+  assignment: "1. Assignment",
+  solution: "2. Solution",
+  starter: "3. Starter",
+  translations: "4. Translations",
+}

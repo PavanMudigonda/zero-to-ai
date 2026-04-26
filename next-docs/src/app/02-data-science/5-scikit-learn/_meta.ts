@@ -1,101 +1,35 @@
 export default {
-  "applications": {
-    "title": "1. Applications"
-  },
-  "bicluster": {
-    "title": "2. Bicluster"
-  },
-  "calibration": {
-    "title": "3. Calibration"
-  },
-  "classification": {
-    "title": "4. Classification"
-  },
-  "cluster": {
-    "title": "5. Cluster"
-  },
-  "compose": {
-    "title": "6. Compose"
-  },
-  "covariance": {
-    "title": "7. Covariance"
-  },
-  "cross_decomposition": {
-    "title": "8. Cross Decomposition"
-  },
-  "datasets": {
-    "title": "9. Datasets"
-  },
-  "decomposition": {
-    "title": "10. Decomposition"
-  },
-  "developing_estimators": {
-    "title": "11. Developing Estimators"
-  },
-  "ensemble": {
-    "title": "12. Ensemble"
-  },
-  "feature_selection": {
-    "title": "13. Feature Selection"
-  },
-  "frozen": {
-    "title": "14. Frozen"
-  },
-  "gaussian_process": {
-    "title": "15. Gaussian Process"
-  },
-  "impute": {
-    "title": "16. Impute"
-  },
-  "inspection": {
-    "title": "17. Inspection"
-  },
-  "kernel_approximation": {
-    "title": "18. Kernel Approximation"
-  },
-  "linear_model": {
-    "title": "19. Linear Model"
-  },
-  "manifold": {
-    "title": "20. Manifold"
-  },
-  "miscellaneous": {
-    "title": "21. Miscellaneous"
-  },
-  "mixture": {
-    "title": "22. Mixture"
-  },
-  "model_selection": {
-    "title": "23. Model Selection"
-  },
-  "multiclass": {
-    "title": "24. Multiclass"
-  },
-  "multioutput": {
-    "title": "25. Multioutput"
-  },
-  "neighbors": {
-    "title": "26. Neighbors"
-  },
-  "neural_networks": {
-    "title": "27. Neural Networks"
-  },
-  "preprocessing": {
-    "title": "28. Preprocessing"
-  },
-  "release_highlights": {
-    "title": "29. Release Highlights"
-  },
-  "semi_supervised": {
-    "title": "30. Semi Supervised"
-  },
-  "svm": {
-    "title": "31. Svm"
-  },
-  "text": {
-    "title": "32. Text"
-  },
-  "tree": {
-    "title": "33. Tree"
-  }
-};
+  applications: "1. Applications",
+  bicluster: "2. Bicluster",
+  calibration: "3. Calibration",
+  classification: "4. Classification",
+  cluster: "5. Cluster",
+  compose: "6. Compose",
+  covariance: "7. Covariance",
+  cross_decomposition: "8. Cross Decomposition",
+  datasets: "9. Datasets",
+  decomposition: "10. Decomposition",
+  developing_estimators: "11. Developing Estimators",
+  ensemble: "12. Ensemble",
+  feature_selection: "13. Feature Selection",
+  frozen: "14. Frozen",
+  gaussian_process: "15. Gaussian Process",
+  impute: "16. Impute",
+  inspection: "17. Inspection",
+  kernel_approximation: "18. Kernel Approximation",
+  linear_model: "19. Linear Model",
+  manifold: "20. Manifold",
+  miscellaneous: "21. Miscellaneous",
+  mixture: "22. Mixture",
+  model_selection: "23. Model Selection",
+  multiclass: "24. Multiclass",
+  multioutput: "25. Multioutput",
+  neighbors: "26. Neighbors",
+  neural_networks: "27. Neural Networks",
+  preprocessing: "28. Preprocessing",
+  release_highlights: "29. Release Highlights",
+  semi_supervised: "30. Semi Supervised",
+  svm: "31. Svm",
+  text: "32. Text",
+  tree: "33. Tree",
+}

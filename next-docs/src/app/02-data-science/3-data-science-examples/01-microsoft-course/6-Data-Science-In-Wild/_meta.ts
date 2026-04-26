@@ -1,8 +1,4 @@
 export default {
-  "20-Real-World-Examples": {
-    "title": "1. Real World"
-  },
-  "translations": {
-    "title": "2. Translations"
-  }
-};
+  "20-Real-World-Examples": "1. 20 Real World Examples",
+  translations: "2. Translations",
+}

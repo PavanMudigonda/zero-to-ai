@@ -1,5 +1,3 @@
 export default {
-  "scikit-learn": {
-    "title": "1. Scikit Learn"
-  }
-};
+  "scikit-learn": "1. Scikit Learn",
+}

@@ -1,5 +1,3 @@
 export default {
-  "theano_mlp": {
-    "title": "1. Theano Mlp"
-  }
-};
+  theano_mlp: "1. Theano Mlp",
+}

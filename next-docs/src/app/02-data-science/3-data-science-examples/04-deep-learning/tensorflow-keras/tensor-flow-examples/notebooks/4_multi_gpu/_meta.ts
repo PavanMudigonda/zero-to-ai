@@ -1,5 +1,3 @@
 export default {
-  "multigpu_basics": {
-    "title": "1. Multigpu Basics"
-  }
-};
+  multigpu_basics: "1. Multigpu Basics",
+}

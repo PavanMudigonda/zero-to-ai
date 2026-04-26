@@ -1,5 +1,3 @@
 export default {
-  "01_GLOSSARY": {
-    "title": "1. Glossary"
-  }
-};
+  "01_GLOSSARY": "1. Glossary",
+}

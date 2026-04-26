@@ -1,11 +1,5 @@
 export default {
-  "course": {
-    "title": "1. Course"
-  },
-  "exercises": {
-    "title": "2. Exercises"
-  },
-  "practice-labs": {
-    "title": "3. Practice Labs"
-  }
-};
+  course: "1. Course",
+  exercises: "2. Exercises",
+  "practice-labs": "3. Practice Labs",
+}

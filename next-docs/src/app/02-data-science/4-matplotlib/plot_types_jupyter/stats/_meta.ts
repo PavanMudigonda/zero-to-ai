@@ -1,29 +1,11 @@
 export default {
-  "boxplot_plot": {
-    "title": "1. Boxplot Plot"
-  },
-  "ecdf": {
-    "title": "2. Ecdf"
-  },
-  "errorbar_plot": {
-    "title": "3. Errorbar Plot"
-  },
-  "eventplot": {
-    "title": "4. Eventplot"
-  },
-  "hexbin": {
-    "title": "5. Hexbin"
-  },
-  "hist2d": {
-    "title": "6. Hist2d"
-  },
-  "hist_plot": {
-    "title": "7. Hist Plot"
-  },
-  "pie": {
-    "title": "8. Pie"
-  },
-  "violin": {
-    "title": "9. Violin"
-  }
-};
+  boxplot_plot: "1. Boxplot Plot",
+  ecdf: "2. Ecdf",
+  errorbar_plot: "3. Errorbar Plot",
+  eventplot: "4. Eventplot",
+  hexbin: "5. Hexbin",
+  hist2d: "6. Hist2d",
+  hist_plot: "7. Hist Plot",
+  pie: "8. Pie",
+  violin: "9. Violin",
+}

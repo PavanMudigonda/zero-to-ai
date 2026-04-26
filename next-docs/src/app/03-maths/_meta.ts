@@ -1,32 +1,12 @@
 export default {
-  "3blue1brown": {
-    "title": "1. Blue1brown"
-  },
-  "advanced": {
-    "title": "2. Advanced"
-  },
-  "cs229-course": {
-    "title": "3. Cs229 Course"
-  },
-  "dli-book": {
-    "title": "4. Dli Book"
-  },
-  "foundational": {
-    "title": "5. Foundational"
-  },
-  "islp-book": {
-    "title": "6. Islp Book"
-  },
-  "ml-problem": {
-    "title": "7. ML Problem"
-  },
-  "mlpp-book": {
-    "title": "8. Mlpp Book"
-  },
-  "mml-book": {
-    "title": "9. Mml Book"
-  },
-  "slp-book": {
-    "title": "10. Slp Book"
-  }
-};
+  "3blue1brown": "1. 3blue1brown",
+  advanced: "2. Advanced",
+  "cs229-course": "3. Cs229 Course",
+  "dli-book": "4. Dli Book",
+  foundational: "5. Foundational",
+  "islp-book": "6. Islp Book",
+  "ml-problem": "7. Ml Problem",
+  "mlpp-book": "8. Mlpp Book",
+  "mml-book": "9. Mml Book",
+  "slp-book": "10. Slp Book",
+}

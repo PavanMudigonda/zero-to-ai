@@ -37,6 +37,12 @@ def main():
             if item.startswith('.') or item.startswith('_') or item in ['layout.tsx', 'globals.css', 'favicon.ico', 'next-env.d.ts']:
                 continue
                 
+            item_path = Path(root) / item
+            if item_path.is_file():
+                # Only include valid nextra page extensions
+                if not item.endswith(('.mdx', '.md', '.tsx', '.jsx')):
+                    continue
+                
             orig_name = item
             if '.' in item:
                 # Provide the chunk before the extension as the route segment

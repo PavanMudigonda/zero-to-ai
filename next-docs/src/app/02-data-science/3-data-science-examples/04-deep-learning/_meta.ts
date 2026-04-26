@@ -1,5 +1,3 @@
 export default {
-  "tensorflow-keras": {
-    "title": "1. Tensorflow Keras"
-  }
-};
+  "tensorflow-keras": "1. Tensorflow Keras",
+}

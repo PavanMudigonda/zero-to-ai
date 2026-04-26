@@ -1,8 +1,4 @@
 export default {
-  "Setup_TensorFlow": {
-    "title": "1. Setup Tensorflow"
-  },
-  "notebooks": {
-    "title": "2. Notebooks"
-  }
-};
+  Setup_TensorFlow: "1. Setup Tensorflow",
+  notebooks: "2. Notebooks",
+}

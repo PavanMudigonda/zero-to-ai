@@ -1,5 +1,3 @@
 export default {
-  "sklearn_is_fitted": {
-    "title": "1. Sklearn Is Fitted"
-  }
-};
+  sklearn_is_fitted: "1. Sklearn Is Fitted",
+}

@@ -1,5 +1,3 @@
 export default {
-  "course": {
-    "title": "1. Course"
-  }
-};
+  course: "1. Course",
+}

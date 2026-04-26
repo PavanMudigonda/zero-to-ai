@@ -1,23 +1,9 @@
 export default {
-  "barbs": {
-    "title": "1. Barbs"
-  },
-  "contour": {
-    "title": "2. Contour"
-  },
-  "contourf": {
-    "title": "3. Contourf"
-  },
-  "imshow": {
-    "title": "4. Imshow"
-  },
-  "pcolormesh": {
-    "title": "5. Pcolormesh"
-  },
-  "quiver": {
-    "title": "6. Quiver"
-  },
-  "streamplot": {
-    "title": "7. Streamplot"
-  }
-};
+  barbs: "1. Barbs",
+  contour: "2. Contour",
+  contourf: "3. Contourf",
+  imshow: "4. Imshow",
+  pcolormesh: "5. Pcolormesh",
+  quiver: "6. Quiver",
+  streamplot: "7. Streamplot",
+}

@@ -1,8 +1,4 @@
 export default {
-  "jenkins-cheatsheet": {
-    "title": "1. Jenkins Cheatsheet"
-  },
-  "jenkins-shared-library": {
-    "title": "2. Jenkins Shared Library"
-  }
-};
+  "jenkins-cheatsheet": "1. Jenkins Cheatsheet",
+  "jenkins-shared-library": "2. Jenkins Shared Library",
+}

@@ -1,8 +1,4 @@
 export default {
-  "README": {
-    "title": "6. Readme"
-  },
-  "assignment": {
-    "title": "12. Assignment"
-  }
-};
+  README: "6. Readme",
+  assignment: "12. Assignment",
+}

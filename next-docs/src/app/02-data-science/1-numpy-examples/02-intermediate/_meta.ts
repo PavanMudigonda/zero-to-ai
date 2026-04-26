@@ -1,35 +1,13 @@
 export default {
-  "copyview": {
-    "title": "1. Copyview"
-  },
-  "filtering": {
-    "title": "2. Filtering"
-  },
-  "fun": {
-    "title": "3. Fun"
-  },
-  "intro": {
-    "title": "4. Intro"
-  },
-  "intro2": {
-    "title": "5. Intro2"
-  },
-  "it": {
-    "title": "6. It"
-  },
-  "s": {
-    "title": "7. S"
-  },
-  "searcher": {
-    "title": "8. Searcher"
-  },
-  "shaper": {
-    "title": "9. Shaper"
-  },
-  "slice": {
-    "title": "10. Slice"
-  },
-  "slice2d": {
-    "title": "11. Slice2d"
-  }
-};
+  copyview: "1. Copyview",
+  filtering: "2. Filtering",
+  fun: "3. Fun",
+  intro: "4. Intro",
+  intro2: "5. Intro2",
+  it: "6. It",
+  s: "7. S",
+  searcher: "8. Searcher",
+  shaper: "9. Shaper",
+  slice: "10. Slice",
+  slice2d: "11. Slice2d",
+}

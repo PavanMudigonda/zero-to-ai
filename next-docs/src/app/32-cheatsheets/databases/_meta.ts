@@ -1,5 +1,3 @@
 export default {
-  "sql-cheatsheet": {
-    "title": "1. SQL Cheatsheet"
-  }
-};
+  "sql-cheatsheet": "1. Sql Cheatsheet",
+}

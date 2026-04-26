@@ -1,6 +1,6 @@
 # ML Model Serving & Deployment Cheatsheet
 
-> Patterns and tools for deploying ML models to production—from FastAPI to Triton.
+> Patterns and tools for deploying ML models to production-from FastAPI to Triton.
 
 ---
 
@@ -578,4 +578,4 @@ locust -f locustfile.py --host=http://localhost:8000 \
 > Use a model registry (MLflow, cloud-native) for version management. Deploy with blue-green or canary strategies. Keep at least 2 versions ready for instant rollback. Tag models with metadata (training data version, metrics, commit hash). Automate promotion through staging → production gates.
 
 **Q: How do you optimize inference latency?**
-> Layers: (1) model optimization—quantization (INT8), pruning, distillation, ONNX conversion, (2) serving optimization—dynamic batching, GPU utilization, model warmup, (3) infrastructure—right-size GPU, place endpoints close to users, use gRPC over REST, (4) caching—cache frequent predictions, use embedding caches.
+> Layers: (1) model optimization-quantization (INT8), pruning, distillation, ONNX conversion, (2) serving optimization-dynamic batching, GPU utilization, model warmup, (3) infrastructure-right-size GPU, place endpoints close to users, use gRPC over REST, (4) caching-cache frequent predictions, use embedding caches.

@@ -1,8 +1,4 @@
 export default {
-  "assignment": {
-    "title": "1. Assignment"
-  },
-  "notebook": {
-    "title": "2. Notebook"
-  }
-};
+  assignment: "1. Assignment",
+  notebook: "2. Notebook",
+}

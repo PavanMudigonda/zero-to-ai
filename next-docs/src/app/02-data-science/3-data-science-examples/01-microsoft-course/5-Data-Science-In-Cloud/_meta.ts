@@ -1,14 +1,6 @@
 export default {
-  "17-Introduction": {
-    "title": "1. Intro"
-  },
-  "18-Low-Code": {
-    "title": "2. Low Code"
-  },
-  "19-Azure": {
-    "title": "3. Azure"
-  },
-  "translations": {
-    "title": "4. Translations"
-  }
-};
+  "17-Introduction": "1. 17 Introduction",
+  "18-Low-Code": "2. 18 Low Code",
+  "19-Azure": "3. 19 Azure",
+  translations: "4. Translations",
+}

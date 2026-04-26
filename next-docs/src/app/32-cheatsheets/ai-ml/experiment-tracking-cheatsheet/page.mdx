@@ -89,7 +89,7 @@ mlflow.tensorflow.autolog()  # TensorFlow
 mlflow.xgboost.autolog()     # XGBoost
 mlflow.lightgbm.autolog()    # LightGBM
 
-# Just train normally—everything is logged automatically
+# Just train normally-everything is logged automatically
 from sklearn.ensemble import RandomForestClassifier
 model = RandomForestClassifier(n_estimators=100)
 model.fit(X_train, y_train)
@@ -421,7 +421,7 @@ Budget-Conscious:    MLflow (self-hosted) + DVC + Git
 ## Interview Scenarios
 
 **Q: How do you ensure ML experiment reproducibility?**
-> Four pillars: (1) Version control code (Git), data (DVC), and configs. (2) Pin all dependencies—Python version, packages, CUDA. (3) Set random seeds everywhere. (4) Log everything—parameters, metrics, artifacts, environment info. Use Docker for environment reproducibility. Every experiment should be re-runnable from its metadata alone.
+> Four pillars: (1) Version control code (Git), data (DVC), and configs. (2) Pin all dependencies-Python version, packages, CUDA. (3) Set random seeds everywhere. (4) Log everything-parameters, metrics, artifacts, environment info. Use Docker for environment reproducibility. Every experiment should be re-runnable from its metadata alone.
 
 **Q: How do you compare and select the best model from multiple experiments?**
 > Use experiment tracking tools (MLflow/W&B) to compare metrics side by side. Define primary metric (e.g., F1 for imbalanced data, RMSE for regression) and constraints (latency &lt; 50ms, model size &lt; 100MB). Use automated HPO (W&B Sweeps, Optuna) for systematic search. Consider not just accuracy but also inference speed, model size, and fairness metrics.

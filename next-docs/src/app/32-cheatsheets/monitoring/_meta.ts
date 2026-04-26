@@ -1,5 +1,3 @@
 export default {
-  "prometheus-grafana-cheatsheet": {
-    "title": "1. Prometheus Grafana Cheatsheet"
-  }
-};
+  "prometheus-grafana-cheatsheet": "1. Prometheus Grafana Cheatsheet",
+}

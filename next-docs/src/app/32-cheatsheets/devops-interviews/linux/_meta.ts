@@ -1,89 +1,31 @@
 export default {
-  "analyzing-log-partition-usage": {
-    "title": "1. Analyzing Log Partition Usage"
-  },
-  "automated-archive-and-retention": {
-    "title": "2. Automated Archive and Retention"
-  },
-  "cpu-resource-management-priority": {
-    "title": "3. Cpu Resource Management Priority"
-  },
-  "debug-ssh-lockout": {
-    "title": "4. Debug Ssh Lockout"
-  },
-  "detect-memory-leak-by-monitoring-rss": {
-    "title": "5. Detect Memory Leak By Monitoring Rss"
-  },
-  "diagnose-nginx-cpu-bottleneck": {
-    "title": "6. Diagnose Nginx Cpu Bottleneck"
-  },
-  "discover-unexpected-background-jobs": {
-    "title": "7. Discover Unexpected Background Jobs"
-  },
-  "fix-inode-exhaustion-issue": {
-    "title": "8. Fix Inode Exhaustion Issue"
-  },
-  "handling-large-log-archives": {
-    "title": "9. Handling Large Log Archives"
-  },
-  "log-file-volume-assessment": {
-    "title": "10. Log File Volume Assessment"
-  },
-  "manage-service-failure-recovery": {
-    "title": "11. Manage Service Failure Recovery"
-  },
-  "managing-high-io-processes": {
-    "title": "12. Managing High Io Processes"
-  },
-  "managing-process-overload": {
-    "title": "13. Managing Process Overload"
-  },
-  "monitoring-process-ownership": {
-    "title": "14. Monitoring Process Ownership"
-  },
-  "port-conflict-resolution": {
-    "title": "15. Port Conflict Resolution"
-  },
-  "purge-empty-folders": {
-    "title": "16. Purge Empty Folders"
-  },
-  "rapid-disk-growth-on-var": {
-    "title": "17. Rapid Disk Growth On Var"
-  },
-  "real-time-log-timestamping": {
-    "title": "18. Real Time Log Timestamping"
-  },
-  "recursive-database-file-backup": {
-    "title": "19. Recursive Database File Backup"
-  },
-  "recursive-keyword-finder": {
-    "title": "20. Recursive Keyword Finder"
-  },
-  "sorted-log-aggregation": {
-    "title": "21. Sorted Log Aggregation"
-  },
-  "throttle-high-io-process": {
-    "title": "22. Throttle High Io Process"
-  },
-  "trace-process-service-ownership": {
-    "title": "23. Trace Process Service Ownership"
-  },
-  "tracing-log-file-writes": {
-    "title": "24. Tracing Log File Writes"
-  },
-  "track-forking-process-hierarchies": {
-    "title": "25. Track Forking Process Hierarchies"
-  },
-  "update-aws-configs": {
-    "title": "26. Update AWS Configs"
-  },
-  "upload-safe-file-partitioning": {
-    "title": "27. Upload Safe File Partitioning"
-  },
-  "uptime-and-load-average-audit": {
-    "title": "28. Uptime and Load Average Audit"
-  },
-  "using-unmounted-partitions": {
-    "title": "29. Using Unmounted Partitions"
-  }
-};
+  "analyzing-log-partition-usage": "1. Analyzing Log Partition Usage",
+  "automated-archive-and-retention": "2. Automated Archive And Retention",
+  "cpu-resource-management-priority": "3. Cpu Resource Management Priority",
+  "debug-ssh-lockout": "4. Debug Ssh Lockout",
+  "detect-memory-leak-by-monitoring-rss": "5. Detect Memory Leak By Monitoring Rss",
+  "diagnose-nginx-cpu-bottleneck": "6. Diagnose Nginx Cpu Bottleneck",
+  "discover-unexpected-background-jobs": "7. Discover Unexpected Background Jobs",
+  "fix-inode-exhaustion-issue": "8. Fix Inode Exhaustion Issue",
+  "handling-large-log-archives": "9. Handling Large Log Archives",
+  "log-file-volume-assessment": "10. Log File Volume Assessment",
+  "manage-service-failure-recovery": "11. Manage Service Failure Recovery",
+  "managing-high-io-processes": "12. Managing High Io Processes",
+  "managing-process-overload": "13. Managing Process Overload",
+  "monitoring-process-ownership": "14. Monitoring Process Ownership",
+  "port-conflict-resolution": "15. Port Conflict Resolution",
+  "purge-empty-folders": "16. Purge Empty Folders",
+  "rapid-disk-growth-on-var": "17. Rapid Disk Growth On Var",
+  "real-time-log-timestamping": "18. Real Time Log Timestamping",
+  "recursive-database-file-backup": "19. Recursive Database File Backup",
+  "recursive-keyword-finder": "20. Recursive Keyword Finder",
+  "sorted-log-aggregation": "21. Sorted Log Aggregation",
+  "throttle-high-io-process": "22. Throttle High Io Process",
+  "trace-process-service-ownership": "23. Trace Process Service Ownership",
+  "tracing-log-file-writes": "24. Tracing Log File Writes",
+  "track-forking-process-hierarchies": "25. Track Forking Process Hierarchies",
+  "update-aws-configs": "26. Update Aws Configs",
+  "upload-safe-file-partitioning": "27. Upload Safe File Partitioning",
+  "uptime-and-load-average-audit": "28. Uptime And Load Average Audit",
+  "using-unmounted-partitions": "29. Using Unmounted Partitions",
+}

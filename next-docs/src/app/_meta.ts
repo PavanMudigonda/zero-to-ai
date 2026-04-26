@@ -36,5 +36,5 @@ export default {
   "30-inference-optimization": "31. 30 Inference Optimization",
   "31-ai-powered-dev-tools": "32. 31 Ai Powered Dev Tools",
   "32-cheatsheets": "33. 32 Cheatsheets",
-  "33-roadmaps": "34. 33 Roadmaps"
+  "33-roadmaps": "34. 33 Roadmaps",
 }

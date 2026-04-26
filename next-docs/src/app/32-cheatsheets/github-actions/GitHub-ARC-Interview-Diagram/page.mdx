@@ -33,7 +33,7 @@ graph TB
 ```
 
 **Talk Track for Interview:**
-> "GitHub ARC runs self-hosted runners on Kubernetes. When a workflow is triggered, GitHub sends the job to the ARC Controller via a GitHub App. The Controller communicates with the Runner Scale Set, which creates ephemeral runner pods to execute jobs. After completion, the pods are destroyed—ensuring clean, secure environments for every build."
+> "GitHub ARC runs self-hosted runners on Kubernetes. When a workflow is triggered, GitHub sends the job to the ARC Controller via a GitHub App. The Controller communicates with the Runner Scale Set, which creates ephemeral runner pods to execute jobs. After completion, the pods are destroyed-ensuring clean, secure environments for every build."
 
 ---
 
@@ -72,7 +72,7 @@ graph LR
 ```
 
 **Talk Track for Interview:**
-> "ARC implements scale-to-zero architecture. At rest, only the controller runs—no runner pods consuming resources. When jobs arrive, it scales instantly from 0 to N runners. After jobs complete, runners terminate automatically. This saves costs compared to static Jenkins agents that run 24/7."
+> "ARC implements scale-to-zero architecture. At rest, only the controller runs-no runner pods consuming resources. When jobs arrive, it scales instantly from 0 to N runners. After jobs complete, runners terminate automatically. This saves costs compared to static Jenkins agents that run 24/7."
 
 ---
 
@@ -173,7 +173,7 @@ helm install arc-runners \
 ```
 
 **Talk Track:**
-> "ARC deploys via Helm in under 5 minutes. I'd use Terraform to manage this across AMD's EKS clusters, with environment-specific values for dev/staging/prod. The GitHub App secret authenticates the controller—no PATs needed."
+> "ARC deploys via Helm in under 5 minutes. I'd use Terraform to manage this across AMD's EKS clusters, with environment-specific values for dev/staging/prod. The GitHub App secret authenticates the controller-no PATs needed."
 
 ---
 
@@ -210,7 +210,7 @@ jobs:
 ```
 
 **Talk Track:**
-> "Workflows use `runs-on: [self-hosted, amd-production]` to target ARC runners. The controller sees the job, spins up a pod with the `amd-production` label, executes the workflow, and terminates the pod. Developers don't change their workflow code—just the `runs-on` label."
+> "Workflows use `runs-on: [self-hosted, amd-production]` to target ARC runners. The controller sees the job, spins up a pod with the `amd-production` label, executes the workflow, and terminates the pod. Developers don't change their workflow code-just the `runs-on` label."
 
 ---
 

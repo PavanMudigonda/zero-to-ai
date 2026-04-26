@@ -1,5 +1,3 @@
 export default {
-  "notebook": {
-    "title": "1. Notebook"
-  }
-};
+  notebook: "1. Notebook",
+}

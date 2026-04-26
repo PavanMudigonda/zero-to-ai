@@ -527,7 +527,7 @@ gcloud dataflow jobs run ml-feature-pipeline \
 > Design depends on latency requirements. For batch: use Airflow/Prefect to orchestrate ETL → data validation (Great Expectations) → feature engineering → write to feature store. For real-time: use Kafka for event streaming → Flink/Spark Streaming for feature computation → write to online feature store (Redis/DynamoDB). Always implement data validation gates before training to catch schema changes and data quality issues.
 
 **Q: How do you handle data quality issues in ML pipelines?**
-> Implement multi-layer validation: (1) Schema validation—check types, required fields, value ranges. (2) Statistical validation—check distributions haven't shifted (mean, variance, percentiles). (3) Business rules—domain-specific checks. Use Great Expectations or Pandera. Fail the pipeline early if validation fails. Log data quality metrics to dashboards. Set up alerts for gradual degradation.
+> Implement multi-layer validation: (1) Schema validation-check types, required fields, value ranges. (2) Statistical validation-check distributions haven't shifted (mean, variance, percentiles). (3) Business rules-domain-specific checks. Use Great Expectations or Pandera. Fail the pipeline early if validation fails. Log data quality metrics to dashboards. Set up alerts for gradual degradation.
 
 **Q: What's the medallion architecture and why use it for ML?**
 > Three layers: Bronze (raw, as-is data), Silver (cleaned, deduplicated, typed), Gold (aggregated, ML-ready features). Benefits for ML: clear data lineage, reproducible feature engineering, ability to time-travel to previous data versions (Delta Lake), separation of concerns between data engineering and ML teams, and easier debugging when model quality drops.

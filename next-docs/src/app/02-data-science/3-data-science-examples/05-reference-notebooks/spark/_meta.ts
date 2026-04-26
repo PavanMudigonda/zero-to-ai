@@ -1,8 +1,4 @@
 export default {
-  "hdfs": {
-    "title": "1. Hdfs"
-  },
-  "spark": {
-    "title": "2. Spark"
-  }
-};
+  hdfs: "1. Hdfs",
+  spark: "2. Spark",
+}
