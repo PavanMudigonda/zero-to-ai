@@ -46,6 +46,7 @@ jobs:
           rm -rf out
           npm run build
         env:
+          NODE_OPTIONS: "--max_old_space_size=8192"
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
