@@ -1,7 +1,11 @@
 import nextra from 'nextra';
+import remarkStripMissingImages from './remark-strip-missing-images.mjs';
 
 const withNextra = nextra({
-  latex: true
+  latex: true,
+  mdxOptions: {
+    remarkPlugins: [remarkStripMissingImages]
+  }
 });
 
 export default withNextra({
