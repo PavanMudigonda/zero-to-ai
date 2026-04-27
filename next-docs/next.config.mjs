@@ -1,5 +1,7 @@
 import nextra from 'nextra';
 import remarkStripMissingImages from './remark-strip-missing-images.mjs';
+import { existsSync, writeFileSync, mkdirSync } from 'fs';
+import { join } from 'path';
 
 const withNextra = nextra({
   latex: true,
@@ -20,9 +22,33 @@ export default withNextra({
     memoryBasedWorkersCount: true,
     webpackBuildWorker: false,
   },
-  webpack(config, { webpack }) {
+  webpack(config, { webpack, isServer }) {
     if (!config.resolve.alias) {
       config.resolve.alias = {};
+    }
+
+    // Workaround: Next.js 14.2.x export crashes with ENOENT on
+    // pages-manifest.json in app-router-only projects. Ensure the
+    // empty manifest exists after the server compilation emits.
+    if (isServer) {
+      config.plugins.push({
+        apply(compiler) {
+          compiler.hooks.afterEmit.tapAsync(
+            'EnsurePagesManifest',
+            (_compilation, callback) => {
+              const manifestPath = join(
+                compiler.outputPath,
+                'pages-manifest.json',
+              );
+              if (!existsSync(manifestPath)) {
+                mkdirSync(compiler.outputPath, { recursive: true });
+                writeFileSync(manifestPath, '{}');
+              }
+              callback();
+            },
+          );
+        },
+      });
     }
     
     config.plugins.push(
