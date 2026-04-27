@@ -7,3 +7,28 @@
     · turbo
 
    Creating an optimized production build ...
+Found 1 warning while optimizing generated CSS:
+
+[2m│   }[22m
+[2m│   .\[all\:vars\] {[22m
+[2m│[22m     all: vars;
+[2m┆[22m         [33m[2m^--[22m Unexpected token Ident("vars")[39m
+[2m┆[22m
+[2m│   }[22m
+[2m│   .\[n\:m\] {[22m
+
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+Failed to compile.
+
+./src/app/_meta.ts:5:3
+Type error: ',' expected.
+
+[0m [90m 3 |[39m     [32m"title"[39m[33m:[39m [32m"Home"[39m[0m
+[0m [90m 4 |[39m }[0m
+[0m[31m[1m>[22m[39m[90m 5 |[39m   [32m"00-course-setup"[39m[33m:[39m [32m"1. Course Setup"[39m[33m,[39m[0m
+[0m [90m   |[39m   [31m[1m^[22m[39m[0m
+[0m [90m 6 |[39m   [32m"01-python"[39m[33m:[39m [32m"2. Python"[39m[33m,[39m[0m
+[0m [90m 7 |[39m   [32m"02-data-science"[39m[33m:[39m [32m"3. Data Science"[39m[33m,[39m[0m
+[0m [90m 8 |[39m   [32m"03-maths"[39m[33m:[39m [32m"4. Maths"[39m[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null
