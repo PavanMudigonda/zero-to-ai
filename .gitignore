@@ -49,6 +49,7 @@ Thumbs.db
 models/
 data/
 datasets/
+!next-docs/src/app/**/datasets/
 
 # Logs
 *.log
