@@ -24,7 +24,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6.4.0
         with:
-          node-version: "24"
+          node-version: "22"
           cache: 'npm'
           cache-dependency-path: 'next-docs/package-lock.json'
 
@@ -32,14 +32,11 @@ jobs:
         working-directory: ./next-docs
         run: npm ci
 
-      - name: Install Wrangler CLI
-        run: npm install --global wrangler@4
-
       - name: Cache Next.js build artifacts
         uses: actions/cache@v5.0.5
         with:
           path: next-docs/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-${{ hashFiles('next-docs/**/*.ts', 'next-docs/**/*.tsx', 'next-docs/**/*.mdx') }}
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-
 

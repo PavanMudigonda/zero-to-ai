@@ -17,10 +17,10 @@ export default withNextra({
   },
   transpilePackages: ['@theguild/remark-mermaid'],
   experimental: {
-    cpus: 1,
-    workerThreads: false,
     memoryBasedWorkersCount: true,
-    webpackBuildWorker: false,
+    // Safely allow more concurrency to speed up 1hr+ build times
+    cpus: 2,
+    workerThreads: true,
   },
   webpack(config, { webpack, isServer }) {
     if (!config.resolve.alias) {
