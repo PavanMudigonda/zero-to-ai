@@ -26,7 +26,8 @@ def has_valid_page(directory):
     return False
 
 def main():
-    app_dir = Path("/Users/pavanmudigonda/code/zero-to-ai/next-docs/src/app")
+    root_dir = Path(__file__).parent.parent.resolve()
+    app_dir = root_dir / "next-docs" / "src" / "app"
     top_level_routes = []
     
     for root, dirs, files in os.walk(app_dir):

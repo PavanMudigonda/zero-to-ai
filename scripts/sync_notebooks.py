@@ -3,8 +3,9 @@ import shutil
 from pathlib import Path
 
 def sync_notebooks():
-    jupyter_dir = Path("/Users/pavanmudigonda/code/zero-to-ai/jupyter-notebooks")
-    app_dir = Path("/Users/pavanmudigonda/code/zero-to-ai/next-docs/src/app")
+    repo_root = Path(__file__).parent.parent.resolve()
+    jupyter_dir = repo_root / "jupyter-notebooks"
+    app_dir = repo_root / "next-docs" / "src" / "app"
 
     if not jupyter_dir.exists():
         print(f"Source directory {jupyter_dir} does not exist.")

@@ -3,7 +3,7 @@ import json
 import argparse
 from pathlib import Path
 
-REPO_ROOT = Path("/Users/pavanmudigonda/code/zero-to-ai")
+REPO_ROOT = Path(__file__).parent.parent.resolve()
 DOCS_APP_DIR = REPO_ROOT / "next-docs" / "src" / "app"
 NOTEBOOKS_DIR = REPO_ROOT / "jupyter-notebooks"
 
