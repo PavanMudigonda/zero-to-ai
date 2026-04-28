@@ -1,0 +1,11 @@
+﻿2026-04-28T12:55:14.5507558Z ##[group]Run npm install --global wrangler@4
+2026-04-28T12:55:14.5507965Z [36;1mnpm install --global wrangler@4[0m
+2026-04-28T12:55:14.5562796Z shell: /usr/bin/bash -e {0}
+2026-04-28T12:55:14.5563062Z env:
+2026-04-28T12:55:14.5563282Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-28T12:55:14.5563566Z ##[endgroup]
+2026-04-28T12:55:22.4081081Z 
+2026-04-28T12:55:22.4081719Z added 35 packages in 8s
+2026-04-28T12:55:22.4083572Z 
+2026-04-28T12:55:22.4083894Z 7 packages are looking for funding
+2026-04-28T12:55:22.4084408Z   run `npm fund` for details

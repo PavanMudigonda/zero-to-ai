@@ -1,0 +1,10 @@
+﻿2026-04-28T14:13:36.7106824Z ##[group]Run # Use linkinator to check internal broken links only without failing the build.
+2026-04-28T14:13:36.7107147Z [36;1m# Use linkinator to check internal broken links only without failing the build.[0m
+2026-04-28T14:13:36.7107372Z [36;1m# We skip all 'http' links to only validate relative/local routing inside 'out'.[0m
+2026-04-28T14:13:36.7107742Z [36;1mnpx linkinator ./out --recurse --skip "^http" || echo "Link validation caught broken links. Check the logs above."[0m
+2026-04-28T14:13:36.7863829Z shell: /usr/bin/bash -e {0}
+2026-04-28T14:13:36.7864111Z env:
+2026-04-28T14:13:36.7864340Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-28T14:13:36.7864627Z ##[endgroup]
+2026-04-28T14:13:37.9731758Z → crawling ./out
+2026-04-28T14:13:37.9828517Z ✓ Successfully scanned 0 links in 0.01 seconds.
