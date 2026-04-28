@@ -1,4 +1,5 @@
 export default {
-  "01_model_landscape": "1. Model Landscape",
-  "02_troubleshooting": "2. Troubleshooting",
+  "00-course-setup": "1. Course Setup",
+  "01_model_landscape": "2. Model Landscape",
+  "02_troubleshooting": "3. Troubleshooting",
 }

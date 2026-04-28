@@ -1,6 +1,7 @@
 export default {
-  assignment: "1. Assignment",
-  notebook: "2. Notebook",
-  solution: "3. Solution",
-  translations: "4. Translations",
+  "10-visualization-distributions": "1. Visualization Distributions",
+  assignment: "2. Assignment",
+  notebook: "3. Notebook",
+  solution: "4. Solution",
+  translations: "5. Translations",
 }

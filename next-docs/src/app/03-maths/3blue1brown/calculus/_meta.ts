@@ -11,4 +11,5 @@ export default {
   "10_higher_order_derivatives": "10. Higher Order Derivatives",
   "11_taylor_series": "11. Taylor Series",
   "12_what_makes_e_special": "12. What Makes E Special",
+  calculus: "13. Calculus",
 }

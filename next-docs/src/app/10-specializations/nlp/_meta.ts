@@ -5,4 +5,5 @@ export default {
   "03_summarization": "4. Summarization",
   "04_sentiment_analysis": "5. Sentiment Analysis",
   "05_information_extraction": "6. Information Extraction",
+  nlp: "7. Nlp",
 }

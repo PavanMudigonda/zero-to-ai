@@ -5,4 +5,5 @@ export default {
   "04_spark_pyspark_basics": "4. Spark Pyspark Basics",
   "05_dbt_data_modeling": "5. Dbt Data Modeling",
   "06_streaming_basics": "6. Streaming Basics",
+  "sql-data-engineering": "7. Sql Data Engineering",
 }

@@ -1,6 +1,7 @@
 export default {
-  calculus: "1. Calculus",
-  "differential-equations": "2. Differential Equations",
-  "linear-algebra": "3. Linear Algebra",
-  "neural-networks": "4. Neural Networks",
+  "3blue1brown": "1. 3blue1brown",
+  calculus: "2. Calculus",
+  "differential-equations": "3. Differential Equations",
+  "linear-algebra": "4. Linear Algebra",
+  "neural-networks": "5. Neural Networks",
 }

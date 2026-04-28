@@ -15,4 +15,5 @@ export default {
   "14_duality_theory": "14. Duality Theory",
   "15_conjugate_gradients": "15. Conjugate Gradients",
   "16_matrix_concentration_inequalities": "16. Matrix Concentration Inequalities",
+  advanced: "17. Advanced",
 }

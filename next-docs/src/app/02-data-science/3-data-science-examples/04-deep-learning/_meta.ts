@@ -1,3 +1,4 @@
 export default {
-  "tensorflow-keras": "1. Tensorflow Keras",
+  "04-deep-learning": "1. Deep Learning",
+  "tensorflow-keras": "2. Tensorflow Keras",
 }

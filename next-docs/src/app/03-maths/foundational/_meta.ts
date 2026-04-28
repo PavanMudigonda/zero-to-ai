@@ -12,4 +12,5 @@ export default {
   "10_ai_foundations_control_theory": "11. Ai Foundations Control Theory",
   "11_markov_models_hmm": "12. Markov Models Hmm",
   "12_optimization_from_scratch_adam": "13. Optimization From Scratch Adam",
+  foundational: "14. Foundational",
 }

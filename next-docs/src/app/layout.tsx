@@ -1,5 +1,6 @@
 import React from 'react';
-import { Layout, Navbar, ThemeSwitch } from 'nextra-theme-docs';
+import { Navbar, ThemeSwitch } from "nextra-theme-docs";
+import FilteredLayout from "./FilteredLayout";
 import { Head, Search } from 'nextra/components';
 import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
@@ -42,7 +43,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <Head>
       </Head>
       <body>
-        <Layout
+        <FilteredLayout
           pageMap={pageMap}
           navbar={navbar}
           footer={footer}
@@ -54,7 +55,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           search={<Search />}
         >
           {children}
-        </Layout>
+        </FilteredLayout>
       </body>
     </html>
   );

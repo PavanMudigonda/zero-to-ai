@@ -1,4 +1,5 @@
 export default {
-  assignment: "1. Assignment",
-  translations: "2. Translations",
+  "03-defining-data": "1. Defining Data",
+  assignment: "2. Assignment",
+  translations: "3. Translations",
 }

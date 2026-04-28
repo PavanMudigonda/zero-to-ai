@@ -12,4 +12,5 @@ export default {
   "12_cramers_rule": "11. Cramers Rule",
   "13_quick_eigenvalue_trick": "12. Quick Eigenvalue Trick",
   "16_abstract_vector_spaces": "13. Abstract Vector Spaces",
+  "linear-algebra": "14. Linear Algebra",
 }

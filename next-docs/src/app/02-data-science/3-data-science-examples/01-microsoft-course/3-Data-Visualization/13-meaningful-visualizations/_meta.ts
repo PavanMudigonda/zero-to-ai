@@ -1,6 +1,7 @@
 export default {
-  assignment: "1. Assignment",
-  solution: "2. Solution",
-  starter: "3. Starter",
-  translations: "4. Translations",
+  "13-meaningful-visualizations": "1. Meaningful Visualizations",
+  assignment: "2. Assignment",
+  solution: "3. Solution",
+  starter: "4. Starter",
+  translations: "5. Translations",
 }

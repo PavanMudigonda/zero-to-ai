@@ -1,8 +1,9 @@
 export default {
-  R: "1. R",
-  assignment: "2. Assignment",
-  notebook: "3. Notebook",
-  "notebook-covidspread": "4. Notebook Covidspread",
-  "notebook-papers": "5. Notebook Papers",
-  translations: "6. Translations",
+  "07-python": "1. Python",
+  R: "2. R",
+  assignment: "3. Assignment",
+  notebook: "4. Notebook",
+  "notebook-covidspread": "5. Notebook Covidspread",
+  "notebook-papers": "6. Notebook Papers",
+  translations: "7. Translations",
 }

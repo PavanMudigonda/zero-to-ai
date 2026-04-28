@@ -6,4 +6,5 @@ export default {
   "05_observational_methods": "5. Observational Methods",
   "06_advanced_topics_applications": "6. Advanced Topics Applications",
   "07_quasi_experimental_designs": "7. Quasi Experimental Designs",
+  "27-causal-inference": "8. Causal Inference",
 }

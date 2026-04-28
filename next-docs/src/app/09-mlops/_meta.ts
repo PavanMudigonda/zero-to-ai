@@ -7,6 +7,7 @@ export default {
   "06_monitoring": "6. Monitoring",
   "07_ci_cd_pipeline": "7. Ci Cd Pipeline",
   "08_cloud_deployment": "8. Cloud Deployment",
-  "09_llm_infrastructure": "9. Llm Infrastructure",
-  "10_llm_optimization": "10. Llm Optimization",
+  "09-mlops": "9. Mlops",
+  "09_llm_infrastructure": "10. Llm Infrastructure",
+  "10_llm_optimization": "11. Llm Optimization",
 }

@@ -1,4 +1,5 @@
 export default {
-  assignment: "1. Assignment",
-  translations: "2. Translations",
+  "17-Introduction": "1. Introduction",
+  assignment: "2. Assignment",
+  translations: "3. Translations",
 }

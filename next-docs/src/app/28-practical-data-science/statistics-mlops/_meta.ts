@@ -4,4 +4,5 @@ export default {
   "03_model_deployment_fastapi": "3. Model Deployment Fastapi",
   "04_ml_monitoring_drift": "4. Ml Monitoring Drift",
   "05_feature_stores": "5. Feature Stores",
+  "statistics-mlops": "6. Statistics Mlops",
 }

@@ -1,4 +1,5 @@
 export default {
-  MatplotlibExample: "1. Matplotlibexample",
-  plot_types_jupyter: "2. Plot Types Jupyter",
+  "4-matplotlib": "1. Matplotlib",
+  MatplotlibExample: "2. Matplotlibexample",
+  plot_types_jupyter: "3. Plot Types Jupyter",
 }

@@ -5,5 +5,6 @@ export default {
   "04_qdrant_guide": "4. Qdrant Guide",
   "05_weaviate_guide": "5. Weaviate Guide",
   "06_milvus_guide": "6. Milvus Guide",
-  "07_aurora_pgvector_guide": "7. Aurora Pgvector Guide",
+  "07-vector-databases": "7. Vector Databases",
+  "07_aurora_pgvector_guide": "8. Aurora Pgvector Guide",
 }

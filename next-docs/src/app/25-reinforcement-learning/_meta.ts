@@ -6,4 +6,5 @@ export default {
   "05_policy_based_methods": "5. Policy Based Methods",
   "06_advanced_topics_applications": "6. Advanced Topics Applications",
   "07_practical_exercises": "7. Practical Exercises",
+  "25-reinforcement-learning": "8. Reinforcement Learning",
 }

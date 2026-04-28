@@ -36,4 +36,5 @@ export default {
   "31-ai-powered-dev-tools": "32. Ai Powered Dev Tools",
   "32-cheatsheets": "33. Cheatsheets",
   "33-roadmaps": "34. Roadmaps",
+  app: "35. App",
 }

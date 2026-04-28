@@ -15,5 +15,6 @@ export default {
   "13_agentic_coding_ides": "14. Agentic Coding Ides",
   "13_challenges": "15. Challenges",
   "14_post-quiz": "16. Post Quiz",
-  "15_pre-quiz": "17. Pre Quiz",
+  "15-ai-agents": "17. Ai Agents",
+  "15_pre-quiz": "18. Pre Quiz",
 }

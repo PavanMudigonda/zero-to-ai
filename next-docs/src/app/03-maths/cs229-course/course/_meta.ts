@@ -17,4 +17,5 @@ export default {
   CS229_PRACTICE: "16. Cs229 Practice",
   X01_anomaly_detection: "17. X01 Anomaly Detection",
   X02_recommender_systems: "18. X02 Recommender Systems",
+  course: "19. Course",
 }

@@ -9,5 +9,6 @@ export default {
   "README.ru": "8. Readme.ru",
   "README.tr": "9. Readme.tr",
   "README.zh-cn": "10. Readme.zh Cn",
-  "for-teachers.hi": "11. For Teachers.hi",
+  TRANSLATIONS: "11. Translations",
+  "for-teachers.hi": "12. For Teachers.hi",
 }

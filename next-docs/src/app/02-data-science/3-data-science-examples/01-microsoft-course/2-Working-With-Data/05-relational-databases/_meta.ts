@@ -1,4 +1,5 @@
 export default {
-  assignment: "1. Assignment",
-  translations: "2. Translations",
+  "05-relational-databases": "1. Relational Databases",
+  assignment: "2. Assignment",
+  translations: "3. Translations",
 }
