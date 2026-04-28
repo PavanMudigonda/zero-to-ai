@@ -22,9 +22,9 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6.4.0
+        uses: actions/setup-node@v4
         with:
-          node-version: "24"
+          node-version: "20"
           cache: 'npm'
           cache-dependency-path: 'next-docs/package-lock.json'
 
@@ -42,7 +42,7 @@ jobs:
 
       - name: Allocate swap space
         run: |
-          sudo fallocate -l 8G /swapfile-new
+          sudo fallocate -l 16G /swapfile-new
           sudo chmod 600 /swapfile-new
           sudo mkswap /swapfile-new
           sudo swapon /swapfile-new
@@ -53,7 +53,7 @@ jobs:
           rm -rf out
           npm run build
         env:
-          NODE_OPTIONS: "--max_old_space_size=6144"
+          NODE_OPTIONS: "--max_old_space_size=8192"
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 

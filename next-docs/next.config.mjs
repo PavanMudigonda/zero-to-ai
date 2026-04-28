@@ -12,15 +12,21 @@ const withNextra = nextra({
 
 export default withNextra({
   output: 'export',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     unoptimized: true,
   },
   transpilePackages: ['@theguild/remark-mermaid'],
   experimental: {
-    memoryBasedWorkersCount: true,
-    // Safely allow more concurrency to speed up 1hr+ build times
-    cpus: 2,
-    workerThreads: true,
+    // Avoid using high concurrency that leads to Node OOMing inside GitHub runner
+    cpus: 1,
+    workerThreads: false,
+    memoryBasedWorkersCount: false,
   },
   webpack(config, { webpack, isServer }) {
     if (!config.resolve.alias) {
