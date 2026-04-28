@@ -13,7 +13,7 @@ NB_DIR = ROOT / "jupyter-notebooks"
 DOCS_DIR = ROOT / "next-docs" / "src" / "app"
 
 # ─────────────────────────────────────────────────────────────
-# 1. MODEL LANDSCAPE NOTEBOOK — full cell 0 rewrite
+# 1. MODEL LANDSCAPE NOTEBOOK - full cell 0 rewrite
 # ─────────────────────────────────────────────────────────────
 
 MODEL_LANDSCAPE_MARKDOWN = r"""# AI Model Landscape: April 27, 2026
@@ -21,7 +21,7 @@ MODEL_LANDSCAPE_MARKDOWN = r"""# AI Model Landscape: April 27, 2026
 A comprehensive reference for learners navigating the rapidly evolving AI ecosystem.
 Use this guide to understand which models, tools, and techniques are worth your time right now.
 
-> **Data source**: rankings, pricing, and speed figures come from [Artificial Analysis](https://artificialanalysis.ai/) — an independent benchmarking service that evaluates 499+ models with its Intelligence Index v4.0.4 (10 evaluations: GDPval-AA, τ²-Bench Telecom, Terminal-Bench Hard, SciCode, AA-LCR, AA-Omniscience, IFBench, Humanity's Last Exam, GPQA Diamond, CritPt).
+> **Data source**: rankings, pricing, and speed figures come from [Artificial Analysis](https://artificialanalysis.ai/) - an independent benchmarking service that evaluates 499+ models with its Intelligence Index v4.0.4 (10 evaluations: GDPval-AA, τ²-Bench Telecom, Terminal-Bench Hard, SciCode, AA-LCR, AA-Omniscience, IFBench, Humanity's Last Exam, GPQA Diamond, CritPt).
 
 ---
 
@@ -41,11 +41,11 @@ Use this guide to understand which models, tools, and techniques are worth your 
 
 These are the state-of-the-art proprietary models available via API. You cannot download or fine-tune them directly, but they set the performance ceiling that open-weight models are converging toward.
 
-### GPT-5.5 (OpenAI) — NEW #1
+### GPT-5.5 (OpenAI) - NEW #1
 
 - **Released**: April 2026
 - **Context window**: 922,000 tokens (922K)
-- **Intelligence Index**: **60** (#1 overall) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **60** (#1 overall) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$11.25/1M tokens (blended)
 - **Output speed**: 72 tokens/sec
 - **Variants**: GPT-5.5 (xhigh), GPT-5.5 (high, score 59), GPT-5.5 (medium, score 57), GPT-5.5 (low, score 51), GPT-5.5 (Non-reasoning, score 41)
@@ -55,7 +55,7 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 ### GPT-5.4 (OpenAI)
 
 - **Context window**: 1,050,000 tokens (1.05M)
-- **Intelligence Index**: **57** (#2 tied) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **57** (#2 tied) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$5.63/1M tokens (blended); $2.50/1M input, $15.00/1M output
 - **Output speed**: 80 tokens/sec
 - **Variants**: GPT-5.4 (xhigh), GPT-5.4 mini (xhigh, score 49, $1.69/1M), GPT-5.4 nano (xhigh, score 44, $0.46/1M)
@@ -63,10 +63,10 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 - **Key feature**: **tool search** - model dynamically looks up tool definitions at inference time
 - **Best for**: complex reasoning, agentic workflows, long-document analysis
 
-### Claude Opus 4.7 (Anthropic) — NEW
+### Claude Opus 4.7 (Anthropic) - NEW
 
 - **Context window**: 1,000,000 tokens (1M)
-- **Intelligence Index**: **57** (#2 tied) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **57** (#2 tied) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$10.00/1M tokens (blended)
 - **Output speed**: 48 tokens/sec
 - **Key advance**: successor to Opus 4.6; top-tier coding, agent workflows, and analysis
@@ -74,7 +74,7 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 
 ### Claude Sonnet 4.6 (Anthropic)
 
-- **Intelligence Index**: **52** (max effort) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **52** (max effort) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Context window**: 1,000,000 tokens (1M)
 - **Pricing**: ~$6.00/1M tokens (blended)
 - **Output speed**: 58 tokens/sec
@@ -82,15 +82,15 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 
 ### Claude 4.5 Haiku (Anthropic)
 
-- **Intelligence Index**: **37** (reasoning) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **37** (reasoning) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$2.00/1M tokens (blended)
 - **Output speed**: 98 tokens/sec
 - **Best for**: fast, cost-effective tasks; high-volume applications
 
-### Gemini 3.1 Pro Preview (Google) — Top Tier
+### Gemini 3.1 Pro Preview (Google) - Top Tier
 
 - **Context window**: 1,000,000 tokens (1M)
-- **Intelligence Index**: **57** (#2 tied) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **57** (#2 tied) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$4.50/1M tokens (blended); $2.00/1M input, $12.00/1M output
 - **Output speed**: 119 tokens/sec
 - **Key advantage**: best intelligence-to-cost ratio among frontier models
@@ -98,20 +98,20 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 
 ### Gemini 3 Flash (Google)
 
-- **Intelligence Index**: **46** — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **46** - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$1.13/1M tokens (blended)
 - **Output speed**: 158 tokens/sec
 - **Best for**: high-throughput production workloads where speed matters more than peak intelligence
 
-### Grok 4.20 (xAI) — NEW
+### Grok 4.20 (xAI) - NEW
 
-- **Context window**: 2,000,000 tokens (2M — largest context window)
-- **Intelligence Index**: **49** — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Context window**: 2,000,000 tokens (2M - largest context window)
+- **Intelligence Index**: **49** - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$3.00/1M tokens (blended)
 - **Output speed**: 88 tokens/sec
 - **Best for**: ultra-long context tasks; real-time information workflows
 
-### Quick Comparison — Frontier Closed Models
+### Quick Comparison - Frontier Closed Models
 
 | Model | Intelligence Index | Context | Price (blended/1M) | Speed (tok/s) | Best For |
 |-------|-------------------|---------|-------------------|--------------|----------|
@@ -126,63 +126,63 @@ These are the state-of-the-art proprietary models available via API. You cannot 
 | GPT-5.4 nano (xhigh) | **44** | 400K | $0.46 | 167 | Budget reasoning |
 | Claude 4.5 Haiku | **37** | 200K | $2.00 | 98 | Fast, affordable |
 
-*Intelligence Index scores from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models) — composite of 10 independent benchmarks ranking 499+ models.*
+*Intelligence Index scores from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models) - composite of 10 independent benchmarks ranking 499+ models.*
 
 ---
 
 ## 2. Best Open-Weight Models (April 2026)
 
-Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately. The gap with closed models has narrowed dramatically — the top open-weight model (Kimi K2.6) now scores within 6 points of GPT-5.5.
+Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately. The gap with closed models has narrowed dramatically - the top open-weight model (Kimi K2.6) now scores within 6 points of GPT-5.5.
 
-### Kimi K2.6 (Moonshot AI) — #1 Open-Weight
+### Kimi K2.6 (Moonshot AI) - #1 Open-Weight
 
-- **Intelligence Index**: **54** (#1 open-weight) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **54** (#1 open-weight) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing** (API): ~$1.71/1M tokens (blended)
 - **Context**: 256K tokens
 - **Key feature**: strong reasoning, multilingual, open weights with commercial use
 - **Best for**: production deployments needing top open-weight quality
 
-### MiMo-V2.5-Pro (Xiaomi) — #2 Open-Weight, NEW
+### MiMo-V2.5-Pro (Xiaomi) - #2 Open-Weight, NEW
 
-- **Intelligence Index**: **54** (#2 open-weight, tied with K2.6) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **54** (#2 open-weight, tied with K2.6) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing** (API): ~$1.50/1M tokens (blended)
 - **Context**: 1,000,000 tokens (1M)
 - **Output speed**: 63 tokens/sec
 - **Key feature**: Xiaomi's top-performing model; excellent quality at low cost
 - **Best for**: cost-effective production with 1M context support
 
-### DeepSeek V4 Pro / V4 Flash (DeepSeek) — NEW
+### DeepSeek V4 Pro / V4 Flash (DeepSeek) - NEW
 
 - **V4 Pro (Max)**: Intelligence Index **52**, ~$2.17/1M tokens, 38 tok/s
-- **V4 Flash (Max)**: Intelligence Index **47**, ~$0.17/1M tokens, 83 tok/s — exceptional value
+- **V4 Flash (Max)**: Intelligence Index **47**, ~$0.17/1M tokens, 83 tok/s - exceptional value
 - **Context**: 1,000,000 tokens (1M) for both
 - **Key advance**: DeepSeek V4 generation marks a major quality leap; V4 Flash is one of the cheapest competitive models
 - **Best for**: V4 Pro for quality, V4 Flash for budget production workloads
 
-### Muse Spark (Meta) — NEW
+### Muse Spark (Meta) - NEW
 
-- **Intelligence Index**: **52** — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **52** - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Context**: 262K tokens
 - **Key feature**: Meta's newest frontier-class open model
 - **Best for**: high-quality open-weight deployment
 
-### GLM-5.1 (Z AI) — Updated
+### GLM-5.1 (Z AI) - Updated
 
-- **Intelligence Index**: **51** (up from GLM-5 at 50) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **51** (up from GLM-5 at 50) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing** (API): ~$2.15/1M tokens (blended)
 - **Output speed**: 51 tokens/sec
 - **Context**: 200K tokens
 - **Best for**: top-tier open-weight quality with strong Chinese language support
 
-### MiniMax-M2.7 (MiniMax) — NEW
+### MiniMax-M2.7 (MiniMax) - NEW
 
-- **Intelligence Index**: **50** — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
-- **Pricing**: ~$0.53/1M tokens (blended) — extremely affordable for its quality
+- **Intelligence Index**: **50** - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Pricing**: ~$0.53/1M tokens (blended) - extremely affordable for its quality
 - **Output speed**: 47 tokens/sec
 - **Context**: 205K tokens
 - **Best for**: budget production where quality still matters
 
-### Qwen 3.5 / 3.6 Family (Alibaba) — Updated
+### Qwen 3.5 / 3.6 Family (Alibaba) - Updated
 
 - **Qwen3.6 Max Preview**: Intelligence Index **52**, ~$2.92/1M, 33 tok/s
 - **Qwen3.5 397B-A17B**: Intelligence Index **45**, ~$1.35/1M, 52 tok/s
@@ -190,25 +190,25 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 - **License**: Apache 2.0 lineage for core checkpoints
 - **Best for**: one family spanning edge to high-end cluster deployments
 
-### gpt-oss-120B / gpt-oss-20B (OpenAI) — NEW Open Source!
+### gpt-oss-120B / gpt-oss-20B (OpenAI) - NEW Open Source!
 
-- **gpt-oss-120B (high)**: Intelligence Index **33**, ~$0.26/1M, 209 tok/s — blazing fast
-- **gpt-oss-20B (high)**: Intelligence Index **24**, ~$0.10/1M, 273 tok/s — fastest model tested
+- **gpt-oss-120B (high)**: Intelligence Index **33**, ~$0.26/1M, 209 tok/s - blazing fast
+- **gpt-oss-20B (high)**: Intelligence Index **24**, ~$0.10/1M, 273 tok/s - fastest model tested
 - **Key breakthrough**: OpenAI's first open-source models! Available on 23 providers
 - **License**: check OpenAI open source terms
 - **Best for**: ultra-low-cost, high-speed production workloads; API provider competition
 
-### NVIDIA Nemotron 3 Super (NVIDIA) — NEW
+### NVIDIA Nemotron 3 Super (NVIDIA) - NEW
 
-- **Intelligence Index**: **36** — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **36** - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Pricing**: ~$0.41/1M tokens (blended)
 - **Output speed**: 155 tokens/sec
 - **Context**: 1M tokens
 - **Best for**: fast, affordable inference; NVIDIA ecosystem integration
 
-### Gemma 4 31B (Google) — Updated
+### Gemma 4 31B (Google) - Updated
 
-- **Intelligence Index**: **39** (reasoning mode) — [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
+- **Intelligence Index**: **39** (reasoning mode) - [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models)
 - **Context**: 256K tokens
 - **Key improvement**: major upgrade from Gemma 3; fits on a single consumer GPU with quantization
 - **Best for**: single-GPU deployment, multilingual applications
@@ -227,7 +227,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 - **License**: Llama 4 Community License
 - **Best for**: ultra-long context workflows
 
-### Quick Comparison — Open-Weight Models
+### Quick Comparison - Open-Weight Models
 
 | Model | Intelligence Index | Context | Price (blended/1M) | Speed (tok/s) | Best For |
 |-------|-------------------|---------|-------------------|--------------|----------|
@@ -248,7 +248,7 @@ Open-weight models can be downloaded, self-hosted, fine-tuned, and run privately
 
 *Intelligence Index (OW = open-weight rank) from [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/models). April 2026 data.*
 
-### Openness Index — How Open Are These Models?
+### Openness Index - How Open Are These Models?
 
 Artificial Analysis now publishes an [Openness Index](https://artificialanalysis.ai/evaluations/artificial-analysis-openness-index) scoring models on model availability and transparency (methodology, training data). Top scores:
 
@@ -279,7 +279,7 @@ Best when you have limited GPU memory (less than 24GB) or need fast inference.
 | Phi-4-mini | 3.8B | MIT | Strong reasoning for size; MIT license |
 | Gemma 4 E4B | ~4B | Gemma ToU | Google's latest small model |
 
-**Recommended starter**: `Qwen/Qwen2.5-7B-Instruct` — best quality, Apache 2.0 license, great tokenizer.
+**Recommended starter**: `Qwen/Qwen2.5-7B-Instruct` - best quality, Apache 2.0 license, great tokenizer.
 
 ### Medium Models (8B to 14B parameters)
 
@@ -397,7 +397,7 @@ model = FastLanguageModel.get_peft_model(
 
 | Tool | Throughput | Best For | Install |
 |------|-----------|----------|---------|
-| **SGLang** | Highest (~16,200 tok/s H100) | Production API, RAG, agents — RadixAttention caches shared prefixes | `pip install sglang[all]` |
+| **SGLang** | Highest (~16,200 tok/s H100) | Production API, RAG, agents - RadixAttention caches shared prefixes | `pip install sglang[all]` |
 | **vLLM** | Very High (~12,500 tok/s H100) | Production API, multi-LoRA serving, AMD support | `pip install vllm` |
 | **TGI** | High (~9,800 tok/s H100) | HuggingFace ecosystem, Inference Endpoints | Docker |
 | **Ollama** | Medium | Local dev, Apple Silicon, edge, no GPU | Single binary |
@@ -484,10 +484,10 @@ This section captures practical updates since the March snapshot so learners can
 
 ### Benchmark Methodology Updates (April 2026)
 
-- **Intelligence Index v4.0.4**: Now includes 10 evaluations across 4 categories — Agents (25%), Coding (25%), General (25%), Scientific Reasoning (25%).
+- **Intelligence Index v4.0.4**: Now includes 10 evaluations across 4 categories - Agents (25%), Coding (25%), General (25%), Scientific Reasoning (25%).
 - **New evaluations added**: GDPval-AA (real-world knowledge work), AA-Omniscience (knowledge & hallucination), CritPt (physics reasoning).
 - **Removed from index**: MMLU-Pro, LiveCodeBench, AIME 2025 (still available as standalone evaluations).
-- **AA-Omniscience**: New hallucination benchmark — rewards accuracy, penalizes hallucinations, neutral on abstentions. Gemini 3.1 Pro Preview leads (score 33).
+- **AA-Omniscience**: New hallucination benchmark - rewards accuracy, penalizes hallucinations, neutral on abstentions. Gemini 3.1 Pro Preview leads (score 33).
 - **GDPval-AA**: Agentic task benchmark covering 44 occupations. GPT-5.5 leads (ELO 1780).
 - **API Provider benchmarking**: Cerebras is fastest (1,833 tok/s for gpt-oss-120B), DeepInfra is cheapest.
 
@@ -524,11 +524,11 @@ A structured learning path for April 2026. Follow this order to build solid foun
 
 **Goal**: Understand what LLMs are and how to use them via API.
 
-1. **Python for AI** — numpy, pandas, matplotlib basics; Jupyter notebooks
-2. **Prompt engineering** — zero-shot, few-shot, chain-of-thought; system prompts
-3. **OpenAI / Anthropic API** — calling GPT-5.5 and Claude Opus 4.7; streaming; function calling
-4. **Tokenization** — how text becomes tokens; tiktoken; why context window size matters
-5. **RAG basics** — chunking documents, embedding models, Chroma, similarity search
+1. **Python for AI** - numpy, pandas, matplotlib basics; Jupyter notebooks
+2. **Prompt engineering** - zero-shot, few-shot, chain-of-thought; system prompts
+3. **OpenAI / Anthropic API** - calling GPT-5.5 and Claude Opus 4.7; streaming; function calling
+4. **Tokenization** - how text becomes tokens; tiktoken; why context window size matters
+5. **RAG basics** - chunking documents, embedding models, Chroma, similarity search
 
 **Milestone**: Build a document Q&A chatbot using RAG with a frontier API model.
 
@@ -536,12 +536,12 @@ A structured learning path for April 2026. Follow this order to build solid foun
 
 **Goal**: Run and understand open-weight models locally and in the cloud.
 
-1. **Hugging Face Transformers** — `pipeline`, `AutoModelForCausalLM`, `AutoTokenizer`
-2. **Running models locally** — Ollama (easiest), then llama.cpp
-3. **Quantization** — understand BF16 vs GPTQ vs AWQ vs GGUF; trade-offs
-4. **Chat templates** — ChatML, Llama 3 template, Qwen template; why they matter
-5. **vLLM / SGLang** — run a production-grade API server; benchmark throughput
-6. **Model selection** — when to use Kimi K2.6 vs DeepSeek V4 vs Gemma 4; the decision tree above
+1. **Hugging Face Transformers** - `pipeline`, `AutoModelForCausalLM`, `AutoTokenizer`
+2. **Running models locally** - Ollama (easiest), then llama.cpp
+3. **Quantization** - understand BF16 vs GPTQ vs AWQ vs GGUF; trade-offs
+4. **Chat templates** - ChatML, Llama 3 template, Qwen template; why they matter
+5. **vLLM / SGLang** - run a production-grade API server; benchmark throughput
+6. **Model selection** - when to use Kimi K2.6 vs DeepSeek V4 vs Gemma 4; the decision tree above
 
 **Milestone**: Self-host a model via SGLang and serve it behind a FastAPI endpoint.
 
@@ -549,13 +549,13 @@ A structured learning path for April 2026. Follow this order to build solid foun
 
 **Goal**: Adapt pre-trained models to specific tasks.
 
-1. **Dataset preparation** — instruction format, chat format; quality over quantity
-2. **LoRA fundamentals** — what low-rank adapters do mathematically; rank, alpha, target modules
-3. **QLoRA with Unsloth** — fine-tune a 7B model in under 4GB VRAM
-4. **SFT (Supervised Fine-Tuning)** — `SFTTrainer` from TRL; data formatting; evaluation during training
-5. **DPO / SimPO alignment** — preference datasets; `DPOTrainer`; when to align vs just SFT
-6. **GRPO for reasoning** — training a model to think step-by-step with RL
-7. **Evaluation** — ROUGE, BERTScore, LLM-as-judge; avoiding eval data contamination
+1. **Dataset preparation** - instruction format, chat format; quality over quantity
+2. **LoRA fundamentals** - what low-rank adapters do mathematically; rank, alpha, target modules
+3. **QLoRA with Unsloth** - fine-tune a 7B model in under 4GB VRAM
+4. **SFT (Supervised Fine-Tuning)** - `SFTTrainer` from TRL; data formatting; evaluation during training
+5. **DPO / SimPO alignment** - preference datasets; `DPOTrainer`; when to align vs just SFT
+6. **GRPO for reasoning** - training a model to think step-by-step with RL
+7. **Evaluation** - ROUGE, BERTScore, LLM-as-judge; avoiding eval data contamination
 
 **Milestone**: Fine-tune Qwen2.5-7B on a domain-specific dataset, align with DPO, and evaluate with an LLM judge.
 
@@ -563,12 +563,12 @@ A structured learning path for April 2026. Follow this order to build solid foun
 
 **Goal**: Build production-grade agentic systems.
 
-1. **Function calling / tool use** — structured outputs, JSON mode; tool definitions
-2. **ReAct agents** — Reason + Act loop; building with OpenAI Agents SDK
-3. **MCP (Model Context Protocol)** — write an MCP server; connect to Claude Desktop / your agent
-4. **Advanced RAG** — hybrid search, reranking (ColBERT, cross-encoders), HyDE, RAPTOR
-5. **LangGraph 1.0** — stateful agents, branching workflows, multi-agent handoffs
-6. **Agentic evaluation** — trajectory evaluation; tool use accuracy; GDPval-AA benchmarks; AA-AgentPerf
+1. **Function calling / tool use** - structured outputs, JSON mode; tool definitions
+2. **ReAct agents** - Reason + Act loop; building with OpenAI Agents SDK
+3. **MCP (Model Context Protocol)** - write an MCP server; connect to Claude Desktop / your agent
+4. **Advanced RAG** - hybrid search, reranking (ColBERT, cross-encoders), HyDE, RAPTOR
+5. **LangGraph 1.0** - stateful agents, branching workflows, multi-agent handoffs
+6. **Agentic evaluation** - trajectory evaluation; tool use accuracy; GDPval-AA benchmarks; AA-AgentPerf
 
 **Milestone**: Build a multi-step research agent using LangGraph + MCP that can search the web, read documents, and write structured reports.
 
@@ -576,12 +576,12 @@ A structured learning path for April 2026. Follow this order to build solid foun
 
 **Goal**: Deploy and maintain AI systems reliably.
 
-1. **Docker + GPU deployment** — containerizing vLLM/SGLang; docker-compose with GPU support
-2. **Monitoring** — structured logging; latency p95/p99; token usage; refusal rate
-3. **Cost optimization** — quantization trade-offs; batching strategies; API provider selection using [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/providers)
-4. **Continuous evaluation** — A/B testing model updates; production feedback loops
-5. **Security** — prompt injection defense; PII detection; rate limiting; API key management
-6. **MLflow / Weights & Biases** — experiment tracking; model registry; deployment tracking
+1. **Docker + GPU deployment** - containerizing vLLM/SGLang; docker-compose with GPU support
+2. **Monitoring** - structured logging; latency p95/p99; token usage; refusal rate
+3. **Cost optimization** - quantization trade-offs; batching strategies; API provider selection using [artificialanalysis.ai](https://artificialanalysis.ai/leaderboards/providers)
+4. **Continuous evaluation** - A/B testing model updates; production feedback loops
+5. **Security** - prompt injection defense; PII detection; rate limiting; API key management
+6. **MLflow / Weights & Biases** - experiment tracking; model registry; deployment tracking
 
 **Milestone**: Deploy your fine-tuned model to a cloud GPU with monitoring, a Docker container, cost tracking, and an A/B testing setup.
 
@@ -607,13 +607,13 @@ Observability       Langfuse (open source) or LangSmith
 ```
 
 **Key resources**:
-- [Artificial Analysis LLM Leaderboard](https://artificialanalysis.ai/leaderboards/models) — live rankings of 499+ models
-- [Artificial Analysis Intelligence Index Methodology](https://artificialanalysis.ai/methodology/intelligence-benchmarking) — how benchmarks are conducted
-- [Artificial Analysis API Providers](https://artificialanalysis.ai/leaderboards/providers) — compare speed and cost across 23+ providers
-- [Artificial Analysis AI Agents](https://artificialanalysis.ai/agents) — compare general work AI agents
-- [Artificial Analysis Image/Video Arena](https://artificialanalysis.ai/image/arena) — compare image and video generation models
+- [Artificial Analysis LLM Leaderboard](https://artificialanalysis.ai/leaderboards/models) - live rankings of 499+ models
+- [Artificial Analysis Intelligence Index Methodology](https://artificialanalysis.ai/methodology/intelligence-benchmarking) - how benchmarks are conducted
+- [Artificial Analysis API Providers](https://artificialanalysis.ai/leaderboards/providers) - compare speed and cost across 23+ providers
+- [Artificial Analysis AI Agents](https://artificialanalysis.ai/agents) - compare general work AI agents
+- [Artificial Analysis Image/Video Arena](https://artificialanalysis.ai/image/arena) - compare image and video generation models
 
-The pace of change in this field is fast, but the underlying principles — retrieval, fine-tuning, alignment, evaluation, deployment — remain stable. Master the fundamentals and you will adapt quickly as the specific tools evolve."""
+The pace of change in this field is fast, but the underlying principles - retrieval, fine-tuning, alignment, evaluation, deployment - remain stable. Master the fundamentals and you will adapt quickly as the specific tools evolve."""
 
 def update_notebook_cell(nb_path, cell_index, new_source):
     """Update a specific cell's source in a notebook."""

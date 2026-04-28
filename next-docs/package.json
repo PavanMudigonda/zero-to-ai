@@ -22,10 +22,13 @@
     "@jupyter-kit/theme-default": "^3.0.0",
     "@mdx-js/mdx": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
+    "@playwright/test": "^1.59.1",
     "katex": "^0.16.45",
     "next": "^14.2.35",
     "nextra": "^4.6.1",
     "nextra-theme-docs": "^4.6.1",
+    "playwright": "^1.59.1",
+    "puppeteer": "^24.42.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

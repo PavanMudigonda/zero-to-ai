@@ -12,7 +12,7 @@ export default {
   "11_agent_evaluation": "11. Agent Evaluation",
   "12_assignment": "12. Assignment",
   "12_vscode_agent_debug_logs": "13. Vscode Agent Debug Logs",
-  "13_agentic_coding_ides": "14. Agentic Coding IDEs",
+  "13_agentic_coding_ides": "14. Agentic Coding Ides",
   "13_challenges": "15. Challenges",
   "14_post-quiz": "16. Post Quiz",
   "15_pre-quiz": "17. Pre Quiz",
