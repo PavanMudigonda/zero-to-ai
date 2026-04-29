@@ -2,62 +2,99 @@ import React from 'react';
 import { Navbar, ThemeSwitch } from "nextra-theme-docs";
 import FilteredLayout from "./FilteredLayout";
 import { Head, Search } from 'nextra/components';
-import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
 import './globals.css';
 import { Metadata, Viewport } from 'next';
-import { headers } from 'next/headers';
 import { getStaticSiteRoutes } from '@/lib/site-routes';
 
-function collapseInactiveSections(items: any[], activeSection?: string): any[] {
-  return items.map((item) => {
-    if (!item || !Array.isArray(item.children)) {
-      return item;
-    }
+type NavNode = {
+  name: string;
+  route: string;
+  title: string;
+  children: Map<string, NavNode>;
+};
 
-    if (!activeSection || item.name !== activeSection) {
-      return {
-        ...item,
-        children: [],
-      };
-    }
+function segmentToTitle(segment: string): string {
+  if (segment === 'index') {
+    return 'Home';
+  }
 
-    return item;
-  });
+  return segment
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/\b\w/g, (character) => character.toUpperCase());
 }
 
-async function getSerializedPageMap(): Promise<any[]> {
-  const requestPath = headers().get('Next-Url')?.split('?')[0] || '/';
-  const topLevelSection = requestPath.split('/').filter(Boolean)[0];
-  const rootPageMap = await getPageMap('/');
+function createNavNode(name: string, route: string): NavNode {
+  return {
+    name,
+    route,
+    title: segmentToTitle(name),
+    children: new Map<string, NavNode>(),
+  };
+}
 
-  if (!topLevelSection) {
-    return collapseInactiveSections(rootPageMap);
-  }
+function insertRoute(nodes: Map<string, NavNode>, route: string) {
+  const segments = route.split('/').filter(Boolean);
+  let currentNodes = nodes;
+  let currentRoute = '';
 
-  let sectionPageMap: any[] | null = null;
+  for (const segment of segments) {
+    currentRoute += `/${segment}`;
 
-  try {
-    sectionPageMap = await getPageMap(`/${topLevelSection}`);
-  } catch {
-    sectionPageMap = null;
-  }
-
-  return collapseInactiveSections(rootPageMap, topLevelSection).map((item) => {
-    if (
-      sectionPageMap &&
-      item &&
-      item.name === topLevelSection &&
-      Array.isArray(item.children)
-    ) {
-      return {
-        ...item,
-        children: sectionPageMap,
-      };
+    if (!currentNodes.has(segment)) {
+      currentNodes.set(segment, createNavNode(segment, currentRoute));
     }
 
-    return item;
-  });
+    currentNodes = currentNodes.get(segment)!.children;
+  }
+}
+
+function compareNavNodes(left: NavNode, right: NavNode): number {
+  return left.route.localeCompare(right.route);
+}
+
+function materializePageMap(nodes: Map<string, NavNode>): any[] {
+  return Array.from(nodes.values())
+    .sort(compareNavNodes)
+    .map((node) => {
+      if (node.children.size > 0) {
+        return {
+          name: node.name,
+          route: node.route,
+          title: node.title,
+          children: materializePageMap(node.children),
+        };
+      }
+
+      return {
+        name: node.name,
+        route: node.route,
+        title: node.title,
+      };
+    });
+}
+
+function buildLightweightPageMap(routes: string[]): any[] {
+  const rootNodes = new Map<string, NavNode>();
+
+  for (const route of routes) {
+    if (route === '/') {
+      continue;
+    }
+
+    insertRoute(rootNodes, route);
+  }
+
+  return [
+    {
+      name: 'index',
+      route: '/',
+      title: 'Home',
+    },
+    ...materializePageMap(rootNodes),
+  ];
 }
 
 export const viewport: Viewport = {
@@ -127,8 +164,8 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const pageMap = await getSerializedPageMap();
   const routeIndex = getStaticSiteRoutes();
+  const pageMap = buildLightweightPageMap(routeIndex);
   const websiteStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -171,11 +208,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.__ZERO_TO_AI_ROUTE_INDEX__ = ${JSON.stringify(routeIndex)};`,
-          }}
         />
         <FilteredLayout
           pageMap={pageMap}

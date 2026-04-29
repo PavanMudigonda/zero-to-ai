@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
@@ -25,9 +25,43 @@ const myEditor = createEditorPlugin({
 });
 const myKatex = createKatexPlugin();
 
+let routeIndexPromise: Promise<string[]> | null = null;
+
+function getRouteIndex(): Promise<string[]> {
+  if (!routeIndexPromise) {
+    routeIndexPromise = fetch('/route-index.json')
+      .then(async (response) => {
+        if (!response.ok) {
+          throw new Error(`Failed to load route index: ${response.status}`);
+        }
+
+        return response.json() as Promise<string[]>;
+      })
+      .catch(() => []);
+  }
+
+  return routeIndexPromise;
+}
+
 export default function NotebookViewer({ ipynb }: { ipynb: any }) {
   const pathname = usePathname();
-  const normalizedNotebook = normalizeNotebookLinks(ipynb, pathname || '/');
+  const [routeIndex, setRouteIndex] = useState<string[]>([]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    void getRouteIndex().then((routes) => {
+      if (isMounted) {
+        setRouteIndex(routes);
+      }
+    });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const normalizedNotebook = normalizeNotebookLinks(ipynb, pathname || '/', routeIndex);
 
   // Infer the GitHub notebook path intelligently from the App router URL structure
   const segments = typeof pathname === 'string' ? pathname.split('/').filter(Boolean) : [];

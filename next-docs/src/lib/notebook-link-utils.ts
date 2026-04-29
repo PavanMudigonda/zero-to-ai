@@ -124,12 +124,14 @@ function normalizeMarkdownText(text: string, pathname: string, routeIndex: strin
   });
 }
 
-export function normalizeNotebookLinks(ipynb: NotebookDocument, currentPathname: string): NotebookDocument {
+export function normalizeNotebookLinks(
+  ipynb: NotebookDocument,
+  currentPathname: string,
+  routeIndex: string[] = [],
+): NotebookDocument {
   if (!Array.isArray(ipynb.cells)) {
     return ipynb;
   }
-
-  const routeIndex = window.__ZERO_TO_AI_ROUTE_INDEX__ ?? [];
 
   return {
     ...ipynb,
