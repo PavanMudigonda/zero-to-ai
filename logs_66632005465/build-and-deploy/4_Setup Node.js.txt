@@ -1,0 +1,24 @@
+﻿2026-04-29T01:00:33.2158202Z ##[group]Run actions/setup-node@v6
+2026-04-29T01:00:33.2158552Z with:
+2026-04-29T01:00:33.2158777Z   node-version: 24
+2026-04-29T01:00:33.2158987Z   cache: npm
+2026-04-29T01:00:33.2159251Z   cache-dependency-path: next-docs/package-lock.json
+2026-04-29T01:00:33.2159563Z   check-latest: false
+2026-04-29T01:00:33.2159911Z   token: ***
+2026-04-29T01:00:33.2160127Z   package-manager-cache: true
+2026-04-29T01:00:33.2160365Z env:
+2026-04-29T01:00:33.2160568Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:00:33.2160848Z ##[endgroup]
+2026-04-29T01:00:33.3694498Z Attempting to download 24...
+2026-04-29T01:00:33.7149782Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+2026-04-29T01:00:34.0785628Z Extracting ...
+2026-04-29T01:00:34.0902746Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ed50a9e9-a169-47e2-a09b-0cc9ef40122e -f /home/runner/work/_temp/36473525-0b88-4cff-a549-e580c8b8323c
+2026-04-29T01:00:35.4428031Z Adding to the cache ...
+2026-04-29T01:00:37.2420054Z ##[group]Environment details
+2026-04-29T01:00:37.4798798Z node: v24.15.0
+2026-04-29T01:00:37.4799212Z npm: 11.12.1
+2026-04-29T01:00:37.4799492Z yarn: 1.22.22
+2026-04-29T01:00:37.4800208Z ##[endgroup]
+2026-04-29T01:00:37.4820332Z [command]/opt/hostedtoolcache/node/24.15.0/x64/bin/npm config get cache
+2026-04-29T01:00:37.5759323Z /home/runner/.npm
+2026-04-29T01:00:37.6465224Z npm cache is not found

@@ -1,0 +1,301 @@
+﻿2026-04-29T00:58:48.1163801Z Current runner version: '2.334.0'
+2026-04-29T00:58:48.1199007Z ##[group]Runner Image Provisioner
+2026-04-29T00:58:48.1200357Z Hosted Compute Agent
+2026-04-29T00:58:48.1201222Z Version: 20260213.493
+2026-04-29T00:58:48.1202154Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-29T00:58:48.1203647Z Build Date: 2026-02-13T00:28:41Z
+2026-04-29T00:58:48.1204637Z Worker ID: {b9f98c8b-dac7-467e-a99f-841b845b6b68}
+2026-04-29T00:58:48.1206313Z Azure Region: eastus2
+2026-04-29T00:58:48.1207199Z ##[endgroup]
+2026-04-29T00:58:48.1209764Z ##[group]Operating System
+2026-04-29T00:58:48.1210724Z Ubuntu
+2026-04-29T00:58:48.1211491Z 24.04.4
+2026-04-29T00:58:48.1212314Z LTS
+2026-04-29T00:58:48.1213326Z ##[endgroup]
+2026-04-29T00:58:48.1214069Z ##[group]Runner Image
+2026-04-29T00:58:48.1214925Z Image: ubuntu-24.04
+2026-04-29T00:58:48.1215898Z Version: 20260413.86.1
+2026-04-29T00:58:48.1217812Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-29T00:58:48.1220343Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+2026-04-29T00:58:48.1221893Z ##[endgroup]
+2026-04-29T00:58:48.1223948Z ##[group]GITHUB_TOKEN Permissions
+2026-04-29T00:58:48.1226986Z Contents: read
+2026-04-29T00:58:48.1227919Z Deployments: write
+2026-04-29T00:58:48.1228688Z Metadata: read
+2026-04-29T00:58:48.1229556Z ##[endgroup]
+2026-04-29T00:58:48.1232520Z Secret source: Actions
+2026-04-29T00:58:48.1234158Z Prepare workflow directory
+2026-04-29T00:58:48.1786245Z Prepare all required actions
+2026-04-29T00:58:48.1839908Z Getting action download info
+2026-04-29T00:58:49.0378083Z Download action repository 'actions/checkout@v6.0.2' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-04-29T00:58:49.1978051Z Download action repository 'actions/setup-node@v6' (SHA:48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e)
+2026-04-29T00:58:49.5409737Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-04-29T00:58:49.6683539Z Download action repository 'actions/upload-artifact@v7.0.1' (SHA:043fb46d1a93c77aae656e7c1c64a875d1fc6a0a)
+2026-04-29T00:58:49.9658484Z Download action repository 'cloudflare/pages-action@v1.5.0' (SHA:f0a1cd58cd66095dee69bfa18fa5efd1dde93bca)
+2026-04-29T00:58:50.2706011Z Complete job name: build-and-deploy
+2026-04-29T00:58:50.3381268Z ##[group]Run actions/checkout@v6.0.2
+2026-04-29T00:58:50.3381944Z with:
+2026-04-29T00:58:50.3382246Z   fetch-depth: 0
+2026-04-29T00:58:50.3382666Z   repository: PavanMudigonda/zero-to-ai
+2026-04-29T00:58:50.3383608Z   token: ***
+2026-04-29T00:58:50.3383922Z   ssh-strict: true
+2026-04-29T00:58:50.3384229Z   ssh-user: git
+2026-04-29T00:58:50.3384547Z   persist-credentials: true
+2026-04-29T00:58:50.3384877Z   clean: true
+2026-04-29T00:58:50.3385209Z   sparse-checkout-cone-mode: true
+2026-04-29T00:58:50.3385565Z   fetch-tags: false
+2026-04-29T00:58:50.3385878Z   show-progress: true
+2026-04-29T00:58:50.3386182Z   lfs: false
+2026-04-29T00:58:50.3386468Z   submodules: false
+2026-04-29T00:58:50.3386806Z   set-safe-directory: true
+2026-04-29T00:58:50.3387491Z env:
+2026-04-29T00:58:50.3387805Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T00:58:50.3388183Z ##[endgroup]
+2026-04-29T00:58:50.4350255Z Syncing repository: PavanMudigonda/zero-to-ai
+2026-04-29T00:58:50.4351894Z ##[group]Getting Git version info
+2026-04-29T00:58:50.4352409Z Working directory is '/home/runner/work/zero-to-ai/zero-to-ai'
+2026-04-29T00:58:50.4353440Z [command]/usr/bin/git version
+2026-04-29T00:58:50.4385647Z git version 2.53.0
+2026-04-29T00:58:50.4406733Z ##[endgroup]
+2026-04-29T00:58:50.4420285Z Temporarily overriding HOME='/home/runner/work/_temp/05815ca8-2383-453b-b32b-5d3eeb096909' before making global git config changes
+2026-04-29T00:58:50.4421441Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-29T00:58:50.4425865Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-29T00:58:50.4459306Z Deleting the contents of '/home/runner/work/zero-to-ai/zero-to-ai'
+2026-04-29T00:58:50.4463408Z ##[group]Initializing the repository
+2026-04-29T00:58:50.4468128Z [command]/usr/bin/git init /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-29T00:58:50.4528811Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-29T00:58:50.4530015Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-29T00:58:50.4530989Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-29T00:58:50.4531857Z hint: call:
+2026-04-29T00:58:50.4532283Z hint:
+2026-04-29T00:58:50.4532728Z hint: 	git config --global init.defaultBranch <name>
+2026-04-29T00:58:50.4533445Z hint:
+2026-04-29T00:58:50.4533862Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-29T00:58:50.4534474Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-29T00:58:50.4534960Z hint:
+2026-04-29T00:58:50.4535253Z hint: 	git branch -m <name>
+2026-04-29T00:58:50.4535597Z hint:
+2026-04-29T00:58:50.4536024Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-29T00:58:50.4536682Z Initialized empty Git repository in /home/runner/work/zero-to-ai/zero-to-ai/.git/
+2026-04-29T00:58:50.4540046Z [command]/usr/bin/git remote add origin https://github.com/PavanMudigonda/zero-to-ai
+2026-04-29T00:58:50.4602675Z ##[endgroup]
+2026-04-29T00:58:50.4603387Z ##[group]Disabling automatic garbage collection
+2026-04-29T00:58:50.4606467Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-29T00:58:50.4634342Z ##[endgroup]
+2026-04-29T00:58:50.4635073Z ##[group]Setting up auth
+2026-04-29T00:58:50.4635694Z Removing SSH command configuration
+2026-04-29T00:58:50.4640731Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-29T00:58:50.4671471Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-29T00:58:50.4949275Z Removing HTTP extra header
+2026-04-29T00:58:50.4954326Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-29T00:58:50.4984443Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-29T00:58:50.5206816Z Removing includeIf entries pointing to credentials config files
+2026-04-29T00:58:50.5212201Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-29T00:58:50.5243605Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-29T00:58:50.5470474Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-29T00:58:50.5506688Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T00:58:50.5537265Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T00:58:50.5567574Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T00:58:50.5599222Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T00:58:50.5626561Z ##[endgroup]
+2026-04-29T00:58:50.5627297Z ##[group]Fetching the repository
+2026-04-29T00:58:50.5635662Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules origin +refs/heads/*:refs/remotes/origin/* +refs/tags/*:refs/tags/*
+2026-04-29T00:58:57.7913811Z From https://github.com/PavanMudigonda/zero-to-ai
+2026-04-29T00:58:57.7914579Z  * [new branch]        main       -> origin/main
+2026-04-29T00:58:57.7948747Z [command]/usr/bin/git branch --list --remote origin/main
+2026-04-29T00:58:57.7974808Z   origin/main
+2026-04-29T00:58:57.7983435Z [command]/usr/bin/git rev-parse refs/remotes/origin/main
+2026-04-29T00:58:57.8006234Z 55cf05981d5b7502ceceedd4fdc57e5ae4e14863
+2026-04-29T00:58:57.8010944Z ##[endgroup]
+2026-04-29T00:58:57.8011775Z ##[group]Determining the checkout info
+2026-04-29T00:58:57.8012732Z ##[endgroup]
+2026-04-29T00:58:57.8018794Z [command]/usr/bin/git sparse-checkout disable
+2026-04-29T00:58:57.8058015Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-29T00:58:57.8086976Z ##[group]Checking out the ref
+2026-04-29T00:58:57.8090051Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-04-29T00:58:58.5150126Z Switched to a new branch 'main'
+2026-04-29T00:58:58.5150812Z branch 'main' set up to track 'origin/main'.
+2026-04-29T00:58:58.5170020Z ##[endgroup]
+2026-04-29T00:58:58.5214627Z [command]/usr/bin/git log -1 --format=%H
+2026-04-29T00:58:58.5240318Z 55cf05981d5b7502ceceedd4fdc57e5ae4e14863
+2026-04-29T00:58:58.5442989Z ##[group]Run sudo rm -rf /usr/share/dotnet
+2026-04-29T00:58:58.5443607Z [36;1msudo rm -rf /usr/share/dotnet[0m
+2026-04-29T00:58:58.5443920Z [36;1msudo rm -rf /opt/ghc[0m
+2026-04-29T00:58:58.5444223Z [36;1msudo rm -rf "/usr/local/share/boost"[0m
+2026-04-29T00:58:58.5444557Z [36;1msudo rm -rf "$AGENT_TOOLSDIRECTORY"[0m
+2026-04-29T00:58:58.5444843Z [36;1m          [0m
+2026-04-29T00:58:58.5470809Z shell: /usr/bin/bash -e {0}
+2026-04-29T00:58:58.5471085Z env:
+2026-04-29T00:58:58.5471322Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T00:58:58.5471617Z ##[endgroup]
+2026-04-29T01:00:33.2158218Z ##[group]Run actions/setup-node@v6
+2026-04-29T01:00:33.2158555Z with:
+2026-04-29T01:00:33.2158781Z   node-version: 24
+2026-04-29T01:00:33.2158989Z   cache: npm
+2026-04-29T01:00:33.2159254Z   cache-dependency-path: next-docs/package-lock.json
+2026-04-29T01:00:33.2159565Z   check-latest: false
+2026-04-29T01:00:33.2159913Z   token: ***
+2026-04-29T01:00:33.2160130Z   package-manager-cache: true
+2026-04-29T01:00:33.2160367Z env:
+2026-04-29T01:00:33.2160571Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:00:33.2160850Z ##[endgroup]
+2026-04-29T01:00:33.3694538Z Attempting to download 24...
+2026-04-29T01:00:33.7149820Z Acquiring 24.15.0 - x64 from https://github.com/actions/node-versions/releases/download/24.15.0-24511264946/node-24.15.0-linux-x64.tar.gz
+2026-04-29T01:00:34.0785672Z Extracting ...
+2026-04-29T01:00:34.0902882Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ed50a9e9-a169-47e2-a09b-0cc9ef40122e -f /home/runner/work/_temp/36473525-0b88-4cff-a549-e580c8b8323c
+2026-04-29T01:00:35.4428075Z Adding to the cache ...
+2026-04-29T01:00:37.2420096Z ##[group]Environment details
+2026-04-29T01:00:37.4798839Z node: v24.15.0
+2026-04-29T01:00:37.4799215Z npm: 11.12.1
+2026-04-29T01:00:37.4799495Z yarn: 1.22.22
+2026-04-29T01:00:37.4800213Z ##[endgroup]
+2026-04-29T01:00:37.4820341Z [command]/opt/hostedtoolcache/node/24.15.0/x64/bin/npm config get cache
+2026-04-29T01:00:37.5759368Z /home/runner/.npm
+2026-04-29T01:00:37.6465265Z npm cache is not found
+2026-04-29T01:00:37.6634000Z ##[group]Run npm ci
+2026-04-29T01:00:37.6634258Z [36;1mnpm ci[0m
+2026-04-29T01:00:37.6659503Z shell: /usr/bin/bash -e {0}
+2026-04-29T01:00:37.6659759Z env:
+2026-04-29T01:00:37.6659982Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:00:37.6660272Z ##[endgroup]
+2026-04-29T01:00:40.1501954Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-04-29T01:00:41.3658753Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-04-29T01:00:43.2464791Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-04-29T01:00:43.2469721Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-04-29T01:00:43.6081062Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-04-29T01:00:44.2378205Z npm warn deprecated glob@10.3.10: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-04-29T01:00:48.1258102Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-04-29T01:01:00.2033386Z npm warn deprecated mathjax-full@3.2.2: Version 4 replaces this package with the scoped package @mathjax/src
+2026-04-29T01:01:06.9308600Z 
+2026-04-29T01:01:06.9309620Z added 873 packages, and audited 874 packages in 29s
+2026-04-29T01:01:06.9310193Z 
+2026-04-29T01:01:06.9310659Z 326 packages are looking for funding
+2026-04-29T01:01:06.9311879Z   run `npm fund` for details
+2026-04-29T01:01:07.0362320Z 
+2026-04-29T01:01:07.0363090Z 10 vulnerabilities (6 moderate, 4 high)
+2026-04-29T01:01:07.0363641Z 
+2026-04-29T01:01:07.0363954Z To address all issues (including breaking changes), run:
+2026-04-29T01:01:07.0364410Z   npm audit fix --force
+2026-04-29T01:01:07.0364606Z 
+2026-04-29T01:01:07.0364783Z Run `npm audit` for details.
+2026-04-29T01:01:07.1197384Z ##[group]Run sudo fallocate -l 16G /swapfile-new
+2026-04-29T01:01:07.1197802Z [36;1msudo fallocate -l 16G /swapfile-new[0m
+2026-04-29T01:01:07.1198127Z [36;1msudo chmod 600 /swapfile-new[0m
+2026-04-29T01:01:07.1198406Z [36;1msudo mkswap /swapfile-new[0m
+2026-04-29T01:01:07.1198662Z [36;1msudo swapon /swapfile-new[0m
+2026-04-29T01:01:07.1224414Z shell: /usr/bin/bash -e {0}
+2026-04-29T01:01:07.1224668Z env:
+2026-04-29T01:01:07.1224894Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:01:07.1225177Z ##[endgroup]
+2026-04-29T01:01:07.2123263Z Setting up swapspace version 1, size = 16 GiB (17179865088 bytes)
+2026-04-29T01:01:07.2123934Z no label, UUID=a02652f2-27be-45fe-9d8a-feb74f7d8e90
+2026-04-29T01:01:07.2258043Z ##[group]Run rm -rf out
+2026-04-29T01:01:07.2258343Z [36;1mrm -rf out[0m
+2026-04-29T01:01:07.2258604Z [36;1mnpm run build 2>&1 | tee build_output.log[0m
+2026-04-29T01:01:07.2282977Z shell: /usr/bin/bash -e {0}
+2026-04-29T01:01:07.2283482Z env:
+2026-04-29T01:01:07.2283711Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:01:07.2284056Z   NODE_OPTIONS: --max-old-space-size=12288
+2026-04-29T01:01:07.2284939Z   GOOGLE_ANALYTICS_ID: ***
+2026-04-29T01:01:07.2285184Z   GOOGLE_SITE_VERIFICATION: 
+2026-04-29T01:01:07.2285413Z ##[endgroup]
+2026-04-29T01:01:07.3258748Z 
+2026-04-29T01:01:07.3259147Z > next-docs@0.1.0 build
+2026-04-29T01:01:07.3259531Z > next build
+2026-04-29T01:01:07.3259716Z 
+2026-04-29T01:01:08.0318788Z ⚠ No build cache found. Please configure build caching for faster rebuilds. Read more: https://nextjs.org/docs/messages/no-cache
+2026-04-29T01:01:08.0390907Z Attention: Next.js now collects completely anonymous telemetry regarding usage.
+2026-04-29T01:01:08.0392046Z This information is used to shape Next.js' roadmap and prioritize features.
+2026-04-29T01:01:08.0393798Z You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+2026-04-29T01:01:08.0394776Z https://nextjs.org/telemetry
+2026-04-29T01:01:08.0395038Z 
+2026-04-29T01:01:08.0878344Z   ▲ Next.js 14.2.35
+2026-04-29T01:01:08.0879348Z   - Experiments (use with caution):
+2026-04-29T01:01:08.0879970Z     · cpus
+2026-04-29T01:01:08.0880318Z     · turbo
+2026-04-29T01:01:08.0880484Z 
+2026-04-29T01:01:08.2882937Z    Creating an optimized production build ...
+2026-04-29T01:23:36.7778155Z Failed to compile.
+2026-04-29T01:23:36.7778430Z 
+2026-04-29T01:23:36.7778831Z ./src/components/NotebookViewer.tsx
+2026-04-29T01:23:36.7779515Z Module not found: Can't resolve '@/lib/notebook-link-utils'
+2026-04-29T01:23:36.7779909Z 
+2026-04-29T01:23:36.7780220Z https://nextjs.org/docs/messages/module-not-found
+2026-04-29T01:23:36.7780575Z 
+2026-04-29T01:23:36.7780840Z Import trace for requested module:
+2026-04-29T01:23:36.7781327Z ./src/components/DynamicNotebook.tsx
+2026-04-29T01:23:36.7781614Z 
+2026-04-29T01:23:36.7781766Z ./src/app/layout.tsx
+2026-04-29T01:23:36.7782252Z Module not found: Can't resolve '@/lib/site-routes'
+2026-04-29T01:23:36.7782612Z 
+2026-04-29T01:23:36.7782904Z https://nextjs.org/docs/messages/module-not-found
+2026-04-29T01:23:36.7783433Z 
+2026-04-29T01:23:36.7783585Z ./src/app/sitemap.ts
+2026-04-29T01:23:36.7784052Z Module not found: Can't resolve '@/lib/site-routes'
+2026-04-29T01:23:36.7784377Z 
+2026-04-29T01:23:36.7784649Z https://nextjs.org/docs/messages/module-not-found
+2026-04-29T01:23:36.7784981Z 
+2026-04-29T01:23:36.7785201Z Import trace for requested module:
+2026-04-29T01:23:36.7787000Z ./node_modules/next/dist/build/webpack/loaders/next-metadata-route-loader.js?page=%2Fsitemap.xml%2Froute&filePath=%2Fhome%2Frunner%2Fwork%2Fzero-to-ai%2Fzero-to-ai%2Fnext-docs%2Fsrc%2Fapp%2Fsitemap.ts&isDynamic=1!?__next_metadata_route__
+2026-04-29T01:23:36.7788008Z 
+2026-04-29T01:23:36.7791448Z 
+2026-04-29T01:23:36.7792255Z > Build failed because of webpack errors
+2026-04-29T01:23:37.4002646Z ##[group]Run # Use linkinator to check internal broken links only without failing the build.
+2026-04-29T01:23:37.4003862Z [36;1m# Use linkinator to check internal broken links only without failing the build.[0m
+2026-04-29T01:23:37.4004748Z [36;1m# We skip all 'http' links to only validate relative/local routing inside 'out'.[0m
+2026-04-29T01:23:37.4005839Z [36;1mnpx linkinator ./out --recurse --skip "^http" || echo "Link validation caught broken links. Check the logs above."[0m
+2026-04-29T01:23:37.4050207Z shell: /usr/bin/bash -e {0}
+2026-04-29T01:23:37.4050584Z env:
+2026-04-29T01:23:37.4050908Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:23:37.4051350Z ##[endgroup]
+2026-04-29T01:23:38.0432026Z npm warn exec The following package was not found and will be installed: linkinator@7.6.1
+2026-04-29T01:23:39.4050996Z → crawling ./out
+2026-04-29T01:23:39.4099678Z The provided glob "./out" returned 0 results. The current working directory is "/home/runner/work/zero-to-ai/zero-to-ai/next-docs".
+2026-04-29T01:23:39.4330468Z Link validation caught broken links. Check the logs above.
+2026-04-29T01:23:39.4397545Z ##[group]Run actions/upload-artifact@v7.0.1
+2026-04-29T01:23:39.4397848Z with:
+2026-04-29T01:23:39.4398038Z   name: next-docs-site
+2026-04-29T01:23:39.4398283Z   path: next-docs/out
+2026-04-29T01:23:39.4398502Z   if-no-files-found: error
+2026-04-29T01:23:39.4398731Z   compression-level: 6
+2026-04-29T01:23:39.4398937Z   overwrite: false
+2026-04-29T01:23:39.4399153Z   include-hidden-files: false
+2026-04-29T01:23:39.4399385Z   archive: true
+2026-04-29T01:23:39.4399571Z env:
+2026-04-29T01:23:39.4399771Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:23:39.4400041Z ##[endgroup]
+2026-04-29T01:23:39.5837753Z ##[error]No files were found with the provided path: next-docs/out. No artifacts will be uploaded.
+2026-04-29T01:23:39.5983635Z Post job cleanup.
+2026-04-29T01:23:39.6818246Z [command]/usr/bin/git version
+2026-04-29T01:23:39.6886874Z git version 2.53.0
+2026-04-29T01:23:39.6918473Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/3853610b-a719-490d-b4a5-8ec82651ce1c/.gitconfig'
+2026-04-29T01:23:39.6927594Z Temporarily overriding HOME='/home/runner/work/_temp/3853610b-a719-490d-b4a5-8ec82651ce1c' before making global git config changes
+2026-04-29T01:23:39.6928862Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-29T01:23:39.6932697Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zero-to-ai/zero-to-ai
+2026-04-29T01:23:39.6963901Z Removing SSH command configuration
+2026-04-29T01:23:39.6970561Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-29T01:23:39.7004861Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-29T01:23:39.7263687Z Removing HTTP extra header
+2026-04-29T01:23:39.7268946Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-29T01:23:39.7303271Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-29T01:23:39.7551688Z Removing includeIf entries pointing to credentials config files
+2026-04-29T01:23:39.7558308Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-29T01:23:39.7582034Z includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path
+2026-04-29T01:23:39.7582937Z includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path
+2026-04-29T01:23:39.7583675Z includeif.gitdir:/github/workspace/.git.path
+2026-04-29T01:23:39.7584118Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-29T01:23:39.7591384Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path
+2026-04-29T01:23:39.7613583Z /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7623913Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git.path /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7657740Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path
+2026-04-29T01:23:39.7679136Z /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7745832Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/zero-to-ai/zero-to-ai/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7748095Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-04-29T01:23:39.7749104Z /github/runner_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7754996Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7791197Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-29T01:23:39.7812988Z /github/runner_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7821936Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config
+2026-04-29T01:23:39.7854913Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-29T01:23:39.8107171Z Removing credentials config '/home/runner/work/_temp/git-credentials-14bf0df7-abde-4425-9d17-8e57732ec5f9.config'
+2026-04-29T01:23:39.8245396Z Cleaning up orphan processes

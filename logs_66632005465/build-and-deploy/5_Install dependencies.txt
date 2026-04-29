@@ -1,0 +1,26 @@
+﻿2026-04-29T01:00:37.6633978Z ##[group]Run npm ci
+2026-04-29T01:00:37.6634255Z [36;1mnpm ci[0m
+2026-04-29T01:00:37.6659495Z shell: /usr/bin/bash -e {0}
+2026-04-29T01:00:37.6659756Z env:
+2026-04-29T01:00:37.6659979Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T01:00:37.6660269Z ##[endgroup]
+2026-04-29T01:00:40.1501901Z npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+2026-04-29T01:00:41.3658702Z npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+2026-04-29T01:00:43.2464746Z npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+2026-04-29T01:00:43.2469705Z npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+2026-04-29T01:00:43.6080916Z npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-04-29T01:00:44.2378162Z npm warn deprecated glob@10.3.10: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+2026-04-29T01:00:48.1258059Z npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-04-29T01:01:00.2033333Z npm warn deprecated mathjax-full@3.2.2: Version 4 replaces this package with the scoped package @mathjax/src
+2026-04-29T01:01:06.9308551Z 
+2026-04-29T01:01:06.9309608Z added 873 packages, and audited 874 packages in 29s
+2026-04-29T01:01:06.9310188Z 
+2026-04-29T01:01:06.9310656Z 326 packages are looking for funding
+2026-04-29T01:01:06.9311839Z   run `npm fund` for details
+2026-04-29T01:01:07.0362270Z 
+2026-04-29T01:01:07.0363085Z 10 vulnerabilities (6 moderate, 4 high)
+2026-04-29T01:01:07.0363637Z 
+2026-04-29T01:01:07.0363951Z To address all issues (including breaking changes), run:
+2026-04-29T01:01:07.0364407Z   npm audit fix --force
+2026-04-29T01:01:07.0364603Z 
+2026-04-29T01:01:07.0364780Z Run `npm audit` for details.

@@ -49,6 +49,7 @@ jobs:
       - name: Build Next.js site
         working-directory: ./next-docs
         run: |
+          set -o pipefail
           rm -rf out
           npm run build 2>&1 | tee build_output.log
         env:
@@ -56,27 +57,12 @@ jobs:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
-      - name: Upload build log on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: next-docs-build-log
-          path: next-docs/build_output.log
-          if-no-files-found: ignore
-
       - name: Validate Local Links
         working-directory: ./next-docs
         run: |
           # Use linkinator to check internal broken links only without failing the build.
           # We skip all 'http' links to only validate relative/local routing inside 'out'.
           npx linkinator ./out --recurse --skip "^http" || echo "Link validation caught broken links. Check the logs above."
-
-      - name: Upload generated site artifact
-        uses: actions/upload-artifact@v7.0.1
-        with:
-          name: next-docs-site
-          path: next-docs/out
-          if-no-files-found: error
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1.5.0

@@ -1,0 +1,10 @@
+﻿2026-04-29T00:58:58.5442970Z ##[group]Run sudo rm -rf /usr/share/dotnet
+2026-04-29T00:58:58.5443602Z [36;1msudo rm -rf /usr/share/dotnet[0m
+2026-04-29T00:58:58.5443916Z [36;1msudo rm -rf /opt/ghc[0m
+2026-04-29T00:58:58.5444219Z [36;1msudo rm -rf "/usr/local/share/boost"[0m
+2026-04-29T00:58:58.5444553Z [36;1msudo rm -rf "$AGENT_TOOLSDIRECTORY"[0m
+2026-04-29T00:58:58.5444840Z [36;1m          [0m
+2026-04-29T00:58:58.5470794Z shell: /usr/bin/bash -e {0}
+2026-04-29T00:58:58.5471081Z env:
+2026-04-29T00:58:58.5471318Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+2026-04-29T00:58:58.5471613Z ##[endgroup]
