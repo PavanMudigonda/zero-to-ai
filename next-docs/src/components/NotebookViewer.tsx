@@ -3,6 +3,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
+import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
 import '@jupyter-kit/theme-default/default.css';
 import '@jupyter-kit/theme-default/syntax/one-dark.css';
 import 'katex/dist/katex.min.css';
@@ -26,6 +27,7 @@ const myKatex = createKatexPlugin();
 
 export default function NotebookViewer({ ipynb }: { ipynb: any }) {
   const pathname = usePathname();
+  const normalizedNotebook = normalizeNotebookLinks(ipynb, pathname || '/');
 
   // Infer the GitHub notebook path intelligently from the App router URL structure
   const segments = typeof pathname === 'string' ? pathname.split('/').filter(Boolean) : [];
@@ -77,7 +79,7 @@ export default function NotebookViewer({ ipynb }: { ipynb: any }) {
       {/* Internal Notebook Engine */}
       <div className="jk-notebook-container">
         <Notebook 
-          ipynb={ipynb} 
+          ipynb={normalizedNotebook} 
           language="python" 
           languages={[python]} 
           executor={myPyodide}

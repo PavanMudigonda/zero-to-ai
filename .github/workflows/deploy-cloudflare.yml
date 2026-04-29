@@ -39,14 +39,6 @@ jobs:
         working-directory: ./next-docs
         run: npm ci
 
-      - name: Cache Next.js build artifacts
-        uses: actions/cache@v5.0.5
-        with:
-          path: next-docs/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-${{ github.sha }}
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-
-
       - name: Allocate swap space
         run: |
           sudo fallocate -l 16G /swapfile-new
@@ -60,7 +52,7 @@ jobs:
           rm -rf out
           npm run build
         env:
-          NODE_OPTIONS: "--max_old_space_size=8192"
+          NODE_OPTIONS: "--max-old-space-size=12288"
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
           GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION }}
 
@@ -86,4 +78,4 @@ jobs:
           projectName: zero-to-ai
           directory: next-docs/out
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ env.GITHUB_REF_NAME }}
+          branch: ${{ github.ref_name }}

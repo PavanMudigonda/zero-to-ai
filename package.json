@@ -33,6 +33,7 @@
     "url": "https://github.com/PavanMudigonda/zero-to-ai/issues"
   },
   "devDependencies": {
-    "opencode-ai": "^1.14.25"
+    "next-sitemap": "^4.2.3",
+    "opencode-ai": "^1.14.28"
   }
 }

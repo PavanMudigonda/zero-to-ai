@@ -1,0 +1,30 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0B1020"/>
+  <rect x="48" y="48" width="1104" height="534" rx="28" fill="url(#paint0_linear)" stroke="#334155" stroke-width="2"/>
+  <circle cx="132" cy="120" r="14" fill="#F97316"/>
+  <circle cx="176" cy="120" r="14" fill="#22C55E"/>
+  <circle cx="220" cy="120" r="14" fill="#38BDF8"/>
+  <text x="96" y="238" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="72" font-weight="700">Zero to AI</text>
+  <text x="96" y="308" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="32">Open-source AI curriculum covering Python, ML, LLMs, RAG,</text>
+  <text x="96" y="352" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="32">agents, evaluation, safety, MLOps, and deployment.</text>
+  <rect x="96" y="414" width="198" height="58" rx="29" fill="#F97316"/>
+  <text x="132" y="451" fill="#0B1020" font-family="Arial, sans-serif" font-size="28" font-weight="700">Learn AI</text>
+  <rect x="324" y="414" width="270" height="58" rx="29" fill="#111827" stroke="#475569"/>
+  <text x="360" y="451" fill="#E2E8F0" font-family="Arial, sans-serif" font-size="28">zero-to-ai.dev</text>
+  <path d="M847 172C847 147.699 866.699 128 891 128H1015C1039.3 128 1059 147.699 1059 172V296C1059 320.301 1039.3 340 1015 340H891C866.699 340 847 320.301 847 296V172Z" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <path d="M847 382C847 357.699 866.699 338 891 338H1111C1135.3 338 1155 357.699 1155 382V506C1155 530.301 1135.3 550 1111 550H891C866.699 550 847 530.301 847 506V382Z" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <text x="881" y="202" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Core Topics</text>
+  <text x="881" y="244" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Python</text>
+  <text x="981" y="244" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Machine Learning</text>
+  <text x="881" y="280" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">LLMs</text>
+  <text x="961" y="280" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Agents</text>
+  <text x="881" y="420" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="28" font-weight="700">Technical SEO</text>
+  <text x="881" y="462" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Canonical metadata</text>
+  <text x="881" y="498" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="24">Internal link hygiene</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="48" y1="48" x2="1152" y2="582" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+  </defs>
+</svg>

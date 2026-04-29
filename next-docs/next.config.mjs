@@ -1,4 +1,5 @@
 import nextra from 'nextra';
+import remarkNormalizeDocLinks from './remark-normalize-doc-links.mjs';
 import remarkStripMissingImages from './remark-strip-missing-images.mjs';
 import { existsSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
@@ -6,7 +7,7 @@ import { join } from 'path';
 const withNextra = nextra({
   latex: true,
   mdxOptions: {
-    remarkPlugins: [remarkStripMissingImages]
+    remarkPlugins: [remarkNormalizeDocLinks, remarkStripMissingImages]
   }
 });
 
@@ -28,9 +29,13 @@ export default withNextra({
     workerThreads: false,
     memoryBasedWorkersCount: false,
   },
-  webpack(config, { webpack, isServer }) {
+  webpack(config, { webpack, isServer, dev }) {
     if (!config.resolve.alias) {
       config.resolve.alias = {};
+    }
+
+    if (!dev) {
+      config.cache = false;
     }
 
     // Workaround: Next.js 14.2.x export crashes with ENOENT on
