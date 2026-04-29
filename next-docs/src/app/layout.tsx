@@ -6,7 +6,59 @@ import { getPageMap } from 'nextra/page-map';
 import 'nextra-theme-docs/style.css';
 import './globals.css';
 import { Metadata, Viewport } from 'next';
+import { headers } from 'next/headers';
 import { getStaticSiteRoutes } from '@/lib/site-routes';
+
+function collapseInactiveSections(items: any[], activeSection?: string): any[] {
+  return items.map((item) => {
+    if (!item || !Array.isArray(item.children)) {
+      return item;
+    }
+
+    if (!activeSection || item.name !== activeSection) {
+      return {
+        ...item,
+        children: [],
+      };
+    }
+
+    return item;
+  });
+}
+
+async function getSerializedPageMap(): Promise<any[]> {
+  const requestPath = headers().get('Next-Url')?.split('?')[0] || '/';
+  const topLevelSection = requestPath.split('/').filter(Boolean)[0];
+  const rootPageMap = await getPageMap('/');
+
+  if (!topLevelSection) {
+    return collapseInactiveSections(rootPageMap);
+  }
+
+  let sectionPageMap: any[] | null = null;
+
+  try {
+    sectionPageMap = await getPageMap(`/${topLevelSection}`);
+  } catch {
+    sectionPageMap = null;
+  }
+
+  return collapseInactiveSections(rootPageMap, topLevelSection).map((item) => {
+    if (
+      sectionPageMap &&
+      item &&
+      item.name === topLevelSection &&
+      Array.isArray(item.children)
+    ) {
+      return {
+        ...item,
+        children: sectionPageMap,
+      };
+    }
+
+    return item;
+  });
+}
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -75,7 +127,7 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const pageMap = await getPageMap();
+  const pageMap = await getSerializedPageMap();
   const routeIndex = getStaticSiteRoutes();
   const websiteStructuredData = {
     '@context': 'https://schema.org',
