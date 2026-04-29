@@ -24,19 +24,16 @@ export default withNextra({
   },
   transpilePackages: ['@theguild/remark-mermaid'],
   experimental: {
-    // Avoid using high concurrency that leads to Node OOMing inside GitHub runner
-    cpus: 1,
-    workerThreads: false,
-    memoryBasedWorkersCount: false,
+    // Enable memory-based worker caps instead of forcing 1 cpu
+    memoryBasedWorkersCount: true,
   },
   webpack(config, { webpack, isServer, dev }) {
     if (!config.resolve.alias) {
       config.resolve.alias = {};
     }
 
-    if (!dev) {
-      config.cache = false;
-    }
+    // Rely on Next.js default caching mechanism. 
+    // Do NOT disable cache here; caching speeds up subsequent builds tremendously.
 
     // Workaround: Next.js 14.2.x export crashes with ENOENT on
     // pages-manifest.json in app-router-only projects. Ensure the
