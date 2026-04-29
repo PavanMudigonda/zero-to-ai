@@ -39,6 +39,18 @@ jobs:
         working-directory: ./next-docs
         run: npm ci
 
+      - name: Restore Next.js cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            next-docs/.next/cache
+          # Generate a new cache whenever packages or source files change.
+          key: ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-${{ hashFiles('next-docs/src/**') }}
+          # If source files changed but packages didn't, rebuild from a prior cache.
+          restore-keys: |
+            ${{ runner.os }}-nextjs-${{ hashFiles('next-docs/package-lock.json') }}-
+            ${{ runner.os }}-nextjs-
+
       - name: Allocate swap space
         run: |
           sudo fallocate -l 16G /swapfile-new
@@ -62,7 +74,7 @@ jobs:
         run: |
           # Use linkinator to check internal broken links only without failing the build.
           # We skip all 'http' links to only validate relative/local routing inside 'out'.
-          npx linkinator ./out --recurse --skip "^http" || echo "Link validation caught broken links. Check the logs above."
+          npx linkinator ./out --recurse --skip "^http" --concurrency 250 || echo "Link validation caught broken links. Check the logs above."
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1.5.0
