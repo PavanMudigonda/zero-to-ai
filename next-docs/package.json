@@ -10,7 +10,9 @@
     "prebuild": "node scripts/generate-route-index.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:nav-links": "node test-nav-links.mjs",
+    "test:nav-links:live": "BASE_URL=https://zero-to-ai.dev node test-nav-links.mjs"
   },
   "dependencies": {
     "@codemirror/commands": "^6.10.3",
