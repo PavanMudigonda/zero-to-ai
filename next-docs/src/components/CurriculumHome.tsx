@@ -196,13 +196,14 @@ function Utility({ card }: { card: UtilityCard }) {
 
 export default function CurriculumHome() {
   return (
-    <HubPageShell>
-      <HubHero
+    <div data-homepage-layout>
+      <HubPageShell>
+        <HubHero
         badges={['Open-source AI curriculum', 'Beginner to advanced', 'Notebooks, quizzes, cheatsheets']}
         badgeToneClass="text-sky-100/90"
         eyebrow="Zero to AI"
         eyebrowClass="text-sky-200/80"
-        title="Learn AI like a curriculum, not a content dump."
+        title="Learn AI through a structured path, not a pile of disconnected content."
         description="Work through Python, data science, LLMs, agents, evaluation, and production systems in one connected learning path with hands-on notebooks and fast-reference guides."
         actions={[
           { label: 'Start the curriculum', href: '/00-course-setup', variant: 'primary' },
@@ -216,63 +217,64 @@ export default function CurriculumHome() {
         statDescriptionClass="text-slate-200/85"
       />
 
-      <section className="mt-12 grid gap-5 lg:grid-cols-3">
-        {spotlightCards.map((card) => (
-          <HubFeatureCard
-            key={card.href}
-            feature={{
-              eyebrow: card.eyebrow,
-              title: card.title,
-              description: card.description,
-              href: card.href,
-              cta: card.cta,
-              accent: card.accent,
-            }}
-          />
-        ))}
-      </section>
-
-      <section className="mt-14">
-        <HubSectionIntro
-          eyebrow="Recommended sequence"
-          title="Follow the curriculum by phase"
-          href="/33-roadmaps"
-          hrefLabel="See the visual roadmaps"
-          accentClass="text-sky-700 dark:text-sky-400"
-        />
-
-        <div className="mt-6 grid gap-5 lg:grid-cols-3">
-          {phaseCards.map((card) => (
-            <Phase key={card.phase} card={card} />
+        <section className="mt-12 grid gap-5 lg:grid-cols-3">
+          {spotlightCards.map((card) => (
+            <HubFeatureCard
+              key={card.href}
+              feature={{
+                eyebrow: card.eyebrow,
+                title: card.title,
+                description: card.description,
+                href: card.href,
+                cta: card.cta,
+                accent: card.accent,
+              }}
+            />
           ))}
-        </div>
-      </section>
+        </section>
 
-      <section className="mt-14 grid gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.8fr)]">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/60">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-400">Build mode</p>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Use the docs the way you actually learn</h2>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {utilityCards.map((card) => (
-              <Utility key={card.href} card={card} />
+        <section className="mt-14">
+          <HubSectionIntro
+            eyebrow="Recommended sequence"
+            title="Follow the curriculum by phase"
+            href="/33-roadmaps"
+            hrefLabel="See the visual roadmaps"
+            accentClass="text-sky-700 dark:text-sky-400"
+          />
+
+          <div className="mt-6 grid gap-5 lg:grid-cols-3">
+            {phaseCards.map((card) => (
+              <Phase key={card.phase} card={card} />
             ))}
           </div>
-        </div>
+        </section>
 
-        <div className="rounded-3xl border border-slate-200 bg-[linear-gradient(180deg,rgba(14,165,233,0.08),rgba(15,23,42,0.02))] p-6 shadow-sm dark:border-slate-800 dark:bg-[linear-gradient(180deg,rgba(56,189,248,0.10),rgba(15,23,42,0.30))]">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-400">Quick links</p>
-          <ul className="mt-5 space-y-3 text-sm">
-            {quickLinks.map((link) => (
-              <li key={link.href}>
-                <a href={link.href} className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:text-sky-700 dark:text-white dark:decoration-slate-700 dark:hover:text-sky-300">
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-sm leading-7 text-slate-600 dark:text-slate-300">This site works best as a progression: use the roadmap for direction, notebooks for practice, and cheatsheets for speed.</p>
-        </div>
-      </section>
-    </HubPageShell>
+        <section className="mt-14 grid gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(280px,0.8fr)]">
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm dark:border-slate-800 dark:bg-slate-900/60">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-400">Build mode</p>
+            <h2 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Use the docs the way you actually learn</h2>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {utilityCards.map((card) => (
+                <Utility key={card.href} card={card} />
+              ))}
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-[linear-gradient(180deg,rgba(14,165,233,0.08),rgba(15,23,42,0.02))] p-6 shadow-sm dark:border-slate-800 dark:bg-[linear-gradient(180deg,rgba(56,189,248,0.10),rgba(15,23,42,0.30))]">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-400">Quick links</p>
+            <ul className="mt-5 space-y-3 text-sm">
+              {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <a href={link.href} className="font-semibold text-slate-950 underline decoration-slate-500 underline-offset-4 hover:text-sky-800 dark:text-white dark:decoration-slate-500 dark:hover:text-sky-300">
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-6 text-sm leading-7 text-slate-800 dark:text-slate-200">This site works best as a progression: use the roadmap for direction, notebooks for practice, and cheatsheets for speed.</p>
+          </div>
+        </section>
+      </HubPageShell>
+    </div>
   );
 }
