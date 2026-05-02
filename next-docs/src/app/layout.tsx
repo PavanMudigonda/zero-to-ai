@@ -55,23 +55,28 @@ function compareNavNodes(left: NavNode, right: NavNode): number {
   return left.route.localeCompare(right.route);
 }
 
-function materializePageMap(nodes: Map<string, NavNode>): any[] {
+function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: string): any[] {
   return Array.from(nodes.values())
     .sort(compareNavNodes)
     .map((node) => {
+      // When a page/folder has the same name as its parent folder, the sidebar would show
+      // identical text for both the section button and the item link (self-nesting display bug).
+      // Use "Overview" as the display title to disambiguate.
+      const title = node.name === parentFolderName ? 'Overview' : node.title;
+
       if (node.children.size > 0) {
         return {
           name: node.name,
           route: node.route,
-          title: node.title,
-          children: materializePageMap(node.children),
+          title,
+          children: materializePageMap(node.children, node.name),
         };
       }
 
       return {
         name: node.name,
         route: node.route,
-        title: node.title,
+        title,
       };
     });
 }
