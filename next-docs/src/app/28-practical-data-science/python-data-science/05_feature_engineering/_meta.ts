@@ -1,3 +1,3 @@
 export default {
-  "05_feature_engineering": "1. Feature Engineering",
+  "05_feature_engineering": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "02_analytic_geometry": "1. Analytic Geometry",
+  "02_analytic_geometry": "Overview",
 }

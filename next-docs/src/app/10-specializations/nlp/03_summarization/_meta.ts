@@ -1,3 +1,3 @@
 export default {
-  "03_summarization": "1. Summarization",
+  "03_summarization": "Overview",
 }

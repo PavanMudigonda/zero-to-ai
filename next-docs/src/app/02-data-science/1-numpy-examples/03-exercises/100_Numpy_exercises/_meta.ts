@@ -1,3 +1,3 @@
 export default {
-  "100_Numpy_exercises": "1. Numpy Exercises",
+  "100_Numpy_exercises": "Overview",
 }

@@ -13,6 +13,6 @@ export default {
   "12_unsupervised_learning": "12. Unsupervised Learning",
   "13_multiple_testing": "13. Multiple Testing",
   PRACTICE_EXERCISES: "14. Practice Exercises",
-  "islp-book": "15. Islp Book",
+  "islp-book": "Overview",
   statistics_fundamentals: "16. Statistics Fundamentals",
 }

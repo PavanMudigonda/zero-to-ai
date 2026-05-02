@@ -1,5 +1,5 @@
 export default {
-  "06-non-relational": "1. Non Relational",
+  "06-non-relational": "Overview",
   assignment: "2. Assignment",
   translations: "3. Translations",
 }

@@ -1,3 +1,3 @@
 export default {
-  "13_bert_architecture": "1. Bert Architecture",
+  "13_bert_architecture": "Overview",
 }

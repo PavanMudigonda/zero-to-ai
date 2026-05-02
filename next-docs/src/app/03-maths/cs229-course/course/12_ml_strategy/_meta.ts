@@ -1,3 +1,3 @@
 export default {
-  "12_ml_strategy": "1. Ml Strategy",
+  "12_ml_strategy": "Overview",
 }

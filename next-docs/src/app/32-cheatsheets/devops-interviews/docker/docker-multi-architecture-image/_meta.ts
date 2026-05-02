@@ -1,3 +1,3 @@
 export default {
-  "docker-multi-architecture-image": "1. Docker Multi Architecture Image",
+  "docker-multi-architecture-image": "Overview",
 }

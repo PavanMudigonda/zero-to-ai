@@ -1,3 +1,3 @@
 export default {
-  "12_semantic_similarity": "1. Semantic Similarity",
+  "12_semantic_similarity": "Overview",
 }

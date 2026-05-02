@@ -1,3 +1,3 @@
 export default {
-  "02_heat_equation": "1. Heat Equation",
+  "02_heat_equation": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "01_introduction": "Introduction",
+  "01_introduction": "Overview",
 }

@@ -1,5 +1,5 @@
 export default {
-  "devops-interviews": "1. Devops Interviews",
+  "devops-interviews": "Overview",
   docker: "2. Docker",
   git: "3. Git",
   kubernetes: "4. Kubernetes",

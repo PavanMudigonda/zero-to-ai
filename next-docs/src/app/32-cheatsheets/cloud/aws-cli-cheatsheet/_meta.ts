@@ -1,3 +1,3 @@
 export default {
-  "aws-cli-cheatsheet": "Aws Cli Cheatsheet",
+  "aws-cli-cheatsheet": "Overview",
 }

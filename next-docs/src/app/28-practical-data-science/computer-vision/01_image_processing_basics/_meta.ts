@@ -1,3 +1,3 @@
 export default {
-  "01_image_processing_basics": "Image Processing Basics",
+  "01_image_processing_basics": "Overview",
 }

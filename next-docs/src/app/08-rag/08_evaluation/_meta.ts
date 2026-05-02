@@ -1,3 +1,3 @@
 export default {
-  "08_evaluation": "1. Evaluation",
+  "08_evaluation": "Overview",
 }

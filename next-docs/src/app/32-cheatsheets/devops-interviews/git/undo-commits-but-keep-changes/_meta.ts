@@ -1,3 +1,3 @@
 export default {
-  "undo-commits-but-keep-changes": "1. Undo Commits But Keep Changes",
+  "undo-commits-but-keep-changes": "Overview",
 }

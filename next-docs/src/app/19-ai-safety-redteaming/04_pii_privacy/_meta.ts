@@ -1,3 +1,3 @@
 export default {
-  "04_pii_privacy": "1. Pii Privacy",
+  "04_pii_privacy": "Overview",
 }

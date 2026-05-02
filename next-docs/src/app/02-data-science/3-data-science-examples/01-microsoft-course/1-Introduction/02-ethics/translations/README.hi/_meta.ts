@@ -1,3 +1,3 @@
 export default {
-  "README.hi": "Readme.hi",
+  "README.hi": "Overview",
 }

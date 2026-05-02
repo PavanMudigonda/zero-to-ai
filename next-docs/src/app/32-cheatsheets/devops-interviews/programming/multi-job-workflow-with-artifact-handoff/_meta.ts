@@ -1,3 +1,3 @@
 export default {
-  "multi-job-workflow-with-artifact-handoff": "1. Multi Job Workflow With Artifact Handoff",
+  "multi-job-workflow-with-artifact-handoff": "Overview",
 }

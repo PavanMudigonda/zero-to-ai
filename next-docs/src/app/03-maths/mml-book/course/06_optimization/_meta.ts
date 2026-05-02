@@ -1,3 +1,3 @@
 export default {
-  "06_optimization": "1. Optimization",
+  "06_optimization": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "trace-process-service-ownership": "1. Trace Process Service Ownership",
+  "trace-process-service-ownership": "Overview",
 }

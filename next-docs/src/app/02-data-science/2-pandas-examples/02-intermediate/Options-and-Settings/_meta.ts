@@ -1,3 +1,3 @@
 export default {
-  "Options-and-Settings": "1. Options And Settings",
+  "Options-and-Settings": "Overview",
 }

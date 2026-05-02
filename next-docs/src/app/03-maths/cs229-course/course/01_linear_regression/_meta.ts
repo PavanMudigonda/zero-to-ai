@@ -1,3 +1,3 @@
 export default {
-  "01_linear_regression": "Linear Regression",
+  "01_linear_regression": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "tutorial-ma": "1. Tutorial Ma",
+  "tutorial-ma": "Overview",
 }

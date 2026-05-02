@@ -7,5 +7,5 @@ export default {
   "06_red_teaming": "6. Red Teaming",
   "07_assignment": "7. Assignment",
   "09_quiz": "8. Quiz",
-  "19-ai-safety-redteaming": "9. Ai Safety Redteaming",
+  "19-ai-safety-redteaming": "Overview",
 }

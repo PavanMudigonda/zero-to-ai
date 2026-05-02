@@ -1,3 +1,3 @@
 export default {
-  "assignment.ko": "Assignment.ko",
+  "assignment.ko": "Overview",
 }
