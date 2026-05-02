@@ -6,6 +6,22 @@ const PAGE_FILE_NAMES = new Set(['page.mdx', 'page.tsx', 'page.ts', 'page.jsx', 
 const EXCLUDED_SEGMENTS = new Set(['_meta.ts', 'error.tsx', 'not-found.tsx', 'layout.tsx']);
 let cachedRoutes: string[] | null = null;
 
+function shouldSkipSelfNestedRoute(route: string): boolean {
+  const segments = route.split('/').filter(Boolean);
+
+  if (segments.length < 2) {
+    return false;
+  }
+
+  for (let index = 1; index < segments.length; index += 1) {
+    if (segments[index] === segments[index - 1]) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 function collectRouteDirectories(currentDirectory: string, routeDirectories: string[]) {
   for (const entryName of readdirSync(currentDirectory)) {
     if (EXCLUDED_SEGMENTS.has(entryName)) {
@@ -34,11 +50,14 @@ export function getStaticSiteRoutes(): string[] {
   const routeDirectories: string[] = [];
   collectRouteDirectories(APP_ROOT, routeDirectories);
 
-  cachedRoutes = [...new Set(routeDirectories)]
+  const uniqueRoutes = [...new Set(routeDirectories)]
     .map((directoryPath) => {
       const relativeDirectory = relative(APP_ROOT, directoryPath).replaceAll(sep, '/');
       return relativeDirectory ? `/${relativeDirectory}` : '/';
-    })
+    });
+
+  cachedRoutes = uniqueRoutes
+    .filter((route) => !shouldSkipSelfNestedRoute(route))
     .sort((left, right) => left.localeCompare(right));
 
   return cachedRoutes;
