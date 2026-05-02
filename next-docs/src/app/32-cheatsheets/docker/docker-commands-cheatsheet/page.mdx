@@ -1,6 +1,8 @@
 # Docker Commands - Complete Cheatsheet
 
-Practice these commands with Docker containers and images
+Updated against the current Docker Docs structure across Get started, Manuals, Guides, and Reference.
+
+Practice these commands with Docker containers and images, Docker Compose v2, Buildx/BuildKit, Docker Scout, Docker Debug, and Docker Init.
 
 ---
 
@@ -67,7 +69,7 @@ docker run -d -e ENV=production -e DB_HOST=localhost nginx
 
 **Command 12:** Run container with volume mount
 ```bash
-docker run -d -v /host/path:/container/path nginx
+docker run -d --mount type=bind,src=/host/path,dst=/container/path nginx
 ```
 
 **Command 13:** Run container with interactive terminal
@@ -343,17 +345,17 @@ docker volume prune
 
 **Command 64:** Run container with named volume
 ```bash
-docker run -d -v my-volume:/data nginx
+docker run -d --mount type=volume,src=my-volume,dst=/data nginx
 ```
 
 **Command 65:** Run container with bind mount
 ```bash
-docker run -d -v $(pwd):/app nginx
+docker run -d --mount type=bind,src="$(pwd)",dst=/app nginx
 ```
 
 **Command 66:** Run container with read-only volume
 ```bash
-docker run -d -v my-volume:/data:ro nginx
+docker run -d --mount type=volume,src=my-volume,dst=/data,readonly nginx
 ```
 
 ---
@@ -474,14 +476,14 @@ docker compose build
 docker compose restart
 ```
 
-**Command 89:** Pause services
+**Command 89:** Watch files and rebuild or refresh on changes
 ```bash
-docker compose pause
+docker compose watch
 ```
 
-**Command 90:** Unpause services
+**Command 90:** Start services with watch enabled
 ```bash
-docker compose unpause
+docker compose up --watch
 ```
 
 **Command 91:** Validate compose file
@@ -744,67 +746,71 @@ CMD ["node", "app.js"]
 
 ---
 
-## 17. Docker Security Commands
+## 17. Docker Scout, Debug, and Runtime Security Commands
 
-**Command 133:** Scan image for vulnerabilities
+Current Docker docs emphasize Docker Scout for image analysis, Docker Debug for shell-less containers and images, and Docker Init for project bootstrapping.
+
+**Command 133:** Analyze image vulnerabilities with Docker Scout
 ```bash
-docker scan nginx:latest
+docker scout cves nginx:latest
 ```
 
-**Command 134:** Run container as non-root user
+**Command 134:** Get image improvement recommendations with Docker Scout
 ```bash
-docker run -d --user 1001:1001 nginx
+docker scout recommendations nginx:latest
 ```
 
-**Command 135:** Run with read-only filesystem
+**Command 135:** Open a debug shell into a running container
 ```bash
-docker run -d --read-only nginx
+docker debug <container>
 ```
 
-**Command 136:** Run with no new privileges
+**Command 136:** Debug an image directly, even if it has no shell
+```bash
+docker debug nginx:latest
+```
+
+**Command 137:** Bootstrap Docker files for an application
+```bash
+docker init
+```
+
+**Command 138:** Run containers as a non-root user with a read-only filesystem
+```bash
+docker run -d --user 1001:1001 --read-only nginx
+```
+
+**Command 139:** Add no-new-privileges for runtime hardening
 ```bash
 docker run -d --security-opt=no-new-privileges nginx
 ```
 
-**Command 137:** Drop all capabilities and add specific ones
+**Command 140:** Drop all capabilities and add back only what you need
 ```bash
 docker run -d --cap-drop=ALL --cap-add=NET_BIND_SERVICE nginx
-```
-
-**Command 138:** Use secrets in Docker (Swarm mode)
-```bash
-echo "mypassword" | docker secret create db_password -
-```
-
-**Command 139:** View container processes from host
-```bash
-docker top <container>
-```
-
-**Command 140:** Check container diff (filesystem changes)
-```bash
-docker diff <container>
 ```
 
 ---
 
 ## 18. BuildKit & Advanced Build (Latest Features)
 
+On current Docker Desktop and modern Docker installations, BuildKit is the standard build engine. Use `docker buildx build` when you need multi-platform output, advanced cache backends, attestations, or alternate export targets.
+
 ### Basic BuildKit Commands
 
-**Command 141:** Enable BuildKit for build
+**Command 141:** Build with Buildx and load the result locally
 ```bash
-DOCKER_BUILDKIT=1 docker build -t myapp:latest .
+docker buildx build -t myapp:latest --load .
 ```
 
 **Command 142:** Build with build cache from registry
 ```bash
-docker build --cache-from myregistry.com/myapp:latest -t myapp:latest .
+docker buildx build --cache-from myregistry.com/myapp:latest -t myapp:latest --load .
 ```
 
 **Command 143:** Build with inline cache
 ```bash
-docker build --build-arg BUILDKIT_INLINE_CACHE=1 -t myapp:latest .
+docker buildx build --build-arg BUILDKIT_INLINE_CACHE=1 -t myapp:latest --push .
 ```
 
 ### Buildx Builder Management
@@ -2272,7 +2278,7 @@ docker build --cache-from myapp:latest -t myapp:latest .
 
 ### Security Best Practices
 1. **Never store secrets in images**
-2. **Scan images regularly** - `docker scan`
+2. **Scan images regularly** - `docker scout cves`
 3. **Use official base images**
 4. **Keep images updated** - Patch vulnerabilities
 5. **Limit container capabilities** - `--cap-drop`

@@ -211,14 +211,16 @@ cp terraform.tfstate terraform.tfstate.backup
 
 ## 6. State Refresh & Sync
 
-**Command 38:** Refresh state
+Use refresh-only plan and apply flows instead of the deprecated `terraform refresh` command.
+
+**Command 38:** Preview refresh-only changes
 ```bash
-terraform refresh
+terraform plan -refresh-only
 ```
 
-**Command 39:** Refresh with variable file
+**Command 39:** Apply refresh-only changes with variable file
 ```bash
-terraform refresh -var-file="prod.tfvars"
+terraform apply -refresh-only -var-file="prod.tfvars"
 ```
 
 **Command 40:** Sync state without applying changes
@@ -1115,7 +1117,7 @@ module "vpc" {
     terraform plan -out=tfplan
     
 - name: Save Plan
-  uses: actions/upload-artifact@v3
+  uses: actions/upload-artifact@v4
   with:
     name: tfplan
     path: tfplan
@@ -2640,7 +2642,7 @@ jobs:
   plan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v2
       - run: terraform init
       - run: terraform plan -no-color
@@ -2657,7 +2659,7 @@ jobs:
   apply:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: hashicorp/setup-terraform@v2
       - run: terraform init
       - run: terraform apply -auto-approve
