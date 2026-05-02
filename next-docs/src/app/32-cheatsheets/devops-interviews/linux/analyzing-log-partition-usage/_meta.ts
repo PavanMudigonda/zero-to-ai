@@ -1,3 +1,3 @@
 export default {
-  "analyzing-log-partition-usage": "1. Analyzing Log Partition Usage",
+  "analyzing-log-partition-usage": "Analyzing Log Partition Usage",
 }

@@ -1,3 +1,3 @@
 export default {
-  "GitHub-ARC-Interview-Diagram": "1. Github Arc Interview Diagram",
+  "GitHub-ARC-Interview-Diagram": "Github Arc Interview Diagram",
 }

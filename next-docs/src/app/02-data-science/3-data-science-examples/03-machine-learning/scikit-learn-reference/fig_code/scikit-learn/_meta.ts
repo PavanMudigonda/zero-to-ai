@@ -1,3 +1,3 @@
 export default {
-  "scikit-learn": "1. Scikit Learn",
+  "scikit-learn": "Scikit Learn",
 }

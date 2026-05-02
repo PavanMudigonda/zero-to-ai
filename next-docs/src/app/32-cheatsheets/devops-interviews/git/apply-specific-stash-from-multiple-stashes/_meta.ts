@@ -1,3 +1,3 @@
 export default {
-  "apply-specific-stash-from-multiple-stashes": "1. Apply Specific Stash From Multiple Stashes",
+  "apply-specific-stash-from-multiple-stashes": "Apply Specific Stash From Multiple Stashes",
 }

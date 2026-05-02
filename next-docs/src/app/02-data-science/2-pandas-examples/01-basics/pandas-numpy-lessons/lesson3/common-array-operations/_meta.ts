@@ -1,3 +1,3 @@
 export default {
-  "common-array-operations": "1. Common Array Operations",
+  "common-array-operations": "Common Array Operations",
 }

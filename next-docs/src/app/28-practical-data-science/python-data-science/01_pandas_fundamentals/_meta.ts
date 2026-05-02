@@ -1,3 +1,3 @@
 export default {
-  "01_pandas_fundamentals": "1. Pandas Fundamentals",
+  "01_pandas_fundamentals": "Pandas Fundamentals",
 }

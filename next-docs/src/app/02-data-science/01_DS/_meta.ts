@@ -1,3 +1,3 @@
 export default {
-  "01_DS": "1. Ds",
+  "01_DS": "Ds",
 }

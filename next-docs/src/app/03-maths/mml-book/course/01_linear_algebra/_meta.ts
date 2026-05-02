@@ -1,3 +1,3 @@
 export default {
-  "01_linear_algebra": "1. Linear Algebra",
+  "01_linear_algebra": "Linear Algebra",
 }

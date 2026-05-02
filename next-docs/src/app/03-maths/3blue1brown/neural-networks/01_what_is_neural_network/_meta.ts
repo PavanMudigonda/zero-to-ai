@@ -1,3 +1,3 @@
 export default {
-  "01_what_is_neural_network": "1. What Is Neural Network",
+  "01_what_is_neural_network": "What Is Neural Network",
 }

@@ -1,3 +1,3 @@
 export default {
-  "git-cheatsheet": "1. Git Cheatsheet",
+  "git-cheatsheet": "Git Cheatsheet",
 }
