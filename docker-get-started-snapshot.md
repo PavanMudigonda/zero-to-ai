@@ -1,0 +1,93 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "Insights on the state of AI agents from 800+ builders and leaders. Download your copy" [ref=e6] [cursor=pointer]:
+      - /url: https://www.docker.com/resources/the-state-of-agentic-ai-white-paper/
+      - text: Insights on the state of AI agents from 800+ builders and leaders. Download your copy
+      - img [ref=e7]
+    - generic [ref=e9] [cursor=pointer]: ✕
+  - banner [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - link "Docker Docs home page" [ref=e14] [cursor=pointer]:
+          - /url: https://docs.docker.com/
+        - navigation [ref=e20]
+      - generic [ref=e31]:
+        - button "Ask Gordon, AI assistant" [ref=e33] [cursor=pointer]
+        - button "Search" [ref=e45] [cursor=pointer]
+        - button "Theme switch" [ref=e50] [cursor=pointer]
+  - main [ref=e54]:
+    - navigation [ref=e57]:
+      - list [ref=e58]:
+        - listitem [ref=e59]
+        - listitem [ref=e61]
+        - listitem [ref=e63]
+        - listitem [ref=e71]
+        - listitem [ref=e79]
+        - listitem [ref=e87]
+    - generic [ref=e90]:
+      - article [ref=e92]:
+        - navigation [ref=e93]
+        - generic [ref=e97]
+        - paragraph [ref=e110]: If you're new to Docker, this section guides you through the essential resources to get started.
+        - paragraph [ref=e111]: Follow the guides to help you get started and learn how Docker can optimize your development workflows.
+        - paragraph [ref=e112]
+        - heading "Foundations of Docker" [level=2] [ref=e114]
+        - paragraph [ref=e116]: Install Docker and jump into discovering what Docker is.
+        - generic [ref=e117]
+        - paragraph [ref=e138]: Learn the foundational concepts and workflows of Docker.
+        - generic [ref=e139]
+      - complementary [ref=e171]:
+        - paragraph [ref=e172]
+        - paragraph [ref=e178]
+  - contentinfo [ref=e184]:
+    - generic [ref=e185]:
+      - generic [ref=e186]:
+        - link "LinkedIn" [ref=e187] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/docker
+        - link "Twitter" [ref=e192] [cursor=pointer]:
+          - /url: https://x.com/docker/
+        - link "Facebook" [ref=e197] [cursor=pointer]:
+          - /url: https://www.facebook.com/docker.run
+        - link "YouTube" [ref=e202] [cursor=pointer]:
+          - /url: http://www.youtube.com/user/dockerrun
+        - link "Instagram" [ref=e207] [cursor=pointer]:
+          - /url: https://www.instagram.com/dockerinc/
+      - generic [ref=e212]:
+        - link "Product offerings" [ref=e213] [cursor=pointer]:
+          - /url: https://www.docker.com/
+        - link "Pricing" [ref=e214] [cursor=pointer]:
+          - /url: https://www.docker.com/pricing?ref=Docs&refAction=DocsFooter
+        - link "About us" [ref=e215] [cursor=pointer]:
+          - /url: https://www.docker.com/company/
+        - link "llms.txt" [ref=e216] [cursor=pointer]:
+          - /url: /llms.txt
+        - link "llms-full.txt" [ref=e217] [cursor=pointer]:
+          - /url: /llms-full.txt
+      - generic [ref=e218]:
+        - button "Cookies Settings" [ref=e219] [cursor=pointer]
+        - generic [ref=e220]: "|"
+        - link "Terms of Service" [ref=e221] [cursor=pointer]:
+          - /url: https://www.docker.com/legal/docker-terms-service
+        - generic [ref=e222]: "|"
+        - link "Status" [ref=e223] [cursor=pointer]:
+          - /url: https://www.dockerstatus.com/
+        - generic [ref=e224]: "|"
+        - link "Legal" [ref=e225] [cursor=pointer]:
+          - /url: https://www.docker.com/legal
+    - generic [ref=e226]: Copyright © 2013-2026 Docker Inc. All rights reserved.
+  - generic:
+    - status [ref=e227]
+    - status [ref=e228]
+    - status [ref=e229]
+    - status [ref=e230]
+  - region "Cookie banner" [active] [ref=e231]:
+    - alertdialog "Privacy" [ref=e232]:
+      - generic [ref=e234]:
+        - generic [ref=e237]: By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+        - generic [ref=e239]
+      - button "Close" [ref=e244] [cursor=pointer]
+  - generic:
+    - generic:
+      - generic:
+        - generic
+  - iframe
