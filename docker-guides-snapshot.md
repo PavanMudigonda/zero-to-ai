@@ -1,0 +1,601 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "Insights on the state of AI agents from 800+ builders and leaders. Download your copy" [ref=e6] [cursor=pointer]:
+      - /url: https://www.docker.com/resources/the-state-of-agentic-ai-white-paper/
+      - text: Insights on the state of AI agents from 800+ builders and leaders. Download your copy
+      - img [ref=e7]
+    - generic [ref=e9] [cursor=pointer]: ✕
+  - banner [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - link "Docker Docs home page" [ref=e14] [cursor=pointer]:
+          - /url: https://docs.docker.com/
+          - img [ref=e16]
+        - navigation [ref=e20]:
+          - list [ref=e21]:
+            - listitem [ref=e22]
+            - listitem [ref=e24]
+            - listitem [ref=e26]
+            - listitem [ref=e28]
+      - generic [ref=e31]:
+        - button "Ask Gordon, AI assistant" [ref=e33] [cursor=pointer]:
+          - img [ref=e35]
+          - generic [ref=e42]: Gordon
+        - button "Search" [ref=e45] [cursor=pointer]:
+          - img [ref=e47]
+          - generic [ref=e49]: Search
+        - button "Theme switch" [ref=e50] [cursor=pointer]:
+          - img [ref=e52]
+  - main [ref=e54]:
+    - generic [ref=e57]:
+      - paragraph [ref=e58]: Filter guides by tag or programming language.
+      - paragraph
+      - generic [ref=e59]:
+        - strong [ref=e61]: Tags
+        - group [ref=e62]:
+          - generic [ref=e63]:
+            - checkbox "Administration" [ref=e64]
+            - generic [ref=e65]: Administration
+          - generic [ref=e66]:
+            - checkbox "AI" [ref=e67]
+            - generic [ref=e68]: AI
+          - generic [ref=e69]:
+            - checkbox "App development" [ref=e70]
+            - generic [ref=e71]: App development
+          - generic [ref=e72]:
+            - checkbox "Cloud services" [ref=e73]
+            - generic [ref=e74]: Cloud services
+          - generic [ref=e75]:
+            - checkbox "Data science" [ref=e76]
+            - generic [ref=e77]: Data science
+          - generic [ref=e78]:
+            - checkbox "Databases" [ref=e79]
+            - generic [ref=e80]: Databases
+          - generic [ref=e81]:
+            - checkbox "Deployment" [ref=e82]
+            - generic [ref=e83]: Deployment
+          - generic [ref=e84]:
+            - checkbox "DevOps" [ref=e85]
+            - generic [ref=e86]: DevOps
+          - generic [ref=e87]:
+            - checkbox "Docker Hardened Images" [ref=e88]
+            - generic [ref=e89]: Docker Hardened Images
+          - generic [ref=e90]:
+            - checkbox "Distributed systems" [ref=e91]
+            - generic [ref=e92]: Distributed systems
+          - generic [ref=e93]:
+            - checkbox "Frameworks" [ref=e94]
+            - generic [ref=e95]: Frameworks
+          - generic [ref=e96]:
+            - checkbox "Labs" [ref=e97]
+            - generic [ref=e98]: Labs
+          - generic [ref=e99]:
+            - checkbox "Networking" [ref=e100]
+            - generic [ref=e101]: Networking
+          - generic [ref=e102]:
+            - checkbox "Observability" [ref=e103]
+            - generic [ref=e104]: Observability
+          - generic [ref=e105]:
+            - checkbox "Product demo" [ref=e106]
+            - generic [ref=e107]: Product demo
+          - generic [ref=e108]:
+            - checkbox "Testing with Docker" [ref=e109]
+            - generic [ref=e110]: Testing with Docker
+        - strong [ref=e112]: Languages
+        - group [ref=e113]:
+          - button "C# C#" [ref=e114]:
+            - img "C#" [ref=e115]
+            - generic [ref=e116]: C#
+          - button "C++ C++" [ref=e117]:
+            - img "C++" [ref=e118]
+            - generic [ref=e119]: C++
+          - button "Go Go" [ref=e120]:
+            - img "Go" [ref=e121]
+            - generic [ref=e122]: Go
+          - button "Java Java" [ref=e123]:
+            - img "Java" [ref=e124]
+            - generic [ref=e125]: Java
+          - button "JavaScript JavaScript" [ref=e126]:
+            - img "JavaScript" [ref=e127]
+            - generic [ref=e128]: JavaScript
+          - button "PHP PHP" [ref=e129]:
+            - img "PHP" [ref=e130]
+            - generic [ref=e131]: PHP
+          - button "Python Python" [ref=e132]:
+            - img "Python" [ref=e133]
+            - generic [ref=e134]: Python
+          - button "R R" [ref=e135]:
+            - img "R" [ref=e136]
+            - generic [ref=e137]: R
+          - button "Ruby Ruby" [ref=e138]:
+            - img "Ruby" [ref=e139]
+            - generic [ref=e140]: Ruby
+          - button "Rust Rust" [ref=e141]:
+            - img "Rust" [ref=e142]
+            - generic [ref=e143]: Rust
+    - article [ref=e146]:
+      - navigation [ref=e147]:
+        - link "Home" [ref=e148] [cursor=pointer]:
+          - /url: https://docs.docker.com/
+        - generic [ref=e149]: /
+        - generic [ref=e150]: Guides
+      - heading "Docker guides" [level=1] [ref=e151]
+      - paragraph [ref=e152]: Explore our collection of guides to learn how Docker can optimize your development workflows and how to use it with specific languages, frameworks, or technologies.
+      - paragraph [ref=e153]:
+        - text: Can't find the guide you're looking for? Open an issue on the
+        - link "docker/docs" [ref=e154] [cursor=pointer]:
+          - /url: https://github.com/docker/docs/issues/new
+        - text: repository to let us know.
+      - generic [ref=e155]:
+        - generic [ref=e156]:
+          - heading "Featured guides" [level=2] [ref=e157]
+          - generic [ref=e158]:
+            - generic [ref=e159]
+            - generic [ref=e176]
+            - generic [ref=e193]
+            - generic [ref=e210]
+            - generic [ref=e227]
+            - generic [ref=e244]
+          - separator [ref=e264]
+        - heading "All guides" [level=2] [ref=e265]
+        - generic [ref=e266]:
+          - generic [ref=e268]:
+            - link "Set up your company for success with Docker" [ref=e269] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/admin-set-up/
+            - generic [ref=e270]
+          - generic [ref=e282]:
+            - link "Build and run agentic AI applications with Docker" [ref=e283] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/agentic-ai/
+            - generic [ref=e285]
+          - generic [ref=e291]:
+            - link "Angular language-specific guide" [ref=e292] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/angular/
+            - generic [ref=e293]
+          - generic [ref=e304]:
+            - link "Testing an ASP.NET Core web app with Testcontainers" [ref=e305] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-dotnet-aspnet-core/
+            - generic [ref=e306]
+          - generic [ref=e321]:
+            - link "Develop and test AWS Cloud applications using LocalStack and Docker" [ref=e322] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/localstack/
+            - generic [ref=e323]
+          - generic [ref=e338]:
+            - link "Testing AWS service integrations using LocalStack" [ref=e339] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-aws-localstack/
+            - generic [ref=e340]
+          - generic [ref=e355]:
+            - link "Introduction to Azure Pipelines with Docker" [ref=e356] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/azure-pipelines/
+            - generic [ref=e357]
+          - generic [ref=e369]:
+            - link "How to build an AI-powered code quality workflow with SonarQube and E2B" [ref=e370] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/github-sonarqube-sandbox/
+            - generic [ref=e371]
+          - generic [ref=e383]:
+            - link "Building Compose projects with Bake" [ref=e384] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/compose-bake/
+            - generic [ref=e385]
+          - generic [ref=e397]:
+            - link "Bun language-specific guide" [ref=e398] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/bun/
+            - generic [ref=e399]
+          - generic [ref=e414]:
+            - link ".NET language-specific guide" [ref=e415] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dotnet/
+            - generic [ref=e416]
+          - generic [ref=e427]:
+            - link "C++ language-specific guide" [ref=e428] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/cpp/
+            - generic [ref=e429]
+          - generic [ref=e440]:
+            - link "Testcontainers container lifecycle management using JUnit 5" [ref=e441] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-lifecycle/
+            - generic [ref=e442]
+          - generic [ref=e457]:
+            - link "Faster development and testing with container-supported development" [ref=e458] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/container-supported-development/
+            - generic [ref=e459]
+          - generic [ref=e471]:
+            - link "Data science with JupyterLab" [ref=e472] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/jupyter/
+            - generic [ref=e473]
+          - generic [ref=e488]:
+            - link "Deno language-specific guide" [ref=e489] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/deno/
+            - generic [ref=e490]
+          - generic [ref=e505]:
+            - link "Deploy to Kubernetes" [ref=e506] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/kube-deploy/
+            - generic [ref=e507]
+          - generic [ref=e519]:
+            - link "Deploy to Swarm" [ref=e520] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/swarm-deploy/
+            - generic [ref=e521]
+          - generic [ref=e533]:
+            - link "Deployment and orchestration" [ref=e534] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/orchestration/
+            - generic [ref=e535]
+          - generic [ref=e547]:
+            - link "Containerize a Django application" [ref=e548] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/django/
+            - generic [ref=e549]
+          - generic [ref=e564]:
+            - 'link "Docker Build Cloud: Reclaim your time with fast, multi-architecture builds" [ref=e565] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/docker-build-cloud/
+            - generic [ref=e566]
+          - generic [ref=e578]:
+            - link "Defining and running multi-container applications with Docker Compose" [ref=e579] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/docker-compose/
+            - generic [ref=e580]
+          - link "Docker for AI Labs" [ref=e593] [cursor=pointer]:
+            - /url: https://docs.docker.com/guides/lab-docker-for-ai-redirect/
+          - generic [ref=e595]:
+            - link "Securing your software supply chain with Docker Scout" [ref=e596] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/docker-scout/
+            - generic [ref=e597]
+          - generic [ref=e609]:
+            - link "Developing event-driven applications with Kafka and Docker" [ref=e610] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/kafka/
+            - generic [ref=e611]
+          - generic [ref=e626]:
+            - link "Face detection with TensorFlow.js" [ref=e627] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/tensorflowjs/
+            - generic [ref=e628]
+          - generic [ref=e643]:
+            - link "Generate Docker Compose Files with Claude Code and Docker MCP Toolkit" [ref=e644] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/genai-claude-code-mcp/claude-code-mcp-guide/
+            - generic [ref=e645]
+          - generic [ref=e657]:
+            - link "Introduction to GitHub Actions with Docker" [ref=e658] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/gha/
+            - generic [ref=e659]
+          - generic [ref=e671]:
+            - link "Go language-specific guide" [ref=e672] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/golang/
+            - generic [ref=e673]
+          - generic [ref=e684]:
+            - link "HTTP routing with Traefik" [ref=e685] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/traefik/
+            - generic [ref=e686]
+          - generic [ref=e702]:
+            - link "Instrumenting a JavaScript App with OpenTelemetry" [ref=e703] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/opentelemetry/
+            - generic [ref=e704]
+          - generic [ref=e723]:
+            - link "Java language-specific guide" [ref=e724] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/java/
+            - generic [ref=e725]
+          - generic [ref=e736]:
+            - link "Working with jOOQ and Flyway using Testcontainers" [ref=e737] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-jooq-flyway/
+            - generic [ref=e738]
+          - generic [ref=e753]:
+            - link "Securing Spring Boot microservice using Keycloak and Testcontainers" [ref=e754] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-keycloak-spring-boot/
+            - generic [ref=e755]
+          - generic [ref=e770]:
+            - 'link "Lab: AI Fundamentals for Developers" [ref=e771] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-ai-fundamentals/
+            - generic [ref=e772]
+          - generic [ref=e788]:
+            - 'link "Lab: Building Agentic Apps with Docker" [ref=e789] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-agentic-apps/
+            - generic [ref=e790]
+          - generic [ref=e806]:
+            - 'link "Lab: Building an AI Product Reviewer" [ref=e807] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-creating-ai-product-reviewer/
+            - generic [ref=e808]
+          - generic [ref=e824]:
+            - 'link "Lab: Building Container Images" [ref=e825] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-building-images/
+            - generic [ref=e826]
+          - generic [ref=e838]:
+            - 'link "Lab: Container Image Attestations" [ref=e839] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-attestation-basics/
+            - generic [ref=e840]
+          - generic [ref=e852]:
+            - 'link "Lab: Container-Supported Development" [ref=e853] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-container-supported-development/
+            - generic [ref=e854]
+          - generic [ref=e866]:
+            - 'link "Lab: Docker Compose Quickstart" [ref=e867] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-compose-quickstart/
+            - generic [ref=e868]
+          - generic [ref=e880]:
+            - 'link "Lab: Docker MCP Gateway" [ref=e881] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-mcp-gateway/
+            - generic [ref=e882]
+          - generic [ref=e898]:
+            - 'link "Lab: Getting Started with Docker" [ref=e899] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-container-getting-started/
+            - generic [ref=e900]
+          - generic [ref=e912]:
+            - 'link "Lab: Getting Started with Docker Agent" [ref=e913] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-docker-agent/
+            - generic [ref=e914]
+          - generic [ref=e930]:
+            - 'link "Lab: Migrating a Node App to Docker Hardened Images" [ref=e931] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-dhi-node/
+            - generic [ref=e932]
+          - generic [ref=e948]:
+            - 'link "Lab: The Containerized SDLC" [ref=e949] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/lab-containerized-sdlc/
+            - generic [ref=e950]
+          - generic [ref=e962]:
+            - link "Build a language translation app" [ref=e963] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/language-translation/
+            - generic [ref=e964]
+          - generic [ref=e979]:
+            - link "Develop and Deploy Laravel applications with Docker Compose" [ref=e980] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/frameworks/laravel/
+            - generic [ref=e981]
+          - generic [ref=e996]:
+            - link "Leveraging RAG in GenAI to teach new information" [ref=e997] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/genai-leveraging-rag/
+            - generic [ref=e998]
+          - generic [ref=e1010]:
+            - link "Mastering multi-platform builds, testing, and more with Docker Buildx Bake" [ref=e1011] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/bake/
+            - generic [ref=e1012]
+          - generic [ref=e1027]:
+            - link "Mastering user and access management" [ref=e1028] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/admin-user-management/
+            - generic [ref=e1029]
+          - generic [ref=e1041]:
+            - link "Testing Micronaut Kafka Listener using Testcontainers" [ref=e1042] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-micronaut-kafka/
+            - generic [ref=e1043]
+          - generic [ref=e1058]:
+            - link "Testing REST API integrations in Micronaut apps using WireMock" [ref=e1059] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-micronaut-wiremock/
+            - generic [ref=e1060]
+          - generic [ref=e1075]:
+            - link "Migrate a Go app to DHI" [ref=e1076] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-go-example/
+            - generic [ref=e1077]
+          - generic [ref=e1089]:
+            - link "Migrate a Node.js app to DHI" [ref=e1090] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-nodejs-example/
+            - generic [ref=e1091]
+          - generic [ref=e1103]:
+            - link "Migrate a Python app to DHI" [ref=e1104] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-python-example/
+            - generic [ref=e1105]
+          - generic [ref=e1117]:
+            - link "Migrate to DHI from Docker Official Images" [ref=e1118] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-from-doi/
+            - generic [ref=e1119]
+          - generic [ref=e1131]:
+            - link "Migrate to DHI from Wolfi" [ref=e1132] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-from-wolfi/
+            - generic [ref=e1133]
+          - generic [ref=e1145]:
+            - link "Mocking API services in development and testing with WireMock" [ref=e1146] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/wiremock/
+            - generic [ref=e1147]
+          - generic [ref=e1166]:
+            - link "Mocking OAuth services in testing with Dex" [ref=e1167] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dex/
+            - generic [ref=e1168]
+          - generic [ref=e1184]:
+            - link "Testing REST API integrations using MockServer" [ref=e1185] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-mockserver/
+            - generic [ref=e1186]
+          - generic [ref=e1201]:
+            - link "Monitor a Golang application with Prometheus and Grafana" [ref=e1202] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/go-prometheus-monitoring/
+            - generic [ref=e1203]
+          - generic [ref=e1214]:
+            - link "Build a named entity recognition app" [ref=e1215] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/named-entity-recognition/
+            - generic [ref=e1216]
+          - generic [ref=e1231]:
+            - link "Containerize a Next.js application" [ref=e1232] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/nextjs/
+            - generic [ref=e1233]
+          - generic [ref=e1248]:
+            - link "Node.js language-specific guide" [ref=e1249] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/nodejs/
+            - generic [ref=e1250]
+          - generic [ref=e1265]:
+            - link "PDF analysis and chat" [ref=e1266] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/genai-pdf-bot/
+            - generic [ref=e1267]
+          - generic [ref=e1279]:
+            - link "PHP language-specific guide" [ref=e1280] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/php/
+            - generic [ref=e1281]
+          - generic [ref=e1292]:
+            - link "PostgreSQL specific guide" [ref=e1293] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/postgresql/
+            - generic [ref=e1294]
+          - generic [ref=e1306]:
+            - link "Pre-seeding database with schema and data at startup for development environment" [ref=e1307] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/pre-seeding/
+            - generic [ref=e1308]
+          - generic [ref=e1324]:
+            - link "Python language-specific guide" [ref=e1325] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/python/
+            - generic [ref=e1326]
+          - generic [ref=e1341]:
+            - link "Testing Quarkus applications with Testcontainers" [ref=e1342] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-quarkus/
+            - generic [ref=e1343]
+          - generic [ref=e1358]:
+            - link "R language-specific guide" [ref=e1359] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/r/
+            - generic [ref=e1360]
+          - generic [ref=e1371]:
+            - link "Build a RAG application using Ollama and Docker" [ref=e1372] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/rag-ollama/
+            - generic [ref=e1373]
+          - generic [ref=e1385]:
+            - link "React.js language-specific guide" [ref=e1386] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/reactjs/
+            - generic [ref=e1387]
+          - generic [ref=e1398]:
+            - link "Replace H2 with a real database for testing" [ref=e1399] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-replace-h2/
+            - generic [ref=e1400]
+          - generic [ref=e1415]:
+            - link "Introduction to ROS 2 Development with Docker" [ref=e1416] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/ros2/
+            - generic [ref=e1417]
+          - generic [ref=e1432]:
+            - link "Ruby on Rails language-specific guide" [ref=e1433] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/ruby/
+            - generic [ref=e1434]
+          - generic [ref=e1449]:
+            - link "Rust language-specific guide" [ref=e1450] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/rust/
+            - generic [ref=e1451]
+          - generic [ref=e1466]:
+            - link "Secure a Backstage application with Docker Hardened Images" [ref=e1467] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-backstage/
+            - generic [ref=e1468]
+          - generic [ref=e1480]:
+            - link "Build a sentiment analysis app" [ref=e1481] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/sentiment-analysis/
+            - generic [ref=e1482]
+          - generic [ref=e1497]:
+            - link "Configuration of services running in a container" [ref=e1498] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-service-configuration/
+            - generic [ref=e1499]
+          - generic [ref=e1514]:
+            - link "Testing Spring Boot Kafka Listener using Testcontainers" [ref=e1515] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-spring-boot-kafka/
+            - generic [ref=e1516]
+          - generic [ref=e1531]:
+            - link "Testing a Spring Boot REST API with Testcontainers" [ref=e1532] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-spring-boot-rest-api/
+            - generic [ref=e1533]
+          - generic [ref=e1548]:
+            - 'link "Mastering Testcontainers Cloud by Docker: streamlining integration testing with containers" [ref=e1549] [cursor=pointer]':
+              - /url: https://docs.docker.com/guides/testcontainers-cloud/
+            - generic [ref=e1550]
+          - generic [ref=e1562]:
+            - link "Getting started with Testcontainers for .NET" [ref=e1563] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-dotnet-getting-started/
+            - generic [ref=e1564]
+          - generic [ref=e1579]:
+            - link "Getting started with Testcontainers for Go" [ref=e1580] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-go-getting-started/
+            - generic [ref=e1581]
+          - generic [ref=e1596]:
+            - link "Getting started with Testcontainers for Java" [ref=e1597] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-getting-started/
+            - generic [ref=e1598]
+          - generic [ref=e1613]:
+            - link "Getting started with Testcontainers for Node.js" [ref=e1614] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-nodejs-getting-started/
+            - generic [ref=e1615]
+          - generic [ref=e1630]:
+            - link "Getting started with Testcontainers for Python" [ref=e1631] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-python-getting-started/
+            - generic [ref=e1632]
+          - generic [ref=e1647]:
+            - link "Build a text recognition app" [ref=e1648] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/text-classification/
+            - generic [ref=e1649]
+          - generic [ref=e1664]:
+            - link "Build a text summarization app" [ref=e1665] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/text-summarization/
+            - generic [ref=e1666]
+          - generic [ref=e1681]:
+            - link "Use Claude Code with Docker Model Runner" [ref=e1682] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/claude-code-model-runner/
+            - generic [ref=e1683]
+          - generic [ref=e1695]:
+            - link "Use containerized databases" [ref=e1696] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/databases/
+            - generic [ref=e1697]
+          - generic [ref=e1709]:
+            - link "Use Docker Hardened Images with Red Hat OpenShift" [ref=e1710] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/dhi-openshift/
+            - generic [ref=e1711]
+          - generic [ref=e1723]:
+            - link "Use OpenCode with Docker Model Runner" [ref=e1724] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/opencode-model-runner/
+            - generic [ref=e1725]
+          - generic [ref=e1737]:
+            - link "Using Docker with Zscaler" [ref=e1738] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/zscaler/
+            - generic [ref=e1739]
+          - generic [ref=e1755]:
+            - link "GenAI video transcription and chat" [ref=e1756] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/genai-video-bot/
+            - generic [ref=e1757]
+          - generic [ref=e1769]:
+            - link "Visualizing your PostgreSQL databases with pgAdmin" [ref=e1770] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/pgadmin/
+            - generic [ref=e1771]
+          - generic [ref=e1783]:
+            - link "Vue.js language-specific guide" [ref=e1784] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/vuejs/
+            - generic [ref=e1785]
+          - generic [ref=e1804]:
+            - link "Testing REST API integrations using WireMock" [ref=e1805] [cursor=pointer]:
+              - /url: https://docs.docker.com/guides/testcontainers-java-wiremock/
+            - generic [ref=e1806]
+  - contentinfo [ref=e1820]:
+    - generic [ref=e1821]:
+      - generic [ref=e1822]:
+        - link "LinkedIn" [ref=e1823] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/docker
+          - img [ref=e1825]
+        - link "Twitter" [ref=e1828] [cursor=pointer]:
+          - /url: https://x.com/docker/
+          - img [ref=e1830]
+        - link "Facebook" [ref=e1833] [cursor=pointer]:
+          - /url: https://www.facebook.com/docker.run
+          - img [ref=e1835]
+        - link "YouTube" [ref=e1838] [cursor=pointer]:
+          - /url: http://www.youtube.com/user/dockerrun
+          - img [ref=e1840]
+        - link "Instagram" [ref=e1843] [cursor=pointer]:
+          - /url: https://www.instagram.com/dockerinc/
+          - img [ref=e1845]
+      - generic [ref=e1848]:
+        - link "Product offerings" [ref=e1849] [cursor=pointer]:
+          - /url: https://www.docker.com/
+        - link "Pricing" [ref=e1850] [cursor=pointer]:
+          - /url: https://www.docker.com/pricing?ref=Docs&refAction=DocsFooter
+        - link "About us" [ref=e1851] [cursor=pointer]:
+          - /url: https://www.docker.com/company/
+        - link "llms.txt" [ref=e1852] [cursor=pointer]:
+          - /url: /llms.txt
+        - link "llms-full.txt" [ref=e1853] [cursor=pointer]:
+          - /url: /llms-full.txt
+      - generic [ref=e1854]:
+        - button "Cookies Settings" [ref=e1855] [cursor=pointer]
+        - generic [ref=e1856]: "|"
+        - link "Terms of Service" [ref=e1857] [cursor=pointer]:
+          - /url: https://www.docker.com/legal/docker-terms-service
+        - generic [ref=e1858]: "|"
+        - link "Status" [ref=e1859] [cursor=pointer]:
+          - /url: https://www.dockerstatus.com/
+        - generic [ref=e1860]: "|"
+        - link "Legal" [ref=e1861] [cursor=pointer]:
+          - /url: https://www.docker.com/legal
+    - generic [ref=e1862]: Copyright © 2013-2026 Docker Inc. All rights reserved.
+  - generic:
+    - status [ref=e1863]
+    - status [ref=e1864]
+    - status [ref=e1865]
+    - status [ref=e1866]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic
+  - region "Cookie banner" [active] [ref=e1872]:
+    - alertdialog "Privacy" [ref=e1873]:
+      - generic [ref=e1875]:
+        - generic [ref=e1878]: By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+        - generic [ref=e1880]:
+          - button "Cookies Settings" [ref=e1881] [cursor=pointer]
+          - button "Reject All" [ref=e1882] [cursor=pointer]
+          - button "Accept All Cookies" [ref=e1883] [cursor=pointer]
+      - button "Close" [ref=e1885] [cursor=pointer]
+  - iframe

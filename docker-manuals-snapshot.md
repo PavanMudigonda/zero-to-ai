@@ -1,0 +1,306 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - link "Insights on the state of AI agents from 800+ builders and leaders. Download your copy" [ref=e6] [cursor=pointer]:
+      - /url: https://www.docker.com/resources/the-state-of-agentic-ai-white-paper/
+      - text: Insights on the state of AI agents from 800+ builders and leaders. Download your copy
+      - img [ref=e7]
+    - generic [ref=e9] [cursor=pointer]: ✕
+  - banner [ref=e10]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - link "Docker Docs home page" [ref=e14] [cursor=pointer]:
+          - /url: https://docs.docker.com/
+          - img [ref=e16]
+        - navigation [ref=e20]:
+          - list [ref=e21]:
+            - listitem [ref=e22]
+            - listitem [ref=e24]
+            - listitem [ref=e26]
+            - listitem [ref=e28]
+      - generic [ref=e31]:
+        - button "Ask Gordon, AI assistant" [ref=e33] [cursor=pointer]:
+          - img [ref=e35]
+          - generic [ref=e42]: Gordon
+        - button "Search" [ref=e45] [cursor=pointer]:
+          - img [ref=e47]
+          - generic [ref=e49]: Search
+        - button "Theme switch" [ref=e50] [cursor=pointer]:
+          - img [ref=e52]
+  - main [ref=e54]:
+    - navigation [ref=e57]:
+      - list [ref=e58]:
+        - generic [ref=e59]:
+          - listitem [ref=e60]: Open source
+          - listitem [ref=e61]:
+            - generic [ref=e62]
+          - listitem [ref=e69]:
+            - generic [ref=e70]
+          - listitem [ref=e77]:
+            - generic [ref=e78]
+          - listitem [ref=e85]:
+            - link "Testcontainers" [ref=e86] [cursor=pointer]:
+              - /url: https://docs.docker.com/testcontainers/
+          - listitem [ref=e87]:
+            - generic [ref=e88]
+        - generic [ref=e96]:
+          - listitem [ref=e97]: AI
+          - listitem [ref=e98]:
+            - link "Overview" [ref=e99] [cursor=pointer]:
+              - /url: https://docs.docker.com/ai-overview/
+          - listitem [ref=e100]:
+            - generic [ref=e101]
+          - listitem [ref=e109]:
+            - generic [ref=e110]
+          - listitem [ref=e118]:
+            - generic [ref=e119]
+          - listitem [ref=e126]:
+            - generic [ref=e127]
+          - listitem [ref=e135]:
+            - generic [ref=e136]
+        - generic [ref=e143]:
+          - listitem [ref=e144]: Products
+          - listitem [ref=e145]:
+            - generic [ref=e146]
+          - listitem [ref=e154]:
+            - generic [ref=e155]
+          - listitem [ref=e162]:
+            - generic [ref=e163]
+          - listitem [ref=e170]:
+            - generic [ref=e171]
+          - listitem [ref=e178]:
+            - generic [ref=e179]
+          - listitem [ref=e186]:
+            - generic [ref=e187]
+          - listitem [ref=e194]:
+            - generic [ref=e195]
+          - listitem [ref=e202]:
+            - link "Testcontainers Cloud" [ref=e203] [cursor=pointer]:
+              - /url: https://testcontainers.com/cloud/docs/
+          - listitem [ref=e204]:
+            - link "Deprecated products and features" [ref=e205] [cursor=pointer]:
+              - /url: https://docs.docker.com/retired/
+          - listitem [ref=e206]:
+            - link "Release lifecycle" [ref=e207] [cursor=pointer]:
+              - /url: https://docs.docker.com/release-lifecycle/
+        - generic [ref=e208]:
+          - listitem [ref=e209]: Platform
+          - listitem [ref=e210]:
+            - link "Support" [ref=e213] [cursor=pointer]:
+              - /url: https://docs.docker.com/support/
+          - listitem [ref=e214]:
+            - generic [ref=e215]
+          - listitem [ref=e222]:
+            - generic [ref=e223]
+          - listitem [ref=e230]:
+            - generic [ref=e231]
+          - listitem [ref=e238]:
+            - generic [ref=e239]
+          - listitem [ref=e246]:
+            - link "Release notes" [ref=e247] [cursor=pointer]:
+              - /url: https://docs.docker.com/platform-release-notes/
+        - generic [ref=e248]:
+          - listitem [ref=e249]: Enterprise
+          - listitem [ref=e250]:
+            - generic [ref=e251]
+          - listitem [ref=e258]:
+            - generic [ref=e259]
+          - listitem [ref=e266]:
+            - generic [ref=e267]
+    - generic [ref=e275]:
+      - article [ref=e277]:
+        - navigation [ref=e278]:
+          - link "Home" [ref=e279] [cursor=pointer]:
+            - /url: https://docs.docker.com/
+          - generic [ref=e280]: /
+          - generic [ref=e281]: Manuals
+        - generic [ref=e282]:
+          - heading "Manuals" [level=1] [ref=e283]
+          - generic [ref=e286]:
+            - button "Copy as Markdown" [ref=e287] [cursor=pointer]
+            - button "More options" [ref=e292]
+        - paragraph [ref=e295]: This section contains user guides on how to install, set up, configure, and use Docker products.
+        - heading "Open source" [level=2] [ref=e296]:
+          - link "Open source" [ref=e297] [cursor=pointer]:
+            - /url: "#open-source"
+        - paragraph [ref=e298]: Open source development and containerization technologies.
+        - generic [ref=e299]:
+          - link "Docker Build Build and ship any application anywhere." [ref=e301] [cursor=pointer]:
+            - /url: /build/
+            - generic [ref=e302]
+            - paragraph [ref=e309]: Build and ship any application anywhere.
+          - link "Docker Engine The industry-leading container runtime." [ref=e311] [cursor=pointer]:
+            - /url: /engine/
+            - generic [ref=e312]
+            - paragraph [ref=e319]: The industry-leading container runtime.
+          - link "Docker Compose Define and run multi-container applications." [ref=e321] [cursor=pointer]:
+            - /url: /compose/
+            - generic [ref=e322]
+            - paragraph [ref=e329]: Define and run multi-container applications.
+          - link "Testcontainers Run containers programmatically in your preferred programming language." [ref=e331] [cursor=pointer]:
+            - /url: /testcontainers/
+            - generic [ref=e332]
+            - paragraph [ref=e342]: Run containers programmatically in your preferred programming language.
+          - link "Docker Agent The open-source multi-agent solution to assist you in your tasks." [ref=e344] [cursor=pointer]:
+            - /url: /ai/docker-agent
+            - generic [ref=e345]
+            - paragraph [ref=e354]: The open-source multi-agent solution to assist you in your tasks.
+        - heading "AI" [level=2] [ref=e355]:
+          - link "AI" [ref=e356] [cursor=pointer]:
+            - /url: "#ai"
+        - paragraph [ref=e357]: All the Docker AI tools in one easy-to-access location.
+        - generic [ref=e358]:
+          - link "Gordon Streamline your workflow and get the most out of the Docker ecosystem with your personal AI assistant." [ref=e360] [cursor=pointer]:
+            - /url: /ai/gordon/
+            - generic [ref=e361]
+            - paragraph [ref=e368]: Streamline your workflow and get the most out of the Docker ecosystem with your personal AI assistant.
+          - link "Docker Model Runner View and manage your local models." [ref=e370] [cursor=pointer]:
+            - /url: /ai/model-runner/
+            - generic [ref=e371]
+            - paragraph [ref=e378]: View and manage your local models.
+          - link "MCP Catalog and Toolkit Augment your AI workflow with MCP servers." [ref=e380] [cursor=pointer]:
+            - /url: /ai/mcp-catalog-and-toolkit/
+            - generic [ref=e381]
+            - paragraph [ref=e392]: Augment your AI workflow with MCP servers.
+        - heading "Products" [level=2] [ref=e393]:
+          - link "Products" [ref=e394] [cursor=pointer]:
+            - /url: "#products"
+        - paragraph [ref=e395]: End-to-end developer solutions for innovative teams.
+        - generic [ref=e396]:
+          - link "Docker Desktop Your command center for container development." [ref=e398] [cursor=pointer]:
+            - /url: /desktop/
+            - generic [ref=e399]
+            - paragraph [ref=e407]: Your command center for container development.
+          - link "Docker Hardened Images Secure, minimal images for trusted software delivery." [ref=e409] [cursor=pointer]:
+            - /url: /dhi/
+            - generic [ref=e410]
+            - paragraph [ref=e417]: Secure, minimal images for trusted software delivery.
+          - link "Docker Offload Build and run containers in the cloud." [ref=e419] [cursor=pointer]:
+            - /url: /offload/
+            - generic [ref=e420]
+            - paragraph [ref=e427]: Build and run containers in the cloud.
+          - link "Build Cloud Build your images faster in the cloud." [ref=e429] [cursor=pointer]:
+            - /url: /build-cloud/
+            - generic [ref=e430]
+            - paragraph [ref=e440]: Build your images faster in the cloud.
+          - link "Docker Hub Discover, share, and integrate container images." [ref=e442] [cursor=pointer]:
+            - /url: /docker-hub/
+            - generic [ref=e443]
+            - paragraph [ref=e450]: Discover, share, and integrate container images.
+          - link "Docker Scout Image analysis and policy evaluation." [ref=e452] [cursor=pointer]:
+            - /url: /scout/
+            - generic [ref=e453]
+            - paragraph [ref=e464]: Image analysis and policy evaluation.
+          - link "Docker Extensions Customize your Docker Desktop workflow." [ref=e466] [cursor=pointer]:
+            - /url: /extensions/
+            - generic [ref=e467]
+            - paragraph [ref=e474]: Customize your Docker Desktop workflow.
+          - link "Testcontainers Cloud Run integration tests, with real dependencies, in the cloud." [ref=e476] [cursor=pointer]:
+            - /url: https://testcontainers.com/cloud/docs/
+            - generic [ref=e477]
+            - paragraph [ref=e484]: Run integration tests, with real dependencies, in the cloud.
+        - heading "Platform" [level=2] [ref=e485]:
+          - link "Platform" [ref=e486] [cursor=pointer]:
+            - /url: "#platform"
+        - paragraph [ref=e487]: Documentation related to the Docker platform, such as administration and subscription management.
+        - generic [ref=e488]:
+          - link "Administration Centralized observability for companies and organizations." [ref=e490] [cursor=pointer]:
+            - /url: /admin/
+            - generic [ref=e491]
+            - paragraph [ref=e498]: Centralized observability for companies and organizations.
+          - link "Billing Manage billing and payment methods." [ref=e500] [cursor=pointer]:
+            - /url: /billing/
+            - generic [ref=e501]
+            - paragraph [ref=e508]: Manage billing and payment methods.
+          - link "Accounts Manage your Docker account." [ref=e510] [cursor=pointer]:
+            - /url: /accounts/
+            - generic [ref=e511]
+            - paragraph [ref=e518]: Manage your Docker account.
+          - link "Security Security guardrails for both administrators and developers." [ref=e520] [cursor=pointer]:
+            - /url: /security/
+            - generic [ref=e521]
+            - paragraph [ref=e528]: Security guardrails for both administrators and developers.
+          - link "Subscription Commercial use licenses for Docker products." [ref=e530] [cursor=pointer]:
+            - /url: /subscription/
+            - generic [ref=e531]
+            - paragraph [ref=e538]: Commercial use licenses for Docker products.
+        - heading "Enterprise" [level=2] [ref=e539]:
+          - link "Enterprise" [ref=e540] [cursor=pointer]:
+            - /url: "#enterprise"
+        - paragraph [ref=e541]: Targeted at IT administrators with help on deploying Docker Desktop at scale with configuration guidance on security related features.
+        - link "Deploy Docker Desktop Deploy Docker Desktop at scale within your company" [ref=e544] [cursor=pointer]:
+          - /url: /enterprise/enterprise-deployment/
+          - generic [ref=e545]:
+            - img [ref=e548]
+            - heading "Deploy Docker Desktop" [level=3] [ref=e550]
+          - paragraph [ref=e552]: Deploy Docker Desktop at scale within your company
+      - complementary [ref=e554]:
+        - paragraph [ref=e555]:
+          - img [ref=e557]
+          - link "Edit this page" [ref=e560] [cursor=pointer]:
+            - /url: https://github.com/docker/docs/edit/main/content/manuals/_index.md
+        - paragraph [ref=e561]:
+          - img [ref=e563]
+          - link "Request changes" [ref=e566] [cursor=pointer]:
+            - /url: https://github.com/docker/docs/issues/new?template=doc_issue.yml&location=https%3a%2f%2fdocs.docker.com%2fmanuals%2f&labels=status%2Ftriage
+  - contentinfo [ref=e567]:
+    - generic [ref=e568]:
+      - generic [ref=e569]:
+        - link "LinkedIn" [ref=e570] [cursor=pointer]:
+          - /url: https://www.linkedin.com/company/docker
+          - img [ref=e572]
+        - link "Twitter" [ref=e575] [cursor=pointer]:
+          - /url: https://x.com/docker/
+          - img [ref=e577]
+        - link "Facebook" [ref=e580] [cursor=pointer]:
+          - /url: https://www.facebook.com/docker.run
+          - img [ref=e582]
+        - link "YouTube" [ref=e585] [cursor=pointer]:
+          - /url: http://www.youtube.com/user/dockerrun
+          - img [ref=e587]
+        - link "Instagram" [ref=e590] [cursor=pointer]:
+          - /url: https://www.instagram.com/dockerinc/
+          - img [ref=e592]
+      - generic [ref=e595]:
+        - link "Product offerings" [ref=e596] [cursor=pointer]:
+          - /url: https://www.docker.com/
+        - link "Pricing" [ref=e597] [cursor=pointer]:
+          - /url: https://www.docker.com/pricing?ref=Docs&refAction=DocsFooter
+        - link "About us" [ref=e598] [cursor=pointer]:
+          - /url: https://www.docker.com/company/
+        - link "llms.txt" [ref=e599] [cursor=pointer]:
+          - /url: /llms.txt
+        - link "llms-full.txt" [ref=e600] [cursor=pointer]:
+          - /url: /llms-full.txt
+      - generic [ref=e601]:
+        - button "Cookies Settings" [ref=e602] [cursor=pointer]
+        - generic [ref=e603]: "|"
+        - link "Terms of Service" [ref=e604] [cursor=pointer]:
+          - /url: https://www.docker.com/legal/docker-terms-service
+        - generic [ref=e605]: "|"
+        - link "Status" [ref=e606] [cursor=pointer]:
+          - /url: https://www.dockerstatus.com/
+        - generic [ref=e607]: "|"
+        - link "Legal" [ref=e608] [cursor=pointer]:
+          - /url: https://www.docker.com/legal
+    - generic [ref=e609]: Copyright © 2013-2026 Docker Inc. All rights reserved.
+  - generic:
+    - status [ref=e610]
+    - status [ref=e611]
+    - status [ref=e612]
+    - status [ref=e613]
+  - region "Cookie banner" [active] [ref=e614]:
+    - alertdialog "Privacy" [ref=e615]:
+      - generic [ref=e617]:
+        - generic [ref=e620]: By clicking “Accept All Cookies”, you agree to the storing of cookies on your device to enhance site navigation, analyze site usage, and assist in our marketing efforts.
+        - generic [ref=e622]:
+          - button "Cookies Settings" [ref=e623] [cursor=pointer]
+          - button "Reject All" [ref=e624] [cursor=pointer]
+          - button "Accept All Cookies" [ref=e625] [cursor=pointer]
+      - button "Close" [ref=e627] [cursor=pointer]
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic
+  - iframe

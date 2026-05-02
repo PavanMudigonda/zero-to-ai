@@ -2,7 +2,7 @@
 
 Updated against the current Docker Docs structure across Get started, Manuals, Guides, and Reference.
 
-Practice these commands with Docker containers and images, Docker Compose v2, Buildx/BuildKit, Docker Scout, Docker Debug, and Docker Init.
+Practice these commands with Docker containers and images, Docker Compose v2, Buildx/BuildKit, Docker Scout, Docker Debug, Docker Init, and the newer Docker docs surfaces around AI workflows, Build Cloud, Offload, Hardened Images, and Testcontainers.
 
 ---
 
@@ -1462,6 +1462,49 @@ cat /etc/docker/daemon.json
 ```bash
 systemctl daemon-reload && systemctl restart docker
 ```
+
+---
+
+## 26. Latest Docker Docs Features To Learn Next
+
+A headless scan of Docker's current Get started, Guides, Manuals, and Reference sections shows that the platform story now goes beyond classic container commands. The biggest additions are AI workflow tooling, cloud-backed build acceleration, secure base images, and testing flows built around containers.
+
+### Newer Docker Surfaces Now Visible In The Docs
+
+- **AI workflows:** [Docker Model Runner](https://docs.docker.com/ai/model-runner/), [MCP Catalog and Toolkit](https://docs.docker.com/ai/mcp-catalog-and-toolkit/), and the broader AI docs area surfaced from the Manuals navigation.
+- **Cloud-backed builds:** [Docker Build Cloud](https://docs.docker.com/build-cloud/) and [Docker Offload](https://docs.docker.com/offload/) are now first-class docs areas for remote build and run workflows.
+- **Secure foundations:** [Docker Hardened Images](https://docs.docker.com/dhi/) appears as a dedicated product track for minimal, security-focused base images.
+- **Testing workflows:** [Testcontainers](https://docs.docker.com/testcontainers/) and Testcontainers Cloud are now part of the main Docker docs information architecture.
+
+### Highest-Value Guides From The Current Docs
+
+- [Build and run agentic AI applications with Docker](https://docs.docker.com/guides/agentic-ai/)
+- [Building Compose projects with Bake](https://docs.docker.com/guides/compose-bake/)
+- [Docker Build Cloud: Reclaim your time with fast, multi-architecture builds](https://docs.docker.com/guides/docker-build-cloud/)
+- [Securing your software supply chain with Docker Scout](https://docs.docker.com/guides/docker-scout/)
+- [Generate Docker Compose Files with Claude Code and Docker MCP Toolkit](https://docs.docker.com/guides/genai-claude-code-mcp/claude-code-mcp-guide/)
+
+### Practice Sequence For Modern Docker Learning
+
+1. Start with project bootstrapping and local feedback loops.
+2. Move into Compose watch and Bake for multi-service development.
+3. Add Scout, SBOM, and provenance for software supply chain visibility.
+4. Explore Build Cloud or Offload when local build time becomes the bottleneck.
+5. Add Testcontainers when you want repeatable integration tests with real dependencies.
+
+```bash
+docker init
+docker compose up --watch
+docker buildx bake --print
+docker scout recommendations myimage:latest
+docker debug myimage:latest
+```
+
+### What To Keep In Mind
+
+- `docker buildx build` remains the foundation for modern Docker build workflows.
+- The newer docs are increasingly centered on complete developer loops: bootstrap, inner-loop iteration, remote build acceleration, supply-chain security, AI workflows, and test automation.
+- If you already know classic `docker run`, `docker build`, and `docker compose`, the next learning jump is not more container flags. It is learning how these newer Docker products fit together.
 
 ---
 
