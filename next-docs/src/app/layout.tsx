@@ -1,6 +1,7 @@
 import React from 'react';
 import { Navbar, ThemeSwitch } from "nextra-theme-docs";
 import FilteredLayout from "./FilteredLayout";
+import ProgressWidget from "@/components/ProgressWidget";
 import { Head, Search } from 'nextra/components';
 import 'nextra-theme-docs/style.css';
 import './globals.css';
@@ -55,7 +56,7 @@ function compareNavNodes(left: NavNode, right: NavNode): number {
   return left.route.localeCompare(right.route);
 }
 
-function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: string): any[] {
+function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: string): unknown[] {
   return Array.from(nodes.values())
     .sort(compareNavNodes)
     .map((node) => {
@@ -81,7 +82,7 @@ function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: stri
     });
 }
 
-function buildLightweightPageMap(routes: string[]): any[] {
+function buildLightweightPageMap(routes: string[]): unknown[] {
   const rootNodes = new Map<string, NavNode>();
 
   for (const route of routes) {
@@ -226,6 +227,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           search={<Search />}
         >
           {children}
+          <ProgressWidget />
         </FilteredLayout>
       </body>
     </html>
