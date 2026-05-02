@@ -1,12 +1,4 @@
-type NotebookCell = {
-  cell_type?: string;
-  source?: string | string[];
-};
-
-type NotebookDocument = {
-  cells?: NotebookCell[];
-  [key: string]: unknown;
-};
+import type { Ipynb } from '@jupyter-kit/core';
 
 declare global {
   interface Window {
@@ -125,14 +117,10 @@ function normalizeMarkdownText(text: string, pathname: string, routeIndex: strin
 }
 
 export function normalizeNotebookLinks(
-  ipynb: NotebookDocument,
+  ipynb: Ipynb,
   currentPathname: string,
   routeIndex: string[] = [],
-): NotebookDocument {
-  if (!Array.isArray(ipynb.cells)) {
-    return ipynb;
-  }
-
+): Ipynb {
   return {
     ...ipynb,
     cells: ipynb.cells.map((cell) => {

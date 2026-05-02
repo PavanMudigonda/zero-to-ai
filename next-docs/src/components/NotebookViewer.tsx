@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
+import type { Ipynb } from '@jupyter-kit/core';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
 import '@jupyter-kit/theme-default/default.css';
 import '@jupyter-kit/theme-default/syntax/one-dark.css';
@@ -43,7 +44,7 @@ function getRouteIndex(): Promise<string[]> {
   return routeIndexPromise;
 }
 
-export default function NotebookViewer({ ipynb }: { ipynb: any }) {
+export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   const pathname = usePathname();
   const [routeIndex, setRouteIndex] = useState<string[]>([]);
 
