@@ -20,11 +20,157 @@ import { createPyodideExecutor } from '@jupyter-kit/executor-pyodide';
 // KaTeX for math rendering
 import { createKatexPlugin } from '@jupyter-kit/katex';
 
+type NotebookResource = {
+  label: string;
+  url: string;
+};
+
 const myPyodide = createPyodideExecutor({ packages: [] });
 const myEditor = createEditorPlugin({
   languages: { python: cmPython() }
 });
 const myKatex = createKatexPlugin();
+
+const YOUTUBE_URL_PATTERN = /https?:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)\/[^\s)"']+/i;
+const MARKDOWN_EXTERNAL_LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi;
+const EXCLUDED_RESOURCE_HOSTS = new Set([
+  'youtube.com',
+  'www.youtube.com',
+  'youtu.be',
+]);
+
+const PROVIDER_METADATA_REGEX = /^(?:#|<!--)\s*resource\.(video|docs|paper|repo):\s*(https?:\/\/[^\s]+)/gm;
+
+function extractNotebookMetadata(ipynb: Ipynb): Record<string, string> {
+  const meta: Record<string, string> = {};
+
+  if (!ipynb.cells || ipynb.cells.length === 0) {
+    return meta;
+  }
+
+  // Look only at the first few cells to avoid scanning entire notebooks
+  const searchCells = ipynb.cells.slice(0, 3);
+
+  for (const cell of searchCells) {
+    if (cell.cell_type !== 'markdown' || !cell.source) continue;
+    const source = Array.isArray(cell.source) ? cell.source.join('') : cell.source;
+
+    for (const match of source.matchAll(PROVIDER_METADATA_REGEX)) {
+      const type = match[1];
+      const url = match[2];
+      if (type && url) {
+        meta[type] = url;
+      }
+    }
+  }
+
+  return meta;
+}
+
+function toHostname(url: string): string {
+  try {
+    return new URL(url).hostname.toLowerCase();
+  } catch {
+    return '';
+  }
+}
+
+function formatResourceLabel(rawLabel: string, url: string): string {
+  const trimmedLabel = rawLabel.trim().replace(/^[#*\-\d.\s]+/, '');
+  const hostname = toHostname(url).replace(/^www\./, '');
+
+  if (trimmedLabel && trimmedLabel.length <= 24) {
+    return trimmedLabel;
+  }
+
+  if (hostname === 'github.com') {
+    return 'GitHub';
+  }
+
+  if (hostname === 'huggingface.co') {
+    return 'Hugging Face';
+  }
+
+  if (hostname === 'arxiv.org') {
+    return 'arXiv';
+  }
+
+  if (hostname === 'artificialanalysis.ai') {
+    return 'Artificial Analysis';
+  }
+
+  if (hostname === 'docs.docker.com') {
+    return 'Docker Docs';
+  }
+
+  if (!hostname) {
+    return 'Resource';
+  }
+
+  const primarySegment = hostname.split('.')[0] || 'Resource';
+
+  return primarySegment
+    .split(/[-_]/g)
+    .filter(Boolean)
+    .map((segment) => segment.charAt(0).toUpperCase() + segment.slice(1))
+    .join(' ');
+}
+
+function extractFirstYouTubeLink(ipynb: Ipynb): string | null {
+  for (const cell of ipynb.cells) {
+    if (cell.cell_type !== 'markdown' || !cell.source) {
+      continue;
+    }
+
+    const source = Array.isArray(cell.source) ? cell.source.join('') : cell.source;
+    const match = source.match(YOUTUBE_URL_PATTERN);
+
+    if (match) {
+      return match[0];
+    }
+  }
+
+  return null;
+}
+
+function extractNotebookResources(ipynb: Ipynb, limit = 2): NotebookResource[] {
+  const resources: NotebookResource[] = [];
+  const seenUrls = new Set<string>();
+
+  for (const cell of ipynb.cells) {
+    if (cell.cell_type !== 'markdown' || !cell.source) {
+      continue;
+    }
+
+    const source = Array.isArray(cell.source) ? cell.source.join('') : cell.source;
+
+    for (const match of source.matchAll(MARKDOWN_EXTERNAL_LINK_PATTERN)) {
+      const label = match[1]?.trim();
+      const url = match[2]?.trim();
+
+      if (!url || seenUrls.has(url)) {
+        continue;
+      }
+
+      const hostname = toHostname(url);
+      if (!hostname || EXCLUDED_RESOURCE_HOSTS.has(hostname)) {
+        continue;
+      }
+
+      seenUrls.add(url);
+      resources.push({
+        label: formatResourceLabel(label || '', url),
+        url,
+      });
+
+      if (resources.length >= limit) {
+        return resources;
+      }
+    }
+  }
+
+  return resources;
+}
 
 let routeIndexPromise: Promise<string[]> | null = null;
 
@@ -79,6 +225,29 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   const kaggleUrl = `https://kaggle.com/kernels/welcome?src=${githubUrl}`;
   const studioLabUrl = `https://studiolab.sagemaker.aws/import/github/${repoBase}/blob/${branch}/${githubPath}`;
 
+  const explicitMetadata = extractNotebookMetadata(normalizedNotebook);
+  const youtubeUrl = explicitMetadata.video || extractFirstYouTubeLink(normalizedNotebook);
+  
+  let notebookResources = extractNotebookResources(normalizedNotebook);
+  if (explicitMetadata.docs) {
+    notebookResources.unshift({ label: 'Docs', url: explicitMetadata.docs });
+  }
+  if (explicitMetadata.paper) {
+    notebookResources.unshift({ label: 'Paper', url: explicitMetadata.paper });
+  }
+  
+  // Deduplicate resources from explicit metadata
+  const seenResourceUrls = new Set<string>();
+  notebookResources = notebookResources.filter(res => {
+    if (seenResourceUrls.has(res.url)) return false;
+    seenResourceUrls.add(res.url);
+    return true;
+  });
+
+  const hasExtraResources = notebookResources.length > 2;
+  const topResources = notebookResources.slice(0, 2);
+  const dropdownResources = notebookResources.slice(2);
+
   const linkClass = "text-xs font-medium px-2.5 py-1.5 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#111] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-1.5 shadow-sm";
 
   return (
@@ -96,6 +265,41 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           Jupyter 
         </div>
         <div className="flex items-center gap-2">
+          {youtubeUrl ? (
+            <a href={youtubeUrl} target="_blank" rel="noreferrer" className={linkClass}>
+              <svg className="w-3.5 h-3.5 text-red-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M23.5 6.2a3.06 3.06 0 0 0-2.15-2.16C19.46 3.5 12 3.5 12 3.5s-7.46 0-9.35.54A3.06 3.06 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3.06 3.06 0 0 0 2.15 2.16c1.89.54 9.35.54 9.35.54s7.46 0 9.35-.54a3.06 3.06 0 0 0 2.15-2.16A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.78V8.22L16.06 12 9.6 15.78Z" />
+              </svg>
+              YouTube
+            </a>
+          ) : null}
+          {topResources.map((resource) => (
+            <a key={resource.url} href={resource.url} target="_blank" rel="noreferrer" className={linkClass}>
+              <svg className="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 3h7v7" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 14 21 3" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21 14v4a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3h4" />
+              </svg>
+              {resource.label}
+            </a>
+          ))}
+          {hasExtraResources && (
+            <div className="relative group inline-block">
+              <button type="button" className={linkClass}>
+                <span>Resources</span>
+                <svg className="w-3.5 h-3.5 ml-0.5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </button>
+              <div className="absolute right-0 mt-1 hidden group-hover:block w-48 bg-white dark:bg-[#1a1a1a] rounded shadow-lg border border-gray-200 dark:border-gray-800 z-10 py-1">
+                {dropdownResources.map((resource) => (
+                  <a key={resource.url} href={resource.url} target="_blank" rel="noreferrer" className="block px-4 py-2 text-xs text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">
+                    {resource.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          )}
           <a href={colabUrl} target="_blank" rel="noreferrer" className={linkClass}>
              <svg className="w-3.5 h-3.5" viewBox="0 0 256 256" fill="none"><path d="M128 0C57.307 0 0 57.307 0 128c0 70.693 57.307 128 128 128 70.693 0 128-57.307 128-128C256 57.307 198.693 0 128 0Zm0 230.4c-56.452 0-102.4-45.948-102.4-102.4S71.548 25.6 128 25.6 230.4 71.548 230.4 128 184.452 230.4 128 230.4Z" fill="#F9AB00"/><path d="M128 51.2c-42.348 0-76.8 34.452-76.8 76.8s34.452 76.8 76.8 76.8 76.8-34.452 76.8-76.8-34.452-76.8-76.8-76.8Zm0 128c-28.226 0-51.2-22.974-51.2-51.2S99.774 76.8 128 76.8 179.2 99.774 179.2 128s-22.974 51.2-51.2 51.2Z" fill="#F9AB00"/></svg>
              Colab
@@ -107,6 +311,10 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           <a href={studioLabUrl} target="_blank" rel="noreferrer" className={linkClass}>
              <svg className="w-3.5 h-3.5 text-orange-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.376L4.016 7v10.024L12 21.624l7.984-4.592V7Z"/></svg>
              SageMaker
+          </a>
+          <a href={githubUrl} target="_blank" rel="noreferrer" className={linkClass}>
+             <svg className="w-3.5 h-3.5 text-gray-800 dark:text-gray-200" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+             GitHub
           </a>
         </div>
       </div>
