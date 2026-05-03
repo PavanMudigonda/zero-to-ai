@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
 import type { Ipynb } from '@jupyter-kit/core';
@@ -193,6 +193,7 @@ function getRouteIndex(): Promise<string[]> {
 export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   const pathname = usePathname();
   const [routeIndex, setRouteIndex] = useState<string[]>([]);
+  const notebookContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -207,6 +208,124 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
       isMounted = false;
     };
   }, []);
+
+  useEffect(() => {
+    const container = notebookContainerRef.current;
+
+    if (!container) {
+      return;
+    }
+
+    const selectors = [
+      '.input_area',
+      '.text_cell_render pre',
+    ];
+
+    const copyButtonClassName = 'jk-copy-button';
+
+    const fallbackCopy = async (text: string) => {
+      const textArea = document.createElement('textarea');
+      textArea.value = text;
+      textArea.style.position = 'fixed';
+      textArea.style.top = '0';
+      textArea.style.left = '-9999px';
+      textArea.style.opacity = '0';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      textArea.setSelectionRange(0, textArea.value.length);
+
+      const didCopy = document.execCommand('copy');
+
+      document.body.removeChild(textArea);
+
+      if (!didCopy) {
+        throw new Error('execCommand copy failed');
+      }
+    };
+
+    const copyText = async (text: string) => {
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          return;
+        } catch {
+          // Fall through to the textarea-based copy path for browsers that
+          // block async clipboard writes outside a trusted secure context.
+        }
+      }
+
+      await fallbackCopy(text);
+    };
+
+    const applyButtons = () => {
+      const blocks = container.querySelectorAll<HTMLElement>(selectors.join(','));
+
+      blocks.forEach((block) => {
+        if (block.querySelector(`:scope > .${copyButtonClassName}`)) {
+          return;
+        }
+
+        const sourceNode = block.matches('.input_area')
+          ? block.querySelector<HTMLElement>('.cm-content')
+          : block.querySelector<HTMLElement>('code') ?? block;
+
+        const rawText = sourceNode?.innerText?.replace(/\u00a0/g, ' ').trimEnd();
+
+        if (!rawText) {
+          return;
+        }
+
+        block.classList.add('jk-copy-target');
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = copyButtonClassName;
+        button.textContent = 'Copy';
+        button.setAttribute('aria-label', 'Copy code');
+        button.addEventListener('click', async () => {
+          const latestSourceNode = block.matches('.input_area')
+            ? block.querySelector<HTMLElement>('.cm-content')
+            : block.querySelector<HTMLElement>('code') ?? block;
+          const latestText = latestSourceNode?.innerText?.replace(/\u00a0/g, ' ').trimEnd() ?? '';
+
+          if (!latestText) {
+            return;
+          }
+
+          const originalText = button.textContent;
+
+          try {
+            await copyText(latestText);
+            button.textContent = 'Copied';
+          } catch {
+            button.textContent = 'Failed';
+          }
+
+          window.setTimeout(() => {
+            button.textContent = originalText;
+          }, 1200);
+        });
+
+        block.prepend(button);
+      });
+    };
+
+    applyButtons();
+
+    const observer = new MutationObserver(() => {
+      applyButtons();
+    });
+
+    observer.observe(container, {
+      childList: true,
+      subtree: true,
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [pathname, routeIndex, ipynb]);
 
   const normalizedNotebook = normalizeNotebookLinks(ipynb, pathname || '/', routeIndex);
 
@@ -320,7 +439,7 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
       </div>
       
       {/* Internal Notebook Engine */}
-      <div className="jk-notebook-container">
+      <div className="jk-notebook-container" ref={notebookContainerRef}>
         <Notebook 
           ipynb={normalizedNotebook} 
           language="python" 
@@ -330,6 +449,57 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           mathAlign="left"
         />
       </div>
+
+      <style jsx global>{`
+        .jk-notebook-container .jk-copy-target {
+          position: relative;
+        }
+
+        .jk-notebook-container .jk-copy-button {
+          position: absolute;
+          top: 0.5rem;
+          right: 0.5rem;
+          z-index: 3;
+          border: 1px solid rgba(148, 163, 184, 0.45);
+          border-radius: 0.375rem;
+          background: rgba(255, 255, 255, 0.94);
+          color: rgb(51, 65, 85);
+          padding: 0.2rem 0.55rem;
+          font-size: 0.72rem;
+          line-height: 1;
+          cursor: pointer;
+          opacity: 0;
+          transition: opacity 120ms ease, background-color 120ms ease, border-color 120ms ease;
+        }
+
+        .dark .jk-notebook-container .jk-copy-button {
+          background: rgba(15, 23, 42, 0.92);
+          color: rgb(226, 232, 240);
+          border-color: rgba(100, 116, 139, 0.55);
+        }
+
+        .jk-notebook-container .jk-copy-target:hover > .jk-copy-button,
+        .jk-notebook-container .jk-copy-target:focus-within > .jk-copy-button {
+          opacity: 1;
+        }
+
+        .jk-notebook-container .jk-copy-button:hover {
+          background: rgba(241, 245, 249, 0.98);
+          border-color: rgba(100, 116, 139, 0.7);
+        }
+
+        .dark .jk-notebook-container .jk-copy-button:hover {
+          background: rgba(30, 41, 59, 0.96);
+        }
+
+        .jk-notebook-container .input_area {
+          padding-top: 2rem;
+        }
+
+        .jk-notebook-container .text_cell_render pre {
+          padding-top: 2.25rem;
+        }
+      `}</style>
     </div>
   );
 }

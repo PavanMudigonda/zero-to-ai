@@ -1,105 +1,11 @@
-1) Enterprise CI/CD "Target State" (text diagram)
-A. Plan → Code (standardized entry)
-Work intake: Azure DevOps Boards / Jira (epics → stories → tasks)
-Architecture & risk controls: lightweight design review + data classification tag (PII/PCI/etc.)
-Developer experience: "golden path" repo templates, scaffolding, pre-approved pipelines, reusable actions
-B. Build & Validate (PR-time, fast feedback)
-PR opened → CI pipeline
+---
+title: "devops-arch"
+---
 
-Static checks
-Lint / unit tests / type checks
-Security baseline
-Secret scanning (Trufflehog + platform secret protection)
-SAST (Snyk Code or equivalent)
-Dependency scan + license policy checks (Snyk Open Source)
-Quality gates
-Code coverage threshold
-Required reviewers (CODEOWNERS), branch protection
-Generate metadata
-SBOM (CycloneDX/SPDX)
-Build provenance (SLSA-style attestations)
-Ephemeral preview environment (optional but very enterprise-friendly)
-Per-PR environment spun up via IaC for integration tests
-C. Package → Publish (immutable artifacts)
-Build once, promote the same artifact through environments
-Publish to JFrog Artifactory (or equivalent) with:
-Versioning, immutability, retention policy
-Signed artifacts (cosign / signing service)
-Container scanning (if you ship containers)
-D. Deploy (multi-environment, multi-account/subscription)
-CD pipeline (GitOps or pipeline-driven; enterprise often uses both patterns)
+import DynamicNotebook from '@/components/DynamicNotebook';
+import nb from './devops-arch/devops-arch.ipynb';
 
-Deploy to:
-Dev (auto)
-QA/Integration (auto)
-Stage/Pre-prod (auto with higher gates)
-Prod (controlled + progressive)
-Each environment gate includes
-
-Automated integration tests
-DAST (as applicable)
-Performance smoke (JMeter quick check)
-IaC security checks (tfsec/Checkov) and drift detection
-Approval gates: risk-based (see section 2)
-E. Change Management & Approvals (risk-based, automated evidence)
-ServiceNow Change automatically created/updated with evidence:
-Linked PR, tests, scans, SBOM, approvers, rollout plan, rollback plan
-"Standard change" for low-risk changes (auto-approve)
-"Normal change" for higher risk (CAB/approver)
-F. Release strategies (reduce blast radius)
-Feature flags (LaunchDarkly or equivalent)
-Progressive delivery:
-Canary / blue-green
-Automated rollback on SLO breach
-Post-deploy verification:
-Synthetic tests + real user monitoring signals
-G. Observability + Continuous Verification
-Datadog (logs/metrics/traces) with:
-Release markers
-SLO dashboards per service
-Alerts tied to rollback automation
-Resilience testing:
-Gremlin (scheduled, controlled game days)
-Continuous compliance reporting:
-Central evidence store (audit-ready)
-2) What changes vs. your current diagram (enterprise upgrades)
-1) "Build once, promote" + stronger artifact governance
-Why: avoids "it worked in QA but not Prod" and supports auditability.
-Add: artifact signing, SBOM, provenance attestations, immutability.
-
-2) Central policy-as-code gates (consistent across 100s of teams)
-Add a policy layer that evaluates every pipeline run, e.g.:
-
-Minimum SAST/OSS scan status
-License allow/deny list
-Vulnerability thresholds (block criticals unless exception)
-Required approvals by system/data classification
-This can be implemented with OPA/Conftest, GitHub rulesets, or platform guardrails.
-3) Multi-account / multi-subscription environment isolation
-Large enterprises typically enforce:
-
-Separate cloud accounts/subscriptions per environment
-Separate keys/secrets per env
-Network segmentation + private endpoints
-This is a common gap in smaller diagrams but critical at enterprise scale.
-4) Secrets & credentials moved to centralized vaulting
-Instead of pipeline secrets everywhere:
-
-Vault/Secrets Manager/Azure Key Vault
-Short-lived credentials (OIDC federation) for CI runners
-5) Standardized "golden paths" via Platform Engineering
-To avoid every team inventing their own pipeline:
-
-Reusable pipeline templates
-Shared runners and hardened base images
-Internal developer portal (Backstage-style) to create services the "approved way"
-6) Progressive delivery + automated rollback
-Enterprises care about stability more than speed alone:
-
-Canary releases
-Automated rollback triggered by Datadog/SLO checks
-3) A clean "Enterprise CI/CD Diagram" you can paste into docs (Mermaid)
-If you want a diagram-like artifact quickly:
+<DynamicNotebook ipynb={nb} />
 
 
 1) What you already have (and what I'm keeping)

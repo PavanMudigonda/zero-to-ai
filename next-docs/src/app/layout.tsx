@@ -1,8 +1,9 @@
 import React from 'react';
-import { Navbar, ThemeSwitch } from "nextra-theme-docs";
+import { Navbar } from "nextra-theme-docs";
 import FilteredLayout from "./FilteredLayout";
 import ProgressWidget from "@/components/ProgressWidget";
 import FuzzySearch from '@/components/FuzzySearch';
+import ThemeSwitchHotkey from '@/components/ThemeSwitchHotkey';
 import { Head } from 'nextra/components';
 import 'nextra-theme-docs/style.css';
 import './globals.css';
@@ -199,7 +200,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       }
       projectLink="https://github.com/PavanMudigonda/zero-to-ai"
     >
-      <ThemeSwitch />
+      <ThemeSwitchHotkey />
     </Navbar>
   );
   

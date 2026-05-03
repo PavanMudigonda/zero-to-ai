@@ -56,6 +56,17 @@ datasets/
 # Logs
 *.log
 logs/
+.playwright-mcp/
+
+# Local review artifacts
+article-bottom-snapshot.md
+article-click-targets.md
+article-with-boxes.md
+prod-check.md
+zero-to-ai-article-snapshot.md
+zero-to-ai-home-snapshot-deep.md
+zero-to-ai-home-snapshot.md
+zero-to-ai-home.png
 
 # Environment variables
 .env
