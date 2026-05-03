@@ -16,9 +16,9 @@ export default function FilteredLayout({ pageMap, children, ...props }: any) {
 
     return pageMap.map((item: any) => {
       if (item && item.children && item.name !== topLevelSection) {
+        const { children, ...rest } = item;
         return {
-          ...item,
-          children: [],
+          ...rest,
         };
       }
 
