@@ -1,6 +1,6 @@
 export default {
   course: "1. Course",
   exercises: "2. Exercises",
-  "mml-book": "3. Mml Book",
+  "mml-book": "Overview",
   "practice-labs": "4. Practice Labs",
 }

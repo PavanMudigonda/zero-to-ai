@@ -1,3 +1,3 @@
 export default {
-  "01-python": "1. Python",
+  "01-python": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "visualizing-data": "1. Visualizing Data",
+  "visualizing-data": "Overview",
 }

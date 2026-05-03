@@ -1,3 +1,3 @@
 export default {
-  "helm-cheatsheet": "Helm Cheatsheet",
+  "helm-cheatsheet": "Overview",
 }

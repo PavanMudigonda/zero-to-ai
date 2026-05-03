@@ -1,3 +1,3 @@
 export default {
-  "04_classification": "1. Classification",
+  "04_classification": "Overview",
 }

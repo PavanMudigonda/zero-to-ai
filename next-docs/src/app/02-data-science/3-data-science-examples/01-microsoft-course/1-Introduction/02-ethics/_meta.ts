@@ -1,5 +1,5 @@
 export default {
-  "02-ethics": "1. Ethics",
+  "02-ethics": "Overview",
   assignment: "2. Assignment",
   translations: "3. Translations",
 }

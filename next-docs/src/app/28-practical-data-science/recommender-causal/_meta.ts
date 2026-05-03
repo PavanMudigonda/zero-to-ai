@@ -5,5 +5,5 @@ export default {
   "04_causal_inference_basics": "4. Causal Inference Basics",
   "05_difference_in_differences": "5. Difference In Differences",
   "06_ab_testing_platform": "6. Ab Testing Platform",
-  "recommender-causal": "7. Recommender Causal",
+  "recommender-causal": "Overview",
 }

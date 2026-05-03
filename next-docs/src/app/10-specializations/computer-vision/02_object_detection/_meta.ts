@@ -1,3 +1,3 @@
 export default {
-  "02_object_detection": "1. Object Detection",
+  "02_object_detection": "Overview",
 }

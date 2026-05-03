@@ -1,7 +1,7 @@
 export default {
   "01-basics": "1. Basics",
   "02-intermediate": "2. Intermediate",
-  "2-pandas-examples": "3. Pandas Examples",
+  "2-pandas-examples": "Overview",
   "03-exercises": "4. Exercises",
   "05-real-world-projects": "5. Real World Projects",
   CONSOLIDATION_SUMMARY: "6. Consolidation Summary",

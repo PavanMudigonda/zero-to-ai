@@ -1,3 +1,3 @@
 export default {
-  "00_START_HERE": "Start Here",
+  "00_START_HERE": "Overview",
 }

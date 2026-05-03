@@ -12,5 +12,5 @@ export default {
   "11_mixture_models_em": "11. Mixture Models Em",
   "12_dimensionality_reduction": "12. Dimensionality Reduction",
   "13_clustering": "13. Clustering",
-  "mlpp-book": "14. Mlpp Book",
+  "mlpp-book": "Overview",
 }

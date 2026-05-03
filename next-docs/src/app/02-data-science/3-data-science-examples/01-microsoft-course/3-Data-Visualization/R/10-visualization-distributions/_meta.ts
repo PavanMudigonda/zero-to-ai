@@ -1,4 +1,4 @@
 export default {
-  "10-visualization-distributions": "1. Visualization Distributions",
+  "10-visualization-distributions": "Overview",
   assignment: "2. Assignment",
 }

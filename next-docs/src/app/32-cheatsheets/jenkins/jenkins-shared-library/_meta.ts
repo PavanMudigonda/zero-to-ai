@@ -1,3 +1,3 @@
 export default {
-  "jenkins-shared-library": "1. Jenkins Shared Library",
+  "jenkins-shared-library": "Overview",
 }

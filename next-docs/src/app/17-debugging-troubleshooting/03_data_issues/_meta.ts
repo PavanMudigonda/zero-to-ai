@@ -1,3 +1,3 @@
 export default {
-  "03_data_issues": "1. Data Issues",
+  "03_data_issues": "Overview",
 }

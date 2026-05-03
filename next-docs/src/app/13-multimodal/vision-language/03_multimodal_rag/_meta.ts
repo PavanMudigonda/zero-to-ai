@@ -1,3 +1,3 @@
 export default {
-  "03_multimodal_rag": "1. Multimodal Rag",
+  "03_multimodal_rag": "Overview",
 }

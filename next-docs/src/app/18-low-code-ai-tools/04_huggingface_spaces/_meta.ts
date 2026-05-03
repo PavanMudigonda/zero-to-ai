@@ -1,3 +1,3 @@
 export default {
-  "04_huggingface_spaces": "1. Huggingface Spaces",
+  "04_huggingface_spaces": "Overview",
 }

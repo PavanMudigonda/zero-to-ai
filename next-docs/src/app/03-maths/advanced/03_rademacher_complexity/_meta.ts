@@ -1,3 +1,3 @@
 export default {
-  "03_rademacher_complexity": "1. Rademacher Complexity",
+  "03_rademacher_complexity": "Overview",
 }

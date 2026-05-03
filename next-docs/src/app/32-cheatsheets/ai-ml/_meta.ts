@@ -7,7 +7,7 @@ export default {
   "06_experiment_tracking_cheatsheet": "6. Experiment Tracking Cheatsheet",
   "07_data_pipelines_cheatsheet": "7. Data Pipelines Cheatsheet",
   "ai-cloud-services-cheatsheet": "8. Ai Cloud Services Cheatsheet",
-  "ai-ml": "9. Ai Ml",
+  "ai-ml": "Overview",
   "data-pipelines-cheatsheet": "10. Data Pipelines Cheatsheet",
   "experiment-tracking-cheatsheet": "11. Experiment Tracking Cheatsheet",
   "gpu-compute-cheatsheet": "12. Gpu Compute Cheatsheet",

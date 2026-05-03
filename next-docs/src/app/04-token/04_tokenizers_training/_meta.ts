@@ -1,3 +1,3 @@
 export default {
-  "04_tokenizers_training": "1. Tokenizers Training",
+  "04_tokenizers_training": "Overview",
 }

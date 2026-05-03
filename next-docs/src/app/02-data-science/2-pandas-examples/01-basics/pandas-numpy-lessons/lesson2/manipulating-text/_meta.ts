@@ -1,3 +1,3 @@
 export default {
-  "manipulating-text": "1. Manipulating Text",
+  "manipulating-text": "Overview",
 }

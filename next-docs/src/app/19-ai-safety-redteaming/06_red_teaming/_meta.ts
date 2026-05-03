@@ -1,3 +1,3 @@
 export default {
-  "06_red_teaming": "1. Red Teaming",
+  "06_red_teaming": "Overview",
 }

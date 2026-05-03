@@ -1,3 +1,3 @@
 export default {
-  "oomkilled-pod-analysis-fix": "1. Oomkilled Pod Analysis Fix",
+  "oomkilled-pod-analysis-fix": "Overview",
 }

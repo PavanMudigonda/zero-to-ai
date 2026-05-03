@@ -1,3 +1,3 @@
 export default {
-  "01_whisper_speech_recognition": "Whisper Speech Recognition",
+  "01_whisper_speech_recognition": "Overview",
 }

@@ -1,5 +1,5 @@
 export default {
-  "01-microsoft-course": "Microsoft Course",
+  "01-microsoft-course": "Overview",
   "1-Introduction": "2. Introduction",
   "2-Working-With-Data": "3. Working With Data",
   "3-Data-Visualization": "4. Data Visualization",

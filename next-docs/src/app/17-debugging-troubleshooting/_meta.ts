@@ -9,5 +9,5 @@ export default {
   "08_challenges": "8. Challenges",
   "09_post-quiz": "9. Post Quiz",
   "10_pre-quiz": "10. Pre Quiz",
-  "17-debugging-troubleshooting": "11. Debugging Troubleshooting",
+  "17-debugging-troubleshooting": "Overview",
 }

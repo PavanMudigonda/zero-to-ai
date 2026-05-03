@@ -1,3 +1,3 @@
 export default {
-  "11_Set_routines": "1. Set Routines",
+  "11_Set_routines": "Overview",
 }

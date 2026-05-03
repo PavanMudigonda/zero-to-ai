@@ -1,3 +1,3 @@
 export default {
-  "13_challenges": "1. Challenges",
+  "13_challenges": "Overview",
 }

@@ -6,5 +6,5 @@ export default {
   "05_structured_outputs_dspy": "5. Structured Outputs Dspy",
   "06_long_context_strategies": "6. Long Context Strategies",
   "07_assignment": "7. Assignment",
-  "11-prompt-engineering": "8. Prompt Engineering",
+  "11-prompt-engineering": "Overview",
 }

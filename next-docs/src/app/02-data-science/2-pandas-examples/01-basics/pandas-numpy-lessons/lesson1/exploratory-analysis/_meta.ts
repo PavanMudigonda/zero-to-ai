@@ -1,3 +1,3 @@
 export default {
-  "exploratory-analysis": "Exploratory Analysis",
+  "exploratory-analysis": "Overview",
 }

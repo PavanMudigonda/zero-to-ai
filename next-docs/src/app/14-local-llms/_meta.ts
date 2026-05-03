@@ -6,5 +6,5 @@ export default {
   "05_llm_server_and_api": "5. Llm Server And Api",
   "06_speculative_decoding": "6. Speculative Decoding",
   "07_ai_toolkit_vscode": "7. Ai Toolkit Vscode",
-  "14-local-llms": "8. Local Llms",
+  "14-local-llms": "Overview",
 }

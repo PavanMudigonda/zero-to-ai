@@ -1,3 +1,3 @@
 export default {
-  "04_experimental_design": "1. Experimental Design",
+  "04_experimental_design": "Overview",
 }

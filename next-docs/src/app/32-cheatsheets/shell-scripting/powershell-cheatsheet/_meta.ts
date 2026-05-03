@@ -1,3 +1,3 @@
 export default {
-  "powershell-cheatsheet": "1. Powershell Cheatsheet",
+  "powershell-cheatsheet": "Overview",
 }
