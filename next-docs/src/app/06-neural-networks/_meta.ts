@@ -4,7 +4,7 @@ export default {
   "03_neural_network_basics": "3. Neural Network Basics",
   "04_backpropagation_explained": "4. Backpropagation Explained",
   "05_pytorch_fundamentals": "5. Pytorch Fundamentals",
-  "06-neural-networks": "6. Neural Networks",
+  "06-neural-networks": "Overview",
   "06_attention_mechanism": "7. Attention Mechanism",
   "07_transformer_architecture": "8. Transformer Architecture",
   "08_assignment": "9. Assignment",

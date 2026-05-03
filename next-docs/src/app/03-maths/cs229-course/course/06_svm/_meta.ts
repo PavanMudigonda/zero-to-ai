@@ -1,3 +1,3 @@
 export default {
-  "06_svm": "1. Svm",
+  "06_svm": "Overview",
 }

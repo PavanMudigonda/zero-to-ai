@@ -1,3 +1,3 @@
 export default {
-  "README.tr": "1. Readme.tr",
+  "README.tr": "Overview",
 }

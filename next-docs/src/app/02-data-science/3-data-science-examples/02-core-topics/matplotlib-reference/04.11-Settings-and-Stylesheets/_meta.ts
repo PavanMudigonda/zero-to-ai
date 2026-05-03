@@ -1,3 +1,3 @@
 export default {
-  "04.11-Settings-and-Stylesheets": "1. 04.11 Settings And Stylesheets",
+  "04.11-Settings-and-Stylesheets": "Overview",
 }

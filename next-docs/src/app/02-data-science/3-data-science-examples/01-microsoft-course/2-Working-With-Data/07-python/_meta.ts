@@ -1,5 +1,5 @@
 export default {
-  "07-python": "1. Python",
+  "07-python": "Overview",
   R: "2. R",
   assignment: "3. Assignment",
   notebook: "4. Notebook",

@@ -1,3 +1,3 @@
 export default {
-  "02_serving_with_vllm": "1. Serving With Vllm",
+  "02_serving_with_vllm": "Overview",
 }

@@ -1,5 +1,5 @@
 export default {
-  "3blue1brown": "1. 3blue1brown",
+  "3blue1brown": "Overview",
   calculus: "2. Calculus",
   "differential-equations": "3. Differential Equations",
   "linear-algebra": "4. Linear Algebra",

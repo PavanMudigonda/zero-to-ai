@@ -1,3 +1,3 @@
 export default {
-  "devops-arch": "Devops Arch",
+  "devops-arch": "Overview",
 }

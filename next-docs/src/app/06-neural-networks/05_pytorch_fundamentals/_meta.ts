@@ -1,3 +1,3 @@
 export default {
-  "05_pytorch_fundamentals": "1. Pytorch Fundamentals",
+  "05_pytorch_fundamentals": "Overview",
 }

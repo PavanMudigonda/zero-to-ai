@@ -1,3 +1,3 @@
 export default {
-  "01_advanced_sql": "Advanced Sql",
+  "01_advanced_sql": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "05_advanced_training_methods": "1. Advanced Training Methods",
+  "05_advanced_training_methods": "Overview",
 }

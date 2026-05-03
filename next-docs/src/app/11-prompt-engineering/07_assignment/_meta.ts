@@ -1,3 +1,3 @@
 export default {
-  "07_assignment": "1. Assignment",
+  "07_assignment": "Overview",
 }

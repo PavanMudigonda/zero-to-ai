@@ -7,5 +7,5 @@ export default {
   "06_understanding_laplace": "6. Understanding Laplace",
   "07_resonance": "7. Resonance",
   "08_matrix_exponents": "8. Matrix Exponents",
-  "differential-equations": "9. Differential Equations",
+  "differential-equations": "Overview",
 }

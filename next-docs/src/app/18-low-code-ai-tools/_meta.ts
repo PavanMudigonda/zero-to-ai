@@ -9,5 +9,5 @@ export default {
   "08_challenges": "8. Challenges",
   "09_post-quiz": "9. Post Quiz",
   "10_pre-quiz": "10. Pre Quiz",
-  "18-low-code-ai-tools": "11. Low Code Ai Tools",
+  "18-low-code-ai-tools": "Overview",
 }

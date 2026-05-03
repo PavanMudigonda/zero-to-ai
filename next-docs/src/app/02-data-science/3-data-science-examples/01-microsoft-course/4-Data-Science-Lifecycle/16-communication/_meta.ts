@@ -1,5 +1,5 @@
 export default {
-  "16-communication": "1. Communication",
+  "16-communication": "Overview",
   assignment: "2. Assignment",
   translations: "3. Translations",
 }

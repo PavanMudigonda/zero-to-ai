@@ -1,3 +1,3 @@
 export default {
-  "bash-cheatsheet": "Bash Cheatsheet",
+  "bash-cheatsheet": "Overview",
 }

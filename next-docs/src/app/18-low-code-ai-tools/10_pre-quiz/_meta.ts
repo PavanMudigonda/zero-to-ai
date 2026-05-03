@@ -1,3 +1,3 @@
 export default {
-  "10_pre-quiz": "1. Pre Quiz",
+  "10_pre-quiz": "Overview",
 }

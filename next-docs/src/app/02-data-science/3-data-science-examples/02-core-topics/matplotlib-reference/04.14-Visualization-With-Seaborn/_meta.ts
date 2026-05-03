@@ -1,3 +1,3 @@
 export default {
-  "04.14-Visualization-With-Seaborn": "1. 04.14 Visualization With Seaborn",
+  "04.14-Visualization-With-Seaborn": "Overview",
 }

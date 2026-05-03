@@ -2,7 +2,7 @@
 
 import { ThemeSwitch } from 'nextra-theme-docs';
 import { useTheme } from 'next-themes';
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 function isEditableTarget(target: EventTarget | null) {
   if (!(target instanceof HTMLElement)) {
@@ -15,7 +15,6 @@ function isEditableTarget(target: EventTarget | null) {
 
 export default function ThemeSwitchHotkey() {
   const { resolvedTheme, setTheme } = useTheme();
-  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -35,9 +34,5 @@ export default function ThemeSwitchHotkey() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [resolvedTheme, setTheme]);
 
-  return (
-    <div ref={containerRef}>
-      <ThemeSwitch />
-    </div>
-  );
+  return <ThemeSwitch />;
 }

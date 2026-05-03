@@ -1,3 +1,3 @@
 export default {
-  "02_INTERVIEW_PREP": "1. Interview Prep",
+  "02_INTERVIEW_PREP": "Overview",
 }

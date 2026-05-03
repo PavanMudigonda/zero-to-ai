@@ -1,3 +1,3 @@
 export default {
-  "01_collaborative_filtering": "Collaborative Filtering",
+  "01_collaborative_filtering": "Overview",
 }

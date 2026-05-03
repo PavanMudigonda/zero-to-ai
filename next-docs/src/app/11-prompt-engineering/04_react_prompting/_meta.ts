@@ -1,3 +1,3 @@
 export default {
-  "04_react_prompting": "1. React Prompting",
+  "04_react_prompting": "Overview",
 }

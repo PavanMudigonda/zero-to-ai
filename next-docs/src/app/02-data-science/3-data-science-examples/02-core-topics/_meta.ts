@@ -1,5 +1,5 @@
 export default {
-  "02-core-topics": "1. Core Topics",
+  "02-core-topics": "Overview",
   "matplotlib-reference": "2. Matplotlib Reference",
   "numpy-reference": "3. Numpy Reference",
   "pandas-reference": "4. Pandas Reference",

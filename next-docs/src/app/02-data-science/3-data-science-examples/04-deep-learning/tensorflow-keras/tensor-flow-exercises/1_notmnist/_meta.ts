@@ -1,3 +1,3 @@
 export default {
-  "1_notmnist": "Notmnist",
+  "1_notmnist": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "04_framework_validation": "1. Framework Validation",
+  "04_framework_validation": "Overview",
 }

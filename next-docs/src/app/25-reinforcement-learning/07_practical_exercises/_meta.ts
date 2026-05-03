@@ -1,3 +1,3 @@
 export default {
-  "07_practical_exercises": "1. Practical Exercises",
+  "07_practical_exercises": "Overview",
 }

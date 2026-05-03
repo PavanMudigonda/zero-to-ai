@@ -1,3 +1,3 @@
 export default {
-  "13_token_exercises": "1. Token Exercises",
+  "13_token_exercises": "Overview",
 }

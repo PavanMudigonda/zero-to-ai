@@ -1,3 +1,3 @@
 export default {
-  "01_hypothesis_testing": "Hypothesis Testing",
+  "01_hypothesis_testing": "Overview",
 }

@@ -1,3 +1,3 @@
 export default {
-  "github-actions-cheatsheet": "1. Github Actions Cheatsheet",
+  "github-actions-cheatsheet": "Overview",
 }

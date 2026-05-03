@@ -1,3 +1,3 @@
 export default {
-  "01_GLOSSARY": "Glossary",
+  "01_GLOSSARY": "Overview",
 }

@@ -1,4 +1,4 @@
 export default {
-  "09-visualization-quantities": "Visualization Quantities",
+  "09-visualization-quantities": "Overview",
   assignment: "2. Assignment",
 }

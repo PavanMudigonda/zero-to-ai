@@ -1,3 +1,3 @@
 export default {
-  "scikit-learn-linear-reg": "1. Scikit Learn Linear Reg",
+  "scikit-learn-linear-reg": "Overview",
 }

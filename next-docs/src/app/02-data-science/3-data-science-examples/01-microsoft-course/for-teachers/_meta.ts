@@ -1,3 +1,3 @@
 export default {
-  "for-teachers": "1. For Teachers",
+  "for-teachers": "Overview",
 }

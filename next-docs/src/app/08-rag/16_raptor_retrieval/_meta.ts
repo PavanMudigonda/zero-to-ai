@@ -1,3 +1,3 @@
 export default {
-  "16_raptor_retrieval": "1. Raptor Retrieval",
+  "16_raptor_retrieval": "Overview",
 }

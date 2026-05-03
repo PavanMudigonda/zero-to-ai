@@ -1,3 +1,3 @@
 export default {
-  "dns-based-service-discovery": "1. Dns Based Service Discovery",
+  "dns-based-service-discovery": "Overview",
 }
