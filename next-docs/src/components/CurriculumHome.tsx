@@ -203,7 +203,7 @@ export default function CurriculumHome() {
         badgeToneClass="text-sky-100/90"
         eyebrow="Zero to AI"
         eyebrowClass="text-sky-200/80"
-        title="Learn AI through a structured path, not a pile of disconnected content."
+        title="Learn AI"
         description="Work through Python, data science, LLMs, agents, evaluation, and production systems in one connected learning path with hands-on notebooks and fast-reference guides."
         actions={[
           { label: 'Start the curriculum', href: '/00-course-setup', variant: 'primary' },
