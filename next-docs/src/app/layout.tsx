@@ -2,11 +2,13 @@ import React from 'react';
 import { Navbar, ThemeSwitch } from "nextra-theme-docs";
 import FilteredLayout from "./FilteredLayout";
 import ProgressWidget from "@/components/ProgressWidget";
-import { Head, Search } from 'nextra/components';
+import FuzzySearch from '@/components/FuzzySearch';
+import { Head } from 'nextra/components';
 import 'nextra-theme-docs/style.css';
 import './globals.css';
 import { Metadata, Viewport } from 'next';
 import { getStaticSiteRoutes } from '@/lib/site-routes';
+import { buildSearchItems } from '@/lib/search-items';
 
 type NavNode = {
   name: string;
@@ -172,6 +174,7 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const routeIndex = getStaticSiteRoutes();
   const pageMap = buildLightweightPageMap(routeIndex);
+  const searchItems = buildSearchItems(pageMap as any);
   const websiteStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -224,7 +227,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           editLink="Edit this page on GitHub"
           sidebar={{ defaultMenuCollapseLevel: 1, autoCollapse: true }}
           feedback={{ content: 'Question? Give us feedback →', labels: 'feedback' }}
-          search={<Search />}
+          search={<FuzzySearch items={searchItems} />}
         >
           {children}
           <ProgressWidget />
