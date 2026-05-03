@@ -57,7 +57,7 @@ export default function ProgressWidget() {
     fetch('/route-index.json')
       .then(res => res.json())
       .then((routes: string[]) => {
-        const validRoutes = routes.filter((r: string) => r \!== '/' && \!r.includes('/temp'));
+        const validRoutes = routes.filter((r: string) => r !== '/' && !r.includes('/temp'));
         setTotalRoutes(validRoutes.length);
       })
       .catch(() => {});
@@ -77,7 +77,7 @@ export default function ProgressWidget() {
   };
 
   const fetchCloudProgress = async (userId: string) => {
-    if (\!supabase) return;
+    if (!supabase) return;
     
     // Attempt to migrate any unstored local progress
     const local = localStorage.getItem('curriculum-progress');
@@ -102,14 +102,14 @@ export default function ProgressWidget() {
       .select('route')
       .eq('user_id', userId);
       
-    if (\!error && data) {
+    if (!error && data) {
       const routes = data.map((row: any) => row.route);
       setCompletedRoutes(new Set(routes));
     }
   };
 
   const handleLogin = async () => {
-    if (\!supabase) return alert("Supabase URL and Anon Key are missing in .env.local");
+    if (!supabase) return alert("Supabase URL and Anon Key are missing in .env.local");
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
@@ -119,7 +119,7 @@ export default function ProgressWidget() {
   };
 
   const handleLogout = async () => {
-    if (\!supabase) return;
+    if (!supabase) return;
     await supabase.auth.signOut();
     setCompletedRoutes(new Set());
     loadLocalProgress();
@@ -156,7 +156,7 @@ export default function ProgressWidget() {
     }
   };
 
-  if (\!mounted) return null;
+  if (!mounted) return null;
 
   const validCompletedCount = Array.from(completedRoutes).length;
   const progressPercent = totalRoutes > 0 ? Math.round((validCompletedCount / totalRoutes) * 100) : 0;
@@ -204,7 +204,7 @@ export default function ProgressWidget() {
       )}
 
       {/* Action Button */}
-      {\!isHomepage && (
+      {!isHomepage && (
         <button
           onClick={toggleCompletion}
           className={`flex items-center gap-2 px-4 py-2.5 rounded-full shadow-lg font-medium text-sm transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 ${
