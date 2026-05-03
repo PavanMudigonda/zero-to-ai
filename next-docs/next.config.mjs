@@ -6,6 +6,7 @@ import { join } from 'path';
 
 const withNextra = nextra({
   latex: true,
+  defaultShowCopyCode: true,
   mdxOptions: {
     remarkPlugins: [remarkNormalizeDocLinks, remarkStripMissingImages]
   }
