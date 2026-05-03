@@ -22,7 +22,20 @@ export default function ProgressWidget() {
       : null
   );
 
+  const loadRouteIndex = () => {
+    fetch('/route-index.json')
+      .then(res => res.json())
+      .then((routes: string[]) => {
+        const validRoutes = routes.filter((r: string) => r !== '/' && !r.includes('/temp'));
+        setTotalRoutes(validRoutes.length);
+      })
+      .catch(() => {});
+  };
+
   useEffect(() => {
+    loadRouteIndex();
+    setMounted(true);
+
     // 1. Evaluate Auth State
     if (supabase) {
       supabase.auth.getUser().then(({ data: { user } }) => {
@@ -49,20 +62,9 @@ export default function ProgressWidget() {
       return () => {
         authListener?.subscription.unsubscribe();
       };
-    } else {
-      loadLocalProgress();
     }
 
-    // 2. Load total routes length from route index
-    fetch('/route-index.json')
-      .then(res => res.json())
-      .then((routes: string[]) => {
-        const validRoutes = routes.filter((r: string) => r !== '/' && !r.includes('/temp'));
-        setTotalRoutes(validRoutes.length);
-      })
-      .catch(() => {});
-
-    setMounted(true);
+    loadLocalProgress();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [supabase]);
   
