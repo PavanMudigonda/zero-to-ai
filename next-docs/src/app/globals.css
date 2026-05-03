@@ -30,14 +30,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body:has([data-homepage-layout]) .nextra-sidebar {
-  display: none !important;
-}
-
-body:has([data-homepage-layout]) .nextra-sidebar + * {
-  margin-left: 0 !important;
-}
-
 .site-logo {
   display: inline-flex;
   align-items: center;
@@ -80,7 +72,6 @@ body:has([data-homepage-layout]) .nextra-sidebar + * {
     display: none !important;
   }
 
-  .nextra-sidebar,
   .nextra-toc {
     display: none !important;
   }
