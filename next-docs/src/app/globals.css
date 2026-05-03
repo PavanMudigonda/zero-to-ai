@@ -84,11 +84,4 @@ body:has([data-homepage-layout]) .nextra-sidebar + * {
   .nextra-toc {
     display: none !important;
   }
-
-  .nextra-mobile-nav {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    z-index: 60 !important;
-    background-color: var(--background) !important;
-  }
 }
