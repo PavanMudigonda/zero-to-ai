@@ -112,10 +112,13 @@ export default function ProgressWidget() {
 
   const handleLogin = async () => {
     if (!supabase) return alert("Supabase URL and Anon Key are missing in .env.local");
+    const callbackUrl = new URL('/auth/callback', location.origin);
+    callbackUrl.searchParams.set('next', currentPath);
+
     await supabase.auth.signInWithOAuth({
       provider: 'github',
       options: {
-        redirectTo: `${location.origin}`,
+        redirectTo: callbackUrl.toString(),
       }
     });
   };
