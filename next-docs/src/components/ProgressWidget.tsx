@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { createBrowserClient } from '@supabase/ssr';
 
+type OAuthProvider = 'github' | 'google';
+
 export default function ProgressWidget() {
   const pathname = usePathname();
   const [completedRoutes, setCompletedRoutes] = useState<Set<string>>(new Set());
@@ -110,13 +112,13 @@ export default function ProgressWidget() {
     }
   };
 
-  const handleLogin = async () => {
+  const handleLogin = async (provider: OAuthProvider) => {
     if (!supabase) return alert("Supabase URL and Anon Key are missing in .env.local");
     const callbackUrl = new URL('/auth/callback', location.origin);
     callbackUrl.searchParams.set('next', currentPath);
 
     await supabase.auth.signInWithOAuth({
-      provider: 'github',
+      provider,
       options: {
         redirectTo: callbackUrl.toString(),
       }
@@ -178,15 +180,29 @@ export default function ProgressWidget() {
           </button>
         </div>
       ) : (
-        <button 
-          onClick={handleLogin} 
-          className="cursor-pointer bg-gray-900 text-white dark:bg-white dark:text-black border border-transparent shadow-lg rounded-full px-3 py-1.5 flex items-center gap-2 text-xs font-medium hover:opacity-90 transition-opacity"
-        >
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-          </svg>
-          Sync with GitHub
-        </button>
+        <div className="flex flex-col items-end gap-2">
+          <button 
+            onClick={() => handleLogin('github')} 
+            className="cursor-pointer bg-gray-900 text-white dark:bg-white dark:text-black border border-transparent shadow-lg rounded-full px-3 py-1.5 flex items-center gap-2 text-xs font-medium hover:opacity-90 transition-opacity"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            Sync with GitHub
+          </button>
+          <button 
+            onClick={() => handleLogin('google')} 
+            className="cursor-pointer bg-white text-gray-900 dark:bg-[#111] dark:text-white border border-gray-200 dark:border-gray-700 shadow-lg rounded-full px-3 py-1.5 flex items-center gap-2 text-xs font-medium hover:bg-gray-50 dark:hover:bg-[#1a1a1a] transition-colors"
+          >
+            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#EA4335" d="M12 10.2v3.9h5.4c-.2 1.3-1.6 3.9-5.4 3.9-3.2 0-5.9-2.7-5.9-6s2.7-6 5.9-6c1.8 0 3 .8 3.7 1.5l2.5-2.4C16.6 3.6 14.5 2.7 12 2.7 6.9 2.7 2.8 6.8 2.8 12S6.9 21.3 12 21.3c6.8 0 9-4.8 9-7.3 0-.5-.1-.9-.1-1.3H12Z"/>
+              <path fill="#34A853" d="M2.8 12c0 1.7.6 3.3 1.7 4.5l2.8-2.2c-.4-.6-.6-1.4-.6-2.3s.2-1.6.6-2.3L4.5 7.5C3.4 8.7 2.8 10.3 2.8 12Z"/>
+              <path fill="#FBBC05" d="M12 21.3c2.4 0 4.5-.8 6-2.3l-2.9-2.2c-.8.6-1.8 1.1-3.1 1.1-2.5 0-4.7-1.7-5.4-3.9l-2.8 2.2c1.6 3.1 4.8 5.1 8.2 5.1Z"/>
+              <path fill="#4285F4" d="M21 12.1c0-.7-.1-1.3-.2-1.9H12v3.9h5.4c-.3 1.3-1 2.3-2 3l2.9 2.2c1.7-1.6 2.7-4 2.7-7.2Z"/>
+            </svg>
+            Sync with Google
+          </button>
+        </div>
       )}
 
       {/* Progress Bar popout */}
