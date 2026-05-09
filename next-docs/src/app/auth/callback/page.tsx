@@ -52,7 +52,7 @@ function AuthCallbackContent() {
 
     const timeoutId = window.setTimeout(() => {
       if (!cancelled) {
-        setErrorMessage('GitHub sign-in did not finish in time. Please try again.');
+        setErrorMessage('Sign-in did not finish in time. Please try again.');
       }
     }, 8000);
 
@@ -92,7 +92,7 @@ function AuthCallbackContent() {
   return (
     <main className="mx-auto flex min-h-[60vh] max-w-xl flex-col items-center justify-center px-6 py-16 text-center">
       <div className="w-full rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-[#111]">
-        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">Complete GitHub sign-in</h1>
+        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">Complete sign-in</h1>
         {errorMessage ? (
           <>
             <p className="mt-3 text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
@@ -108,7 +108,7 @@ function AuthCallbackContent() {
         ) : (
           <>
             <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">
-              Finalizing your GitHub login and syncing your course progress.
+              Finalizing your login and syncing your course progress.
             </p>
             <div className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
               <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-green-500" />
@@ -125,9 +125,9 @@ function AuthCallbackFallback() {
   return (
     <main className="mx-auto flex min-h-[60vh] max-w-xl flex-col items-center justify-center px-6 py-16 text-center">
       <div className="w-full rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-[#111]">
-        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">Complete GitHub sign-in</h1>
+        <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">Complete sign-in</h1>
         <p className="mt-3 text-sm text-gray-600 dark:text-gray-300">
-          Finalizing your GitHub login and syncing your course progress.
+          Finalizing your login and syncing your course progress.
         </p>
         <div className="mt-6 flex items-center justify-center gap-2 text-sm text-gray-500 dark:text-gray-400">
           <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-green-500" />

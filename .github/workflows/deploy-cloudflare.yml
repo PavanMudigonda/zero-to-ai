@@ -7,6 +7,16 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  # Required GitHub Actions secrets for this workflow:
+  # - CLOUDFLARE_API_TOKEN
+  # - CLOUDFLARE_ACCOUNT_ID
+  # - NEXT_PUBLIC_SUPABASE_URL
+  # - NEXT_PUBLIC_SUPABASE_ANON_KEY
+  # Optional GitHub Actions secrets:
+  # - GOOGLE_ANALYTICS_ID
+  # - GOOGLE_SITE_VERIFICATION
+  # Google OAuth provider client credentials are configured in Supabase Auth,
+  # not injected into this static site build.
 
 jobs:
   build-and-deploy:
@@ -57,6 +67,32 @@ jobs:
           sudo chmod 600 /swapfile-new
           sudo mkswap /swapfile-new
           sudo swapon /swapfile-new
+
+      - name: Validate required deployment secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+        run: |
+          missing=0
+
+          for secret_name in \
+            CLOUDFLARE_API_TOKEN \
+            CLOUDFLARE_ACCOUNT_ID \
+            NEXT_PUBLIC_SUPABASE_URL \
+            NEXT_PUBLIC_SUPABASE_ANON_KEY
+          do
+            if [ -z "${!secret_name}" ]; then
+              echo "Missing required GitHub Actions secret: ${secret_name}" >&2
+              missing=1
+            fi
+          done
+
+          if [ "$missing" -ne 0 ]; then
+            echo "Configure the missing repository secrets before rerunning this workflow." >&2
+            exit 1
+          fi
 
       - name: Build Next.js site
         working-directory: ./next-docs
