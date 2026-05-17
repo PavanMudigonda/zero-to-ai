@@ -1,3 +1,3 @@
 export default {
-  "ml-problem": "Overview",
+  "ml-problem": "1. ML Problem",
 }

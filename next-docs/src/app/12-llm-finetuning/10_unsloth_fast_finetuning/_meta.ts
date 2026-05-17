@@ -1,3 +1,3 @@
 export default {
-  "10_unsloth_fast_finetuning": "Overview",
+  "10_unsloth_fast_finetuning": "1. Unsloth Fast Fine-tuning",
 }

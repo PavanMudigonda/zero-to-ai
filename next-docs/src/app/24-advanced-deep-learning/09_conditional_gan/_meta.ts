@@ -1,3 +1,3 @@
 export default {
-  "09_conditional_gan": "Overview",
+  "09_conditional_gan": "1. Conditional GAN",
 }

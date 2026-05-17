@@ -1,3 +1,3 @@
 export default {
-  "10_llm_optimization": "Overview",
+  "10_llm_optimization": "1. LLM Optimization",
 }

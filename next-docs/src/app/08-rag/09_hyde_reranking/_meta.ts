@@ -1,3 +1,3 @@
 export default {
-  "09_hyde_reranking": "Overview",
+  "09_hyde_reranking": "1. HyDE Reranking",
 }

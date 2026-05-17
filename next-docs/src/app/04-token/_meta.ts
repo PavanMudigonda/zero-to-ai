@@ -9,7 +9,7 @@ export default {
   "07_tokenizer_comparison": "8. Tokenizer Comparison",
   "08_integration_guide": "9. Integration Guide",
   "09_pipeline_components": "10. Pipeline Components",
-  "10_huggingface_tokenizers_guide": "11. Huggingface Tokenizers Guide",
+  "10_huggingface_tokenizers_guide": "11. Hugging Face Tokenizers Guide",
   "11_sentencepiece_example": "12. Sentencepiece Example",
   "12_tiktoken_example": "13. Tiktoken Example",
   "13_token_exercises": "14. Token Exercises",

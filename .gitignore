@@ -72,15 +72,22 @@ zero-to-ai-home.png
 .env
 .env.local
 
-# UV/uv
-uv.lock
-
 # Vector database
 .vectordb/
 
 # Node
 node_modules/
-# package-lock.json
+
+# Scraper output artifacts
+scripts/scrapers/*.html
+scripts/scrapers/*.xlsx
+scripts/scrapers/*.csv
+
+# Build/run artifacts that should not be tracked
+gh_action_logs.txt
+next-docs/build_logs.txt
+next-docs/logs.txt
+next-docs/missing_refs_report.txt
 
 # AI dev tools venv
 .venv-ai-dev-tools/

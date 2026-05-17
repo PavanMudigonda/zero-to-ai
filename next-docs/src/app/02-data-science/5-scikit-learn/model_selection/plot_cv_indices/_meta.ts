@@ -1,3 +1,3 @@
 export default {
-  plot_cv_indices: "1. Plot Cv Indices",
+  plot_cv_indices: "1. Plot CV Indices",
 }

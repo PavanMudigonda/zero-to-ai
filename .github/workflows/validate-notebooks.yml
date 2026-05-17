@@ -2,6 +2,10 @@ name: Validate Notebooks
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - 'jupyter-notebooks/**/*.ipynb'
+      - '.github/workflows/validate-notebooks.yml'
 
 jobs:
   validate:
@@ -65,16 +69,18 @@ jobs:
     - name: Test sample notebook execution
       run: |
         # Test a few key notebooks to ensure they execute
-        if [ -f "11-prompt-engineering/01_basic_prompting.ipynb" ]; then
+        PROMPT_NB="jupyter-notebooks/11-prompt-engineering/02_basic_prompting/02_basic_prompting.ipynb"
+        if [ -f "$PROMPT_NB" ]; then
           echo "Testing prompt engineering notebook..."
           # Skip execution for notebooks requiring API keys
           echo "⚠️  Skipping execution (requires API key)"
         fi
-        
-        if [ -f "03-maths/foundational/01_linear_algebra_fundamentals.ipynb" ]; then
+
+        MATH_NB="jupyter-notebooks/03-maths/foundational/01_linear_algebra_fundamentals/01_linear_algebra_fundamentals.ipynb"
+        if [ -f "$MATH_NB" ]; then
           echo "Testing math fundamentals notebook..."
           jupyter nbconvert --to notebook --execute \
-            03-maths/foundational/01_linear_algebra_fundamentals.ipynb \
+            "$MATH_NB" \
             --output temp_test.ipynb 2>&1 || echo "⚠️  Execution requires full environment"
         fi
         

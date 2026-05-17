@@ -1,78 +1,47 @@
 ---
 name: Bug Report
-about: Report an error in a notebook, code, or documentation
+about: Report something that's broken — a notebook, code, link, or page on the site
 title: '[BUG] '
 labels: bug
 assignees: ''
 ---
 
-## 🐛 Bug Description
+## What's broken
 
-A clear and concise description of what the bug is.
+<!-- One or two sentences describing the problem. -->
 
-## 📍 Location
+## Where
 
-**Phase**: [e.g., 5-neural-networks]
-**Notebook**: [e.g., 06_attention_mechanism.ipynb]
-**Cell Number**: [e.g., Cell 7]
+- **Phase:** <!-- e.g., 08-rag -->
+- **Notebook or page:** <!-- e.g., jupyter-notebooks/08-rag/02_chunking/02_chunking.ipynb -->
+- **Cell or section:** <!-- e.g., cell 7, or "Setup" section -->
+- **Where you ran it:** <!-- live site / Colab / Kaggle / local / Codespaces / other -->
 
-## 🔄 Steps to Reproduce
+## Steps to reproduce
 
-Steps to reproduce the behavior:
+1.
+2.
+3.
 
-1. Open notebook '...'
-2. Run cell '...'
-3. Execute code '...'
-4. See error
+## What happened
 
-## ❌ Error Message
+<!-- Paste the error message in a code block. Screenshots are fine. -->
 
 ```
-Paste the complete error message here
+<error message here>
 ```
 
-## ✅ Expected Behavior
+## What you expected
 
-A clear and concise description of what you expected to happen.
+## Your environment (only if running locally)
 
-## 📊 Actual Behavior
-
-What actually happened instead.
-
-## 🖥️ Environment
-
-- **OS**: [e.g., macOS 14.0, Ubuntu 22.04, Windows 11]
-- **Python Version**: [e.g., 3.11.5]
-- **Jupyter**: [e.g., JupyterLab 4.0.0, VS Code with Jupyter extension]
-- **Key Package Versions**: [e.g., torch==2.1.0, transformers==4.36.0]
-
-You can get this info by running:
+<!-- Run this in a cell and paste the output, or skip if you ran on the live site -->
 ```python
-import sys
-import torch
-import transformers
-
-print(f"Python: {sys.version}")
-print(f"PyTorch: {torch.__version__}")
-print(f"Transformers: {transformers.__version__}")
+import sys, platform
+print(sys.version)
+print(platform.platform())
 ```
 
-## 🔍 Additional Context
+## Anything else?
 
-Add any other context about the problem here:
-- Screenshots (if applicable)
-- Related issues or notebooks
-- When the bug started appearing
-- Workarounds you've tried
-
-## ✅ Checklist
-
-- [ ] I have checked existing issues to avoid duplicates
-- [ ] I have tried running with the latest dependencies from requirements.txt
-- [ ] I have activated the virtual environment (.venv)
-- [ ] I have included the complete error message
-- [ ] I have specified the exact notebook and cell where the error occurs
-
-## 💡 Suggested Fix (Optional)
-
-If you have ideas on how to fix this bug, please share them here.
+<!-- Workarounds you tried, related issues, etc. -->

@@ -1,3 +1,3 @@
 export default {
-  "100_Numpy_random": "Overview",
+  "100_Numpy_random": "1. NumPy Random",
 }

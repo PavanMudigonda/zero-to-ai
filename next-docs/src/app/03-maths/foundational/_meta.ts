@@ -1,5 +1,5 @@
 export default {
-  "00_python_ml_libraries": "1. Python Ml Libraries",
+  "00_python_ml_libraries": "1. Python ML Libraries",
   "01_linear_algebra_fundamentals": "2. Linear Algebra Fundamentals",
   "02_calculus_derivatives": "3. Calculus Derivatives",
   "03_probability_statistics": "4. Probability Statistics",
@@ -9,7 +9,7 @@ export default {
   "07_neural_network_math": "8. Neural Network Math",
   "08_advanced_linear_algebra": "9. Advanced Linear Algebra",
   "09_math_architecture_analytical_vs_numerical": "10. Math Architecture Analytical Vs Numerical",
-  "10_ai_foundations_control_theory": "11. Ai Foundations Control Theory",
+  "10_ai_foundations_control_theory": "11. AI Foundations Control Theory",
   "11_markov_models_hmm": "12. Markov Models Hmm",
   "12_optimization_from_scratch_adam": "13. Optimization From Scratch Adam",
   foundational: "14. Foundational",

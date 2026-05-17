@@ -1,7 +1,7 @@
 export default {
   "01_START_HERE": "1. Start Here",
-  "10-specializations": "Overview",
-  "ai-agents": "3. AI Agents (merged into Phase 15)",
+  "10-specializations": "2. Specializations",
+  "ai-agents": "3. AI Agents",
   "computer-vision": "4. Computer Vision",
-  nlp: "5. Nlp",
+  nlp: "5. NLP",
 }

@@ -1,3 +1,3 @@
 export default {
-  "03-NumPy-Tutorial": "Overview",
+  "03-NumPy-Tutorial": "1. NumPy Tutorial",
 }

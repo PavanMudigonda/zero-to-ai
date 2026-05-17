@@ -4,6 +4,6 @@ export default {
   "02_object_detection": "3. Object Detection",
   "03_clip_embeddings": "4. Clip Embeddings",
   "04_stable_diffusion": "5. Stable Diffusion",
-  "05_multimodal_rag": "6. Multimodal Rag",
-  "computer-vision": "Overview",
+  "05_multimodal_rag": "6. Multimodal RAG",
+  "computer-vision": "7. Computer Vision",
 }

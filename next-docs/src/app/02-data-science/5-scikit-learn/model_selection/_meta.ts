@@ -1,8 +1,8 @@
 export default {
   plot_confusion_matrix: "1. Plot Confusion Matrix",
   plot_cost_sensitive_learning: "2. Plot Cost Sensitive Learning",
-  plot_cv_indices: "3. Plot Cv Indices",
-  plot_cv_predict: "4. Plot Cv Predict",
+  plot_cv_indices: "3. Plot CV Indices",
+  plot_cv_predict: "4. Plot CV Predict",
   plot_det: "5. Plot Det",
   plot_grid_search_digits: "6. Plot Grid Search Digits",
   plot_grid_search_refit_callable: "7. Plot Grid Search Refit Callable",

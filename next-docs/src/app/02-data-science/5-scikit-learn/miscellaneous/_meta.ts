@@ -10,8 +10,8 @@ export default {
   plot_multilabel: "9. Plot Multilabel",
   plot_multioutput_face_completion: "10. Plot Multioutput Face Completion",
   plot_outlier_detection_bench: "11. Plot Outlier Detection Bench",
-  plot_partial_dependence_visualization_api: "12. Plot Partial Dependence Visualization Api",
+  plot_partial_dependence_visualization_api: "12. Plot Partial Dependence Visualization API",
   plot_pipeline_display: "13. Plot Pipeline Display",
-  plot_roc_curve_visualization_api: "14. Plot Roc Curve Visualization Api",
+  plot_roc_curve_visualization_api: "14. Plot Roc Curve Visualization API",
   plot_set_output: "15. Plot Set Output",
 }

@@ -10,7 +10,7 @@ export default {
   "09_decision_trees": "9. Decision Trees",
   "10_neural_networks_basics": "10. Neural Networks Basics",
   "11_neural_networks_advanced": "11. Neural Networks Advanced",
-  "12_ml_strategy": "12. Ml Strategy",
+  "12_ml_strategy": "12. ML Strategy",
   "13_clustering": "13. Clustering",
   "14_dimensionality_reduction": "14. Dimensionality Reduction",
   "15_reinforcement_learning": "15. Reinforcement Learning",

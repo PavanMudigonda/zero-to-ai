@@ -9,8 +9,8 @@ export default {
   "07_sparse_encoder_intro": "8. Sparse Encoder Intro",
   "08_QUICKSTART": "9. Quickstart",
   "09_embedding_comparison": "10. Embedding Comparison",
-  "10_huggingface_embeddings": "11. Huggingface Embeddings",
-  "11_openai_embeddings": "12. Openai Embeddings",
+  "10_huggingface_embeddings": "11. Hugging Face Embeddings",
+  "11_openai_embeddings": "12. OpenAI Embeddings",
   "12_semantic_similarity": "13. Semantic Similarity",
   "13_vector_database_demo": "14. Vector Database Demo",
 }

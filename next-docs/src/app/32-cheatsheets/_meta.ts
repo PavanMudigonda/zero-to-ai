@@ -1,6 +1,6 @@
 export default {
-  "32-cheatsheets": "Overview",
-  "ai-ml": "2. Ai Ml",
+  "32-cheatsheets": "1. Cheatsheets",
+  "ai-ml": "2. AI ML",
   cloud: "3. Cloud",
   "config-management": "4. Config Management",
   databases: "5. Databases",

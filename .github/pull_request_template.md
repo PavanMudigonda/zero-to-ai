@@ -1,193 +1,37 @@
 # Pull Request
 
-## 📝 Description
+## What this changes
 
-Provide a clear and concise description of what this PR does.
+<!-- One or two sentences. -->
 
-**Related Issue**: Fixes #[issue number] (if applicable)
+## Type of change
 
-## 🎯 Type of Change
+<!-- Pick one or two. -->
 
-What type of change does this PR introduce?
+- [ ] 📓 New notebook or lesson
+- [ ] 🐛 Bug fix (broken code, typo, dead link)
+- [ ] 📚 Docs (README, MDX, comments)
+- [ ] ✨ Improvement to existing notebook
+- [ ] 🌍 Translation
+- [ ] 🔧 Build / config / CI
 
-- [ ] 📓 **New Notebook** (new learning content/tutorial)
-- [ ] 🐛 **Bug Fix** (fixes an error in existing notebook/code)
-- [ ] 📚 **Documentation** (updates to README, guides, or explanations)
-- [ ] ♻️ **Refactor** (code improvement without changing functionality)
-- [ ] ✨ **Enhancement** (improves existing notebook or adds features)
-- [ ] 🔧 **Configuration** (updates to requirements.txt, setup, etc.)
-- [ ] 🧪 **Exercise/Solution** (adds practice problems or solutions)
+## Linked issue
 
-## 📍 Location
+<!-- "Fixes #123" or leave blank for small fixes. -->
 
-**Phase**: [e.g., 5-neural-networks]
-**Files Changed**: 
-- [e.g., 5-neural-networks/06_advanced_attention.ipynb]
-- [e.g., 5-neural-networks/README.md]
+## How I tested this
 
-## 🎓 For New Notebooks
+<!-- For code: did cells execute top-to-bottom? Which Python version? Any data/keys needed? -->
+<!-- For docs: did you check the rendered output on the site? -->
 
-If this PR adds a new notebook, please confirm:
+## Checklist
 
-### Learning Objectives
-What will learners achieve after completing this notebook?
+- [ ] Notebook outputs cleared (unless the output is the lesson)
+- [ ] If I edited `jupyter-notebooks/`, I ran `python3 scripts/sync_notebooks.py`
+- [ ] If I added a phase or top-level route, I ran `python3 scripts/generate_meta_sequential.py`
+- [ ] Any new dependencies added to `pyproject.toml` (and the relevant `requirements-*.txt`)
+- [ ] Links work; relative links to other phases use the live-site URL or the `jupyter-notebooks/` path
 
-- [ ] Learning objective 1
-- [ ] Learning objective 2
-- [ ] Learning objective 3
+## Notes for reviewers
 
-### Prerequisites
-What should learners know or complete before this notebook?
-
-- Prior knowledge: [e.g., PyTorch basics, attention mechanism]
-- Previous notebooks: [e.g., 06_attention_mechanism.ipynb]
-
-### Content Structure
-Does the notebook include:
-
-- [ ] Clear introduction and learning objectives
-- [ ] Theory/concepts explanation
-- [ ] Well-commented code implementation
-- [ ] Practical exercises
-- [ ] Key takeaways
-- [ ] Next steps and references
-
-## 🧪 Testing
-
-How have you verified your changes work correctly?
-
-### For Code/Notebooks:
-- [ ] All cells execute without errors (Restart Kernel & Run All)
-- [ ] Outputs are included and demonstrate the concepts
-- [ ] Code follows repository style guidelines
-- [ ] Dependencies are specified (in notebook or requirements.txt)
-- [ ] Tested with Python version: [e.g., 3.11.5]
-
-### For Documentation:
-- [ ] Links work correctly
-- [ ] Formatting renders properly
-- [ ] Information is accurate and clear
-
-## 📦 Dependencies
-
-Does this PR add new dependencies?
-
-- [ ] No new dependencies
-- [ ] Yes, added to requirements.txt: [list packages]
-- [ ] Yes, specified in notebook setup section
-
-**New packages** (if any):
-```
-package-name>=version
-```
-
-## 📸 Screenshots (if applicable)
-
-For visualizations, outputs, or UI changes, include screenshots:
-
-[Add screenshots here]
-
-## 📚 Documentation Updates
-
-Have you updated relevant documentation?
-
-- [ ] Updated phase README.md (if new notebook)
-- [ ] Updated main checklist.md (if new notebook)
-- [ ] Updated setup.md (if new dependencies)
-- [ ] No documentation updates needed
-
-## ✅ Checklist
-
-Please confirm you've completed the following:
-
-### Code Quality
-- [ ] Code is well-commented and explains the "why", not just "what"
-- [ ] Functions include docstrings with descriptions, args, and returns
-- [ ] Type hints are used where appropriate
-- [ ] Variable names are descriptive and follow Python conventions
-- [ ] Code prioritizes clarity over cleverness (educational focus)
-
-### Educational Standards
-- [ ] Explanations are beginner-friendly and avoid unnecessary jargon
-- [ ] Concepts are explained before implementation
-- [ ] Real-world applications or use cases are mentioned
-- [ ] Common pitfalls or errors are addressed
-- [ ] Exercises help reinforce learning
-
-### Style Guidelines
-- [ ] Follows repository's notebook structure template
-- [ ] Uses consistent formatting (Markdown headers, code style)
-- [ ] Includes proper citations for papers/resources used
-- [ ] Math equations use proper LaTeX formatting (if applicable)
-
-### Commits
-- [ ] Commit messages follow Conventional Commits format
-  - `feat:` for new features/notebooks
-  - `fix:` for bug fixes
-  - `docs:` for documentation changes
-  - `refactor:` for code improvements
-- [ ] Commits are atomic and well-described
-
-## 🎨 Educational Philosophy Alignment
-
-Does this PR align with our learning principles?
-
-- [ ] **Learning Over Brevity**: Prioritizes thorough explanations
-- [ ] **Practical Over Theoretical**: Includes real-world applications
-- [ ] **Modern Best Practices**: Uses current tools/techniques (December 2025)
-- [ ] **Progressive Complexity**: Builds on previous knowledge appropriately
-- [ ] **MDTP Framework**: Supports mastery through deliberate practice
-
-## 🔍 Reviewer Focus Areas
-
-What should reviewers pay special attention to?
-
-- [ ] Accuracy of technical content
-- [ ] Clarity of explanations
-- [ ] Code correctness and efficiency
-- [ ] Pedagogical approach
-- [ ] [Other specific areas]
-
-## 💡 Notes for Reviewers
-
-Any additional context or explanations:
-
-[Add any notes, concerns, or questions for reviewers]
-
-## 📖 References
-
-List any papers, articles, or resources used:
-
-1. [Paper/Article Title](URL) - Brief description
-2. [Documentation](URL)
-
-## 🚀 Next Steps (Optional)
-
-Are there follow-up tasks or related work?
-
-- [ ] Future notebook on [related topic]
-- [ ] Additional exercises to add later
-- [ ] Advanced version of this content
-- [ ] [Other planned work]
-
----
-
-## For Maintainers
-
-**Review Priority**:
-- [ ] High (fixes critical bug or urgent content)
-- [ ] Medium (adds valuable content)
-- [ ] Low (minor improvement or nice-to-have)
-
-**Merge Checklist** (maintainer use):
-- [ ] Code reviewed and approved
-- [ ] All CI checks pass
-- [ ] Documentation is complete
-- [ ] Fits well in learning progression
-- [ ] Ready to merge
-
----
-
-**Thank you for contributing to AI/ML education!** 🎓
-
-Your contribution helps make machine learning more accessible to learners worldwide.
+<!-- Anything unusual, follow-ups, or specific things to double-check. -->

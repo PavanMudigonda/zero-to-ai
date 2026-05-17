@@ -11,5 +11,5 @@ export default {
   "Pandas-101-Pandas-Series-and-Dataframes": "10. Pandas 101 Pandas Series And Dataframes",
   "Pandas-101-Reading-in-Files": "11. Pandas 101 Reading In Files",
   "Pandas-101-Visualizing-Data-in-Pandas": "12. Pandas 101 Visualizing Data In Pandas",
-  "pandas-numpy-lessons": "13. Pandas Numpy Lessons",
+  "pandas-numpy-lessons": "13. Pandas NumPy Lessons",
 }

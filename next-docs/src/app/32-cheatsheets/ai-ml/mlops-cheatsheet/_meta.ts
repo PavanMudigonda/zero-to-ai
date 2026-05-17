@@ -1,3 +1,3 @@
 export default {
-  "mlops-cheatsheet": "Overview",
+  "mlops-cheatsheet": "1. MLOps Cheatsheet",
 }

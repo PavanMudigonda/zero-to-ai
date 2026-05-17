@@ -1,3 +1,3 @@
 export default {
-  numpy: "1. Numpy",
+  numpy: "1. NumPy",
 }

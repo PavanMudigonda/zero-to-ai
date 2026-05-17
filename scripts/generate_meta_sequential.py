@@ -9,12 +9,67 @@ def get_sort_key(name):
         return (int(match.group(1)), name)
     return (float('inf'), name)
 
+# Words whose capitalization differs from `.capitalize()`. Keys are lowercase.
+TITLE_OVERRIDES = {
+    'ai': 'AI',
+    'ml': 'ML',
+    'llm': 'LLM',
+    'llms': 'LLMs',
+    'rag': 'RAG',
+    'mlops': 'MLOps',
+    'nlp': 'NLP',
+    'cv': 'CV',
+    'gan': 'GAN',
+    'vae': 'VAE',
+    'api': 'API',
+    'apis': 'APIs',
+    'sdk': 'SDK',
+    'mcp': 'MCP',
+    'tts': 'TTS',
+    'rl': 'RL',
+    'lora': 'LoRA',
+    'qlora': 'QLoRA',
+    'peft': 'PEFT',
+    'finetuning': 'Fine-tuning',
+    'redteaming': 'Red Teaming',
+    'langchain': 'LangChain',
+    'llamaindex': 'LlamaIndex',
+    'graphrag': 'GraphRAG',
+    'hyde': 'HyDE',
+    'gpt': 'GPT',
+    'vscode': 'VS Code',
+    'pytorch': 'PyTorch',
+    'tensorflow': 'TensorFlow',
+    'numpy': 'NumPy',
+    'pandas': 'Pandas',
+    'huggingface': 'Hugging Face',
+    'openai': 'OpenAI',
+}
+
+# Multi-word phrase overrides applied after word-level cleanup. Map normalized
+# space-joined output to its preferred display form.
+PHRASE_OVERRIDES = {
+    'Debugging Troubleshooting': 'Debugging & Troubleshooting',
+    'AI Safety Red Teaming': 'AI Safety & Red Teaming',
+    'AI Hardware LLM Validation': 'AI Hardware & LLM Validation',
+    'Low Code AI Tools': 'Low-Code AI Tools',
+    'Real Time Streaming': 'Real-Time Streaming',
+    'Time Series Analysis': 'Time-Series Analysis',
+    'AI Powered Dev Tools': 'AI-Powered Dev Tools',
+}
+
 def clean_title(name):
     name = re.sub(r'^\d+[_-]', '', name)
     name = name.replace('_', ' ').replace('-', ' ')
-    name = ' '.join(word.capitalize() for word in name.split())
-    name = name.replace('Specializations ', '')
-    return name
+    words = name.split()
+    out = []
+    for w in words:
+        lw = w.lower()
+        out.append(TITLE_OVERRIDES.get(lw, w.capitalize()))
+    cleaned = ' '.join(out)
+    cleaned = cleaned.replace('Specializations ', '')
+    cleaned = PHRASE_OVERRIDES.get(cleaned, cleaned)
+    return cleaned
 
 def has_valid_page(directory):
     for root, dirs, files in os.walk(directory):
@@ -32,7 +87,8 @@ def main():
     
     for root, dirs, files in os.walk(app_dir):
         all_items = sorted(dirs + files, key=get_sort_key)
-        
+        is_root = Path(root) == app_dir
+
         valid_items = []
         for item in all_items:
             if item.startswith('.') or item.startswith('_') or item in ['layout.tsx', 'globals.css', 'favicon.ico', 'next-env.d.ts']:
@@ -53,6 +109,10 @@ def main():
                 
             if orig_name in ['layout', 'demo', 'favicon']:
                 continue
+
+            # Skip dev-only routes from the curriculum listing.
+            if is_root and orig_name == 'app':
+                continue
                 
             if orig_name == 'page':
                 continue
@@ -61,9 +121,7 @@ def main():
             
         if not valid_items:
             continue
-            
-        is_root = Path(root) == app_dir
-            
+
         meta_dict = {}
         for index, (item, route_name) in enumerate(valid_items, 1):
             cleaned = clean_title(route_name)

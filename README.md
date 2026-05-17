@@ -8,9 +8,9 @@ Zero to AI is a free, open-source AI course and machine learning curriculum for 
 
 Use the live site for the guided learning experience at [zero-to-ai.dev](https://zero-to-ai.dev/), and use this GitHub repo as the source curriculum, notebook library, and contribution hub.
 
-Quick links: [Website](https://zero-to-ai.dev/) • [Study Guide](https://zero-to-ai.dev/MASTER_STUDY_GUIDE.html) • [Curriculum Start](https://zero-to-ai.dev/curriculum/00-course-setup/README.html) • [GitHub Repo](https://github.com/PavanMudigonda/zero-to-ai)
+Quick links: [Website](https://zero-to-ai.dev/) • [Course Setup](https://zero-to-ai.dev/00-course-setup) • [Glossary](https://zero-to-ai.dev/23-glossary/01_GLOSSARY) • [GitHub Repo](https://github.com/PavanMudigonda/zero-to-ai)
 
-[![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/PavanMudigonda/zero-to-ai.svg)](https://github.com/PavanMudigonda/zero-to-ai/blob/main/LICENSE)
 [![GitHub contributors](https://img.shields.io/github/contributors/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/graphs/contributors/)
 [![GitHub issues](https://img.shields.io/github/issues/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/issues/)
 [![GitHub pull-requests](https://img.shields.io/github/issues-pr/PavanMudigonda/zero-to-ai.svg)](https://GitHub.com/PavanMudigonda/zero-to-ai/pulls/)
@@ -58,14 +58,38 @@ This repository is best used as a guided curriculum, not as a directory to brows
 
 ## ✅ Start Here
 
-If you are new to the repo, use this order:
+The canonical reading experience is the live site at [zero-to-ai.dev](https://zero-to-ai.dev/). The GitHub repo is the source of the curriculum (notebooks + MDX).
 
-1. Read [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose your track.
-2. Use [00-course-setup/README.md](00-course-setup/README.md) to get your environment working.
-3. Read [23-glossary/01_GLOSSARY.md](23-glossary/01_GLOSSARY.md) once before diving into the curriculum.
-4. Use [docs/checklist.md](docs/checklist.md) to track progress after you start.
+**Zero install path:** every notebook can run **directly in your browser** on the live site via Pyodide — no Python install, no credit card, works on a school laptop or a phone. Just open a phase and run the cells.
 
-If you are completely new to Python, begin with [01-python/README.md](01-python/README.md) before Phase 2.
+If you are new, use this order:
+
+1. Open [zero-to-ai.dev/00-course-setup](https://zero-to-ai.dev/00-course-setup) for orientation.
+2. Skim [zero-to-ai.dev/23-glossary/01_GLOSSARY](https://zero-to-ai.dev/23-glossary/01_GLOSSARY) once before diving in.
+3. Pick a path below, then a phase from the site sidebar.
+
+If you are completely new to Python, begin with [zero-to-ai.dev/01-python](https://zero-to-ai.dev/01-python).
+
+---
+
+## 🌍 Choose Your Path
+
+Don't try to read all 33 phases. Pick one of these tracks based on your goal:
+
+### "I just want to use LLMs like ChatGPT effectively" — 4-6 weeks
+[01-python](https://zero-to-ai.dev/01-python) → [04-token](https://zero-to-ai.dev/04-token) → [11-prompt-engineering](https://zero-to-ai.dev/11-prompt-engineering) → [05-embeddings](https://zero-to-ai.dev/05-embeddings) → [08-rag](https://zero-to-ai.dev/08-rag) → [15-ai-agents](https://zero-to-ai.dev/15-ai-agents)
+
+### "I want a data science / ML job" — 4-6 months
+[01-python](https://zero-to-ai.dev/01-python) → [02-data-science](https://zero-to-ai.dev/02-data-science) → [03-maths](https://zero-to-ai.dev/03-maths) → [06-neural-networks](https://zero-to-ai.dev/06-neural-networks) → [09-mlops](https://zero-to-ai.dev/09-mlops) → [28-practical-data-science](https://zero-to-ai.dev/28-practical-data-science) → [16-model-evaluation](https://zero-to-ai.dev/16-model-evaluation)
+
+### "I want to build production AI apps" — 3-4 months
+[11-prompt-engineering](https://zero-to-ai.dev/11-prompt-engineering) → [07-vector-databases](https://zero-to-ai.dev/07-vector-databases) → [08-rag](https://zero-to-ai.dev/08-rag) → [15-ai-agents](https://zero-to-ai.dev/15-ai-agents) → [14-local-llms](https://zero-to-ai.dev/14-local-llms) → [12-llm-finetuning](https://zero-to-ai.dev/12-llm-finetuning) → [09-mlops](https://zero-to-ai.dev/09-mlops)
+
+### "I'm a complete beginner, where do I start?" — start small
+[01-python](https://zero-to-ai.dev/01-python) (run cells in browser on the live site, no install). When you finish Python, come back and pick one of the tracks above.
+
+### "I have a slow laptop / limited internet" — works for you too
+Run everything on [zero-to-ai.dev](https://zero-to-ai.dev/) directly. No GPU, no install, no Anaconda download. The browser does the work. For heavier notebooks (fine-tuning, large models), open them in **Google Colab** (most globally accessible free GPU).
 
 ---
 
@@ -74,10 +98,10 @@ If you are completely new to Python, begin with [01-python/README.md](01-python/
 This comprehensive AI/ML curriculum uses progressive numbered modules covering everything from Python fundamentals to cutting-edge AI systems and advanced research topics. Each module includes hands-on notebooks, projects, and practical applications.
 
 Important context for learners:
-- `docs/MASTER_STUDY_GUIDE.md` is the canonical navigation document.
-- `docs/checklist.md` is a progress tracker, not the primary explanation of what to study first.
+- The live site at [zero-to-ai.dev](https://zero-to-ai.dev/) is the canonical guided reading experience.
+- Source content lives in two parallel trees: `next-docs/src/app/<phase>/` (MDX, what the site renders) and `jupyter-notebooks/<phase>/` (executable notebooks).
 - Not every late-stage phase is equally complete yet. Phases such as `30-inference-optimization/` are still actively being built out.
-- Generated folders such as `site/` and `jupyter_execute/` are build artifacts, not the source curriculum.
+- `next-docs/.next/`, `next-docs/out/`, and other generated folders are build artifacts, not the source curriculum.
 
 **Don't forget to:**
 - ⭐ [Star this repo](https://docs.github.com/en/get-started/exploring-projects-on-github/saving-repositories-with-stars) to find it easily later
@@ -89,20 +113,19 @@ Important context for learners:
 
 For most learners, the fastest low-friction path is:
 
-1. Install dependencies.
-2. Open [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md).
-3. Pick one track.
-4. Open `00_START_HERE.ipynb` inside each phase you study.
+1. Install dependencies (see options below).
+2. Open the site at [zero-to-ai.dev](https://zero-to-ai.dev/) and pick a phase from the sidebar.
+3. Open the matching notebook under `jupyter-notebooks/<phase>/` and work through it.
 
-### Prerequisites
-- Basic Python knowledge (or start with [01-python/](01-python/))
-- High school mathematics
-- A computer (GPU helpful but not required initially)
-- If you are buying a new device for this course, prioritize RAM and portability over an expensive GPU at the beginning:
-  - MacBook Air (16 GB) - a practical default for most learners
-  - MacBook Pro (16 GB or more) - useful if you expect heavier local workloads
-- Use a Google Colab, Kaggle, or SageMaker Studio Lab account alongside your local machine when a notebook or phase needs more compute
-- 10-15 hours/week
+### What You Actually Need
+- Basic Python knowledge (or start with [zero-to-ai.dev/01-python](https://zero-to-ai.dev/01-python)).
+- High school maths is enough for most of the course. Phases 3, 24, 25, and 27 go deeper if you want.
+- **Compute** — pick whichever applies:
+  - **No laptop or low-spec laptop?** Run notebooks in the browser on [zero-to-ai.dev](https://zero-to-ai.dev/). Works on Chromebooks and phones. No GPU. No install.
+  - **8 GB RAM, any OS?** Fine for Phases 1-11 locally. Use Colab/Kaggle for the heavier later phases.
+  - **16 GB+ RAM, any OS?** Comfortable for most of the curriculum locally. Windows, macOS, and Linux all work — pyproject.toml documents the platform-specific install notes.
+  - **GPU?** Optional. Needed only for local fine-tuning (Phases 12, 14, 24) and large inference (Phase 30). Free cloud GPUs cover those.
+- **Time:** 3-5 hours/week if you're learning casually, 10-15 hours/week if you're studying for a job.
 
 ### Installation (Choose One)
 
@@ -146,96 +169,111 @@ jupyter notebook
 
 #### Option 3: Cloud (No Installation!)
 
-- **GitHub Codespaces**: Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai) - fully automated, all dependencies install via `install_dependencies.sh`
+Listed by **global accessibility** — the higher entries are easiest to use no matter where you are.
 
-- **Google Colab**: Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main) - then run this in the first cell:
+- **Run on the live site** (most accessible — no account, no credit card, no install, works on phones): Open any phase on [zero-to-ai.dev](https://zero-to-ai.dev/) and run the cells in-browser via Pyodide. No GPU; not every Python package has a Pyodide wheel. Best for early phases (Python, data science, prompt engineering) and any notebook that doesn't need PyTorch on a GPU.
+
+- **Google Colab** (free, works in most countries, no credit card): Click [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PavanMudigonda/zero-to-ai/blob/main) - then run this in the first cell:
   ```python
   !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/colab_requirements.txt
   ```
+  Free GPU is available but rate-limited.
 
-- **Kaggle**: Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?logo=kaggle)](https://www.kaggle.com/code) and create a **New Notebook**, then enable **Internet** in notebook settings and run:
+- **Kaggle** (free GPU, requires phone verification): Click [![Open in Kaggle](https://img.shields.io/badge/Open%20in-Kaggle-20BEFF?logo=kaggle)](https://www.kaggle.com/code) and create a **New Notebook**, enable **Internet** in notebook settings, then run:
   ```python
   !git clone https://github.com/PavanMudigonda/zero-to-ai.git
   %cd zero-to-ai
   !pip install -q -r https://raw.githubusercontent.com/PavanMudigonda/zero-to-ai/main/kaggle_requirements.txt
   ```
+  Phone verification is restricted in some regions — try Colab first if Kaggle won't verify your number.
 
-- **SageMaker Studio Lab** (free): Click [![Open in SageMaker Studio Lab](https://img.shields.io/badge/Open%20in-SageMaker%20Studio%20Lab-orange?logo=amazon-aws)](https://studiolab.sagemaker.aws/import/github/PavanMudigonda/zero-to-ai) - sign up for a free account at [studiolab.sagemaker.aws](https://studiolab.sagemaker.aws/), then clone the repo and run:
+- **GitHub Codespaces** (free monthly hours, requires GitHub account): Click [![Open in Codespaces](https://img.shields.io/badge/Open%20in-Codespaces-black?logo=github)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=PavanMudigonda/zero-to-ai). All dependencies install via `install_dependencies.sh`. No GPU on the free plan.
+
+- **Replit** (free tier, browser-based): Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai). Packages auto-install on first run via `requirements-replit.txt`.
+
+- **SageMaker Studio Lab** (free, US-friendly verification): Click [![Open in SageMaker Studio Lab](https://img.shields.io/badge/Open%20in-SageMaker%20Studio%20Lab-orange?logo=amazon-aws)](https://studiolab.sagemaker.aws/import/github/PavanMudigonda/zero-to-ai), sign up at [studiolab.sagemaker.aws](https://studiolab.sagemaker.aws/), then run:
   ```python
   !pip install -q -r requirements.txt
   ```
+  Account approval can take days and is harder outside the US/EU — use Colab first if you need to start today.
 
-- **Replit**: Click [![Open in Replit](https://img.shields.io/badge/Open%20in-Replit-blue?logo=replit)](https://replit.com/github/PavanMudigonda/zero-to-ai) - packages auto-install on first run via `requirements-replit.txt`
-
-- **github.dev**: Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai) - browser-based editor only (no execution)
+- **github.dev** (browser editor, no execution): Click [![github.dev](https://img.shields.io/badge/Open%20in-github.dev-black?logo=github)](https://github.dev/PavanMudigonda/zero-to-ai). Good for reading and writing code, not running it.
 
 ---
 
 ## 📂 Repository Structure
 
+The curriculum lives in two parallel trees, one numbered phase per topic:
+
 ```
 zero-to-ai/
-├── 📘 00-course-setup/        ⭐ START HERE - Setup & orientation
-├── 📚 01-python/                Python fundamentals (if needed)
-├── 📊 02-data-science/          NumPy, Pandas, Scikit-learn (278 notebooks!)
-├── 🔢 03-maths/                 Linear Algebra, Calculus, Statistics (40+ notebooks)
-│   ├── foundational/           Core math topics
-│   ├── mml-book/              MML textbook implementation
-│   ├── islp-book/             Statistical learning with Python
-│   ├── cs229-course/          Stanford ML course
-│   └── advanced/ 🆕           Learning theory, advanced optimization, Bayesian non-parametrics
-├── 🔤 04-token/                 Tokenization (tiktoken, sentencepiece, HF)
-├── 🎯 05-embeddings/            Text, multimodal, and retrieval embeddings
-├── 🧠 06-neural-networks/       Deep learning from scratch to Transformers
-├── 💾 07-vector-databases/      Chroma, Qdrant, Weaviate, Milvus, pgvector
-├── 🔍 08-rag/                   Retrieval-Augmented Generation
-├── 🚀 09-mlops/                 Deployment, monitoring, optimization
-├── 🎨 10-specializations/       AI Agents, Computer Vision, NLP
-├── 💬 11-prompt-engineering/   Advanced prompting, context engineering, reasoning patterns
-├── ⚙️ 12-llm-finetuning/      LoRA, QLoRA, PEFT fine-tuning
-├── 🎭 13-multimodal/           Vision, audio, video, realtime multimodal AI
-├── 🏠 14-local-llms/           Ollama, llama.cpp, MLX, local serving
-├── 🤖 15-ai-agents/            Function calling, MCP, OpenAI Agents SDK, LangGraph
-├── 📊 16-model-evaluation/     Metrics, fairness, LLM-as-judge, agent evaluation
-├── 🐛 17-debugging-troubleshooting/ Profiling, data issues, debugging
-├── 🎨 18-low-code-ai-tools/    Gradio, Streamlit, Flowise, Langflow, Dify, AutoML
-├── 🔒 19-ai-safety-redteaming/ Security, bias, red teaming
-├── ⚡ 20-real-time-streaming/  Streaming AI, WebSockets, WebRTC, realtime voice
-├── ❓ 21-quizzes/              Questions to test your knowledge
-├── 🧪 22-references/           Resources, papers, external materials
-├── 📖 23-glossary/             AI/ML terminology & concepts
-├── 🔬 24-advanced-deep-learning/ 🆕 **39 notebooks**: GANs, VAEs, NeRF, Diffusion, BNNs
-├── 🎲 25-reinforcement-learning/ 🆕 **6 notebooks**: MDP, Q-Learning, Policy Gradients, Actor-Critic
-├── 📈 26-time-series-analysis/ 🆕 **6 notebooks**: ARIMA, Prophet, LSTM, Transformer forecasting
-├── 📊 27-causal-inference/ 🆕 **6 notebooks**: DAGs, Experimental Design, Observational Methods, Quasi-Experimental
-├── 🔨 28-practical-data-science/ Interview prep & hands-on practice
-├── 🔧 29-ai-hardware-llm-validation/ 🆕 **9 guides + 8 labs**: Silicon validation for AMD, NVIDIA, Qualcomm, TPU, Apple Silicon
-├── 🚄 30-inference-optimization/ 🆕 KV cache, vLLM, TensorRT-LLM, quantization, speculative decoding
-├── 🛠️ 31-ai-powered-dev-tools/ 🆕 VS Code AI setup, MCP deep dive, custom instructions, tool workflows
-├── docs/
-│   ├── ✅ checklist.md             Your complete learning roadmap
-│   ├── 📋 setup.md                 Detailed installation guide
-│   ├── 📖 MASTER_STUDY_GUIDE.md    Phase-by-phase study guide & track picker
-│   ├── 📚 REFERENCES.md            Videos, repos, courses, papers by phase
-│   └── !! COMPARISON_MATRICES.md   Comparison of LLM Models
+├── next-docs/                          # Next.js (Nextra) docs site → published to zero-to-ai.dev
+│   ├── src/app/<phase>/page.mdx        # MDX pages, one per phase + per lesson
+│   ├── next.config.mjs
+│   └── package.json
+├── jupyter-notebooks/                  # Executable curriculum content
+│   ├── 00-course-setup/                ⭐ Setup & orientation
+│   ├── 01-python/                       Python fundamentals
+│   ├── 02-data-science/                 NumPy, Pandas, Scikit-learn (278+ notebooks)
+│   ├── 03-maths/                        Linear algebra, calculus, statistics (40+ notebooks)
+│   │   ├── foundational/
+│   │   ├── mml-book/
+│   │   ├── islp-book/
+│   │   ├── cs229-course/
+│   │   └── advanced/
+│   ├── 04-token/                        Tokenization (tiktoken, sentencepiece, HF)
+│   ├── 05-embeddings/                   Text, multimodal, retrieval embeddings
+│   ├── 06-neural-networks/              Deep learning from scratch to Transformers
+│   ├── 07-vector-databases/             Chroma, Qdrant, Weaviate, Milvus, pgvector
+│   ├── 08-rag/                          Retrieval-Augmented Generation
+│   ├── 09-mlops/                        Deployment, monitoring, optimization
+│   ├── 10-specializations/              AI Agents, Computer Vision, NLP
+│   ├── 11-prompt-engineering/           Advanced prompting, context engineering
+│   ├── 12-llm-finetuning/               LoRA, QLoRA, PEFT fine-tuning
+│   ├── 13-multimodal/                   Vision, audio, video, realtime multimodal AI
+│   ├── 14-local-llms/                   Ollama, llama.cpp, MLX, local serving
+│   ├── 15-ai-agents/                    Function calling, MCP, Agents SDK, LangGraph
+│   ├── 16-model-evaluation/             Metrics, fairness, LLM-as-judge
+│   ├── 17-debugging-troubleshooting/    Profiling, data issues, debugging
+│   ├── 18-low-code-ai-tools/            Gradio, Streamlit, Flowise, Langflow, AutoML
+│   ├── 19-ai-safety-redteaming/         Security, bias, red teaming
+│   ├── 20-real-time-streaming/          Streaming AI, WebSockets, WebRTC
+│   ├── 21-quizzes/                      Self-check questions
+│   ├── 22-references/                   Papers, repos, external materials
+│   ├── 23-glossary/                     AI/ML terminology & concepts
+│   ├── 24-advanced-deep-learning/       GANs, VAEs, NeRF, Diffusion, BNNs
+│   ├── 25-reinforcement-learning/       MDP, Q-Learning, Policy Gradients, Actor-Critic
+│   ├── 26-time-series-analysis/         ARIMA, Prophet, LSTM, Transformer forecasting
+│   ├── 27-causal-inference/             DAGs, Experimental Design, Observational Methods
+│   ├── 28-practical-data-science/       Interview prep & hands-on practice
+│   ├── 29-ai-hardware-llm-validation/   Silicon validation for AMD, NVIDIA, Qualcomm, TPU, Apple Silicon
+│   ├── 30-inference-optimization/       KV cache, vLLM, TensorRT-LLM, quantization
+│   ├── 31-ai-powered-dev-tools/         VS Code AI setup, MCP deep dive, tool workflows
+│   ├── 32-cheatsheets/                  Quick references across tooling/cloud/AI/ML
+│   └── 33-roadmaps/                     Suggested learning roadmaps
+├── scripts/                            # Utility scripts (notebook sync, MCP server, scrapers)
+├── pyproject.toml                      # Primary Python deps (uv-managed)
+├── requirements*.txt                   # Per-target deps (Colab, Kaggle, Replit, AI dev tools)
+├── environment.yml                     # Conda alternative
+└── install_dependencies.sh             # One-shot installer (UV-based)
 ```
 
-**💡 Pro Tip**: Start with `00_START_HERE.ipynb` in each section for guided learning!
+Each phase under `next-docs/src/app/` mirrors the same phase under `jupyter-notebooks/`. The site renders MDX; the notebooks are runnable.
 
 ## 📌 Completion Notes
 
 - Mature core path: `02-data-science/` through `19-ai-safety-redteaming/`
 - Strong advanced depth: `24-advanced-deep-learning/`, `28-practical-data-science/`
 - Still being expanded: `20-real-time-streaming/`, `21-quizzes/`, `22-references/`, `30-inference-optimization/`
-- Build and publishing output: `site/`, `jupyter_execute/`, `docs/generated/`
+- Build artifacts (not source): `next-docs/.next/`, `next-docs/out/`, `node_modules/`, `.venv/`
 
 ## What Comes Next
 
-Once you have oriented yourself in the repo:
+Once you have oriented yourself:
 
-1. Use [docs/MASTER_STUDY_GUIDE.md](docs/MASTER_STUDY_GUIDE.md) to choose a realistic track instead of trying to do everything at once.
-2. Complete [00-course-setup/README.md](00-course-setup/README.md), then start the first phase in your track.
-3. Open `00_START_HERE.ipynb` inside each phase you study and use [docs/checklist.md](docs/checklist.md) only as a progress tracker.
+1. Open the live site at [zero-to-ai.dev](https://zero-to-ai.dev/) and pick a phase from the sidebar.
+2. Open the matching notebook under `jupyter-notebooks/<phase>/` to run it locally.
+3. Pair the two: read the explanation on the site, execute the notebook beside it.
 
 ---
 
@@ -259,7 +297,9 @@ We welcome contributions from the community! Here's how you can help:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for detailed guidelines.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full guide, including how to keep `jupyter-notebooks/` and `next-docs/` in sync, and a note on translations. For larger changes, please [open an issue](https://github.com/PavanMudigonda/zero-to-ai/issues) first to discuss the approach.
+
+This project follows a [Code of Conduct](CODE_OF_CONDUCT.md). By participating you agree to uphold it.
 
 ---
 
@@ -281,7 +321,7 @@ This learning path is inspired by and integrates content from:
 
 ## 📜 License
 
-This project is licensed under the MIT License - see the [LICENSE](docs/LICENSE.md) file for details.
+This project is licensed under the MIT License.
 
 ---
 

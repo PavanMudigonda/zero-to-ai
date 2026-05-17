@@ -1,6 +1,6 @@
 import nextra from 'nextra';
 import remarkNormalizeDocLinks from './remark-normalize-doc-links.mjs';
-import remarkStripMissingImages from './remark-strip-missing-images.mjs';
+import remarkFixMissingRefs from './remark-fix-missing-refs.mjs';
 import { existsSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
@@ -8,7 +8,7 @@ const withNextra = nextra({
   latex: true,
   defaultShowCopyCode: true,
   mdxOptions: {
-    remarkPlugins: [remarkNormalizeDocLinks, remarkStripMissingImages]
+    remarkPlugins: [remarkNormalizeDocLinks, remarkFixMissingRefs]
   }
 });
 

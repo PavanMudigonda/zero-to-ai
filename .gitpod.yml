@@ -9,7 +9,7 @@ tasks:
     command: |
       echo "🚀 Zero to AI environment ready!"
       echo "📓 Start Jupyter: jupyter notebook"
-      echo "📊 View progress: python scripts/view_progress.py"
+      echo "📊 View progress: python scripts/progress_tracker.py"
 
 ports:
   - port: 8888

@@ -3,10 +3,10 @@ export default {
   "02_gradient_descent": "2. Gradient Descent",
   "03_backpropagation": "3. Backpropagation",
   "04_backprop_calculus": "4. Backprop Calculus",
-  "05_gpt_llms": "5. Gpt Llms",
+  "05_gpt_llms": "5. GPT LLMs",
   "06_attention_transformers": "6. Attention Transformers",
   "07_attention_deep_dive": "7. Attention Deep Dive",
-  "08_how_gpt_stores_facts": "8. How Gpt Stores Facts",
+  "08_how_gpt_stores_facts": "8. How GPT Stores Facts",
   "09_diffusion_models": "9. Diffusion Models",
   "neural-networks": "Overview",
 }
