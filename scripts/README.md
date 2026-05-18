@@ -8,6 +8,6 @@ If you are here to learn AI/ML, you usually do not need anything in this directo
 
 ## What Comes Next
 
-If you are a learner, go back to [README.md](../README.md) or [docs/MASTER_STUDY_GUIDE.md](../docs/MASTER_STUDY_GUIDE.md).
+If you are a learner, go back to [README.md](../README.md) and continue from the main curriculum paths there.
 
 If you are maintaining the repo, use the scripts here alongside the relevant build and publishing documentation instead of treating this folder as standalone curriculum content.

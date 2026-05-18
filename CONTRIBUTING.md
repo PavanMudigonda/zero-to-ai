@@ -39,6 +39,12 @@ cd zero-to-ai
 
 If you only need to edit text or docs, you can skip the install — Markdown and MDX changes don't need a Python environment.
 
+## Tooling Config
+
+The shared MCP configuration for this repository lives in `.mcp.json` at the repo root.
+
+If you keep a local `.vscode/mcp.json`, treat it as editor-specific convenience config. It is ignored by git and should not become the source of truth for repository tooling.
+
 ## Making a Change
 
 1. Create a branch: `git checkout -b fix/<short-description>`.
