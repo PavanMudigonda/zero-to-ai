@@ -128,7 +128,7 @@ export const metadata: Metadata = {
   creator: 'Zero to AI Project',
   publisher: 'Zero to AI',
   alternates: {
-    canonical: '/',
+    canonical: './',
   },
   robots: {
     index: true,
