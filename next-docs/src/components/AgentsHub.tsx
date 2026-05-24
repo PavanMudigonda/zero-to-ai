@@ -252,18 +252,18 @@ export default function AgentsHub() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-[linear-gradient(180deg,rgba(16,185,129,0.08),rgba(15,23,42,0.02))] p-6 shadow-sm dark:border-slate-800 dark:bg-[linear-gradient(180deg,rgba(52,211,153,0.12),rgba(15,23,42,0.30))]">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-400">What comes next</p>
+        <div className="rounded-3xl border border-slate-300 bg-[linear-gradient(180deg,#ecfdf5,#d9fbe8)] p-6 text-slate-950 shadow-sm dark:border-slate-700 dark:bg-[linear-gradient(180deg,rgba(20,83,45,0.92),rgba(15,23,42,0.92))] dark:text-slate-100">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">What comes next</p>
           <ul className="mt-5 space-y-3 text-sm">
             {nextSteps.map((link) => (
               <li key={link.href}>
-                <a href={link.href} className="font-medium text-slate-900 underline decoration-slate-300 underline-offset-4 hover:text-emerald-700 dark:text-white dark:decoration-slate-700 dark:hover:text-emerald-300">
+                <a href={link.href} className="font-medium !text-slate-950 underline decoration-slate-700 underline-offset-4 hover:!text-emerald-700 dark:!text-white dark:decoration-slate-400 dark:hover:!text-emerald-300">
                   {link.label}
                 </a>
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-sm leading-7 text-slate-600 dark:text-slate-300">
+          <p className="mt-6 text-sm leading-7 !text-slate-700 dark:!text-slate-200">
             Treat this phase as part of the production sequence in the repo: build one useful agent, inspect traces, evaluate trajectories, and then carry those lessons into safety and debugging.
           </p>
         </div>
