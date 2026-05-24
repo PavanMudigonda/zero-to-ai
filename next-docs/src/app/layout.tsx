@@ -18,16 +18,88 @@ type NavNode = {
   children: Map<string, NavNode>;
 };
 
+const TITLE_OVERRIDES: Record<string, string> = {
+  ai: 'AI',
+  ml: 'ML',
+  llm: 'LLM',
+  llms: 'LLMs',
+  rag: 'RAG',
+  mlops: 'MLOps',
+  nlp: 'NLP',
+  api: 'API',
+  apis: 'APIs',
+  sdk: 'SDK',
+  mcp: 'MCP',
+  rl: 'RL',
+  lora: 'LoRA',
+  qlora: 'QLoRA',
+  vscode: 'VS Code',
+  openai: 'OpenAI',
+  ide: 'IDE',
+  ides: 'IDEs',
+};
+
+const PHRASE_OVERRIDES: Record<string, string> = {
+  'Debugging Troubleshooting': 'Debugging & Troubleshooting',
+  'AI Safety Redteaming': 'AI Safety & Red Teaming',
+  'AI Powered Dev Tools': 'AI-Powered Dev Tools',
+  'AI Hardware LLM Validation': 'AI Hardware & LLM Validation',
+  'Low Code AI Tools': 'Low-Code AI Tools',
+  'Real Time Streaming': 'Real-Time Streaming',
+  'Time Series Analysis': 'Time-Series Analysis',
+};
+
+function extractNumericPrefix(value: string): number | null {
+  const match = value.match(/^(\d+)/);
+  return match ? Number(match[1]) : null;
+}
+
+function getSiblingPriority(name: string): number {
+  const normalized = name.toLowerCase();
+
+  if (normalized.includes('start_here') || normalized.includes('start-here')) {
+    return 0;
+  }
+
+  if (normalized.includes('pre-quiz') || normalized.includes('pre_quiz')) {
+    return 2;
+  }
+
+  if (normalized.includes('post-quiz') || normalized.includes('post_quiz')) {
+    return 3;
+  }
+
+  return 1;
+}
+
 function segmentToTitle(segment: string): string {
   if (segment === 'index') {
     return 'Home';
   }
 
-  return segment
+  const cleaned = segment
     .replace(/[-_]+/g, ' ')
     .replace(/\s+/g, ' ')
-    .trim()
-    .replace(/\b\w/g, (character) => character.toUpperCase());
+    .trim();
+
+  const words = cleaned.split(' ').filter(Boolean).map((word) => {
+    const override = TITLE_OVERRIDES[word.toLowerCase()];
+    if (override) {
+      return override;
+    }
+
+    return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+  });
+
+  const title = words.join(' ');
+  const numberPrefixMatch = title.match(/^(\d+)\s+(.*)$/);
+
+  if (!numberPrefixMatch) {
+    return PHRASE_OVERRIDES[title] ?? title;
+  }
+
+  const [, numberPrefix, remainder] = numberPrefixMatch;
+  return `${numberPrefix} ${PHRASE_OVERRIDES[remainder] ?? remainder}`;
 }
 
 function createNavNode(name: string, route: string): NavNode {
@@ -56,6 +128,20 @@ function insertRoute(nodes: Map<string, NavNode>, route: string) {
 }
 
 function compareNavNodes(left: NavNode, right: NavNode): number {
+  const leftPriority = getSiblingPriority(left.name);
+  const rightPriority = getSiblingPriority(right.name);
+
+  if (leftPriority !== rightPriority) {
+    return leftPriority - rightPriority;
+  }
+
+  const leftNumber = extractNumericPrefix(left.name);
+  const rightNumber = extractNumericPrefix(right.name);
+
+  if (leftNumber !== null && rightNumber !== null && leftNumber !== rightNumber) {
+    return leftNumber - rightNumber;
+  }
+
   return left.route.localeCompare(right.route);
 }
 
@@ -63,26 +149,21 @@ function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: stri
   return Array.from(nodes.values())
     .sort(compareNavNodes)
     .map((node) => {
-      // When a page/folder has the same name as its parent folder, use a distinct internal
-      // node name so Nextra renders it as a separate item instead of collapsing it into the
-      // parent section entry.
-      const isSelfNestedOverview = node.name === parentFolderName;
-      const name = isSelfNestedOverview ? `${node.name}__overview` : node.name;
-      const title = isSelfNestedOverview ? 'Overview' : node.title;
-
       if (node.children.size > 0) {
         return {
-          name,
+          name: node.name,
           route: node.route,
-          title,
+          title: node.title,
+          frontMatter: {},
           children: materializePageMap(node.children, node.name),
         };
       }
 
       return {
-        name,
+        name: node.name,
         route: node.route,
-        title,
+        title: node.title,
+        frontMatter: {},
       };
     });
 }
@@ -103,6 +184,7 @@ function buildLightweightPageMap(routes: string[]): unknown[] {
       name: 'index',
       route: '/',
       title: 'Home',
+      frontMatter: {},
     },
     ...materializePageMap(rootNodes),
   ];
@@ -176,8 +258,7 @@ export const metadata: Metadata = {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const canonicalRoutes = getStaticSiteRoutes();
-  const sidebarRoutes = getStaticSiteRoutes({ includeSelfNestedRoutes: true });
-  const pageMap = buildLightweightPageMap(sidebarRoutes);
+  const pageMap = buildLightweightPageMap(canonicalRoutes);
   const searchItems = buildSearchItems(buildLightweightPageMap(canonicalRoutes) as any);
   const websiteStructuredData = {
     '@context': 'https://schema.org',

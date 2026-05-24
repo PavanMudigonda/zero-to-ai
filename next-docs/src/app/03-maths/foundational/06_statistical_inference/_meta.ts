@@ -1,3 +1,3 @@
 export default {
-  "06_statistical_inference": "Overview",
+  "06_statistical_inference": "1. Statistical Inference",
 }

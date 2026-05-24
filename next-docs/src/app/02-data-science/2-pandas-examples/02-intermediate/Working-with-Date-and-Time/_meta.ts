@@ -1,3 +1,3 @@
 export default {
-  "Working-with-Date-and-Time": "Overview",
+  "Working-with-Date-and-Time": "1. Working With Date And Time",
 }

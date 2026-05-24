@@ -1,3 +1,3 @@
 export default {
-  "6_lstm": "Overview",
+  "6_lstm": "1. Lstm",
 }

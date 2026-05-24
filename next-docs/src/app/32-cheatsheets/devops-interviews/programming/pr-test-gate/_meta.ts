@@ -1,3 +1,3 @@
 export default {
-  "pr-test-gate": "Overview",
+  "pr-test-gate": "1. Pr Test Gate",
 }

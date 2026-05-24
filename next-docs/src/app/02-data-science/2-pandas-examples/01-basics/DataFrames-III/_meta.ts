@@ -1,3 +1,3 @@
 export default {
-  "DataFrames-III": "Overview",
+  "DataFrames-III": "1. Dataframes Iii",
 }

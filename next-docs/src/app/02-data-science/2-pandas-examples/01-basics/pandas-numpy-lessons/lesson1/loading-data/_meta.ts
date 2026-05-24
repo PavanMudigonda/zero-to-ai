@@ -1,3 +1,3 @@
 export default {
-  "loading-data": "Overview",
+  "loading-data": "1. Loading Data",
 }

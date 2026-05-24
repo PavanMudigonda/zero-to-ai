@@ -1,3 +1,3 @@
 export default {
-  "05_eigenvalues_eigenvectors": "Overview",
+  "05_eigenvalues_eigenvectors": "1. Eigenvalues Eigenvectors",
 }

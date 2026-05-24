@@ -1,3 +1,3 @@
 export default {
-  "notebook-papers": "Overview",
+  "notebook-papers": "1. Notebook Papers",
 }

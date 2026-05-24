@@ -5,5 +5,5 @@ export default {
   "4_convolutions": "4. Convolutions",
   "5_word2vec": "5. Word2vec",
   "6_lstm": "6. Lstm",
-  "tensor-flow-exercises": "Overview",
+  "tensor-flow-exercises": "7. Tensor Flow Exercises",
 }

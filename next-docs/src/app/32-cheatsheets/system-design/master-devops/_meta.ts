@@ -1,3 +1,3 @@
 export default {
-  "master-devops": "Overview",
+  "master-devops": "1. Master Devops",
 }

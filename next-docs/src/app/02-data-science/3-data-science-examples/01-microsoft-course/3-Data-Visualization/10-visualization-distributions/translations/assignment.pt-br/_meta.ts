@@ -1,3 +1,3 @@
 export default {
-  "assignment.pt-br": "Overview",
+  "assignment.pt-br": "1. Assignment.pt Br",
 }

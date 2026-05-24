@@ -1,3 +1,3 @@
 export default {
-  "gcp-gcloud-cheatsheet": "Overview",
+  "gcp-gcloud-cheatsheet": "1. Gcp Gcloud Cheatsheet",
 }

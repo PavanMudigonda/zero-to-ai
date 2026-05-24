@@ -1,3 +1,3 @@
 export default {
-  "pod-viewer-access": "Overview",
+  "pod-viewer-access": "1. Pod Viewer Access",
 }

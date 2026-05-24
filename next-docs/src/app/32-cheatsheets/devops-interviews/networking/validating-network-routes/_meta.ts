@@ -1,3 +1,3 @@
 export default {
-  "validating-network-routes": "Overview",
+  "validating-network-routes": "1. Validating Network Routes",
 }

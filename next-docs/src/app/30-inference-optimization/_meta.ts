@@ -1,5 +1,5 @@
 export default {
   "01_START_HERE": "1. Start Here",
   "02_serving_with_vllm": "2. Serving With Vllm",
-  "30-inference-optimization": "Overview",
+  "30-inference-optimization": "3. Inference Optimization",
 }

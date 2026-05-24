@@ -9,5 +9,5 @@ export default {
   lab_08_pca: "8. Lab 08 Pca",
   lab_09_gaussian_mixtures: "9. Lab 09 Gaussian Mixtures",
   lab_10_svm: "10. Lab 10 Svm",
-  "practice-labs": "Overview",
+  "practice-labs": "11. Practice Labs",
 }

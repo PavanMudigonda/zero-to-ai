@@ -1,3 +1,3 @@
 export default {
-  "13-meaningful-vizualizations": "Overview",
+  "13-meaningful-vizualizations": "1. Meaningful Vizualizations",
 }

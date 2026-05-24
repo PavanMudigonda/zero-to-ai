@@ -2,7 +2,7 @@ export default {
   "01_START_HERE": "1. Start Here",
   "02_INTERVIEW_PREP": "2. Interview Prep",
   "03_INTERVIEW_PREP_2": "3. Interview Prep 2",
-  "28-practical-data-science": "Overview",
+  "28-practical-data-science": "4. Practical Data Science",
   "computer-vision": "5. Computer Vision",
   "deep-learning-nlp": "6. Deep Learning NLP",
   "machine-learning": "7. Machine Learning",

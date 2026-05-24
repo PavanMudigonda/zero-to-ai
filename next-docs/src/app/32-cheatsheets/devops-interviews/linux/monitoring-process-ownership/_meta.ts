@@ -1,3 +1,3 @@
 export default {
-  "monitoring-process-ownership": "Overview",
+  "monitoring-process-ownership": "1. Monitoring Process Ownership",
 }

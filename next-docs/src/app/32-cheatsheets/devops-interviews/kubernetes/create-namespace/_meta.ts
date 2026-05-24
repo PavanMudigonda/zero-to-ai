@@ -1,3 +1,3 @@
 export default {
-  "create-namespace": "Overview",
+  "create-namespace": "1. Create Namespace",
 }

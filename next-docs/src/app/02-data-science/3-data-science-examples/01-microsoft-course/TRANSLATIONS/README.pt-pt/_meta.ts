@@ -1,3 +1,3 @@
 export default {
-  "README.pt-pt": "Overview",
+  "README.pt-pt": "1. Readme.pt Pt",
 }

@@ -1,5 +1,5 @@
 export default {
-  "11-visualization-proportions": "Overview",
+  "11-visualization-proportions": "1. Visualization Proportions",
   assignment: "2. Assignment",
   notebook: "3. Notebook",
   solution: "4. Solution",

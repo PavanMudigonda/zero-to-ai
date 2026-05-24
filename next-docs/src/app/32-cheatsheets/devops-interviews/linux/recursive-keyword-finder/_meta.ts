@@ -1,3 +1,3 @@
 export default {
-  "recursive-keyword-finder": "Overview",
+  "recursive-keyword-finder": "1. Recursive Keyword Finder",
 }

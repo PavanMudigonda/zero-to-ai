@@ -1,3 +1,3 @@
 export default {
-  "jenkins-cheatsheet": "Overview",
+  "jenkins-cheatsheet": "1. Jenkins Cheatsheet",
 }

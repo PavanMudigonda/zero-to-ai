@@ -1,3 +1,3 @@
 export default {
-  "11_taylor_series": "Overview",
+  "11_taylor_series": "1. Taylor Series",
 }

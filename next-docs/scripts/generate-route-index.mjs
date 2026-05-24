@@ -8,6 +8,28 @@ const appRoot = join(projectRoot, 'src', 'app');
 const outputPath = join(projectRoot, 'public', 'route-index.json');
 const pageFileNames = new Set(['page.mdx', 'page.tsx', 'page.ts', 'page.jsx', 'page.js']);
 const excludedSegments = new Set(['_meta.ts', 'error.tsx', 'not-found.tsx', 'layout.tsx']);
+const excludedTopLevelSegments = new Set(['app', 'auth', 'demo', 'login']);
+
+function shouldSkipSelfNestedRoute(route) {
+  const segments = route.split('/').filter(Boolean);
+
+  if (segments.length < 2) {
+    return false;
+  }
+
+  for (let index = 1; index < segments.length; index += 1) {
+    if (segments[index] === segments[index - 1]) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+function shouldExcludeTopLevelRoute(route) {
+  const [firstSegment] = route.split('/').filter(Boolean);
+  return Boolean(firstSegment && excludedTopLevelSegments.has(firstSegment));
+}
 
 function collectRouteDirectories(currentDirectory, routeDirectories) {
   for (const entryName of readdirSync(currentDirectory)) {
@@ -47,6 +69,8 @@ const notebookRoutes = [...new Set(routeDirectories)]
     const relativeDirectory = relative(appRoot, directoryPath).replaceAll(sep, '/');
     return relativeDirectory ? `/${relativeDirectory}` : '/';
   })
+  .filter((route) => !shouldExcludeTopLevelRoute(route))
+  .filter((route) => !shouldSkipSelfNestedRoute(route))
   .sort((left, right) => left.localeCompare(right));
 
 mkdirSync(dirname(outputPath), { recursive: true });

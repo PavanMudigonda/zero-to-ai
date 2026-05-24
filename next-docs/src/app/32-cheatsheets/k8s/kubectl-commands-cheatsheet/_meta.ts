@@ -1,3 +1,3 @@
 export default {
-  "kubectl-commands-cheatsheet": "Overview",
+  "kubectl-commands-cheatsheet": "1. Kubectl Commands Cheatsheet",
 }

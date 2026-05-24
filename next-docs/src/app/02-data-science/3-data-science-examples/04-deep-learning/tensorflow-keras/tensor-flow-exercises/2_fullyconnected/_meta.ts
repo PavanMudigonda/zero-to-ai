@@ -1,3 +1,3 @@
 export default {
-  "2_fullyconnected": "Overview",
+  "2_fullyconnected": "1. Fullyconnected",
 }

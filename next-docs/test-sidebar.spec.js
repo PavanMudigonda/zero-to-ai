@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
 const BASE_URL = process.env.BASE_URL || 'http://localhost:3000';
 const SECTION_PATH = process.env.SIDEBAR_SECTION_PATH || '/15-ai-agents';
 const START_PATH = normalizePath(
-  process.env.START_PATH || `${SECTION_PATH}/01_START_HERE/01_START_HERE`,
+  process.env.START_PATH || `${SECTION_PATH}/01_START_HERE`,
 );
 const START_URL = new URL(START_PATH, BASE_URL).toString();
 const VIEWPORT = { width: 1440, height: 1600 };

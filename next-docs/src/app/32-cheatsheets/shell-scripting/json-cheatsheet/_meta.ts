@@ -1,3 +1,3 @@
 export default {
-  "json-cheatsheet": "Overview",
+  "json-cheatsheet": "1. Json Cheatsheet",
 }

@@ -1,3 +1,3 @@
 export default {
-  "tutorial-x-ray-image-processing": "Overview",
+  "tutorial-x-ray-image-processing": "1. Tutorial X Ray Image Processing",
 }

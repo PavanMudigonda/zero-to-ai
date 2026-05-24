@@ -1,3 +1,3 @@
 export default {
-  "assignment.es": "Overview",
+  "assignment.es": "1. Assignment.es",
 }

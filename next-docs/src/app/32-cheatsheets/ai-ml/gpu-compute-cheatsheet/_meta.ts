@@ -1,3 +1,3 @@
 export default {
-  "gpu-compute-cheatsheet": "Overview",
+  "gpu-compute-cheatsheet": "1. Gpu Compute Cheatsheet",
 }

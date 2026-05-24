@@ -1,3 +1,3 @@
 export default {
-  "job-dependency-enforcement": "Overview",
+  "job-dependency-enforcement": "1. Job Dependency Enforcement",
 }

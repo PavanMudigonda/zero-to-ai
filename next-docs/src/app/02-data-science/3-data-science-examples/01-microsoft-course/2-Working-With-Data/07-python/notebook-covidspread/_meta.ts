@@ -1,3 +1,3 @@
 export default {
-  "notebook-covidspread": "Overview",
+  "notebook-covidspread": "1. Notebook Covidspread",
 }

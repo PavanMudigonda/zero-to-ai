@@ -1,3 +1,3 @@
 export default {
-  "more-array-operations": "Overview",
+  "more-array-operations": "1. More Array Operations",
 }

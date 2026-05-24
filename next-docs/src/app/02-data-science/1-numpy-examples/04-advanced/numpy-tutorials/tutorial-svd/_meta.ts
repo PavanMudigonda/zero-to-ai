@@ -1,3 +1,3 @@
 export default {
-  "tutorial-svd": "Overview",
+  "tutorial-svd": "1. Tutorial Svd",
 }

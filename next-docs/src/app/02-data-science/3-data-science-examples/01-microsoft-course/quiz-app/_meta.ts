@@ -1,3 +1,3 @@
 export default {
-  "quiz-app": "Overview",
+  "quiz-app": "1. Quiz App",
 }

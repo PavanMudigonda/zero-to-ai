@@ -1,3 +1,3 @@
 export default {
-  "38_gaussian_processes": "Overview",
+  "38_gaussian_processes": "1. Gaussian Processes",
 }

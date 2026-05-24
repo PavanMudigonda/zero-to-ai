@@ -1,3 +1,3 @@
 export default {
-  "matplotlib-applied": "Overview",
+  "matplotlib-applied": "1. Matplotlib Applied",
 }

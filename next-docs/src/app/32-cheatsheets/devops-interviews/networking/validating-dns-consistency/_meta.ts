@@ -1,3 +1,3 @@
 export default {
-  "validating-dns-consistency": "Overview",
+  "validating-dns-consistency": "1. Validating Dns Consistency",
 }

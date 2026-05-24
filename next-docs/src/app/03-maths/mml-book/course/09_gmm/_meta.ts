@@ -1,3 +1,3 @@
 export default {
-  "09_gmm": "Overview",
+  "09_gmm": "1. Gmm",
 }

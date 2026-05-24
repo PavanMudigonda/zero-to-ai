@@ -1,3 +1,3 @@
 export default {
-  "scikit-learn-pca": "Overview",
+  "scikit-learn-pca": "1. Scikit Learn Pca",
 }

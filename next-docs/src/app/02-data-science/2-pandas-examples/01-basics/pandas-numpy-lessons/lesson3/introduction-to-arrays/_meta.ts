@@ -1,3 +1,3 @@
 export default {
-  "introduction-to-arrays": "Overview",
+  "introduction-to-arrays": "1. Introduction To Arrays",
 }

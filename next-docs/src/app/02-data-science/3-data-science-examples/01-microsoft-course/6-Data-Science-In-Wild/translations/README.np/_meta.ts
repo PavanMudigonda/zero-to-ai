@@ -1,3 +1,3 @@
 export default {
-  "README.np": "Overview",
+  "README.np": "1. Readme.np",
 }

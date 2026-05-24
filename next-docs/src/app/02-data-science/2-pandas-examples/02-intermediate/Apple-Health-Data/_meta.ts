@@ -1,3 +1,3 @@
 export default {
-  "Apple-Health-Data": "Overview",
+  "Apple-Health-Data": "1. Apple Health Data",
 }

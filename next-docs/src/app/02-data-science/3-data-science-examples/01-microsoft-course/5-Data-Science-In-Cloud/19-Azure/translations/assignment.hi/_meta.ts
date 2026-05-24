@@ -1,3 +1,3 @@
 export default {
-  "assignment.hi": "Overview",
+  "assignment.hi": "1. Assignment.hi",
 }

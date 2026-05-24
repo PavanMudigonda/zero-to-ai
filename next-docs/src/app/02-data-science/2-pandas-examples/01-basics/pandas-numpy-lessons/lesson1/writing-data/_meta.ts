@@ -1,3 +1,3 @@
 export default {
-  "writing-data": "Overview",
+  "writing-data": "1. Writing Data",
 }

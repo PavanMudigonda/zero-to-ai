@@ -1,3 +1,3 @@
 export default {
-  "02_debugging_workflow": "Overview",
+  "02_debugging_workflow": "1. Debugging Workflow",
 }

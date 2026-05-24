@@ -1,3 +1,3 @@
 export default {
-  "devops-flowchart": "Overview",
+  "devops-flowchart": "1. Devops Flowchart",
 }

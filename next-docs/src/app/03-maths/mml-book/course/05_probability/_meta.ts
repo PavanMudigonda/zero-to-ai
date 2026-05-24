@@ -1,3 +1,3 @@
 export default {
-  "05_probability": "Overview",
+  "05_probability": "1. Probability",
 }

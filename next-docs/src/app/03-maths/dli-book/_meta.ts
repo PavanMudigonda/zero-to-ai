@@ -1,5 +1,5 @@
 export default {
-  "dli-book": "Overview",
+  "dli-book": "1. Dli Book",
   lab_01_logistic_regression: "2. Lab 01 Logistic Regression",
   lab_02_information_theory: "3. Lab 02 Information Theory",
   lab_03_calculus_backprop: "4. Lab 03 Calculus Backprop",

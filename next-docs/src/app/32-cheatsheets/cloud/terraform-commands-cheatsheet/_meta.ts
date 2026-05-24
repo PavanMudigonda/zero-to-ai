@@ -1,3 +1,3 @@
 export default {
-  "terraform-commands-cheatsheet": "Overview",
+  "terraform-commands-cheatsheet": "1. Terraform Commands Cheatsheet",
 }
