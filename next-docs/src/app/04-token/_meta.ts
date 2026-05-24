@@ -2,7 +2,7 @@ export default {
   "01_START_HERE": "1. Start Here",
   "02_intro": "2. Intro",
   "03_tokenizers_quickstart": "3. Tokenizers Quickstart",
-  "04-token": "Overview",
+  "04-token": "4. Token",
   "04_tokenizers_training": "5. Tokenizers Training",
   "05_advanced_training_methods": "6. Advanced Training Methods",
   "06_production_guide": "7. Production Guide",

@@ -1,3 +1,3 @@
 export default {
-  "azure-cli-cheatsheet": "Overview",
+  "azure-cli-cheatsheet": "1. Azure Cli Cheatsheet",
 }

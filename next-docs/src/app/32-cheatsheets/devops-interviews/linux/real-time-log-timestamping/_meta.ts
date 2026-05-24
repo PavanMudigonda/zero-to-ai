@@ -1,3 +1,3 @@
 export default {
-  "real-time-log-timestamping": "Overview",
+  "real-time-log-timestamping": "1. Real Time Log Timestamping",
 }

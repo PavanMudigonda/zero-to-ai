@@ -1,3 +1,3 @@
 export default {
-  "assignment.ru": "Overview",
+  "assignment.ru": "1. Assignment.ru",
 }

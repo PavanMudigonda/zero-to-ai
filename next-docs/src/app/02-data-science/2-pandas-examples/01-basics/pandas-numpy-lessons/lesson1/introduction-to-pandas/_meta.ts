@@ -1,3 +1,3 @@
 export default {
-  "introduction-to-pandas": "Overview",
+  "introduction-to-pandas": "1. Introduction To Pandas",
 }

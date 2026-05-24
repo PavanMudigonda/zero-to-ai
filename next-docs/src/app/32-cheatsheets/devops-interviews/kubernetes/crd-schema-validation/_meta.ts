@@ -1,3 +1,3 @@
 export default {
-  "crd-schema-validation": "Overview",
+  "crd-schema-validation": "1. Crd Schema Validation",
 }

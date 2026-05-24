@@ -1,3 +1,3 @@
 export default {
-  "07_resonance": "Overview",
+  "07_resonance": "1. Resonance",
 }

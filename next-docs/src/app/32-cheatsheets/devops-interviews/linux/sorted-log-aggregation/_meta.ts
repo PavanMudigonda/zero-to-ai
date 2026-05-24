@@ -1,3 +1,3 @@
 export default {
-  "sorted-log-aggregation": "Overview",
+  "sorted-log-aggregation": "1. Sorted Log Aggregation",
 }

@@ -1,3 +1,3 @@
 export default {
-  "README.ru": "Overview",
+  "README.ru": "1. Readme.ru",
 }

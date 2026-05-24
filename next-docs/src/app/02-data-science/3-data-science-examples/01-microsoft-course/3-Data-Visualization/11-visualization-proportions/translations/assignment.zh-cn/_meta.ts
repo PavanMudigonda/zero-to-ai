@@ -1,3 +1,3 @@
 export default {
-  "assignment.zh-cn": "Overview",
+  "assignment.zh-cn": "1. Assignment.zh Cn",
 }

@@ -1,3 +1,3 @@
 export default {
-  "04_qdrant_guide": "Overview",
+  "04_qdrant_guide": "1. Qdrant Guide",
 }

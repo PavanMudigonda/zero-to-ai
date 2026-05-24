@@ -1,3 +1,3 @@
 export default {
-  "03_matrix_decompositions": "Overview",
+  "03_matrix_decompositions": "1. Matrix Decompositions",
 }

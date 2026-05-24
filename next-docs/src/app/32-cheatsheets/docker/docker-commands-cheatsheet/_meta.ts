@@ -1,3 +1,3 @@
 export default {
-  "docker-commands-cheatsheet": "Overview",
+  "docker-commands-cheatsheet": "1. Docker Commands Cheatsheet",
 }

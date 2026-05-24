@@ -1,3 +1,3 @@
 export default {
-  "using-unmounted-partitions": "Overview",
+  "using-unmounted-partitions": "1. Using Unmounted Partitions",
 }

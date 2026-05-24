@@ -1,3 +1,3 @@
 export default {
-  "automated-archive-and-retention": "Overview",
+  "automated-archive-and-retention": "1. Automated Archive And Retention",
 }

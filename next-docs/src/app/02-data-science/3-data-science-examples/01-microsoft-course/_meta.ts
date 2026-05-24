@@ -1,5 +1,5 @@
 export default {
-  "01-microsoft-course": "Overview",
+  "01-microsoft-course": "1. Microsoft Course",
   "1-Introduction": "2. Introduction",
   "2-Working-With-Data": "3. Working With Data",
   "3-Data-Visualization": "4. Data Visualization",
@@ -11,7 +11,8 @@ export default {
   SECURITY: "10. Security",
   SUPPORT: "11. Support",
   TRANSLATIONS: "12. Translations",
-  "for-teachers": "13. For Teachers",
-  "quiz-app": "14. Quiz App",
-  sketchnotes: "15. Sketchnotes",
+  docs: "13. Docs",
+  "for-teachers": "14. For Teachers",
+  "quiz-app": "15. Quiz App",
+  sketchnotes: "16. Sketchnotes",
 }

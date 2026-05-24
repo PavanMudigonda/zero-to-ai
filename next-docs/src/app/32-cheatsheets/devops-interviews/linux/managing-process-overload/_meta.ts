@@ -1,3 +1,3 @@
 export default {
-  "managing-process-overload": "Overview",
+  "managing-process-overload": "1. Managing Process Overload",
 }

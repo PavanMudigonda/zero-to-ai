@@ -1,3 +1,3 @@
 export default {
-  "purge-empty-folders": "Overview",
+  "purge-empty-folders": "1. Purge Empty Folders",
 }

@@ -1,3 +1,3 @@
 export default {
-  "25_cyclegan": "Overview",
+  "25_cyclegan": "1. Cyclegan",
 }

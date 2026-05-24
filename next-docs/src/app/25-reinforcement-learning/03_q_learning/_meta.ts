@@ -1,3 +1,3 @@
 export default {
-  "03_q_learning": "Overview",
+  "03_q_learning": "1. Q Learning",
 }

@@ -1,3 +1,3 @@
 export default {
-  "06_copilot_workflows": "Overview",
+  "06_copilot_workflows": "1. Copilot Workflows",
 }

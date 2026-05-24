@@ -1,3 +1,3 @@
 export default {
-  "python-devops-cheatsheet": "Overview",
+  "python-devops-cheatsheet": "1. Python Devops Cheatsheet",
 }

@@ -1,3 +1,3 @@
 export default {
-  "08_pca": "Overview",
+  "08_pca": "1. Pca",
 }

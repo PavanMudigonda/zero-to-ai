@@ -1,3 +1,3 @@
 export default {
-  "01_sklearn_pipelines": "Overview",
+  "01_sklearn_pipelines": "1. Sklearn Pipelines",
 }

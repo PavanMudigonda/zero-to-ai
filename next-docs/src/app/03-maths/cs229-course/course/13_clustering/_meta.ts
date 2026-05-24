@@ -1,3 +1,3 @@
 export default {
-  "13_clustering": "Overview",
+  "13_clustering": "1. Clustering",
 }

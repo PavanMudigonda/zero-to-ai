@@ -1,3 +1,3 @@
 export default {
-  "06_understanding_laplace": "Overview",
+  "06_understanding_laplace": "1. Understanding Laplace",
 }

@@ -5,5 +5,5 @@ export default {
   lab_04_neural_networks: "4. Lab 04 Neural Networks",
   lab_05_transformers_attention: "5. Lab 05 Transformers Attention",
   lab_06_large_language_models: "6. Lab 06 Large Language Models",
-  "slp-book": "Overview",
+  "slp-book": "7. Slp Book",
 }

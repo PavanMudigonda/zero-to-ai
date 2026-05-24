@@ -1,3 +1,3 @@
 export default {
-  "common-operations": "Overview",
+  "common-operations": "1. Common Operations",
 }

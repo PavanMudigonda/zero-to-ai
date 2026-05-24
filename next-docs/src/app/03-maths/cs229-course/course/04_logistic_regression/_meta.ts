@@ -1,3 +1,3 @@
 export default {
-  "04_logistic_regression": "Overview",
+  "04_logistic_regression": "1. Logistic Regression",
 }

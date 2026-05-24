@@ -1,3 +1,3 @@
 export default {
-  "TN-Population": "Overview",
+  "TN-Population": "1. Tn Population",
 }

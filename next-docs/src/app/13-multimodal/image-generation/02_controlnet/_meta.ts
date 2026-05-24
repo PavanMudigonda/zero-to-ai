@@ -1,3 +1,3 @@
 export default {
-  "02_controlnet": "Overview",
+  "02_controlnet": "1. Controlnet",
 }

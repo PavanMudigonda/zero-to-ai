@@ -1,3 +1,3 @@
 export default {
-  "07_neural_network_math": "Overview",
+  "07_neural_network_math": "1. Neural Network Math",
 }

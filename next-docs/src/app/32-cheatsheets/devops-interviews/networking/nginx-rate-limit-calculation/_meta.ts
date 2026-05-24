@@ -1,3 +1,3 @@
 export default {
-  "nginx-rate-limit-calculation": "Overview",
+  "nginx-rate-limit-calculation": "1. Nginx Rate Limit Calculation",
 }

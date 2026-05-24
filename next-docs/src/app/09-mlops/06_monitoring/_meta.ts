@@ -1,3 +1,3 @@
 export default {
-  "06_monitoring": "Overview",
+  "06_monitoring": "1. Monitoring",
 }

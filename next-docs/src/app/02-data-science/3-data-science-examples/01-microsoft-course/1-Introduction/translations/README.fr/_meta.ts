@@ -1,3 +1,3 @@
 export default {
-  "README.fr": "Overview",
+  "README.fr": "1. Readme.fr",
 }

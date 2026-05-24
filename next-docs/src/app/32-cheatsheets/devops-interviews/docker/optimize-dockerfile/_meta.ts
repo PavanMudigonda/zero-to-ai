@@ -1,3 +1,3 @@
 export default {
-  "optimize-dockerfile": "Overview",
+  "optimize-dockerfile": "1. Optimize Dockerfile",
 }

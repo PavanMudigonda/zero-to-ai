@@ -1,3 +1,3 @@
 export default {
-  "microsoft-labs": "Overview",
+  "microsoft-labs": "1. Microsoft Labs",
 }

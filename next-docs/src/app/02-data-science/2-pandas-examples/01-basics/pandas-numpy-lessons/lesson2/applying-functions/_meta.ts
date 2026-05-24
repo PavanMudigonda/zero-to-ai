@@ -1,3 +1,3 @@
 export default {
-  "applying-functions": "Overview",
+  "applying-functions": "1. Applying Functions",
 }

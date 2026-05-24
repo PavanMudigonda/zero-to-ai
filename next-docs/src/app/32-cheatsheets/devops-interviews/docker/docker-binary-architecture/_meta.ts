@@ -1,3 +1,3 @@
 export default {
-  "docker-binary-architecture": "Overview",
+  "docker-binary-architecture": "1. Docker Binary Architecture",
 }

@@ -1,3 +1,3 @@
 export default {
-  "README.zh-cn": "Overview",
+  "README.zh-cn": "1. Readme.zh Cn",
 }

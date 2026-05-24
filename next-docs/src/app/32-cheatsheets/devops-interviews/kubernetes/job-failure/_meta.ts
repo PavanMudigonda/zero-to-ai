@@ -1,3 +1,3 @@
 export default {
-  "job-failure": "Overview",
+  "job-failure": "1. Job Failure",
 }

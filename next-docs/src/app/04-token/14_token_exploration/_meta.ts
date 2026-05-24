@@ -1,3 +1,3 @@
 export default {
-  "14_token_exploration": "Overview",
+  "14_token_exploration": "1. Token Exploration",
 }

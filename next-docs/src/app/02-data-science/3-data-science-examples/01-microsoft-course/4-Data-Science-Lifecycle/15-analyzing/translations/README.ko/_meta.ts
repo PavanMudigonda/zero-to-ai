@@ -1,3 +1,3 @@
 export default {
-  "README.ko": "Overview",
+  "README.ko": "1. Readme.ko",
 }

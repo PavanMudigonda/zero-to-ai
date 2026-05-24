@@ -1,3 +1,3 @@
 export default {
-  "temporary-route-configuration": "Overview",
+  "temporary-route-configuration": "1. Temporary Route Configuration",
 }

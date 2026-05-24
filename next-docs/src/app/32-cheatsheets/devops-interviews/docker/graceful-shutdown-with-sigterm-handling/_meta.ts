@@ -1,3 +1,3 @@
 export default {
-  "graceful-shutdown-with-sigterm-handling": "Overview",
+  "graceful-shutdown-with-sigterm-handling": "1. Graceful Shutdown With Sigterm Handling",
 }

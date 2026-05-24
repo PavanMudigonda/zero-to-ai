@@ -1,3 +1,3 @@
 export default {
-  "multi-key-configmap": "Overview",
+  "multi-key-configmap": "1. Multi Key Configmap",
 }

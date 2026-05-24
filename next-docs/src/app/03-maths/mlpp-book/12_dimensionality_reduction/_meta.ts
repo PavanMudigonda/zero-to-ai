@@ -1,3 +1,3 @@
 export default {
-  "12_dimensionality_reduction": "Overview",
+  "12_dimensionality_reduction": "1. Dimensionality Reduction",
 }

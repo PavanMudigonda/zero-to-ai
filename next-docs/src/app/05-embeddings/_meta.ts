@@ -3,7 +3,7 @@ export default {
   "02_embeddings_intro": "2. Embeddings Intro",
   "03_paraphrase_mining_intro": "3. Paraphrase Mining Intro",
   "04_semantic_search_intro": "4. Semantic Search Intro",
-  "05-embeddings": "Overview",
+  "05-embeddings": "5. Embeddings",
   "05_semantic_textual_similarity_intro": "6. Semantic Textual Similarity Intro",
   "06_sentence_transformer_intro": "7. Sentence Transformer Intro",
   "07_sparse_encoder_intro": "8. Sparse Encoder Intro",

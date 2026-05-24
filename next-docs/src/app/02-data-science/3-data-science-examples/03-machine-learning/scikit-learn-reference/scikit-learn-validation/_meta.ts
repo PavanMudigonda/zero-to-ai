@@ -1,3 +1,3 @@
 export default {
-  "scikit-learn-validation": "Overview",
+  "scikit-learn-validation": "1. Scikit Learn Validation",
 }

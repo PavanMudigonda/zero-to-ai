@@ -1,3 +1,3 @@
 export default {
-  "02_streaming_responses": "Overview",
+  "02_streaming_responses": "1. Streaming Responses",
 }

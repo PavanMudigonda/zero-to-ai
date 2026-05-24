@@ -1,3 +1,3 @@
 export default {
-  "README.it": "Overview",
+  "README.it": "1. Readme.it",
 }

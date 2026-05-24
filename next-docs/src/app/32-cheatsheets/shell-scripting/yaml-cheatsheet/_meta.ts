@@ -1,3 +1,3 @@
 export default {
-  "yaml-cheatsheet": "Overview",
+  "yaml-cheatsheet": "1. Yaml Cheatsheet",
 }

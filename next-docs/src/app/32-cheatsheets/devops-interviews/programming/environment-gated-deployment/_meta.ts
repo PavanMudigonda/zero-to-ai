@@ -1,3 +1,3 @@
 export default {
-  "environment-gated-deployment": "Overview",
+  "environment-gated-deployment": "1. Environment Gated Deployment",
 }

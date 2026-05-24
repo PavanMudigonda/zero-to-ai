@@ -1,3 +1,3 @@
 export default {
-  "README.ne": "Overview",
+  "README.ne": "1. Readme.ne",
 }

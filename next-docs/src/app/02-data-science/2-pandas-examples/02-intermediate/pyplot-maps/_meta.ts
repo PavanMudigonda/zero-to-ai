@@ -1,3 +1,3 @@
 export default {
-  "pyplot-maps": "Overview",
+  "pyplot-maps": "1. Pyplot Maps",
 }

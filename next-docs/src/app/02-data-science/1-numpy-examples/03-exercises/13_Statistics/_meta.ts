@@ -1,3 +1,3 @@
 export default {
-  "13_Statistics": "Overview",
+  "13_Statistics": "1. Statistics",
 }

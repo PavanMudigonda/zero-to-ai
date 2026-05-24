@@ -1,3 +1,3 @@
 export default {
-  "assignment.ne": "Overview",
+  "assignment.ne": "1. Assignment.ne",
 }

@@ -1,3 +1,3 @@
 export default {
-  "3_regularization": "Overview",
+  "3_regularization": "1. Regularization",
 }

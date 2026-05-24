@@ -1,3 +1,3 @@
 export default {
-  "rebase-feature-branch": "Overview",
+  "rebase-feature-branch": "1. Rebase Feature Branch",
 }

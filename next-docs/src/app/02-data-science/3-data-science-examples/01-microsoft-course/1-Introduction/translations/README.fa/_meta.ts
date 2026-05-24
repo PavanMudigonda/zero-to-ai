@@ -1,3 +1,3 @@
 export default {
-  "README.fa": "Overview",
+  "README.fa": "1. Readme.fa",
 }

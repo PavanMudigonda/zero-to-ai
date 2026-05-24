@@ -1,5 +1,5 @@
 export default {
-  "5-scikit-learn": "Overview",
+  "5-scikit-learn": "1. Scikit Learn",
   applications: "2. Applications",
   bicluster: "3. Bicluster",
   calibration: "4. Calibration",

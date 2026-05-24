@@ -1,3 +1,3 @@
 export default {
-  "save-load-arrays": "Overview",
+  "save-load-arrays": "1. Save Load Arrays",
 }

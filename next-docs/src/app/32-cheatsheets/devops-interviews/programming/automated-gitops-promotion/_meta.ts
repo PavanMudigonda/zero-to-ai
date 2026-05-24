@@ -1,3 +1,3 @@
 export default {
-  "automated-gitops-promotion": "Overview",
+  "automated-gitops-promotion": "1. Automated Gitops Promotion",
 }

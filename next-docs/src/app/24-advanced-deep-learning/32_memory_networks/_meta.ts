@@ -1,3 +1,3 @@
 export default {
-  "32_memory_networks": "Overview",
+  "32_memory_networks": "1. Memory Networks",
 }

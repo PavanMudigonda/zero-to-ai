@@ -1,3 +1,3 @@
 export default {
-  "ansible-cheatsheet": "Overview",
+  "ansible-cheatsheet": "1. Ansible Cheatsheet",
 }

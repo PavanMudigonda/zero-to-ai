@@ -1,3 +1,3 @@
 export default {
-  "update-aws-configs": "Overview",
+  "update-aws-configs": "1. Update Aws Configs",
 }
