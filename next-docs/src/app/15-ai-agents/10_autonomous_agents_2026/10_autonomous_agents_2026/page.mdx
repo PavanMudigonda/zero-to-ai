@@ -7,9 +7,38 @@ import nb from './10_autonomous_agents_2026.ipynb';
 
 <DynamicNotebook ipynb={nb} />
 
+## Open-Source And Open-Weight Agent Products To Know
+
+The notebook above already covers many open systems, but it helps to make that category explicit so the lesson cleanly separates open ecosystems from closed commercial products.
+
+### Representative Open Agent Surfaces
+
+| Product / Surface | Primary interface | What it is good at | Notes |
+|---|---|---|---|
+| **OpenHands** | Coding agent runtime | Multi-step software tasks, repo work, iterative debugging | One of the clearest open-source references for autonomous software engineering agents. |
+| **OpenCode** | Coding agent / developer workflow | Code edits, repo automation, iterative software tasks | Useful as an open coding-agent reference point when comparing productized commercial tools. |
+| **mini-swe-agent / SWE-agent family** | Agentic coding workflow | Bug fixing, issue reproduction, benchmark-oriented engineering tasks | Good for understanding evaluation-driven coding agents. |
+| **OpenClaw** | Local / personal agent | Personal automation, local system integration, messaging-oriented workflows | Illustrates the local-agent pattern well. |
+| **Lingxi** | Research + coding agent | Agentic reasoning and longer-horizon development tasks | Often discussed in the context of more autonomous engineering flows. |
+| **Browser-use / Playwright-based agents** | Browser / GUI agent | Web navigation, form filling, browser control | Important examples of open web and computer-use agents. |
+| **Anthropic Computer Use-style open reproductions** | GUI automation | Desktop interaction and UI control | Open implementations matter because they show how computer-use loops are built. |
+| **AI Scientist / research agents** | Research workflow | Reading papers, generating experiments, synthesizing findings | A useful contrast with coding-first agents. |
+
+### Why The Open Category Matters
+
+Open agents are usually where you learn the real mechanics of agent systems:
+
+- Tool orchestration
+- Planning loops
+- Memory and retrieval design
+- Safety checkpoints and human approval patterns
+- Evaluation, benchmarking, and reproducibility
+
+They are typically better when you want to inspect internals, customize behavior, run locally, or build your own agent architecture.
+
 ## Closed And Proprietary Agent Products To Know
 
-The notebook above focuses mostly on open-source and open-weight agent systems. In practice, the 2026 agent landscape also includes a large set of proprietary products that matter for day-to-day engineering work because they are tightly integrated into editors, terminals, hosted runtimes, and enterprise workflows.
+In practice, the 2026 agent landscape also includes a large set of proprietary products that matter for day-to-day engineering work because they are tightly integrated into editors, terminals, hosted runtimes, and enterprise workflows.
 
 ### Why This Category Matters
 
@@ -61,7 +90,7 @@ If you are comparing open vs proprietary agent stacks, use the same evaluation f
 - **Extensibility**: Can you add tools, MCP servers, custom prompts, or team workflows?
 - **Observability**: Are traces, logs, and action histories visible enough for debugging?
 
-### Suggested Positioning Inside This Lesson
+### Open Vs Closed: Suggested Positioning Inside This Lesson
 
 The easiest way to connect this with the notebook above is:
 

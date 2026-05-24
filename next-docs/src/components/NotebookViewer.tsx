@@ -193,7 +193,9 @@ function getRouteIndex(): Promise<string[]> {
 export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   const pathname = usePathname();
   const [routeIndex, setRouteIndex] = useState<string[]>([]);
+  const [isExpanded, setIsExpanded] = useState(false);
   const notebookContainerRef = useRef<HTMLDivElement | null>(null);
+  const expandedNotebookContainerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -210,9 +212,11 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   }, []);
 
   useEffect(() => {
-    const container = notebookContainerRef.current;
+    const containers = [notebookContainerRef.current, expandedNotebookContainerRef.current].filter(
+      (container): container is HTMLDivElement => Boolean(container),
+    );
 
-    if (!container) {
+    if (containers.length === 0) {
       return;
     }
 
@@ -258,7 +262,7 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
       await fallbackCopy(text);
     };
 
-    const applyButtons = () => {
+    const applyButtons = (container: HTMLDivElement) => {
       const blocks = container.querySelectorAll<HTMLElement>(selectors.join(','));
 
       blocks.forEach((block) => {
@@ -311,21 +315,47 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
       });
     };
 
-    applyButtons();
+    const observers = containers.map((container) => {
+      applyButtons(container);
 
-    const observer = new MutationObserver(() => {
-      applyButtons();
-    });
+      const observer = new MutationObserver(() => {
+        applyButtons(container);
+      });
 
-    observer.observe(container, {
-      childList: true,
-      subtree: true,
+      observer.observe(container, {
+        childList: true,
+        subtree: true,
+      });
+
+      return observer;
     });
 
     return () => {
-      observer.disconnect();
+      observers.forEach((observer) => observer.disconnect());
     };
-  }, [pathname, routeIndex, ipynb]);
+  }, [pathname, routeIndex, ipynb, isExpanded]);
+
+  useEffect(() => {
+    if (!isExpanded) {
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsExpanded(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isExpanded]);
 
   const normalizedNotebook = normalizeNotebookLinks(ipynb, pathname || '/', routeIndex);
 
@@ -368,22 +398,24 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   const dropdownResources = notebookResources.slice(2);
 
   const linkClass = "text-xs font-medium px-2.5 py-1.5 rounded border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#111] text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors inline-flex items-center justify-center gap-1.5 shadow-sm";
+  const buttonClass = `${linkClass} cursor-pointer`;
 
   return (
-    <div className="my-8 overflow-hidden rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 bg-[var(--nextra-bg)]">
-      {/* External Action Bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-gray-50/80 dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-gray-800">
-        <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-200">
-          <svg className="w-5 h-5 text-yellow-500" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
-             <path d="M63.882 121.761C95.955 121.761 122 95.836 122 63.881C122 31.925 95.955 6 63.882 6C31.81 6 5.765 31.925 5.765 63.881C5.765 95.836 31.81 121.761 63.882 121.761Z" fill="#F37626"/>
-             <path d="M63.882 108.972C88.85 108.972 109.117 88.788 109.117 63.881C109.117 38.974 88.85 18.79 63.882 18.79C38.914 18.79 18.647 38.974 18.647 63.881C18.647 88.788 38.914 108.972 63.882 108.972Z" fill="white"/>
-             <path d="M63.882 101.272C84.582 101.272 101.378 84.537 101.378 63.881C101.378 43.225 84.582 26.49 63.882 26.49C43.181 26.49 26.386 43.225 26.386 63.881C26.386 84.537 43.181 101.272 63.882 101.272Z" fill="#F37626"/>
-             <path d="M47.014 47.917C50.298 47.917 52.96 45.263 52.96 41.989C52.96 38.715 50.298 36.061 47.014 36.061C43.73 36.061 41.068 38.715 41.068 41.989C41.068 45.263 43.73 47.917 47.014 47.917Z" fill="white"/>
-             <path d="M80.009 84.452C83.293 84.452 85.955 81.798 85.955 78.524C85.955 75.25 83.293 72.596 80.009 72.596C76.725 72.596 74.063 75.25 74.063 78.524C74.063 81.798 76.725 84.452 80.009 84.452Z" fill="white"/>
-          </svg>
-          Jupyter 
-        </div>
-        <div className="flex items-center gap-2">
+    <>
+      <div className="my-8 overflow-hidden rounded-lg shadow-sm border border-gray-200 dark:border-gray-800 bg-[var(--nextra-bg)]">
+        {/* External Action Bar */}
+        <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3 bg-gray-50/80 dark:bg-[#0a0a0a] border-b border-gray-200 dark:border-gray-800">
+          <div className="flex items-center gap-2 text-sm font-semibold text-gray-700 dark:text-gray-200">
+            <svg className="w-5 h-5 text-yellow-500" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M63.882 121.761C95.955 121.761 122 95.836 122 63.881C122 31.925 95.955 6 63.882 6C31.81 6 5.765 31.925 5.765 63.881C5.765 95.836 31.81 121.761 63.882 121.761Z" fill="#F37626"/>
+               <path d="M63.882 108.972C88.85 108.972 109.117 88.788 109.117 63.881C109.117 38.974 88.85 18.79 63.882 18.79C38.914 18.79 18.647 38.974 18.647 63.881C18.647 88.788 38.914 108.972 63.882 108.972Z" fill="white"/>
+               <path d="M63.882 101.272C84.582 101.272 101.378 84.537 101.378 63.881C101.378 43.225 84.582 26.49 63.882 26.49C43.181 26.49 26.386 43.225 26.386 63.881C26.386 84.537 43.181 101.272 63.882 101.272Z" fill="#F37626"/>
+               <path d="M47.014 47.917C50.298 47.917 52.96 45.263 52.96 41.989C52.96 38.715 50.298 36.061 47.014 36.061C43.73 36.061 41.068 38.715 41.068 41.989C41.068 45.263 43.73 47.917 47.014 47.917Z" fill="white"/>
+               <path d="M80.009 84.452C83.293 84.452 85.955 81.798 85.955 78.524C85.955 75.25 83.293 72.596 80.009 72.596C76.725 72.596 74.063 75.25 74.063 78.524C74.063 81.798 76.725 84.452 80.009 84.452Z" fill="white"/>
+            </svg>
+            Jupyter 
+          </div>
+          <div className="flex items-center gap-2">
           {youtubeUrl ? (
             <a href={youtubeUrl} target="_blank" rel="noreferrer" className={linkClass}>
               <svg className="w-3.5 h-3.5 text-red-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -435,20 +467,52 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
              <svg className="w-3.5 h-3.5 text-gray-800 dark:text-gray-200" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
              GitHub
           </a>
+            <button type="button" className={buttonClass} onClick={() => setIsExpanded(true)}>
+              Maximize
+            </button>
+          </div>
+        </div>
+        
+        {/* Internal Notebook Engine */}
+        <div className="jk-notebook-container" ref={notebookContainerRef}>
+          <Notebook 
+            ipynb={normalizedNotebook} 
+            language="python" 
+            languages={[python]} 
+            executor={myPyodide}
+            plugins={[myEditor, myKatex]}
+            mathAlign="left"
+          />
         </div>
       </div>
-      
-      {/* Internal Notebook Engine */}
-      <div className="jk-notebook-container" ref={notebookContainerRef}>
-        <Notebook 
-          ipynb={normalizedNotebook} 
-          language="python" 
-          languages={[python]} 
-          executor={myPyodide}
-          plugins={[myEditor, myKatex]}
-          mathAlign="left"
-        />
-      </div>
+
+      {isExpanded ? (
+        <div className="fixed inset-0 z-[100] bg-black/70 px-3 py-3 backdrop-blur-sm sm:px-6 sm:py-6">
+          <div className="mx-auto flex h-full w-full max-w-[1600px] flex-col overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-[var(--nextra-bg)] shadow-2xl">
+            <div className="flex items-center justify-between gap-3 border-b border-gray-200 bg-gray-50/90 px-4 py-3 dark:border-gray-800 dark:bg-[#0a0a0a]">
+              <div>
+                <div className="text-sm font-semibold text-gray-800 dark:text-gray-100">Jupyter Notebook</div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">Expanded view. Press Esc to close.</div>
+              </div>
+              <button type="button" className={buttonClass} onClick={() => setIsExpanded(false)}>
+                Close full screen
+              </button>
+            </div>
+            <div className="min-h-0 flex-1 overflow-auto p-4 sm:p-6">
+              <div className="jk-notebook-container jk-notebook-container--expanded" ref={expandedNotebookContainerRef}>
+                <Notebook 
+                  ipynb={normalizedNotebook} 
+                  language="python" 
+                  languages={[python]} 
+                  executor={myPyodide}
+                  plugins={[myEditor, myKatex]}
+                  mathAlign="left"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      ) : null}
 
       <style jsx global>{`
         .jk-notebook-container .jk-copy-target {
@@ -499,7 +563,15 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
         .jk-notebook-container .text_cell_render pre {
           padding-top: 2.25rem;
         }
+
+        .jk-notebook-container--expanded {
+          min-height: 100%;
+        }
+
+        .jk-notebook-container--expanded .Notebook {
+          max-width: none;
+        }
       `}</style>
-    </div>
+    </>
   );
 }
