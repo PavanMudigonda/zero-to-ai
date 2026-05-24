@@ -63,14 +63,16 @@ function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: stri
   return Array.from(nodes.values())
     .sort(compareNavNodes)
     .map((node) => {
-      // When a page/folder has the same name as its parent folder, the sidebar would show
-      // identical text for both the section button and the item link (self-nesting display bug).
-      // Use "Overview" as the display title to disambiguate.
-      const title = node.name === parentFolderName ? 'Overview' : node.title;
+      // When a page/folder has the same name as its parent folder, use a distinct internal
+      // node name so Nextra renders it as a separate item instead of collapsing it into the
+      // parent section entry.
+      const isSelfNestedOverview = node.name === parentFolderName;
+      const name = isSelfNestedOverview ? `${node.name}__overview` : node.name;
+      const title = isSelfNestedOverview ? 'Overview' : node.title;
 
       if (node.children.size > 0) {
         return {
-          name: node.name,
+          name,
           route: node.route,
           title,
           children: materializePageMap(node.children, node.name),
@@ -78,7 +80,7 @@ function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: stri
       }
 
       return {
-        name: node.name,
+        name,
         route: node.route,
         title,
       };
@@ -173,9 +175,10 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  const routeIndex = getStaticSiteRoutes();
-  const pageMap = buildLightweightPageMap(routeIndex);
-  const searchItems = buildSearchItems(pageMap as any);
+  const canonicalRoutes = getStaticSiteRoutes();
+  const sidebarRoutes = getStaticSiteRoutes({ includeSelfNestedRoutes: true });
+  const pageMap = buildLightweightPageMap(sidebarRoutes);
+  const searchItems = buildSearchItems(buildLightweightPageMap(canonicalRoutes) as any);
   const websiteStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',

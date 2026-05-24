@@ -4,7 +4,8 @@ import { join, relative, sep } from 'node:path';
 const APP_ROOT = join(process.cwd(), 'src', 'app');
 const PAGE_FILE_NAMES = new Set(['page.mdx', 'page.tsx', 'page.ts', 'page.jsx', 'page.js']);
 const EXCLUDED_SEGMENTS = new Set(['_meta.ts', 'error.tsx', 'not-found.tsx', 'layout.tsx']);
-let cachedRoutes: string[] | null = null;
+let cachedAllRoutes: string[] | null = null;
+let cachedCanonicalRoutes: string[] | null = null;
 
 function shouldSkipSelfNestedRoute(route: string): boolean {
   const segments = route.split('/').filter(Boolean);
@@ -42,23 +43,36 @@ function collectRouteDirectories(currentDirectory: string, routeDirectories: str
   }
 }
 
-export function getStaticSiteRoutes(): string[] {
-  if (cachedRoutes) {
-    return cachedRoutes;
+function collectStaticSiteRoutes(): string[] {
+  if (cachedAllRoutes) {
+    return cachedAllRoutes;
   }
 
   const routeDirectories: string[] = [];
   collectRouteDirectories(APP_ROOT, routeDirectories);
 
-  const uniqueRoutes = [...new Set(routeDirectories)]
+  cachedAllRoutes = [...new Set(routeDirectories)]
     .map((directoryPath) => {
       const relativeDirectory = relative(APP_ROOT, directoryPath).replaceAll(sep, '/');
       return relativeDirectory ? `/${relativeDirectory}` : '/';
-    });
+    })
+    .sort((left, right) => left.localeCompare(right));
 
-  cachedRoutes = uniqueRoutes
+  return cachedAllRoutes;
+}
+
+export function getStaticSiteRoutes(options?: { includeSelfNestedRoutes?: boolean }): string[] {
+  if (options?.includeSelfNestedRoutes) {
+    return collectStaticSiteRoutes();
+  }
+
+  if (cachedCanonicalRoutes) {
+    return cachedCanonicalRoutes;
+  }
+
+  cachedCanonicalRoutes = collectStaticSiteRoutes()
     .filter((route) => !shouldSkipSelfNestedRoute(route))
     .sort((left, right) => left.localeCompare(right));
 
-  return cachedRoutes;
+  return cachedCanonicalRoutes;
 }

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="220" viewBox="0 0 480 220" role="img" aria-labelledby="title desc">
+  <title id="title">Autoencoder diagram placeholder</title>
+  <desc id="desc">Fallback diagram used when the original autoencoder image is unavailable.</desc>
+  <rect width="480" height="220" rx="20" fill="#f8fafc"/>
+  <rect x="1" y="1" width="478" height="218" rx="19" fill="none" stroke="#cbd5e1"/>
+  <text x="28" y="38" fill="#0f172a" font-family="Arial, sans-serif" font-size="18" font-weight="700">Autoencoder</text>
+  <text x="28" y="60" fill="#475569" font-family="Arial, sans-serif" font-size="12">Fallback diagram for a missing notebook asset</text>
+  <g fill="#dbeafe" stroke="#60a5fa" stroke-width="2">
+    <circle cx="84" cy="120" r="18"/>
+    <circle cx="84" cy="164" r="18"/>
+    <circle cx="172" cy="106" r="18"/>
+    <circle cx="172" cy="150" r="18"/>
+    <circle cx="240" cy="128" r="16" fill="#bfdbfe"/>
+    <circle cx="308" cy="106" r="18"/>
+    <circle cx="308" cy="150" r="18"/>
+    <circle cx="396" cy="120" r="18"/>
+    <circle cx="396" cy="164" r="18"/>
+  </g>
+  <g stroke="#94a3b8" stroke-width="3" stroke-linecap="round">
+    <path d="M102 120h52"/>
+    <path d="M102 164h52"/>
+    <path d="M190 106h34"/>
+    <path d="M190 150h34"/>
+    <path d="M256 128h34"/>
+    <path d="M326 106h52"/>
+    <path d="M326 150h52"/>
+  </g>
+  <text x="56" y="196" fill="#475569" font-family="Arial, sans-serif" font-size="12">Input</text>
+  <text x="218" y="196" fill="#475569" font-family="Arial, sans-serif" font-size="12">Latent</text>
+  <text x="364" y="196" fill="#475569" font-family="Arial, sans-serif" font-size="12">Output</text>
+</svg>

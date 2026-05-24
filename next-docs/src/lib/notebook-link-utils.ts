@@ -7,7 +7,12 @@ declare global {
 }
 
 const MARKDOWN_LINK_PATTERN = /(\[[^\]]*\]\()([^\)]+)(\))/g;
-const HTML_ATTRIBUTE_LINK_PATTERN = /((?:href|src)=['"])([^'"]+)(['"])/g;
+const HTML_ATTRIBUTE_LINK_PATTERN = /((?:href|src)\s*=\s*['"])([^'"]+)(['"])/g;
+const NOTEBOOK_ASSET_PATTERN = /\.(?:png|jpe?g|gif|svg|webp|bmp|ico)$/i;
+const NOTEBOOK_ASSET_FALLBACKS: Record<string, string> = {
+  'figures/pdsh-cover-small.png': '/notebook-assets/pdsh-cover-small.svg',
+  'imgs/autoencoder.png': '/notebook-assets/autoencoder-placeholder.svg',
+};
 
 function isExternalUrl(url: string): boolean {
   return /^(?:[a-z]+:)?\/\//i.test(url) || /^(?:mailto:|tel:|javascript:|data:|#)/i.test(url);
@@ -24,6 +29,10 @@ function splitTarget(url: string): { pathname: string; suffix: string } {
 
 function ensureTrailingSlash(url: string): string {
   return url.endsWith('/') ? url : `${url}/`;
+}
+
+function normalizeAssetKey(url: string): string {
+  return url.replace(/^\.\//, '').replace(/^\//, '').toLowerCase();
 }
 
 function normalizeSegmentName(segmentName: string): string {
@@ -70,6 +79,21 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
   }
 
   const { pathname: targetPathname, suffix } = splitTarget(targetUrl);
+
+  if (NOTEBOOK_ASSET_PATTERN.test(targetPathname)) {
+    const fallbackAsset = NOTEBOOK_ASSET_FALLBACKS[normalizeAssetKey(targetPathname)];
+
+    if (fallbackAsset) {
+      return `${fallbackAsset}${suffix}`;
+    }
+
+    const resolvedAssetPath = new URL(
+      targetPathname,
+      `https://zero-to-ai.dev${ensureTrailingSlash(currentPathname || '/')}`,
+    ).pathname;
+
+    return `${resolvedAssetPath}${suffix}`;
+  }
 
   if (!/\.(?:md|mdx|ipynb)$/i.test(targetPathname) && !targetUrl.endsWith('/')) {
     return targetUrl;

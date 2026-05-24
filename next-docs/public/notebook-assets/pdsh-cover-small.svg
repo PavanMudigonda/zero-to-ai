@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="300" viewBox="0 0 220 300" role="img" aria-labelledby="title desc">
+  <title id="title">Python Data Science Handbook cover placeholder</title>
+  <desc id="desc">Fallback artwork used when the original handbook cover image is unavailable.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="220" height="300" rx="18" fill="url(#bg)"/>
+  <rect x="18" y="18" width="184" height="264" rx="14" fill="#ffffff" opacity="0.08"/>
+  <text x="26" y="62" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20" font-weight="700">Python Data</text>
+  <text x="26" y="90" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="20" font-weight="700">Science Handbook</text>
+  <text x="26" y="136" fill="#bfdbfe" font-family="Arial, sans-serif" font-size="13">Notebook image fallback</text>
+  <path d="M34 210c18-34 48-52 76-52 25 0 49 13 76 42" fill="none" stroke="#93c5fd" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="72" cy="176" r="12" fill="#f8fafc" opacity="0.92"/>
+  <circle cx="124" cy="154" r="10" fill="#dbeafe" opacity="0.92"/>
+  <circle cx="166" cy="188" r="11" fill="#eff6ff" opacity="0.92"/>
+  <text x="26" y="256" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="11">Original cover asset missing from repository</text>
+</svg>
