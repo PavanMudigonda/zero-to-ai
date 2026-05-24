@@ -260,18 +260,18 @@ export default function CurriculumHome() {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200 bg-[linear-gradient(180deg,rgba(14,165,233,0.08),rgba(15,23,42,0.02))] p-6 shadow-sm dark:border-slate-800 dark:bg-[linear-gradient(180deg,rgba(56,189,248,0.10),rgba(15,23,42,0.30))]">
-            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-400">Quick links</p>
+          <div className="rounded-3xl border border-slate-300 bg-[linear-gradient(180deg,#eff6ff,#dbe4f0)] p-6 text-slate-950 shadow-sm dark:border-slate-700 dark:bg-[linear-gradient(180deg,rgba(30,41,59,0.96),rgba(15,23,42,0.92))] dark:text-slate-100">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">Quick links</p>
             <ul className="mt-5 space-y-3 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <a href={link.href} className="font-semibold text-slate-950 underline decoration-slate-500 underline-offset-4 hover:text-sky-800 dark:text-white dark:decoration-slate-500 dark:hover:text-sky-300">
+                  <a href={link.href} className="font-semibold !text-slate-950 underline decoration-slate-700 underline-offset-4 hover:!text-sky-800 dark:!text-white dark:decoration-slate-400 dark:hover:!text-sky-300">
                     {link.label}
                   </a>
                 </li>
               ))}
             </ul>
-            <p className="mt-6 text-sm leading-7 text-slate-800 dark:text-slate-200">This site works best as a progression: use the roadmap for direction, notebooks for practice, and cheatsheets for speed.</p>
+            <p className="mt-6 text-sm leading-7 !text-slate-700 dark:!text-slate-200">This site works best as a progression: use the roadmap for direction, notebooks for practice, and cheatsheets for speed.</p>
           </div>
         </section>
       </HubPageShell>

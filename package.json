@@ -34,6 +34,6 @@
   },
   "devDependencies": {
     "next-sitemap": "^4.2.3",
-    "opencode-ai": "^1.14.28"
+    "opencode-ai": "^1.15.10"
   }
 }

@@ -305,14 +305,14 @@ export default function CheatsheetsHub() {
           </div>
         </div>
 
-        <div className="rounded-3xl border border-slate-200 bg-[linear-gradient(180deg,rgba(14,165,233,0.08),rgba(15,23,42,0.02))] p-6 shadow-sm dark:border-slate-800 dark:bg-[linear-gradient(180deg,rgba(56,189,248,0.10),rgba(15,23,42,0.30))]">
-          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-400">How to use this hub</p>
-          <ul className="mt-5 space-y-3 text-sm text-slate-700 dark:text-slate-200">
+        <div className="rounded-3xl border border-slate-300 bg-[linear-gradient(180deg,#eff6ff,#dbe4f0)] p-6 text-slate-950 shadow-sm dark:border-slate-700 dark:bg-[linear-gradient(180deg,rgba(30,41,59,0.96),rgba(15,23,42,0.92))] dark:text-slate-100">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700 dark:text-sky-300">How to use this hub</p>
+          <ul className="mt-5 space-y-3 text-sm !text-slate-800 dark:!text-slate-200">
             <li>Open one category for broad navigation when you are exploring a new tool area.</li>
             <li>Jump straight to a specific cheatsheet when you need a command pattern during implementation.</li>
             <li>Use these references alongside notebooks and project work, not as a separate study track.</li>
           </ul>
-          <p className="mt-6 text-sm leading-7 text-slate-600 dark:text-slate-300">The best use case for this section is active work: terminal open, docs nearby, and just enough reference material to keep momentum.</p>
+          <p className="mt-6 text-sm leading-7 !text-slate-700 dark:!text-slate-200">The best use case for this section is active work: terminal open, docs nearby, and just enough reference material to keep momentum.</p>
         </div>
       </section>
     </HubPageShell>
