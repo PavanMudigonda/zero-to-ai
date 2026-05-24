@@ -4,5 +4,6 @@ export default {
   "03_websocket_connections": "3. Websocket Connections",
   "04_real_time_rag": "4. Real Time RAG",
   "05_production_streaming": "5. Production Streaming",
-  "20-real-time-streaming": "6. Real-Time Streaming",
+  "06_realtime_voice_multimodal": "6. Realtime Voice Multimodal",
+  "20-real-time-streaming": "7. Real-Time Streaming",
 }

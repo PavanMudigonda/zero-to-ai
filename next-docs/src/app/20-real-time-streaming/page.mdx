@@ -4,9 +4,9 @@
 > Use it to learn the core patterns, then pair it with MLOps, local LLMs, or multimodal work for stronger projects.
 
 ## Overview
-Learn how to build real-time AI applications with streaming responses, WebSocket connections, and progressive loading.
+Learn how to build real-time AI applications with streaming responses, WebSocket connections, progressive loading, and live voice or multimodal interaction patterns.
 
-**Duration:** 8 hours (4 notebooks + materials)
+**Duration:** 10 hours (5 notebooks + materials)
 
 **Topics Covered:**
 1. Streaming LLM Responses
@@ -23,62 +23,56 @@ By the end of this phase, you will be able to:
 - Understand when WebRTC is a better fit than SSE/WebSockets
 - Handle progressive loading and chunked responses
 - Create streaming RAG pipelines
-- Deploy production-ready streaming systems
+- Design production streaming systems with backpressure and observability in mind
 - Optimize for latency and throughput
 - Design interruption-safe realtime voice loops
 
 ## Prerequisites
 
 - Strong Python programming skills
-- Understanding of LLMs and APIs
+- Understanding of LLMs and API-based workflows
 - Basic knowledge of async/await
 - Familiarity with web technologies
-- Completed Phases 1-10
+- Prior exposure to prompting, embeddings, or simple app integration work is helpful
 
 ## How To Use This Phase Right Now
 
 1. Learn the transport patterns first: SSE, WebSockets, and when WebRTC enters the picture.
 2. Build one small streaming project before optimizing everything.
-3. Treat this phase as a systems-pattern module that complements [../09-mlops/README.md](../09-mlops/README.md), [../13-multimodal/README.md](../13-multimodal/README.md), and [../14-local-llms/README.md](../14-local-llms/README.md).
+3. Add `06_realtime_voice_multimodal.ipynb` when you move from text streaming to turn-taking voice or live multimodal assistants.
+4. Treat this phase as a systems-pattern module that complements [../09-mlops/09-mlops.ipynb](../09-mlops/09-mlops.ipynb), [../13-multimodal/13-multimodal.ipynb](../13-multimodal/13-multimodal.ipynb), and [../14-local-llms/14-local-llms.ipynb](../14-local-llms/14-local-llms.ipynb).
 
 ## Course Content
 
 ### 1. Streaming Responses (90 minutes)
-**File:** `01_streaming_responses.ipynb`
+**File:** `02_streaming_responses.ipynb`
 
 **Topics:**
-- OpenAI streaming API (`stream=True`)
+- OpenAI Responses API event streaming
 - Server-Sent Events (SSE) protocol
-- Handling stream chunks
-- Real-time token processing
+- Handling semantic stream events and text deltas
+- Measuring TTFT and output rate
 - Error handling in streams
 - Progress indicators
 
 **Key Code:**
 ```python
-# OpenAI Streaming
-for chunk in client.chat.completions.create(
-    model="gpt-4",
-    messages=[{"role": "user", "content": "Tell me a story"}],
+# OpenAI Responses API streaming
+for event in client.responses.create(
+    model="gpt-4.1",
+    input="Tell me a story",
     stream=True
 ):
-    if chunk.choices[0].delta.content:
-        print(chunk.choices[0].delta.content, end="")
+    if event.type == "response.output_text.delta":
+        print(event.delta, end="")
 
-# FastAPI SSE
-from fastapi import FastAPI
-from fastapi.responses import StreamingResponse
-
-@app.get("/stream")
-async def stream_response():
-    async def generate():
-        for chunk in get_llm_stream():
-            yield f"data: {chunk}\\n\\n"
-    return StreamingResponse(generate(), media_type="text/event-stream")
+# SSE frame format
+def format_sse(delta: str) -> str:
+    return f"data: {delta}\\n\\n"
 ```
 
 ### 2. WebSocket Connections (90 minutes)
-**File:** `02_websocket_connections.ipynb`
+**File:** `03_websocket_connections.ipynb`
 
 **Topics:**
 - WebSocket protocol basics
@@ -90,27 +84,20 @@ async def stream_response():
 
 **Key Code:**
 ```python
-# Server
-from fastapi import WebSocket
+import asyncio
 
-@app.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    while True:
-        data = await websocket.receive_text()
-        response = await process_message(data)
-        await websocket.send_text(response)
+async def process_message(data: str) -> str:
+    return f"assistant: {data}"
 
-# Client
-import websockets
-
-async with websockets.connect("ws://localhost:8000/ws") as ws:
-    await ws.send("Hello")
-    response = await ws.recv()
+async def websocket_style_roundtrip(messages: list[str]) -> list[str]:
+    replies = []
+    for data in messages:
+        replies.append(await process_message(data))
+    return replies
 ```
 
 ### 3. Real-Time RAG (90 minutes)
-**File:** `03_real_time_rag.ipynb`
+**File:** `04_real_time_rag.ipynb`
 
 **Topics:**
 - Streaming search results
@@ -131,7 +118,7 @@ flowchart TD
 ```
 
 ### 4. Production Streaming (120 minutes)
-**File:** `04_production_streaming.ipynb`
+**File:** `05_production_streaming.ipynb`
 
 **Topics:**
 - Load balancing streaming connections
@@ -148,6 +135,16 @@ flowchart TD
 - Memory management
 - Graceful degradation
 - Observability
+
+### 5. Realtime Voice and Multimodal Patterns (90 minutes)
+**File:** `06_realtime_voice_multimodal.ipynb`
+
+**Topics:**
+- Turn-taking state machines
+- Interruption and cancellation semantics
+- Audio frame chunking
+- WebRTC vs WebSocket transport choices
+- Live session state for voice and multimodal assistants
 
 ## Technical Stack
 
@@ -207,9 +204,9 @@ flowchart TD
 
 ### Pattern 1: Simple SSE Streaming
 ```python
-async def stream_generator():
-    async for chunk in llm_stream():
-        yield f"data: {json.dumps({'text': chunk})}\\n\\n"
+for event in client.responses.create(model="gpt-4.1-mini", input=prompt, stream=True):
+    if event.type == "response.output_text.delta":
+        yield f"data: {event.delta}\\n\\n"
 ```
 
 ### Pattern 2: WebSocket with Heartbeat
@@ -255,7 +252,7 @@ async def streaming_rag(query):
 ## Resources
 
 ### Documentation
-- [OpenAI Streaming](https://platform.openai.com/docs/api-reference/streaming)
+- [OpenAI Responses API](https://platform.openai.com/docs/api-reference/responses)
 - [FastAPI WebSockets](https://fastapi.tiangolo.com/advanced/websockets/)
 - [MDN Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events)
 - [WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
