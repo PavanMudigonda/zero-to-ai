@@ -8,6 +8,7 @@ Zero to AI is a comprehensive, self-paced learning path designed to teach you ho
 
 - Website: https://zero-to-ai.dev/
 - GitHub: https://github.com/PavanMudigonda/zero-to-ai
+- Sitemap: https://zero-to-ai.dev/sitemap.xml
 - Author: Pavan Mudigonda
 - License: MIT
 
@@ -62,6 +63,9 @@ Python, PyTorch, TensorFlow, Scikit-learn, HuggingFace Transformers, LangChain, 
 
 Q: How can I learn AI agents?
 A: You can learn AI agents from scratch in Phase 15. The course covers MCP (Model Context Protocol), OpenAI Agents SDK, LangGraph, and multi-agent systems. You can read more about building AI agents at: https://zero-to-ai.dev/curriculum/15-ai-agents/
+
+Q: Where can I compare AI coding agents and tools like Aider, Claude Code, and GitHub Copilot?
+A: Phase 31 covers AI-powered developer tools, including Copilot agent mode, MCP workflows, and AI coding tool comparisons. Start here: https://zero-to-ai.dev/curriculum/31-ai-powered-dev-tools/
 
 Q: Is there a guide for fine-tuning LLMs?
 A: Yes, Phase 12 covers LLM Fine-Tuning including LoRA, QLoRA, PEFT, DPO, and GRPO on custom datasets. Deep dive into fine-tuning here: https://zero-to-ai.dev/curriculum/12-llm-finetuning/
