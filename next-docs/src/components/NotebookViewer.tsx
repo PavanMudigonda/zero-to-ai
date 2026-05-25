@@ -227,39 +227,35 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
 
     const copyButtonClassName = 'jk-copy-button';
 
-    const fallbackCopy = async (text: string) => {
-      const textArea = document.createElement('textarea');
-      textArea.value = text;
-      textArea.style.position = 'fixed';
-      textArea.style.top = '0';
-      textArea.style.left = '-9999px';
-      textArea.style.opacity = '0';
-      document.body.appendChild(textArea);
-      textArea.focus();
-      textArea.select();
-      textArea.setSelectionRange(0, textArea.value.length);
-
-      const didCopy = document.execCommand('copy');
-
-      document.body.removeChild(textArea);
-
-      if (!didCopy) {
-        throw new Error('execCommand copy failed');
-      }
-    };
-
     const copyText = async (text: string) => {
-      if (navigator.clipboard?.writeText) {
-        try {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(text);
-          return;
-        } catch {
-          // Fall through to the textarea-based copy path for browsers that
-          // block async clipboard writes outside a trusted secure context.
+          return true;
         }
+      } catch (err) {
+        console.warn('Clipboard API failed', err);
       }
-
-      await fallbackCopy(text);
+      
+      // Fallback for non-secure contexts HTTP / legacy browser
+      try {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        textArea.style.position = 'fixed';
+        textArea.style.top = '0';
+        textArea.style.left = '-9999px';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        textArea.setSelectionRange(0, textArea.value.length);
+        const didCopy = document.execCommand('copy');
+        document.body.removeChild(textArea);
+        return didCopy;
+      } catch (err) {
+        console.warn('Fallback copy failed', err);
+        return false;
+      }
     };
 
     const applyButtons = (container: HTMLDivElement) => {
@@ -300,8 +296,8 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           const originalText = button.textContent;
 
           try {
-            await copyText(latestText);
-            button.textContent = 'Copied';
+            const success = await copyText(latestText);
+            button.textContent = success ? 'Copied' : 'Failed';
           } catch {
             button.textContent = 'Failed';
           }

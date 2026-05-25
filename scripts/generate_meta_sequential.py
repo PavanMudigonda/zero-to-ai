@@ -1,7 +1,8 @@
 import os
 import json
-from pathlib import Path
 import re
+from pathlib import Path
+from utils import clean_title
 
 def get_sort_key(name):
     match = re.match(r'^(\d+)[_-]', name)
@@ -9,74 +10,11 @@ def get_sort_key(name):
         return (int(match.group(1)), name)
     return (float('inf'), name)
 
-# Words whose capitalization differs from `.capitalize()`. Keys are lowercase.
-TITLE_OVERRIDES = {
-    'ai': 'AI',
-    'ml': 'ML',
-    'llm': 'LLM',
-    'llms': 'LLMs',
-    'rag': 'RAG',
-    'mlops': 'MLOps',
-    'nlp': 'NLP',
-    'cv': 'CV',
-    'gan': 'GAN',
-    'vae': 'VAE',
-    'api': 'API',
-    'apis': 'APIs',
-    'sdk': 'SDK',
-    'mcp': 'MCP',
-    'tts': 'TTS',
-    'rl': 'RL',
-    'lora': 'LoRA',
-    'qlora': 'QLoRA',
-    'peft': 'PEFT',
-    'finetuning': 'Fine-tuning',
-    'redteaming': 'Red Teaming',
-    'langchain': 'LangChain',
-    'llamaindex': 'LlamaIndex',
-    'graphrag': 'GraphRAG',
-    'hyde': 'HyDE',
-    'gpt': 'GPT',
-    'vscode': 'VS Code',
-    'pytorch': 'PyTorch',
-    'tensorflow': 'TensorFlow',
-    'numpy': 'NumPy',
-    'pandas': 'Pandas',
-    'huggingface': 'Hugging Face',
-    'openai': 'OpenAI',
-}
-
-# Multi-word phrase overrides applied after word-level cleanup. Map normalized
-# space-joined output to its preferred display form.
-PHRASE_OVERRIDES = {
-    'Debugging Troubleshooting': 'Debugging & Troubleshooting',
-    'AI Safety Red Teaming': 'AI Safety & Red Teaming',
-    'AI Hardware LLM Validation': 'AI Hardware & LLM Validation',
-    'Low Code AI Tools': 'Low-Code AI Tools',
-    'Real Time Streaming': 'Real-Time Streaming',
-    'Time Series Analysis': 'Time-Series Analysis',
-    'AI Powered Dev Tools': 'AI-Powered Dev Tools',
-}
-
-def clean_title(name):
-    name = re.sub(r'^\d+[_-]', '', name)
-    name = name.replace('_', ' ').replace('-', ' ')
-    words = name.split()
-    out = []
-    for w in words:
-        lw = w.lower()
-        out.append(TITLE_OVERRIDES.get(lw, w.capitalize()))
-    cleaned = ' '.join(out)
-    cleaned = cleaned.replace('Specializations ', '')
-    cleaned = PHRASE_OVERRIDES.get(cleaned, cleaned)
-    return cleaned
-
 def has_valid_page(directory):
     for root, dirs, files in os.walk(directory):
         dirs[:] = [d for d in dirs if not (d.startswith('.') or d.startswith('_'))]
-        files = [f for f in files if not (f.startswith('.') or f.startswith('_'))]
         for f in files:
-            if f in ('page.mdx', 'page.md', 'page.tsx', 'page.jsx'):
+            if f in ('page.mdx', 'page.md', 'page.tsx', 'page.jsx') and not (f.startswith('.') or f.startswith('_')):
                 return True
     return False
 
@@ -97,24 +35,18 @@ def main():
             item_path = Path(root) / item
             
             if item_path.is_file():
-                if not item in ('page.mdx', 'page.md', 'page.tsx', 'page.jsx'):
+                if item not in ('page.mdx', 'page.md', 'page.tsx', 'page.jsx'):
                     continue
             elif item_path.is_dir():
                 if not has_valid_page(item_path):
                     continue
                     
-            orig_name = item
-            if item_path.is_file() and '.' in item:
-                orig_name = item.rsplit('.', 1)[0]
+            orig_name = item.rsplit('.', 1)[0] if item_path.is_file() and '.' in item else item
                 
-            if orig_name in ['layout', 'demo', 'favicon']:
+            if orig_name in ['layout', 'demo', 'favicon', 'page']:
                 continue
 
-            # Skip dev-only routes from the curriculum listing.
             if is_root and orig_name == 'app':
-                continue
-                
-            if orig_name == 'page':
                 continue
                 
             valid_items.append((item, orig_name))
@@ -124,7 +56,7 @@ def main():
 
         meta_dict = {}
         for index, (item, route_name) in enumerate(valid_items, 1):
-            cleaned = clean_title(route_name)
+            cleaned = clean_title(route_name, strip_prefix=True)
             formatted_title = f"{index}. {cleaned}"
             meta_dict[route_name] = formatted_title
             
@@ -136,13 +68,11 @@ def main():
             
             if is_root:
                 meta_dict = {
-                    "index": {
-                        "title": "Home"
-                    },
+                    "index": {"title": "Home"},
                     **meta_dict
                 }
                 
-            with open(meta_path, 'w') as f:
+            with open(meta_path, 'w', encoding='utf-8') as f:
                 f.write("export default {\n")
                 for key, value in meta_dict.items():
                     if isinstance(value, dict):
@@ -161,11 +91,9 @@ def main():
 
     page_mdx_path = app_dir / "page.mdx"
     if page_mdx_path.exists():
-        with open(page_mdx_path, "r") as f:
-            content = f.read()
+        content = page_mdx_path.read_text(encoding='utf-8')
         new_content = re.sub(r'<Cards[\s\S]*?<\/Cards>', cards_mdx.strip(), content)
-        with open(page_mdx_path, "w") as f:
-            f.write(new_content)
+        page_mdx_path.write_text(new_content, encoding='utf-8')
         print("Updated page.mdx with the latest categories.")
 
 if __name__ == '__main__':
