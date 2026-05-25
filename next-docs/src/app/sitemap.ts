@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return getStaticSiteRoutes().map((routePath) => ({
     url: new URL(routePath, 'https://zero-to-ai.dev').toString(),
     lastModified,
-    changeFrequency: routePath === '/' ? 'weekly' : 'monthly',
-    priority: routePath === '/' ? 1 : 0.7,
+    changeFrequency: routePath === '/' || routePath.startsWith('/curriculum') ? 'weekly' : 'monthly',
+    priority: routePath === '/' ? 1 : routePath.startsWith('/curriculum') ? 0.8 : 0.7,
   }));
 }
