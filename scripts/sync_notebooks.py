@@ -64,5 +64,18 @@ import nb from './{file}';
     print(f"Successfully synced {len(synced_dirs)} notebooks from jupyter-notebooks/ to next-docs/src/app/!")
     print("Run `python3 scripts/generate_meta_sequential.py` to update the Nextra routing maps.")
 
+    # Copy cheat sheet PNGs into next-docs/public/cheatsheets/
+    cheatsheets_src = repo_root / "jupyter-notebooks" / "32-cheatsheets" / "ai-ml"
+    cheatsheets_dst = repo_root / "next-docs" / "public" / "cheatsheets"
+    copied_pngs = 0
+    if cheatsheets_src.exists():
+        cheatsheets_dst.mkdir(parents=True, exist_ok=True)
+        for png in cheatsheets_src.rglob("*.png"):
+            dest = cheatsheets_dst / png.name
+            shutil.copy2(png, dest)
+            copied_pngs += 1
+        print(f"Copied {copied_pngs} cheat sheet PNG(s) to next-docs/public/cheatsheets/")
+        print("  Served at /cheatsheets/<filename>.png on the static site.")
+
 if __name__ == '__main__':
     sync_notebooks()
