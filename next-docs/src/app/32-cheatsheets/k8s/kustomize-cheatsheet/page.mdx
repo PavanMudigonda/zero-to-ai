@@ -1,0 +1,263 @@
+# Kustomize Cheatsheet
+
+Template-free Kubernetes configuration management with bases, overlays, generators, and patches.
+
+## Table of Contents
+1. [Install and Verify](#install-and-verify)
+2. [Core Commands](#core-commands)
+3. [Minimal kustomization.yaml](#minimal-kustomizationyaml)
+4. [Bases and Overlays](#bases-and-overlays)
+5. [Patching Resources](#patching-resources)
+6. [Generators](#generators)
+7. [Cross-Cutting Settings](#cross-cutting-settings)
+8. [Images and Replicas](#images-and-replicas)
+9. [Debug and Diff Workflow](#debug-and-diff-workflow)
+10. [Practical Patterns](#practical-patterns)
+
+---
+
+## Install and Verify
+
+Use either the standalone `kustomize` binary or the `kubectl` integration.
+
+```bash
+# macOS
+brew install kustomize
+
+# Verify standalone binary
+kustomize version
+
+# Verify kubectl integration
+kubectl kustomize --help
+```
+
+## Core Commands
+
+Render manifests locally, then apply or diff them through kubectl.
+
+```bash
+# Render manifests from a directory
+kustomize build ./
+kubectl kustomize ./
+
+# Apply an overlay directly
+kubectl apply -k overlays/dev
+kubectl apply -k overlays/prod
+
+# Preview changes before apply
+kubectl diff -k overlays/prod
+
+# Delete everything defined by a kustomization
+kubectl delete -k overlays/dev
+```
+
+## Minimal kustomization.yaml
+
+A kustomization lists resources and the transformations to apply without editing the original YAML files.
+
+```yaml
+# kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - deployment.yaml
+  - service.yaml
+commonLabels:
+  app.kubernetes.io/name: store-api
+  app.kubernetes.io/part-of: zero-to-ai
+namespace: demo
+```
+
+```bash
+kustomize build .
+```
+
+## Bases and Overlays
+
+Keep reusable defaults in a base and environment-specific changes in overlays.
+
+```text
+app/
+  base/
+    deployment.yaml
+    service.yaml
+    kustomization.yaml
+  overlays/
+    dev/
+      kustomization.yaml
+      patch-replicas.yaml
+    prod/
+      kustomization.yaml
+      patch-resources.yaml
+```
+
+```yaml
+# overlays/dev/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+nameSuffix: -dev
+patches:
+  - path: patch-replicas.yaml
+```
+
+```yaml
+# overlays/prod/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+nameSuffix: -prod
+patches:
+  - path: patch-resources.yaml
+```
+
+## Patching Resources
+
+Use patches to adjust existing resources for an environment without copying the full manifest.
+
+```yaml
+# overlays/dev/patch-replicas.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-api
+spec:
+  replicas: 2
+```
+
+```yaml
+# overlays/prod/kustomization.yaml with target selector
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base
+patches:
+  - path: patch-resources.yaml
+    target:
+      kind: Deployment
+      name: store-api
+```
+
+```yaml
+# overlays/prod/patch-resources.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: store-api
+spec:
+  template:
+    spec:
+      containers:
+        - name: api
+          resources:
+            requests:
+              cpu: 250m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+```
+
+## Generators
+
+Let Kustomize generate ConfigMaps and Secrets from literals or files. Do not commit real secrets in plaintext.
+
+```yaml
+# kustomization.yaml
+configMapGenerator:
+  - name: app-config
+    literals:
+      - LOG_LEVEL=debug
+      - FEATURE_FLAG=true
+    files:
+      - application.properties
+
+secretGenerator:
+  - name: api-secrets
+    literals:
+      - DB_PASSWORD=replace-me
+      - API_KEY=replace-me
+
+generatorOptions:
+  disableNameSuffixHash: false
+  labels:
+    managed-by: kustomize
+```
+
+## Cross-Cutting Settings
+
+Apply the same namespace, labels, annotations, or naming strategy to every resource in the set.
+
+```yaml
+# kustomization.yaml
+namespace: payments
+namePrefix: team1-
+nameSuffix: -v2
+commonLabels:
+  tier: backend
+  owner: platform
+commonAnnotations:
+  repo: github.com/example/store-api
+```
+
+```bash
+kustomize build overlays/dev
+```
+
+## Images and Replicas
+
+Update images or replica counts without touching the base manifest directly.
+
+```yaml
+# kustomization.yaml
+images:
+  - name: nginx
+    newName: ghcr.io/acme/nginx
+    newTag: 1.27.0
+
+replicas:
+  - name: store-api
+    count: 4
+```
+
+```bash
+kustomize edit set image nginx=ghcr.io/acme/nginx:1.27.0
+kustomize edit set namespace payments
+```
+
+## Debug and Diff Workflow
+
+Render first, inspect the YAML, then diff and apply.
+
+```bash
+# Render to stdout
+kubectl kustomize overlays/dev
+
+# Save rendered manifests for review
+kustomize build overlays/prod > rendered-prod.yaml
+
+# Validate output shape before apply
+kubectl diff -k overlays/prod
+kubectl apply -k overlays/prod
+kubectl get all -n payments
+```
+
+## Practical Patterns
+
+### Pattern 1: Keep vendor manifests untouched
+Store upstream YAML in `base/` and put your organization-specific labels, namespaces, and image changes in overlays.
+
+### Pattern 2: One overlay per environment
+Use `overlays/dev`, `overlays/staging`, and `overlays/prod` for clean promotion paths.
+
+### Pattern 3: Generate config, patch workloads
+Use `configMapGenerator` and `secretGenerator` for inputs, then patch Deployments to consume them.
+
+### Pattern 4: Prefer diff before apply
+`kubectl diff -k` is the cheapest way to catch namespace, image, or naming mistakes before rollout.
+
+---
+
+**Source alignment**: Based on the Kubernetes Kustomize introduction and adapted into a quick-reference workflow.
