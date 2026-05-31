@@ -13,6 +13,8 @@
     "lint": "eslint",
     "test:sidebar": "node test-sidebar.spec.js",
     "test:sidebar:live": "BASE_URL=https://zero-to-ai.dev node test-sidebar.spec.js",
+    "test:sidebar:all": "node test-sidebar-all.spec.js",
+    "test:sidebar:all:live": "BASE_URL=https://zero-to-ai.dev node test-sidebar-all.spec.js",
     "test:nav-links": "node test-nav-links.mjs",
     "test:nav-links:live": "BASE_URL=https://zero-to-ai.dev node test-nav-links.mjs"
   },
