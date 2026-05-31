@@ -6,5 +6,4 @@ export default {
   "12-visualization-relationships": "5. Visualization Relationships",
   "13-meaningful-visualizations": "6. Meaningful Visualizations",
   R: "7. R",
-  translations: "8. Translations",
 }

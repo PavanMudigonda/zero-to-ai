@@ -4,5 +4,4 @@ export default {
   "06-non-relational": "3. Non Relational",
   "07-python": "4. Python",
   "08-data-preparation": "5. Data Preparation",
-  translations: "6. Translations",
 }

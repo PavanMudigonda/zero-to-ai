@@ -3,5 +3,4 @@ export default {
   assignment: "2. Assignment",
   solution: "3. Solution",
   starter: "4. Starter",
-  translations: "5. Translations",
 }

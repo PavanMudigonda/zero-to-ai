@@ -5,5 +5,4 @@ export default {
   notebook: "4. Notebook",
   "notebook-covidspread": "5. Notebook Covidspread",
   "notebook-papers": "6. Notebook Papers",
-  translations: "7. Translations",
 }

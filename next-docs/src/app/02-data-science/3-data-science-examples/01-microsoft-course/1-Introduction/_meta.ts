@@ -4,5 +4,4 @@ export default {
   "02-ethics": "3. Ethics",
   "03-defining-data": "4. Defining Data",
   "04-stats-and-probability": "5. Stats And Probability",
-  translations: "6. Translations",
 }

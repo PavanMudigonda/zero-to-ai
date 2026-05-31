@@ -90,6 +90,45 @@ function routeDirectoryFromResolvedPath(resolvedRoutePath: string, rawTargetPath
   return stripTrailingSlash(withoutExtension) || '/';
 }
 
+function projectSectionDirectory(routePath: string): string {
+  const normalizedRoutePath = stripTrailingSlash(routePath) || '/';
+  const segments = normalizedRoutePath.split('/').filter(Boolean);
+  const lastSegment = segments[segments.length - 1] || '';
+  const parentDirectory = routeDirectory(normalizedRoutePath);
+  const parentSegment = parentDirectory.split('/').filter(Boolean).pop() || '';
+
+  if (lastSegment === 'notebook' || normalizeSegmentName(lastSegment) === normalizeSegmentName(parentSegment)) {
+    return parentDirectory;
+  }
+
+  return normalizedRoutePath;
+}
+
+function findProjectedSectionRoute(targetRouteDirectory: string, routeIndex: string[]): string | null {
+  const targetSegment = normalizeSegmentName(targetRouteDirectory.split('/').filter(Boolean).pop() || '');
+  let ancestorParent = routeDirectory(targetRouteDirectory);
+
+  while (true) {
+    for (const routePath of routeIndex) {
+      const projectedSectionDirectory = projectSectionDirectory(routePath);
+      const projectedParent = routeDirectory(projectedSectionDirectory);
+      const projectedSegment = normalizeSegmentName(projectedSectionDirectory.split('/').filter(Boolean).pop() || '');
+
+      if (projectedParent === ancestorParent && projectedSegment === targetSegment) {
+        return routePath;
+      }
+    }
+
+    if (!ancestorParent || ancestorParent === '/') {
+      break;
+    }
+
+    ancestorParent = routeDirectory(ancestorParent);
+  }
+
+  return null;
+}
+
 function findSiblingAliasRoute(routeDirectory: string, routeIndex: string[]): string | null {
   const parentRoute = routeDirectory.replace(/\/[^/]+$/, '') || '/';
   const targetSegment = normalizeSegmentName(routeDirectory.split('/').filter(Boolean).pop() || '');
@@ -193,6 +232,11 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
 
     if (routeIndex.includes(candidateRouteDirectory)) {
       return `${ensureTrailingSlash(candidateRouteDirectory)}${suffix}`;
+    }
+
+    const projectedSectionRoute = findProjectedSectionRoute(candidateRouteDirectory, routeIndex);
+    if (projectedSectionRoute) {
+      return `${ensureTrailingSlash(projectedSectionRoute)}${suffix}`;
     }
 
     if (/(?:^|\/)Index\.ipynb$/i.test(targetPathname)) {
