@@ -148,6 +148,44 @@ function routeDirectoryFromResolvedPath(resolvedRoutePath, rawTargetPath) {
   return stripTrailingSlash(`${parsedTarget.dir}/${parsedTarget.name}`.replace(/\/+/g, '/')) || '/';
 }
 
+function projectSectionDirectory(routePath) {
+  const normalizedRoutePath = stripTrailingSlash(routePath) || '/';
+  const routeSegment = path.posix.basename(normalizedRoutePath);
+  const parentRoutePath = routeDirectory(normalizedRoutePath);
+  const parentSegment = path.posix.basename(parentRoutePath);
+
+  if (routeSegment === 'notebook' || normalizeSegmentName(routeSegment) === normalizeSegmentName(parentSegment)) {
+    return parentRoutePath;
+  }
+
+  return normalizedRoutePath;
+}
+
+function findProjectedSectionRoute(routeDirectoryPath) {
+  const targetSlug = normalizeSegmentName(path.posix.basename(routeDirectoryPath));
+  let ancestorParentRoute = routeDirectory(routeDirectoryPath);
+
+  while (true) {
+    for (const routePath of routeIndex.routePaths) {
+      const projectedSectionRoute = projectSectionDirectory(routePath);
+      const projectedParentRoute = routeDirectory(projectedSectionRoute);
+      const projectedSlug = normalizeSegmentName(path.posix.basename(projectedSectionRoute));
+
+      if (projectedParentRoute === ancestorParentRoute && projectedSlug === targetSlug) {
+        return routePath;
+      }
+    }
+
+    if (!ancestorParentRoute || ancestorParentRoute === '/') {
+      break;
+    }
+
+    ancestorParentRoute = routeDirectory(ancestorParentRoute);
+  }
+
+  return null;
+}
+
 function findSiblingAliasRoute(routeDirectoryPath) {
   const parentRouteDirectory = path.posix.dirname(routeDirectoryPath);
   const targetSlug = normalizeSegmentName(path.posix.basename(routeDirectoryPath));
@@ -217,6 +255,10 @@ function isResolvableDocTarget(targetUrl, sourceFilePath) {
     const candidateRouteDirectory = routeDirectoryFromResolvedPath(resolvedRoutePath, targetPathname);
 
     if (routeIndex.routePaths.has(candidateRouteDirectory)) {
+      return true;
+    }
+
+    if (findProjectedSectionRoute(candidateRouteDirectory)) {
       return true;
     }
 

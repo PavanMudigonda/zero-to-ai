@@ -10,7 +10,6 @@ export default {
   CONTRIBUTING: "9. Contributing",
   SECURITY: "10. Security",
   SUPPORT: "11. Support",
-  TRANSLATIONS: "12. Translations",
   docs: "13. Docs",
   "for-teachers": "14. For Teachers",
   "quiz-app": "15. Quiz App",
