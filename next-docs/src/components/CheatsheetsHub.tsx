@@ -37,13 +37,6 @@ const featuredCheatsheets: FeaturedCheatsheet[] = [
     accent: 'text-emerald-600 dark:text-emerald-400',
     cta: 'Browse cloud references',
   },
-  {
-    title: 'AI and MLOps operations',
-    href: '/32-cheatsheets/ai-ml',
-    description: 'GPU compute, experiment tracking, model serving, data pipelines, and cloud AI operations.',
-    accent: 'text-amber-600 dark:text-amber-400',
-    cta: 'See AI/ML ops guides',
-  },
 ];
 
 const collections: CheatsheetCollection[] = [
@@ -146,12 +139,6 @@ const collections: CheatsheetCollection[] = [
         href: '/32-cheatsheets/devops-interviews',
         description: 'Interview questions and answer sets for practical prep.',
       },
-      {
-        title: 'Cloud DevOps for AI/ML',
-        href: '/32-cheatsheets/ai-ml',
-        description: 'MLOps, cloud ML services, model serving, and GPU compute operations.',
-        eyebrow: 'Advanced',
-      },
     ],
   },
 ];
@@ -176,11 +163,6 @@ const updatedLinks: CheatsheetCategory[] = [
     title: 'Jenkins cheatsheet',
     href: '/32-cheatsheets/jenkins/jenkins-cheatsheet',
     description: 'Pipeline references with corrected Actions migration snippets.',
-  },
-  {
-    title: 'GPU compute cheatsheet',
-    href: '/32-cheatsheets/ai-ml/gpu-compute-cheatsheet',
-    description: 'Stable gcloud billing budget commands and cloud GPU operations.',
   },
 ];
 
@@ -221,22 +203,22 @@ export default function CheatsheetsHub() {
   return (
     <HubPageShell>
       <HubHero
-        badges={['Command-first references', 'DevOps, cloud, AI/ML', 'Built for fast lookup']}
+        badges={['Command-first references', 'DevOps, cloud, data', 'Built for fast lookup']}
         badgeToneClass="text-sky-100/90"
         eyebrow="Cheatsheets"
         eyebrowClass="text-sky-200/80"
         title="Find the command, workflow, or architecture reference fast."
-        description="Browse container, cloud, CI/CD, shell, monitoring, database, and AI/ML operational references without digging through long tutorials."
+        description="Browse container, cloud, CI/CD, shell, monitoring, and database references without digging through long tutorials."
         actions={[
           { label: 'Open Docker', href: '/32-cheatsheets/docker', variant: 'primary' },
           { label: 'Browse Cloud', href: '/32-cheatsheets/cloud', variant: 'secondary' },
-          { label: 'Explore AI/ML Ops', href: '/32-cheatsheets/ai-ml', variant: 'ghost' },
+          { label: 'Open GitHub Actions', href: '/32-cheatsheets/github-actions', variant: 'ghost' },
         ]}
         stats={[
           {
             label: 'Coverage',
-            value: '17 topic groups',
-            description: 'From Docker and Kubernetes to Jenkins, SQL, system design, and MLOps operations.',
+            value: '16 topic groups',
+            description: 'From Docker and Kubernetes to Jenkins, SQL, system design, and interview prep.',
           },
           {
             label: 'Best for',
