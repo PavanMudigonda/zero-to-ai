@@ -48,8 +48,9 @@ function routeDirectory(routePath: string): string {
 function candidateBasePaths(currentPathname: string): string[] {
   const canonicalRoutePath = stripTrailingSlash(currentPathname || '/') || '/';
   const parentRoutePath = routeDirectory(canonicalRoutePath);
+  const grandparentRoutePath = routeDirectory(parentRoutePath);
 
-  return [...new Set([canonicalRoutePath, parentRoutePath])];
+  return [...new Set([canonicalRoutePath, parentRoutePath, grandparentRoutePath])];
 }
 
 function normalizeAssetKey(url: string): string {
@@ -109,6 +110,57 @@ function findSiblingAliasRoute(routeDirectory: string, routeIndex: string[]): st
   return null;
 }
 
+function findNearestAncestorAliasRoute(routeDirectory: string, routeIndex: string[]): string | null {
+  const targetSegment = normalizeSegmentName(routeDirectory.split('/').filter(Boolean).pop() || '');
+  let ancestorRoute = routeDirectory.replace(/\/[^/]+$/, '') || '/';
+
+  while (ancestorRoute && ancestorRoute !== '/') {
+    const parentRoute = ancestorRoute.replace(/\/[^/]+$/, '') || '/';
+
+    for (const routePath of routeIndex) {
+      const routeParent = routePath.replace(/\/[^/]+$/, '') || '/';
+      const lastSegment = routePath.split('/').filter(Boolean).pop() || '';
+
+      if (routeParent !== parentRoute) {
+        continue;
+      }
+
+      if (normalizeSegmentName(lastSegment) === targetSegment) {
+        return routePath;
+      }
+    }
+
+    ancestorRoute = parentRoute;
+  }
+
+  return null;
+}
+
+function findNotebookFallbackRoute(routeDirectory: string, routeIndex: string[]): string | null {
+  const notebookRoute = `${stripTrailingSlash(routeDirectory) || '/'}/notebook`.replace(/\/+/g, '/');
+
+  if (routeIndex.includes(notebookRoute)) {
+    return notebookRoute;
+  }
+
+  const siblingAliasRoute = findSiblingAliasRoute(notebookRoute, routeIndex);
+  if (siblingAliasRoute) {
+    return siblingAliasRoute;
+  }
+
+  return findNearestAncestorAliasRoute(notebookRoute, routeIndex);
+}
+
+function findParentIndexRoute(sourceBasePath: string, routeIndex: string[]): string | null {
+  const parentRoute = routeDirectory(sourceBasePath);
+
+  if (routeIndex.includes(parentRoute)) {
+    return parentRoute;
+  }
+
+  return null;
+}
+
 function normalizeNotebookTarget(targetUrl: string, currentPathname: string, routeIndex: string[]): string {
   if (!targetUrl || isExternalUrl(targetUrl)) {
     return targetUrl;
@@ -132,10 +184,6 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
     return `${resolvedAssetPath}${suffix}`;
   }
 
-  if (!/\.(?:md|mdx|ipynb)$/i.test(targetPathname) && !targetUrl.endsWith('/')) {
-    return targetUrl;
-  }
-
   for (const linkBasePath of linkBasePaths) {
     const resolvedRoutePath = new URL(
       targetPathname,
@@ -147,9 +195,28 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
       return `${ensureTrailingSlash(candidateRouteDirectory)}${suffix}`;
     }
 
+    if (/(?:^|\/)Index\.ipynb$/i.test(targetPathname)) {
+      const parentIndexRoute = findParentIndexRoute(linkBasePath, routeIndex);
+      if (parentIndexRoute) {
+        return `${ensureTrailingSlash(parentIndexRoute)}${suffix}`;
+      }
+    }
+
     const siblingAliasRoute = findSiblingAliasRoute(candidateRouteDirectory, routeIndex);
     if (siblingAliasRoute) {
       return `${ensureTrailingSlash(siblingAliasRoute)}${suffix}`;
+    }
+
+    const ancestorAliasRoute = findNearestAncestorAliasRoute(candidateRouteDirectory, routeIndex);
+    if (ancestorAliasRoute) {
+      return `${ensureTrailingSlash(ancestorAliasRoute)}${suffix}`;
+    }
+
+    if (/(?:^|\/)README(?:\.[A-Za-z0-9_-]+)?\.(?:md|mdx)$/i.test(targetPathname)) {
+      const notebookFallbackRoute = findNotebookFallbackRoute(candidateRouteDirectory, routeIndex);
+      if (notebookFallbackRoute) {
+        return `${ensureTrailingSlash(notebookFallbackRoute)}${suffix}`;
+      }
     }
   }
 

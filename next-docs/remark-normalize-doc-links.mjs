@@ -131,8 +131,9 @@ function canonicalRoutePathFromSourceFile(sourceFilePath) {
 function candidateBasePathsFromSourceFile(sourceFilePath) {
   const canonicalRoutePath = canonicalRoutePathFromSourceFile(sourceFilePath);
   const parentRoutePath = routeDirectory(canonicalRoutePath);
+  const grandparentRoutePath = routeDirectory(parentRoutePath);
 
-  return [...new Set([canonicalRoutePath, parentRoutePath])];
+  return [...new Set([canonicalRoutePath, parentRoutePath, grandparentRoutePath])];
 }
 
 function routeDirectoryFromResolvedPath(resolvedRoutePath, rawTargetPath) {
@@ -169,6 +170,49 @@ function findSiblingAliasRoute(routeDirectoryPath) {
   return routeIndex.aliasRouteLookup.get(`${parentRouteDirectory}|${targetSlug}`) ?? null;
 }
 
+function findNearestAncestorAliasRoute(routeDirectoryPath) {
+  const targetSlug = normalizeSegmentName(path.posix.basename(routeDirectoryPath));
+  let ancestorRouteDirectory = path.posix.dirname(routeDirectoryPath) || '/';
+
+  while (ancestorRouteDirectory && ancestorRouteDirectory !== '/') {
+    const parentRouteDirectory = path.posix.dirname(ancestorRouteDirectory) || '/';
+    const ancestorAliasRoute = routeIndex.aliasRouteLookup.get(`${parentRouteDirectory}|${targetSlug}`);
+
+    if (ancestorAliasRoute) {
+      return ancestorAliasRoute;
+    }
+
+    ancestorRouteDirectory = parentRouteDirectory;
+  }
+
+  return null;
+}
+
+function findNotebookFallbackRoute(routeDirectoryPath) {
+  const notebookRoute = `${stripTrailingSlash(routeDirectoryPath) || '/'}/notebook`.replace(/\/+/g, '/');
+
+  if (routeIndex.routePaths.has(notebookRoute)) {
+    return notebookRoute;
+  }
+
+  const siblingAliasRoute = findSiblingAliasRoute(notebookRoute);
+  if (siblingAliasRoute) {
+    return siblingAliasRoute;
+  }
+
+  return findNearestAncestorAliasRoute(notebookRoute);
+}
+
+function findParentIndexRoute(sourceBasePath) {
+  const parentRoutePath = routeDirectory(sourceBasePath);
+
+  if (routeIndex.routePaths.has(parentRoutePath)) {
+    return parentRoutePath;
+  }
+
+  return null;
+}
+
 function normalizeLinkTarget(targetUrl, sourceFilePath) {
   if (!targetUrl || isExternalUrl(targetUrl)) {
     return targetUrl;
@@ -186,9 +230,28 @@ function normalizeLinkTarget(targetUrl, sourceFilePath) {
       return toRelativeRouteUrl(sourceFilePath, candidateRouteDirectory, suffix);
     }
 
+    if (/(?:^|\/)Index\.ipynb$/i.test(targetPathname)) {
+      const parentIndexRoute = findParentIndexRoute(linkBasePath);
+      if (parentIndexRoute) {
+        return toRelativeRouteUrl(sourceFilePath, parentIndexRoute, suffix);
+      }
+    }
+
     const siblingAliasRoute = findSiblingAliasRoute(candidateRouteDirectory);
     if (siblingAliasRoute) {
       return toRelativeRouteUrl(sourceFilePath, siblingAliasRoute, suffix);
+    }
+
+    const ancestorAliasRoute = findNearestAncestorAliasRoute(candidateRouteDirectory);
+    if (ancestorAliasRoute) {
+      return toRelativeRouteUrl(sourceFilePath, ancestorAliasRoute, suffix);
+    }
+
+    if (/(?:^|\/)README(?:\.[A-Za-z0-9_-]+)?\.(?:md|mdx)$/i.test(targetPathname)) {
+      const notebookFallbackRoute = findNotebookFallbackRoute(candidateRouteDirectory);
+      if (notebookFallbackRoute) {
+        return toRelativeRouteUrl(sourceFilePath, notebookFallbackRoute, suffix);
+      }
     }
   }
 
