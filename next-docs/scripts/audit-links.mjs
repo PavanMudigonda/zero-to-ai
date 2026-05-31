@@ -62,7 +62,32 @@ function splitTarget(url) {
 }
 
 function normalizeSegmentName(segmentName) {
-  return segmentName.replace(/^[0-9]+[_-]?/, '').toLowerCase();
+  let decodedSegmentName = segmentName;
+
+  try {
+    decodedSegmentName = decodeURIComponent(segmentName);
+  } catch {
+    decodedSegmentName = segmentName;
+  }
+
+  const normalizedTokens = decodedSegmentName
+    .replace(/\.(?:md|mdx|ipynb)$/i, '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/i)
+    .filter(Boolean)
+    .filter((token) => !/^\d+$/.test(token));
+
+  return normalizedTokens.filter((token, index) => index === 0 || token !== normalizedTokens[index - 1]).join('');
+}
+
+function routeDirectory(routePath) {
+  const segments = routePath.replace(/\/+$/, '').split('/').filter(Boolean);
+
+  if (segments.length <= 1) {
+    return '/';
+  }
+
+  return `/${segments.slice(0, -1).join('/')}`;
 }
 
 function routePathFromSourceFile(sourceFilePath) {
@@ -76,18 +101,41 @@ function routePathFromSourceFile(sourceFilePath) {
   return `/${relativePath.replace(/\.(?:md|mdx|ipynb)$/i, '')}`;
 }
 
-function resolveRoutePath(targetPathname, sourceFilePath) {
+function canonicalRoutePathFromSourceFile(sourceFilePath) {
   const sourceRoutePath = routePathFromSourceFile(sourceFilePath);
-  return new URL(targetPathname, `https://zero-to-ai.dev${ensureTrailingSlash(sourceRoutePath)}`).pathname;
+  const routeBasename = path.posix.basename(sourceRoutePath);
+  const parentRoutePath = path.posix.dirname(sourceRoutePath) || '/';
+  const parentBasename = path.posix.basename(parentRoutePath);
+
+  if (/\/page\.[^.]+$/i.test(sourceFilePath) || /^page\.[^.]+$/i.test(path.posix.basename(sourceFilePath))) {
+    return sourceRoutePath;
+  }
+
+  if (routeBasename && parentBasename && routeBasename === parentBasename) {
+    return parentRoutePath;
+  }
+
+  return sourceRoutePath;
+}
+
+function candidateBasePathsFromSourceFile(sourceFilePath) {
+  const canonicalRoutePath = canonicalRoutePathFromSourceFile(sourceFilePath);
+  const parentRoutePath = routeDirectory(canonicalRoutePath);
+
+  return [...new Set([canonicalRoutePath, parentRoutePath])];
 }
 
 function ensureTrailingSlash(url) {
   return url.endsWith('/') ? url : `${url}/`;
 }
 
+function stripTrailingSlash(url) {
+  return url !== '/' ? url.replace(/\/+$/, '') : '/';
+}
+
 function routeDirectoryFromResolvedPath(resolvedRoutePath, rawTargetPath) {
   if (!path.extname(rawTargetPath)) {
-    return resolvedRoutePath;
+    return stripTrailingSlash(resolvedRoutePath) || '/';
   }
 
   const parsedTarget = path.posix.parse(resolvedRoutePath);
@@ -96,7 +144,7 @@ function routeDirectoryFromResolvedPath(resolvedRoutePath, rawTargetPath) {
     return parsedTarget.dir || '/';
   }
 
-  return `${parsedTarget.dir}/${parsedTarget.name}`.replace(/\/+/g, '/');
+  return stripTrailingSlash(`${parsedTarget.dir}/${parsedTarget.name}`.replace(/\/+/g, '/')) || '/';
 }
 
 function findSiblingAliasRoute(routeDirectoryPath) {
@@ -112,22 +160,28 @@ function isResolvableDocTarget(targetUrl, sourceFilePath) {
   }
 
   const { pathname: targetPathname } = splitTarget(targetUrl);
-  const resolvedRoutePath = resolveRoutePath(targetPathname, sourceFilePath);
-  const candidateRouteDirectory = routeDirectoryFromResolvedPath(resolvedRoutePath, targetPathname);
 
-  if (!path.extname(targetPathname)) {
-    return routeIndex.routePaths.has(candidateRouteDirectory);
-  }
-
-  if (!DOC_EXTENSIONS.has(path.extname(targetPathname).toLowerCase())) {
+  if (path.extname(targetPathname) && !DOC_EXTENSIONS.has(path.extname(targetPathname).toLowerCase())) {
     return true;
   }
 
-  if (routeIndex.routePaths.has(candidateRouteDirectory)) {
-    return true;
+  for (const linkBasePath of candidateBasePathsFromSourceFile(sourceFilePath)) {
+    const resolvedRoutePath = new URL(
+      targetPathname,
+      `https://zero-to-ai.dev${ensureTrailingSlash(linkBasePath)}`,
+    ).pathname;
+    const candidateRouteDirectory = routeDirectoryFromResolvedPath(resolvedRoutePath, targetPathname);
+
+    if (routeIndex.routePaths.has(candidateRouteDirectory)) {
+      return true;
+    }
+
+    if (findSiblingAliasRoute(candidateRouteDirectory)) {
+      return true;
+    }
   }
 
-  return Boolean(findSiblingAliasRoute(candidateRouteDirectory));
+  return false;
 }
 
 function walkFiles(currentDirectory, results) {

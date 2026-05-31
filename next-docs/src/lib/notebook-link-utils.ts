@@ -31,17 +31,53 @@ function ensureTrailingSlash(url: string): string {
   return url.endsWith('/') ? url : `${url}/`;
 }
 
+function stripTrailingSlash(url: string): string {
+  return url !== '/' ? url.replace(/\/+$/, '') : '/';
+}
+
+function routeDirectory(routePath: string): string {
+  const segments = routePath.replace(/\/+$/, '').split('/').filter(Boolean);
+
+  if (segments.length <= 1) {
+    return '/';
+  }
+
+  return `/${segments.slice(0, -1).join('/')}`;
+}
+
+function candidateBasePaths(currentPathname: string): string[] {
+  const canonicalRoutePath = stripTrailingSlash(currentPathname || '/') || '/';
+  const parentRoutePath = routeDirectory(canonicalRoutePath);
+
+  return [...new Set([canonicalRoutePath, parentRoutePath])];
+}
+
 function normalizeAssetKey(url: string): string {
   return url.replace(/^\.\//, '').replace(/^\//, '').toLowerCase();
 }
 
 function normalizeSegmentName(segmentName: string): string {
-  return segmentName.replace(/^[0-9]+[_-]?/, '').toLowerCase();
+  let decodedSegmentName = segmentName;
+
+  try {
+    decodedSegmentName = decodeURIComponent(segmentName);
+  } catch {
+    decodedSegmentName = segmentName;
+  }
+
+  const normalizedTokens = decodedSegmentName
+    .replace(/\.(?:md|mdx|ipynb)$/i, '')
+    .toLowerCase()
+    .split(/[^a-z0-9]+/i)
+    .filter(Boolean)
+    .filter((token) => !/^\d+$/.test(token));
+
+  return normalizedTokens.filter((token, index) => index === 0 || token !== normalizedTokens[index - 1]).join('');
 }
 
 function routeDirectoryFromResolvedPath(resolvedRoutePath: string, rawTargetPath: string): string {
   if (!/\.(?:md|mdx|ipynb)$/i.test(rawTargetPath)) {
-    return resolvedRoutePath;
+    return stripTrailingSlash(resolvedRoutePath) || '/';
   }
 
   const withoutExtension = resolvedRoutePath.replace(/\.(?:md|mdx|ipynb)$/i, '');
@@ -50,7 +86,7 @@ function routeDirectoryFromResolvedPath(resolvedRoutePath: string, rawTargetPath
     return withoutExtension.replace(/(?:^|\/)README(?:\.[A-Za-z0-9_-]+)?$/i, '') || '/';
   }
 
-  return withoutExtension;
+  return stripTrailingSlash(withoutExtension) || '/';
 }
 
 function findSiblingAliasRoute(routeDirectory: string, routeIndex: string[]): string | null {
@@ -79,6 +115,7 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
   }
 
   const { pathname: targetPathname, suffix } = splitTarget(targetUrl);
+  const linkBasePaths = candidateBasePaths(currentPathname || '/');
 
   if (NOTEBOOK_ASSET_PATTERN.test(targetPathname)) {
     const fallbackAsset = NOTEBOOK_ASSET_FALLBACKS[normalizeAssetKey(targetPathname)];
@@ -89,7 +126,7 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
 
     const resolvedAssetPath = new URL(
       targetPathname,
-      `https://zero-to-ai.dev${ensureTrailingSlash(currentPathname || '/')}`,
+      `https://zero-to-ai.dev${ensureTrailingSlash(linkBasePaths[0] || '/')}`,
     ).pathname;
 
     return `${resolvedAssetPath}${suffix}`;
@@ -99,16 +136,21 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
     return targetUrl;
   }
 
-  const resolvedRoutePath = new URL(targetPathname, `https://zero-to-ai.dev${ensureTrailingSlash(currentPathname || '/')}`).pathname;
-  const candidateRouteDirectory = routeDirectoryFromResolvedPath(resolvedRoutePath, targetPathname);
+  for (const linkBasePath of linkBasePaths) {
+    const resolvedRoutePath = new URL(
+      targetPathname,
+      `https://zero-to-ai.dev${ensureTrailingSlash(linkBasePath)}`,
+    ).pathname;
+    const candidateRouteDirectory = routeDirectoryFromResolvedPath(resolvedRoutePath, targetPathname);
 
-  if (routeIndex.includes(candidateRouteDirectory)) {
-    return `${ensureTrailingSlash(candidateRouteDirectory)}${suffix}`;
-  }
+    if (routeIndex.includes(candidateRouteDirectory)) {
+      return `${ensureTrailingSlash(candidateRouteDirectory)}${suffix}`;
+    }
 
-  const siblingAliasRoute = findSiblingAliasRoute(candidateRouteDirectory, routeIndex);
-  if (siblingAliasRoute) {
-    return `${ensureTrailingSlash(siblingAliasRoute)}${suffix}`;
+    const siblingAliasRoute = findSiblingAliasRoute(candidateRouteDirectory, routeIndex);
+    if (siblingAliasRoute) {
+      return `${ensureTrailingSlash(siblingAliasRoute)}${suffix}`;
+    }
   }
 
   return targetUrl;
