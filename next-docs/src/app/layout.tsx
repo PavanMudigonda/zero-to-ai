@@ -15,6 +15,7 @@ type NavNode = {
   name: string;
   route: string;
   title: string;
+  hasPage: boolean;
   children: Map<string, NavNode>;
 };
 
@@ -107,6 +108,7 @@ function createNavNode(name: string, route: string): NavNode {
     name,
     route,
     title: segmentToTitle(name),
+    hasPage: false,
     children: new Map<string, NavNode>(),
   };
 }
@@ -123,7 +125,13 @@ function insertRoute(nodes: Map<string, NavNode>, route: string) {
       currentNodes.set(segment, createNavNode(segment, currentRoute));
     }
 
-    currentNodes = currentNodes.get(segment)!.children;
+    const currentNode = currentNodes.get(segment)!;
+
+    if (currentRoute === route) {
+      currentNode.hasPage = true;
+    }
+
+    currentNodes = currentNode.children;
   }
 }
 
@@ -145,26 +153,35 @@ function compareNavNodes(left: NavNode, right: NavNode): number {
   return left.route.localeCompare(right.route);
 }
 
+function resolveSidebarRoute(node: NavNode): string {
+  if (node.hasPage) {
+    return node.route;
+  }
+
+  const firstChild = Array.from(node.children.values()).sort(compareNavNodes)[0];
+
+  return firstChild ? resolveSidebarRoute(firstChild) : node.route;
+}
+
 function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: string): unknown[] {
   return Array.from(nodes.values())
     .sort(compareNavNodes)
     .map((node) => {
+      const baseItem = {
+        name: node.name,
+        title: node.title,
+        frontMatter: {},
+        route: resolveSidebarRoute(node),
+      };
+
       if (node.children.size > 0) {
         return {
-          name: node.name,
-          route: node.route,
-          title: node.title,
-          frontMatter: {},
+          ...baseItem,
           children: materializePageMap(node.children, node.name),
         };
       }
 
-      return {
-        name: node.name,
-        route: node.route,
-        title: node.title,
-        frontMatter: {},
-      };
+      return baseItem;
     });
 }
 
