@@ -4,7 +4,7 @@ export default {
   "config-management": "3. Config Management",
   databases: "4. Databases",
   "devops-architecture": "5. Devops Architecture",
-  "devops-interviews": "6. Devops Interviews",
+  "interview-prep": "6. Interview Prep",
   docker: "7. Docker",
   git: "8. Git",
   "github-actions": "9. Github Actions",

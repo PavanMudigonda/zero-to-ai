@@ -1,12 +1,29 @@
 "use client";
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Layout } from 'nextra-theme-docs';
 
 export default function FilteredLayout({ pageMap, children, ...props }: any) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 1024px)');
+    const updateIsDesktop = () => setIsDesktop(mediaQuery.matches);
+
+    updateIsDesktop();
+
+    if (typeof mediaQuery.addEventListener === 'function') {
+      mediaQuery.addEventListener('change', updateIsDesktop);
+      return () => mediaQuery.removeEventListener('change', updateIsDesktop);
+    }
+
+    mediaQuery.addListener(updateIsDesktop);
+    return () => mediaQuery.removeListener(updateIsDesktop);
+  }, []);
+
   const filteredPageMap = useMemo(() => {
     if (isHomePage) {
       return pageMap;
@@ -26,10 +43,25 @@ export default function FilteredLayout({ pageMap, children, ...props }: any) {
     });
   }, [isHomePage, pageMap, pathname]);
 
+  const sidebar = useMemo(() => {
+    const baseSidebar = props.sidebar ?? {};
+
+    if (!isDesktop) {
+      return baseSidebar;
+    }
+
+    return {
+      ...baseSidebar,
+      autoCollapse: false,
+      defaultMenuCollapseLevel: Math.max(baseSidebar.defaultMenuCollapseLevel ?? 1, 2),
+    };
+  }, [isDesktop, props.sidebar]);
+
   return (
     <Layout
       pageMap={filteredPageMap}
       {...props}
+      sidebar={sidebar}
       editLink={isHomePage ? null : props.editLink}
       feedback={isHomePage ? { content: null, labels: 'feedback' } : props.feedback}
     >
