@@ -41,6 +41,7 @@ const TITLE_OVERRIDES: Record<string, string> = {
 };
 
 const PHRASE_OVERRIDES: Record<string, string> = {
+  'Devops Interviews': 'Cheatsheets',
   'Debugging Troubleshooting': 'Debugging & Troubleshooting',
   'AI Safety Redteaming': 'AI Safety & Red Teaming',
   'AI Powered Dev Tools': 'AI-Powered Dev Tools',
@@ -163,26 +164,48 @@ function resolveSidebarRoute(node: NavNode): string {
   return firstChild ? resolveSidebarRoute(firstChild) : node.route;
 }
 
-function materializePageMap(nodes: Map<string, NavNode>, parentFolderName?: string): unknown[] {
+function canFlattenLeafWrapper(node: NavNode): boolean {
+  if (node.hasPage || node.children.size !== 1) {
+    return false;
+  }
+
+  const onlyChild = Array.from(node.children.values())[0];
+  return onlyChild.hasPage && onlyChild.children.size === 0;
+}
+
+function materializeNode(node: NavNode): unknown {
+  if (canFlattenLeafWrapper(node)) {
+    const onlyChild = Array.from(node.children.values())[0];
+
+    return {
+      name: onlyChild.name,
+      title: `${node.title} / ${onlyChild.title}`,
+      frontMatter: {},
+      route: onlyChild.route,
+    };
+  }
+
+  const baseItem = {
+    name: node.name,
+    title: node.title,
+    frontMatter: {},
+    route: resolveSidebarRoute(node),
+  };
+
+  if (node.children.size > 0) {
+    return {
+      ...baseItem,
+      children: materializePageMap(node.children),
+    };
+  }
+
+  return baseItem;
+}
+
+function materializePageMap(nodes: Map<string, NavNode>): unknown[] {
   return Array.from(nodes.values())
     .sort(compareNavNodes)
-    .map((node) => {
-      const baseItem = {
-        name: node.name,
-        title: node.title,
-        frontMatter: {},
-        route: resolveSidebarRoute(node),
-      };
-
-      if (node.children.size > 0) {
-        return {
-          ...baseItem,
-          children: materializePageMap(node.children, node.name),
-        };
-      }
-
-      return baseItem;
-    });
+    .map((node) => materializeNode(node));
 }
 
 function buildLightweightPageMap(routes: string[]): unknown[] {

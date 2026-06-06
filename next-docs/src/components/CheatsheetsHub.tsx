@@ -130,14 +130,9 @@ const collections: CheatsheetCollection[] = [
         description: 'CI/CD architecture, platform patterns, and flowcharts.',
       },
       {
-        title: 'System design',
-        href: '/32-cheatsheets/system-design',
-        description: 'System design questions, patterns, and study material.',
-      },
-      {
-        title: 'DevOps interviews',
-        href: '/32-cheatsheets/devops-interviews',
-        description: 'Interview questions and answer sets for practical prep.',
+        title: 'Interview prep',
+        href: '/32-cheatsheets/interview-prep',
+        description: 'Scenario-based Linux, Docker, Kubernetes, networking, and CI/CD practice sets.',
       },
     ],
   },
@@ -218,7 +213,7 @@ export default function CheatsheetsHub() {
           {
             label: 'Coverage',
             value: '16 topic groups',
-            description: 'From Docker and Kubernetes to Jenkins, SQL, system design, and interview prep.',
+            description: 'From Docker and Kubernetes to Jenkins, SQL, and interview prep.',
           },
           {
             label: 'Best for',

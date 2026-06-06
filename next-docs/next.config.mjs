@@ -12,8 +12,10 @@ const withNextra = nextra({
   }
 });
 
+const outputMode = process.env.NEXT_OUTPUT_MODE ?? 'export';
+
 export default withNextra({
-  output: 'export',
+  ...(outputMode === 'export' ? { output: 'export' } : {}),
   eslint: {
     ignoreDuringBuilds: true,
   },

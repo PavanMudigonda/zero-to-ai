@@ -5,12 +5,17 @@ const APP_ROOT = join(process.cwd(), 'src', 'app');
 const PAGE_FILE_NAMES = new Set(['page.mdx', 'page.tsx', 'page.ts', 'page.jsx', 'page.js']);
 const EXCLUDED_SEGMENTS = new Set(['_meta.ts', 'error.tsx', 'not-found.tsx', 'layout.tsx']);
 const EXCLUDED_TOP_LEVEL_SEGMENTS = new Set(['app', 'auth', 'demo', 'login']);
+const EXCLUDED_ROUTE_PREFIXES = ['/32-cheatsheets/system-design'];
 let cachedAllRoutes: string[] | null = null;
 let cachedCanonicalRoutes: string[] | null = null;
 
 function shouldExcludeTopLevelRoute(route: string): boolean {
   const [firstSegment] = route.split('/').filter(Boolean);
   return Boolean(firstSegment && EXCLUDED_TOP_LEVEL_SEGMENTS.has(firstSegment));
+}
+
+function shouldExcludeRoutePrefix(route: string): boolean {
+  return EXCLUDED_ROUTE_PREFIXES.some((prefix) => route === prefix || route.startsWith(`${prefix}/`));
 }
 
 function shouldSkipSelfNestedRoute(route: string): boolean {
@@ -63,6 +68,7 @@ function collectStaticSiteRoutes(): string[] {
       return relativeDirectory ? `/${relativeDirectory}` : '/';
     })
     .filter((route) => !shouldExcludeTopLevelRoute(route))
+    .filter((route) => !shouldExcludeRoutePrefix(route))
     .sort((left, right) => left.localeCompare(right));
 
   return cachedAllRoutes;
