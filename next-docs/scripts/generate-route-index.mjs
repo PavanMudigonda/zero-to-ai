@@ -6,6 +6,7 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const projectRoot = dirname(scriptDirectory);
 const appRoot = join(projectRoot, 'src', 'app');
 const outputPath = join(projectRoot, 'public', 'route-index.json');
+const moduleOutputPath = join(projectRoot, 'src', 'generated', 'route-index.ts');
 const pageFileNames = new Set(['page.mdx', 'page.tsx', 'page.ts', 'page.jsx', 'page.js']);
 const excludedSegments = new Set(['_meta.ts', 'error.tsx', 'not-found.tsx', 'layout.tsx']);
 const excludedTopLevelSegments = new Set(['app', 'auth', 'demo', 'login']);
@@ -75,3 +76,16 @@ const notebookRoutes = [...new Set(routeDirectories)]
 
 mkdirSync(dirname(outputPath), { recursive: true });
 writeFileSync(outputPath, `${JSON.stringify(notebookRoutes)}\n`);
+
+mkdirSync(dirname(moduleOutputPath), { recursive: true });
+writeFileSync(
+  moduleOutputPath,
+  [
+    'export const generatedRouteIndex = Object.freeze(',
+    `  ${JSON.stringify(notebookRoutes, null, 2)}`,
+    ');',
+    '',
+    'export default generatedRouteIndex;',
+    '',
+  ].join('\n'),
+);
