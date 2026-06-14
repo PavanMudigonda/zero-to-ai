@@ -1,55 +1,14 @@
 @import "tailwindcss";
 
-/*
- * GitHub Primer design-token skin (Tier 1).
- * Token values sourced from the @primer/primitives default light/dark themes
- * and mapped onto Nextra + project theme variables. We reuse the existing
- * next-themes html.light / html.dark selectors so no data-color-mode attribute
- * wiring is required and static export stays intact.
- */
-
-:root,
-html.light,
-html[data-theme='light'] {
-  /* Primer functional tokens — light */
-  --primer-fg-default: #1f2328;
-  --primer-fg-muted: #59636e;
-  --primer-fg-accent: #0969da;
-  --primer-bg-default: #ffffff;
-  --primer-bg-muted: #f6f8fa;
-  --primer-border-default: #d1d9e0;
-  --primer-neutral-muted: rgba(129, 139, 152, 0.12);
-
-  /* Project variables */
-  --background: var(--primer-bg-default);
-  --foreground: var(--primer-fg-default);
-
-  /* Nextra theme variables (accent ≈ Primer #0969da) */
-  --nextra-bg: 255, 255, 255;
-  --nextra-primary-hue: 212deg;
-  --nextra-primary-saturation: 92%;
-  --nextra-primary-lightness: 45%;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-html.dark,
-html[data-theme='dark'] {
-  /* Primer functional tokens — dark */
-  --primer-fg-default: #f0f6fc;
-  --primer-fg-muted: #9198a1;
-  --primer-fg-accent: #4493f8;
-  --primer-bg-default: #0d1117;
-  --primer-bg-muted: #151b23;
-  --primer-border-default: #3d444d;
-  --primer-neutral-muted: rgba(101, 108, 118, 0.2);
-
-  --background: var(--primer-bg-default);
-  --foreground: var(--primer-fg-default);
-
-  /* Nextra theme variables (accent ≈ Primer #4493f8) */
-  --nextra-bg: 13, 17, 23;
-  --nextra-primary-hue: 214deg;
-  --nextra-primary-saturation: 93%;
-  --nextra-primary-lightness: 62%;
+html.light,
+html[data-theme='light'] {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @theme inline {
@@ -59,34 +18,32 @@ html[data-theme='dark'] {
   --font-mono: var(--font-geist-mono);
 }
 
+html.dark,
+html[data-theme='dark'] {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(
-    --font-sans,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Sans",
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji"
-  );
+  font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
-/* GitHub Primer inline code style (non-code-block). */
+/* Improve inline code contrast in docs tables/paragraphs (non-code-block). */
 article code:not(pre code) {
-  color: var(--primer-fg-default);
-  background-color: var(--primer-neutral-muted);
-  border: 0;
-  border-radius: 6px;
-  padding: 0.2em 0.4em;
-  font-size: 85%;
-  font-weight: 400;
-  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
-    "Liberation Mono", monospace;
+  color: rgb(31, 41, 55);
+  background-color: rgb(229, 231, 235);
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+html.dark article code:not(pre code),
+html[data-theme='dark'] article code:not(pre code) {
+  color: rgb(226, 232, 240);
+  background-color: rgb(51, 65, 85);
+  border-color: rgb(71, 85, 105);
 }
 
 .site-logo {
@@ -135,60 +92,3 @@ article code:not(pre code) {
     display: none !important;
   }
 }
-
-/* ------------------------------------------------------------------ */
-/* Primer surface fidelity (Tier 1) \u2014 content elements not themed by   */
-/* Nextra's accent tokens alone.                                       */
-/* ------------------------------------------------------------------ */
-
-/* Links \u2014 GitHub accent, underline on hover */
-article a:not(.nextra-card):not([class*="nextra"]) {
-  color: var(--primer-fg-accent);
-  text-decoration: none;
-}
-article a:not(.nextra-card):not([class*="nextra"]):hover {
-  text-decoration: underline;
-}
-
-/* Tables \u2014 GitHub bordered style */
-article table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-article table th,
-article table td {
-  border: 1px solid var(--primer-border-default);
-  padding: 6px 13px;
-}
-article table tr {
-  background-color: var(--primer-bg-default);
-  border-top: 1px solid var(--primer-border-default);
-}
-article table tr:nth-child(2n) {
-  background-color: var(--primer-bg-muted);
-}
-article table th {
-  font-weight: 600;
-}
-
-/* Blockquotes \u2014 GitHub muted left border */
-article blockquote {
-  color: var(--primer-fg-muted);
-  border-left: 0.25em solid var(--primer-border-default);
-  padding: 0 1em;
-  margin-left: 0;
-}
-
-/* Horizontal rules */
-article hr {
-  height: 0.25em;
-  background-color: var(--primer-border-default);
-  border: 0;
-}
-
-/* Sidebar / TOC dividers align to Primer border color */
-.nextra-sidebar-container,
-.nextra-toc {
-  border-color: var(--primer-border-default) !important;
-}
-
