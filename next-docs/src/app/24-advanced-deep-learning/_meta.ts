@@ -22,7 +22,6 @@ export default {
   "21_contrastive_learning": "21. Contrastive Learning",
   "22_adversarial_robustness": "22. Adversarial Robustness",
   "23_knowledge_distillation": "23. Knowledge Distillation",
-  "24-advanced-deep-learning": "24. Advanced Deep Learning",
   "24_point_cloud_networks": "25. Point Cloud Networks",
   "25_cyclegan": "26. Cyclegan",
   "26_progressive_gan": "27. Progressive GAN",

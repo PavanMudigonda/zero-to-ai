@@ -7,5 +7,4 @@ export default {
   "05_memory_state": "6. Memory State",
   "06_production": "7. Production",
   COMPLETION_SUMMARY: "8. Completion Summary",
-  "ai-agents": "9. AI Agents",
 }

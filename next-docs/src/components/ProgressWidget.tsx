@@ -15,6 +15,7 @@ export default function ProgressWidget() {
   });
   const [mounted, setMounted] = useState(false);
   const [user, setUser] = useState<any>(null);
+  const [syncError, setSyncError] = useState<string | null>(null);
   
   // Note: These env vars must be defined in your .env.local
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
@@ -105,7 +106,11 @@ export default function ProgressWidget() {
   };
 
   const handleLogin = async (provider: OAuthProvider) => {
-    if (!supabase) return alert("Supabase URL and Anon Key are missing in .env.local");
+    if (!supabase) {
+      setSyncError('Supabase URL and Anon Key are missing in .env.local');
+      return;
+    }
+    setSyncError(null);
     const callbackUrl = new URL('/auth/callback', location.origin);
     callbackUrl.searchParams.set('next', currentPath);
 
@@ -162,6 +167,18 @@ export default function ProgressWidget() {
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">
+      {syncError && (
+        <div className="bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-700 text-red-700 dark:text-red-300 text-xs rounded-lg px-3 py-2 max-w-[220px] shadow-md">
+          {syncError}
+          <button
+            onClick={() => setSyncError(null)}
+            className="ml-2 text-red-400 hover:text-red-600 dark:hover:text-red-200"
+            aria-label="Dismiss"
+          >
+            ✕
+          </button>
+        </div>
+      )}
       {/* Cloud Sync Status / Login Button */}
       {user ? (
         <div className="bg-white dark:bg-[#111] border border-gray-200 dark:border-gray-800 shadow-lg rounded-full px-3 py-1 flex items-center gap-2 text-xs font-medium text-gray-600 dark:text-gray-300">

@@ -1,5 +1,4 @@
 export default {
-  "03-maths": "1. Maths",
   "3blue1brown": "2. 3blue1brown",
   advanced: "3. Advanced",
   "cs229-course": "4. Cs229 Course",

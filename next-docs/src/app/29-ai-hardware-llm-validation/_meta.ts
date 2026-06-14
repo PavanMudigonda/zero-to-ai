@@ -17,5 +17,4 @@ export default {
   "16_lab_06_framework_validation": "16. Lab 06 Framework Validation",
   "17_lab_07_gpgpu_backends": "17. Lab 07 Gpgpu Backends",
   "18_lab_08_benchmarking": "18. Lab 08 Benchmarking",
-  "29-ai-hardware-llm-validation": "19. AI Hardware & LLM Validation",
 }

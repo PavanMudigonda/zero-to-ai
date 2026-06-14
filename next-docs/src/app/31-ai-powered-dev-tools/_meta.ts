@@ -6,5 +6,4 @@ export default {
   "05_copilot_instructions_guide": "5. Copilot Instructions Guide",
   "06_copilot_workflows": "6. Copilot Workflows",
   "07_build_mcp_server": "7. Build MCP Server",
-  "31-ai-powered-dev-tools": "8. AI-Powered Dev Tools",
 }

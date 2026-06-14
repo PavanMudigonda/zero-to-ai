@@ -1,5 +1,4 @@
 export default {
-  "3-Data-Visualization": "1. Data Visualization",
   "09-visualization-quantities": "2. Visualization Quantities",
   "10-visualization-distributions": "3. Visualization Distributions",
   "11-visualization-proportions": "4. Visualization Proportions",
