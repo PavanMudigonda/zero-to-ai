@@ -174,7 +174,7 @@ export default function FuzzySearch({ items }: FuzzySearchProps) {
           }}
           placeholder="Search documentation..."
           aria-label="Search documentation"
-          className="min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-gray-400"
+          className="min-w-0 flex-1 bg-transparent text-sm text-slate-900 caret-sky-500 outline-none placeholder:text-gray-400 dark:text-slate-100 dark:[-webkit-text-fill-color:theme(colors.slate.100)] [-webkit-text-fill-color:theme(colors.slate.900)]"
         />
         <span className="hidden rounded-md border border-gray-200 px-1.5 py-0.5 text-[11px] text-gray-400 md:inline dark:border-gray-700">Ctrl K</span>
       </div>
