@@ -676,6 +676,13 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           padding-top: 2.25rem;
         }
 
+        .jk-notebook-container .jk-copy-target pre,
+        .jk-notebook-container .text_cell_render pre {
+          background: var(--jk-gh-cell-bg);
+          border: 1px solid var(--jk-gh-border);
+          border-radius: 0.375rem;
+        }
+
         /* Improve code readability in light mode for notebook-rendered blocks. */
         .jk-notebook-container .jk-copy-target pre,
         .jk-notebook-container .jk-copy-target pre code,
@@ -689,6 +696,12 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
         .dark .jk-notebook-container .text_cell_render pre,
         .dark .jk-notebook-container .text_cell_render pre code {
           color: rgb(226, 232, 240);
+        }
+
+        .dark .jk-notebook-container .jk-copy-target pre,
+        .dark .jk-notebook-container .text_cell_render pre {
+          background: var(--jk-gh-cell-bg);
+          border-color: var(--jk-gh-border);
         }
 
         .jk-notebook-container--expanded {
