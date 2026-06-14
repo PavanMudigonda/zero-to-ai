@@ -480,6 +480,68 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
       ) : null}
 
       <style jsx global>{`
+        .jk-notebook-container {
+          --jk-vscode-bg: rgb(255, 255, 255);
+          --jk-vscode-fg: rgb(30, 30, 30);
+          --jk-vscode-muted: rgb(97, 97, 97);
+          --jk-vscode-border: rgb(224, 224, 224);
+          --jk-vscode-cell-bg: rgb(250, 250, 250);
+          --jk-vscode-output-bg: rgb(245, 245, 245);
+          --jk-vscode-accent: rgb(0, 122, 204);
+        }
+
+        .dark .jk-notebook-container {
+          --jk-vscode-bg: rgb(30, 30, 30);
+          --jk-vscode-fg: rgb(212, 212, 212);
+          --jk-vscode-muted: rgb(140, 140, 140);
+          --jk-vscode-border: rgb(58, 58, 58);
+          --jk-vscode-cell-bg: rgb(37, 37, 38);
+          --jk-vscode-output-bg: rgb(30, 30, 30);
+          --jk-vscode-accent: rgb(86, 156, 214);
+        }
+
+        .jk-notebook-container .jupyter-kit-notebook {
+          color: var(--jk-vscode-fg);
+          background: transparent;
+        }
+
+        .jk-notebook-container .cell {
+          border: 1px solid var(--jk-vscode-border);
+          border-left: 3px solid var(--jk-vscode-accent);
+          border-radius: 0.5rem;
+          background: var(--jk-vscode-cell-bg);
+          margin: 0.75rem 0;
+          padding: 0.25rem 0.5rem;
+        }
+
+        .jk-notebook-container .text_cell_render,
+        .jk-notebook-container .rendered,
+        .jk-notebook-container .rendered_html {
+          color: var(--jk-vscode-fg);
+        }
+
+        .jk-notebook-container .input,
+        .jk-notebook-container .input_area {
+          background: var(--jk-vscode-bg);
+          border: 1px solid var(--jk-vscode-border);
+          border-radius: 0.375rem;
+        }
+
+        .jk-notebook-container .output,
+        .jk-notebook-container .output_wrapper {
+          background: var(--jk-vscode-output-bg);
+          border: 1px solid var(--jk-vscode-border);
+          border-radius: 0.375rem;
+          color: var(--jk-vscode-fg);
+        }
+
+        .jk-notebook-container .prompt,
+        .jk-notebook-container .input_prompt {
+          color: var(--jk-vscode-muted);
+          font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
+          font-size: 0.75rem;
+        }
+
         .jk-notebook-container .jk-copy-target {
           position: relative;
         }

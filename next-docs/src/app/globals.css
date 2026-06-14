@@ -30,6 +30,22 @@ body {
   font-family: var(--font-sans, Arial, Helvetica, sans-serif);
 }
 
+/* Improve inline code contrast in docs tables/paragraphs (non-code-block). */
+article code:not(pre code) {
+  color: rgb(31, 41, 55);
+  background-color: rgb(229, 231, 235);
+  border: 1px solid rgb(209, 213, 219);
+  border-radius: 0.25rem;
+  font-weight: 500;
+}
+
+html.dark article code:not(pre code),
+html[data-theme='dark'] article code:not(pre code) {
+  color: rgb(226, 232, 240);
+  background-color: rgb(51, 65, 85);
+  border-color: rgb(71, 85, 105);
+}
+
 .site-logo {
   display: inline-flex;
   align-items: center;
