@@ -125,11 +125,6 @@ const collections: CheatsheetCollection[] = [
         description: 'SQL and database quick-reference material.',
       },
       {
-        title: 'DevOps architecture',
-        href: '/32-cheatsheets/devops-architecture',
-        description: 'CI/CD architecture, platform patterns, and flowcharts.',
-      },
-      {
         title: 'Interview prep',
         href: '/32-cheatsheets/interview-prep',
         description: 'Scenario-based Linux, Docker, Kubernetes, networking, and CI/CD practice sets.',
@@ -212,7 +207,7 @@ export default function CheatsheetsHub() {
         stats={[
           {
             label: 'Coverage',
-            value: '16 topic groups',
+            value: '15 topic groups',
             description: 'From Docker and Kubernetes to Jenkins, SQL, and interview prep.',
           },
           {
