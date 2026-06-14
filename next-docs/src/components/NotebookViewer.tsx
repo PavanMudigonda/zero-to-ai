@@ -481,35 +481,49 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
 
       <style jsx global>{`
         .jk-notebook-container {
-          --jk-vscode-bg: rgb(255, 255, 255);
-          --jk-vscode-fg: rgb(30, 30, 30);
-          --jk-vscode-muted: rgb(97, 97, 97);
-          --jk-vscode-border: rgb(224, 224, 224);
-          --jk-vscode-cell-bg: rgb(250, 250, 250);
-          --jk-vscode-output-bg: rgb(245, 245, 245);
-          --jk-vscode-accent: rgb(0, 122, 204);
+          --jk-gh-bg: rgb(255, 255, 255);
+          --jk-gh-fg: rgb(36, 41, 47);
+          --jk-gh-muted: rgb(101, 109, 118);
+          --jk-gh-border: rgb(208, 215, 222);
+          --jk-gh-cell-bg: rgb(246, 248, 250);
+          --jk-gh-output-bg: rgb(255, 255, 255);
+          --jk-gh-accent: rgb(9, 105, 218);
+          --jk-gh-inline-code-bg: rgb(175, 184, 193, 0.2);
+          --jk-gh-keyword: rgb(207, 34, 46);
+          --jk-gh-string: rgb(11, 110, 153);
+          --jk-gh-comment: rgb(87, 96, 106);
+          --jk-gh-number: rgb(5, 80, 174);
+          --jk-gh-function: rgb(130, 80, 223);
+          --jk-gh-operator: rgb(36, 41, 47);
         }
 
         .dark .jk-notebook-container {
-          --jk-vscode-bg: rgb(30, 30, 30);
-          --jk-vscode-fg: rgb(212, 212, 212);
-          --jk-vscode-muted: rgb(140, 140, 140);
-          --jk-vscode-border: rgb(58, 58, 58);
-          --jk-vscode-cell-bg: rgb(37, 37, 38);
-          --jk-vscode-output-bg: rgb(30, 30, 30);
-          --jk-vscode-accent: rgb(86, 156, 214);
+          --jk-gh-bg: rgb(13, 17, 23);
+          --jk-gh-fg: rgb(230, 237, 243);
+          --jk-gh-muted: rgb(139, 148, 158);
+          --jk-gh-border: rgb(48, 54, 61);
+          --jk-gh-cell-bg: rgb(22, 27, 34);
+          --jk-gh-output-bg: rgb(13, 17, 23);
+          --jk-gh-accent: rgb(47, 129, 247);
+          --jk-gh-inline-code-bg: rgb(110, 118, 129, 0.4);
+          --jk-gh-keyword: rgb(255, 123, 114);
+          --jk-gh-string: rgb(121, 192, 255);
+          --jk-gh-comment: rgb(139, 148, 158);
+          --jk-gh-number: rgb(165, 214, 255);
+          --jk-gh-function: rgb(210, 168, 255);
+          --jk-gh-operator: rgb(230, 237, 243);
         }
 
         .jk-notebook-container .jupyter-kit-notebook {
-          color: var(--jk-vscode-fg);
+          color: var(--jk-gh-fg);
           background: transparent;
         }
 
         .jk-notebook-container .cell {
-          border: 1px solid var(--jk-vscode-border);
-          border-left: 3px solid var(--jk-vscode-accent);
+          border: 1px solid var(--jk-gh-border);
+          border-left: 3px solid var(--jk-gh-accent);
           border-radius: 0.5rem;
-          background: var(--jk-vscode-cell-bg);
+          background: var(--jk-gh-cell-bg);
           margin: 0.75rem 0;
           padding: 0.25rem 0.5rem;
         }
@@ -517,29 +531,100 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
         .jk-notebook-container .text_cell_render,
         .jk-notebook-container .rendered,
         .jk-notebook-container .rendered_html {
-          color: var(--jk-vscode-fg);
+          color: var(--jk-gh-fg);
         }
 
         .jk-notebook-container .input,
         .jk-notebook-container .input_area {
-          background: var(--jk-vscode-bg);
-          border: 1px solid var(--jk-vscode-border);
+          background: var(--jk-gh-bg);
+          border: 1px solid var(--jk-gh-border);
           border-radius: 0.375rem;
         }
 
         .jk-notebook-container .output,
         .jk-notebook-container .output_wrapper {
-          background: var(--jk-vscode-output-bg);
-          border: 1px solid var(--jk-vscode-border);
+          background: var(--jk-gh-output-bg);
+          border: 1px solid var(--jk-gh-border);
           border-radius: 0.375rem;
-          color: var(--jk-vscode-fg);
+          color: var(--jk-gh-fg);
         }
 
         .jk-notebook-container .prompt,
         .jk-notebook-container .input_prompt {
-          color: var(--jk-vscode-muted);
+          color: var(--jk-gh-muted);
           font-family: var(--font-mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);
           font-size: 0.75rem;
+        }
+
+        .jk-notebook-container .text_cell_render code,
+        .jk-notebook-container .rendered_html code {
+          background: var(--jk-gh-inline-code-bg);
+          border: 1px solid var(--jk-gh-border);
+          border-radius: 0.25rem;
+          color: var(--jk-gh-fg);
+          padding: 0.1rem 0.3rem;
+        }
+
+        /* GitHub-like token colors for CodeMirror syntax highlighting. */
+        .jk-notebook-container .cm-editor .cm-keyword {
+          color: var(--jk-gh-keyword);
+        }
+
+        .jk-notebook-container .cm-editor .cm-string,
+        .jk-notebook-container .cm-editor .cm-special {
+          color: var(--jk-gh-string);
+        }
+
+        .jk-notebook-container .cm-editor .cm-comment {
+          color: var(--jk-gh-comment);
+        }
+
+        .jk-notebook-container .cm-editor .cm-number,
+        .jk-notebook-container .cm-editor .cm-bool,
+        .jk-notebook-container .cm-editor .cm-atom {
+          color: var(--jk-gh-number);
+        }
+
+        .jk-notebook-container .cm-editor .cm-def,
+        .jk-notebook-container .cm-editor .cm-variableName,
+        .jk-notebook-container .cm-editor .cm-propertyName {
+          color: var(--jk-gh-function);
+        }
+
+        .jk-notebook-container .cm-editor .cm-operator,
+        .jk-notebook-container .cm-editor .cm-punctuation {
+          color: var(--jk-gh-operator);
+        }
+
+        /* Token fallbacks for Prism/Highlight.js/Pygments-like class names. */
+        .jk-notebook-container .text_cell_render .token.keyword,
+        .jk-notebook-container .text_cell_render .hljs-keyword,
+        .jk-notebook-container .text_cell_render .k {
+          color: var(--jk-gh-keyword);
+        }
+
+        .jk-notebook-container .text_cell_render .token.string,
+        .jk-notebook-container .text_cell_render .hljs-string,
+        .jk-notebook-container .text_cell_render .s {
+          color: var(--jk-gh-string);
+        }
+
+        .jk-notebook-container .text_cell_render .token.comment,
+        .jk-notebook-container .text_cell_render .hljs-comment,
+        .jk-notebook-container .text_cell_render .c {
+          color: var(--jk-gh-comment);
+        }
+
+        .jk-notebook-container .text_cell_render .token.number,
+        .jk-notebook-container .text_cell_render .hljs-number,
+        .jk-notebook-container .text_cell_render .m {
+          color: var(--jk-gh-number);
+        }
+
+        .jk-notebook-container .text_cell_render .token.function,
+        .jk-notebook-container .text_cell_render .hljs-title,
+        .jk-notebook-container .text_cell_render .nf {
+          color: var(--jk-gh-function);
         }
 
         .jk-notebook-container .jk-copy-target {
