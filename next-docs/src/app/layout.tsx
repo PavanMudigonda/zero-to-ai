@@ -234,6 +234,10 @@ export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   viewportFit: 'cover',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -243,6 +247,12 @@ export const metadata: Metadata = {
     default: 'Zero to AI - Master Artificial Intelligence'
   },
   description: 'A comprehensive, open-source curriculum covering Python, Data Science, Machine Learning, Neural Networks, LLMs, and AI Agentic Frameworks.',
+  manifest: '/manifest.webmanifest',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   keywords: ['AI', 'Artificial Intelligence', 'Machine Learning', 'Data Science', 'Python', 'LLM', 'Neural Networks', 'LangChain', 'Prompt Engineering'],
   applicationName: 'Zero to AI',
   generator: 'Next.js',
@@ -277,9 +287,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/social-preview.svg',
+        url: '/social-preview.png',
         width: 1200,
         height: 630,
+        type: 'image/png',
         alt: 'Zero to AI open-source curriculum',
       },
     ],
@@ -288,7 +299,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Zero to AI - Master Artificial Intelligence',
     description: 'An open-source roadmap & curriculum for learning Data Science, Machine Learning, LLMs, and AI Agents from scratch.',
-    images: ['/social-preview.svg'],
+    images: ['/social-preview.png'],
   },
   appleWebApp: {
     title: 'Zero to AI',
@@ -329,7 +340,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   );
   
   const footer = (
-    <footer style={{ background: 'var(--nextra-bg)', borderTop: '1px solid rgba(0,0,0,0.1)', padding: '2rem 1rem', textAlign: 'center', fontSize: '0.875rem' }}>
+    <footer style={{ background: 'var(--primer-bg-muted)', color: 'var(--primer-fg-muted)', borderTop: '1px solid var(--primer-border-default)', padding: '2rem 1rem', textAlign: 'center', fontSize: '0.875rem' }}>
       © {new Date().getFullYear()} Zero to AI Curriculum.
     </footer>
   );
