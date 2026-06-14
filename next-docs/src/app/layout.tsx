@@ -340,7 +340,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   );
   
   const footer = (
-    <footer style={{ background: 'var(--primer-bg-muted)', color: 'var(--primer-fg-muted)', borderTop: '1px solid var(--primer-border-default)', padding: '2rem 1rem', textAlign: 'center', fontSize: '0.875rem' }}>
+    <footer style={{ background: 'var(--nextra-bg)', borderTop: '1px solid rgba(0,0,0,0.1)', padding: '2rem 1rem', textAlign: 'center', fontSize: '0.875rem' }}>
       © {new Date().getFullYear()} Zero to AI Curriculum.
     </footer>
   );
