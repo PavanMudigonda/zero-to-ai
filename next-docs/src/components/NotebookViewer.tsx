@@ -529,6 +529,21 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           padding-top: 2.25rem;
         }
 
+        /* Improve code readability in light mode for notebook-rendered blocks. */
+        .jk-notebook-container .jk-copy-target pre,
+        .jk-notebook-container .jk-copy-target pre code,
+        .jk-notebook-container .text_cell_render pre,
+        .jk-notebook-container .text_cell_render pre code {
+          color: rgb(31, 41, 55);
+        }
+
+        .dark .jk-notebook-container .jk-copy-target pre,
+        .dark .jk-notebook-container .jk-copy-target pre code,
+        .dark .jk-notebook-container .text_cell_render pre,
+        .dark .jk-notebook-container .text_cell_render pre code {
+          color: rgb(226, 232, 240);
+        }
+
         .jk-notebook-container--expanded {
           min-height: 100%;
         }
