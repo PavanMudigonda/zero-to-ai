@@ -7,6 +7,11 @@ on:
       - 'jupyter-notebooks/**/*.ipynb'
       - '.github/workflows/validate-notebooks.yml'
 
+# Cancel superseded runs on the same PR branch to save CI minutes.
+concurrency:
+  group: validate-notebooks-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -24,100 +29,79 @@ jobs:
         python-version: ${{ matrix.python-version }}
         cache: 'pip'
     
-    - name: Install dependencies
+    - name: Install validation tooling
+      # Structural validation only needs nbformat; the heavy ML stack
+      # (torch/transformers/...) is intentionally NOT installed here because
+      # these checks never execute notebook code.
       run: |
         python -m pip install --upgrade pip
-        pip install jupyter nbconvert nbformat ipykernel
-        # Install core dependencies (subset for faster CI)
-        pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
-        pip install transformers datasets numpy pandas scikit-learn matplotlib seaborn
-        
+        pip install nbformat
+
     - name: Validate notebook structure
       run: |
         python -c "
-        import os
         import nbformat
         from pathlib import Path
-        
+
         errors = []
         notebooks = sorted(
-            nb for nb in Path('.').rglob('*.ipynb')
+            nb for nb in Path('jupyter-notebooks').rglob('*.ipynb')
             if '.ipynb_checkpoints' not in str(nb)
-            and '.venv' not in str(nb)
-            and 'docs/curriculum' not in str(nb)
         )
         print(f'Found {len(notebooks)} notebooks')
-        
+
         for nb_path in notebooks:
             try:
                 with open(nb_path) as f:
-                    nb = nbformat.read(f, as_version=4)
-                print(f'✓ {nb_path}')
+                    nbformat.read(f, as_version=4)
             except Exception as e:
                 errors.append(f'{nb_path}: {e}')
                 print(f'✗ {nb_path}: {e}')
-        
+
         if errors:
             print(f'\n❌ {len(errors)} notebooks have structural errors')
             for err in errors:
                 print(f'  - {err}')
             exit(1)
-        else:
-            print(f'\n✅ All validated notebooks are structurally sound')
+        print(f'\n✅ All {len(notebooks)} notebooks are structurally sound')
         "
-    
-    - name: Test sample notebook execution
-      run: |
-        # Test a few key notebooks to ensure they execute
-        PROMPT_NB="jupyter-notebooks/11-prompt-engineering/02_basic_prompting/02_basic_prompting.ipynb"
-        if [ -f "$PROMPT_NB" ]; then
-          echo "Testing prompt engineering notebook..."
-          # Skip execution for notebooks requiring API keys
-          echo "⚠️  Skipping execution (requires API key)"
-        fi
 
-        MATH_NB="jupyter-notebooks/03-maths/foundational/01_linear_algebra_fundamentals/01_linear_algebra_fundamentals.ipynb"
-        if [ -f "$MATH_NB" ]; then
-          echo "Testing math fundamentals notebook..."
-          jupyter nbconvert --to notebook --execute \
-            "$MATH_NB" \
-            --output temp_test.ipynb 2>&1 || echo "⚠️  Execution requires full environment"
-        fi
-        
-    - name: Check for common issues
+    - name: Enforce notebook size limit
+      # Large committed notebooks usually mean saved outputs/binary blobs that
+      # bloat the repo. Keep them out by failing the build above a hard cap.
       run: |
         python -c "
-        import os
+        import sys
         from pathlib import Path
-        
-        print('Checking for common issues...')
-        
-        # Check for notebooks with large outputs
-        large_nbs = []
-        for nb_path in Path('.').rglob('*.ipynb'):
+
+        MAX_MB = 10
+        oversized = []
+        for nb_path in Path('jupyter-notebooks').rglob('*.ipynb'):
             if '.ipynb_checkpoints' in str(nb_path):
                 continue
             size_mb = nb_path.stat().st_size / 1024 / 1024
-            if size_mb > 10:
-                large_nbs.append((str(nb_path), f'{size_mb:.1f}MB'))
-        
-        if large_nbs:
-            print(f'\n⚠️  {len(large_nbs)} notebooks are large (>10MB):')
-            for path, size in large_nbs[:5]:
+            if size_mb > MAX_MB:
+                oversized.append((str(nb_path), f'{size_mb:.1f}MB'))
+
+        if oversized:
+            print(f'❌ {len(oversized)} notebooks exceed {MAX_MB}MB:')
+            for path, size in oversized:
                 print(f'  - {path}: {size}')
-            print('  Consider clearing outputs before committing')
-        
-        # Check for absolute paths
-        print('\n✅ Validation complete')
+            print('Clear outputs (e.g. nbstripout) before committing.')
+            sys.exit(1)
+        print(f'✅ No notebooks exceed {MAX_MB}MB')
         "
-    
+
     - name: Summary
       if: always()
       run: |
-        NOTEBOOK_COUNT=$(find . -path './.git' -prune -o -path './.venv' -prune -o -path './docs/curriculum' -prune -o -name '*.ipynb' -print | wc -l | tr -d ' ')
-        echo "## Validation Summary" >> $GITHUB_STEP_SUMMARY
-        echo "- Python version: ${{ matrix.python-version }}" >> $GITHUB_STEP_SUMMARY
-        echo "- Repository contains ${NOTEBOOK_COUNT} notebooks" >> $GITHUB_STEP_SUMMARY
-        echo "- Basic structural validation: ✅" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "Note: Full execution testing requires API keys and GPU resources." >> $GITHUB_STEP_SUMMARY
+        NOTEBOOK_COUNT=$(find jupyter-notebooks -name '*.ipynb' -not -path '*/.ipynb_checkpoints/*' | wc -l | tr -d ' ')
+        {
+          echo "## Validation Summary"
+          echo "- Python version: ${{ matrix.python-version }}"
+          echo "- Notebooks checked: ${NOTEBOOK_COUNT}"
+          echo "- Structural validation: nbformat schema check"
+          echo "- Size guardrail: fail if any notebook > 10MB"
+          echo ""
+          echo "Note: Full execution testing requires API keys and GPU resources and is out of scope for this gate."
+        } >> "$GITHUB_STEP_SUMMARY"

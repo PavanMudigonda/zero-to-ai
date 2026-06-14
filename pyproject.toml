@@ -3,7 +3,7 @@ name = "zero-to-ai"
 version = "0.1.0"
 description = "Comprehensive AI/ML learning path from zero to production"
 authors = [
-    {name = "mnpawan", email = "mnpawan@gmail.com"}
+    {name = "Pavan Mudigonda", email = "mnpawan@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11,<3.15"

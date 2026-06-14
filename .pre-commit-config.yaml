@@ -1,0 +1,38 @@
+# Pre-commit hooks for the Zero to AI repository.
+# Install once with:  pip install pre-commit && pre-commit install
+# Run on all files:    pre-commit run --all-files
+#
+# Notebooks are large and contain saved outputs; nbstripout keeps committed
+# notebooks clean. Ruff lints/formats the Python maintenance tooling in scripts/.
+
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: \.ipynb$
+      - id: end-of-file-fixer
+        exclude: \.ipynb$
+      - id: check-yaml
+      - id: check-json
+        exclude: ^next-docs/tsconfig\.json$
+      - id: check-added-large-files
+        args: ["--maxkb=10240"]
+      - id: check-merge-conflict
+      - id: mixed-line-ending
+        args: ["--fix=lf"]
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.8.4
+    hooks:
+      - id: ruff
+        args: ["--fix"]
+        files: ^scripts/.*\.py$
+      - id: ruff-format
+        files: ^scripts/.*\.py$
+
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout
+        files: ^jupyter-notebooks/.*\.ipynb$
