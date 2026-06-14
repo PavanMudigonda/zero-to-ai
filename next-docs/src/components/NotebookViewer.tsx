@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
 import type { Ipynb } from '@jupyter-kit/core';
+import hljs from 'highlight.js/lib/common';
 import generatedRouteIndex from '@/generated/route-index';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
 import '@jupyter-kit/theme-default/default.css';
@@ -196,6 +197,19 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
 
     const copyButtonClassName = 'jk-copy-button';
 
+    const applySyntaxHighlighting = (container: HTMLDivElement) => {
+      const codeBlocks = container.querySelectorAll<HTMLElement>('.text_cell_render pre code[class^="language-"]');
+
+      codeBlocks.forEach((block) => {
+        if (block.dataset.hljsHighlighted === 'true') {
+          return;
+        }
+
+        hljs.highlightElement(block);
+        block.dataset.hljsHighlighted = 'true';
+      });
+    };
+
     const copyText = async (text: string) => {
       try {
         if (navigator.clipboard && window.isSecureContext) {
@@ -228,6 +242,8 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
     };
 
     const applyButtons = (container: HTMLDivElement) => {
+      applySyntaxHighlighting(container);
+
       const blocks = container.querySelectorAll<HTMLElement>(selectors.join(','));
 
       blocks.forEach((block) => {
