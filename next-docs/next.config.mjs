@@ -35,6 +35,16 @@ export default withNextra({
       config.resolve.alias = {};
     }
 
+    // Fix: Next.js 14 server builds write chunks to server/chunks/{name}.js
+    // (chunk names include the "chunks/" prefix), but webpack-runtime's u()
+    // resolves using numeric chunk IDs without any path prefix → require("./N.js")
+    // fails because the file is at ./chunks/N.js. Pinning the server chunkFilename
+    // to "chunks/[id].js" aligns the runtime path template with the actual files.
+    if (isServer) {
+      config.output = config.output ?? {};
+      config.output.chunkFilename = 'chunks/[id].js';
+    }
+
     // Rely on Next.js default caching mechanism. 
     // Do NOT disable cache here; caching speeds up subsequent builds tremendously.
 
