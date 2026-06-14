@@ -1,0 +1,33 @@
+/**
+ * Zero to AI — Docusaurus theme overrides.
+ * Infante brand accent kept close to the original site's blue.
+ */
+
+:root {
+  --ifm-color-primary: #0969da;
+  --ifm-color-primary-dark: #0860c4;
+  --ifm-color-primary-darker: #075bb9;
+  --ifm-color-primary-darkest: #064b99;
+  --ifm-color-primary-light: #1a76de;
+  --ifm-color-primary-lighter: #2a7ee1;
+  --ifm-color-primary-lightest: #4f96e8;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #4493f8;
+  --ifm-color-primary-dark: #2a82f6;
+  --ifm-color-primary-darker: #1d7af6;
+  --ifm-color-primary-darkest: #0b63d6;
+  --ifm-color-primary-light: #5ea4f9;
+  --ifm-color-primary-lighter: #6cacfa;
+  --ifm-color-primary-lightest: #97c4fb;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Slightly wider content column for code/tables coming from notebooks. */
+.markdown table {
+  display: table;
+  width: 100%;
+}
