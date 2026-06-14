@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
 import type { Ipynb } from '@jupyter-kit/core';
+import hljs from 'highlight.js/lib/common';
 import generatedRouteIndex from '@/generated/route-index';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
 import '@jupyter-kit/theme-default/default.css';
@@ -196,6 +197,19 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
 
     const copyButtonClassName = 'jk-copy-button';
 
+    const applySyntaxHighlighting = (container: HTMLDivElement) => {
+      const codeBlocks = container.querySelectorAll<HTMLElement>('.text_cell_render pre code[class^="language-"]');
+
+      codeBlocks.forEach((block) => {
+        if (block.dataset.hljsHighlighted === 'true') {
+          return;
+        }
+
+        hljs.highlightElement(block);
+        block.dataset.hljsHighlighted = 'true';
+      });
+    };
+
     const copyText = async (text: string) => {
       try {
         if (navigator.clipboard && window.isSecureContext) {
@@ -228,6 +242,8 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
     };
 
     const applyButtons = (container: HTMLDivElement) => {
+      applySyntaxHighlighting(container);
+
       const blocks = container.querySelectorAll<HTMLElement>(selectors.join(','));
 
       blocks.forEach((block) => {
@@ -489,11 +505,13 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           --jk-gh-output-bg: rgb(255, 255, 255);
           --jk-gh-accent: rgb(9, 105, 218);
           --jk-gh-inline-code-bg: rgb(175, 184, 193, 0.2);
-          --jk-gh-keyword: rgb(207, 34, 46);
-          --jk-gh-string: rgb(11, 110, 153);
-          --jk-gh-comment: rgb(87, 96, 106);
-          --jk-gh-number: rgb(5, 80, 174);
-          --jk-gh-function: rgb(130, 80, 223);
+          --jk-gh-keyword: rgb(0, 0, 255);
+          --jk-gh-string: rgb(163, 21, 21);
+          --jk-gh-comment: rgb(0, 128, 0);
+          --jk-gh-number: rgb(9, 134, 88);
+          --jk-gh-function: rgb(121, 94, 38);
+          --jk-gh-builtin: rgb(38, 79, 120);
+          --jk-gh-class: rgb(38, 79, 120);
           --jk-gh-operator: rgb(36, 41, 47);
         }
 
@@ -506,11 +524,13 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           --jk-gh-output-bg: rgb(13, 17, 23);
           --jk-gh-accent: rgb(47, 129, 247);
           --jk-gh-inline-code-bg: rgb(110, 118, 129, 0.4);
-          --jk-gh-keyword: rgb(255, 123, 114);
-          --jk-gh-string: rgb(121, 192, 255);
-          --jk-gh-comment: rgb(139, 148, 158);
-          --jk-gh-number: rgb(165, 214, 255);
-          --jk-gh-function: rgb(210, 168, 255);
+          --jk-gh-keyword: rgb(86, 156, 214);
+          --jk-gh-string: rgb(206, 145, 120);
+          --jk-gh-comment: rgb(106, 153, 85);
+          --jk-gh-number: rgb(181, 206, 168);
+          --jk-gh-function: rgb(220, 220, 170);
+          --jk-gh-builtin: rgb(78, 201, 176);
+          --jk-gh-class: rgb(78, 201, 176);
           --jk-gh-operator: rgb(230, 237, 243);
         }
 
@@ -591,6 +611,11 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           color: var(--jk-gh-function);
         }
 
+        .jk-notebook-container .cm-editor .cm-typeName,
+        .jk-notebook-container .cm-editor .cm-className {
+          color: var(--jk-gh-class);
+        }
+
         .jk-notebook-container .cm-editor .cm-operator,
         .jk-notebook-container .cm-editor .cm-punctuation {
           color: var(--jk-gh-operator);
@@ -625,6 +650,17 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
         .jk-notebook-container .text_cell_render .hljs-title,
         .jk-notebook-container .text_cell_render .nf {
           color: var(--jk-gh-function);
+        }
+
+        .jk-notebook-container .text_cell_render .hljs-built_in,
+        .jk-notebook-container .text_cell_render .nb {
+          color: var(--jk-gh-builtin);
+        }
+
+        .jk-notebook-container .text_cell_render .hljs-title.class_,
+        .jk-notebook-container .text_cell_render .nc,
+        .jk-notebook-container .text_cell_render .token.class-name {
+          color: var(--jk-gh-class);
         }
 
         .jk-notebook-container .jk-copy-target {
@@ -676,6 +712,13 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
           padding-top: 2.25rem;
         }
 
+        .jk-notebook-container .jk-copy-target pre,
+        .jk-notebook-container .text_cell_render pre {
+          background: var(--jk-gh-cell-bg);
+          border: 1px solid var(--jk-gh-border);
+          border-radius: 0.375rem;
+        }
+
         /* Improve code readability in light mode for notebook-rendered blocks. */
         .jk-notebook-container .jk-copy-target pre,
         .jk-notebook-container .jk-copy-target pre code,
@@ -689,6 +732,12 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
         .dark .jk-notebook-container .text_cell_render pre,
         .dark .jk-notebook-container .text_cell_render pre code {
           color: rgb(226, 232, 240);
+        }
+
+        .dark .jk-notebook-container .jk-copy-target pre,
+        .dark .jk-notebook-container .text_cell_render pre {
+          background: var(--jk-gh-cell-bg);
+          border-color: var(--jk-gh-border);
         }
 
         .jk-notebook-container--expanded {

@@ -37,6 +37,7 @@
     "@mdx-js/react": "^3.1.1",
     "@supabase/ssr": "^0.12.0",
     "@supabase/supabase-js": "^2.108.1",
+    "highlight.js": "^11.11.1",
     "katex": "^0.17.0",
     "next": "^14.2.35",
     "nextra": "^4.6.1",
@@ -46,14 +47,14 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "playwright": "^1.60.0",
-    "puppeteer": "^25.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^18.3.28",
     "@types/react-dom": "^18.3.7",
     "eslint": "^8.57.1",
     "eslint-config-next": "^14.2.35",
+    "playwright": "^1.60.0",
+    "puppeteer": "^25.1.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
