@@ -1,0 +1,46 @@
+version: 2
+
+updates:
+  # Python dependencies (root project)
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      python-dependencies:
+        patterns:
+          - "*"
+
+  # Node dependencies for the documentation site
+  - package-ecosystem: "npm"
+    directory: "/next-docs"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      next-docs-dependencies:
+        patterns:
+          - "*"
+
+  # Node dependencies for the root CLI tooling
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      cli-tooling-dependencies:
+        patterns:
+          - "*"
+
+  # GitHub Actions used by the workflows
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns:
+          - "*"
