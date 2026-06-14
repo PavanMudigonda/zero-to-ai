@@ -5,5 +5,4 @@ export default {
   "04_lstm_time_series": "4. Lstm Time Series",
   "05_anomaly_detection": "5. Anomaly Detection",
   "06_forecasting_competition": "6. Forecasting Competition",
-  "time-series-forecasting": "7. Time Series Forecasting",
 }

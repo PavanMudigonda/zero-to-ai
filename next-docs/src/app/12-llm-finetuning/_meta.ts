@@ -10,6 +10,5 @@ export default {
   "09_grpo_reasoning_training": "9. Grpo Reasoning Training",
   "10_unsloth_fast_finetuning": "10. Unsloth Fast Fine-tuning",
   "11_quantization_gptq_awq": "11. Quantization Gptq Awq",
-  "12-llm-finetuning": "12. LLM Fine-tuning",
   "12_rlhf_constitutional_ai": "13. Rlhf Constitutional AI",
 }

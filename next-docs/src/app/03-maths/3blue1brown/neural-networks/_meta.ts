@@ -8,5 +8,4 @@ export default {
   "07_attention_deep_dive": "7. Attention Deep Dive",
   "08_how_gpt_stores_facts": "8. How GPT Stores Facts",
   "09_diffusion_models": "9. Diffusion Models",
-  "neural-networks": "10. Neural Networks",
 }

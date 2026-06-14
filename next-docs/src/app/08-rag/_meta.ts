@@ -6,7 +6,6 @@ export default {
   "05_llamaindex_rag": "5. LlamaIndex RAG",
   "06_advanced_retrieval": "6. Advanced Retrieval",
   "07_conversation_rag": "7. Conversation RAG",
-  "08-rag": "8. RAG",
   "08_evaluation": "9. Evaluation",
   "09_hyde_reranking": "10. HyDE Reranking",
   "10_rag_evaluation_playbook": "11. RAG Evaluation Playbook",

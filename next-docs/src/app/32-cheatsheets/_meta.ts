@@ -1,5 +1,4 @@
 export default {
-  "32-cheatsheets": "1. Cheatsheets",
   cloud: "2. Cloud",
   "config-management": "3. Config Management",
   databases: "4. Databases",

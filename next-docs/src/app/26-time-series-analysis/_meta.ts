@@ -6,5 +6,4 @@ export default {
   "05_deep_learning_time_series": "5. Deep Learning Time Series",
   "06_advanced_techniques_applications": "6. Advanced Techniques Applications",
   "07_practical_applications_exercises": "7. Practical Applications Exercises",
-  "26-time-series-analysis": "8. Time-Series Analysis",
 }

@@ -9,5 +9,4 @@ export default {
   "08_challenges": "8. Challenges",
   "09_post-quiz": "9. Post Quiz",
   "10_pre-quiz": "10. Pre Quiz",
-  "16-model-evaluation": "11. Model Evaluation",
 }

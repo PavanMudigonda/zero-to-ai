@@ -5,5 +5,4 @@ export default {
   "04_imbalanced_datasets": "4. Imbalanced Datasets",
   "05_model_interpretability": "5. Model Interpretability",
   "06_end_to_end_project": "6. End To End Project",
-  "machine-learning": "7. Machine Learning",
 }

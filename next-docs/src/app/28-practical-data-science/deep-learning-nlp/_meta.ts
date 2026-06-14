@@ -4,5 +4,4 @@ export default {
   "03_llm_applications_patterns": "3. LLM Applications Patterns",
   "04_text_preprocessing": "4. Text Preprocessing",
   "05_llm_finetuning_lora": "5. LLM Fine-tuning LoRA",
-  "deep-learning-nlp": "6. Deep Learning NLP",
 }

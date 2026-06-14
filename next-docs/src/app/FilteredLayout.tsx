@@ -15,13 +15,8 @@ export default function FilteredLayout({ pageMap, children, ...props }: any) {
 
     updateIsDesktop();
 
-    if (typeof mediaQuery.addEventListener === 'function') {
-      mediaQuery.addEventListener('change', updateIsDesktop);
-      return () => mediaQuery.removeEventListener('change', updateIsDesktop);
-    }
-
-    mediaQuery.addListener(updateIsDesktop);
-    return () => mediaQuery.removeListener(updateIsDesktop);
+    mediaQuery.addEventListener('change', updateIsDesktop);
+    return () => mediaQuery.removeEventListener('change', updateIsDesktop);
   }, []);
 
   const filteredPageMap = useMemo(() => {
