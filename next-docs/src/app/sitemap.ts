@@ -2,6 +2,8 @@ import type { MetadataRoute } from 'next';
 
 import { getStaticSiteRoutes } from '@/lib/site-routes';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const buildDate = new Date(process.env.BUILD_DATE ?? Date.now()).toISOString();
 
