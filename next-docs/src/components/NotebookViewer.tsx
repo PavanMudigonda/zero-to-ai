@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
 import type { Ipynb } from '@jupyter-kit/core';
+import generatedRouteIndex from '@/generated/route-index';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
 import '@jupyter-kit/theme-default/default.css';
 import '@jupyter-kit/theme-default/syntax/one-dark.css';
@@ -172,44 +173,12 @@ function extractNotebookResources(ipynb: Ipynb, limit = 2): NotebookResource[] {
   return resources;
 }
 
-let routeIndexPromise: Promise<string[]> | null = null;
-
-function getRouteIndex(): Promise<string[]> {
-  if (!routeIndexPromise) {
-    routeIndexPromise = fetch('/route-index.json')
-      .then(async (response) => {
-        if (!response.ok) {
-          throw new Error(`Failed to load route index: ${response.status}`);
-        }
-
-        return response.json() as Promise<string[]>;
-      })
-      .catch(() => []);
-  }
-
-  return routeIndexPromise;
-}
-
 export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
   const pathname = usePathname();
-  const [routeIndex, setRouteIndex] = useState<string[]>([]);
+  const routeIndex = generatedRouteIndex;
   const [isExpanded, setIsExpanded] = useState(false);
   const notebookContainerRef = useRef<HTMLDivElement | null>(null);
   const expandedNotebookContainerRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    void getRouteIndex().then((routes) => {
-      if (isMounted) {
-        setRouteIndex(routes);
-      }
-    });
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   useEffect(() => {
     const containers = [notebookContainerRef.current, expandedNotebookContainerRef.current].filter(
@@ -329,7 +298,7 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
     return () => {
       observers.forEach((observer) => observer.disconnect());
     };
-  }, [pathname, routeIndex, ipynb, isExpanded]);
+  }, [pathname, ipynb, isExpanded]);
 
   useEffect(() => {
     if (!isExpanded) {

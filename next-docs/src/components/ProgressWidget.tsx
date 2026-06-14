@@ -3,13 +3,16 @@
 import React, { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { createBrowserClient } from '@supabase/ssr';
+import generatedRouteIndex from '@/generated/route-index';
 
 type OAuthProvider = 'github' | 'google';
 
 export default function ProgressWidget() {
   const pathname = usePathname();
   const [completedRoutes, setCompletedRoutes] = useState<Set<string>>(new Set());
-  const [totalRoutes, setTotalRoutes] = useState<number>(0);
+  const [totalRoutes] = useState<number>(() => {
+    return generatedRouteIndex.filter((route) => route !== '/' && !route.includes('/temp')).length;
+  });
   const [mounted, setMounted] = useState(false);
   const [user, setUser] = useState<any>(null);
   
@@ -24,18 +27,7 @@ export default function ProgressWidget() {
       : null
   );
 
-  const loadRouteIndex = () => {
-    fetch('/route-index.json')
-      .then(res => res.json())
-      .then((routes: string[]) => {
-        const validRoutes = routes.filter((r: string) => r !== '/' && !r.includes('/temp'));
-        setTotalRoutes(validRoutes.length);
-      })
-      .catch(() => {});
-  };
-
   useEffect(() => {
-    loadRouteIndex();
     setMounted(true);
 
     // 1. Evaluate Auth State

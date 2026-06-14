@@ -104,7 +104,7 @@ function projectSectionDirectory(routePath: string): string {
   return normalizedRoutePath;
 }
 
-function findProjectedSectionRoute(targetRouteDirectory: string, routeIndex: string[]): string | null {
+function findProjectedSectionRoute(targetRouteDirectory: string, routeIndex: readonly string[]): string | null {
   const targetSegment = normalizeSegmentName(targetRouteDirectory.split('/').filter(Boolean).pop() || '');
   let ancestorParent = routeDirectory(targetRouteDirectory);
 
@@ -129,7 +129,7 @@ function findProjectedSectionRoute(targetRouteDirectory: string, routeIndex: str
   return null;
 }
 
-function findSiblingAliasRoute(routeDirectory: string, routeIndex: string[]): string | null {
+function findSiblingAliasRoute(routeDirectory: string, routeIndex: readonly string[]): string | null {
   const parentRoute = routeDirectory.replace(/\/[^/]+$/, '') || '/';
   const targetSegment = normalizeSegmentName(routeDirectory.split('/').filter(Boolean).pop() || '');
 
@@ -149,7 +149,7 @@ function findSiblingAliasRoute(routeDirectory: string, routeIndex: string[]): st
   return null;
 }
 
-function findNearestAncestorAliasRoute(routeDirectory: string, routeIndex: string[]): string | null {
+function findNearestAncestorAliasRoute(routeDirectory: string, routeIndex: readonly string[]): string | null {
   const targetSegment = normalizeSegmentName(routeDirectory.split('/').filter(Boolean).pop() || '');
   let ancestorRoute = routeDirectory.replace(/\/[^/]+$/, '') || '/';
 
@@ -175,7 +175,7 @@ function findNearestAncestorAliasRoute(routeDirectory: string, routeIndex: strin
   return null;
 }
 
-function findNotebookFallbackRoute(routeDirectory: string, routeIndex: string[]): string | null {
+function findNotebookFallbackRoute(routeDirectory: string, routeIndex: readonly string[]): string | null {
   const notebookRoute = `${stripTrailingSlash(routeDirectory) || '/'}/notebook`.replace(/\/+/g, '/');
 
   if (routeIndex.includes(notebookRoute)) {
@@ -190,7 +190,7 @@ function findNotebookFallbackRoute(routeDirectory: string, routeIndex: string[])
   return findNearestAncestorAliasRoute(notebookRoute, routeIndex);
 }
 
-function findParentIndexRoute(sourceBasePath: string, routeIndex: string[]): string | null {
+function findParentIndexRoute(sourceBasePath: string, routeIndex: readonly string[]): string | null {
   const parentRoute = routeDirectory(sourceBasePath);
 
   if (routeIndex.includes(parentRoute)) {
@@ -200,7 +200,7 @@ function findParentIndexRoute(sourceBasePath: string, routeIndex: string[]): str
   return null;
 }
 
-function normalizeNotebookTarget(targetUrl: string, currentPathname: string, routeIndex: string[]): string {
+function normalizeNotebookTarget(targetUrl: string, currentPathname: string, routeIndex: readonly string[]): string {
   if (!targetUrl || isExternalUrl(targetUrl)) {
     return targetUrl;
   }
@@ -267,7 +267,7 @@ function normalizeNotebookTarget(targetUrl: string, currentPathname: string, rou
   return targetUrl;
 }
 
-function normalizeLinkReferences(segment: string, pathname: string, routeIndex: string[]): string {
+function normalizeLinkReferences(segment: string, pathname: string, routeIndex: readonly string[]): string {
   const withMarkdownLinks = segment.replace(
     MARKDOWN_LINK_PATTERN,
     (_match, prefix: string, target: string, suffix: string) => `${prefix}${normalizeNotebookTarget(target, pathname, routeIndex)}${suffix}`,
@@ -287,7 +287,7 @@ function replaceOutsideCodeFences(text: string, replacer: (segment: string) => s
     .join('');
 }
 
-function normalizeMarkdownText(text: string, pathname: string, routeIndex: string[]): string {
+function normalizeMarkdownText(text: string, pathname: string, routeIndex: readonly string[]): string {
   return replaceOutsideCodeFences(text, (segment) => {
     return normalizeLinkReferences(segment, pathname, routeIndex);
   });
@@ -296,7 +296,7 @@ function normalizeMarkdownText(text: string, pathname: string, routeIndex: strin
 export function normalizeNotebookLinks(
   ipynb: Ipynb,
   currentPathname: string,
-  routeIndex: string[] = [],
+  routeIndex: readonly string[] = [],
 ): Ipynb {
   return {
     ...ipynb,
