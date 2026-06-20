@@ -996,6 +996,7 @@ export const generatedRouteIndex = Object.freeze(
   "/30-inference-optimization/07_prefix_caching_chunked_prefill",
   "/31-ai-powered-dev-tools/01_START_HERE",
   "/31-ai-powered-dev-tools/07_build_mcp_server",
+  "/32-cheatsheets/shell-scripting/bash-cheatsheet",
   "/blog",
   "/blog/zero-to-ai-complete-learning-path"
 ]

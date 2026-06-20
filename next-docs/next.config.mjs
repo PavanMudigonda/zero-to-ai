@@ -16,15 +16,6 @@ const outputMode = process.env.NEXT_OUTPUT_MODE ?? 'export';
 
 export default withNextra({
   ...(outputMode === 'export' ? { output: 'export' } : {}),
-  async redirects() {
-    return [
-      {
-        source: '/32-cheatsheets/shell-scripting/bash-cheatsheet',
-        destination: '/32-cheatsheets/linux/linux-commands-cheatsheet',
-        permanent: true,
-      },
-    ];
-  },
   eslint: {
     ignoreDuringBuilds: true,
   },
