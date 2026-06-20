@@ -48,7 +48,7 @@ export default function FilteredLayout({ pageMap, children, ...props }: any) {
     return {
       ...baseSidebar,
       autoCollapse: false,
-      defaultMenuCollapseLevel: Math.max(baseSidebar.defaultMenuCollapseLevel ?? 1, 2),
+      defaultMenuCollapseLevel: baseSidebar.defaultMenuCollapseLevel ?? 1,
     };
   }, [isDesktop, props.sidebar]);
 
