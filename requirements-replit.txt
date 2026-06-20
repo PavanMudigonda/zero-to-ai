@@ -53,7 +53,7 @@ pydantic>=2.10.0
 
 # NLP
 nltk>=3.9.0
-gensim>=4.3.0
+gensim>=4.4.0
 
 # Time Series
 prophet>=1.1.0
