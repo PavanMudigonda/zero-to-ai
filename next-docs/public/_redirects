@@ -3,7 +3,15 @@
 #
 # Files in public/ are copied to the static export output root (out/),
 # so this file ships to the deployment root where Cloudflare Pages reads it.
-
-# Forward the default *.pages.dev hostname to the canonical custom domain.
-# :splat preserves the rest of the path and query for deep links.
-https://zero-to-ai.pages.dev/*    https://zero-to-ai.dev/:splat    301
+#
+# Use this file for PATH-based redirects only, e.g.:
+#   /old-path   /new-path        301
+#   /blog/*     /posts/:splat    301
+#
+# IMPORTANT: hostname/domain-level redirects are NOT supported here.
+# Cloudflare Pages matches the source against the request PATH only, and the
+# rule applies to ALL hostnames on the project (so a bare "/*" rule would loop
+# on the canonical domain). To forward zero-to-ai.pages.dev -> zero-to-ai.dev,
+# configure a dashboard Redirect Rule (Rules -> Redirect Rules) that matches
+# Hostname == "zero-to-ai.pages.dev". See:
+# https://developers.cloudflare.com/rules/url-forwarding/single-redirects/
