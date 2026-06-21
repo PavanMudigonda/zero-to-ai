@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects
+# Docs: https://developers.cloudflare.com/pages/configuration/redirects/
+#
+# Files in public/ are copied to the static export output root (out/),
+# so this file ships to the deployment root where Cloudflare Pages reads it.
+
+# Forward the default *.pages.dev hostname to the canonical custom domain.
+# :splat preserves the rest of the path and query for deep links.
+https://zero-to-ai.pages.dev/*    https://zero-to-ai.dev/:splat    301
