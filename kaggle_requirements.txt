@@ -57,7 +57,7 @@ trl>=0.12.0
 safetensors>=0.4.0
 evaluate>=0.4.0
 bert-score>=0.3.0
-unsloth>=2026.6.7
+unsloth>=2026.6.8
 autoawq>=0.2.9
 
 # MLOps
