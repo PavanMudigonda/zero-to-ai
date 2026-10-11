@@ -90,11 +90,6 @@ export default function FuzzySearch({ items }: FuzzySearchProps) {
   }, [items, query]);
 
   useEffect(() => {
-    activeIndexRef.current = 0;
-    setActiveIndex(0);
-  }, [query]);
-
-  useEffect(() => {
     const handlePointerDown = (event: MouseEvent) => {
       if (!containerRef.current?.contains(event.target as Node)) {
         setIsOpen(false);
@@ -122,6 +117,8 @@ export default function FuzzySearch({ items }: FuzzySearchProps) {
   const navigateTo = (route: string) => {
     setIsOpen(false);
     setQuery('');
+    activeIndexRef.current = 0;
+    setActiveIndex(0);
     if (route !== pathname) {
       router.push(route);
     }
@@ -145,6 +142,8 @@ export default function FuzzySearch({ items }: FuzzySearchProps) {
           type="search"
           value={query}
           onChange={(event) => {
+            activeIndexRef.current = 0;
+            setActiveIndex(0);
             setQuery(event.target.value);
             setIsOpen(true);
           }}

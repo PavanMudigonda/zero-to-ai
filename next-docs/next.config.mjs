@@ -1,6 +1,4 @@
 import nextra from 'nextra';
-import remarkNormalizeDocLinks from './remark-normalize-doc-links.mjs';
-import remarkFixMissingRefs from './remark-fix-missing-refs.mjs';
 import { existsSync, writeFileSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
@@ -8,13 +6,13 @@ const withNextra = nextra({
   latex: true,
   defaultShowCopyCode: true,
   mdxOptions: {
-    remarkPlugins: [remarkNormalizeDocLinks, remarkFixMissingRefs]
+    remarkPlugins: []
   }
 });
 
 const outputMode = process.env.NEXT_OUTPUT_MODE ?? 'export';
 
-export default withNextra({
+const nextConfig = withNextra({
   ...(outputMode === 'export' ? { output: 'export' } : {}),
   eslint: {
     ignoreDuringBuilds: true,
@@ -87,3 +85,37 @@ export default withNextra({
   },
   reactStrictMode: true,
 });
+
+const nextraLoaderPath = join(process.cwd(), 'node_modules/nextra/loader.cjs');
+const serializableLoaderPath = join(process.cwd(), 'turbopack-nextra-loader.cjs');
+const remarkPluginPaths = [
+  './remark-normalize-doc-links.mjs',
+  './remark-fix-missing-refs.mjs',
+];
+
+nextConfig.turbopack ??= {};
+nextConfig.turbopack.root = process.cwd();
+nextConfig.turbopack.rules ??= {};
+nextConfig.turbopack.rules['**/*.ipynb'] = {
+  type: 'json',
+};
+
+for (const rule of Object.values(nextConfig.turbopack?.rules ?? {})) {
+  if (!Array.isArray(rule.loaders)) continue;
+
+  rule.loaders = rule.loaders.map((loader) => {
+    if (loader.loader !== nextraLoaderPath || !loader.options.mdxOptions) {
+      return loader;
+    }
+
+    return {
+      loader: serializableLoaderPath,
+      options: {
+        ...loader.options,
+        remarkPluginPaths,
+      },
+    };
+  });
+}
+
+export default nextConfig;
