@@ -6,38 +6,49 @@ template: |
   $CHANGES
 categories:
   - title: '🚀 Features'
-    labels:
-      - 'feature'
-      - 'enhancement'
+    semver-increment: minor
+    when:
+      labels:
+        - 'feature'
+        - 'enhancement'
   - title: '🐛 Bug Fixes'
-    labels:
-      - 'fix'
-      - 'bugfix'
-      - 'bug'
+    when:
+      labels:
+        - 'fix'
+        - 'bugfix'
+        - 'bug'
   - title: '📚 Documentation'
-    labels:
-      - 'documentation'
-      - 'docs'
+    when:
+      labels:
+        - 'documentation'
+        - 'docs'
   - title: '🧰 Maintenance'
-    labels:
-      - 'chore'
-      - 'maintenance'
-      - 'dependencies'
+    when:
+      labels:
+        - 'chore'
+        - 'maintenance'
+        - 'dependencies'
+  - type: 'version-resolver'
+    semver-increment: major
+    when:
+      labels:
+        - 'major'
+  - type: 'version-resolver'
+    semver-increment: minor
+    when:
+      labels:
+        - 'minor'
+        - 'feature'
+        - 'enhancement'
+  - type: 'version-resolver'
+    semver-increment: patch
+    when:
+      labels:
+        - 'patch'
+        - 'fix'
+        - 'bugfix'
+        - 'docs'
+        - 'documentation'
+        - 'chore'
 version-resolver:
-  major:
-    labels:
-      - 'major'
-  minor:
-    labels:
-      - 'minor'
-      - 'feature'
-      - 'enhancement'
-  patch:
-    labels:
-      - 'patch'
-      - 'fix'
-      - 'bugfix'
-      - 'docs'
-      - 'documentation'
-      - 'chore'
   default: patch
