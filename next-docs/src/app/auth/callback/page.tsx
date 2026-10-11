@@ -23,6 +23,12 @@ function AuthCallbackContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const configurationError =
+    supabaseUrl && supabaseAnonKey
+      ? null
+      : 'Supabase URL and anon key are missing in .env.local.';
 
   const nextPath = useMemo(
     () => normalizeNextPath(searchParams.get('next')),
@@ -34,16 +40,7 @@ function AuthCallbackContent() {
   );
 
   useEffect(() => {
-    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-    if (!supabaseUrl || !supabaseAnonKey) {
-      setErrorMessage('Supabase URL and anon key are missing in .env.local.');
-      return;
-    }
-
-    if (authError) {
-      setErrorMessage(authError);
+    if (configurationError || authError) {
       return;
     }
 
@@ -87,15 +84,17 @@ function AuthCallbackContent() {
       window.clearTimeout(timeoutId);
       authListener.subscription.unsubscribe();
     };
-  }, [authError, nextPath, router]);
+  }, [authError, configurationError, nextPath, router]);
+
+  const displayedError = configurationError ?? authError ?? errorMessage;
 
   return (
     <main className="mx-auto flex min-h-[60vh] max-w-xl flex-col items-center justify-center px-6 py-16 text-center">
       <div className="w-full rounded-2xl border border-gray-200 bg-white p-8 shadow-sm dark:border-gray-800 dark:bg-[#111]">
         <h1 className="text-2xl font-semibold text-gray-900 dark:text-white">Complete sign-in</h1>
-        {errorMessage ? (
+        {displayedError ? (
           <>
-            <p className="mt-3 text-sm text-red-600 dark:text-red-400">{errorMessage}</p>
+            <p className="mt-3 text-sm text-red-600 dark:text-red-400">{displayedError}</p>
             <div className="mt-6 flex items-center justify-center gap-3">
               <Link
                 href={nextPath}

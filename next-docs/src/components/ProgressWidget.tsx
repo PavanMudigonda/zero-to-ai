@@ -1,11 +1,15 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState, useSyncExternalStore } from 'react';
 import { usePathname } from 'next/navigation';
 import { createBrowserClient } from '@supabase/ssr';
 import generatedRouteIndex from '@/generated/route-index';
 
 type OAuthProvider = 'github' | 'google';
+
+const subscribeToHydration = () => () => {};
+const getClientSnapshot = () => true;
+const getServerSnapshot = () => false;
 
 export default function ProgressWidget() {
   const pathname = usePathname();
@@ -13,7 +17,11 @@ export default function ProgressWidget() {
   const [totalRoutes] = useState<number>(() => {
     return generatedRouteIndex.filter((route) => route !== '/' && !route.includes('/temp')).length;
   });
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(
+    subscribeToHydration,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
   const [user, setUser] = useState<any>(null);
   const [syncError, setSyncError] = useState<string | null>(null);
   
@@ -28,42 +36,7 @@ export default function ProgressWidget() {
       : null
   );
 
-  useEffect(() => {
-    setMounted(true);
-
-    // 1. Evaluate Auth State
-    if (supabase) {
-      supabase.auth.getUser().then(({ data: { user } }) => {
-        setUser(user);
-        if (user) {
-          fetchCloudProgress(user.id);
-        } else {
-          loadLocalProgress();
-        }
-      });
-
-      const { data: authListener } = supabase.auth.onAuthStateChange(
-        async (event, session) => {
-          const currentUser = session?.user;
-          setUser(currentUser ?? null);
-          if (currentUser) {
-            await fetchCloudProgress(currentUser.id);
-          } else {
-            loadLocalProgress();
-          }
-        }
-      );
-      
-      return () => {
-        authListener?.subscription.unsubscribe();
-      };
-    }
-
-    loadLocalProgress();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [supabase]);
-  
-  const loadLocalProgress = () => {
+  const loadLocalProgress = useCallback(() => {
     const stored = localStorage.getItem('curriculum-progress');
     if (stored) {
       try {
@@ -71,9 +44,9 @@ export default function ProgressWidget() {
         if (Array.isArray(parsed)) setCompletedRoutes(new Set(parsed));
       } catch {}
     }
-  };
+  }, []);
 
-  const fetchCloudProgress = async (userId: string) => {
+  const fetchCloudProgress = useCallback(async (userId: string) => {
     if (!supabase) return;
     
     // Attempt to migrate any unstored local progress
@@ -103,7 +76,39 @@ export default function ProgressWidget() {
       const routes = data.map((row: any) => row.route);
       setCompletedRoutes(new Set(routes));
     }
-  };
+  }, [supabase]);
+
+  useEffect(() => {
+    if (supabase) {
+      supabase.auth.getUser().then(({ data: { user } }) => {
+        setUser(user);
+        if (user) {
+          fetchCloudProgress(user.id);
+        } else {
+          loadLocalProgress();
+        }
+      });
+
+      const { data: authListener } = supabase.auth.onAuthStateChange(
+        async (event, session) => {
+          const currentUser = session?.user;
+          setUser(currentUser ?? null);
+          if (currentUser) {
+            await fetchCloudProgress(currentUser.id);
+          } else {
+            loadLocalProgress();
+          }
+        }
+      );
+      return () => {
+        authListener?.subscription.unsubscribe();
+      };
+    }
+
+    // Restore persisted progress once the browser-only effect runs.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    loadLocalProgress();
+  }, [fetchCloudProgress, loadLocalProgress, supabase]);
 
   const handleLogin = async (provider: OAuthProvider) => {
     if (!supabase) {
