@@ -1,8 +1,5 @@
 # Visualizing Distributions
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/10-Visualizing-Distributions.png)|
-|:---:|
-| Visualizing Distributions - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
 
 In the previous lesson, you learned some interesting facts about a dataset about the birds of Minnesota. You found some erroneous data by visualizing outliers and looked at the differences between bird categories by their maximum length.
 
@@ -28,7 +25,6 @@ birds.head()
 |    3 | Ross's goose                 | Anser rossii           | Ducks/Geese/Waterfowl | Anseriformes | Anatidae | Anser       | LC                 |      57.3 |        64 |        1066 |        1567 |         113 |         116 |
 |    4 | Greater white-fronted goose  | Anser albifrons        | Ducks/Geese/Waterfowl | Anseriformes | Anatidae | Anser       | LC                 |        64 |        81 |        1930 |        3310 |         130 |         165 |
 
-
 In general, you can quickly look at the way data is distributed by using a scatter plot as we did in the previous lesson:
 
 ```python
@@ -40,7 +36,6 @@ plt.xlabel('Max Length')
 
 plt.show()
 ```
-![max length per order](images/scatter-wb.png)
 
 This gives an overview of the general distribution of body length per bird Order, but it is not the optimal way to display true distributions. That task is usually handled by creating a Histogram.
 ## Working with histograms
@@ -51,7 +46,6 @@ Matplotlib offers very good ways to visualize data distribution using Histograms
 birds['MaxBodyMass'].plot(kind = 'hist', bins = 10, figsize = (12,12))
 plt.show()
 ```
-![distribution over the entire dataset](images/dist1-wb.png)
 
 As you can see, most of the 400+ birds in this dataset fall in the range of under 2000 for their Max Body Mass. Gain more insight into the data by changing  the `bins` parameter to a higher number, something like 30:
 
@@ -59,7 +53,6 @@ As you can see, most of the 400+ birds in this dataset fall in the range of unde
 birds['MaxBodyMass'].plot(kind = 'hist', bins = 30, figsize = (12,12))
 plt.show()
 ```
-![distribution over the entire dataset with larger bins param](images/dist2-wb.png)
 
 This chart shows the distribution in a bit more granular fashion. A chart less skewed to the left could be created by ensuring that you only select data within a given range:
 
@@ -70,7 +63,6 @@ filteredBirds = birds[(birds['MaxBodyMass'] > 1) & (birds['MaxBodyMass'] &lt; 60
 filteredBirds['MaxBodyMass'].plot(kind = 'hist',bins = 40,figsize = (12,12))
 plt.show()     
 ```
-![filtered histogram](images/dist3-wb.png)
 
 ✅ Try some other filters and data points. To see the full distribution of the data, remove the `['MaxBodyMass']` filter to show labeled distributions.
 
@@ -86,8 +78,6 @@ fig, ax = plt.subplots(tight_layout=True)
 hist = ax.hist2d(x, y)
 ```
 There appears to be an expected correlation between these two elements along an expected axis, with one particularly strong point of convergence:
-
-![2D plot](images/2D-wb.png)
 
 Histograms work well by default for numeric data. What if you need to see distributions according to text data? 
 ## Explore the dataset for distributions using text data 
@@ -126,8 +116,6 @@ plt.gca().set(title='Conservation Status', ylabel='Min Wingspan')
 plt.legend();
 ```
 
-![wingspan and conservation collation](images/histogram-conservation-wb.png)
-
 There doesn't seem to be a good correlation between minimum wingspan and conservation status. Test other elements of the dataset using this method. You can try different filters as well. Do you find any correlation?
 
 ## Density plots
@@ -144,7 +132,6 @@ import matplotlib.pyplot as plt
 sns.kdeplot(filteredBirds['MinWingspan'])
 plt.show()
 ```
-![Density plot](images/density1.png)
 
 You can see how the plot echoes the previous one for Minimum Wingspan data; it's just a bit smoother. According to Seaborn's documentation, "Relative to a histogram, KDE can produce a plot that is less cluttered and more interpretable, especially when drawing multiple distributions. But it has the potential to introduce distortions if the underlying distribution is bounded or not smooth. Like a histogram, the quality of the representation also depends on the selection of good smoothing parameters." [source](https://seaborn.pydata.org/generated/seaborn.kdeplot.html) In other words, outliers as always will make your charts behave badly.
 
@@ -154,7 +141,6 @@ If you wanted to revisit that jagged MaxBodyMass line in the second chart you bu
 sns.kdeplot(filteredBirds['MaxBodyMass'])
 plt.show()
 ```
-![smooth bodymass line](images/density2.png)
 
 If you wanted a smooth, but not too smooth line, edit the `bw_adjust` parameter: 
 
@@ -162,7 +148,6 @@ If you wanted a smooth, but not too smooth line, edit the `bw_adjust` parameter:
 sns.kdeplot(filteredBirds['MaxBodyMass'], bw_adjust=.2)
 plt.show()
 ```
-![less smooth bodymass line](images/density3.png)
 
 ✅ Read about the parameters available for this type of plot and experiment!
 
@@ -176,15 +161,11 @@ sns.kdeplot(
 )
 ```
 
-![bodymass per order](images/density4.png)
-
 You can also map the density of several variables in one chart. Text the MaxLength and MinLength of a bird compared to their conservation status:
 
 ```python
 sns.kdeplot(data=filteredBirds, x="MinLength", y="MaxLength", hue="ConservationStatus")
 ```
-
-![multiple densities, superimposed](images/multi.png)
 
 Perhaps it's worth researching whether the cluster of 'Vulnerable' birds according to their lengths is meaningful or not.
 

@@ -1,9 +1,5 @@
 # Visualizing Relationships: All About Honey 🍯
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/12-Visualizing-Relationships.png)|
-|:---:|
-|Visualizing Relationships - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
-
 Continuing with the nature focus of our research, let's discover interesting visualizations to show the relationships between various types of honey, according to a dataset derived from the [United States Department of Agriculture](https://www.nass.usda.gov/About_NASS/index.php). 
 
 This dataset of about 600 items displays honey production in many U.S. states. So, for example, you can look at the number of colonies, yield per colony, total production, stocks, price per pound, and value of the honey produced in a given state from 1998-2012, with one row per year for each state. 
@@ -37,13 +33,11 @@ You notice that the honey data has several interesting columns, including year a
 | CA    | 450000 | 83          | 37350000  | 12326000 | 0.62       | 23157000  | 1998 |
 | CO    | 27000  | 72          | 1944000   | 1594000  | 0.7        | 1361000   | 1998 |
 
-
 Create a basic scatterplot to show the relationship between the price per pound of honey and its U.S. state of origin. Make the `y` axis tall enough to display all the states:
 
 ```python
 sns.relplot(x="priceperlb", y="state", data=honey, height=15, aspect=.5);
 ```
-![scatterplot 1](images/scatter1.png)
 
 Now, show the same data with a honey color scheme to show how the price evolves over the years. You can do this by adding a 'hue' parameter to show the change, year over year:
 
@@ -52,7 +46,6 @@ Now, show the same data with a honey color scheme to show how the price evolves 
 ```python
 sns.relplot(x="priceperlb", y="state", hue="year", palette="YlOrBr", data=honey, height=15, aspect=.5);
 ```
-![scatterplot 2](images/scatter2.png)
 
 With this color scheme change, you can see that there's obviously a strong progression over the years in terms of honey price per pound. Indeed, if you look at a sample set in the data to verify (pick a given state, Arizona for example) you can see a pattern of price increases year over year, with few exceptions:
 
@@ -74,15 +67,12 @@ With this color scheme change, you can see that there's obviously a strong progr
 | AZ    | 23000  | 53          | 1219000   | 427000  | 1.55       | 1889000   | 2011 |
 | AZ    | 22000  | 46          | 1012000   | 253000  | 1.79       | 1811000   | 2012 |
 
-
 Another way to visualize this progression is to use size, rather than color. For colorblind users, this might be a better option. Edit your visualization to show an increase of price by an increase in dot circumference:
 
 ```python
 sns.relplot(x="priceperlb", y="state", size="year", data=honey, height=15, aspect=.5);
 ```
 You can see the size of the dots gradually increasing.
-
-![scatterplot 3](images/scatter3.png)
 
 Is this a simple case of supply and demand? Due to factors such as climate change and colony collapse, is there less honey available for purchase year over year, and thus the price increases?
 
@@ -97,8 +87,6 @@ sns.relplot(x="year", y="priceperlb", kind="line", data=honey);
 ```
 Answer: Yes, with some exceptions around the year 2003:
 
-![line chart 1](images/line1.png)
-
 ✅ Because Seaborn is aggregating data around one line, it displays "the multiple measurements at each x value by plotting the mean and the 95% confidence interval around the mean". [Source](https://seaborn.pydata.org/tutorial/relational.html). This time-consuming behavior can be disabled by adding `ci=None`.
 
 Question: Well, in 2003 can we also see a spike in the honey supply? What if you look at total production year over year?
@@ -106,8 +94,6 @@ Question: Well, in 2003 can we also see a spike in the honey supply? What if you
 ```python
 sns.relplot(x="year", y="totalprod", kind="line", data=honey);
 ```
-
-![line chart 2](images/line2.png)
 
 Answer: Not really. If you look at total production, it actually seems to have increased in that particular year, even though generally speaking the amount of honey being produced is in decline during these years.
 
@@ -131,8 +117,6 @@ sns.relplot(
 ```
 In this visualization, you can compare the yield per colony and number of colonies year over year, side by side with a wrap set at 3 for the columns:
 
-![facet grid](images/facet.png)
-
 For this dataset, nothing particularly stands out with regards to the number of colonies and their yield, year over year and state over state. Is there a different way to look at finding a correlation between these two variables?
 
 ## Dual-line Plots
@@ -154,7 +138,6 @@ sns.despine(right=False)
 plt.ylabel('colony yield')
 ax.figure.legend();
 ```
-![superimposed plots](images/dual-line.png)
 
 While nothing jumps out to the eye around the year 2003, it does allow us to end this lesson on a little happier note: while there are overall a declining number of colonies, the number of colonies is stabilizing even if their yield per colony is decreasing.
 
