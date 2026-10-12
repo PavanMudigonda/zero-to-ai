@@ -23,7 +23,13 @@ const puppeteer = require('puppeteer');
             await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
             await new Promise(resolve => setTimeout(resolve, 5000));
             const result = await page.evaluate(() => {
-                const diagrams = document.querySelectorAll('article svg.flowchart');
+                const diagrams = document.querySelectorAll(
+                    'article .zoomable-mermaid-render svg, article .jk-mermaid-diagram svg'
+                );
+                const viewers = document.querySelectorAll('.zoomable-mermaid-render');
+                const maximizeButtons = [...viewers].filter((container) =>
+                    container.parentElement?.querySelector('button')?.textContent?.trim() === 'Maximize'
+                );
                 const rawMermaidBlocks = document.querySelectorAll('article code.language-mermaid');
                 const notebookDiagrams = document.querySelectorAll('.jk-notebook-container .jk-mermaid-diagram');
                 const errors = [...document.querySelectorAll('article [role="alert"]')]
@@ -37,6 +43,8 @@ const puppeteer = require('puppeteer');
 
                 return {
                     svgCount: diagrams.length,
+                    viewerCount: viewers.length,
+                    maximizeButtonCount: maximizeButtons.length,
                     rawMermaidBlocks: rawMermaidBlocks.length,
                     notebookDiagrams: notebookDiagrams.length,
                     errors
@@ -51,6 +59,10 @@ const puppeteer = require('puppeteer');
                     hasErrors = true;
                     continue;
                 }
+            } else if (result.viewerCount === 0) {
+                console.log('  -> ERROR: Mermaid diagrams are missing the zoom/full-screen viewer');
+                hasErrors = true;
+                continue;
             }
             if (result.svgCount === 0 || result.rawMermaidBlocks > 0) {
                 console.log('  -> ERROR: Mermaid diagram missing or still displayed as code');
@@ -59,7 +71,38 @@ const puppeteer = require('puppeteer');
                 console.log(`  -> ERRORS DETECTED:`, result.errors);
                 hasErrors = true;
             } else {
-                console.log(`  -> PASS`);
+                if (route.startsWith('/33-roadmaps/')) {
+                    if (result.maximizeButtonCount === 0) {
+                        console.log('  -> ERROR: Full-screen control not found');
+                        hasErrors = true;
+                        continue;
+                    }
+                    await page.evaluate(() => {
+                        const button = [...document.querySelectorAll('button')]
+                            .find((element) => element.textContent?.trim() === 'Maximize');
+                        button?.click();
+                    });
+                    await page.waitForSelector('[role="dialog"][aria-label="Mermaid diagram viewer"]', { timeout: 5000 });
+                    const readZoomLevel = () => page.$eval('[role="dialog"] button[title="Zoom in (+)"]', (button) => {
+                        const dialog = button.closest('[role="dialog"]');
+                        return Number(dialog?.querySelector('span')?.textContent?.replace('%', ''));
+                    });
+                    const beforeZoom = await readZoomLevel();
+                    await page.click('[role="dialog"] button[title="Zoom in (+)"]');
+                    await new Promise(resolve => setTimeout(resolve, 300));
+                    const zoomedIn = await readZoomLevel();
+                    await page.click('[role="dialog"] button[title="Zoom out (−)"]');
+                    await new Promise(resolve => setTimeout(resolve, 300));
+                    const zoomedOut = await readZoomLevel();
+                    await page.click('[role="dialog"] button[title="Close (Esc)"]');
+                    if (!(zoomedIn > beforeZoom && zoomedOut < zoomedIn)) {
+                        console.log('  -> ERROR: Zoom controls did not change the zoom level in both directions');
+                        hasErrors = true;
+                        continue;
+                    }
+                    console.log('  -> Full-screen and zoom controls: PASS');
+                }
+                console.log('  -> PASS');
             }
         } catch (e) {
             console.log(`  -> Exception on navigation: ${e.message}`);
