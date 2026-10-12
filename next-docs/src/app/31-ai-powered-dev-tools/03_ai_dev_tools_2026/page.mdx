@@ -19,8 +19,9 @@ Current references: [OpenAI API changelog](https://developers.openai.com/api/doc
 5. [GitHub Copilot 2025](#5-github-copilot-2025)
 6. [Open-Source Coding Agents: OpenHands, OpenCode, mini-swe-agent, and Lingxi](#6-open-source-coding-agents-openhands-opencode-mini-swe-agent-and-lingxi)
 7. [Comparison Table](#7-comparison-table)
-8. [For ML Engineers Specifically](#8-for-ml-engineers-specifically)
-9. [AI-Assisted Research Tools](#9-ai-assisted-research-tools)
+8. [Microsoft APM: Share Agent Assets Across Tools](#8-microsoft-apm-share-agent-assets-across-tools)
+9. [For ML Engineers Specifically](#9-for-ml-engineers-specifically)
+10. [AI-Assisted Research Tools](#10-ai-assisted-research-tools)
 
 ---
 
@@ -687,7 +688,28 @@ pip install "lingxi @ git+https://github.com/lingxi-agent/Lingxi.git@master"
 
 ---
 
-## 8. For ML Engineers Specifically
+## 8. Microsoft APM: Share Agent Assets Across Tools
+
+[Agent Package Manager (APM)](https://microsoft.github.io/apm/) is a dependency manager for AI-agent assets, not an IDE or an agent. A project declares reusable packages in `apm.yml`; `apm install` resolves them, records pinned versions and content hashes in `apm.lock.yaml`, and deploys supported primitives into selected coding-agent harnesses. Packages can include instructions, prompts, agents, skills, hooks, commands, plugins, and MCP server dependencies.
+
+This complements MCP rather than replacing it: MCP is a protocol for connecting an agent to tools and data, while APM can manage MCP server dependencies alongside other project-level agent assets. APM documents targets including GitHub Copilot, Claude Code, Cursor, Codex, Gemini, OpenCode, Windsurf, and Kiro; support differs by target and primitive. Check the [targets matrix](https://microsoft.github.io/apm/reference/targets-matrix/) before assuming an asset works identically across IDEs. IntelliJ integration is currently described as MCP-oriented.
+
+A typical consumer workflow is:
+
+```bash
+apm init
+apm install microsoft/apm-sample-package
+# Commit apm.yml and apm.lock.yaml; collaborators restore with:
+apm install
+```
+
+APM’s installer scans package content and pins hashes, but installing third-party agent assets still changes the project and may add agent instructions or MCP configuration. Review the package source, resolved plan, generated files, and lockfile; use explicit targets where reproducibility matters. See the official [consumer guide](https://microsoft.github.io/apm/consumer/) and [installation options](https://microsoft.github.io/apm/getting-started/installation/) for current commands and requirements.
+
+**Exercise:** Pick two coding-agent tools your team uses, check their support in the targets matrix, then sketch an `apm.yml` dependency plan for a shared skill and an MCP server. Identify which files you would review and commit before asking teammates to install it.
+
+---
+
+## 9. For ML Engineers Specifically
 
 ### Setting Up Cursor for Jupyter/Python ML Workflows
 
@@ -827,7 +849,7 @@ When writing code:
 
 ---
 
-## 9. AI-Assisted Research Tools
+## 10. AI-Assisted Research Tools
 
 For ML engineers who need to stay current with research papers, three tools stand out.
 
