@@ -66,24 +66,24 @@ become_ask_pass = False
 ### 3. Static Inventory
 ```ini
 # inventory/hosts (INI format)
-[webservers]
+&#91;webservers&#93;
 web1.example.com
 web2.example.com ansible_host=10.0.0.2
 web3.example.com ansible_host=10.0.0.3 ansible_port=2222
 
-[databases]
+&#91;databases&#93;
 db1.example.com
 db2.example.com
 
-[production:children]
+&#91;production:children&#93;
 webservers
 databases
 
-[all:vars]
+&#91;all:vars&#93;
 ansible_user=admin
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 
-[webservers:vars]
+&#91;webservers:vars&#93;
 http_port=80
 max_clients=200
 ```
