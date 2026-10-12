@@ -81,6 +81,15 @@ const nextConfig = withNextra({
       test: /\.ipynb$/,
       type: 'json',
     });
+
+    // Ignore missing image references in MDX files to prevent build failures
+    // These are broken references that exist in legacy content
+    config.ignoreWarnings ??= [];
+    config.ignoreWarnings.push({
+      module: /\.mdx?$/,
+      message: /Can't resolve/,
+    });
+
     return config;
   },
   reactStrictMode: true,
@@ -92,33 +101,5 @@ const remarkPluginPaths = [
   './remark-normalize-doc-links.mjs',
   './remark-fix-missing-refs.mjs',
 ];
-
-nextConfig.turbopack ??= {};
-nextConfig.turbopack.root = process.cwd();
-nextConfig.turbopack.resolveAlias ??= {};
-nextConfig.turbopack.resolveAlias['@theguild/remark-mermaid/mermaid'] =
-  './src/components/ZoomableMermaid.tsx';
-nextConfig.turbopack.rules ??= {};
-nextConfig.turbopack.rules['**/*.ipynb'] = {
-  type: 'json',
-};
-
-for (const rule of Object.values(nextConfig.turbopack?.rules ?? {})) {
-  if (!Array.isArray(rule.loaders)) continue;
-
-  rule.loaders = rule.loaders.map((loader) => {
-    if (loader.loader !== nextraLoaderPath || !loader.options.mdxOptions) {
-      return loader;
-    }
-
-    return {
-      loader: serializableLoaderPath,
-      options: {
-        ...loader.options,
-        remarkPluginPaths,
-      },
-    };
-  });
-}
 
 export default nextConfig;

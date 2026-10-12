@@ -1,9 +1,5 @@
 # Visualizing Proportions
 
-|![ Sketchnote by [(@sketchthedocs)](https://sketchthedocs.dev) ](../../sketchnotes/11-Visualizing-Proportions.png)|
-|:---:|
-|Visualizing Proportions - _Sketchnote by [@nitya](https://twitter.com/nitya)_ |
-
 In this lesson, you will use a different nature-focused dataset to visualize proportions, such as how many different types of fungi populate a given dataset about mushrooms. Let's explore these fascinating fungi using a dataset sourced from Audubon listing details about 23 species of gilled mushrooms in the Agaricus and Lepiota families. You will experiment with tasty visualizations such as:
 
 - Pie charts 🥧
@@ -25,7 +21,6 @@ mushrooms = pd.read_csv('../../data/mushrooms.csv')
 mushrooms.head()
 ```
 A table is printed out with some great data for analysis:
-
 
 | class     | cap-shape | cap-surface | cap-color | bruises | odor    | gill-attachment | gill-spacing | gill-size | gill-color | stalk-shape | stalk-root | stalk-surface-above-ring | stalk-surface-below-ring | stalk-color-above-ring | stalk-color-below-ring | veil-type | veil-color | ring-number | ring-type | spore-print-color | population | habitat |
 | --------- | --------- | ----------- | --------- | ------- | ------- | --------------- | ------------ | --------- | ---------- | ----------- | ---------- | ------------------------ | ------------------------ | ---------------------- | ---------------------- | --------- | ---------- | ----------- | --------- | ----------------- | ---------- | ------- |
@@ -65,7 +60,6 @@ edibleclass
 
 Now, if you print out the mushrooms data, you can see that it has been grouped into categories according to the poisonous/edible class:
 
-
 |           | cap-shape | cap-surface | cap-color | bruises | odor | gill-attachment | gill-spacing | gill-size | gill-color | stalk-shape | ... | stalk-surface-below-ring | stalk-color-above-ring | stalk-color-below-ring | veil-type | veil-color | ring-number | ring-type | spore-print-color | population | habitat |
 | --------- | --------- | ----------- | --------- | ------- | ---- | --------------- | ------------ | --------- | ---------- | ----------- | --- | ------------------------ | ---------------------- | ---------------------- | --------- | ---------- | ----------- | --------- | ----------------- | ---------- | ------- |
 | class     |           |             |           |         |      |                 |              |           |            |             |     |                          |                        |                        |           |            |             |           |                   |            |         |
@@ -83,8 +77,6 @@ plt.title('Edible?')
 plt.show()
 ```
 Voila, a pie chart showing the proportions of this data according to these two classes of mushrooms. It's quite important to get the order of the labels correct, especially here, so be sure to verify the order with which the label array is built!
-
-![pie chart](images/pie1-wb.png)
 
 ## Donuts!
 
@@ -113,8 +105,6 @@ plt.title('Mushroom Habitats')
   
 plt.show()
 ```
-
-![donut chart](images/donut-wb.png)
 
 This code draws a chart and a center circle, then adds that center circle in the chart. Edit the width of the center circle by changing `0.40` to another value.
 
@@ -160,8 +150,6 @@ fig = plt.figure(
 ```
 
 Using a waffle chart, you can plainly see the proportions of cap colors of this mushrooms dataset. Interestingly, there are many green-capped mushrooms!
-
-![waffle chart](images/waffle.png)
 
 ✅ Pywaffle supports icons within the charts that use any icon available in [Font Awesome](https://fontawesome.com/). Do some experiments to create an even more interesting waffle chart using icons instead of squares.
 
