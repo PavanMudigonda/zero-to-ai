@@ -192,7 +192,7 @@ echo '[1,2,3,4,5]' | jq '.[-1]'
 # Output: 5
 
 # Range
-echo '[1,2,3,4,5]' | jq '.[1:3]'
+echo '[1,2,3,4,5]' | jq '&#46;&#91;1:3&#93;'
 # Output: [2,3]
 
 # All elements
@@ -1155,11 +1155,11 @@ jq --arg uid "$USER_ID" '.users[] | select(.id == ($uid|tonumber))' data.json
 
 ### jq Common Filters
 ```
-.               Current object
-.field          Access field
-.[n]            Array index
-.[]             All array elements
-.[n:m]          Array slice
+&#46;               Current object
+&#46;field          Access field
+&#46;&#91;n&#93;            Array index
+&#46;&#91;&#93;             All array elements
+&#46;&#91;n:m&#93;          Array slice
 |               Pipe
 ,               Multiple outputs
 ?               Optional operator
