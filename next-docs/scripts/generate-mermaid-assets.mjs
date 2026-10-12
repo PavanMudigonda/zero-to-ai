@@ -97,7 +97,10 @@ async function main() {
   }
 
   const renderingErrors = [];
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    ...(process.platform === 'linux' ? { args: ['--no-sandbox'] } : {}),
+  });
   try {
     const page = await browser.newPage();
     await page.setContent('<!doctype html><html><body></body></html>');
