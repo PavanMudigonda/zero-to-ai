@@ -1,11 +1,13 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
     const routes = [
-        'http://localhost:3000/33-roadmaps/01_overview',
-        'http://localhost:3000/33-roadmaps/02_core_systems',
-        'http://localhost:3000/33-roadmaps/03_advanced_topics',
-        'http://localhost:3000/33-roadmaps/04_end_to_end_flows'
+        '/33-roadmaps/01_overview',
+        '/33-roadmaps/02_core_systems',
+        '/33-roadmaps/03_advanced_topics',
+        '/33-roadmaps/04_end_to_end_flows',
+        '/15-ai-agents/01_START_HERE'
     ];
 
     console.log('Starting puppeteer tests...');
@@ -14,38 +16,48 @@ const puppeteer = require('puppeteer');
     let hasErrors = false;
 
     for (const route of routes) {
-        console.log(`Processing: ${route}`);
+        const urlPath = `${route}${process.env.STATIC_EXPORT === 'true' ? '.html' : ''}`;
+        const url = new URL(urlPath, baseUrl).href;
+        console.log(`Processing: ${url}`);
         try {
-            await page.goto(route, { waitUntil: 'networkidle0', timeout: 30000 });
+            await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });
             await new Promise(resolve => setTimeout(resolve, 5000));
-            // Evaluate errors and svgs
             const result = await page.evaluate(() => {
-                const containers = document.querySelectorAll('.zoomable-mermaid-render');
-                let svgCount = 0;
-                let errors = [];
+                const diagrams = document.querySelectorAll('article svg.flowchart');
+                const rawMermaidBlocks = document.querySelectorAll('article code.language-mermaid');
+                const notebookDiagrams = document.querySelectorAll('.jk-notebook-container .jk-mermaid-diagram');
+                const errors = [...document.querySelectorAll('article [role="alert"]')]
+                    .map((element) => element.textContent || 'Rendering error');
 
-                for (let i = 0; i < containers.length; i++) {
-                    const c = containers[i];
-                    const svg = c.querySelector('svg');
-                    if (svg) {
-                        svgCount++;
-                        if (svg.textContent.includes('Syntax error')) {
-                            errors.push('Syntax error in SVG ' + i + ': ' + svg.textContent.substring(0, 50));
-                        }
-                    } else {
-                        errors.push('Container ' + i + ' missing SVG! InnerHTML: ' + c.innerHTML.substring(0, 100));
+                for (const diagram of diagrams) {
+                    if (diagram.textContent.includes('Syntax error')) {
+                        errors.push('SVG contains a syntax error: ' + diagram.textContent.substring(0, 50));
                     }
                 }
 
-                return { containers: containers.length, svgCount, errors };
+                return {
+                    svgCount: diagrams.length,
+                    rawMermaidBlocks: rawMermaidBlocks.length,
+                    notebookDiagrams: notebookDiagrams.length,
+                    errors
+                };
             });
 
-            console.log(`  -> Containers: ${result.containers} | SVGs inside: ${result.svgCount}`);
-            if (result.errors.length > 0) {
+            console.log(`  -> Mermaid SVGs: ${result.svgCount} | Raw Mermaid blocks: ${result.rawMermaidBlocks}`);
+            if (route.endsWith('/15-ai-agents/01_START_HERE')) {
+                console.log(`  -> Notebook diagrams: ${result.notebookDiagrams}`);
+                if (result.notebookDiagrams === 0) {
+                    console.log('  -> ERROR: Notebook Mermaid block was not rendered');
+                    hasErrors = true;
+                    continue;
+                }
+            }
+            if (result.svgCount === 0 || result.rawMermaidBlocks > 0) {
+                console.log('  -> ERROR: Mermaid diagram missing or still displayed as code');
+                hasErrors = true;
+            } else if (result.errors.length > 0) {
                 console.log(`  -> ERRORS DETECTED:`, result.errors);
                 hasErrors = true;
-            } else if (result.containers === 0) {
-                console.log(`  -> WARNING: No containers found`);
             } else {
                 console.log(`  -> PASS`);
             }

@@ -3,8 +3,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
-import type { Ipynb } from '@jupyter-kit/core';
+import type { Ipynb, Plugin } from '@jupyter-kit/core';
 import hljs from 'highlight.js/lib/common';
+import mermaid from 'mermaid';
 import generatedRouteIndex from '@/generated/route-index';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
 import '@jupyter-kit/theme-default/default.css';
@@ -32,6 +33,49 @@ const myEditor = createEditorPlugin({
   languages: { python: cmPython() }
 });
 const myKatex = createKatexPlugin();
+let mermaidDiagramId = 0;
+
+mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' });
+
+const myMermaid: Plugin = {
+  name: 'mermaid-renderer',
+  async onMarkdownRendered(element) {
+    const codeBlocks = element.querySelectorAll<HTMLElement>('pre > code.language-mermaid');
+
+    for (const codeBlock of codeBlocks) {
+      const pre = codeBlock.closest('pre');
+      if (!pre) continue;
+
+      try {
+        const { svg, bindFunctions } = await mermaid.render(
+          `jupyter-mermaid-${++mermaidDiagramId}`,
+          codeBlock.textContent ?? '',
+        );
+        const diagram = document.createElement('div');
+        diagram.className = 'jk-mermaid-diagram';
+        diagram.style.overflowX = 'auto';
+        diagram.style.margin = '1rem 0';
+        diagram.style.textAlign = 'center';
+        diagram.innerHTML = svg;
+
+        const renderedSvg = diagram.querySelector('svg');
+        if (renderedSvg) {
+          renderedSvg.style.maxWidth = '100%';
+          renderedSvg.style.height = 'auto';
+        }
+
+        pre.replaceWith(diagram);
+        bindFunctions?.(diagram);
+      } catch (error) {
+        const message = error instanceof Error ? error.message : String(error);
+        const alert = document.createElement('p');
+        alert.setAttribute('role', 'alert');
+        alert.textContent = `Mermaid diagram could not be rendered: ${message}`;
+        pre.before(alert);
+      }
+    }
+  },
+};
 
 const YOUTUBE_URL_PATTERN = /https?:\/\/(?:www\.)?(?:youtube\.com|youtu\.be)\/[^\s)"']+/i;
 const MARKDOWN_EXTERNAL_LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/gi;
@@ -461,7 +505,7 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
             language="python" 
             languages={[python]} 
             executor={myPyodide}
-            plugins={[myEditor, myKatex]}
+            plugins={[myEditor, myKatex, myMermaid]}
             mathAlign="left"
           />
         </div>
@@ -486,7 +530,7 @@ export default function NotebookViewer({ ipynb }: { ipynb: Ipynb }) {
                   language="python" 
                   languages={[python]} 
                   executor={myPyodide}
-                  plugins={[myEditor, myKatex]}
+                  plugins={[myEditor, myKatex, myMermaid]}
                   mathAlign="left"
                 />
               </div>
