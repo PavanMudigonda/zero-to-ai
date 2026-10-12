@@ -12,6 +12,7 @@ Open [`31-ai-powered-dev-tools.ipynb`](./31-ai-powered-dev-tools.ipynb) for lear
 - MCP (Model Context Protocol) server configuration and building
 - Custom instructions: `.github/copilot-instructions.md`, `.instructions.md`, `.prompt.md`
 - Model routing between GPT-4o, Claude, o3, and Gemini
+- Cross-tool agent asset management with Microsoft APM
 
 ## Prerequisites
 
