@@ -5,9 +5,9 @@ import { usePathname } from 'next/navigation';
 import { Notebook } from '@jupyter-kit/react';
 import type { Ipynb, Plugin } from '@jupyter-kit/core';
 import hljs from 'highlight.js/lib/common';
-import mermaid from 'mermaid';
 import generatedRouteIndex from '@/generated/route-index';
 import { normalizeNotebookLinks } from '@/lib/notebook-link-utils';
+import { hashMermaidSource } from '@/lib/mermaid-source.mjs';
 import '@jupyter-kit/theme-default/default.css';
 import '@jupyter-kit/theme-default/syntax/one-dark.css';
 import 'katex/dist/katex.min.css';
@@ -33,9 +33,6 @@ const myEditor = createEditorPlugin({
   languages: { python: cmPython() }
 });
 const myKatex = createKatexPlugin();
-let mermaidDiagramId = 0;
-
-mermaid.initialize({ startOnLoad: false, securityLevel: 'strict' });
 
 const myMermaid: Plugin = {
   name: 'mermaid-renderer',
@@ -47,26 +44,31 @@ const myMermaid: Plugin = {
       if (!pre) continue;
 
       try {
-        const { svg, bindFunctions } = await mermaid.render(
-          `jupyter-mermaid-${++mermaidDiagramId}`,
-          codeBlock.textContent ?? '',
-        );
+        const hash = await hashMermaidSource(codeBlock.textContent ?? '');
         const diagram = document.createElement('div');
         diagram.className = 'jk-mermaid-diagram';
         diagram.style.overflowX = 'auto';
         diagram.style.margin = '1rem 0';
         diagram.style.textAlign = 'center';
-        diagram.innerHTML = svg;
 
-        const renderedSvg = diagram.querySelector('svg');
-        if (renderedSvg) {
-          renderedSvg.style.maxWidth = '100%';
-          renderedSvg.style.maxHeight = 'min(80vh, 720px)';
-          renderedSvg.style.height = 'auto';
-        }
+        const image = document.createElement('img');
+        image.src = `/notebook-mermaid/${hash}.svg`;
+        image.alt = 'Mermaid diagram';
+        image.loading = 'lazy';
+        image.decoding = 'async';
+        image.style.maxWidth = '100%';
+        image.style.maxHeight = 'min(80vh, 720px)';
+        image.style.width = 'auto';
+        image.style.height = 'auto';
+        image.addEventListener('error', () => {
+          const alert = document.createElement('p');
+          alert.setAttribute('role', 'alert');
+          alert.textContent = 'Mermaid diagram asset could not be loaded. Rebuild the site to generate it.';
+          diagram.replaceWith(alert);
+        }, { once: true });
+        diagram.append(image);
 
         pre.replaceWith(diagram);
-        bindFunctions?.(diagram);
       } catch (error) {
         const message = error instanceof Error ? error.message : String(error);
         const alert = document.createElement('p');
