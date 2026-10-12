@@ -1,6 +1,7 @@
 /** @type {import('eslint').Linter.Config[]} */
 const eslintConfig = [
   {
+    files: ['**/*.ts', '**/*.tsx'],
     rules: {
       '@typescript-eslint/no-explicit-any': 'warn',
     },
