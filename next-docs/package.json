@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=22 <24"
+    "node": ">=22 <26"
   },
   "scripts": {
     "dev": "next dev",
@@ -62,8 +62,5 @@
     "puppeteer": "^25.13.0",
     "tailwindcss": "^4",
     "typescript": "^6.0.3"
-  },
-  "overrides": {
-    "zod": "4.3.6"
   }
 }
