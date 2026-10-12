@@ -61,6 +61,7 @@ const myMermaid: Plugin = {
         const renderedSvg = diagram.querySelector('svg');
         if (renderedSvg) {
           renderedSvg.style.maxWidth = '100%';
+          renderedSvg.style.maxHeight = 'min(80vh, 720px)';
           renderedSvg.style.height = 'auto';
         }
 
