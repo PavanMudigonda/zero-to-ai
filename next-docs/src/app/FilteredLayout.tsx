@@ -2,9 +2,11 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Layout } from 'nextra-theme-docs';
+import { Layout, Navbar } from 'nextra-theme-docs';
+import FuzzySearch from '@/components/FuzzySearch';
+import ThemeSwitchHotkey from '@/components/ThemeSwitchHotkey';
 
-export default function FilteredLayout({ pageMap, children, ...props }: any) {
+export default function FilteredLayout({ pageMap, children, searchItems, ...props }: any) {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const [isDesktop, setIsDesktop] = useState(false);
@@ -52,13 +54,36 @@ export default function FilteredLayout({ pageMap, children, ...props }: any) {
     };
   }, [isDesktop, props.sidebar]);
 
+  const navbar = (
+    <Navbar
+      logo={
+        <span className="site-logo">
+          <span className="site-logo-mark" aria-hidden="true">🚀</span>
+          <span className="site-logo-text">Zero to AI</span>
+        </span>
+      }
+      projectLink="https://github.com/PavanMudigonda/zero-to-ai"
+    >
+      <ThemeSwitchHotkey />
+    </Navbar>
+  );
+
+  const footer = (
+    <footer style={{ background: 'var(--nextra-bg)', borderTop: '1px solid rgba(0,0,0,0.1)', padding: '2rem 1rem', textAlign: 'center', fontSize: '0.875rem' }}>
+      © {new Date().getFullYear()} Zero to AI Curriculum.
+    </footer>
+  );
+
   return (
     <Layout
       pageMap={filteredPageMap}
+      navbar={navbar}
+      footer={footer}
       {...props}
       sidebar={sidebar}
       editLink={isHomePage ? null : props.editLink}
       feedback={isHomePage ? { content: null, labels: 'feedback' } : props.feedback}
+      search={<FuzzySearch items={searchItems} />}
     >
       {children}
     </Layout>
