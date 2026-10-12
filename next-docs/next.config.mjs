@@ -95,6 +95,9 @@ const remarkPluginPaths = [
 
 nextConfig.turbopack ??= {};
 nextConfig.turbopack.root = process.cwd();
+nextConfig.turbopack.resolveAlias ??= {};
+nextConfig.turbopack.resolveAlias['@theguild/remark-mermaid/mermaid'] =
+  './src/components/ZoomableMermaid.tsx';
 nextConfig.turbopack.rules ??= {};
 nextConfig.turbopack.rules['**/*.ipynb'] = {
   type: 'json',
