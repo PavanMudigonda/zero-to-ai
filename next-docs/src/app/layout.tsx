@@ -1,9 +1,6 @@
 import React from 'react';
-import { Navbar } from "nextra-theme-docs";
 import FilteredLayout from "./FilteredLayout";
 import ProgressWidget from "@/components/ProgressWidget";
-import FuzzySearch from '@/components/FuzzySearch';
-import ThemeSwitchHotkey from '@/components/ThemeSwitchHotkey';
 import { Head } from 'nextra/components';
 import 'nextra-theme-docs/style.css';
 import './globals.css';
@@ -324,26 +321,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       url: 'https://zero-to-ai.dev',
     },
   };
-  
-  const navbar = (
-    <Navbar
-      logo={
-        <span className="site-logo">
-          <span className="site-logo-mark" aria-hidden="true">🚀</span>
-          <span className="site-logo-text">Zero to AI</span>
-        </span>
-      }
-      projectLink="https://github.com/PavanMudigonda/zero-to-ai"
-    >
-      <ThemeSwitchHotkey />
-    </Navbar>
-  );
-  
-  const footer = (
-    <footer style={{ background: 'var(--nextra-bg)', borderTop: '1px solid rgba(0,0,0,0.1)', padding: '2rem 1rem', textAlign: 'center', fontSize: '0.875rem' }}>
-      © {new Date().getFullYear()} Zero to AI Curriculum.
-    </footer>
-  );
 
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
@@ -356,14 +333,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         />
         <FilteredLayout
           pageMap={pageMap}
-          navbar={navbar}
-          footer={footer}
           nextThemes={{ defaultTheme: 'light' }}
           docsRepositoryBase="https://github.com/PavanMudigonda/zero-to-ai/tree/main/next-docs/src/app"
           editLink="Edit this page on GitHub"
           sidebar={{ defaultMenuCollapseLevel: 1, autoCollapse: true }}
           feedback={{ content: 'Question? Give us feedback →', labels: 'feedback' }}
-          search={<FuzzySearch items={searchItems} />}
+          searchItems={searchItems}
         >
           {children}
           <ProgressWidget />

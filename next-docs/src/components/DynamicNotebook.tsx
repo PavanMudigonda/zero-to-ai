@@ -1,4 +1,5 @@
 'use client';
+import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
 function NotebookSkeleton() {
@@ -122,9 +123,14 @@ function NotebookSkeleton() {
 }
 
 const NotebookViewer = dynamic(() => import('./NotebookViewer'), {
+  ssr: false,
   loading: () => <NotebookSkeleton />,
 });
 
 export default function DynamicNotebook(props: any) {
-  return <NotebookViewer {...props} />;
+  return (
+    <Suspense fallback={<NotebookSkeleton />}>
+      <NotebookViewer {...props} />
+    </Suspense>
+  );
 }
