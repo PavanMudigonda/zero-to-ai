@@ -122,7 +122,6 @@ function NotebookSkeleton() {
 }
 
 const NotebookViewer = dynamic(() => import('./NotebookViewer'), {
-  ssr: false,
   loading: () => <NotebookSkeleton />,
 });
 
